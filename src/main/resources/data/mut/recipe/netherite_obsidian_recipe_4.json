@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_obsidian_upgrade_template"
+  },
+  "base": {
+    "item": "mut:obsidian_boots"
+  },
+  "addition": {
+    "item": "minecraft:netherite_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_obsidian_boots"
+  }
+}

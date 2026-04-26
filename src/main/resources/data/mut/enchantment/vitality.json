@@ -1,0 +1,35 @@
+{
+  "description": {
+    "translate": "enchantment.mut.vitality"
+  },
+  "supported_items": "#minecraft:enchantable/armor",
+  "weight": 5,
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "any"
+  ],
+  "exclusive_set": "mut:exuberant",
+  "effects": {
+    "attributes": [
+  {
+    "amount": {
+      "type": "minecraft:linear",
+      "base": 2,
+      "per_level_above_first": 2
+    },
+    "attribute": "minecraft:generic.max_health",
+    "operation": "add_value",
+    "id": "mut:enchantment.vitality"
+  }
+]
+  }
+}

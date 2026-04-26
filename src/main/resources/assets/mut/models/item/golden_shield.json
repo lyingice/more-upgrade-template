@@ -1,0 +1,15 @@
+{
+  "parent": "mut:custom/shield",
+  "textures": {
+    "0": "mut:block/golden_shield",
+    "particle": "mut:item/iron_armor_rebuild_template"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "mut:item/golden_shield_0"
+    }
+  ]
+}

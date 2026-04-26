@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "mut:nether_deep_iron_ore_block",
+    "mut:blue_diamond_block",
+    "mut:gilding_block",
+    "mut:steel_block",
+    "mut:obsidian_block",
+    "mut:gilding_debris",
+    "mut:steel_debris",
+    "mut:advanced_steel_block",
+    "mut:crying_obsidian_block",
+    "mut:template_trader_block",
+    "mut:blue_diamond_debris"
+  ]
+}

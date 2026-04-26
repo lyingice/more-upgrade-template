@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 2,
+  "cookingtime": 300,
+  "ingredient": {
+    "item": "mut:nether_deep_iron_ore_block"
+  },
+  "result": {
+    "id": "mut:deep_iron_scarp"
+  }
+}

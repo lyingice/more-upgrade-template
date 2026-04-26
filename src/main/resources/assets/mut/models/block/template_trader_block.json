@@ -1,0 +1,9 @@
+{
+  "parent": "mut:custom/template_trader",
+  "textures": {
+    "all": "mut:block/template_trader",
+    "particle": "mut:block/steel_block",
+    "1": "mut:block/template_trader"
+  },
+  "render_type": "solid"
+}

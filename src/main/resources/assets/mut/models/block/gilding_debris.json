@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mut:block/golden_debris_top",
+    "up": "mut:block/golden_debris_top",
+    "north": "mut:block/golden_debris_side",
+    "east": "mut:block/golden_debris_side",
+    "south": "mut:block/golden_debris_side",
+    "west": "mut:block/golden_debris_side",
+    "particle": "mut:block/golden_debris_side"
+  },
+  "render_type": "solid"
+}

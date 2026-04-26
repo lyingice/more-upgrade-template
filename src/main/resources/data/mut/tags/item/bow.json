@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "mut:diamond_bow",
+    "mut:obsidian_bow",
+    "mut:advanced_steel_bow",
+    "mut:steel_bow",
+    "mut:crying_obsidian_bow",
+    "mut:golden_bow",
+    "mut:iron_bow",
+    "mut:netherite_obsidian_bow",
+    "mut:netherite_bow",
+    "mut:nether_star_bow",
+    "mut:blue_diamond_bow",
+    "mut:gilding_bow"
+  ]
+}

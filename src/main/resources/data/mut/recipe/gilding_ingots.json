@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:gilding_scrap"
+    },
+    {
+      "item": "mut:gilding_scrap"
+    },
+    {
+      "item": "mut:gilding_scrap"
+    },
+    {
+      "item": "mut:gilding_scrap"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "id": "mut:gilding_ingot",
+    "count": 1
+  }
+}

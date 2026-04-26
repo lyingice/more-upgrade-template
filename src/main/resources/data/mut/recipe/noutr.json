@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    },
+    "b": {
+      "item": "minecraft:netherrack"
+    },
+    "c": {
+      "item": "mut:obsidian_upgrade_template"
+    }
+  },
+  "result": {
+    "id": "mut:netherite_obsidian_upgrade_template",
+    "count": 1
+  }
+}

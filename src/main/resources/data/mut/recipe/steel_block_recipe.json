@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:steel_ingot"
+    }
+  },
+  "result": {
+    "id": "mut:steel_block",
+    "count": 1
+  }
+}

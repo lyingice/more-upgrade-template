@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mut:crying_obsidian_ingot",
+    "mut:obsidian_ingot",
+    "mut:blue_diamond_ingot",
+    "mut:gilding_ingot",
+    "mut:steel_ingot"
+  ]
+}

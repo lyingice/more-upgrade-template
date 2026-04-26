@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 30,
+  "cookingtime": 300,
+  "ingredient": {
+    "item": "mut:blue_diamond_debris"
+  },
+  "result": {
+    "id": "mut:blue_diamond_scrap"
+  }
+}

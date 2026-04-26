@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 2,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "mut:deep_iron_raw"
+  },
+  "result": {
+    "id": "mut:deep_iron_scarp"
+  }
+}

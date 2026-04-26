@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "mut:iron_beef",
+    "mut:diamond_beef",
+    "mut:steel_beef",
+    "mut:blue_diamond_beef",
+    "mut:nether_star_beef",
+    "mut:gilding_beef",
+    "mut:golden_beef"
+  ]
+}

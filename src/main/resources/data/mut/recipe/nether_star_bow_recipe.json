@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:nether_star_upgrade_template"
+  },
+  "base": {
+    "item": "mut:netherite_bow"
+  },
+  "addition": {
+    "item": "minecraft:nether_star"
+  },
+  "result": {
+    "id": "mut:nether_star_bow"
+  }
+}

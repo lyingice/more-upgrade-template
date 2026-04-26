@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "mut:blue_diamond_block",
+    "mut:steel_block",
+    "mut:gilding_block",
+    "mut:obsidian_block",
+    "mut:steel_debris",
+    "mut:gilding_debris",
+    "mut:advanced_steel_block",
+    "mut:crying_obsidian_block",
+    "mut:blue_diamond_debris"
+  ]
+}

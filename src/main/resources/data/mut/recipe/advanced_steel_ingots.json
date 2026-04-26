@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:steel_ingot"
+    },
+    {
+      "item": "mut:steel_ingot"
+    },
+    {
+      "item": "mut:steel_ingot"
+    },
+    {
+      "item": "mut:deep_iron_scarp"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "mut:deep_iron_scarp"
+    },
+    {
+      "item": "mut:deep_iron_scarp"
+    },
+    {
+      "item": "mut:deep_iron_scarp"
+    },
+    {
+      "item": "mut:deep_iron_scarp"
+    }
+  ],
+  "result": {
+    "id": "mut:advanced_steel_ingot",
+    "count": 1
+  }
+}

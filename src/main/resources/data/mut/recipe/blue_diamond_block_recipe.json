@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:blue_diamond_ingot"
+    }
+  },
+  "result": {
+    "id": "mut:blue_diamond_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "mut:blue_diamond_chestplate",
+    "mut:diamond_chain_chestplate",
+    "mut:netherite_redstone_chestplate",
+    "mut:dragon_chestplate",
+    "mut:nether_star_chestplate",
+    "mut:golden_chain_chestplate",
+    "mut:crying_obsidian_chestplate",
+    "mut:dragon_chestplate_elytra",
+    "mut:emerald_armor_chestplate",
+    "mut:obsidian_chestplate",
+    "mut:gilding_chestplate",
+    "mut:advanced_steel_chestplate",
+    "mut:steel_chestplate",
+    "mut:netherite_chain_chestplate",
+    "mut:netherite_obsidian_chestplate",
+    "mut:copper_chestplate"
+  ]
+}

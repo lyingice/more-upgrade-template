@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:dragon_upgrade_template"
+  },
+  "base": {
+    "item": "mut:dragon_chestplate"
+  },
+  "addition": {
+    "item": "minecraft:elytra"
+  },
+  "result": {
+    "id": "mut:dragon_chestplate_elytra"
+  }
+}

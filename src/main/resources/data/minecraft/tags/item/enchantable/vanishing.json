@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mut:bow",
+      "required": false
+    },
+    {
+      "id": "#mut:mace_weapon",
+      "required": false
+    },
+    {
+      "id": "#mut:elytra",
+      "required": false
+    }
+  ]
+}

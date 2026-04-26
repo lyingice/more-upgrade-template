@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mut:block/obsidian_block",
+    "particle": "mut:block/obsidian_block"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 10,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "mut:steel_debris"
+  },
+  "result": {
+    "id": "mut:steel_scrap"
+  }
+}

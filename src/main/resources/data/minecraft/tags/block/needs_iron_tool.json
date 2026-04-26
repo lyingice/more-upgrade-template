@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mut:blue_diamond_block",
+    "mut:steel_block",
+    "mut:gilding_block",
+    "mut:template_trader_block"
+  ]
+}

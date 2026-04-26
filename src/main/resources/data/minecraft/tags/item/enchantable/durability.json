@@ -1,0 +1,32 @@
+{
+  "replace": false,
+  "values": [
+    "mut:iron_beef",
+    {
+      "id": "#mut:bow",
+      "required": false
+    },
+    "mut:diamond_beef",
+    "mut:steel_beef",
+    "mut:netherite_mace",
+    "mut:golden_elytra",
+    "mut:golden_mace",
+    "mut:diamond_elytra",
+    {
+      "id": "#minecraft:mace",
+      "required": false
+    },
+    "mut:gilding_beef",
+    "mut:nether_star_bow",
+    "mut:golden_beef",
+    "mut:dragon_chestplate_elytra",
+    "mut:wooden_mace",
+    "mut:diamond_mace",
+    "mut:netherite_elytra",
+    "mut:nether_star_beef",
+    "mut:blue_diamond_beef",
+    "mut:netherite_beef",
+    "mut:iron_elytra",
+    "mut:iron_mace"
+  ]
+}

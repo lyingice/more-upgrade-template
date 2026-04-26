@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:dragon_head"
+    }
+  },
+  "result": {
+    "id": "mut:dragon_scale_cluster",
+    "count": 1
+  }
+}

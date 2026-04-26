@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcb",
+    "ddd"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:dragon_scale_cluster"
+    },
+    "b": {
+      "item": "minecraft:end_crystal"
+    },
+    "c": {
+      "item": "minecraft:netherite_upgrade_smithing_template"
+    },
+    "d": {
+      "item": "minecraft:crying_obsidian"
+    }
+  },
+  "result": {
+    "id": "mut:dragon_upgrade_template",
+    "count": 1
+  }
+}

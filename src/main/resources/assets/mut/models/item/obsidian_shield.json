@@ -1,0 +1,15 @@
+{
+  "parent": "mut:custom/shield",
+  "textures": {
+    "0": "mut:block/obsidian_shield",
+    "particle": "mut:item/diamond_armor_rebuild_template"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "mut:item/obsidian_shield_0"
+    }
+  ]
+}

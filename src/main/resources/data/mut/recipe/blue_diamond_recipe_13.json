@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:blue_diamond_upgrade_template"
+  },
+  "base": {
+    "item": "mut:steel_chestplate"
+  },
+  "addition": {
+    "item": "mut:blue_diamond_ingot"
+  },
+  "result": {
+    "id": "mut:blue_diamond_chestplate"
+  }
+}

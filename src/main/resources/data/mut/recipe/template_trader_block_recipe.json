@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:steel_scrap"
+    },
+    {
+      "item": "minecraft:lectern"
+    }
+  ],
+  "result": {
+    "id": "mut:template_trader_block",
+    "count": 1
+  }
+}

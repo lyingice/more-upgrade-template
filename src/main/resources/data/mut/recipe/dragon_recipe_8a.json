@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:dragon_upgrade_template"
+  },
+  "base": {
+    "item": "mut:advanced_steel_axe"
+  },
+  "addition": {
+    "item": "minecraft:nether_star"
+  },
+  "result": {
+    "id": "mut:dragon_axe"
+  }
+}

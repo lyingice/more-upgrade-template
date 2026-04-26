@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:steel_scrap"
+    },
+    {
+      "item": "mut:steel_scrap"
+    },
+    {
+      "item": "mut:steel_scrap"
+    },
+    {
+      "item": "mut:steel_scrap"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "result": {
+    "id": "mut:steel_ingot",
+    "count": 1
+  }
+}

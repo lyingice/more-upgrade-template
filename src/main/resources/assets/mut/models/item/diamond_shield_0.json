@@ -1,0 +1,7 @@
+{
+  "parent": "mut:custom/shield_blocking",
+  "textures": {
+    "0": "mut:block/diamond_shield",
+    "particle": "mut:item/iron_armor_rebuild_template"
+  }
+}

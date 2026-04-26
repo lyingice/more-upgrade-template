@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mut:netherite_elytra",
+    "mut:golden_elytra",
+    "mut:diamond_elytra",
+    "mut:iron_elytra"
+  ]
+}

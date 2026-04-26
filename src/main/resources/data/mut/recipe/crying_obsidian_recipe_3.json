@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:crying_obsidian_upgrade_template"
+  },
+  "base": {
+    "item": "mut:netherite_obsidian_leggings"
+  },
+  "addition": {
+    "item": "mut:crying_obsidian_ingot"
+  },
+  "result": {
+    "id": "mut:crying_obsidian_leggings"
+  }
+}
