@@ -1,0 +1,11 @@
+{
+  "_fv": 85,
+  "_type": "tab",
+  "definition": {
+    "name": "More Upgrade Template Combat Items",
+    "icon": {
+      "value": "CUSTOM:BlueDiamondSword"
+    },
+    "showSearch": true
+  }
+}

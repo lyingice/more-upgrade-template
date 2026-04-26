@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:diamond_upgrade_template"
+  },
+  "base": {
+    "item": "mut:golden_elytra"
+  },
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "result": {
+    "id": "mut:diamond_elytra"
+  }
+}

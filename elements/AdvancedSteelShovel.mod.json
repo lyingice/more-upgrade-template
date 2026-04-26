@@ -1,0 +1,59 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Spade",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "advanced_steel_shovel",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "guiTexture": "",
+    "name": "Advanced Steel Shovel",
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateTools"
+      }
+    ],
+    "efficiency": 10.0,
+    "attackSpeed": 1.1,
+    "enchantability": 15,
+    "damageVsEntity": 7.5,
+    "usageCount": 2250,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:AdvancedSteelIngot"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "attributeModifiers": [
+      {
+        "equipmentSlot": "mainhand",
+        "attribute": {
+          "value": "BLOCK_REACH"
+        },
+        "amount": 1.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "equipmentSlot": "mainhand",
+        "attribute": {
+          "value": "ENTITY_REACH"
+        },
+        "amount": 1.0,
+        "operation": "ADD_VALUE"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

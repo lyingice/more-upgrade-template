@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:SteelDebris"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 10.0,
+    "cookingTime": 100,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:SteelDebris"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:SteelScrap"
+    },
+    "name": "steel_scraps_2",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:smooth_stone"
+    },
+    "b": {
+      "tag": "c:stones"
+    },
+    "c": {
+      "tag": "minecraft:logs"
+    }
+  },
+  "result": {
+    "id": "mut:stone_upgrade_template",
+    "count": 1
+  }
+}

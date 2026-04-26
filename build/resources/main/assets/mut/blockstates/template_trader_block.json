@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "mut:block/template_trader_block"
+    },
+    "facing=east": {
+      "model": "mut:block/template_trader_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "mut:block/template_trader_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "mut:block/template_trader_block",
+      "y": 270
+    }
+  }
+}

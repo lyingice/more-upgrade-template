@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:GoldenChain.legs"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.DIAMOND"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:DiamondUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:DiamondChain.legs"
+    },
+    "name": "diamond_chainmail_recipe_3",
+    "namespace": "mod"
+  }
+}

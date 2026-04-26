@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:IronBow"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:SteelIngot"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:SteelUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:SteelBow"
+    },
+    "name": "steel_recipe_6",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:GildingDebris"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 15.0,
+    "cookingTime": 350,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:GildingDebris"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:GildingScrap"
+    },
+    "name": "gilding_scraps",
+    "namespace": "mod"
+  }
+}

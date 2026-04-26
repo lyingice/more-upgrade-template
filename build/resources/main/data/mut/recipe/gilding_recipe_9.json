@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:gilding_upgrade_template"
+  },
+  "base": {
+    "item": "minecraft:golden_hoe"
+  },
+  "addition": {
+    "item": "mut:gilding_ingot"
+  },
+  "result": {
+    "id": "mut:gilding_hoe"
+  }
+}

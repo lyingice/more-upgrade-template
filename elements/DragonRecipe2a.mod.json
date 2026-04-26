@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:AdvancedSteel.body"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.NETHER_STAR"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:DragonUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:Dragon.body"
+    },
+    "name": "dragon_recipe_2a",
+    "namespace": "mod"
+  }
+}

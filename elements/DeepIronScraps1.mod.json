@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:NetherDeepIronOreBlock"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 2.0,
+    "cookingTime": 300,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:NetherDeepIronOreBlock"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:DeepIronScarp"
+    },
+    "name": "deep_iron_scraps_1",
+    "namespace": "mod"
+  }
+}

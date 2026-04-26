@@ -1,0 +1,11 @@
+{
+  "_fv": 85,
+  "_type": "tab",
+  "definition": {
+    "name": "More Upgrade Template Extra Items",
+    "icon": {
+      "value": "CUSTOM:BlueDiamondIngot"
+    },
+    "showSearch": false
+  }
+}

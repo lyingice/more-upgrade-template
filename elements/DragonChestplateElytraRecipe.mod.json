@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:Dragon.body"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.ELYTRA"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:DragonUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:DragonChestplateElytra"
+    },
+    "name": "dragon_chestplate_elytra_recipe",
+    "namespace": "mod"
+  }
+}

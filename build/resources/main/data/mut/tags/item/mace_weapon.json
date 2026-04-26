@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mut:diamond_mace",
+    "mut:netherite_mace",
+    "mut:golden_mace",
+    "mut:iron_mace",
+    "mut:wooden_mace"
+  ]
+}

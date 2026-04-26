@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 15,
+  "cookingtime": 150,
+  "ingredient": {
+    "item": "mut:gilding_debris"
+  },
+  "result": {
+    "id": "mut:gilding_scrap"
+  }
+}

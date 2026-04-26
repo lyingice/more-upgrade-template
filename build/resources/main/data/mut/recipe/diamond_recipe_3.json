@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:diamond_upgrade_template"
+  },
+  "base": {
+    "item": "minecraft:iron_leggings"
+  },
+  "addition": {
+    "item": "mut:diamond_armor_rebuild_template"
+  },
+  "result": {
+    "id": "minecraft:diamond_leggings"
+  }
+}

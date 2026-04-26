@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "ada"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    },
+    "b": {
+      "item": "mut:netherite_redstone_ingot"
+    },
+    "c": {
+      "item": "minecraft:netherite_upgrade_smithing_template"
+    },
+    "d": {
+      "item": "minecraft:diamond_block"
+    }
+  },
+  "result": {
+    "id": "mut:netherite_redstone_upgrade_template",
+    "count": 1
+  }
+}

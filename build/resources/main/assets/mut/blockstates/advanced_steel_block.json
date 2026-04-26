@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mut:block/advanced_steel_block"
+    }
+  }
+}

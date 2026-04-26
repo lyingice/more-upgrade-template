@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mut:block/nether_deep_iron_ore_block"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.WOODEN_SWORD"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Blocks.STONE"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:StoneUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "Items.STONE_SWORD"
+    },
+    "name": "stone_sword_recipe",
+    "namespace": "mod"
+  }
+}

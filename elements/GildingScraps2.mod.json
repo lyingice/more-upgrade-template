@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:GildingDebris"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 15.0,
+    "cookingTime": 150,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:GildingDebris"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:GildingScrap"
+    },
+    "name": "gilding_scraps_2",
+    "namespace": "mod"
+  }
+}

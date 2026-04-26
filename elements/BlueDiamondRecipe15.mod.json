@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:Steel.boots"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:BlueDiamondIngot"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:BlueDiamondUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:BlueDiamond.boots"
+    },
+    "name": "blue_diamond_recipe_15",
+    "namespace": "mod"
+  }
+}

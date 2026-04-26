@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:obsidian_upgrade_template"
+  },
+  "base": {
+    "item": "mut:diamond_shield"
+  },
+  "addition": {
+    "item": "mut:obsidian_ingot"
+  },
+  "result": {
+    "id": "mut:obsidian_shield"
+  }
+}

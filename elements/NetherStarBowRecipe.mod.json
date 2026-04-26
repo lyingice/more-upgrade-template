@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:NetheriteBow"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.NETHER_STAR"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:NetherStarUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:NetherStarBow"
+    },
+    "name": "nether_star_bow_recipe",
+    "namespace": "mod"
+  }
+}

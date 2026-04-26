@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "mut:advanced_steel_hoe",
+    "mut:obsidian_hoe",
+    "mut:netherite_redstone_hoe",
+    "mut:crying_obsidian_hoe",
+    "mut:netherite_obsidian_hoe",
+    "mut:blue_diamond_hoe",
+    "mut:copper_hoe",
+    "mut:gilding_hoe",
+    "mut:steel_hoe",
+    "mut:dragon_hoe",
+    "mut:emerald_hoe"
+  ]
+}

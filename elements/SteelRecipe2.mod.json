@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.IRON_PICKAXE"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:SteelIngot"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:SteelUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:SteelPickaxe"
+    },
+    "name": "steel_recipe_2",
+    "namespace": "mod"
+  }
+}

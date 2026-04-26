@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "mut:copper_helmet",
+    "mut:dragon_helmet",
+    "mut:golden_chain_helmet",
+    "mut:steel_helmet",
+    "mut:crying_obsidian_helmet",
+    "mut:netherite_obsidian_helmet",
+    "mut:advanced_steel_helmet",
+    "mut:blue_diamond_helmet",
+    "mut:netherite_redstone_helmet",
+    "mut:nether_star_helmet",
+    "mut:netherite_chain_helmet",
+    "mut:diamond_chain_helmet",
+    "mut:obsidian_helmet",
+    "mut:emerald_armor_helmet",
+    "mut:gilding_helmet"
+  ]
+}

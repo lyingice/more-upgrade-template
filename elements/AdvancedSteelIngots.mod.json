@@ -1,0 +1,53 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:DeepIronScarp"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:SteelIngot"
+      },
+      {
+        "value": "CUSTOM:SteelIngot"
+      },
+      {
+        "value": "CUSTOM:SteelIngot"
+      },
+      {
+        "value": "CUSTOM:DeepIronScarp"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "CUSTOM:DeepIronScarp"
+      },
+      {
+        "value": "CUSTOM:DeepIronScarp"
+      },
+      {
+        "value": "CUSTOM:DeepIronScarp"
+      },
+      {
+        "value": "CUSTOM:DeepIronScarp"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AdvancedSteelIngot"
+    },
+    "name": "advanced_steel_ingots",
+    "namespace": "mod"
+  }
+}

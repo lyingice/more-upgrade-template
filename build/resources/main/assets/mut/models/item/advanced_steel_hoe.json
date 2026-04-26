@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "mut:item/advanced_steel_hoe"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "mut:advanced_steel_axe",
+    "mut:netherite_redstone_axe",
+    "mut:crying_obsidian_axe",
+    "mut:netherite_obsidian_axe",
+    "mut:blue_diamond_axe",
+    "mut:copper_axe",
+    "mut:gilding_axe",
+    "mut:steel_axe",
+    "mut:dragon_axe",
+    "mut:obsidian_axe",
+    "mut:emerald_axe"
+  ]
+}

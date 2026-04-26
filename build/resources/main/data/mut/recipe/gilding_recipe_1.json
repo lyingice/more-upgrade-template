@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:gilding_upgrade_template"
+  },
+  "base": {
+    "tag": "mut:be_gilding_helmet"
+  },
+  "addition": {
+    "item": "mut:gilding_ingot"
+  },
+  "result": {
+    "id": "mut:gilding_helmet"
+  }
+}

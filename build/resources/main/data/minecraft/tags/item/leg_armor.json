@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "mut:dragon_leggings",
+    "mut:blue_diamond_leggings",
+    "mut:diamond_chain_leggings",
+    "mut:netherite_redstone_leggings",
+    "mut:obsidian_leggings",
+    "mut:golden_chain_leggings",
+    "mut:emerald_armor_leggings",
+    "mut:copper_leggings",
+    "mut:steel_leggings",
+    "mut:netherite_obsidian_leggings",
+    "mut:advanced_steel_leggings",
+    "mut:crying_obsidian_leggings",
+    "mut:gilding_leggings",
+    "mut:netherite_chain_leggings",
+    "mut:nether_star_leggings"
+  ]
+}

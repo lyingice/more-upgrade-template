@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:GoldenBow"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:GildingIngot"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:GildingUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:GildingBow"
+    },
+    "name": "gilding_recipe_10",
+    "namespace": "mod"
+  }
+}

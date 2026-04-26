@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mut:block/blue_diamond_top",
+    "up": "mut:block/blue_diamond_top",
+    "north": "mut:block/blue_diamond_debris_side",
+    "east": "mut:block/blue_diamond_debris_side",
+    "south": "mut:block/blue_diamond_debris_side",
+    "west": "mut:block/blue_diamond_debris_side",
+    "particle": "mut:block/blue_diamond_debris_side"
+  },
+  "render_type": "solid"
+}

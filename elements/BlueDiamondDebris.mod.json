@@ -1,0 +1,162 @@
+{
+  "_fv": 85,
+  "_type": "block",
+  "definition": {
+    "texture": "blue_diamond_top",
+    "textureTop": "blue_diamond_top",
+    "textureLeft": "blue_diamond_debris_side",
+    "textureFront": "blue_diamond_debris_side",
+    "textureRight": "blue_diamond_debris_side",
+    "textureBack": "blue_diamond_debris_side",
+    "renderType": 10,
+    "customModelName": "Normal",
+    "rotationMode": 0,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "states": [],
+    "animations": [],
+    "itemTexture": "",
+    "particleTexture": "blue_diamond_debris_side",
+    "blockSetType": "OAK",
+    "pottedPlant": {
+      "value": ""
+    },
+    "leavesParticleChance": 0.01,
+    "signEntityTexture": "",
+    "signGUITexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": false,
+    "connectedSides": false,
+    "transparencyType": "SOLID",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
+        "subtract": false
+      }
+    ],
+    "customProperties": [],
+    "name": "Blue Diamond Debris",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hardness": 30.0,
+    "resistance": 1200.0,
+    "hasGravity": false,
+    "isWaterloggable": false,
+    "hasBlockItem": true,
+    "maxStackSize": 64,
+    "rarity": "RARE",
+    "immuneToFire": true,
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateBlocks"
+      }
+    ],
+    "destroyTool": "pickaxe",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "xpAmountMin": 0,
+    "xpAmountMax": 0,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": true,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "hasCustomOpacity": false,
+    "lightOpacity": 15,
+    "tickRate": 0,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "noteBlockInstrument": "harp",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "strippingResult": {
+      "value": ""
+    },
+    "ignitedByLava": false,
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "IGNORE",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "ANCIENT_DEBRIS"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": {
+      "fixedValue": 0.0
+    },
+    "unbreakable": false,
+    "vanillaToolTier": "DIAMOND",
+    "isBonemealable": false,
+    "sensitiveToVibration": false,
+    "vibrationalEvents": [],
+    "vibrationSensitivityRadius": {
+      "fixedValue": 7.0
+    },
+    "hasInventory": false,
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 99,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "generateFeature": true,
+    "restrictionBiomes": [],
+    "blocksToReplace": [
+      {
+        "value": "Blocks.NETHERRACK"
+      }
+    ],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 2,
+    "frequencyOnChunk": 4,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

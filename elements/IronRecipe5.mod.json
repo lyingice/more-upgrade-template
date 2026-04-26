@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.STONE_HOE"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.IRON_INGOT"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:IronUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "Items.IRON_HOE"
+    },
+    "name": "iron_recipe_5",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "workspacePanelIconSize": "TILES",
+  "workspacePanelSortType": "CREATED",
+  "workspacePanelSortAscending": true,
+  "projectBrowserState": {
+    "expandedPaths": [
+      "[, MoreUpgradeTemplate]",
+      "[, MoreUpgradeTemplate, Source (Gradle)]",
+      "[, MoreUpgradeTemplate, Source (Gradle), C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net]",
+      "[, MoreUpgradeTemplate, Source (Gradle), C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net\\mcreator]",
+      "[, MoreUpgradeTemplate, Source (Gradle), C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net\\mcreator, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net\\mcreator\\mut]",
+      "[, MoreUpgradeTemplate, Source (Gradle), C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net\\mcreator, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net\\mcreator\\mut, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\java\\net\\mcreator\\mut\\datagen]",
+      "[, MoreUpgradeTemplate, Resources (Gradle)]",
+      "[, MoreUpgradeTemplate, Resources (Gradle), C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\resources\\assets]",
+      "[, MoreUpgradeTemplate, Resources (Gradle), C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\resources\\assets, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\resources\\assets\\mut]",
+      "[, MoreUpgradeTemplate, Resources (Gradle), C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\resources\\assets, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\resources\\assets\\mut, C:\\Users\\12501\\MCreatorWorkspaces\\mut\\src\\main\\resources\\assets\\mut\\lang]"
+    ]
+  },
+  "leftDockState": {
+    "expandedDock": "project_browser",
+    "dockSizes": {
+      "project_browser": 253
+    }
+  },
+  "bottomDockState": {
+    "dockSizes": {
+      "console": 300,
+      "code_viewer": 300,
+      "debugger": 300
+    }
+  }
+}

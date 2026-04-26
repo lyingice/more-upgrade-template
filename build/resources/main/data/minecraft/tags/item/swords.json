@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "mut:crying_obsidian_sword",
+    "mut:netherite_redstone_sword",
+    "mut:netherite_obsidian_sword",
+    "mut:dragon_sword",
+    "mut:steel_sword",
+    "mut:advanced_steel_sword",
+    "mut:emerald_sword",
+    "mut:copper_sword",
+    "mut:blue_diamond_sword",
+    "mut:obsidian_sword",
+    "mut:gilding_sword"
+  ]
+}

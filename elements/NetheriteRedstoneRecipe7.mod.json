@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.NETHERITE_BOOTS"
+    },
+    "smithingInputAdditionStack": {
+      "value": "CUSTOM:NetheriteRedstoneIngot"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:NetheriteRedstoneUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:NetheriteRedstone.boots"
+    },
+    "name": "netherite_redstone_recipe_7",
+    "namespace": "mod"
+  }
+}

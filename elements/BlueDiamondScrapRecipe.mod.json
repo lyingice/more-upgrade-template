@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:BlueDiamondDebris"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 30.0,
+    "cookingTime": 300,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:BlueDiamondDebris"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:BlueDiamondScrap"
+    },
+    "name": "blue_diamond_scrap_recipe",
+    "namespace": "mod"
+  }
+}

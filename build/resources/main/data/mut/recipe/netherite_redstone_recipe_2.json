@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_redstone_upgrade_template"
+  },
+  "base": {
+    "item": "mut:netherite_chain_helmet"
+  },
+  "addition": {
+    "item": "mut:netherite_redstone_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_redstone_helmet"
+  }
+}

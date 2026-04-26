@@ -1,0 +1,8 @@
+{
+  "_fv": 85,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"85\" y=\"77\"><field name=\"trigger\">tooltip_event</field><next><block type=\"controls_if\"><value name=\"IF0\"><block type=\"itemstack_has_enchantment\"><field name=\"enhancement\">CUSTOM:GourmetFeast</field><value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value></block></value><statement name=\"DO0\"><block type=\"new_tooltip_line_position\"><value name=\"position\"><block type=\"math_number\"><field name=\"NUM\">1</field></block></value><value name=\"tooltiptext\"><block type=\"text_join\"><mutation items=\"2\"></mutation><value name=\"ADD0\"><block type=\"get_localized_text\"><value name=\"key\"><block type=\"text\"><field name=\"TEXT\">translation.key.gourmet_feast</field></block></value></block></value><value name=\"ADD1\"><block type=\"math_dual_ops\"><field name=\"OP\">MULTIPLY</field><value name=\"A\"><block type=\"item_get_enhancement\"><field name=\"enhancement\">CUSTOM:GourmetFeast</field><value name=\"item\"><block type=\"itemstack_to_mcitem\"></block></value></block></value><value name=\"B\"><block type=\"math_number\"><field name=\"NUM\">2</field></block></value></block></value></block></value></block></statement></block></next></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

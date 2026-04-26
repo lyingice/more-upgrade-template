@@ -1,0 +1,16 @@
+{
+  "_fv": 85,
+  "_type": "villagerprofession",
+  "definition": {
+    "displayName": "Template Vendor",
+    "pointOfInterest": {
+      "value": "CUSTOM:TemplateTraderBlock"
+    },
+    "actionSound": {
+      "value": "entity.villager.work_weaponsmith"
+    },
+    "hat": "Full",
+    "professionTextureFile": "template_trader_plains.png",
+    "zombifiedProfessionTextureFile": "template_trader_plains.png"
+  }
+}

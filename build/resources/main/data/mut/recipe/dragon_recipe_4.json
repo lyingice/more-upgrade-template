@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:dragon_upgrade_template"
+  },
+  "base": {
+    "item": "mut:blue_diamond_boots"
+  },
+  "addition": {
+    "item": "minecraft:nether_star"
+  },
+  "result": {
+    "id": "mut:dragon_boots"
+  }
+}

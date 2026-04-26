@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:steel_upgrade_template"
+  },
+  "base": {
+    "item": "minecraft:iron_chestplate"
+  },
+  "addition": {
+    "item": "mut:steel_ingot"
+  },
+  "result": {
+    "id": "mut:steel_chestplate"
+  }
+}

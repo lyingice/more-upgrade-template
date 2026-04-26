@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mut:block/obsidian_block"
+    }
+  }
+}

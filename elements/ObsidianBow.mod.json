@@ -1,0 +1,147 @@
+{
+  "_fv": 85,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "obsidian_bow",
+    "customModelName": "Ranged item",
+    "guiTexture": "",
+    "customProperties": {
+      "pulling": {
+        "name": "GetPulling"
+      },
+      "pull": {
+        "name": "GetPull"
+      }
+    },
+    "states": [
+      {
+        "renderType": 0,
+        "texture": "obsidian_bow_pulling_0",
+        "customModelName": "Ranged item",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:pulling",
+              "type": "number"
+            },
+            "value": 1.0
+          }
+        ]
+      },
+      {
+        "renderType": 0,
+        "texture": "obsidian_bow_pulling_1",
+        "customModelName": "Ranged item",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:pulling",
+              "type": "number"
+            },
+            "value": 1.0
+          },
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:pull",
+              "type": "number"
+            },
+            "value": 0.55
+          }
+        ]
+      },
+      {
+        "renderType": 0,
+        "texture": "obsidian_bow_pulling_2",
+        "customModelName": "Ranged item",
+        "stateMap": [
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:pulling",
+              "type": "number"
+            },
+            "value": 1.0
+          },
+          {
+            "property": {
+              "min": -1.7976931348623157E308,
+              "max": 1.7976931348623157E308,
+              "name": "CUSTOM:pull",
+              "type": "number"
+            },
+            "value": 0.85
+          }
+        ]
+      }
+    ],
+    "animations": [],
+    "name": "Blue Diamond Bow",
+    "rarity": "COMMON",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      }
+    ],
+    "stackSize": 1,
+    "enchantability": 1,
+    "useDuration": 72000,
+    "toolType": 1.0,
+    "damageCount": 500,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "isPiglinCurrency": false,
+    "repairItems": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 4.0,
+    "attackSpeed": 1.2,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "openGUIOnRightClick": {
+      "fixedValue": false
+    },
+    "inventorySize": 9,
+    "inventoryStackSize": 99,
+    "enableRanged": false,
+    "shootConstantly": false,
+    "rangedItemChargesPower": false,
+    "projectile": {
+      "value": "Arrow"
+    },
+    "projectileDisableAmmoCheck": false,
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "bow",
+    "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
+    "musicDiscLengthInTicks": 100,
+    "musicDiscAnalogOutput": 0,
+    "providedBannerPatterns": [],
+    "attributeModifiers": []
+  }
+}

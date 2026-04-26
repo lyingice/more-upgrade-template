@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:iron_upgrade_template"
+  },
+  "base": {
+    "item": "mut:wooden_mace"
+  },
+  "addition": {
+    "item": "minecraft:iron_block"
+  },
+  "result": {
+    "id": "mut:iron_mace"
+  }
+}

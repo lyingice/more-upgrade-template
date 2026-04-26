@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:diamond_upgrade_template"
+  },
+  "base": {
+    "item": "mut:golden_chain_boots"
+  },
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "result": {
+    "id": "mut:diamond_chain_boots"
+  }
+}
