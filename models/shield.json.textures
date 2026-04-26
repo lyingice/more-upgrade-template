@@ -1,0 +1,70 @@
+{
+  "mappings": {
+    "default": {
+      "name": "default",
+      "map": {
+        "0": "advanced_steel_shield"
+      }
+    },
+    "iron": {
+      "name": "iron",
+      "map": {
+        "0": "iron_shield"
+      }
+    },
+    "golden": {
+      "name": "golden",
+      "map": {
+        "0": "golden_shield"
+      }
+    },
+    "diamond": {
+      "name": "diamond",
+      "map": {
+        "0": "diamond_shield"
+      }
+    },
+    "netherite": {
+      "name": "netherite",
+      "map": {
+        "0": "netherite_shield"
+      }
+    },
+    "steel": {
+      "name": "steel",
+      "map": {
+        "0": "steel_shield"
+      }
+    },
+    "gilding": {
+      "name": "gilding",
+      "map": {
+        "0": "gilding_shield"
+      }
+    },
+    "blue_diamond": {
+      "name": "blue_diamond",
+      "map": {
+        "0": "blue_diamond_shield"
+      }
+    },
+    "obsidian": {
+      "name": "obsidian",
+      "map": {
+        "0": "obsidian_shield"
+      }
+    },
+    "netherite_obsidian": {
+      "name": "netherite_obsidian",
+      "map": {
+        "0": "netherite_obsidian_shield"
+      }
+    },
+    "crying_obsidian": {
+      "name": "crying_obsidian",
+      "map": {
+        "0": "crying_obsidian_shield"
+      }
+    }
+  }
+}
