@@ -1,4 +1,20 @@
-# 项目排除路径
-/.gradle/
-/build/
-/build/classes/java/main/
+# IDE 配置
+.idea/
+.gradle/
+
+# 编译输出
+build/
+run/
+logs/
+
+# MCreator 缓存
+.mcreator/
+.ecipse/
+nexuscompiler-mods-1.21.1/
+
+# 打包文件
+*.jar
+!gradle/wrapper/
+
+# 本地配置
+/local.properties
