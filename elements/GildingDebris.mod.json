@@ -19,12 +19,7 @@
     "itemTexture": "",
     "particleTexture": "golden_debris_side",
     "blockSetType": "OAK",
-    "pottedPlant": {
-      "value": ""
-    },
-    "leavesParticleChance": 0.01,
-    "signEntityTexture": "",
-    "signGUITexture": "",
+    "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -151,12 +146,18 @@
     "blocksToReplace": [
       {
         "value": "Blocks.NETHERRACK"
+      },
+      {
+        "value": "Blocks.BASALT"
+      },
+      {
+        "value": "Blocks.BLACKSTONE"
       }
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 4,
-    "frequencyOnChunk": 1,
-    "minGenerateHeight": 63,
-    "maxGenerateHeight": 128
+    "frequencyOnChunk": 3,
+    "minGenerateHeight": 32,
+    "maxGenerateHeight": 150
   }
 }

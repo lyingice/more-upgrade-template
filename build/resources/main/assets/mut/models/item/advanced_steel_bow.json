@@ -28,21 +28,21 @@
   "overrides": [
     {
       "predicate": {
-        "mut:advanced_steel_bow_pulling": 1
+        "minecraft:pulling": 1
       },
       "model": "mut:item/advanced_steel_bow_0"
     },
     {
       "predicate": {
-        "mut:advanced_steel_bow_pulling": 1,
-        "mut:advanced_steel_bow_pull": 0.48
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.65
       },
       "model": "mut:item/advanced_steel_bow_1"
     },
     {
       "predicate": {
-        "mut:advanced_steel_bow_pulling": 1,
-        "mut:advanced_steel_bow_pull": 0.71
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.9
       },
       "model": "mut:item/advanced_steel_bow_2"
     }

@@ -6,7 +6,15 @@
       "required": false
     },
     {
+      "id": "#mut:shield",
+      "required": false
+    },
+    {
       "id": "#mut:mace_weapon",
+      "required": false
+    },
+    {
+      "id": "#mut:wolf_armor",
       "required": false
     },
     {

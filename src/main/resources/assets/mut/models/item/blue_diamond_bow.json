@@ -28,21 +28,21 @@
   "overrides": [
     {
       "predicate": {
-        "mut:blue_diamond_bow_pulling": 1
+        "minecraft:pulling": 1
       },
       "model": "mut:item/blue_diamond_bow_0"
     },
     {
       "predicate": {
-        "mut:blue_diamond_bow_pulling": 1,
-        "mut:blue_diamond_bow_pull": 0.48
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.65
       },
       "model": "mut:item/blue_diamond_bow_1"
     },
     {
       "predicate": {
-        "mut:blue_diamond_bow_pulling": 1,
-        "mut:blue_diamond_bow_pull": 0.71
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.9
       },
       "model": "mut:item/blue_diamond_bow_2"
     }

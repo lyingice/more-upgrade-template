@@ -1,17 +1,23 @@
 {
   "replace": false,
   "values": [
+    "mut:netherite_copper_boots",
     "mut:advanced_steel_boots",
     "mut:steel_boots",
     "mut:emerald_armor_boots",
+    "mut:netherite_emerald_boots",
+    {
+      "id": "#mut:foot_armor",
+      "required": false
+    },
     "mut:netherite_obsidian_boots",
     "mut:dragon_boots",
-    "mut:nether_star_boots",
     "mut:copper_boots",
+    "mut:nether_star_boots",
     "mut:netherite_chain_boots",
     "mut:gilding_boots",
-    "mut:crying_obsidian_boots",
     "mut:blue_diamond_boots",
+    "mut:crying_obsidian_boots",
     "mut:obsidian_boots",
     "mut:netherite_redstone_boots",
     "mut:diamond_chain_boots",

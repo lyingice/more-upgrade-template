@@ -21,7 +21,7 @@
       "value": "CUSTOM:IronArmorRebuildTemplate"
     },
     "smithingReturnStack": {
-      "value": "CUSTOM:GoldenChain.helmet"
+      "value": "CUSTOM:GoldenChain.boots"
     },
     "name": "goden_chainmail_recipe_4",
     "namespace": "mod"

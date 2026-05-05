@@ -2,8 +2,11 @@
   "replace": false,
   "values": [
     "mut:blue_diamond_block",
-    "mut:steel_block",
+    "mut:netherite_amethyst_block",
     "mut:gilding_block",
-    "mut:template_trader_block"
+    "mut:steel_block",
+    "mut:netherite_emerald_block",
+    "mut:template_trader_block",
+    "mut:netherite_redstone_block"
   ]
 }

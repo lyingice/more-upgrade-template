@@ -6,6 +6,6 @@
     "icon": {
       "value": "CUSTOM:BlueDiamondSword"
     },
-    "showSearch": true
+    "showSearch": false
   }
 }

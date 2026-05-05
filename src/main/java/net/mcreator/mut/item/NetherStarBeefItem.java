@@ -16,7 +16,7 @@ import net.mcreator.mut.procedures.GetBeefHurtProcedure;
 
 public class NetherStarBeefItem extends Item {
 	public NetherStarBeefItem() {
-		super(new Item.Properties().durability(256).fireResistant().rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(10).saturationModifier(1f).alwaysEdible().build()));
+		super(new Item.Properties().durability(256).fireResistant().rarity(Rarity.EPIC).food((new FoodProperties.Builder()).nutrition(20).saturationModifier(3f).alwaysEdible().build()));
 	}
 
 	@Override

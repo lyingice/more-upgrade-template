@@ -1,6 +1,6 @@
 /*
- *    MCreator note: This file will be REGENERATED on each build.
- */
+*    MCreator note: This file will be REGENERATED on each build.
+*/
 package net.mcreator.mut.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -223,6 +223,56 @@ public class MutModItems {
 	public static final DeferredItem<Item> DRAGON_CHESTPLATE_ELYTRA;
 	public static final DeferredItem<Item> NETHERITE_REDSTONE_UPGRADE_TEMPLATE;
 	public static final DeferredItem<Item> NETHERITE_REDSTONE_INGOT;
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_BEEF;
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_BLOCK;
+	public static final DeferredItem<Item> IRON_WOLF_ARMOR;
+	public static final DeferredItem<Item> GOLDEN_WOLF_ARMOR;
+	public static final DeferredItem<Item> DIAMOND_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHERITE_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHERITE_HORSE_ARMOR;
+	public static final DeferredItem<Item> COPPER_HORSE_ARMOR;
+	public static final DeferredItem<Item> COPPER_WOLF_ARMOR;
+	public static final DeferredItem<Item> COPPER_MACE;
+	public static final DeferredItem<Item> STEEL_MACE;
+	public static final DeferredItem<Item> GILDING_MACE;
+	public static final DeferredItem<Item> BLUE_DIAMOND_MACE;
+	public static final DeferredItem<Item> ADVANCED_STEEL_MACE;
+	public static final DeferredItem<Item> NETHER_STAR_SWORD;
+	public static final DeferredItem<Item> NETHER_STAR_SHOVEL;
+	public static final DeferredItem<Item> NETHER_STAR_PICKAXE;
+	public static final DeferredItem<Item> NETHER_STAR_AXE;
+	public static final DeferredItem<Item> NETHER_STAR_HOE;
+	public static final DeferredItem<Item> NETHER_STAR_SHIELD;
+	public static final DeferredItem<Item> COPPER_SHIELD;
+	public static final DeferredItem<Item> NETHERITE_COPPER_HELMET;
+	public static final DeferredItem<Item> NETHERITE_COPPER_CHESTPLATE;
+	public static final DeferredItem<Item> NETHERITE_COPPER_LEGGINGS;
+	public static final DeferredItem<Item> NETHERITE_COPPER_BOOTS;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_HELMET;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_CHESTPLATE;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_LEGGINGS;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_BOOTS;
+	public static final DeferredItem<Item> NETHERITE_COPPER_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_INGOT;
+	public static final DeferredItem<Item> NETHERITE_COPPER_SWORD;
+	public static final DeferredItem<Item> NETHERITE_COPPER_SHOVEL;
+	public static final DeferredItem<Item> NETHERITE_COPPER_PICKAXE;
+	public static final DeferredItem<Item> NETHERITE_COPPER_AXE;
+	public static final DeferredItem<Item> NETHERITE_COPPER_HOE;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_SWORD;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_SHOVEL;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_PICKAXE;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_AXE;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_HOE;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_BLOCK;
+	public static final DeferredItem<Item> COPPER_BOW;
+	public static final DeferredItem<Item> NETHERITE_COPPER_BOW;
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_INGOT;
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_BLOCK;
+	public static final DeferredItem<Item> COPPER_BEEF;
+	public static final DeferredItem<Item> NETHERITE_COPPER_BEEF;
 	static {
 		IRON_BOW = REGISTRY.register("iron_bow", IronBowItem::new);
 		STONE_UPGRADE_TEMPLATE = REGISTRY.register("stone_upgrade_template", StoneUpgradeTemplateItem::new);
@@ -419,9 +469,77 @@ public class MutModItems {
 		DRAGON_CHESTPLATE_ELYTRA = REGISTRY.register("dragon_chestplate_elytra", DragonChestplateElytraItem::new);
 		NETHERITE_REDSTONE_UPGRADE_TEMPLATE = REGISTRY.register("netherite_redstone_upgrade_template", NetheriteRedstoneUpgradeTemplateItem::new);
 		NETHERITE_REDSTONE_INGOT = REGISTRY.register("netherite_redstone_ingot", NetheriteRedstoneIngotItem::new);
+		NETHERITE_REDSTONE_BEEF = REGISTRY.register("netherite_redstone_beef", NetheriteRedstoneBeefItem::new);
+		NETHERITE_REDSTONE_BLOCK = block(MutModBlocks.NETHERITE_REDSTONE_BLOCK, new Item.Properties().fireResistant());
+		IRON_WOLF_ARMOR = REGISTRY.register("iron_wolf_armor", IronWolfArmorItem::new);
+		GOLDEN_WOLF_ARMOR = REGISTRY.register("golden_wolf_armor", GoldenWolfArmorItem::new);
+		DIAMOND_WOLF_ARMOR = REGISTRY.register("diamond_wolf_armor", DiamondWolfArmorItem::new);
+		NETHERITE_WOLF_ARMOR = REGISTRY.register("netherite_wolf_armor", NetheriteWolfArmorItem::new);
+		NETHERITE_HORSE_ARMOR = REGISTRY.register("netherite_horse_armor", NetheriteHorseArmorItem::new);
+		COPPER_HORSE_ARMOR = REGISTRY.register("copper_horse_armor", CopperHorseArmorItem::new);
+		COPPER_WOLF_ARMOR = REGISTRY.register("copper_wolf_armor", CopperWolfArmorItem::new);
+		COPPER_MACE = REGISTRY.register("copper_mace", CopperMaceItem::new);
+		STEEL_MACE = REGISTRY.register("steel_mace", SteelMaceItem::new);
+		GILDING_MACE = REGISTRY.register("gilding_mace", GildingMaceItem::new);
+		BLUE_DIAMOND_MACE = REGISTRY.register("blue_diamond_mace", BlueDiamondMaceItem::new);
+		ADVANCED_STEEL_MACE = REGISTRY.register("advanced_steel_mace", AdvancedSteelMaceItem::new);
+		NETHER_STAR_SWORD = REGISTRY.register("nether_star_sword", NetherStarSwordItem::new);
+		NETHER_STAR_SHOVEL = REGISTRY.register("nether_star_shovel", NetherStarShovelItem::new);
+		NETHER_STAR_PICKAXE = REGISTRY.register("nether_star_pickaxe", NetherStarPickaxeItem::new);
+		NETHER_STAR_AXE = REGISTRY.register("nether_star_axe", NetherStarAxeItem::new);
+		NETHER_STAR_HOE = REGISTRY.register("nether_star_hoe", NetherStarHoeItem::new);
+		NETHER_STAR_SHIELD = REGISTRY.register("nether_star_shield", NetherStarShieldItem::new);
+		COPPER_SHIELD = REGISTRY.register("copper_shield", CopperShieldItem::new);
+		NETHERITE_COPPER_HELMET = REGISTRY.register("netherite_copper_helmet", NetheriteCopperItem.Helmet::new);
+		NETHERITE_COPPER_CHESTPLATE = REGISTRY.register("netherite_copper_chestplate", NetheriteCopperItem.Chestplate::new);
+		NETHERITE_COPPER_LEGGINGS = REGISTRY.register("netherite_copper_leggings", NetheriteCopperItem.Leggings::new);
+		NETHERITE_COPPER_BOOTS = REGISTRY.register("netherite_copper_boots", NetheriteCopperItem.Boots::new);
+		NETHERITE_EMERALD_HELMET = REGISTRY.register("netherite_emerald_helmet", NetheriteEmeraldItem.Helmet::new);
+		NETHERITE_EMERALD_CHESTPLATE = REGISTRY.register("netherite_emerald_chestplate", NetheriteEmeraldItem.Chestplate::new);
+		NETHERITE_EMERALD_LEGGINGS = REGISTRY.register("netherite_emerald_leggings", NetheriteEmeraldItem.Leggings::new);
+		NETHERITE_EMERALD_BOOTS = REGISTRY.register("netherite_emerald_boots", NetheriteEmeraldItem.Boots::new);
+		NETHERITE_COPPER_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("netherite_copper_upgrade_smithing_template", NetheriteCopperUpgradeSmithingTemplateItem::new);
+		NETHERITE_EMERALD_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("netherite_emerald_upgrade_smithing_template", NetheriteEmeraldUpgradeSmithingTemplateItem::new);
+		NETHERITE_EMERALD_INGOT = REGISTRY.register("netherite_emerald_ingot", NetheriteEmeraldIngotItem::new);
+		NETHERITE_COPPER_SWORD = REGISTRY.register("netherite_copper_sword", NetheriteCopperSwordItem::new);
+		NETHERITE_COPPER_SHOVEL = REGISTRY.register("netherite_copper_shovel", NetheriteCopperShovelItem::new);
+		NETHERITE_COPPER_PICKAXE = REGISTRY.register("netherite_copper_pickaxe", NetheriteCopperPickaxeItem::new);
+		NETHERITE_COPPER_AXE = REGISTRY.register("netherite_copper_axe", NetheriteCopperAxeItem::new);
+		NETHERITE_COPPER_HOE = REGISTRY.register("netherite_copper_hoe", NetheriteCopperHoeItem::new);
+		NETHERITE_EMERALD_SWORD = REGISTRY.register("netherite_emerald_sword", NetheriteEmeraldSwordItem::new);
+		NETHERITE_EMERALD_SHOVEL = REGISTRY.register("netherite_emerald_shovel", NetheriteEmeraldShovelItem::new);
+		NETHERITE_EMERALD_PICKAXE = REGISTRY.register("netherite_emerald_pickaxe", NetheriteEmeraldPickaxeItem::new);
+		NETHERITE_EMERALD_AXE = REGISTRY.register("netherite_emerald_axe", NetheriteEmeraldAxeItem::new);
+		NETHERITE_EMERALD_HOE = REGISTRY.register("netherite_emerald_hoe", NetheriteEmeraldHoeItem::new);
+		NETHERITE_EMERALD_BLOCK = block(MutModBlocks.NETHERITE_EMERALD_BLOCK, new Item.Properties().fireResistant());
+		COPPER_BOW = REGISTRY.register("copper_bow", CopperBowItem::new);
+		NETHERITE_COPPER_BOW = REGISTRY.register("netherite_copper_bow", NetheriteCopperBowItem::new);
+		NETHERITE_AMETHYST_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("netherite_amethyst_upgrade_smithing_template", NetheriteAmethtstUpgradeSmithingTemplateItem::new);
+		NETHERITE_AMETHYST_INGOT = REGISTRY.register("netherite_amethyst_ingot", NetheriteAmethystIngotItem::new);
+		NETHERITE_AMETHYST_BLOCK = block(MutModBlocks.NETHERITE_AMETHYST_BLOCK, new Item.Properties().fireResistant());
+		COPPER_BEEF = REGISTRY.register("copper_beef", CopperBeefItem::new);
+		NETHERITE_COPPER_BEEF = REGISTRY.register("netherite_copper_beef", NetheriteCopperBeefItem::new);
 	}
-
 	// Start of user code block custom items
+	public static final DeferredItem<Item> AMETHYST_SWORD = REGISTRY.register("amethyst_sword", AmethystTools.Sword::new);
+	public static final DeferredItem<Item> AMETHYST_SHOVEL = REGISTRY.register("amethyst_shovel", AmethystTools.Shovel::new);
+	public static final DeferredItem<Item> AMETHYST_PICKAXE = REGISTRY.register("amethyst_pickaxe", AmethystTools.Pickaxe::new);
+	public static final DeferredItem<Item> AMETHYST_AXE = REGISTRY.register("amethyst_axe", AmethystTools.Axe::new);
+	public static final DeferredItem<Item> AMETHYST_HOE = REGISTRY.register("amethyst_hoe", AmethystTools.Hoe::new);
+	public static final DeferredItem<Item> AMETHYST_HELMET = REGISTRY.register("amethyst_helmet", AmethystArmor.Helmet::new);
+	public static final DeferredItem<Item> AMETHYST_CHESTPLATE = REGISTRY.register("amethyst_chestplate", AmethystArmor.Chestplate::new);
+	public static final DeferredItem<Item> AMETHYST_LEGGINGS = REGISTRY.register("amethyst_leggings", AmethystArmor.Leggings::new);
+	public static final DeferredItem<Item> AMETHYST_BOOTS = REGISTRY.register("amethyst_boots", AmethystArmor.Boots::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_SWORD = REGISTRY.register("netherite_amethyst_sword", NetheriteAmethystTools.Sword::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_SHOVEL = REGISTRY.register("netherite_amethyst_shovel", NetheriteAmethystTools.Shovel::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_PICKAXE = REGISTRY.register("netherite_amethyst_pickaxe", NetheriteAmethystTools.Pickaxe::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_AXE = REGISTRY.register("netherite_amethyst_axe", NetheriteAmethystTools.Axe::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_HOE = REGISTRY.register("netherite_amethyst_hoe", NetheriteAmethystTools.Hoe::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_HELMET = REGISTRY.register("netherite_amethyst_helmet", NetheriteAmethystArmor.Helmet::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_CHESTPLATE = REGISTRY.register("netherite_amethyst_chestplate", NetheriteAmethystArmor.Chestplate::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_LEGGINGS = REGISTRY.register("netherite_amethyst_leggings", NetheriteAmethystArmor.Leggings::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_BOOTS = REGISTRY.register("netherite_amethyst_boots", NetheriteAmethystArmor.Boots::new);
+
 	// End of user code block custom items
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
 		return block(block, new Item.Properties());
@@ -438,41 +556,43 @@ public class MutModItems {
 		public static void clientLoad(FMLClientSetupEvent event) {
 			event.enqueueWork(() -> {
 				ItemProperties.register(IRON_BOW.get(), ResourceLocation.parse("mut:iron_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(IRON_BOW.get(), ResourceLocation.parse("mut:iron_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(IRON_BOW.get(), ResourceLocation.parse("mut:iron_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(DIAMOND_BOW.get(), ResourceLocation.parse("mut:diamond_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(DIAMOND_BOW.get(), ResourceLocation.parse("mut:diamond_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(DIAMOND_BOW.get(), ResourceLocation.parse("mut:diamond_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(GOLDEN_BOW.get(), ResourceLocation.parse("mut:golden_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(GOLDEN_BOW.get(), ResourceLocation.parse("mut:golden_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(GOLDEN_BOW.get(), ResourceLocation.parse("mut:golden_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(NETHERITE_BOW.get(), ResourceLocation.parse("mut:netherite_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(NETHERITE_BOW.get(), ResourceLocation.parse("mut:netherite_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(NETHERITE_BOW.get(), ResourceLocation.parse("mut:netherite_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(STEEL_BOW.get(), ResourceLocation.parse("mut:steel_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(STEEL_BOW.get(), ResourceLocation.parse("mut:steel_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(STEEL_BOW.get(), ResourceLocation.parse("mut:steel_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(GILDING_BOW.get(), ResourceLocation.parse("mut:gilding_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(GILDING_BOW.get(), ResourceLocation.parse("mut:gilding_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(GILDING_BOW.get(), ResourceLocation.parse("mut:gilding_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(ADVANCED_STEEL_BOW.get(), ResourceLocation.parse("mut:advanced_steel_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(ADVANCED_STEEL_BOW.get(), ResourceLocation.parse("mut:advanced_steel_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(ADVANCED_STEEL_BOW.get(), ResourceLocation.parse("mut:advanced_steel_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(NETHER_STAR_BOW.get(), ResourceLocation.parse("mut:nether_star_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(NETHER_STAR_BOW.get(), ResourceLocation.parse("mut:nether_star_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(NETHER_STAR_BOW.get(), ResourceLocation.parse("mut:nether_star_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(STEEL_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(IRON_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(DIAMOND_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(GOLDEN_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(NETHERITE_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(BLUE_DIAMOND_BOW.get(), ResourceLocation.parse("mut:blue_diamond_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(BLUE_DIAMOND_BOW.get(), ResourceLocation.parse("mut:blue_diamond_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(BLUE_DIAMOND_BOW.get(), ResourceLocation.parse("mut:blue_diamond_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:obsidian_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:obsidian_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:obsidian_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(NETHERITE_OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:netherite_obsidian_bow_pulling"),
 						(itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(NETHERITE_OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:netherite_obsidian_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(NETHERITE_OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:netherite_obsidian_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(CRYING_OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:crying_obsidian_bow_pulling"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullingProcedure.execute(entity, itemStackToRender));
-				ItemProperties.register(CRYING_OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:crying_obsidian_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute(entity));
+				ItemProperties.register(CRYING_OBSIDIAN_BOW.get(), ResourceLocation.parse("mut:crying_obsidian_bow_pull"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) GetPullProcedure.execute());
 				ItemProperties.register(GILDING_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(BLUE_DIAMOND_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(OBSIDIAN_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(NETHERITE_OBSIDIAN_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(CRYING_OBSIDIAN_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(ADVANCED_STEEL_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(NETHER_STAR_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(COPPER_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 			});
 		}
 	}

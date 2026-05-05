@@ -4,61 +4,13 @@
     "mut:iron_beef",
     "mut:diamond_beef",
     "mut:steel_beef",
-    {
-      "id": "artifacts:everlasting_spider_eye",
-      "required": false
-    },
-    {
-      "id": "artifacts:everlasting_cooked_chicken",
-      "required": false
-    },
-    {
-      "id": "artifacts:everlasting_rotten_flesh",
-      "required": false
-    },
-    "mut:gilding_beef",
-    "mut:golden_beef",
-    {
-      "id": "artifacts:everlasting_rabbit",
-      "required": false
-    },
-    {
-      "id": "artifacts:eternal_steak",
-      "required": false
-    },
-    {
-      "id": "artifacts:everlasting_cooked_mutton",
-      "required": false
-    },
-    {
-      "id": "artifacts:everlasting_rabbit_stew",
-      "required": false
-    },
-    {
-      "id": "artifacts:everlasting_cooked_porkchop",
-      "required": false
-    },
-    {
-      "id": "artifacts:everlasting_beef",
-      "required": false
-    },
-    {
-      "id": "artifacts:everlasting_chicken",
-      "required": false
-    },
+    "mut:netherite_copper_beef",
     "mut:blue_diamond_beef",
-    {
-      "id": "artifacts:everlasting_cooked_rabbit",
-      "required": false
-    },
-    {
-      "id": "artifacts:everlasting_mutton",
-      "required": false
-    },
+    "mut:nether_star_beef",
+    "mut:netherite_redstone_beef",
     "mut:netherite_beef",
-    {
-      "id": "artifacts:everlasting_porkchop",
-      "required": false
-    }
+    "mut:gilding_beef",
+    "mut:copper_beef",
+    "mut:golden_beef"
   ]
 }

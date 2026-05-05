@@ -14,8 +14,14 @@
     "mut:gilding_chestplate",
     "mut:advanced_steel_chestplate",
     "mut:steel_chestplate",
+    "mut:netherite_copper_chestplate",
     "mut:netherite_chain_chestplate",
     "mut:netherite_obsidian_chestplate",
-    "mut:copper_chestplate"
+    "mut:netherite_emerald_chestplate",
+    "mut:copper_chestplate",
+    {
+      "id": "#mut:chest_armor",
+      "required": false
+    }
   ]
 }

@@ -1,14 +1,15 @@
 modLoader="javafml"
 loaderVersion="[4,)"
-license="Not specified"
+license="MIT License"
 
 [[mods]]
 modId="mut"
-version="0.1.0f"
+version="0.1.19"
 displayName="MoreUpgradeTemplate"
 displayURL="https://mcreator.net"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
-authors="MCreator"
+authors="Lying_ice"
+description="More Upgrade Smithing Templates"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
@@ -34,6 +35,12 @@ authors="MCreator"
     side="BOTH"
 
 
+[[dependencies.mut]]
+    modId="nexus_compiler"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 
 # Start of user code block dependencies configuration

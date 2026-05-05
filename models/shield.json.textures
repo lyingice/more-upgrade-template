@@ -65,6 +65,18 @@
       "map": {
         "0": "crying_obsidian_shield"
       }
+    },
+    "nether_star": {
+      "name": "nether_star",
+      "map": {
+        "0": "nether_star_shield"
+      }
+    },
+    "copper": {
+      "name": "copper",
+      "map": {
+        "0": "copper_shield"
+      }
     }
   }
 }

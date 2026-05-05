@@ -2,9 +2,13 @@
   "replace": false,
   "values": [
     "mut:crying_obsidian_ingot",
+    "mut:dragon_scale_cluster",
     "mut:obsidian_ingot",
     "mut:blue_diamond_ingot",
     "mut:gilding_ingot",
-    "mut:steel_ingot"
+    "mut:netherite_emerald_ingot",
+    "mut:steel_ingot",
+    "mut:netherite_redstone_ingot",
+    "mut:netherite_amethyst_ingot"
   ]
 }

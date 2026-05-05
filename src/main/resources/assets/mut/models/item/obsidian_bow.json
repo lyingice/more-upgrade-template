@@ -28,21 +28,21 @@
   "overrides": [
     {
       "predicate": {
-        "mut:obsidian_bow_pulling": 1
+        "minecraft:pulling": 1
       },
       "model": "mut:item/obsidian_bow_0"
     },
     {
       "predicate": {
-        "mut:obsidian_bow_pulling": 1,
-        "mut:obsidian_bow_pull": 0.81
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.65
       },
       "model": "mut:item/obsidian_bow_1"
     },
     {
       "predicate": {
-        "mut:obsidian_bow_pulling": 1,
-        "mut:obsidian_bow_pull": 1.18
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.9
       },
       "model": "mut:item/obsidian_bow_2"
     }

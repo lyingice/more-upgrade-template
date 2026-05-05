@@ -19,12 +19,7 @@
     "itemTexture": "",
     "particleTexture": "blue_diamond_debris_side",
     "blockSetType": "OAK",
-    "pottedPlant": {
-      "value": ""
-    },
-    "leavesParticleChance": 0.01,
-    "signEntityTexture": "",
-    "signGUITexture": "",
+    "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,

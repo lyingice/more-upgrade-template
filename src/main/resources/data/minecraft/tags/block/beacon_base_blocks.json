@@ -4,11 +4,14 @@
     "mut:blue_diamond_block",
     "mut:steel_block",
     "mut:gilding_block",
+    "mut:netherite_amethyst_block",
+    "mut:netherite_emerald_block",
     "mut:obsidian_block",
     "mut:steel_debris",
     "mut:gilding_debris",
     "mut:advanced_steel_block",
     "mut:crying_obsidian_block",
-    "mut:blue_diamond_debris"
+    "mut:blue_diamond_debris",
+    "mut:netherite_redstone_block"
   ]
 }

@@ -1,5 +1,6 @@
 package net.mcreator.mut.item;
 
+import net.minecraft.world.item.*;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
@@ -10,11 +11,6 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -51,7 +47,7 @@ public abstract class DragonItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 11);
 				map.put(ArmorItem.Type.HELMET, 5);
 				map.put(ArmorItem.Type.BODY, 11);
-			}), 30, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_netherite")), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("mut:dragon_armor"))), 4f, 0.1f);
+			}), 30, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_netherite")), () -> Ingredient.of(new ItemStack(Items.NETHER_STAR)), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("mut:dragon_armor"))), 4f, 0.1f);
 			registerHelper.register(ResourceLocation.parse("mut:dragon"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});

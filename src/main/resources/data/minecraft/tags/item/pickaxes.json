@@ -2,15 +2,22 @@
   "replace": false,
   "values": [
     "mut:gilding_pickaxe",
-    "mut:blue_diamond_pickaxe",
     "mut:steel_pickaxe",
+    "mut:netherite_emerald_pickaxe",
+    "mut:advanced_steel_pickaxe",
+    "mut:nether_star_pickaxe",
+    "mut:netherite_redstone_pickaxe",
+    "mut:copper_pickaxe",
+    "mut:blue_diamond_pickaxe",
+    "mut:netherite_copper_pickaxe",
     "mut:crying_obsidian_pickaxe",
     "mut:netherite_obsidian_pickaxe",
-    "mut:advanced_steel_pickaxe",
     "mut:obsidian_pickaxe",
     "mut:dragon_pickaxe",
-    "mut:netherite_redstone_pickaxe",
-    "mut:emerald_pickaxe",
-    "mut:copper_pickaxe"
+    {
+      "id": "#mut:pickaxes",
+      "required": false
+    },
+    "mut:emerald_pickaxe"
   ]
 }

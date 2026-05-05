@@ -24,6 +24,9 @@ public class MutModBlocks {
 	public static final DeferredBlock<Block> OBSIDIAN_BLOCK;
 	public static final DeferredBlock<Block> CRYING_OBSIDIAN_BLOCK;
 	public static final DeferredBlock<Block> TEMPLATE_TRADER_BLOCK;
+	public static final DeferredBlock<Block> NETHERITE_REDSTONE_BLOCK;
+	public static final DeferredBlock<Block> NETHERITE_EMERALD_BLOCK;
+	public static final DeferredBlock<Block> NETHERITE_AMETHYST_BLOCK;
 	static {
 		STEEL_DEBRIS = REGISTRY.register("steel_debris", SteelDebrisBlock::new);
 		BLUE_DIAMOND_DEBRIS = REGISTRY.register("blue_diamond_debris", BlueDiamondDebrisBlock::new);
@@ -36,6 +39,9 @@ public class MutModBlocks {
 		OBSIDIAN_BLOCK = REGISTRY.register("obsidian_block", ObsidianBlockBlock::new);
 		CRYING_OBSIDIAN_BLOCK = REGISTRY.register("crying_obsidian_block", CryingObsidianBlockBlock::new);
 		TEMPLATE_TRADER_BLOCK = REGISTRY.register("template_trader_block", TemplateTraderBlockBlock::new);
+		NETHERITE_REDSTONE_BLOCK = REGISTRY.register("netherite_redstone_block", NetheriteRedstoneBlockBlock::new);
+		NETHERITE_EMERALD_BLOCK = REGISTRY.register("netherite_emerald_block", NetheriteEmeraldBlockBlock::new);
+		NETHERITE_AMETHYST_BLOCK = REGISTRY.register("netherite_amethyst_block", NetheriteAmethystBlockBlock::new);
 	}
 	// Start of user code block custom blocks
 	// End of user code block custom blocks

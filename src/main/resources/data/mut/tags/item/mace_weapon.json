@@ -2,9 +2,14 @@
   "replace": false,
   "values": [
     "mut:diamond_mace",
+    "mut:steel_mace",
     "mut:netherite_mace",
     "mut:golden_mace",
+    "mut:gilding_mace",
+    "mut:copper_mace",
+    "mut:advanced_steel_mace",
     "mut:iron_mace",
-    "mut:wooden_mace"
+    "mut:wooden_mace",
+    "mut:blue_diamond_mace"
   ]
 }

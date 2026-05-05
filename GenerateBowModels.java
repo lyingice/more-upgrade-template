@@ -9,19 +9,13 @@ public class GenerateBowModels {
 
     // 你的所有弓的材料名称
     private static final String[] MATERIALS = {
-            "obsidian","netherite_obsidian","crying_obsidian", "steel","advanced_steel","gilding","blue_diamond","nether_star"
+            "iron","diamond","netherite","golden","obsidian","netherite_obsidian","crying_obsidian", "steel","advanced_steel","gilding","blue_diamond","nether_star","copper","netherite_copper"
     };
 
     // ========== 在这里自定义每个弓的拉动数值 ==========
     private static final Map<String, float[]> BOW_PULL_VALUES = new HashMap<>();
     static {
-        BOW_PULL_VALUES.put("obsidian", new float[]{0.81f, 1.18f});
-        BOW_PULL_VALUES.put("netherite_obsidian", new float[]{0.81f, 1.18f});
-        BOW_PULL_VALUES.put("crying_obsidian", new float[]{0.81f, 1.18f});
-        BOW_PULL_VALUES.put("steel", new float[]{0.65f, 0.95f});
-        BOW_PULL_VALUES.put("advanced_steel", new float[]{0.48f, 0.71f});
-        BOW_PULL_VALUES.put("gilding", new float[]{0.32f, 0.47f});
-        BOW_PULL_VALUES.put("blue_diamond", new float[]{0.48f, 0.71f});
+        BOW_PULL_VALUES.put("obsidian", new float[]{0.65f, 0.9f});
     }
 
     // 默认拉动数值
@@ -134,21 +128,21 @@ public class GenerateBowModels {
         sb.append("  \"overrides\": [\n");
         sb.append("    {\n");
         sb.append("      \"predicate\": {\n");
-        sb.append("        \"mut:").append(material).append("_bow_pulling\": 1\n");
+        sb.append("        \"minecraft:pulling\": 1\n");
         sb.append("      },\n");
         sb.append("      \"model\": \"mut:item/").append(material).append("_bow_0\"\n");
         sb.append("    },\n");
         sb.append("    {\n");
         sb.append("      \"predicate\": {\n");
-        sb.append("        \"mut:").append(material).append("_bow_pulling\": 1,\n");
-        sb.append("        \"mut:").append(material).append("_bow_pull\": ").append(pull1).append("\n");
+        sb.append("        \"minecraft:pulling\": 1,\n");
+        sb.append("        \"minecraft:pull\": ").append(pull1).append("\n");
         sb.append("      },\n");
         sb.append("      \"model\": \"mut:item/").append(material).append("_bow_1\"\n");
         sb.append("    },\n");
         sb.append("    {\n");
         sb.append("      \"predicate\": {\n");
-        sb.append("        \"mut:").append(material).append("_bow_pulling\": 1,\n");
-        sb.append("        \"mut:").append(material).append("_bow_pull\": ").append(pull2).append("\n");
+        sb.append("        \"minecraft:pulling\": 1,\n");
+        sb.append("        \"minecraft:pull\": ").append(pull2).append("\n");
         sb.append("      },\n");
         sb.append("      \"model\": \"mut:item/").append(material).append("_bow_2\"\n");
         sb.append("    }\n");

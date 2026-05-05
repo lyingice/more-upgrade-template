@@ -23,6 +23,8 @@ public class MutModTabs {
 				tabData.accept(MutModItems.IRON_UPGRADE_TEMPLATE.get());
 				tabData.accept(MutModItems.GOLD_UPGRADE_TEMPLATE.get());
 				tabData.accept(MutModItems.DIAMOND_UPGRADE_TEMPLATE.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_UPGRADE_SMITHING_TEMPLATE.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_UPGRADE_SMITHING_TEMPLATE.get());
 				tabData.accept(MutModItems.STEEL_UPGRADE_TEMPLATE.get());
 				tabData.accept(MutModItems.GILDING_UPGRADE_TEMPLATE.get());
 				tabData.accept(MutModItems.BLUE_DIAMOND_UPGRADE_TEMPLATE.get());
@@ -32,9 +34,11 @@ public class MutModTabs {
 				tabData.accept(MutModItems.NETHERITE_REDSTONE_UPGRADE_TEMPLATE.get());
 				tabData.accept(MutModItems.NETHER_STAR_UPGRADE_TEMPLATE.get());
 				tabData.accept(MutModItems.DRAGON_UPGRADE_TEMPLATE.get());
+				tabData.accept(MutModItems.NETHERITE_AMETHYST_UPGRADE_SMITHING_TEMPLATE.get());
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_EXTRA_ITEMS = REGISTRY.register("more_upgrade_template_extra_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_extra_items")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_INGOT.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(MutModItems.NETHERITE_EMERALD_INGOT.get());
 				tabData.accept(MutModItems.STEEL_INGOT.get());
 				tabData.accept(MutModItems.GILDING_INGOT.get());
 				tabData.accept(MutModItems.BLUE_DIAMOND_INGOT.get());
@@ -47,42 +51,62 @@ public class MutModTabs {
 				tabData.accept(MutModItems.OBSIDIAN_INGOT.get());
 				tabData.accept(MutModItems.CRYING_OBSIDIAN_INGOT.get());
 				tabData.accept(MutModItems.NETHERITE_REDSTONE_INGOT.get());
+				tabData.accept(MutModItems.NETHERITE_AMETHYST_INGOT.get());
 				tabData.accept(MutModItems.DRAGON_SCALE_CLUSTER.get());
+				tabData.accept(MutModItems.COPPER_BEEF.get());
 				tabData.accept(MutModItems.IRON_BEEF.get());
 				tabData.accept(MutModItems.GOLDEN_BEEF.get());
 				tabData.accept(MutModItems.DIAMOND_BEEF.get());
 				tabData.accept(MutModItems.NETHERITE_BEEF.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_BEEF.get());
 				tabData.accept(MutModItems.STEEL_BEEF.get());
 				tabData.accept(MutModItems.GILDING_BEEF.get());
 				tabData.accept(MutModItems.BLUE_DIAMOND_BEEF.get());
 				tabData.accept(MutModItems.NETHER_STAR_BEEF.get());
+				tabData.accept(MutModItems.NETHERITE_REDSTONE_BEEF.get());
 			}).withTabsBefore(MORE_UPGRADE_TMPLATES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_TOOLS = REGISTRY.register("more_upgrade_template_tools",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_tools")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_PICKAXE.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(MutModItems.IRON_ELYTRA.get());
+				tabData.accept(MutModItems.GOLDEN_ELYTRA.get());
+				tabData.accept(MutModItems.DIAMOND_ELYTRA.get());
+				tabData.accept(MutModItems.NETHERITE_ELYTRA.get());
 				tabData.accept(MutModItems.COPPER_SHOVEL.get());
 				tabData.accept(MutModItems.COPPER_PICKAXE.get());
 				tabData.accept(MutModItems.COPPER_AXE.get());
 				tabData.accept(MutModItems.COPPER_HOE.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_SHOVEL.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_PICKAXE.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_AXE.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_HOE.get());
 				tabData.accept(MutModItems.EMERALD_SHOVEL.get());
 				tabData.accept(MutModItems.EMERALD_PICKAXE.get());
 				tabData.accept(MutModItems.EMERALD_AXE.get());
 				tabData.accept(MutModItems.EMERALD_HOE.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_SHOVEL.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_PICKAXE.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_AXE.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_HOE.get());
 				tabData.accept(MutModItems.STEEL_SHOVEL.get());
 				tabData.accept(MutModItems.STEEL_PICKAXE.get());
 				tabData.accept(MutModItems.STEEL_AXE.get());
 				tabData.accept(MutModItems.STEEL_HOE.get());
-				tabData.accept(MutModItems.ADVANCED_STEEL_SHOVEL.get());
-				tabData.accept(MutModItems.ADVANCED_STEEL_PICKAXE.get());
-				tabData.accept(MutModItems.ADVANCED_STEEL_AXE.get());
-				tabData.accept(MutModItems.ADVANCED_STEEL_HOE.get());
-				tabData.accept(MutModItems.BLUE_DIAMOND_SHOVEL.get());
-				tabData.accept(MutModItems.BLUE_DIAMOND_PICKAXE.get());
-				tabData.accept(MutModItems.BLUE_DIAMOND_AXE.get());
-				tabData.accept(MutModItems.BLUE_DIAMOND_HOE.get());
 				tabData.accept(MutModItems.GILDING_SHOVEL.get());
 				tabData.accept(MutModItems.GILDING_PICKAXE.get());
 				tabData.accept(MutModItems.GILDING_AXE.get());
 				tabData.accept(MutModItems.GILDING_HOE.get());
+				tabData.accept(MutModItems.BLUE_DIAMOND_SHOVEL.get());
+				tabData.accept(MutModItems.BLUE_DIAMOND_PICKAXE.get());
+				tabData.accept(MutModItems.BLUE_DIAMOND_AXE.get());
+				tabData.accept(MutModItems.BLUE_DIAMOND_HOE.get());
+				tabData.accept(MutModItems.ADVANCED_STEEL_SHOVEL.get());
+				tabData.accept(MutModItems.ADVANCED_STEEL_PICKAXE.get());
+				tabData.accept(MutModItems.ADVANCED_STEEL_AXE.get());
+				tabData.accept(MutModItems.ADVANCED_STEEL_HOE.get());
+				tabData.accept(MutModItems.NETHER_STAR_SHOVEL.get());
+				tabData.accept(MutModItems.NETHER_STAR_PICKAXE.get());
+				tabData.accept(MutModItems.NETHER_STAR_AXE.get());
+				tabData.accept(MutModItems.NETHER_STAR_HOE.get());
 				tabData.accept(MutModItems.OBSIDIAN_SHOVEL.get());
 				tabData.accept(MutModItems.OBSIDIAN_PICKAXE.get());
 				tabData.accept(MutModItems.OBSIDIAN_AXE.get());
@@ -103,17 +127,17 @@ public class MutModTabs {
 				tabData.accept(MutModItems.DRAGON_PICKAXE.get());
 				tabData.accept(MutModItems.DRAGON_AXE.get());
 				tabData.accept(MutModItems.DRAGON_HOE.get());
-				tabData.accept(MutModItems.IRON_ELYTRA.get());
-				tabData.accept(MutModItems.GOLDEN_ELYTRA.get());
-				tabData.accept(MutModItems.DIAMOND_ELYTRA.get());
-				tabData.accept(MutModItems.NETHERITE_ELYTRA.get());
-			}).withSearchBar().withTabsBefore(MORE_UPGRADE_TEMPLATE_EXTRA_ITEMS.getId()).build());
+			}).withTabsBefore(MORE_UPGRADE_TEMPLATE_EXTRA_ITEMS.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_COMBAT_ITEMS = REGISTRY.register("more_upgrade_template_combat_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_combat_items")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_SWORD.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(MutModItems.COPPER_SWORD.get());
 				tabData.accept(MutModItems.COPPER_AXE.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_SWORD.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_AXE.get());
 				tabData.accept(MutModItems.EMERALD_SWORD.get());
 				tabData.accept(MutModItems.EMERALD_AXE.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_SWORD.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_AXE.get());
 				tabData.accept(MutModItems.STEEL_SWORD.get());
 				tabData.accept(MutModItems.STEEL_AXE.get());
 				tabData.accept(MutModItems.GILDING_SWORD.get());
@@ -122,6 +146,8 @@ public class MutModTabs {
 				tabData.accept(MutModItems.BLUE_DIAMOND_AXE.get());
 				tabData.accept(MutModItems.ADVANCED_STEEL_SWORD.get());
 				tabData.accept(MutModItems.ADVANCED_STEEL_AXE.get());
+				tabData.accept(MutModItems.NETHER_STAR_SWORD.get());
+				tabData.accept(MutModItems.NETHER_STAR_AXE.get());
 				tabData.accept(MutModItems.OBSIDIAN_SWORD.get());
 				tabData.accept(MutModItems.OBSIDIAN_AXE.get());
 				tabData.accept(MutModItems.NETHERITE_OBSIDIAN_SWORD.get());
@@ -133,10 +159,16 @@ public class MutModTabs {
 				tabData.accept(MutModItems.DRAGON_SWORD.get());
 				tabData.accept(MutModItems.DRAGON_AXE.get());
 				tabData.accept(MutModItems.WOODEN_MACE.get());
+				tabData.accept(MutModItems.COPPER_MACE.get());
 				tabData.accept(MutModItems.IRON_MACE.get());
 				tabData.accept(MutModItems.GOLDEN_MACE.get());
 				tabData.accept(MutModItems.DIAMOND_MACE.get());
 				tabData.accept(MutModItems.NETHERITE_MACE.get());
+				tabData.accept(MutModItems.STEEL_MACE.get());
+				tabData.accept(MutModItems.GILDING_MACE.get());
+				tabData.accept(MutModItems.BLUE_DIAMOND_MACE.get());
+				tabData.accept(MutModItems.ADVANCED_STEEL_MACE.get());
+				tabData.accept(MutModItems.COPPER_SHIELD.get());
 				tabData.accept(MutModItems.IRON_SHIELD.get());
 				tabData.accept(MutModItems.GOLDEN_SHIELD.get());
 				tabData.accept(MutModItems.DIAMOND_SHIELD.get());
@@ -145,6 +177,7 @@ public class MutModTabs {
 				tabData.accept(MutModItems.GILDING_SHIELD.get());
 				tabData.accept(MutModItems.BLUE_DIAMOND_SHIELD.get());
 				tabData.accept(MutModItems.ADVANCED_STEEL_SHIELD.get());
+				tabData.accept(MutModItems.NETHER_STAR_SHIELD.get());
 				tabData.accept(MutModItems.OBSIDIAN_SHIELD.get());
 				tabData.accept(MutModItems.NETHERITE_OBSIDIAN_SHIELD.get());
 				tabData.accept(MutModItems.CRYING_OBSIDIAN_SHIELD.get());
@@ -168,6 +201,14 @@ public class MutModTabs {
 				tabData.accept(MutModItems.EMERALD_ARMOR_CHESTPLATE.get());
 				tabData.accept(MutModItems.EMERALD_ARMOR_LEGGINGS.get());
 				tabData.accept(MutModItems.EMERALD_ARMOR_BOOTS.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_HELMET.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_CHESTPLATE.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_LEGGINGS.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_BOOTS.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_HELMET.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_CHESTPLATE.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_LEGGINGS.get());
+				tabData.accept(MutModItems.NETHERITE_EMERALD_BOOTS.get());
 				tabData.accept(MutModItems.STEEL_HELMET.get());
 				tabData.accept(MutModItems.STEEL_CHESTPLATE.get());
 				tabData.accept(MutModItems.STEEL_LEGGINGS.get());
@@ -209,6 +250,15 @@ public class MutModTabs {
 				tabData.accept(MutModItems.DRAGON_LEGGINGS.get());
 				tabData.accept(MutModItems.DRAGON_BOOTS.get());
 				tabData.accept(MutModItems.DRAGON_CHESTPLATE_ELYTRA.get());
+				tabData.accept(MutModItems.COPPER_HORSE_ARMOR.get());
+				tabData.accept(MutModItems.NETHERITE_HORSE_ARMOR.get());
+				tabData.accept(MutModItems.COPPER_WOLF_ARMOR.get());
+				tabData.accept(MutModItems.IRON_WOLF_ARMOR.get());
+				tabData.accept(MutModItems.GOLDEN_WOLF_ARMOR.get());
+				tabData.accept(MutModItems.DIAMOND_WOLF_ARMOR.get());
+				tabData.accept(MutModItems.NETHERITE_WOLF_ARMOR.get());
+				tabData.accept(MutModItems.COPPER_BOW.get());
+				tabData.accept(MutModItems.NETHERITE_COPPER_BOW.get());
 				tabData.accept(MutModItems.IRON_BOW.get());
 				tabData.accept(MutModItems.GOLDEN_BOW.get());
 				tabData.accept(MutModItems.DIAMOND_BOW.get());
@@ -221,9 +271,10 @@ public class MutModTabs {
 				tabData.accept(MutModItems.OBSIDIAN_BOW.get());
 				tabData.accept(MutModItems.NETHERITE_OBSIDIAN_BOW.get());
 				tabData.accept(MutModItems.CRYING_OBSIDIAN_BOW.get());
-			}).withSearchBar().withTabsBefore(MORE_UPGRADE_TEMPLATE_TOOLS.getId()).build());
+			}).withTabsBefore(MORE_UPGRADE_TEMPLATE_TOOLS.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_BLOCKS = REGISTRY.register("more_upgrade_template_blocks",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_blocks")).icon(() -> new ItemStack(MutModBlocks.BLUE_DIAMOND_DEBRIS.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(MutModBlocks.TEMPLATE_TRADER_BLOCK.get().asItem());
 				tabData.accept(MutModBlocks.STEEL_DEBRIS.get().asItem());
 				tabData.accept(MutModBlocks.GILDING_DEBRIS.get().asItem());
 				tabData.accept(MutModBlocks.BLUE_DIAMOND_DEBRIS.get().asItem());
@@ -234,6 +285,8 @@ public class MutModTabs {
 				tabData.accept(MutModBlocks.ADVANCED_STEEL_BLOCK.get().asItem());
 				tabData.accept(MutModBlocks.OBSIDIAN_BLOCK.get().asItem());
 				tabData.accept(MutModBlocks.CRYING_OBSIDIAN_BLOCK.get().asItem());
-				tabData.accept(MutModBlocks.TEMPLATE_TRADER_BLOCK.get().asItem());
+				tabData.accept(MutModBlocks.NETHERITE_REDSTONE_BLOCK.get().asItem());
+				tabData.accept(MutModBlocks.NETHERITE_EMERALD_BLOCK.get().asItem());
+				tabData.accept(MutModBlocks.NETHERITE_AMETHYST_BLOCK.get().asItem());
 			}).withTabsBefore(MORE_UPGRADE_TEMPLATE_COMBAT_ITEMS.getId()).build());
 }

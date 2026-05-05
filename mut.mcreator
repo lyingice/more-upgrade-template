@@ -7,12 +7,7 @@
       "locked_code": false,
       "registry_name": "get_pull",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
+        "dependencies": [],
         "return_type": "number",
         "files": [
           "src/main/java/net/mcreator/mut/procedures/GetPullProcedure.java"
@@ -59,7 +54,7 @@
           "src/main/resources/assets/mut/models/item/iron_bow_1.json"
         ]
       },
-      "path": "~/Amror and Tools/More Iron"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "MoreUpgradeTmplates",
@@ -435,20 +430,6 @@
       "path": "~/Process Event"
     },
     {
-      "name": "AutomaticLoadingCrossbow",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "automatic_loading_crossbow",
-      "metadata": {
-        "dependencies": [],
-        "files": [
-          "src/main/java/net/mcreator/mut/procedures/AutomaticLoadingCrossbowProcedure.java"
-        ]
-      },
-      "path": "~/Process Event"
-    },
-    {
       "name": "GoldenBeef",
       "type": "item",
       "compiles": true,
@@ -505,7 +486,7 @@
           "src/main/resources/assets/mut/models/item/diamond_bow_0.json"
         ]
       },
-      "path": "~/Amror and Tools/More Diamond"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "GoldenBow",
@@ -522,7 +503,7 @@
           "src/main/resources/assets/mut/models/item/golden_bow_1.json"
         ]
       },
-      "path": "~/Amror and Tools/More Golden"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "NetheriteBow",
@@ -539,7 +520,7 @@
           "src/main/resources/assets/mut/models/item/netherite_bow.json"
         ]
       },
-      "path": "~/Amror and Tools/More Netherite"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "SteelBow",
@@ -556,7 +537,7 @@
           "src/main/java/net/mcreator/mut/item/SteelBowItem.java"
         ]
       },
-      "path": "~/Amror and Tools/Steel Items"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "Copper",
@@ -960,7 +941,7 @@
           "src/main/resources/assets/mut/models/item/gilding_bow.json"
         ]
       },
-      "path": "~/Amror and Tools/Gilding Items"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "AdvancedSteelBow",
@@ -977,7 +958,7 @@
           "src/main/resources/assets/mut/models/item/advanced_steel_bow_2.json"
         ]
       },
-      "path": "~/Amror and Tools/Steel Items"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "NetherStarBow",
@@ -994,13 +975,13 @@
           "src/main/resources/assets/mut/models/item/nether_star_bow_1.json"
         ]
       },
-      "path": "~/Amror and Tools/Nether Star Items"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "AdvancedSteel",
       "type": "armor",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "advanced_steel",
       "metadata": {
         "files": [
@@ -1757,7 +1738,7 @@
           "src/main/resources/assets/mut/models/item/blue_diamond_bow_2.json"
         ]
       },
-      "path": "~/Amror and Tools/Blue Diamond Items"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "NetheriteRedstone",
@@ -2027,7 +2008,7 @@
           "src/main/resources/assets/mut/models/item/obsidian_bow_0.json"
         ]
       },
-      "path": "~/Amror and Tools/Obsidian Items"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "NetheriteObsidianBow",
@@ -2044,7 +2025,7 @@
           "src/main/resources/assets/mut/models/item/netherite_obsidian_bow_0.json"
         ]
       },
-      "path": "~/Amror and Tools/Obsidian Items"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "CryingObsidianBow",
@@ -2061,7 +2042,7 @@
           "src/main/resources/assets/mut/models/item/crying_obsidian_bow.json"
         ]
       },
-      "path": "~/Amror and Tools/Obsidian Items"
+      "path": "~/Amror and Tools/Extra Bow"
     },
     {
       "name": "IronMace",
@@ -2075,7 +2056,7 @@
           "src/main/java/net/mcreator/mut/item/IronMaceItem.java"
         ]
       },
-      "path": "~/Amror and Tools/More Iron"
+      "path": "~/Amror and Tools/Extra Mace"
     },
     {
       "name": "WoodenMace",
@@ -2089,7 +2070,7 @@
           "src/main/java/net/mcreator/mut/item/WoodenMaceItem.java"
         ]
       },
-      "path": "~/Amror and Tools/Extra Items"
+      "path": "~/Amror and Tools/Extra Mace"
     },
     {
       "name": "DiamondMace",
@@ -2103,7 +2084,7 @@
           "src/main/resources/assets/mut/models/item/diamond_mace.json"
         ]
       },
-      "path": "~/Amror and Tools/More Diamond"
+      "path": "~/Amror and Tools/Extra Mace"
     },
     {
       "name": "GoldenMace",
@@ -2117,7 +2098,7 @@
           "src/main/resources/assets/mut/models/item/golden_mace.json"
         ]
       },
-      "path": "~/Amror and Tools/More Golden"
+      "path": "~/Amror and Tools/Extra Mace"
     },
     {
       "name": "NetheriteMace",
@@ -2131,7 +2112,7 @@
           "src/main/java/net/mcreator/mut/item/NetheriteMaceItem.java"
         ]
       },
-      "path": "~/Amror and Tools/More Netherite"
+      "path": "~/Amror and Tools/Extra Mace"
     },
     {
       "name": "DiamondChain",
@@ -2171,7 +2152,7 @@
       "name": "NetheriteChain",
       "type": "armor",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "netherite_chain",
       "metadata": {
         "files": [
@@ -5246,7 +5227,8 @@
         "files": [
           "src/main/java/net/mcreator/mut/mixin/ElytraLayerMixin.java"
         ]
-      }
+      },
+      "path": "~/Mixin"
     },
     {
       "name": "BlueDiamondIngotRecipe",
@@ -5658,18 +5640,1594 @@
         ]
       },
       "path": "~/Amror and Tools/Redstone Items/netherite_redstone_recipes"
+    },
+    {
+      "name": "NetheriteRedstoneBeef",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_redstone_beef",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteRedstoneBeefItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_redstone_beef.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "NetherRedstoneBeefRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_redstone_beef_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nether_redstone_beef_recipe.json"
+        ]
+      },
+      "path": "~/Food/beef_recipes"
+    },
+    {
+      "name": "NetheriteRedstoneBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_redstone_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/netherite_redstone_block.json",
+          "src/main/resources/assets/mut/models/item/netherite_redstone_block.json",
+          "src/main/java/net/mcreator/mut/block/NetheriteRedstoneBlockBlock.java",
+          "src/main/resources/assets/mut/models/block/netherite_redstone_block.json",
+          "src/main/resources/assets/mut/blockstates/netherite_redstone_block.json"
+        ]
+      },
+      "path": "~/Ore Block"
+    },
+    {
+      "name": "NetheriteRedstoneBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_redstone_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_redstone_block_recipe.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes"
+    },
+    {
+      "name": "Sbtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sbtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/sbtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "Gbtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gbtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/gbtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "Bdbtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bdbtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/bdbtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "Asbtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "asbtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/asbtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "Obtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/obtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "Cobtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/cobtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "Nrtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nrtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nrtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "IronWolfArmor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "iron_wolf_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/iron_wolf_armor.json",
+          "src/main/java/net/mcreator/mut/item/IronWolfArmorItem.java"
+        ]
+      },
+      "path": "~/Entity Armor"
+    },
+    {
+      "name": "WolfArmor",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "wolf_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/mixin/WolfArmorMixin.java"
+        ]
+      },
+      "path": "~/Mixin"
+    },
+    {
+      "name": "GoldenWolfArmor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "golden_wolf_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/GoldenWolfArmorItem.java",
+          "src/main/resources/assets/mut/models/item/golden_wolf_armor.json"
+        ]
+      },
+      "path": "~/Entity Armor"
+    },
+    {
+      "name": "DiamondWolfArmor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "diamond_wolf_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/DiamondWolfArmorItem.java",
+          "src/main/resources/assets/mut/models/item/diamond_wolf_armor.json"
+        ]
+      },
+      "path": "~/Entity Armor"
+    },
+    {
+      "name": "NetheriteWolfArmor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "netherite_wolf_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteWolfArmorItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_wolf_armor.json"
+        ]
+      },
+      "path": "~/Entity Armor"
+    },
+    {
+      "name": "IronWolfArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_wolf_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/iron_wolf_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "GoldenWolfArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_wolf_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/golden_wolf_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "DiamondWolfArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_wolf_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/diamond_wolf_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "NetheriteWolfArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_wolf_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_wolf_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "Gallop",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gallop",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/enchantment/gallop.json"
+        ]
+      },
+      "path": "~/Enchantment"
+    },
+    {
+      "name": "NetheriteHorseArmor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "netherite_horse_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_horse_armor.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteHorseArmorItem.java"
+        ]
+      },
+      "path": "~/Entity Armor"
+    },
+    {
+      "name": "NetheriteHorseArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_horse_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_horse_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "CopperHorseArmor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "copper_horse_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/copper_horse_armor.json",
+          "src/main/java/net/mcreator/mut/item/CopperHorseArmorItem.java"
+        ]
+      },
+      "path": "~/Entity Armor"
+    },
+    {
+      "name": "IronHorseArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_horse_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/iron_horse_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "GoldenHorseArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_horse_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/golden_horse_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "DiamondHorseArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_horse_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/diamond_horse_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "CopperHorseArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_horse_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_horse_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "CopperToGoldenHorseArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_to_golden_horse_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_to_golden_horse_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "IronToGoldenHorseArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_to_golden_horse_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/iron_to_golden_horse_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "GoldenToDiamondHorseArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_to_diamond_horse_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/golden_to_diamond_horse_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "CopperWolfArmor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "copper_wolf_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/CopperWolfArmorItem.java",
+          "src/main/resources/assets/mut/models/item/copper_wolf_armor.json"
+        ]
+      },
+      "path": "~/Entity Armor"
+    },
+    {
+      "name": "CopperMace",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "copper_mace",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/copper_mace.json",
+          "src/main/java/net/mcreator/mut/item/CopperMaceItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace"
+    },
+    {
+      "name": "CopperMaceRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_mace_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_mace_recipe.json",
+          "src/main/resources/data/mut/advancement/recipes/copper_mace_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "CopperToIronMaceRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_to_iron_mace_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_to_iron_mace_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/More Iron/iron_item_recipes"
+    },
+    {
+      "name": "SteelMace",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "steel_mace",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/steel_mace.json",
+          "src/main/java/net/mcreator/mut/item/SteelMaceItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace"
+    },
+    {
+      "name": "GildingMace",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gilding_mace",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/GildingMaceItem.java",
+          "src/main/resources/assets/mut/models/item/gilding_mace.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace"
+    },
+    {
+      "name": "BlueDiamondMace",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_diamond_mace",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/BlueDiamondMaceItem.java",
+          "src/main/resources/assets/mut/models/item/blue_diamond_mace.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace"
+    },
+    {
+      "name": "AdvancedSteelMace",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "advanced_steel_mace",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/AdvancedSteelMaceItem.java",
+          "src/main/resources/assets/mut/models/item/advanced_steel_mace.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace"
+    },
+    {
+      "name": "MutBowGetPull",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mut_bow_get_pull",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/mut/procedures/MutBowGetPullProcedure.java"
+        ]
+      },
+      "path": "~/Process Event"
+    },
+    {
+      "name": "IronToSteelMaceRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_to_steel_mace_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/iron_to_steel_mace_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace/Mace Recipes"
+    },
+    {
+      "name": "CopperToSteelMaceRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_to_steel_mace_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_to_steel_mace_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace/Mace Recipes"
+    },
+    {
+      "name": "SteelToBlueDiamondMaceRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_to_blue_diamond_mace_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/steel_to_blue_diamond_mace_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace/Mace Recipes"
+    },
+    {
+      "name": "SteelToAdvancedSteelMaceRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_to_advanced_steel_mace_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/steel_to_advanced_steel_mace_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace/Mace Recipes"
+    },
+    {
+      "name": "NetherStarSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/nether_star_sword.json",
+          "src/main/java/net/mcreator/mut/item/NetherStarSwordItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items"
+    },
+    {
+      "name": "NetherStarShovel",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_shovel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetherStarShovelItem.java",
+          "src/main/resources/assets/mut/models/item/nether_star_shovel.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items"
+    },
+    {
+      "name": "NetherStarPickaxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetherStarPickaxeItem.java",
+          "src/main/resources/assets/mut/models/item/nether_star_pickaxe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items"
+    },
+    {
+      "name": "NetherStarAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_axe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetherStarAxeItem.java",
+          "src/main/resources/assets/mut/models/item/nether_star_axe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items"
+    },
+    {
+      "name": "NetherStarHoe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_hoe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetherStarHoeItem.java",
+          "src/main/resources/assets/mut/models/item/nether_star_hoe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items"
+    },
+    {
+      "name": "NetherStarRecipe5",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_recipe_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nether_star_recipe_5.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items/nether_stars_recipes"
+    },
+    {
+      "name": "NetherStarRecipe6",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_recipe_6",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nether_star_recipe_6.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items/nether_stars_recipes"
+    },
+    {
+      "name": "NetherStarRecipe7",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_recipe_7",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nether_star_recipe_7.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items/nether_stars_recipes"
+    },
+    {
+      "name": "NetherStarRecipe8",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_recipe_8",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nether_star_recipe_8.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items/nether_stars_recipes"
+    },
+    {
+      "name": "NetherStarRecipe9",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_recipe_9",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nether_star_recipe_9.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items/nether_stars_recipes"
+    },
+    {
+      "name": "NetherStarShield",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_shield",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/nether_star_shield.json",
+          "src/main/resources/assets/mut/models/item/nether_star_shield_0.json",
+          "src/main/java/net/mcreator/mut/item/NetherStarShieldItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items"
+    },
+    {
+      "name": "CopperShield",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_shield",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/copper_shield_0.json",
+          "src/main/resources/assets/mut/models/item/copper_shield.json",
+          "src/main/java/net/mcreator/mut/item/CopperShieldItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items"
+    },
+    {
+      "name": "RecipeCopperShield",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recipe_copper_shield",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/recipes/recipe_copper_shield.json",
+          "src/main/resources/data/mut/recipe/recipe_copper_shield.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopper",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_copper_helmet.json",
+          "src/main/resources/assets/mut/models/item/netherite_copper_chestplate.json",
+          "src/main/resources/assets/mut/models/item/netherite_copper_leggings.json",
+          "src/main/resources/assets/mut/models/item/netherite_copper_boots.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items"
+    },
+    {
+      "name": "NetheriteEmerald",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_emerald_boots.json",
+          "src/main/resources/assets/mut/models/item/netherite_emerald_helmet.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteEmeraldItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_emerald_leggings.json",
+          "src/main/resources/assets/mut/models/item/netherite_emerald_chestplate.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items"
+    },
+    {
+      "name": "NetheriteCopperUpgradeSmithingTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_upgrade_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperUpgradeSmithingTemplateItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_copper_upgrade_smithing_template.json"
+        ]
+      },
+      "path": "~/Upgrade Template"
+    },
+    {
+      "name": "NetheriteEmeraldUpgradeSmithingTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_upgrade_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_emerald_upgrade_smithing_template.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteEmeraldUpgradeSmithingTemplateItem.java"
+        ]
+      },
+      "path": "~/Upgrade Template"
+    },
+    {
+      "name": "Ncutr",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ncutr",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/ncutr.json"
+        ]
+      },
+      "path": "~/Upgrade Template/template_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_emerald_ingot.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteEmeraldIngotItem.java"
+        ]
+      },
+      "path": "~/Base Material"
+    },
+    {
+      "name": "NetheriteEmeraldIngotRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_ingot_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_ingot_recipe.json"
+        ]
+      },
+      "path": "~/Base Material/material_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_1.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_2.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe3",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_3.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe4",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_4.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteCopperRecipe1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_1.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopperRecipe2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_2.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopperRecipe3",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_3.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopperRecipe4",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_4.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopperSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperSwordItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_copper_sword.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items"
+    },
+    {
+      "name": "NetheriteCopperShovel",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_shovel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperShovelItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_copper_shovel.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items"
+    },
+    {
+      "name": "NetheriteCopperPickaxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperPickaxeItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_copper_pickaxe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items"
+    },
+    {
+      "name": "NetheriteCopperAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_copper_axe.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperAxeItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items"
+    },
+    {
+      "name": "NetheriteCopperHoe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_hoe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperHoeItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_copper_hoe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items"
+    },
+    {
+      "name": "NetheriteCopperRecipe5",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_5.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopperRecipe6",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_6",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_6.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopperRecipe7",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_7",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_7.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopperRecipe8",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_8",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_8.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteCopperRecipe9",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_recipe_9",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_recipe_9.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Copper Items/Copper Items Recipes"
+    },
+    {
+      "name": "NetheriteEmeraldSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_emerald_sword.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteEmeraldSwordItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items"
+    },
+    {
+      "name": "NetheriteEmeraldShovel",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_shovel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_emerald_shovel.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteEmeraldShovelItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items"
+    },
+    {
+      "name": "NetheriteEmeraldPickaxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteEmeraldPickaxeItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_emerald_pickaxe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items"
+    },
+    {
+      "name": "NetheriteEmeraldAxe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_emerald_axe.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteEmeraldAxeItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items"
+    },
+    {
+      "name": "NetheriteEmeraldHoe",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_hoe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_emerald_hoe.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteEmeraldHoeItem.java"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe5",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_5",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_5.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe6",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_6",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_6.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe7",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_7",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_7.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe8",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_8",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_8.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldRecipe9",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_recipe_9",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_recipe_9.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Emerald Items/emerald_item_recipes"
+    },
+    {
+      "name": "NetheriteEmeraldBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/NetheriteEmeraldBlockBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/netherite_emerald_block.json",
+          "src/main/resources/assets/mut/models/item/netherite_emerald_block.json",
+          "src/main/resources/assets/mut/models/block/netherite_emerald_block.json",
+          "src/main/resources/assets/mut/blockstates/netherite_emerald_block.json"
+        ]
+      },
+      "path": "~/Ore Block"
+    },
+    {
+      "name": "NetheriteEmeraldBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_emerald_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_emerald_block_recipe.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes"
+    },
+    {
+      "name": "Nebtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nebtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nebtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "CopperBow",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "copper_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/CopperBowItem.java",
+          "src/main/resources/assets/mut/models/item/copper_bow.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Bow"
+    },
+    {
+      "name": "NetheriteCopperBow",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "netherite_copper_bow",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperBowItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_copper_bow.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Bow"
+    },
+    {
+      "name": "CopperRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Bow/Bow Recipes"
+    },
+    {
+      "name": "NetheriteCopperBowRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_bow_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_copper_bow_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Bow/Bow Recipes"
+    },
+    {
+      "name": "GoldenToGildingMaceRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_to_gilding_mace_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/golden_to_gilding_mace_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Mace/Mace Recipes"
+    },
+    {
+      "name": "CopperWolfArmorRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_wolf_armor_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_wolf_armor_recipe.json"
+        ]
+      },
+      "path": "~/Entity Armor/entities armor recipes"
+    },
+    {
+      "name": "ChainmailToIron1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chainmail_to_iron_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/chainmail_to_iron_1.json"
+        ]
+      },
+      "path": "~/Amror and Tools/More Iron/iron_item_recipes"
+    },
+    {
+      "name": "ChainmailToIron2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chainmail_to_iron_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/chainmail_to_iron_2.json"
+        ]
+      },
+      "path": "~/Amror and Tools/More Iron/iron_item_recipes"
+    },
+    {
+      "name": "ChainmailToIron3",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chainmail_to_iron_3",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/chainmail_to_iron_3.json"
+        ]
+      },
+      "path": "~/Amror and Tools/More Iron/iron_item_recipes"
+    },
+    {
+      "name": "ChainmailToIron4",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chainmail_to_iron_4",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/chainmail_to_iron_4.json"
+        ]
+      },
+      "path": "~/Amror and Tools/More Iron/iron_item_recipes"
+    },
+    {
+      "name": "NetheriteAmethtstUpgradeSmithingTemplate",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_amethyst_upgrade_smithing_template",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/NetheriteAmethtstUpgradeSmithingTemplateItem.java",
+          "src/main/resources/assets/mut/models/item/netherite_amethyst_upgrade_smithing_template.json"
+        ]
+      },
+      "path": "~/Upgrade Template"
+    },
+    {
+      "name": "NetheriteAmethtstIngotRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_amethtst_ingot_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_amethtst_ingot_recipe.json"
+        ]
+      },
+      "path": "~/Base Material/material_recipes"
+    },
+    {
+      "name": "Nautr",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nautr",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nautr.json"
+        ]
+      },
+      "path": "~/Upgrade Template/template_recipes"
+    },
+    {
+      "name": "NetheriteAmethystIngot",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_amethyst_ingot",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_amethyst_ingot.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteAmethystIngotItem.java"
+        ]
+      },
+      "path": "~/Base Material"
+    },
+    {
+      "name": "NetheriteAmethystBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_amethyst_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_amethyst_block.json",
+          "src/main/resources/assets/mut/blockstates/netherite_amethyst_block.json",
+          "src/main/java/net/mcreator/mut/block/NetheriteAmethystBlockBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/netherite_amethyst_block.json",
+          "src/main/resources/assets/mut/models/block/netherite_amethyst_block.json"
+        ]
+      },
+      "path": "~/Ore Block"
+    },
+    {
+      "name": "NetheriteAmethystBlockRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_amethyst_block_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_amethyst_block_recipe.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes"
+    },
+    {
+      "name": "Nabtir",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nabtir",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nabtir.json"
+        ]
+      },
+      "path": "~/Ore Block/blcok_recipes/block to ingot"
+    },
+    {
+      "name": "CopperBeef",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_beef",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/CopperBeefItem.java",
+          "src/main/resources/assets/mut/models/item/copper_beef.json"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "NetheriteCopperBeef",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "netherite_copper_beef",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/netherite_copper_beef.json",
+          "src/main/java/net/mcreator/mut/item/NetheriteCopperBeefItem.java"
+        ]
+      },
+      "path": "~/Food"
+    },
+    {
+      "name": "CopperBeefRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_beef_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_beef_recipe.json"
+        ]
+      },
+      "path": "~/Food/beef_recipes"
+    },
+    {
+      "name": "NetherCopperBeefRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_copper_beef_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nether_copper_beef_recipe.json"
+        ]
+      },
+      "path": "~/Food/beef_recipes"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {
     "ITEMS:minecraft:enchantable/durability": [
-      "~CUSTOM:NetheriteElytra",
-      "~CUSTOM:DiamondElytra",
-      "~CUSTOM:GoldenElytra",
-      "~CUSTOM:IronElytra",
+      "~CUSTOM:NetheriteCopperBeef",
+      "~CUSTOM:CopperBeef",
+      "~CUSTOM:NetheriteRedstoneBeef",
       "~CUSTOM:NetherStarBeef",
-      "~CUSTOM:NetherStarBow",
       "~CUSTOM:BlueDiamondBeef",
       "~CUSTOM:GildingBeef",
       "~CUSTOM:SteelBeef",
@@ -5684,9 +7242,14 @@
       "CUSTOM:NetheriteMace",
       "TAG:minecraft:mace",
       "TAG:mut:bow",
-      "CUSTOM:DragonChestplateElytra"
+      "CUSTOM:DragonChestplateElytra",
+      "TAG:mut:shield",
+      "TAG:mut:wolf_armor"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:NetheriteAmethystBlock",
+      "~CUSTOM:NetheriteEmeraldBlock",
+      "~CUSTOM:NetheriteRedstoneBlock",
       "~CUSTOM:TemplateTraderBlock",
       "~CUSTOM:CryingObsidianBlock",
       "~CUSTOM:ObsidianBlock",
@@ -5709,13 +7272,11 @@
       "~CUSTOM:SteelDebris"
     ],
     "ITEMS:minecraft:head_armor": [
-      "~CUSTOM:NetherStar.helmet",
+      "~CUSTOM:NetheriteEmerald.helmet",
+      "~CUSTOM:NetheriteCopper.helmet",
       "~CUSTOM:NetheriteChain.helmet",
       "~CUSTOM:GoldenChain.helmet",
       "~CUSTOM:DiamondChain.helmet",
-      "~CUSTOM:Dragon.helmet",
-      "~CUSTOM:NetheriteRedstone.helmet",
-      "~CUSTOM:CryingObsidian.helmet",
       "~CUSTOM:NetheriteObsidian.helmet",
       "~CUSTOM:Obsidian.helmet",
       "~CUSTOM:EmeraldArmor.helmet",
@@ -5723,16 +7284,19 @@
       "~CUSTOM:BlueDiamond.helmet",
       "~CUSTOM:AdvancedSteel.helmet",
       "~CUSTOM:Steel.helmet",
-      "~CUSTOM:Copper.helmet"
+      "~CUSTOM:Copper.helmet",
+      "CUSTOM:CryingObsidian.helmet",
+      "CUSTOM:NetheriteRedstone.helmet",
+      "CUSTOM:Dragon.helmet",
+      "CUSTOM:NetherStar.helmet",
+      "TAG:mut:head_armor"
     ],
     "ITEMS:minecraft:chest_armor": [
-      "~CUSTOM:NetherStar.body",
+      "~CUSTOM:NetheriteEmerald.body",
+      "~CUSTOM:NetheriteCopper.body",
       "~CUSTOM:NetheriteChain.body",
       "~CUSTOM:GoldenChain.body",
       "~CUSTOM:DiamondChain.body",
-      "~CUSTOM:Dragon.body",
-      "~CUSTOM:NetheriteRedstone.body",
-      "~CUSTOM:CryingObsidian.body",
       "~CUSTOM:NetheriteObsidian.body",
       "~CUSTOM:Obsidian.body",
       "~CUSTOM:EmeraldArmor.body",
@@ -5741,16 +7305,19 @@
       "~CUSTOM:AdvancedSteel.body",
       "~CUSTOM:Steel.body",
       "~CUSTOM:Copper.body",
-      "CUSTOM:DragonChestplateElytra"
+      "CUSTOM:DragonChestplateElytra",
+      "CUSTOM:CryingObsidian.body",
+      "CUSTOM:NetheriteRedstone.body",
+      "CUSTOM:Dragon.body",
+      "CUSTOM:NetherStar.body",
+      "TAG:mut:chest_armor"
     ],
     "ITEMS:minecraft:leg_armor": [
-      "~CUSTOM:NetherStar.legs",
+      "~CUSTOM:NetheriteEmerald.legs",
+      "~CUSTOM:NetheriteCopper.legs",
       "~CUSTOM:NetheriteChain.legs",
       "~CUSTOM:GoldenChain.legs",
       "~CUSTOM:DiamondChain.legs",
-      "~CUSTOM:Dragon.legs",
-      "~CUSTOM:NetheriteRedstone.legs",
-      "~CUSTOM:CryingObsidian.legs",
       "~CUSTOM:NetheriteObsidian.legs",
       "~CUSTOM:Obsidian.legs",
       "~CUSTOM:EmeraldArmor.legs",
@@ -5758,16 +7325,19 @@
       "~CUSTOM:BlueDiamond.legs",
       "~CUSTOM:AdvancedSteel.legs",
       "~CUSTOM:Steel.legs",
-      "~CUSTOM:Copper.legs"
+      "~CUSTOM:Copper.legs",
+      "CUSTOM:CryingObsidian.legs",
+      "CUSTOM:NetheriteRedstone.legs",
+      "CUSTOM:Dragon.legs",
+      "CUSTOM:NetherStar.legs",
+      "TAG:mut:leg_armor"
     ],
     "ITEMS:minecraft:foot_armor": [
-      "~CUSTOM:NetherStar.boots",
+      "~CUSTOM:NetheriteEmerald.boots",
+      "~CUSTOM:NetheriteCopper.boots",
       "~CUSTOM:NetheriteChain.boots",
       "~CUSTOM:GoldenChain.boots",
       "~CUSTOM:DiamondChain.boots",
-      "~CUSTOM:Dragon.boots",
-      "~CUSTOM:NetheriteRedstone.boots",
-      "~CUSTOM:CryingObsidian.boots",
       "~CUSTOM:NetheriteObsidian.boots",
       "~CUSTOM:Obsidian.boots",
       "~CUSTOM:EmeraldArmor.boots",
@@ -5775,9 +7345,17 @@
       "~CUSTOM:BlueDiamond.boots",
       "~CUSTOM:AdvancedSteel.boots",
       "~CUSTOM:Steel.boots",
-      "~CUSTOM:Copper.boots"
+      "~CUSTOM:Copper.boots",
+      "CUSTOM:NetheriteRedstone.boots",
+      "CUSTOM:Dragon.boots",
+      "CUSTOM:CryingObsidian.boots",
+      "CUSTOM:NetherStar.boots",
+      "TAG:mut:foot_armor"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:NetheriteEmeraldSword",
+      "~CUSTOM:NetheriteCopperSword",
+      "~CUSTOM:NetherStarSword",
       "~CUSTOM:DragonSword",
       "~CUSTOM:NetheriteRedstoneSword",
       "~CUSTOM:CryingObsidianSword",
@@ -5788,9 +7366,13 @@
       "~CUSTOM:BlueDiamondSword",
       "~CUSTOM:AdvancedSteelSword",
       "~CUSTOM:SteelSword",
-      "~CUSTOM:CopperSword"
+      "~CUSTOM:CopperSword",
+      "TAG:mut:swords"
     ],
     "ITEMS:minecraft:axes": [
+      "~CUSTOM:NetheriteEmeraldAxe",
+      "~CUSTOM:NetheriteCopperAxe",
+      "~CUSTOM:NetherStarAxe",
       "~CUSTOM:DragonAxe",
       "~CUSTOM:NetheriteRedstoneAxe",
       "~CUSTOM:CryingObsidianAxe",
@@ -5801,9 +7383,13 @@
       "~CUSTOM:BlueDiamondAxe",
       "~CUSTOM:AdvancedSteelAxe",
       "~CUSTOM:SteelAxe",
-      "~CUSTOM:CopperAxe"
+      "~CUSTOM:CopperAxe",
+      "TAG:mut:axes"
     ],
     "ITEMS:minecraft:pickaxes": [
+      "~CUSTOM:NetheriteEmeraldPickaxe",
+      "~CUSTOM:NetheriteCopperPickaxe",
+      "~CUSTOM:NetherStarPickaxe",
       "~CUSTOM:DragonPickaxe",
       "~CUSTOM:NetheriteRedstonePickaxe",
       "~CUSTOM:CryingObsidianPickaxe",
@@ -5814,9 +7400,13 @@
       "~CUSTOM:BlueDiamondPickaxe",
       "~CUSTOM:AdvancedSteelPickaxe",
       "~CUSTOM:SteelPickaxe",
-      "~CUSTOM:CopperPickaxe"
+      "~CUSTOM:CopperPickaxe",
+      "TAG:mut:pickaxes"
     ],
     "ITEMS:minecraft:shovels": [
+      "~CUSTOM:NetheriteEmeraldShovel",
+      "~CUSTOM:NetheriteCopperShovel",
+      "~CUSTOM:NetherStarShovel",
       "~CUSTOM:DragonShovel",
       "~CUSTOM:NetheriteRedstoneShovel",
       "~CUSTOM:CryingObsidianShovel",
@@ -5827,9 +7417,13 @@
       "~CUSTOM:BlueDiamondShovel",
       "~CUSTOM:AdvancedSteelShovel",
       "~CUSTOM:SteelShovel",
-      "~CUSTOM:CopperShovel"
+      "~CUSTOM:CopperShovel",
+      "TAG:mut:shovels"
     ],
     "ITEMS:minecraft:hoes": [
+      "~CUSTOM:NetheriteEmeraldHoe",
+      "~CUSTOM:NetheriteCopperHoe",
+      "~CUSTOM:NetherStarHoe",
       "~CUSTOM:DragonHoe",
       "~CUSTOM:NetheriteRedstoneHoe",
       "~CUSTOM:CryingObsidianHoe",
@@ -5840,7 +7434,8 @@
       "~CUSTOM:BlueDiamondHoe",
       "~CUSTOM:AdvancedSteelHoe",
       "~CUSTOM:SteelHoe",
-      "~CUSTOM:CopperHoe"
+      "~CUSTOM:CopperHoe",
+      "TAG:mut:hoes"
     ],
     "ITEMS:minecraft:enchantable/food": [
       "CUSTOM:IronBeef",
@@ -5850,19 +7445,10 @@
       "CUSTOM:SteelBeef",
       "CUSTOM:GildingBeef",
       "CUSTOM:BlueDiamondBeef",
-      "EXTERNAL:artifacts:everlasting_porkchop",
-      "EXTERNAL:artifacts:everlasting_cooked_porkchop",
-      "EXTERNAL:artifacts:everlasting_beef",
-      "EXTERNAL:artifacts:eternal_steak",
-      "EXTERNAL:artifacts:everlasting_chicken",
-      "EXTERNAL:artifacts:everlasting_cooked_chicken",
-      "EXTERNAL:artifacts:everlasting_rotten_flesh",
-      "EXTERNAL:artifacts:everlasting_spider_eye",
-      "EXTERNAL:artifacts:everlasting_rabbit",
-      "EXTERNAL:artifacts:everlasting_cooked_rabbit",
-      "EXTERNAL:artifacts:everlasting_mutton",
-      "EXTERNAL:artifacts:everlasting_cooked_mutton",
-      "EXTERNAL:artifacts:everlasting_rabbit_stew"
+      "CUSTOM:NetheriteRedstoneBeef",
+      "CUSTOM:NetherStarBeef",
+      "CUSTOM:CopperBeef",
+      "CUSTOM:NetheriteCopperBeef"
     ],
     "ITEMS:minecraft:trimmable_armor": [
       "TAG:minecraft:head_armor",
@@ -5875,16 +7461,32 @@
       "CUSTOM:BlueDiamondIngot",
       "CUSTOM:GildingIngot",
       "CUSTOM:ObsidianIngot",
-      "CUSTOM:CryingObsidianIngot"
+      "CUSTOM:CryingObsidianIngot",
+      "CUSTOM:NetheriteEmeraldIngot",
+      "CUSTOM:NetheriteRedstoneIngot",
+      "CUSTOM:DragonScaleCluster",
+      "CUSTOM:NetheriteAmethystIngot"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
-      "~CUSTOM:GourmetFeast"
+      "~CUSTOM:GourmetFeast",
+      "CUSTOM:Vitality",
+      "CUSTOM:Exuberant",
+      "CUSTOM:WarScythe",
+      "CUSTOM:Gallop"
     ],
     "ENCHANTMENTS:minecraft:on_random_loot": [
-      "~CUSTOM:GourmetFeast"
+      "~CUSTOM:GourmetFeast",
+      "CUSTOM:Vitality",
+      "CUSTOM:Exuberant",
+      "CUSTOM:WarScythe",
+      "CUSTOM:Gallop"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
-      "~CUSTOM:GourmetFeast"
+      "~CUSTOM:GourmetFeast",
+      "CUSTOM:Vitality",
+      "CUSTOM:Exuberant",
+      "CUSTOM:WarScythe",
+      "CUSTOM:Gallop"
     ],
     "ITEMS:minecraft:enchantable/fire_aspect": [
       "TAG:mut:mace_weapon"
@@ -5892,7 +7494,9 @@
     "ITEMS:minecraft:enchantable/vanishing": [
       "TAG:mut:mace_weapon",
       "TAG:mut:bow",
-      "TAG:mut:elytra"
+      "TAG:mut:elytra",
+      "TAG:mut:shield",
+      "TAG:mut:wolf_armor"
     ],
     "ITEMS:minecraft:enchantable/mace": [
       "TAG:mut:mace_weapon"
@@ -5905,7 +7509,12 @@
       "CUSTOM:WoodenMace",
       "CUSTOM:DiamondMace",
       "CUSTOM:GoldenMace",
-      "CUSTOM:NetheriteMace"
+      "CUSTOM:NetheriteMace",
+      "CUSTOM:CopperMace",
+      "CUSTOM:SteelMace",
+      "CUSTOM:GildingMace",
+      "CUSTOM:BlueDiamondMace",
+      "CUSTOM:AdvancedSteelMace"
     ],
     "ITEMS:mut:bow": [
       "CUSTOM:IronBow",
@@ -5919,7 +7528,9 @@
       "CUSTOM:ObsidianBow",
       "CUSTOM:NetheriteObsidianBow",
       "CUSTOM:CryingObsidianBow",
-      "CUSTOM:BlueDiamondBow"
+      "CUSTOM:BlueDiamondBow",
+      "CUSTOM:CopperBow",
+      "CUSTOM:NetheriteCopperBow"
     ],
     "ITEMS:minecraft:enchantable/bow": [
       "TAG:mut:bow"
@@ -5947,19 +7558,25 @@
       "Items.GOLDEN_HELMET"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:NetheriteAmethystBlock",
+      "~CUSTOM:NetheriteEmeraldBlock",
+      "~CUSTOM:NetheriteRedstoneBlock",
       "~CUSTOM:TemplateTraderBlock",
       "~CUSTOM:BlueDiamondBlock",
-      "~CUSTOM:SteelBlock",
-      "~CUSTOM:GildingBlock"
+      "~CUSTOM:GildingBlock",
+      "~CUSTOM:SteelBlock"
     ],
     "ITEMS:minecraft:meat": [
+      "~CUSTOM:NetheriteCopperBeef",
+      "~CUSTOM:CopperBeef",
+      "~CUSTOM:NetheriteRedstoneBeef",
+      "~CUSTOM:NetherStarBeef",
+      "~CUSTOM:BlueDiamondBeef",
       "~CUSTOM:GildingBeef",
+      "~CUSTOM:SteelBeef",
       "~CUSTOM:DiamondBeef",
       "~CUSTOM:GoldenBeef",
-      "~CUSTOM:IronBeef",
-      "~CUSTOM:SteelBeef",
-      "~CUSTOM:BlueDiamondBeef",
-      "~CUSTOM:NetherStarBeef"
+      "~CUSTOM:IronBeef"
     ],
     "BLOCKS:minecraft:beacon_base_blocks": [
       "CUSTOM:SteelBlock",
@@ -5970,13 +7587,52 @@
       "CUSTOM:CryingObsidianBlock",
       "CUSTOM:BlueDiamondDebris",
       "CUSTOM:SteelDebris",
-      "CUSTOM:GildingDebris"
+      "CUSTOM:GildingDebris",
+      "CUSTOM:NetheriteEmeraldBlock",
+      "CUSTOM:NetheriteRedstoneBlock",
+      "CUSTOM:NetheriteAmethystBlock"
     ],
     "ITEMS:mut:elytra": [
       "CUSTOM:IronElytra",
       "CUSTOM:GoldenElytra",
       "CUSTOM:DiamondElytra",
       "CUSTOM:NetheriteElytra"
+    ],
+    "ITEMS:mut:wolf_armor": [
+      "CUSTOM:IronWolfArmor",
+      "Items.WOLF_ARMOR",
+      "CUSTOM:GoldenWolfArmor",
+      "CUSTOM:DiamondWolfArmor",
+      "CUSTOM:NetheriteWolfArmor",
+      "CUSTOM:CopperWolfArmor"
+    ],
+    "ITEMS:minecraft:enchantable/armor": [
+      "TAG:mut:wolf_armor",
+      "TAG:mut:elytra",
+      "TAG:mut:horse_armor"
+    ],
+    "ITEMS:mut:horse_armor": [
+      "Items.LEATHER_HORSE_ARMOR",
+      "Items.IRON_HORSE_ARMOR",
+      "Items.GOLDEN_HORSE_ARMOR",
+      "Items.DIAMOND_HORSE_ARMOR",
+      "CUSTOM:NetheriteHorseArmor",
+      "CUSTOM:CopperHorseArmor"
+    ],
+    "ITEMS:mut:shield": [
+      "CUSTOM:SteelShield",
+      "CUSTOM:IronShield",
+      "CUSTOM:DiamondShield",
+      "CUSTOM:GoldenShield",
+      "CUSTOM:NetheriteShield",
+      "CUSTOM:GildingShield",
+      "CUSTOM:BlueDiamondShield",
+      "CUSTOM:ObsidianShield",
+      "CUSTOM:NetheriteObsidianShield",
+      "CUSTOM:CryingObsidianShield",
+      "CUSTOM:AdvancedSteelShield",
+      "CUSTOM:NetherStarShield",
+      "CUSTOM:CopperShield"
     ]
   },
   "tab_element_order": {
@@ -5987,6 +7643,8 @@
       "IronUpgradeTemplate",
       "GoldUpgradeTemplate",
       "DiamondUpgradeTemplate",
+      "NetheriteCopperUpgradeSmithingTemplate",
+      "NetheriteEmeraldUpgradeSmithingTemplate",
       "SteelUpgradeTemplate",
       "GildingUpgradeTemplate",
       "BlueDiamondUpgradeTemplate",
@@ -5995,9 +7653,11 @@
       "CryingObsidianUpgradeTemplate",
       "NetheriteRedstoneUpgradeTemplate",
       "NetherStarUpgradeTemplate",
-      "DragonUpgradeTemplate"
+      "DragonUpgradeTemplate",
+      "NetheriteAmethtstUpgradeSmithingTemplate"
     ],
     "CUSTOM:MoreUpgradeTemplateExtraItems": [
+      "NetheriteEmeraldIngot",
       "SteelIngot",
       "GildingIngot",
       "BlueDiamondIngot",
@@ -6010,41 +7670,61 @@
       "ObsidianIngot",
       "CryingObsidianIngot",
       "NetheriteRedstoneIngot",
+      "NetheriteAmethystIngot",
       "DragonScaleCluster",
+      "CopperBeef",
       "IronBeef",
       "GoldenBeef",
       "DiamondBeef",
       "NetheriteBeef",
+      "NetheriteCopperBeef",
       "SteelBeef",
       "GildingBeef",
       "BlueDiamondBeef",
-      "NetherStarBeef"
+      "NetherStarBeef",
+      "NetheriteRedstoneBeef"
     ],
     "CUSTOM:MoreUpgradeTemplateTools": [
+      "IronElytra",
+      "GoldenElytra",
+      "DiamondElytra",
+      "NetheriteElytra",
       "CopperShovel",
       "CopperPickaxe",
       "CopperAxe",
       "CopperHoe",
+      "NetheriteCopperShovel",
+      "NetheriteCopperPickaxe",
+      "NetheriteCopperAxe",
+      "NetheriteCopperHoe",
       "EmeraldShovel",
       "EmeraldPickaxe",
       "EmeraldAxe",
       "EmeraldHoe",
+      "NetheriteEmeraldShovel",
+      "NetheriteEmeraldPickaxe",
+      "NetheriteEmeraldAxe",
+      "NetheriteEmeraldHoe",
       "SteelShovel",
       "SteelPickaxe",
       "SteelAxe",
       "SteelHoe",
-      "AdvancedSteelShovel",
-      "AdvancedSteelPickaxe",
-      "AdvancedSteelAxe",
-      "AdvancedSteelHoe",
-      "BlueDiamondShovel",
-      "BlueDiamondPickaxe",
-      "BlueDiamondAxe",
-      "BlueDiamondHoe",
       "GildingShovel",
       "GildingPickaxe",
       "GildingAxe",
       "GildingHoe",
+      "BlueDiamondShovel",
+      "BlueDiamondPickaxe",
+      "BlueDiamondAxe",
+      "BlueDiamondHoe",
+      "AdvancedSteelShovel",
+      "AdvancedSteelPickaxe",
+      "AdvancedSteelAxe",
+      "AdvancedSteelHoe",
+      "NetherStarShovel",
+      "NetherStarPickaxe",
+      "NetherStarAxe",
+      "NetherStarHoe",
       "ObsidianShovel",
       "ObsidianPickaxe",
       "ObsidianAxe",
@@ -6064,17 +7744,17 @@
       "DragonShovel",
       "DragonPickaxe",
       "DragonAxe",
-      "DragonHoe",
-      "IronElytra",
-      "GoldenElytra",
-      "DiamondElytra",
-      "NetheriteElytra"
+      "DragonHoe"
     ],
     "CUSTOM:MoreUpgradeTemplateCombatItems": [
       "CopperSword",
       "CopperAxe",
+      "NetheriteCopperSword",
+      "NetheriteCopperAxe",
       "EmeraldSword",
       "EmeraldAxe",
+      "NetheriteEmeraldSword",
+      "NetheriteEmeraldAxe",
       "SteelSword",
       "SteelAxe",
       "GildingSword",
@@ -6083,6 +7763,8 @@
       "BlueDiamondAxe",
       "AdvancedSteelSword",
       "AdvancedSteelAxe",
+      "NetherStarSword",
+      "NetherStarAxe",
       "ObsidianSword",
       "ObsidianAxe",
       "NetheriteObsidianSword",
@@ -6094,10 +7776,16 @@
       "DragonSword",
       "DragonAxe",
       "WoodenMace",
+      "CopperMace",
       "IronMace",
       "GoldenMace",
       "DiamondMace",
       "NetheriteMace",
+      "SteelMace",
+      "GildingMace",
+      "BlueDiamondMace",
+      "AdvancedSteelMace",
+      "CopperShield",
       "IronShield",
       "GoldenShield",
       "DiamondShield",
@@ -6106,6 +7794,7 @@
       "GildingShield",
       "BlueDiamondShield",
       "AdvancedSteelShield",
+      "NetherStarShield",
       "ObsidianShield",
       "NetheriteObsidianShield",
       "CryingObsidianShield",
@@ -6114,6 +7803,8 @@
       "DiamondChain",
       "NetheriteChain",
       "EmeraldArmor",
+      "NetheriteCopper",
+      "NetheriteEmerald",
       "Steel",
       "Gilding",
       "BlueDiamond",
@@ -6125,6 +7816,15 @@
       "NetheriteRedstone",
       "Dragon",
       "DragonChestplateElytra",
+      "CopperHorseArmor",
+      "NetheriteHorseArmor",
+      "CopperWolfArmor",
+      "IronWolfArmor",
+      "GoldenWolfArmor",
+      "DiamondWolfArmor",
+      "NetheriteWolfArmor",
+      "CopperBow",
+      "NetheriteCopperBow",
       "IronBow",
       "GoldenBow",
       "DiamondBow",
@@ -6139,6 +7839,7 @@
       "CryingObsidianBow"
     ],
     "CUSTOM:MoreUpgradeTemplateBlocks": [
+      "TemplateTraderBlock",
       "SteelDebris",
       "GildingDebris",
       "BlueDiamondDebris",
@@ -6149,7 +7850,9 @@
       "AdvancedSteelBlock",
       "ObsidianBlock",
       "CryingObsidianBlock",
-      "TemplateTraderBlock"
+      "NetheriteRedstoneBlock",
+      "NetheriteEmeraldBlock",
+      "NetheriteAmethystBlock"
     ]
   },
   "language_map": {
@@ -6460,7 +8163,97 @@
       "item.mut.netherite_redstone_upgrade_template.description_0": "§7Netherite Redstone Upgrade",
       "item.mut.netherite_redstone_upgrade_template.description_2": "§7Applies to:",
       "item.mut.netherite_redstone_upgrade_template.description_1": "",
-      "item.mut.netherite_redstone_ingot": "Netherite Redstone Ingot"
+      "item.mut.netherite_redstone_ingot": "Netherite Redstone Ingot",
+      "item.mut.netherite_redstone_beef": "Ntherite Redstone Beef",
+      "block.mut.netherite_redstone_block": "Netherite Redstone Block",
+      "item.mut.iron_wolf_armor": "Iron Wolf Armor",
+      "item.mut.golden_wolf_armor": "Golden Wolf Armor",
+      "item.mut.diamond_wolf_armor": "Diamond Wolf Armor",
+      "item.mut.netherite_wolf_armor": "Netherite Wolf Armor",
+      "enchantment.mut.gallop": "Gallop",
+      "item.mut.netherite_horse_armor": "Netherite Horse Armor",
+      "item.mut.copper_horse_armor": "Copper Horse Armor",
+      "item.mut.copper_wolf_armor": "Copper Wolf Armor",
+      "item.mut.copper_mace": "Copper Mace",
+      "item.mut.steel_mace": "Steel Mace",
+      "item.mut.gilding_mace": "Gilding Mace",
+      "item.mut.blue_diamond_mace": "Blue Diamond Mace",
+      "item.mut.advanced_steel_mace": "Advanced Steel Mace",
+      "item.mut.bow_damage.description": "Projectile Damage  %.1f",
+      "item.mut.max_draw_duration.description": "Max Draw Duration %d",
+      "item.mut.nether_star_sword": "Nether Star Sword",
+      "item.mut.nether_star_shovel": "Nether Star Shovel",
+      "item.mut.nether_star_pickaxe": "Nether Star Pickaxe",
+      "item.mut.nether_star_axe": "Nether Star Axe",
+      "item.mut.nether_star_hoe": "Nether Star Hoe",
+      "item.mut.nether_star_shield": "Nether Star Shield",
+      "item.mut.copper_shield": "Copper Shield",
+      "item.mut.netherite_copper_helmet": "Netherite Copper Helmet",
+      "item.mut.netherite_copper_chestplate": "Netherite Copper Chestplate",
+      "item.mut.netherite_copper_leggings": "Netherite Copper Leggings",
+      "item.mut.netherite_copper_boots": "Netherite Copper Boots",
+      "item.mut.netherite_emerald_leggings": "Netherite Emerald Leggings",
+      "item.mut.netherite_emerald_chestplate": "Netherite Emerald Chestplate",
+      "item.mut.netherite_emerald_helmet": "Netherite Emerald Helmet",
+      "item.mut.netherite_emerald_boots": "Netherite Emerald Boots",
+      "item.mut.netherite_copper_upgrade_smithing_template": "Netherite Copper Upgrade Smithing Template",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_0": "§7Netherite Copper Upgrade",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_1": "",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_4": "§7Ingredients:",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_5": "§9Copper Block",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_2": "§7Applies to:",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_3": "§9Copper Equipment",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_5": "§9Netherite Emerald Ingot",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_3": "§9Emerald Equipment",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_4": "§7Ingredients:",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_1": "",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_2": "§7Applies to:",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_0": "§7Netherite Emerald Upgrade",
+      "item.mut.netherite_emerald_upgrade_smithing_template": "Netherite Emerald Upgrade Smithing Template",
+      "item.mut.netherite_emerald_ingot": "Netherite Emerald Ingot",
+      "item.mut.netherite_copper_sword": "Netherite Copper Sword",
+      "item.mut.netherite_copper_shovel": "Netherite Copper Shovel",
+      "item.mut.netherite_copper_pickaxe": "Netherite Copper Pickaxe",
+      "item.mut.netherite_copper_axe": "Netherite Copper Axe",
+      "item.mut.netherite_copper_hoe": "Netherite Copper Hoe",
+      "item.mut.netherite_emerald_sword": "Netherite Emerald Sword",
+      "item.mut.netherite_emerald_shovel": "Netherite Emerald Shovel",
+      "item.mut.netherite_emerald_pickaxe": "Netherite Emerald Pickaxe",
+      "item.mut.netherite_emerald_axe": "Netherite Emerald Axe",
+      "item.mut.netherite_emerald_hoe": "Netherite Emerald Hoe",
+      "block.mut.netherite_emerald_block": "Netherite Emerald Block",
+      "item.mut.copper_bow": "Copper Bow",
+      "item.mut.netherite_copper_bow": "Netherite Copper Bow",
+      "enchantment.mut.gallop.description": "Add horse\u0027s movement speed.",
+      "item.mut.netherite_amethyst_ingot": "Netherite Amethyst Ingot",
+      "item.mut.netherite_amethyst_upgrade_smithing_template": "Netherite Amethyst Upgrade Smithing Template",
+      "block.mut.netherite_amethyst_block": "Netherite Amethyst Block",
+      "item.mut.amethyst_sword": "Amethyst Sword",
+      "item.mut.amethyst_shovel": "Amethyst Shovel",
+      "item.mut.amethyst_pickaxe": "Amethyst Pickaxe",
+      "item.mut.amethyst_axe": "Amethyst Axe",
+      "item.mut.amethyst_hoe": "Amethyst Hoe",
+      "item.mut.amethyst_helmet": "Amethyst Helmet",
+      "item.mut.amethyst_chestplate": "Amethyst Chestplate",
+      "item.mut.amethyst_leggings": "Amethyst Leggings",
+      "item.mut.amethyst_boots": "Amethyst Boots",
+      "item.mut.netherite_amethyst_sword": "Netherite Amethyst Sword",
+      "item.mut.netherite_amethyst_shovel": "Netherite Amethyst Shovel",
+      "item.mut.netherite_amethyst_pickaxe": "Netherite Amethyst Pickaxe",
+      "item.mut.netherite_amethyst_axe": "Netherite Amethyst Axe",
+      "item.mut.netherite_amethyst_hoe": "Netherite Amethyst Hoe",
+      "item.mut.netherite_amethyst_helmet": "Netherite Amethyst Helmet",
+      "item.mut.netherite_amethyst_chestplate": "Netherite Amethyst Chestplate",
+      "item.mut.netherite_amethyst_leggings": "Netherite Amethyst Leggings",
+      "item.mut.netherite_amethyst_boots": "Netherite Amethyst Boots",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_4": "§7Ingredients:",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_5": "§9Netherite Amethyst Ingot",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_2": "§7Applies to:",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_3": "§9Amethyst Equipment",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_0": "§7Netherite Amethyst Upgrade",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
+      "item.mut.copper_beef": "Copper Beef",
+      "item.mut.netherite_copper_beef": "Netherite Copper Beef"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -6473,7 +8266,7 @@
       "item.mut.steel_upgrade_template": "钢锻造模板",
       "item.mut.blue_diamond_upgrade_template": "蓝钻合金锻造模板",
       "item_group.mut.more_upgrade_template_combat_items": "更多锻造模板战斗用品",
-      "item_group.mut.more_upgrade_template_tools": "更多锻造模板工具",
+      "item_group.mut.more_upgrade_template_tools": "更多锻造模板工具与实用物品",
       "item_group.mut.more_upgrade_template_extra_items": "更多锻造模板其他物品",
       "item.mut.obsidian_upgrade_template": "黑曜石锻造模板",
       "item.mut.netherite_obsidian_upgrade_template": "下界合金黑曜石锻造模板",
@@ -6758,7 +8551,108 @@
       "item.mut.netherite_redstone_upgrade_template.description_0": "§7下界合金红石升级",
       "item.mut.netherite_redstone_upgrade_template.description_2": "§7可应用于:",
       "item.mut.netherite_redstone_upgrade_template.description_1": "",
-      "item.mut.netherite_redstone_ingot": "下界合金红石锭"
+      "item.mut.netherite_redstone_ingot": "下界合金红石锭",
+      "item.mut.netherite_redstone_beef": "下界合金红石牛排",
+      "block.mut.netherite_redstone_block": "下界合金红石块",
+      "item.mut.iron_wolf_armor": "铁狼铠",
+      "item.mut.golden_wolf_armor": "金狼铠",
+      "item.mut.diamond_wolf_armor": "钻石狼铠",
+      "item.mut.netherite_wolf_armor": "下界合金狼铠",
+      "enchantment.mut.gallop": "疾驰",
+      "item.mut.netherite_horse_armor": "下界合金马铠",
+      "item.mut.copper_horse_armor": "铜马铠",
+      "item.mut.copper_wolf_armor": "铜狼铠",
+      "item.mut.copper_mace": "铜重锤",
+      "item.mut.steel_mace": "钢重锤",
+      "item.mut.gilding_mace": "鎏金重锤",
+      "item.mut.blue_diamond_mace": "蓝钻合金重锤",
+      "item.mut.advanced_steel_mace": "精钢重锤",
+      "item.mut.bow_damage.description": "弹射物伤害 %.1f",
+      "item.mut.max_draw_duration.description": "最大拉弓时间 %d",
+      "item.mut.nether_star_sword": "下界之星剑",
+      "item.mut.nether_star_shovel": "下界之星锹",
+      "item.mut.nether_star_pickaxe": "下界之星镐",
+      "item.mut.nether_star_axe": "下界之星斧",
+      "item.mut.nether_star_hoe": "下界之星锄",
+      "item.mut.nether_star_shield": "下界之星盾",
+      "item.mut.copper_shield": "铜盾",
+      "item.mut.netherite_copper_helmet": "下界合金铜头盔",
+      "item.mut.netherite_copper_chestplate": "下界合金铜胸甲",
+      "item.mut.netherite_copper_leggings": "下界合金铜护腿",
+      "item.mut.netherite_copper_boots": "下界合金铜靴子",
+      "item.mut.netherite_emerald_leggings": "下界合金绿宝石护腿",
+      "item.mut.netherite_emerald_chestplate": "下界合金绿宝石胸甲",
+      "item.mut.netherite_emerald_helmet": "下界合金绿宝石头盔",
+      "item.mut.netherite_emerald_boots": "下界合金绿宝石靴子",
+      "item.mut.netherite_copper_upgrade_smithing_template": "下界合金铜模板",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_0": "§7下界合金铜升级",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_1": "",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_4": "§7原材料:",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_5": "§9铜块",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_2": "§7可应用于:",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_3": "§9铜装备",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_5": "§9下界合金绿宝石锭",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_3": "§9绿宝石装备",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_4": "§7原材料:",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_1": "",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_2": "§7可应用于:",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_0": "§7下界合金绿宝石升级",
+      "item.mut.netherite_emerald_upgrade_smithing_template": "下界合金绿宝石模板",
+      "item.mut.netherite_emerald_ingot": "下界合金绿宝石锭",
+      "item.mut.netherite_copper_sword": "下界合金铜剑",
+      "item.mut.netherite_copper_shovel": "下界合金铜锹",
+      "item.mut.netherite_copper_pickaxe": "下界合金铜镐",
+      "item.mut.netherite_copper_axe": "下界合金铜斧",
+      "item.mut.netherite_copper_hoe": "下界合金铜锄",
+      "item.mut.netherite_emerald_sword": "下界合金绿宝石剑",
+      "item.mut.netherite_emerald_shovel": "下界合金绿宝石锹",
+      "item.mut.netherite_emerald_pickaxe": "下界合金绿宝石镐",
+      "item.mut.netherite_emerald_axe": "下界合金绿宝石斧",
+      "item.mut.netherite_emerald_hoe": "下界合金绿宝石锄",
+      "block.mut.netherite_emerald_block": "下界合金绿宝石块",
+      "item.mut.copper_bow": "铜弓",
+      "item.mut.netherite_copper_bow": "下界合金铜弓",
+      "item.mut.stone_upgrade_template.description_1": "",
+      "item.mut.iron_upgrade_template.description_1": "",
+      "item.mut.diamond_upgrade_template.description_1": "",
+      "item.mut.steel_upgrade_template.description_1": "",
+      "item.mut.blue_diamond_upgrade_template.description_1": "",
+      "item.mut.obsidian_upgrade_template.description_1": "",
+      "item.mut.netherite_obsidian_upgrade_template.description_1": "",
+      "item.mut.nether_star_upgrade_template.description_1": "",
+      "item.mut.gilding_upgrade_template.description_1": "",
+      "item.mut.crying_obsidian_upgrade_template.description_1": "",
+      "item.mut.dragon_upgrade_template.description_1": "",
+      "enchantment.mut.gallop.description": "提升马匹的移动速度。",
+      "item.mut.netherite_amethyst_ingot": "下界合金紫水晶锭",
+      "item.mut.netherite_amethyst_upgrade_smithing_template": "下界合金紫水晶锻造模板",
+      "block.mut.netherite_amethyst_block": "下界合金紫水晶块",
+      "item.mut.amethyst_sword": "紫水晶剑",
+      "item.mut.amethyst_shovel": "紫水晶锹",
+      "item.mut.amethyst_pickaxe": "紫水晶镐",
+      "item.mut.amethyst_axe": "紫水晶斧",
+      "item.mut.amethyst_hoe": "紫水晶锄",
+      "item.mut.amethyst_helmet": "紫水晶头盔",
+      "item.mut.amethyst_chestplate": "紫水晶胸甲",
+      "item.mut.amethyst_leggings": "紫水晶护腿",
+      "item.mut.amethyst_boots": "紫水晶靴子",
+      "item.mut.netherite_amethyst_sword": "下界合金紫水晶剑",
+      "item.mut.netherite_amethyst_shovel": "下界合金紫水晶锹",
+      "item.mut.netherite_amethyst_pickaxe": "下界合金紫水晶镐",
+      "item.mut.netherite_amethyst_axe": "下界合金紫水晶斧",
+      "item.mut.netherite_amethyst_hoe": "下界合金紫水晶锄",
+      "item.mut.netherite_amethyst_helmet": "下界合金紫水晶头盔",
+      "item.mut.netherite_amethyst_chestplate": "下界合金紫水晶胸甲",
+      "item.mut.netherite_amethyst_leggings": "下界合金紫水晶护腿",
+      "item.mut.netherite_amethyst_boots": "下界合金紫水晶靴子",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_4": "§7原材料:",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_5": "§9下界合金紫水晶锭",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_2": "§7可应用于:",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_3": "§9紫水晶装备",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_0": "§7下界合金紫水晶升级",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
+      "item.mut.copper_beef": "铜牛排",
+      "item.mut.netherite_copper_beef": "下界合金铜牛排"
     }
   },
   "metadata": {
@@ -6926,6 +8820,24 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Extra Mace",
+            "children": [
+              {
+                "name": "Mace Recipes",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Extra Bow",
+            "children": [
+              {
+                "name": "Bow Recipes",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -6943,7 +8855,12 @@
         "children": [
           {
             "name": "blcok_recipes",
-            "children": []
+            "children": [
+              {
+                "name": "block to ingot",
+                "children": []
+              }
+            ]
           }
         ]
       },
@@ -6975,13 +8892,26 @@
       {
         "name": "Creative Tab",
         "children": []
+      },
+      {
+        "name": "Mixin",
+        "children": []
+      },
+      {
+        "name": "Entity Armor",
+        "children": [
+          {
+            "name": "entities armor recipes",
+            "children": []
+          }
+        ]
       }
     ]
   },
   "workspaceSettings": {
     "modid": "mut",
     "modName": "MoreUpgradeTemplate",
-    "version": "0.1.0",
+    "version": "0.1.19",
     "description": "More Upgrade Smithing Templates",
     "author": "Lying_ice",
     "websiteURL": "https://mcreator.net",
@@ -6990,7 +8920,9 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "nexus_compiler"
+    ],
     "currentGenerator": "neoforge-1.21.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.mut"

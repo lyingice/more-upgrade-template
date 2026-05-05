@@ -33,7 +33,7 @@
       }
     ],
     "immuneToFire": false,
-    "blockDropsTier": "WOOD",
+    "blockDropsTier": "STONE",
     "blocksAffected": [],
     "attributeModifiers": [],
     "stayInGridWhenCrafting": false,

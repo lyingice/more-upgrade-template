@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "mut:gourmet_feast"
+    "mut:war_scythe",
+    "mut:exuberant",
+    "mut:gourmet_feast",
+    "mut:vitality",
+    "mut:gallop"
   ]
 }

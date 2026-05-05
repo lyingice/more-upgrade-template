@@ -1,16 +1,23 @@
 {
   "replace": false,
   "values": [
+    "mut:netherite_emerald_hoe",
+    "mut:copper_hoe",
+    "mut:netherite_copper_hoe",
+    {
+      "id": "#mut:hoes",
+      "required": false
+    },
+    "mut:steel_hoe",
+    "mut:dragon_hoe",
+    "mut:emerald_hoe",
+    "mut:nether_star_hoe",
     "mut:advanced_steel_hoe",
     "mut:obsidian_hoe",
     "mut:netherite_redstone_hoe",
     "mut:crying_obsidian_hoe",
     "mut:netherite_obsidian_hoe",
     "mut:blue_diamond_hoe",
-    "mut:copper_hoe",
-    "mut:gilding_hoe",
-    "mut:steel_hoe",
-    "mut:dragon_hoe",
-    "mut:emerald_hoe"
+    "mut:gilding_hoe"
   ]
 }

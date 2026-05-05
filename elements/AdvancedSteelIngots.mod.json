@@ -23,15 +23,6 @@
         "value": "CUSTOM:SteelIngot"
       },
       {
-        "value": "CUSTOM:SteelIngot"
-      },
-      {
-        "value": "CUSTOM:DeepIronScarp"
-      },
-      {
-        "value": "Items.DIAMOND"
-      },
-      {
         "value": "CUSTOM:DeepIronScarp"
       },
       {
@@ -42,6 +33,15 @@
       },
       {
         "value": "CUSTOM:DeepIronScarp"
+      },
+      {
+        "value": "Items.NETHERITE_SCRAP"
+      },
+      {
+        "value": "Items.NETHERITE_SCRAP"
+      },
+      {
+        "value": "Items.NETHERITE_INGOT"
       }
     ],
     "recipeReturnStack": {

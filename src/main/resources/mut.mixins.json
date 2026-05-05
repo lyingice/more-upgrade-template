@@ -3,7 +3,8 @@
   "package": "net.mcreator.mut.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ElytraLayerMixin"
+    "ElytraLayerMixin",
+    "WolfArmorMixin"
   ],
   "client": [],
   "injectors": {

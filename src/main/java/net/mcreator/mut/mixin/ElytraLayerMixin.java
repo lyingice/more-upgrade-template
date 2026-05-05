@@ -42,7 +42,7 @@ public class ElytraLayerMixin {
         } else if (chestStack.getItem() instanceof NetheriteElytraItem) {
             cir.setReturnValue(ResourceLocation.parse("mut:textures/entities/netherite_elytra.png"));
         } else if (chestStack.getItem() instanceof DragonChestplateElytraItem) {
-            cir.setReturnValue(ResourceLocation.parse("minecraft:textures/entity/elytra.png"));
+            cir.setReturnValue(ResourceLocation.parse("mut:textures/entities/dragon_elytra.png"));
         }
     }
 }

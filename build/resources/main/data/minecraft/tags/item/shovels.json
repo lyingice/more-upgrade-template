@@ -3,14 +3,21 @@
   "values": [
     "mut:obsidian_shovel",
     "mut:netherite_redstone_shovel",
-    "mut:emerald_shovel",
-    "mut:netherite_obsidian_shovel",
+    "mut:netherite_emerald_shovel",
+    "mut:netherite_copper_shovel",
     "mut:steel_shovel",
     "mut:dragon_shovel",
     "mut:advanced_steel_shovel",
+    "mut:crying_obsidian_shovel",
+    "mut:emerald_shovel",
+    {
+      "id": "#mut:shovels",
+      "required": false
+    },
+    "mut:netherite_obsidian_shovel",
+    "mut:nether_star_shovel",
     "mut:copper_shovel",
     "mut:gilding_shovel",
-    "mut:crying_obsidian_shovel",
     "mut:blue_diamond_shovel"
   ]
 }

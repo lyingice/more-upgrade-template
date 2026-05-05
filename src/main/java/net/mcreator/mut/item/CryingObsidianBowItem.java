@@ -2,64 +2,100 @@ package net.mcreator.mut.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.*;
-import net.minecraft.world.entity.projectile.Arrow;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.component.ChargedProjectiles;
-import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.neoforged.neoforge.common.NeoForge;
-import net.neoforged.neoforge.event.entity.player.ArrowLooseEvent;
+import net.minecraft.stats.Stats;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
+
 import java.util.List;
 import java.util.function.Predicate;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
+import net.mcreator.mut.init.MutBowDamage;
 
 public class CryingObsidianBowItem extends BowItem {
+    // 哭泣黑曜石弓拉弓时间更慢：25 tick = 1.25秒
+    public static final int MAX_DRAW_DURATION = 35;
+    public static final int DEFAULT_RANGE = 15;
+    
+    private static final double VANILLA_BASE_DAMAGE = 2.0;
+
     public CryingObsidianBowItem() {
         super(new Item.Properties()
                 .stacksTo(1)
                 .durability(3209)
-                .rarity(Rarity.EPIC)
-                .component(DataComponents.CHARGED_PROJECTILES, ChargedProjectiles.EMPTY));
+                .fireResistant()
+                .rarity(Rarity.EPIC));
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack itemstack) {
-        return UseAnim.BOW;
+    protected Projectile createProjectile(Level level, LivingEntity shooter, ItemStack weaponStack, 
+                                          ItemStack projectileStack, boolean isCrit) {
+        Projectile projectile = super.createProjectile(level, shooter, weaponStack, projectileStack, isCrit);
+        
+        if (projectile instanceof AbstractArrow arrow) {
+            double bonus = MutBowDamage.get(this);
+            double totalDamage = VANILLA_BASE_DAMAGE + bonus;
+            arrow.setBaseDamage(totalDamage);
+        }
+        
+        return projectile;
     }
 
     @Override
     public int getEnchantmentValue() {
-        return 1;
+        return 14;
     }
 
     @Override
-    public int getUseDuration(ItemStack itemstack, LivingEntity entity) {
-        return 72000;
+    public void releaseUsing(ItemStack bowStack, Level world, LivingEntity shooter, int remainingUseTicks) {
+        if (shooter instanceof Player player) {
+            ItemStack ammoStack = player.getProjectile(bowStack);
+            if (!ammoStack.isEmpty()) {
+                int useTime = this.getUseDuration(bowStack, shooter) - remainingUseTicks;
+                useTime = net.neoforged.neoforge.event.EventHooks.onArrowLoose(bowStack, world, player, useTime, !ammoStack.isEmpty());
+                if (useTime < 0) return;
+
+                float power = getPowerForTime(useTime);
+                if (!((double) power < 0.1)) {
+                    List<ItemStack> projectiles = draw(bowStack, ammoStack, player);
+                    if (world instanceof net.minecraft.server.level.ServerLevel serverLevel && !projectiles.isEmpty()) {
+                        this.shoot(serverLevel, player, player.getUsedItemHand(), bowStack, projectiles, power * 3.0F, 1.0F, power == 1.0F, null);
+                    }
+
+                    world.playSound(null, player.getX(), player.getY(), player.getZ(),
+                            SoundEvents.ARROW_SHOOT,
+                            SoundSource.PLAYERS,
+                            1.0F,
+                            1.0F / (world.getRandom().nextFloat() * 0.4F + 1.2F) + power * 0.5F);
+
+                    player.awardStat(Stats.ITEM_USED.get(this));
+                    bowStack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(player.getUsedItemHand()));
+                }
+            }
+        }
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level world, Player player, InteractionHand hand) {
         ItemStack bowStack = player.getItemInHand(hand);
-        boolean hasAmmo = !player.getProjectile(bowStack).isEmpty() || player.getAbilities().instabuild;
+        boolean hasAmmo = !player.getProjectile(bowStack).isEmpty();
 
-        if (!hasAmmo) {
+        InteractionResultHolder<ItemStack> ret = net.neoforged.neoforge.event.EventHooks.onArrowNock(bowStack, world, player, hand, hasAmmo);
+        if (ret != null) return ret;
+
+        if (!player.hasInfiniteMaterials() && !hasAmmo) {
             return InteractionResultHolder.fail(bowStack);
         } else {
             player.startUsingItem(hand);
@@ -67,130 +103,40 @@ public class CryingObsidianBowItem extends BowItem {
         }
     }
 
-    @Override
-public void releaseUsing(ItemStack bowStack, Level world, LivingEntity shooter, int remainingUseTicks) {
-    if (shooter instanceof Player player) {
-        int useTime = this.getUseDuration(bowStack, shooter) - remainingUseTicks;
-        //draw time
-        float pullPower;
-        if (useTime >= 25) {
-            pullPower = 1.0F;
-        } else {
-            pullPower = (float)useTime / 25.0F;
+    public static float getPowerForTime(int useTime) {
+        float f = (float) useTime / MAX_DRAW_DURATION;
+        f = (f * f + f * 2.0F) / 3.0F;
+        if (f > 1.0F) {
+            f = 1.0F;
         }
-        
-        // 修改 pullPower 的计算逻辑
-        if (pullPower < 1.0F) {
-            // 小于1的情况，保持原值或设为0.1以下返回
-            if (pullPower < 0.1F) {
-                return;
-            }
-        } else if (pullPower > 2.0F) {
-            pullPower = 2.0F;
-        }
-
-        // find ammo
-        ItemStack ammoStack = player.getProjectile(bowStack);
-        boolean hasAmmo = !ammoStack.isEmpty() || player.getAbilities().instabuild;
-        
-        if (!world.isClientSide) {
-            ArrowLooseEvent event = new ArrowLooseEvent(player, bowStack, world, useTime, hasAmmo);
-            if (NeoForge.EVENT_BUS.post(event).isCanceled()) {
-                return;
-            }
-            useTime = event.getCharge();
-        }
-
-        boolean isCreative = player.getAbilities().instabuild;
-
-        if (hasAmmo) {
-            Arrow arrow = new Arrow(world, player, bowStack, ammoStack);
-            arrow.setPos(player.getX(), player.getEyeY() - 0.1, player.getZ());
-            arrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, pullPower * 3.15F, 1.0F);
-
-            if (pullPower >= 1.0F) {
-                arrow.setCritArrow(true);
-            }
-
-            // 根据 pullPower 设置基础伤害
-            double baseDamage = 4.5;
-            if (pullPower >= 2.0F) {
-                baseDamage = 4.5 * 1.5; // pullPower 达到2时，1.5倍伤害
-            }
-            arrow.setBaseDamage(baseDamage);
-
-            if (!world.isClientSide && player instanceof ServerPlayer serverPlayer) {
-                applyEnchantmentEffects(arrow, bowStack, serverPlayer);
-            }
-
-            if (isCreative) {
-                arrow.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
-            } else {
-                arrow.pickup = AbstractArrow.Pickup.ALLOWED;
-            }
-
-            world.addFreshEntity(arrow);
-
-            world.playSound(null, shooter.getX(), shooter.getY(), shooter.getZ(),
-                    SoundEvents.ARROW_SHOOT,
-                    SoundSource.PLAYERS, 1.0F, 1.0F / (world.random.nextFloat() * 0.5F + 1.0F));
-
-            bowStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
-
-            // not creative
-            if (!isCreative && !ammoStack.isEmpty()) {
-                ammoStack.shrink(1);
-            }
-        }
-    }
-}
-
-    private void applyEnchantmentEffects(Arrow arrow, ItemStack bowStack, ServerPlayer player) {
-        Holder<Enchantment> powerEnchant = player.registryAccess()
-                .registryOrThrow(Registries.ENCHANTMENT)
-                .getHolderOrThrow(Enchantments.POWER);
-        
-        Holder<Enchantment> punchEnchant = player.registryAccess()
-                .registryOrThrow(Registries.ENCHANTMENT)
-                .getHolderOrThrow(Enchantments.PUNCH);
-        
-        Holder<Enchantment> flameEnchant = player.registryAccess()
-                .registryOrThrow(Registries.ENCHANTMENT)
-                .getHolderOrThrow(Enchantments.FLAME);
-
-        int powerLevel = EnchantmentHelper.getItemEnchantmentLevel(powerEnchant, bowStack);
-        if (powerLevel > 0) {
-            arrow.setBaseDamage(arrow.getBaseDamage() + (double) powerLevel * 0.5D + 0.5D);
-        }
-
-        int punchLevel = EnchantmentHelper.getItemEnchantmentLevel(punchEnchant, bowStack);
-        if (punchLevel > 0) {
-            arrow.hasImpulse = true; 
-        }
-
-        int flameLevel = EnchantmentHelper.getItemEnchantmentLevel(flameEnchant, bowStack);
-        if (flameLevel > 0) {
-            arrow.setRemainingFireTicks(100);
-        }
+        return f;
     }
 
     @Override
     public Predicate<ItemStack> getAllSupportedProjectiles() {
-        return (stack) -> stack.getItem() instanceof ArrowItem;
+        return ARROW_ONLY;
     }
 
     @Override
     public int getDefaultProjectileRange() {
-        return 15;
+        return DEFAULT_RANGE;
     }
 
     @Override
     @OnlyIn(Dist.CLIENT)
     public void appendHoverText(ItemStack itemstack, Item.TooltipContext context, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(itemstack, context, list, flag);
-        list.add(Component.translatable("item.mut.crying_obsidian_bow.description_0"));
-        list.add(Component.translatable("item.mut.crying_obsidian_bow.description_1"));
-        list.add(Component.translatable("item.mut.crying_obsidian_bow.description_2"));
+
+        // 显示弹射物伤害（原版2.0 + 材料加成）
+        double bonus = MutBowDamage.get(this);
+        double totalDamage = VANILLA_BASE_DAMAGE + bonus;
+        list.add(Component.translatable("item.mut.bow_damage.description", totalDamage)
+                .withStyle(ChatFormatting.GRAY));
+
+        // 显示最大拉弓时间
+        float seconds = MAX_DRAW_DURATION / 20.0f;
+        list.add(Component.translatable("item.mut.max_draw_duration.description", MAX_DRAW_DURATION, seconds)
+                .withStyle(ChatFormatting.GRAY));
     }
 
     @Override

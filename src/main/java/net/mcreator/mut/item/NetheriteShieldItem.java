@@ -15,7 +15,7 @@ import net.mcreator.mut.MutMod;
 
 public class NetheriteShieldItem extends ShieldItem {
 	public NetheriteShieldItem() {
-		super(new Item.Properties().durability(100)
+		super(new Item.Properties().durability(1352)
 				.attributes(ItemAttributeModifiers.builder()
 						.add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(MutMod.MODID, "netherite_shield_0"), 0.1, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HAND).build())
 				.fireResistant());

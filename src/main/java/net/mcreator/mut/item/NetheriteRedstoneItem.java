@@ -1,5 +1,6 @@
 package net.mcreator.mut.item;
 
+import net.mcreator.mut.init.MutModItems;
 import net.neoforged.neoforge.registries.RegisterEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -33,7 +34,7 @@ public abstract class NetheriteRedstoneItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 8);
 				map.put(ArmorItem.Type.HELMET, 3);
 				map.put(ArmorItem.Type.BODY, 6);
-			}), 99, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_netherite")), () -> Ingredient.of(), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("mut:netherite_redstone"))), 3f, 0.1f);
+			}), 99, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_netherite")), () -> Ingredient.of(new ItemStack(MutModItems.NETHERITE_REDSTONE_INGOT.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("mut:netherite_redstone"))), 3f, 0.1f);
 			registerHelper.register(ResourceLocation.parse("mut:netherite_redstone"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
@@ -102,7 +103,7 @@ public abstract class NetheriteRedstoneItem extends ArmorItem {
 	public static class Helmet extends NetheriteRedstoneItem {
 		public Helmet() {
 			super(ArmorItem.Type.HELMET, new Item.Properties()
-				.durability(ArmorItem.Type.HELMET.getDurability(15))
+				.durability(ArmorItem.Type.HELMET.getDurability(39))
 				.attributes(buildFullAttributes(ArmorItem.Type.HELMET, false)));
 		}
 	}
@@ -110,7 +111,7 @@ public abstract class NetheriteRedstoneItem extends ArmorItem {
 	public static class Chestplate extends NetheriteRedstoneItem {
 		public Chestplate() {
 			super(ArmorItem.Type.CHESTPLATE, new Item.Properties()
-				.durability(ArmorItem.Type.CHESTPLATE.getDurability(15))
+				.durability(ArmorItem.Type.CHESTPLATE.getDurability(39))
 				.attributes(buildFullAttributes(ArmorItem.Type.CHESTPLATE, false)));
 		}
 	}
@@ -118,7 +119,7 @@ public abstract class NetheriteRedstoneItem extends ArmorItem {
 	public static class Leggings extends NetheriteRedstoneItem {
 		public Leggings() {
 			super(ArmorItem.Type.LEGGINGS, new Item.Properties()
-				.durability(ArmorItem.Type.LEGGINGS.getDurability(15))
+				.durability(ArmorItem.Type.LEGGINGS.getDurability(39))
 				.attributes(buildFullAttributes(ArmorItem.Type.LEGGINGS, false)));
 		}
 	}
@@ -126,7 +127,7 @@ public abstract class NetheriteRedstoneItem extends ArmorItem {
 	public static class Boots extends NetheriteRedstoneItem {
 		public Boots() {
 			super(ArmorItem.Type.BOOTS, new Item.Properties()
-				.durability(ArmorItem.Type.BOOTS.getDurability(15))
+				.durability(ArmorItem.Type.BOOTS.getDurability(39))
 				.attributes(buildFullAttributes(ArmorItem.Type.BOOTS, true)));
 		}
 	}

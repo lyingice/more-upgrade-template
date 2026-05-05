@@ -28,21 +28,21 @@
   "overrides": [
     {
       "predicate": {
-        "mut:gilding_bow_pulling": 1
+        "minecraft:pulling": 1
       },
       "model": "mut:item/gilding_bow_0"
     },
     {
       "predicate": {
-        "mut:gilding_bow_pulling": 1,
-        "mut:gilding_bow_pull": 0.32
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.65
       },
       "model": "mut:item/gilding_bow_1"
     },
     {
       "predicate": {
-        "mut:gilding_bow_pulling": 1,
-        "mut:gilding_bow_pull": 0.47
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.9
       },
       "model": "mut:item/gilding_bow_2"
     }
