@@ -7218,6 +7218,19 @@
         ]
       },
       "path": "~/Food/beef_recipes"
+    },
+    {
+      "name": "NetherStarShieldRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_star_shield_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/nether_star_shield_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Nether Star Items/nether_stars_recipes"
     }
   ],
   "variable_elements": [],
