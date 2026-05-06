@@ -23,25 +23,36 @@ public class MutCrossbowStats {
             int defaultLoadCount,      // 默认装填数量（不配置时通过工厂方法默认为 1）
             int durability,            // 最大耐久
             Rarity rarity,            // 稀有度
-            Ingredient repairItem      // 修复物品
+            Ingredient repairItem,     // 修复物品
+            int enchantmentValue,      // 附魔能力
+            boolean fireResistant      // 是否抗火（掉入火中不会烧毁）
     ) {
         /** 装填数量是否需要在 tooltip 中显示 */
         public boolean showLoadCount() {
             return defaultLoadCount > 1;
         }
 
-        // ========== 工厂方法：省略装填数量时默认为 1 ==========
+        // ========== 工厂方法 ==========
 
-        /** 全参数（很少用） */
+        /** 全参数 */
         public static Stats of(double maxChargeTime, float projectileSpeed, int defaultLoadCount,
-                               int durability, Rarity rarity, Ingredient repairItem) {
-            return new Stats(maxChargeTime, projectileSpeed, defaultLoadCount, durability, rarity, repairItem);
+                               int durability, Rarity rarity, Ingredient repairItem,
+                               int enchantmentValue, boolean fireResistant) {
+            return new Stats(maxChargeTime, projectileSpeed, defaultLoadCount, durability, rarity, repairItem, enchantmentValue, fireResistant);
         }
 
         /** 省略装填数量，默认 1 */
         public static Stats of(double maxChargeTime, float projectileSpeed,
-                               int durability, Rarity rarity, Ingredient repairItem) {
-            return new Stats(maxChargeTime, projectileSpeed, 1, durability, rarity, repairItem);
+                               int durability, Rarity rarity, Ingredient repairItem,
+                               int enchantmentValue, boolean fireResistant) {
+            return new Stats(maxChargeTime, projectileSpeed, 1, durability, rarity, repairItem, enchantmentValue, fireResistant);
+        }
+
+        /** 省略装填数量和抗火，默认 1 和 false */
+        public static Stats of(double maxChargeTime, float projectileSpeed,
+                               int durability, Rarity rarity, Ingredient repairItem,
+                               int enchantmentValue) {
+            return new Stats(maxChargeTime, projectileSpeed, 1, durability, rarity, repairItem, enchantmentValue, false);
         }
     }
 
@@ -51,19 +62,18 @@ public class MutCrossbowStats {
             1,              // 默认装填 1
             465,            // 耐久
             Rarity.COMMON,
-            Ingredient.EMPTY
+            Ingredient.EMPTY,
+            1,              // 附魔能力
+            false           // 抗火
     );
 
     private static final Map<Item, Stats> STATS_MAP = new HashMap<>();
 
     static {
-        // ========== 示例：省略装填数量则默认 1 ==========
-        // register(MutModItems.IRON_CROSSBOW.get(),   Stats.of(1.5F, 3.5F, 500, Rarity.COMMON,    Ingredient.of(Items.IRON_INGOT)));
-        // register(MutModItems.DIAMOND_CROSSBOW.get(), Stats.of(1.0F, 3.8F, 800, Rarity.UNCOMMON,  Ingredient.of(Items.DIAMOND)));
-
-        // ========== 特殊弩显式声明装填数量 ==========
-        // register(MutModItems.HEAVY_CROSSBOW.get(),    Stats.of(2.5F, 4.5F, 3, 600, Rarity.RARE,   Ingredient.of(Items.NETHERITE_INGOT)));
-        // register(MutModItems.REPEATER_CROSSBOW.get(), Stats.of(0.8F, 2.8F, 6, 400, Rarity.EPIC,   Ingredient.of(Items.COPPER_INGOT)));
+        register(MutModItems.IRON_CROSSBOW.get(),       Stats.of(1.25F, 3.5F,  590,  Rarity.COMMON, Ingredient.of(Items.IRON_INGOT),       14));
+        register(MutModItems.GOLDEN_CROSSBOW.get(),     Stats.of(1.0F,  3.5F,  715,  Rarity.COMMON, Ingredient.of(Items.GOLD_INGOT),       22));
+        register(MutModItems.DIAMOND_CROSSBOW.get(),    Stats.of(1.25F, 4.0F,  1246, Rarity.COMMON, Ingredient.of(Items.DIAMOND),          10));
+        register(MutModItems.NETHERITE_CROSSBOW.get(),  Stats.of(1.25F, 4.5F,  1481, Rarity.COMMON, Ingredient.of(Items.NETHERITE_INGOT),  15, true));
     }
 
     public static void register(Item crossbow, Stats stats) {
@@ -98,5 +108,13 @@ public class MutCrossbowStats {
 
     public static Ingredient repairItem(Item crossbow) {
         return get(crossbow).repairItem();
+    }
+
+    public static int enchantmentValue(Item crossbow) {
+        return get(crossbow).enchantmentValue();
+    }
+
+    public static boolean fireResistant(Item crossbow) {
+        return get(crossbow).fireResistant();
     }
 }

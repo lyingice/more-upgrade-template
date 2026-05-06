@@ -25,3 +25,5 @@
 /give @a mut:amethyst_hoe
 /give @a mut:amethyst_pickaxe
 /give @a mut:amethyst_shovel
+/give @a mut:iron_crossbow
+/give @a mut:diamond_crossbow

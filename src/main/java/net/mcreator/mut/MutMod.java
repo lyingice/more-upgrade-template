@@ -11,7 +11,9 @@ import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.capabilities.EntityCapability;
 import net.neoforged.fml.util.thread.SidedThreadGroups;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.ModList;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.IEventBus;
@@ -30,6 +32,7 @@ import net.mcreator.mut.init.MutModTabs;
 import net.mcreator.mut.init.MutModItems;
 import net.mcreator.mut.init.MutModBlocks;
 import net.mcreator.mut.init.MutModBlockEntities;
+import net.mcreator.mut.config.MutCrossbowLoadCountConfig;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Queue;
@@ -57,6 +60,7 @@ public class MutMod {
 		MutModTabs.REGISTRY.register(modEventBus);
 		MutModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		// Start of user code block mod init
+		ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.SERVER, MutCrossbowLoadCountConfig.CONFIG_SPEC, "mut_crossbow_load_count.toml");
 		// End of user code block mod init
 	}
 

@@ -395,5 +395,14 @@
   "item.mut.netherite_amethyst_upgrade_smithing_template.description_0": "§7下界合金紫水晶升级",
   "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
   "item.mut.copper_beef": "铜牛排",
-  "item.mut.netherite_copper_beef": "下界合金铜牛排"
+  "item.mut.netherite_copper_beef": "下界合金铜牛排",
+  "enchantment.mut.multiload": "多重装填",
+  "item.mut.crossbow.charge_time": "蓄力时间 %s 秒",
+  "item.mut.crossbow.speed": "弹射物速度 %s",
+  "item.mut.crossbow.load_count": "单次装填数量 %s",
+  "item.mut.iron_crossbow": "铁弩",
+  "item.mut.golden_crossbow": "金弩",
+  "item.mut.diamond_crossbow": "钻石弩",
+  "item.mut.netherite_crossbow": "下界合金弩",
+  "enchantment.mut.multiload.description": "增加弩类武器的最大装填数量。"
 }

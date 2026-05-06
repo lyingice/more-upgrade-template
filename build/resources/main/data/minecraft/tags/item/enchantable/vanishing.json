@@ -18,6 +18,10 @@
       "required": false
     },
     {
+      "id": "#mut:crossbow",
+      "required": false
+    },
+    {
       "id": "#mut:elytra",
       "required": false
     }

@@ -539,6 +539,10 @@ public class MutModItems {
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_CHESTPLATE = REGISTRY.register("netherite_amethyst_chestplate", NetheriteAmethystArmor.Chestplate::new);
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_LEGGINGS = REGISTRY.register("netherite_amethyst_leggings", NetheriteAmethystArmor.Leggings::new);
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_BOOTS = REGISTRY.register("netherite_amethyst_boots", NetheriteAmethystArmor.Boots::new);
+	public static final DeferredItem<Item> IRON_CROSSBOW = REGISTRY.register("iron_crossbow", MutNewCrossbowItem.IronCrossbowItem::new);
+	public static final DeferredItem<Item> DIAMOND_CROSSBOW = REGISTRY.register("diamond_crossbow", MutNewCrossbowItem.DiamondCrossbowItem::new);
+	public static final DeferredItem<Item> GOLDEN_CROSSBOW = REGISTRY.register("golden_crossbow", MutNewCrossbowItem.GoldenCrossbowItem::new);
+	public static final DeferredItem<Item> NETHERITE_CROSSBOW = REGISTRY.register("netherite_crossbow", MutNewCrossbowItem.NetheriteCrossbowItem::new);
 
 	// End of user code block custom items
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {

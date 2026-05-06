@@ -37,6 +37,11 @@ public class MutCreativeTab {
         }
 
         if (event.getTabKey() == combatTab) {
+            event.accept(MutModItems.IRON_CROSSBOW.get());
+            event.accept(MutModItems.GOLDEN_CROSSBOW.get());
+            event.accept(MutModItems.DIAMOND_CROSSBOW.get());
+            event.accept(MutModItems.NETHERITE_CROSSBOW.get());
+            //event.accept(MutModItems..get());
             event.insertAfter(new ItemStack(MutModItems.DRAGON_AXE.get()), MutModItems.AMETHYST_SWORD.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(MutModItems.AMETHYST_SWORD.get().getDefaultInstance(), MutModItems.AMETHYST_AXE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(MutModItems.AMETHYST_AXE.get().getDefaultInstance(), MutModItems.NETHERITE_AMETHYST_SWORD.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
