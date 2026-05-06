@@ -7231,6 +7231,19 @@
         ]
       },
       "path": "~/Amror and Tools/Nether Star Items/nether_stars_recipes"
+    },
+    {
+      "name": "Multiload",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "multiload",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/enchantment/multiload.json"
+        ]
+      },
+      "path": "~/Enchantment"
     }
   ],
   "variable_elements": [],
@@ -7481,6 +7494,7 @@
       "CUSTOM:NetheriteAmethystIngot"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
+      "~CUSTOM:Multiload",
       "~CUSTOM:GourmetFeast",
       "CUSTOM:Vitality",
       "CUSTOM:Exuberant",
@@ -7488,6 +7502,7 @@
       "CUSTOM:Gallop"
     ],
     "ENCHANTMENTS:minecraft:on_random_loot": [
+      "~CUSTOM:Multiload",
       "~CUSTOM:GourmetFeast",
       "CUSTOM:Vitality",
       "CUSTOM:Exuberant",
@@ -7495,6 +7510,7 @@
       "CUSTOM:Gallop"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
+      "~CUSTOM:Multiload",
       "~CUSTOM:GourmetFeast",
       "CUSTOM:Vitality",
       "CUSTOM:Exuberant",
@@ -8266,7 +8282,8 @@
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_0": "§7Netherite Amethyst Upgrade",
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
       "item.mut.copper_beef": "Copper Beef",
-      "item.mut.netherite_copper_beef": "Netherite Copper Beef"
+      "item.mut.netherite_copper_beef": "Netherite Copper Beef",
+      "enchantment.mut.multiload": "Multiload"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -8665,7 +8682,8 @@
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_0": "§7下界合金紫水晶升级",
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
       "item.mut.copper_beef": "铜牛排",
-      "item.mut.netherite_copper_beef": "下界合金铜牛排"
+      "item.mut.netherite_copper_beef": "下界合金铜牛排",
+      "enchantment.mut.multiload": "Multiload"
     }
   },
   "metadata": {

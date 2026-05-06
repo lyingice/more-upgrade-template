@@ -1,0 +1,55 @@
+package net.mcreator.mut.init;
+
+import net.mcreator.mut.item.*;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CreativeModeTab;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+
+@EventBusSubscriber(modid = "mut", value = Dist.CLIENT)
+public class MutCreativeTab {
+
+    @SubscribeEvent
+    public static void buildContents(BuildCreativeModeTabContentsEvent event) {
+        ResourceKey<CreativeModeTab> toolsTab = ResourceKey.create(
+                Registries.CREATIVE_MODE_TAB,
+                ResourceLocation.fromNamespaceAndPath("mut", "more_upgrade_template_tools"));
+
+        ResourceKey<CreativeModeTab> combatTab = ResourceKey.create(
+                Registries.CREATIVE_MODE_TAB,
+                ResourceLocation.fromNamespaceAndPath("mut", "more_upgrade_template_combat_items"));
+
+        if (event.getTabKey() == toolsTab) {
+            event.accept(MutModItems.AMETHYST_SHOVEL.get());
+            event.accept(MutModItems.AMETHYST_PICKAXE.get());
+            event.accept(MutModItems.AMETHYST_AXE.get());
+            event.accept(MutModItems.AMETHYST_HOE.get());
+            event.accept(MutModItems.NETHERITE_AMETHYST_SHOVEL.get());
+            event.accept(MutModItems.NETHERITE_AMETHYST_PICKAXE.get());
+            event.accept(MutModItems.NETHERITE_AMETHYST_AXE.get());
+            event.accept(MutModItems.NETHERITE_AMETHYST_HOE.get());
+        }
+
+        if (event.getTabKey() == combatTab) {
+            event.insertAfter(new ItemStack(MutModItems.DRAGON_AXE.get()), MutModItems.AMETHYST_SWORD.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.AMETHYST_SWORD.get().getDefaultInstance(), MutModItems.AMETHYST_AXE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.AMETHYST_AXE.get().getDefaultInstance(), MutModItems.NETHERITE_AMETHYST_SWORD.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.NETHERITE_AMETHYST_SWORD.get().getDefaultInstance(), MutModItems.NETHERITE_AMETHYST_AXE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+
+            event.insertAfter(new ItemStack(MutModItems.DRAGON_CHESTPLATE_ELYTRA.get()), MutModItems.AMETHYST_HELMET.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.AMETHYST_HELMET.get().getDefaultInstance(), MutModItems.AMETHYST_CHESTPLATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.AMETHYST_CHESTPLATE.get().getDefaultInstance(), MutModItems.AMETHYST_LEGGINGS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.AMETHYST_LEGGINGS.get().getDefaultInstance(), MutModItems.AMETHYST_BOOTS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.AMETHYST_BOOTS.get().getDefaultInstance(), MutModItems.NETHERITE_AMETHYST_HELMET.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.NETHERITE_AMETHYST_HELMET.get().getDefaultInstance(), MutModItems.NETHERITE_AMETHYST_CHESTPLATE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.NETHERITE_AMETHYST_CHESTPLATE.get().getDefaultInstance(), MutModItems.NETHERITE_AMETHYST_LEGGINGS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.insertAfter(MutModItems.NETHERITE_AMETHYST_LEGGINGS.get().getDefaultInstance(), MutModItems.NETHERITE_AMETHYST_BOOTS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+    }
+}
