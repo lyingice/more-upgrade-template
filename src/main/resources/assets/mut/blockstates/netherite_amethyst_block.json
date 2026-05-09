@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mut:block/netherite_amethyst_block"
+    }
+  }
+}

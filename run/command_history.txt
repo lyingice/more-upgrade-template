@@ -27,3 +27,7 @@
 /give @a mut:amethyst_shovel
 /give @a mut:iron_crossbow
 /give @a mut:diamond_crossbow
+/summon mut:diamond_thrown_trident
+/give @a mut:iron_trident
+/gamemode survival
+/summon mut:mut_thrown_trident

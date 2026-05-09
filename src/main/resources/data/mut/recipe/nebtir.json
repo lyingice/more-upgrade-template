@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:netherite_emerald_block"
+    }
+  ],
+  "result": {
+    "id": "mut:netherite_emerald_ingot",
+    "count": 9
+  }
+}

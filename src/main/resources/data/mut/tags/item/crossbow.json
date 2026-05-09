@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mut:iron_crossbow",
+    "mut:diamond_crossbow",
+    "mut:golden_crossbow",
+    "mut:netherite_crossbow"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mut:block/netherite_emerald_block",
+    "particle": "mut:block/netherite_emerald_block"
+  },
+  "render_type": "solid"
+}

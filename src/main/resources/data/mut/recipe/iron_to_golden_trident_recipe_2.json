@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:gold_upgrade_template"
+  },
+  "base": {
+    "item": "mut:iron_trident"
+  },
+  "addition": {
+    "item": "minecraft:gold_ingot"
+  },
+  "result": {
+    "id": "mut:golden_trident"
+  }
+}

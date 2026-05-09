@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:copper_block"
+    },
+    "b": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "c": {
+      "item": "minecraft:netherite_upgrade_smithing_template"
+    }
+  },
+  "result": {
+    "id": "mut:netherite_copper_upgrade_smithing_template",
+    "count": 1
+  }
+}

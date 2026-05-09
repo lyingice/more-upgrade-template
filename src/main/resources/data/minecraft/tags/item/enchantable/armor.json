@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#mut:wolf_armor",
+      "required": false
+    },
+    {
+      "id": "#mut:horse_armor",
+      "required": false
+    },
+    {
+      "id": "#mut:elytra",
+      "required": false
+    }
+  ]
+}

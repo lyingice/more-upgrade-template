@@ -1,0 +1,39 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "mut:custom/trident",
+    "textures": {
+      "2": "mut:block/copper_trident",
+      "particle": "mut:item/copper_trident"
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "throwing": 1
+      },
+      "model": "mut:item/copper_trident_throwing"
+    }
+  ],
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/copper_trident"
+      }
+    },
+    "fixed": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/copper_trident"
+      }
+    },
+    "ground": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/copper_trident"
+      }
+    }
+  }
+}

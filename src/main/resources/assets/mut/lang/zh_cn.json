@@ -404,5 +404,15 @@
   "item.mut.golden_crossbow": "金弩",
   "item.mut.diamond_crossbow": "钻石弩",
   "item.mut.netherite_crossbow": "下界合金弩",
-  "enchantment.mut.multiload.description": "增加弩类武器的最大装填数量。"
+  "enchantment.mut.multiload.description": "增加弩类武器的最大装填数量。",
+  "item.mut.wooden_trident": "木三叉戟",
+  "item.mut.copper_trident": "铜三叉戟",
+  "item.mut.iron_trident": "铁三叉戟",
+  "item.mut.golden_trident": "金三叉戟",
+  "item.mut.diamond_trident": "钻石三叉戟",
+  "item.mut.netherite_trident": "下界合金三叉戟",
+  "item.mut.steel_trident": "钢三叉戟",
+  "item.mut.advanced_steel_trident": "精钢三叉戟",
+  "item.mut.gilding_trident": "鎏金三叉戟",
+  "item.mut.blue_diamond_trident": "蓝钻合金三叉戟"
 }

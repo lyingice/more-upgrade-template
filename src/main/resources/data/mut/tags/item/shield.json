@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "mut:netherite_shield",
+    "mut:netherite_obsidian_shield",
+    "mut:steel_shield",
+    "mut:advanced_steel_shield",
+    "mut:crying_obsidian_shield",
+    "mut:obsidian_shield",
+    "mut:diamond_shield",
+    "mut:gilding_shield",
+    "mut:golden_shield",
+    "mut:blue_diamond_shield",
+    "mut:iron_shield",
+    "mut:nether_star_shield",
+    "mut:copper_shield"
+  ]
+}

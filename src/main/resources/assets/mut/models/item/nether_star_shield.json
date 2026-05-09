@@ -1,0 +1,15 @@
+{
+  "parent": "mut:custom/shield",
+  "textures": {
+    "0": "mut:block/nether_star_shield",
+    "particle": "mut:item/nether_star_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "mut:item/nether_star_shield_0"
+    }
+  ]
+}

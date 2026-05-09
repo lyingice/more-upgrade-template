@@ -18,12 +18,16 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.client.renderer.item.ItemProperties;
 
 import net.mcreator.mut.procedures.GetPullingProcedure;
 import net.mcreator.mut.procedures.GetPullProcedure;
 import net.mcreator.mut.item.*;
+import net.mcreator.mut.entity.MutThrownTrident;
 import net.mcreator.mut.MutMod;
 
 public class MutModItems {
@@ -543,7 +547,21 @@ public class MutModItems {
 	public static final DeferredItem<Item> DIAMOND_CROSSBOW = REGISTRY.register("diamond_crossbow", MutNewCrossbowItem.DiamondCrossbowItem::new);
 	public static final DeferredItem<Item> GOLDEN_CROSSBOW = REGISTRY.register("golden_crossbow", MutNewCrossbowItem.GoldenCrossbowItem::new);
 	public static final DeferredItem<Item> NETHERITE_CROSSBOW = REGISTRY.register("netherite_crossbow", MutNewCrossbowItem.NetheriteCrossbowItem::new);
+	public static final DeferredItem<Item> WOODEN_TRIDENT = REGISTRY.register("wooden_trident", MutTridentItem.WoodenTridentItem::new);
+	public static final DeferredItem<Item> COPPER_TRIDENT = REGISTRY.register("copper_trident", MutTridentItem.CopperTridentItem::new);
+	public static final DeferredItem<Item> IRON_TRIDENT = REGISTRY.register("iron_trident", MutTridentItem.IronTridentItem::new);
+	public static final DeferredItem<Item> GOLDEN_TRIDENT = REGISTRY.register("golden_trident", MutTridentItem.GoldenTridentItem::new);
+	public static final DeferredItem<Item> DIAMOND_TRIDENT = REGISTRY.register("diamond_trident", MutTridentItem.DiamondTridentItem::new);
+	public static final DeferredItem<Item> NETHERITE_TRIDENT = REGISTRY.register("netherite_trident", MutTridentItem.NetheriteTridentItem::new);
+	public static final DeferredItem<Item> STEEL_TRIDENT = REGISTRY.register("steel_trident", MutTridentItem.SteelTridentItem::new);
+	public static final DeferredItem<Item> GILDING_TRIDENT = REGISTRY.register("gilding_trident", MutTridentItem.GildingTridentItem::new);
+	public static final DeferredItem<Item> BLUE_DIAMOND_TRIDENT = REGISTRY.register("blue_diamond_trident", MutTridentItem.BlueDiamondTridentItem::new);
+	public static final DeferredItem<Item> ADVANCED_STEEL_TRIDENT = REGISTRY.register("advanced_steel_trident", MutTridentItem.AdvancedSteelTridentItem::new);
+	public static final DeferredRegister<EntityType<?>> ENTITY_REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, MutMod.MODID);
+	public static final DeferredHolder<EntityType<?>, EntityType<MutThrownTrident>> MUT_THROWN_TRIDENT = ENTITY_REGISTRY.register("mut_thrown_trident",
+			() -> EntityType.Builder.<MutThrownTrident>of(MutThrownTrident::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("mut_thrown_trident"));
 
+	//public static final DeferredItem<Item> X = REGISTRY.register("x", XItem.xItem::new);
 	// End of user code block custom items
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block) {
 		return block(block, new Item.Properties());

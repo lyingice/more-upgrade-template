@@ -127,6 +127,15 @@ public class MutMoreAttributeMaterials {
     // =====================================================================
 
     static {
+        register("advanced_steel",
+                entries(
+                        attr(Attributes.BLOCK_INTERACTION_RANGE, 1.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "block_range"),
+                        attr(Attributes.ENTITY_INTERACTION_RANGE, 1.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "entity_range")
+                ),
+                entries(),
+                entries(),
+                entries(),
+                entries());
         // ──────────────────── 紫水晶材质 ────────────────────
         register("amethyst",
                 entries(),

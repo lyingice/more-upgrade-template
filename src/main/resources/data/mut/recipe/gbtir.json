@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:gilding_block"
+    }
+  ],
+  "result": {
+    "id": "mut:gilding_ingot",
+    "count": 9
+  }
+}

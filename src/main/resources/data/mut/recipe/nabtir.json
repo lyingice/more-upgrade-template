@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:netherite_amethyst_block"
+    }
+  ],
+  "result": {
+    "id": "mut:netherite_amethyst_ingot",
+    "count": 9
+  }
+}

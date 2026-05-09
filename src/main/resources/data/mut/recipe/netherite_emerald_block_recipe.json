@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:netherite_emerald_ingot"
+    }
+  },
+  "result": {
+    "id": "mut:netherite_emerald_block",
+    "count": 1
+  }
+}

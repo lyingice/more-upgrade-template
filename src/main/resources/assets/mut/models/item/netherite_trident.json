@@ -1,0 +1,39 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "mut:custom/trident",
+    "textures": {
+      "2": "mut:block/netherite_trident",
+      "particle": "mut:item/netherite_trident"
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "throwing": 1
+      },
+      "model": "mut:item/netherite_trident_throwing"
+    }
+  ],
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/netherite_trident"
+      }
+    },
+    "fixed": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/netherite_trident"
+      }
+    },
+    "ground": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/netherite_trident"
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "smithingInputStack": {
-      "value": "CUSTOM:IronShield"
+      "value": "CUSTOM:GoldenShield"
     },
     "smithingInputAdditionStack": {
       "value": "Blocks.DIAMOND_BLOCK"

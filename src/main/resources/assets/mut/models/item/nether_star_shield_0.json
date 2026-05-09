@@ -1,0 +1,7 @@
+{
+  "parent": "mut:custom/shield_blocking",
+  "textures": {
+    "0": "mut:block/nether_star_shield",
+    "particle": "mut:item/nether_star_sword"
+  }
+}

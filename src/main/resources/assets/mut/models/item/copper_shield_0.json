@@ -1,0 +1,7 @@
+{
+  "parent": "mut:custom/shield_blocking",
+  "textures": {
+    "0": "mut:block/copper_shield",
+    "particle": "mut:item/copper_sword"
+  }
+}

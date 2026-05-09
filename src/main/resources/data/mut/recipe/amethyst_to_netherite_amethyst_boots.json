@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_amethyst_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:amethyst_boots"
+  },
+  "addition": {
+    "item": "mut:netherite_amethyst_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_amethyst_boots"
+  }
+}

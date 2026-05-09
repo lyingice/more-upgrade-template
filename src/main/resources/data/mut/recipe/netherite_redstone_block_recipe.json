@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:netherite_redstone_ingot"
+    }
+  },
+  "result": {
+    "id": "mut:netherite_redstone_block",
+    "count": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mut:golden_wolf_armor",
+    "mut:iron_wolf_armor",
+    "mut:copper_wolf_armor",
+    "minecraft:wolf_armor",
+    "mut:diamond_wolf_armor",
+    "mut:netherite_wolf_armor"
+  ]
+}

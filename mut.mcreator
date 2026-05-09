@@ -7244,6 +7244,319 @@
         ]
       },
       "path": "~/Enchantment"
+    },
+    {
+      "name": "IronToGoldenShieldRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_to_golden_shield_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/recipes/iron_to_golden_shield_recipe.json",
+          "src/main/resources/data/mut/recipe/iron_to_golden_shield_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/More Golden/gold_item_recipes"
+    },
+    {
+      "name": "WoodToIronShieldRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wood_to_iron_shield_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/wood_to_iron_shield_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/More Iron/iron_item_recipes"
+    },
+    {
+      "name": "GoldenToDiamondShieldRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_to_diamond_shield_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/golden_to_diamond_shield_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/More Diamond/diamond_item_recopes"
+    },
+    {
+      "name": "WoodToIronCrossbowRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "wood_to_iron_crossbow_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/wood_to_iron_crossbow_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Crossbow"
+    },
+    {
+      "name": "IronToGoldenCrossbowRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "iron_to_golden_crossbow_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/iron_to_golden_crossbow_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Crossbow"
+    },
+    {
+      "name": "GoldenToDiamondCrossbowRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "golden_to_diamond_crossbow_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/golden_to_diamond_crossbow_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Crossbow"
+    },
+    {
+      "name": "DiamondToNetheriteCrossbowRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "diamond_to_netherite_crossbow_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/diamond_to_netherite_crossbow_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Crossbow"
+    },
+    {
+      "name": "WoodenTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "wooden_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/wooden_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "CopperTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "copper_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "IronTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "iron_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/iron_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "GoldenTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "golden_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/golden_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "IronToGoldenTridentRecipe1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "iron_to_golden_trident_recipe_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/iron_to_golden_trident_recipe_1.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "IronToGoldenTridentRecipe2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "iron_to_golden_trident_recipe_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/iron_to_golden_trident_recipe_2.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "DiamondTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "diamond_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/diamond_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "NetheriteTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "netherite_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/netherite_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "WoodenToIronTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "wooden_to_iron_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/wooden_to_iron_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "CopperToGoldenTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "copper_to_golden_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/copper_to_golden_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "ToGoldenTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "to_golden_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/to_golden_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "GoldenToDiamondTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "golden_to_diamond_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/golden_to_diamond_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "SteelTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "steel_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/steel_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "GildingTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "gilding_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/gilding_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "BlueDiamondTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "blue_diamond_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/blue_diamond_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "SteelToBlueDiamondTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "steel_to_blue_diamond_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/steel_to_blue_diamond_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "AdvancedSteelTridentRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "advanced_steel_trident_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/advanced_steel_trident_recipe.json"
+        ]
+      },
+      "path": "~/Amror and Tools/Extra Trident"
     }
   ],
   "variable_elements": [],
@@ -7270,7 +7583,9 @@
       "TAG:mut:bow",
       "CUSTOM:DragonChestplateElytra",
       "TAG:mut:shield",
-      "TAG:mut:wolf_armor"
+      "TAG:mut:wolf_armor",
+      "TAG:mut:crossbow",
+      "TAG:mut:trident"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:NetheriteAmethystBlock",
@@ -7525,7 +7840,9 @@
       "TAG:mut:bow",
       "TAG:mut:elytra",
       "TAG:mut:shield",
-      "TAG:mut:wolf_armor"
+      "TAG:mut:wolf_armor",
+      "TAG:mut:crossbow",
+      "TAG:mut:trident"
     ],
     "ITEMS:minecraft:enchantable/mace": [
       "TAG:mut:mace_weapon"
@@ -7662,6 +7979,12 @@
       "CUSTOM:AdvancedSteelShield",
       "CUSTOM:NetherStarShield",
       "CUSTOM:CopperShield"
+    ],
+    "ITEMS:minecraft:enchantable/crossbow": [
+      "TAG:mut:crossbow"
+    ],
+    "ITEMS:minecraft:enchantable/trident": [
+      "TAG:mut:trident"
     ]
   },
   "tab_element_order": {
@@ -8283,7 +8606,25 @@
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
       "item.mut.copper_beef": "Copper Beef",
       "item.mut.netherite_copper_beef": "Netherite Copper Beef",
-      "enchantment.mut.multiload": "Multiload"
+      "enchantment.mut.multiload": "Multiload",
+      "item.mut.crossbow.charge_time": "Charge time %s sec",
+      "item.mut.crossbow.speed": "Projectile %s",
+      "item.mut.crossbow.load_count": "Load Count %s",
+      "item.mut.iron_crossbow": "Iron Crossbow",
+      "item.mut.golden_crossbow": "Golden Crossbow",
+      "item.mut.diamond_crossbow": "Diamond Crossbow",
+      "item.mut.netherite_crossbow": "Netherite Crossbow",
+      "enchantment.mut.multiload.description": "Increase the maximum loading quantity of crossbow weapons.",
+      "item.mut.wooden_trident": "Wooden Trident",
+      "item.mut.copper_trident": "Copper Trident",
+      "item.mut.iron_trident": "Iron Trident",
+      "item.mut.golden_trident": "Golden Trident",
+      "item.mut.diamond_trident": "Diamond Trident",
+      "item.mut.netherite_trident": "Netherite Trident",
+      "item.mut.steel_trident": "Steel Trident",
+      "item.mut.advanced_steel_trident": "Advanced Steel Trident",
+      "item.mut.gilding_trident": "Gilding Trident",
+      "item.mut.blue_diamond_trident": "Blue Diamond Trident"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -8683,7 +9024,25 @@
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
       "item.mut.copper_beef": "铜牛排",
       "item.mut.netherite_copper_beef": "下界合金铜牛排",
-      "enchantment.mut.multiload": "Multiload"
+      "enchantment.mut.multiload": "多重装填",
+      "item.mut.crossbow.charge_time": "蓄力时间 %s 秒",
+      "item.mut.crossbow.speed": "弹射物速度 %s",
+      "item.mut.crossbow.load_count": "单次装填数量 %s",
+      "item.mut.iron_crossbow": "铁弩",
+      "item.mut.golden_crossbow": "金弩",
+      "item.mut.diamond_crossbow": "钻石弩",
+      "item.mut.netherite_crossbow": "下界合金弩",
+      "enchantment.mut.multiload.description": "增加弩类武器的最大装填数量。",
+      "item.mut.wooden_trident": "木三叉戟",
+      "item.mut.copper_trident": "铜三叉戟",
+      "item.mut.iron_trident": "铁三叉戟",
+      "item.mut.golden_trident": "金三叉戟",
+      "item.mut.diamond_trident": "钻石三叉戟",
+      "item.mut.netherite_trident": "下界合金三叉戟",
+      "item.mut.steel_trident": "钢三叉戟",
+      "item.mut.advanced_steel_trident": "精钢三叉戟",
+      "item.mut.gilding_trident": "鎏金三叉戟",
+      "item.mut.blue_diamond_trident": "蓝钻合金三叉戟"
     }
   },
   "metadata": {
@@ -8869,6 +9228,14 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Extra Crossbow",
+            "children": []
+          },
+          {
+            "name": "Extra Trident",
+            "children": []
           }
         ]
       },
@@ -8942,7 +9309,7 @@
   "workspaceSettings": {
     "modid": "mut",
     "modName": "MoreUpgradeTemplate",
-    "version": "0.1.19",
+    "version": "0.2.0",
     "description": "More Upgrade Smithing Templates",
     "author": "Lying_ice",
     "websiteURL": "https://mcreator.net",

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "pattern": [
+    "a a",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "result": {
+    "id": "mut:amethyst_boots",
+    "count": 1
+  }
+}

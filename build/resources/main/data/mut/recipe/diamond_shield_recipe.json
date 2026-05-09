@@ -4,7 +4,7 @@
     "item": "mut:diamond_upgrade_template"
   },
   "base": {
-    "item": "mut:iron_shield"
+    "item": "mut:golden_shield"
   },
   "addition": {
     "item": "minecraft:diamond_block"

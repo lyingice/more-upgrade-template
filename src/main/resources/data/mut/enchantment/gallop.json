@@ -1,0 +1,47 @@
+{
+  "description": {
+    "translate": "enchantment.mut.gallop"
+  },
+  "supported_items": "#mut:horse_armor",
+  "weight": 10,
+  "max_level": 5,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "body"
+  ],
+  "exclusive_set": [],
+  "effects": {
+    "minecraft:damage_protection": [
+      {
+        "effect": {
+          "type": "minecraft:add",
+          "value": {
+            "type": "minecraft:linear",
+            "base": 1,
+            "per_level_above_first": 1
+          }
+        }
+      }
+    ],
+    "attributes": [
+  {
+    "amount": {
+      "type": "minecraft:linear",
+      "base": 0.4,
+      "per_level_above_first": 0.15
+    },
+    "attribute": "minecraft:generic.movement_speed",
+    "operation": "add_multiplied_total",
+    "id": "mut:enchantment.gallop"
+  }
+]
+  }
+}

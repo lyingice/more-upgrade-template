@@ -61,6 +61,7 @@ public class MutMod {
 		MutModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		// Start of user code block mod init
 		ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.SERVER, MutCrossbowLoadCountConfig.CONFIG_SPEC, "mut_crossbow_load_count.toml");
+		MutModItems.ENTITY_REGISTRY.register(modEventBus);
 		// End of user code block mod init
 	}
 

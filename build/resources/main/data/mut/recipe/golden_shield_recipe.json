@@ -11,7 +11,7 @@
       "item": "minecraft:gold_ingot"
     },
     "b": {
-      "item": "minecraft:shield"
+      "item": "mut:iron_shield"
     }
   },
   "result": {

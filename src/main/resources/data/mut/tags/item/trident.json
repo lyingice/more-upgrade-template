@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "mut:wooden_trident",
+    "mut:copper_trident",
+    "mut:iron_trident",
+    "mut:golden_trident",
+    "mut:diamond_trident",
+    "mut:netherite_trident",
+    "mut:steel_trident",
+    "mut:gilding_trident",
+    "mut:blue_diamond_trident",
+    "mut:advanced_steel_trident"
+  ]
+}
