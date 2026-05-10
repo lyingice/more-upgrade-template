@@ -31,3 +31,12 @@
 /give @a mut:iron_trident
 /gamemode survival
 /summon mut:mut_thrown_trident
+/addaffix poison_mark
+/effect give @s mut:poison_mark infinite 1
+/effect give @a mut:poison_mark infinite 0 true
+/effect give @a mut:poison_mark infinite 10 true
+/addaffix poison_mark
+/addaffix fire_mark
+/addaffix wither_mark
+/addaffix momentum
+/give @a mut:dragon_bow

@@ -2,6 +2,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,7 +10,8 @@ public class GenerateBowModels {
 
     // 你的所有弓的材料名称
     private static final String[] MATERIALS = {
-            "iron","diamond","netherite","golden","obsidian","netherite_obsidian","crying_obsidian", "steel","advanced_steel","gilding","blue_diamond","nether_star","copper","netherite_copper"
+            "iron","diamond","netherite","golden","obsidian","netherite_obsidian","crying_obsidian", "steel","advanced_steel","gilding","blue_diamond","nether_star","copper","netherite_copper",
+            "dragon"
     };
 
     // ========== 在这里自定义每个弓的拉动数值 ==========
@@ -24,6 +26,9 @@ public class GenerateBowModels {
 
     // 输出目录
     private static final String OUTPUT_DIR = "src/main/resources/assets/mut/models/item";
+
+    // 标签文件输出目录
+    private static final String TAG_DIR = "src/main/resources/data/mut/tags/item";
 
     // 标准弓的display设置
     private static final String DISPLAY_SETTINGS =
@@ -55,8 +60,9 @@ public class GenerateBowModels {
 
         try {
             Files.createDirectories(Paths.get(OUTPUT_DIR));
+            Files.createDirectories(Paths.get(TAG_DIR));
         } catch (IOException e) {
-            System.err.println("无法创建目录: " + OUTPUT_DIR);
+            System.err.println("无法创建目录");
             e.printStackTrace();
             return;
         }
@@ -76,8 +82,6 @@ public class GenerateBowModels {
             totalFiles += generateBaseBowModel(bowName, pull1, pull2, material);
 
             // 生成拉动状态的弓模型 (_bow_0, _bow_1, _bow_2)
-            // 模型文件名: xxx_bow_0.json
-            // 模型内纹理: xxx_bow_pulling_0
             String[] pullStateNames = {"_bow_0", "_bow_1", "_bow_2"};
             String[] pullTextureNames = {"_bow_pulling_0", "_bow_pulling_1", "_bow_pulling_2"};
 
@@ -88,8 +92,12 @@ public class GenerateBowModels {
             }
         }
 
+        // 生成 mut:bow 标签文件
+        generateBowTagFile();
+
         System.out.println("生成完成！共生成 " + totalFiles + " 个 JSON 文件");
         System.out.println("输出目录: " + OUTPUT_DIR);
+        System.out.println("标签文件: " + TAG_DIR + "/bow.json");
     }
 
     private static int generateBaseBowModel(String modelName, float pull1, float pull2, String material) {
@@ -165,6 +173,40 @@ public class GenerateBowModels {
         content = content.substring(0, content.length() - 2) + "\n";
         content += "}\n";
         return content;
+    }
+
+    /**
+     * 生成 mut:bow 标签文件
+     * 将 MATERIALS 中的所有弓添加到标签中，方便批量注册物品属性
+     */
+    private static void generateBowTagFile() {
+        String filePath = TAG_DIR + "/bow.json";
+
+        // 按字母顺序排序，使输出更整洁
+        String[] sortedMaterials = MATERIALS.clone();
+        Arrays.sort(sortedMaterials);
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("{\n");
+        sb.append("  \"replace\": false,\n");
+        sb.append("  \"values\": [\n");
+
+        for (int i = 0; i < sortedMaterials.length; i++) {
+            String material = sortedMaterials[i];
+            sb.append("    \"mut:").append(material).append("_bow\"");
+            if (i < sortedMaterials.length - 1) {
+                sb.append(",");
+            }
+            sb.append("\n");
+        }
+
+        sb.append("  ]\n");
+        sb.append("}\n");
+
+        if (writeFile(filePath, sb.toString())) {
+            System.out.println("生成标签文件: " + filePath);
+            System.out.println("共添加 " + sortedMaterials.length + " 个弓到 mut:bow 标签中");
+        }
     }
 
     private static boolean writeFile(String path, String content) {

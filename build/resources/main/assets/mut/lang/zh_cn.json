@@ -414,5 +414,19 @@
   "item.mut.steel_trident": "钢三叉戟",
   "item.mut.advanced_steel_trident": "精钢三叉戟",
   "item.mut.gilding_trident": "鎏金三叉戟",
-  "item.mut.blue_diamond_trident": "蓝钻合金三叉戟"
+  "item.mut.blue_diamond_trident": "蓝钻合金三叉戟",
+  "effect.mut.poison_mark": "剧毒印记",
+  "effect.mut.fire_mark": "灼烧印记",
+  "affix.poison_mark.name": "剧毒印记",
+  "affix.poison_mark.description": "攻击时施加印记，根据同类印记装备数量提升中毒伤害。",
+  "affix.fire_mark.name": "灼烧印记",
+  "affix.fire_mark.description": "攻击时施加印记，根据同类印记装备数量提升火焰伤害。",
+  "effect.mut.wither_mark": "凋零印记",
+  "affix.wither_mark.name": "凋零印记",
+  "affix.wither_mark.description": "攻击时施加印记，根据同类印记装备数量提升凋零伤害。",
+  "affix.nirvana.name": "涅槃",
+  "affix.nirvana.description": "物品损坏时属性进化",
+  "affix.momentum.name": "动能冲击",
+  "affix.momentum.description": "根据同类印记装备数量提升下落攻击伤害，每层+25%。",
+  "item.mut.dragon_bow": "龙弓"
 }

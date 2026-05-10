@@ -557,6 +557,7 @@ public class MutModItems {
 	public static final DeferredItem<Item> GILDING_TRIDENT = REGISTRY.register("gilding_trident", MutTridentItem.GildingTridentItem::new);
 	public static final DeferredItem<Item> BLUE_DIAMOND_TRIDENT = REGISTRY.register("blue_diamond_trident", MutTridentItem.BlueDiamondTridentItem::new);
 	public static final DeferredItem<Item> ADVANCED_STEEL_TRIDENT = REGISTRY.register("advanced_steel_trident", MutTridentItem.AdvancedSteelTridentItem::new);
+	public static final DeferredItem<Item> DRAGON_BOW = REGISTRY.register("dragon_bow", BaseBowItem.DragonBowItem::new);
 	public static final DeferredRegister<EntityType<?>> ENTITY_REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, MutMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<MutThrownTrident>> MUT_THROWN_TRIDENT = ENTITY_REGISTRY.register("mut_thrown_trident",
 			() -> EntityType.Builder.<MutThrownTrident>of(MutThrownTrident::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("mut_thrown_trident"));

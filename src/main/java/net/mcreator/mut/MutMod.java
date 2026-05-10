@@ -8,6 +8,7 @@ import net.neoforged.neoforge.network.handling.IPayloadHandler;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.event.tick.ServerTickEvent;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.capabilities.EntityCapability;
 import net.neoforged.fml.util.thread.SidedThreadGroups;
@@ -27,12 +28,10 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import net.mcreator.mut.init.MutModVillagerProfessions;
-import net.mcreator.mut.init.MutModTabs;
-import net.mcreator.mut.init.MutModItems;
-import net.mcreator.mut.init.MutModBlocks;
-import net.mcreator.mut.init.MutModBlockEntities;
+import net.mcreator.mut.init.*;
+import net.mcreator.mut.event.AffixEventHandler;
 import net.mcreator.mut.config.MutCrossbowLoadCountConfig;
+import net.mcreator.mut.command.AddAffixCommand;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Queue;
@@ -58,14 +57,21 @@ public class MutMod {
 		MutModBlockEntities.REGISTRY.register(modEventBus);
 		MutModItems.REGISTRY.register(modEventBus);
 		MutModTabs.REGISTRY.register(modEventBus);
+		MutModMobEffects.REGISTRY.register(modEventBus);
 		MutModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		// Start of user code block mod init
 		ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.SERVER, MutCrossbowLoadCountConfig.CONFIG_SPEC, "mut_crossbow_load_count.toml");
 		MutModItems.ENTITY_REGISTRY.register(modEventBus);
+		NeoForge.EVENT_BUS.register(new AffixEventHandler());
 		// End of user code block mod init
 	}
 
 	// Start of user code block mod methods
+	@SubscribeEvent
+	public void onRegisterCommands(RegisterCommandsEvent event) {
+		AddAffixCommand.register(event.getDispatcher());
+	}
+
 	// End of user code block mod methods
 	private static boolean networkingRegistered = false;
 	private static final Map<CustomPacketPayload.Type<?>, NetworkMessage<?>> MESSAGES = new HashMap<>();

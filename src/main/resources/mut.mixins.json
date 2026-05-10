@@ -4,7 +4,11 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ElytraLayerMixin",
-    "WolfArmorMixin"
+    "WolfArmorMixin",
+    "PoisonDamageMixin",
+    "FireDamageMixin",
+    "WitherDamageMixin",
+    "MomentumMixin"
   ],
   "client": [],
   "injectors": {

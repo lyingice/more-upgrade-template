@@ -7557,6 +7557,97 @@
         ]
       },
       "path": "~/Amror and Tools/Extra Trident"
+    },
+    {
+      "name": "PoisonMark",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "poison_mark",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/potion/PoisonMarkMobEffect.java"
+        ]
+      },
+      "path": "~/Buff"
+    },
+    {
+      "name": "FireMark",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_mark",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/potion/FireMarkMobEffect.java"
+        ]
+      },
+      "path": "~/Buff"
+    },
+    {
+      "name": "PoisonDamage",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "poison_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/mixin/PoisonDamageMixin.java"
+        ]
+      },
+      "path": "~/Mixin"
+    },
+    {
+      "name": "FireDamage",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "fire_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/mixin/FireDamageMixin.java"
+        ]
+      },
+      "path": "~/Mixin"
+    },
+    {
+      "name": "WitherMark",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wither_mark",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/potion/WitherMarkMobEffect.java"
+        ]
+      },
+      "path": "~/Buff"
+    },
+    {
+      "name": "WitherDamage",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "wither_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/mixin/WitherDamageMixin.java"
+        ]
+      },
+      "path": "~/Mixin"
+    },
+    {
+      "name": "Momentum",
+      "type": "mixin",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "momentum",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/mixin/MomentumMixin.java"
+        ]
+      },
+      "path": "~/Mixin"
     }
   ],
   "variable_elements": [],
@@ -7861,22 +7952,6 @@
       "CUSTOM:GildingMace",
       "CUSTOM:BlueDiamondMace",
       "CUSTOM:AdvancedSteelMace"
-    ],
-    "ITEMS:mut:bow": [
-      "CUSTOM:IronBow",
-      "CUSTOM:DiamondBow",
-      "CUSTOM:GoldenBow",
-      "CUSTOM:NetheriteBow",
-      "CUSTOM:SteelBow",
-      "CUSTOM:GildingBow",
-      "CUSTOM:AdvancedSteelBow",
-      "CUSTOM:NetherStarBow",
-      "CUSTOM:ObsidianBow",
-      "CUSTOM:NetheriteObsidianBow",
-      "CUSTOM:CryingObsidianBow",
-      "CUSTOM:BlueDiamondBow",
-      "CUSTOM:CopperBow",
-      "CUSTOM:NetheriteCopperBow"
     ],
     "ITEMS:minecraft:enchantable/bow": [
       "TAG:mut:bow"
@@ -8624,7 +8699,21 @@
       "item.mut.steel_trident": "Steel Trident",
       "item.mut.advanced_steel_trident": "Advanced Steel Trident",
       "item.mut.gilding_trident": "Gilding Trident",
-      "item.mut.blue_diamond_trident": "Blue Diamond Trident"
+      "item.mut.blue_diamond_trident": "Blue Diamond Trident",
+      "effect.mut.poison_mark": "Poison Mark",
+      "effect.mut.fire_mark": "Fire Mark",
+      "affix.poison_mark.name": "Poison Mark",
+      "affix.poison_mark.description": "Enhance the poisoning damage of the attacked party",
+      "affix.fire_mark.name": "Fire Mark",
+      "affix.fire_mark.description": "Enhance the fire damage of the attacked party",
+      "effect.mut.wither_mark": "Wither Mark",
+      "affix.wither_mark.name": "Wither Mark",
+      "affix.wither_mark.description": "Enhance the withering damage of the attacked party",
+      "affix.nirvana.name": "Nirvana",
+      "affix.nirvana.description": "Evolution of attributes when items are damaged",
+      "affix.momentum.name": "Momentum",
+      "affix.momentum.description": "Increase the drop attack damage by 25% per level based on the number of equipment",
+      "item.mut.dragon_bow": "Dragon Bow"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -9042,7 +9131,21 @@
       "item.mut.steel_trident": "钢三叉戟",
       "item.mut.advanced_steel_trident": "精钢三叉戟",
       "item.mut.gilding_trident": "鎏金三叉戟",
-      "item.mut.blue_diamond_trident": "蓝钻合金三叉戟"
+      "item.mut.blue_diamond_trident": "蓝钻合金三叉戟",
+      "effect.mut.poison_mark": "剧毒印记",
+      "effect.mut.fire_mark": "灼烧印记",
+      "affix.poison_mark.name": "剧毒印记",
+      "affix.poison_mark.description": "攻击时施加印记，根据同类印记装备数量提升中毒伤害。",
+      "affix.fire_mark.name": "灼烧印记",
+      "affix.fire_mark.description": "攻击时施加印记，根据同类印记装备数量提升火焰伤害。",
+      "effect.mut.wither_mark": "凋零印记",
+      "affix.wither_mark.name": "凋零印记",
+      "affix.wither_mark.description": "攻击时施加印记，根据同类印记装备数量提升凋零伤害。",
+      "affix.nirvana.name": "涅槃",
+      "affix.nirvana.description": "物品损坏时属性进化",
+      "affix.momentum.name": "动能冲击",
+      "affix.momentum.description": "根据同类印记装备数量提升下落攻击伤害，每层+25%。",
+      "item.mut.dragon_bow": "龙弓"
     }
   },
   "metadata": {
@@ -9050,6 +9153,7 @@
       "src/main/java/net/mcreator/mut/init/MutModTrades.java",
       "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
       "src/main/java/net/mcreator/mut/init/MutModVillagerProfessions.java",
+      "src/main/java/net/mcreator/mut/init/MutModMobEffects.java",
       "src/main/java/net/mcreator/mut/init/MutModBlocks.java",
       "src/main/java/net/mcreator/mut/init/MutModBlockEntities.java",
       "src/main/java/net/mcreator/mut/init/MutModItems.java",
@@ -9303,6 +9407,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Buff",
+        "children": []
       }
     ]
   },

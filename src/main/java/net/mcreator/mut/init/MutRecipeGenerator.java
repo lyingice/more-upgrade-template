@@ -15,7 +15,7 @@ public class MutRecipeGenerator {
     private static final String STICK = "minecraft:stick";
 
     private static final String[] MATERIALS = {
-            "AMETHYST","NETHERITE_AMETHYST"
+            ""
     };
 
     private record ItemType(String idSuffix, String[] pattern, String category, boolean isTwoSlot) {}

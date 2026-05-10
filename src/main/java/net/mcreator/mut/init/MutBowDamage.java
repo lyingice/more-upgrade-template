@@ -7,6 +7,7 @@ import java.util.Map;
 /**
  * 弓的额外伤害注册类
  * 只负责存储和提供每种弓的额外伤害加成
+ * 该配置已废弃,0.2.0以后将逐步移除
  */
 public class MutBowDamage {
 

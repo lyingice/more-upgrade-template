@@ -414,5 +414,19 @@
   "item.mut.steel_trident": "Steel Trident",
   "item.mut.advanced_steel_trident": "Advanced Steel Trident",
   "item.mut.gilding_trident": "Gilding Trident",
-  "item.mut.blue_diamond_trident": "Blue Diamond Trident"
+  "item.mut.blue_diamond_trident": "Blue Diamond Trident",
+  "effect.mut.poison_mark": "Poison Mark",
+  "effect.mut.fire_mark": "Fire Mark",
+  "affix.poison_mark.name": "Poison Mark",
+  "affix.poison_mark.description": "Enhance the poisoning damage of the attacked party",
+  "affix.fire_mark.name": "Fire Mark",
+  "affix.fire_mark.description": "Enhance the fire damage of the attacked party",
+  "effect.mut.wither_mark": "Wither Mark",
+  "affix.wither_mark.name": "Wither Mark",
+  "affix.wither_mark.description": "Enhance the withering damage of the attacked party",
+  "affix.nirvana.name": "Nirvana",
+  "affix.nirvana.description": "Evolution of attributes when items are damaged",
+  "affix.momentum.name": "Momentum",
+  "affix.momentum.description": "Increase the drop attack damage by 25% per level based on the number of equipment",
+  "item.mut.dragon_bow": "Dragon Bow"
 }
