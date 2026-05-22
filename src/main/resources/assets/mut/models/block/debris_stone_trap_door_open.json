@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "mut:block/debris_stone_trap_door",
+    "particle": "mut:block/debris_stone"
+  },
+  "render_type": "cutout"
+}

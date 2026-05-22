@@ -1,0 +1,82 @@
+{
+  "item.spear.attack": {
+    "sounds": [
+      {
+        "name": "mut:spear_attack1",
+        "stream": false
+      },
+      {
+        "name": "mut:spear_attack2",
+        "stream": false
+      },
+      {
+        "name": "mut:spear_attack3",
+        "stream": false
+      }
+    ]
+  },
+  "item.spear.hit": {
+    "sounds": [
+      {
+        "name": "mut:spear_hit1",
+        "stream": false
+      },
+      {
+        "name": "mut:spear_hit2",
+        "stream": false
+      },
+      {
+        "name": "mut:spear_hit3",
+        "stream": false
+      }
+    ]
+  },
+  "item.spear.use": {
+    "sounds": [
+      {
+        "name": "mut:spear_use",
+        "stream": false
+      }
+    ]
+  },
+  "item.spear_wood.attack": {
+    "sounds": [
+      {
+        "name": "mut:wood_spear_attack1",
+        "stream": false
+      },
+      {
+        "name": "mut:wood_spear_attack2",
+        "stream": false
+      },
+      {
+        "name": "mut:wood_spear_attack3",
+        "stream": false
+      }
+    ]
+  },
+  "item.spear_wood.use": {
+    "sounds": [
+      {
+        "name": "mut:wood_spear_use",
+        "stream": false
+      }
+    ]
+  },
+  "item.spear_wood.hit": {
+    "sounds": [
+      {
+        "name": "mut:wood_spear_hit1",
+        "stream": false
+      },
+      {
+        "name": "mut:wood_spear_hit2",
+        "stream": false
+      },
+      {
+        "name": "mut:wood_spear_hit3",
+        "stream": false
+      }
+    ]
+  }
+}

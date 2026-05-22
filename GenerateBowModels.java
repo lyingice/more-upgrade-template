@@ -11,7 +11,7 @@ public class GenerateBowModels {
     // 你的所有弓的材料名称
     private static final String[] MATERIALS = {
             "iron","diamond","netherite","golden","obsidian","netherite_obsidian","crying_obsidian", "steel","advanced_steel","gilding","blue_diamond","nether_star","copper","netherite_copper",
-            "dragon"
+            "dragon","wither","netherite_redstone","netherite_emerald","netherite_amethyst","amethyst", "emerald"
     };
 
     // ========== 在这里自定义每个弓的拉动数值 ==========

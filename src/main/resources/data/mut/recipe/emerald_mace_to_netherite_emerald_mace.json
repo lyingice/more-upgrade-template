@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_emerald_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:emerald_mace"
+  },
+  "addition": {
+    "item": "mut:netherite_emerald_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_emerald_mace"
+  }
+}

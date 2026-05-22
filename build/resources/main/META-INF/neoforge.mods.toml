@@ -4,7 +4,7 @@ license="MIT License"
 
 [[mods]]
 modId="mut"
-version="0.2.0"
+version="0.3.0"
 displayName="MoreUpgradeTemplate"
 displayURL="https://mcreator.net"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
@@ -15,32 +15,34 @@ description="More Upgrade Smithing Templates"
 # End of user code block mod configuration
 
 [[mixins]]
-    config = "mut.mixins.json"
+config = "mut.mixins.json"
 
 # Start of user code block custom mixins
+[[mixins]]
+config = "mut.spear.mixins.json"
 # End of user code block custom mixins
 
 [[dependencies.mut]]
-    modId="neoforge"
-    type="required"
-    versionRange="[21.1.190,)"
-    ordering="AFTER"
-    side="BOTH"
+modId="neoforge"
+type="required"
+versionRange="[21.1.190,)"
+ordering="AFTER"
+side="BOTH"
 
 [[dependencies.mut]]
-    modId="minecraft"
-    type="required"
-    versionRange="[1.21.1]"
-    ordering="AFTER"
-    side="BOTH"
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="AFTER"
+side="BOTH"
 
 
 [[dependencies.mut]]
-    modId="nexus_compiler"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
+modId="nexus_compiler"
+type="optional"
+versionRange="[0,)"
+ordering="NONE"
+side="BOTH"
 
 
 # Start of user code block dependencies configuration

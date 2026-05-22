@@ -17,7 +17,12 @@ import java.util.Map;
 public class GenerateCrossbowModels {
 
     private static final String[] MATERIALS = {
-            "iron", "diamond","golden","netherite"
+            "copper", "iron", "diamond", "golden", "netherite",
+            "steel", "gilding", "blue_diamond", "advanced_steel",
+            "obsidian", "netherite_obsidian", "crying_obsidian",
+            "nether_star", "wither", "dragon","netherite_redstone",
+            "netherite_copper","netherite_emerald","netherite_amethyst",
+            "amethyst","emerald"
     };
 
     private static final Map<String, float[]> PULL_THRESHOLDS = new LinkedHashMap<>();

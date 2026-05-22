@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "mut:debris_planks_sign",
+    "mut:debris_planks_pressure_plate",
+    "mut:debris_planks_hanging_sign",
+    "mut:debris_planks_door",
+    "mut:debris_planks_stairs",
+    "mut:debris_planks",
+    "mut:debris_planks_fence_gate",
+    "mut:debris_planks_button",
+    "mut:debris_planks_wall_hanging_sign",
+    "mut:debris_planks_wall_sign",
+    "mut:debris_planks_fence",
+    "mut:debris_planks_trap_door",
+    "mut:debris_planks_slab",
+    "mut:log_debris"
+  ]
+}
