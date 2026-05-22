@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "mut:block/debris_stone_bricks_pressure_plate"
+    },
+    "powered=true": {
+      "model": "mut:block/debris_stone_bricks_pressure_plate_down"
+    }
+  }
+}

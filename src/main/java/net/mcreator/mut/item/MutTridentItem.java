@@ -4,7 +4,8 @@ import net.mcreator.mut.entity.MutThrownTrident;
 import net.mcreator.mut.init.MutModItems;
 import net.mcreator.mut.init.MutTridentStats;
 import net.minecraft.core.Holder;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -17,38 +18,38 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TridentItem;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-
-import java.util.function.Supplier;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class MutTridentItem extends TridentItem {
 
     public static final int THROW_THRESHOLD_TIME = 10;
     public static final float SHOOT_POWER = 2.5F;
 
-    private final Supplier<Item> selfSupplier;
+    public MutTridentItem(MutTridentStats.Stats stats) {
+        this(stats, stats.fireResistant()
+                ? new Properties().fireResistant()
+                : new Properties());
+    }
 
-    public MutTridentItem(Supplier<Item> selfSupplier, int durability, boolean fireResistant, MutTridentStats.Stats stats) {
-        super(fireResistant
-                ? new Properties().stacksTo(1).durability(durability).fireResistant().rarity(stats.rarity())
-                .attributes(buildAttributes(stats.attackDamage(), stats.attackSpeed()))
-                : new Properties().stacksTo(1).durability(durability).rarity(stats.rarity())
+    public MutTridentItem(MutTridentStats.Stats stats, Properties customProps) {
+        super((stats.fireResistant() ? customProps.fireResistant() : customProps)
+                .stacksTo(1)
+                .durability(stats.durability())
+                .rarity(stats.rarity())
                 .attributes(buildAttributes(stats.attackDamage(), stats.attackSpeed())));
-        this.selfSupplier = selfSupplier;
     }
 
-    private Item self() {
-        return selfSupplier.get();
-    }
     private static ItemAttributeModifiers buildAttributes(double attackDamage, float attackSpeed) {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ATTACK_DAMAGE,
@@ -97,8 +98,7 @@ public class MutTridentItem extends TridentItem {
                             stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(entity.getUsedItemHand()));
                             if (riptideStrength == 0.0F) {
                                 MutThrownTrident thrownTrident = new MutThrownTrident(level, player, stack);
-                                MutTridentStats.Stats stats = MutTridentStats.get(self());
-                                thrownTrident.setBaseDamage(stats.throwDamage());
+                                thrownTrident.setBaseDamage(MutTridentStats.get(stack.getItem()).throwDamage());
                                 thrownTrident.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, SHOOT_POWER, 1.0F);
                                 if (player.hasInfiniteMaterials()) {
                                     thrownTrident.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
@@ -144,68 +144,104 @@ public class MutTridentItem extends TridentItem {
         stack.hurtAndBreak(1, attacker, EquipmentSlot.MAINHAND);
     }
 
-    private static boolean isTooDamagedToUse(ItemStack stack) {
-        return stack.getDamageValue() >= stack.getMaxDamage() - 1;
-    }
     @Override
     public int getEnchantmentValue() {
-        return MutTridentStats.get(self()).enchantmentValue();
+        return MutTridentStats.get(this).enchantmentValue();
     }
 
     @Override
     public boolean isValidRepairItem(ItemStack stack, ItemStack repairItem) {
-        return MutTridentStats.get(self()).repairItem().test(repairItem);
+        return MutTridentStats.get(this).repairItem().test(repairItem);
+    }
+
+    private static boolean isTooDamagedToUse(ItemStack stack) {
+        return stack.getDamageValue() >= stack.getMaxDamage() - 1;
     }
 
     // ========== 子类 ==========
+
     public static class WoodenTridentItem extends MutTridentItem {
-        public WoodenTridentItem() {
-            super(MutModItems.WOODEN_TRIDENT::get, 125, false, MutTridentStats.WOODEN);
-        }
+        public WoodenTridentItem() { super(MutTridentStats.WOODEN); }
     }
     public static class CopperTridentItem extends MutTridentItem {
-        public CopperTridentItem() {
-            super(MutModItems.COPPER_TRIDENT::get, 215, false, MutTridentStats.COPPER);
-        }
+        public CopperTridentItem() { super(MutTridentStats.COPPER); }
     }
     public static class IronTridentItem extends MutTridentItem {
-        public IronTridentItem() {
-            super(MutModItems.IRON_TRIDENT::get, 250, false, MutTridentStats.IRON);
-        }
+        public IronTridentItem() { super(MutTridentStats.IRON); }
     }
     public static class GoldenTridentItem extends MutTridentItem {
-        public GoldenTridentItem() {
-            super(MutModItems.GOLDEN_TRIDENT::get, 375, false, MutTridentStats.GOLDEN);
-        }
+        public GoldenTridentItem() { super(MutTridentStats.GOLDEN); }
     }
     public static class DiamondTridentItem extends MutTridentItem {
-        public DiamondTridentItem() {
-            super(MutModItems.DIAMOND_TRIDENT::get, 1031, false, MutTridentStats.DIAMOND);
-        }
+        public DiamondTridentItem() { super(MutTridentStats.DIAMOND); }
     }
     public static class NetheriteTridentItem extends MutTridentItem {
-        public NetheriteTridentItem() {
-            super(MutModItems.NETHERITE_TRIDENT::get, 1266, true, MutTridentStats.NETHERITE);
-        }
+        public NetheriteTridentItem() { super(MutTridentStats.NETHERITE); }
     }
     public static class SteelTridentItem extends MutTridentItem {
-        public SteelTridentItem() {
-            super(MutModItems.STEEL_TRIDENT::get, 625, true, MutTridentStats.STEEL);
-        }
+        public SteelTridentItem() { super(MutTridentStats.STEEL); }
     }
     public static class GildingTridentItem extends MutTridentItem {
-        public GildingTridentItem() {
-            super(MutModItems.GILDING_TRIDENT::get, 1031, true, MutTridentStats.GILDING);
-        }
+        public GildingTridentItem() { super(MutTridentStats.GILDING); }
     }
     public static class BlueDiamondTridentItem extends MutTridentItem {
-        public BlueDiamondTridentItem() {
-            super(MutModItems.BLUE_DIAMOND_TRIDENT::get, 1266, true, MutTridentStats.BLUE_DIAMOND);
-        }
+        public BlueDiamondTridentItem() { super(MutTridentStats.BLUE_DIAMOND); }
     }
     public static class AdvancedSteelTridentItem extends MutTridentItem {
-        public AdvancedSteelTridentItem() {
-            super(MutModItems.ADVANCED_STEEL_TRIDENT::get, 1375, true, MutTridentStats.ADVANCED_STEEL);
+        public AdvancedSteelTridentItem() { super(MutTridentStats.ADVANCED_STEEL); }
+    }
+    public static class ObsidianTridentItem extends MutTridentItem {
+        public ObsidianTridentItem() { super(MutTridentStats.OBSIDIAN); }
+    }
+    public static class NetheriteObsidianTridentItem extends MutTridentItem {
+        public NetheriteObsidianTridentItem() { super(MutTridentStats.NETHERITE_OBSIDIAN); }
+    }
+    public static class CryingObsidianTridentItem extends MutTridentItem {
+        public CryingObsidianTridentItem() { super(MutTridentStats.CRYING_OBSIDIAN); }
+    }
+    public static class NetherStarTridentItem extends MutTridentItem {
+        public NetherStarTridentItem() { super(MutTridentStats.NETHER_STAR); }
+        @Override
+        @OnlyIn(Dist.CLIENT)
+        public boolean isFoil(ItemStack itemstack) {
+            return true;
         }
+
+    }
+    public static class DragonTridentItem extends MutTridentItem {
+        public DragonTridentItem() { super(MutTridentStats.DRAGON); }
+    }
+    public static class WitherTridentItem extends MutTridentItem {
+        public WitherTridentItem() {
+            super(MutTridentStats.WITHER,
+                    new Properties()
+                            .fireResistant()
+                            .component(DataComponents.CUSTOM_DATA, createWitherMarkData()));
+        }
+
+        private static CustomData createWitherMarkData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "wither_mark");
+            return CustomData.of(tag);
+        }
+    }
+    // 子类
+    public static class NetheriteCopperTridentItem extends MutTridentItem {
+        public NetheriteCopperTridentItem() { super(MutTridentStats.NETHERITE_COPPER); }
+    }
+    public static class NetheriteEmeraldTridentItem extends MutTridentItem {
+        public NetheriteEmeraldTridentItem() { super(MutTridentStats.NETHERITE_EMERALD); }
+    }
+    public static class NetheriteRedstoneTridentItem extends MutTridentItem {
+        public NetheriteRedstoneTridentItem() { super(MutTridentStats.NETHERITE_REDSTONE); }
+    }
+    public static class NetheriteAmethystTridentItem extends MutTridentItem {
+        public NetheriteAmethystTridentItem() { super(MutTridentStats.NETHERITE_AMETHYST); }
+    }
+    public static class AmethystTridentItem extends MutTridentItem {
+        public AmethystTridentItem() { super(MutTridentStats.AMETHYST); }
+    }
+    public static class EmeraldTridentItem extends MutTridentItem {
+        public EmeraldTridentItem() { super(MutTridentStats.EMERALD); }
     }
 }

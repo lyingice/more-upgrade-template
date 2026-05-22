@@ -1,5 +1,6 @@
 package net.mcreator.mut.init;
 
+import com.google.common.math.Stats;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -14,60 +15,249 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Supplier;
 
 public class AnimalArmorMaterials {
+    // 添加映射表
+    private static final Map<Item, AnimalArmorExtendedStats> STATS_MAP = new HashMap<>();
+    private static final AnimalArmorExtendedStats DEFAULT = null;
+
+    // 注册方法
+    public static void register(Item armor, AnimalArmorExtendedStats stats) {
+        STATS_MAP.put(armor, stats);
+    }
+
+    public static AnimalArmorExtendedStats get(Item armor) {
+        return STATS_MAP.get(armor);
+    }
+
+    // 便捷方法
+    public static int durability(Item armor) {
+        AnimalArmorExtendedStats stats = get(armor);
+        return stats != null ? stats.durability() : 0;
+    }
+
+    public static boolean fireResistant(Item armor) {
+        AnimalArmorExtendedStats stats = get(armor);
+        return stats != null && stats.fireResistant();
+    }
+
 
     /**
-     * 自定义记录：额外存储动物铠甲的特殊属性
+     * 基础记录：只存储材料和基本属性（给旧物品使用）
      */
-    public record AnimalArmorStats(
+    public record AnimalArmorBaseStats(
             Holder<ArmorMaterial> material,
-            double maxHealthBonus,      // 最大生命值加成
-            double movementSpeedBonus   // 移动速度加成
+            double maxHealthBonus,
+            double movementSpeedBonus
     ) {}
 
-    // ========== 原版材料 ==========
-    public static final AnimalArmorStats COPPER = registerAnimal(
+    /**
+     * 扩展记录：包含耐久和抗火属性（给新物品使用）
+     */
+    public record AnimalArmorExtendedStats(
+            Holder<ArmorMaterial> material,
+            double maxHealthBonus,
+            double movementSpeedBonus,
+            int durability,
+            boolean fireResistant,
+            Rarity rarity
+    ) {
+        // 转换方法：从基础记录创建扩展记录
+        public AnimalArmorExtendedStats fromBase(AnimalArmorBaseStats base, int durability, boolean fireResistant) {
+            return new AnimalArmorExtendedStats(base.material, base.maxHealthBonus, base.movementSpeedBonus, durability, fireResistant,rarity);
+        }
+    }
+
+    // ========== 旧材料（保持原参数，给已硬编码的物品使用） ==========
+
+    public static final AnimalArmorBaseStats COPPER = registerAnimalBase(
             "copper_animal", 5, 9,
             SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
             () -> Ingredient.of(Items.COPPER_INGOT),
-            0.0D, 0.1D  //
+            0.0D, 0.0D
     );
-    public static final AnimalArmorStats IRON_ANIMAL = registerAnimal(
+
+    public static final AnimalArmorBaseStats IRON_ANIMAL = registerAnimalBase(
             "iron_animal", 5, 9,
             SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F,
             () -> Ingredient.of(Items.IRON_INGOT),
-            0.0D, 0.0D  // 左边生命右边移速
+            0.0D, 0.0D
     );
 
-    public static final AnimalArmorStats GOLDEN_ANIMAL = registerAnimal(
+    public static final AnimalArmorBaseStats GOLDEN_ANIMAL = registerAnimalBase(
             "golden_animal", 7, 25,
             SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F,
             () -> Ingredient.of(Items.GOLD_INGOT),
-            2.0D, 0.1D  //
+            0.0D, 0.15D
     );
 
-    public static final AnimalArmorStats DIAMOND_ANIMAL = registerAnimal(
+    public static final AnimalArmorBaseStats DIAMOND_ANIMAL = registerAnimalBase(
             "diamond_animal", 11, 10,
             SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F,
             () -> Ingredient.of(Items.DIAMOND),
-            4.0D, 0.15D  //
+            0.0D, 0.0D
     );
 
-    public static final AnimalArmorStats NETHERITE_ANIMAL = registerAnimal(
+    public static final AnimalArmorBaseStats NETHERITE_ANIMAL = registerAnimalBase(
             "netherite_animal", 19, 15,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F,
             () -> Ingredient.of(Items.NETHERITE_INGOT),
-            5.0D, 0.25D  // +3颗心，+5%移速
+            0.0D, 0.0D
     );
 
-    // ========== 自定义材料（后续追加） ==========
-    // public static final AnimalArmorStats STEEL_ANIMAL = registerAnimal(...);
+    // ========== 新材料（使用扩展参数，给新物品使用） ==========
+    // ========== 狼铠材料预设（AnimalArmorExtendedStats） ==========
 
-    // ========== 工厂方法 ==========
-    private static AnimalArmorStats registerAnimal(
+    // 钢
+    public static final AnimalArmorExtendedStats STEEL = registerAnimalExtended(
+            "steel", 19, 12,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.1F,
+            () -> Ingredient.of(MutModItems.STEEL_INGOT.get()),
+            4.0D, 0.1D,
+            385, true,Rarity.COMMON
+    );
+
+    // 精钢
+    public static final AnimalArmorExtendedStats ADVANCED_STEEL = registerAnimalExtended(
+            "advanced_steel", 23, 15,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F,
+            () -> Ingredient.of(MutModItems.ADVANCED_STEEL_INGOT.get()),
+            8.0D, 0.15D,
+            605, true,Rarity.COMMON
+    );
+
+    // 鎏金
+    public static final AnimalArmorExtendedStats GILDING = registerAnimalExtended(
+            "gilding", 19, 22,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F,
+            () -> Ingredient.of(MutModItems.GILDING_INGOT.get()),
+            6.0D, 0.4D,
+            363, true,Rarity.COMMON
+    );
+
+    // 蓝钻合金
+    public static final AnimalArmorExtendedStats BLUE_DIAMOND = registerAnimalExtended(
+            "blue_diamond", 23, 18,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.5F, 0.1F,
+            () -> Ingredient.of(MutModItems.BLUE_DIAMOND_INGOT.get()),
+            8.0D, 0.2D,
+            495, true,Rarity.COMMON
+    );
+
+    // 黑曜石
+    public static final AnimalArmorExtendedStats OBSIDIAN = registerAnimalExtended(
+            "obsidian", 19, 1,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.15F,
+            () -> Ingredient.of(Items.OBSIDIAN),
+            10.0D, -0.1D,
+            440, true,Rarity.COMMON
+    );
+
+    // 下界合金黑曜石
+    public static final AnimalArmorExtendedStats NETHERITE_OBSIDIAN = registerAnimalExtended(
+            "netherite_obsidian", 23, 1,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.3F,
+            () -> Ingredient.of(MutModItems.OBSIDIAN_INGOT.get()),
+            20.0D, -0.2D,
+            660, true,Rarity.COMMON
+    );
+
+    // 悲悯
+    public static final AnimalArmorExtendedStats CRYING_OBSIDIAN = registerAnimalExtended(
+            "crying_obsidian", 30, 1,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 6.0F, 0.6F,
+            () -> Ingredient.of(MutModItems.CRYING_OBSIDIAN_INGOT.get()),
+            30.0D, -0.3D,
+            1100, true,Rarity.EPIC
+    );
+
+    // 下界之星
+    public static final AnimalArmorExtendedStats NETHER_STAR = registerAnimalExtended(
+            "nether_star", 19, 22,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 10.0F, 0.1F,
+            () -> Ingredient.of(Items.NETHER_STAR),
+            10.0D, 0.0D,
+            968, true,Rarity.EPIC
+    );
+
+    // 龙
+    public static final AnimalArmorExtendedStats DRAGON = registerAnimalExtended(
+            "dragon", 30, 30,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F,
+            () -> Ingredient.of(Items.NETHER_STAR),
+            20.0D, 0.0D,
+            748, true,Rarity.EPIC
+    );
+
+    // 凋零
+    public static final AnimalArmorExtendedStats WITHER = registerAnimalExtended(
+            "wither", 23, 22,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 6.0F, 0.15F,
+            () -> Ingredient.of(Items.NETHER_STAR),
+            15.0D, 0.2D,
+            968, true,Rarity.EPIC
+    );
+
+    // 下界合金铜
+    public static final AnimalArmorExtendedStats NETHERITE_COPPER = registerAnimalExtended(
+            "netherite_copper", 19, 15,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.1F,
+            () -> Ingredient.of(Items.COPPER_BLOCK),
+            4.0D, 0.0D,
+            374, true,Rarity.COMMON
+    );
+
+    // 下界合金红石
+    public static final AnimalArmorExtendedStats NETHERITE_REDSTONE = registerAnimalExtended(
+            "netherite_redstone", 19, 20,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F,
+            () -> Ingredient.of(MutModItems.NETHERITE_REDSTONE_INGOT.get()),
+            4.0D, 0.5D,
+            429, true,Rarity.COMMON
+    );
+
+    // 绿宝石
+    public static final AnimalArmorExtendedStats EMERALD = registerAnimalExtended(
+            "emerald", 11, 18,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.0F,
+            () -> Ingredient.of(Items.EMERALD),
+            0.0D, 0.1D,
+            330, false,Rarity.COMMON
+    );
+
+    // 下界合金绿宝石
+    public static final AnimalArmorExtendedStats NETHERITE_EMERALD = registerAnimalExtended(
+            "netherite_emerald", 21, 18,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F,
+            () -> Ingredient.of(MutModItems.NETHERITE_EMERALD_INGOT.get()),
+            0.0D, 0.2D,
+            440, true,Rarity.COMMON
+    );
+
+    // 紫水晶
+    public static final AnimalArmorExtendedStats AMETHYST = registerAnimalExtended(
+            "amethyst", 6, 16,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 1.0F, 0.0F,
+            () -> Ingredient.of(Items.AMETHYST_SHARD),
+            8.0D, 0.0D,
+            231, false,Rarity.COMMON
+    );
+
+    // 下界合金紫水晶
+    public static final AnimalArmorExtendedStats NETHERITE_AMETHYST = registerAnimalExtended(
+            "netherite_amethyst", 20, 16,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F,
+            () -> Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT.get()),
+            16.0D, 0.0D,
+            462, true,Rarity.COMMON
+    );
+
+    // ========== 旧材料的工厂方法（8参数） ==========
+    private static AnimalArmorBaseStats registerAnimalBase(
             String name,
             int bodyDefense,
             int enchantmentValue,
@@ -91,21 +281,50 @@ public class AnimalArmorMaterials {
                 new ArmorMaterial(defense, enchantmentValue, equipSound, repairIngredient, layers, toughness, knockbackResistance)
         );
 
-        return new AnimalArmorStats(material, maxHealthBonus, movementSpeedBonus);
+        return new AnimalArmorBaseStats(material, maxHealthBonus, movementSpeedBonus);
     }
 
-    /**
-     * 根据 AnimalArmorStats 构建属性修饰符
-     * 在物品构造时调用
-     */
-    public static ItemAttributeModifiers createAttributes(AnimalArmorStats stats) {
+    // ========== 新材料的工厂方法（10参数，包含耐久和抗火） ==========
+    private static AnimalArmorExtendedStats registerAnimalExtended(
+            String name,
+            int bodyDefense,
+            int enchantmentValue,
+            Holder<SoundEvent> equipSound,
+            float toughness,
+            float knockbackResistance,
+            Supplier<Ingredient> repairIngredient,
+            double maxHealthBonus,
+            double movementSpeedBonus,
+            int durability,
+            boolean fireResistant,
+            Rarity rarity
+    ) {
+        EnumMap<ArmorItem.Type, Integer> defense = new EnumMap<>(ArmorItem.Type.class);
+        defense.put(ArmorItem.Type.BODY, bodyDefense);
+
+        List<ArmorMaterial.Layer> layers = List.of(
+                new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath("mut", name))
+        );
+
+        Holder<ArmorMaterial> material = net.minecraft.core.Registry.registerForHolder(
+                BuiltInRegistries.ARMOR_MATERIAL,
+                ResourceLocation.fromNamespaceAndPath("mut", name),
+                new ArmorMaterial(defense, enchantmentValue, equipSound, repairIngredient, layers, toughness, knockbackResistance)
+        );
+
+        return new AnimalArmorExtendedStats(material, maxHealthBonus, movementSpeedBonus, durability, fireResistant,rarity);
+    }
+
+    // ========== 属性创建方法（重载，支持两种记录类型） ==========
+
+    // 给旧物品使用
+    public static ItemAttributeModifiers createAttributes(AnimalArmorBaseStats stats) {
         var builder = ItemAttributeModifiers.builder();
         String path = stats.material.unwrapKey().orElseThrow().location().getPath();
         double armorValue = stats.material.value().getDefense(ArmorItem.Type.BODY);
         double toughness = stats.material.value().toughness();
         double knockbackRes = stats.material.value().knockbackResistance();
 
-        // 护甲值
         builder.add(Attributes.ARMOR,
                 new AttributeModifier(
                         ResourceLocation.fromNamespaceAndPath("mut", path + "_armor"),
@@ -114,7 +333,6 @@ public class AnimalArmorMaterials {
                 ),
                 EquipmentSlotGroup.BODY);
 
-        // 盔甲韧性
         if (toughness > 0) {
             builder.add(Attributes.ARMOR_TOUGHNESS,
                     new AttributeModifier(
@@ -125,7 +343,6 @@ public class AnimalArmorMaterials {
                     EquipmentSlotGroup.BODY);
         }
 
-        // 击退抗性
         if (knockbackRes > 0) {
             builder.add(Attributes.KNOCKBACK_RESISTANCE,
                     new AttributeModifier(
@@ -136,7 +353,6 @@ public class AnimalArmorMaterials {
                     EquipmentSlotGroup.BODY);
         }
 
-        // 生命值
         if (stats.maxHealthBonus > 0) {
             builder.add(Attributes.MAX_HEALTH,
                     new AttributeModifier(
@@ -147,8 +363,7 @@ public class AnimalArmorMaterials {
                     EquipmentSlotGroup.BODY);
         }
 
-        // 移动速度
-        if (stats.movementSpeedBonus > 0) {
+        if (stats.movementSpeedBonus != 0) {
             builder.add(Attributes.MOVEMENT_SPEED,
                     new AttributeModifier(
                             ResourceLocation.fromNamespaceAndPath("mut", path + "_speed"),
@@ -159,5 +374,16 @@ public class AnimalArmorMaterials {
         }
 
         return builder.build();
+    }
+
+    // 给新物品使用
+    public static ItemAttributeModifiers createAttributes(AnimalArmorExtendedStats stats) {
+        // 复用基础属性的创建逻辑
+        AnimalArmorBaseStats baseStats = new AnimalArmorBaseStats(
+                stats.material,
+                stats.maxHealthBonus,
+                stats.movementSpeedBonus
+        );
+        return createAttributes(baseStats);
     }
 }

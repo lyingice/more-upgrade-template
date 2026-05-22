@@ -1,0 +1,76 @@
+{
+  "display": {
+    "icon": {
+      "id": "mut:advanced_steel_chestplate"
+    },
+    "title": {
+      "translate": "advancements.advanced_steel_armor.title"
+    },
+    "description": {
+      "translate": "advancements.advanced_steel_armor.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "advanced_steel_armor_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:advanced_steel_helmet",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "advanced_steel_armor_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:advanced_steel_chestplate",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "advanced_steel_armor_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:advanced_steel_leggings",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "advanced_steel_armor_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:advanced_steel_boots",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "mut:steel_wrapped_body"
+}

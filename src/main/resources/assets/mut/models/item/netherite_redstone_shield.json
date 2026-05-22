@@ -1,0 +1,15 @@
+{
+  "parent": "mut:custom/shield",
+  "textures": {
+    "0": "mut:block/netherite_redstone_shield",
+    "particle": "mut:item/netherite_redstone_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "mut:item/netherite_redstone_shield_0"
+    }
+  ]
+}

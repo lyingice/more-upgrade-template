@@ -1,7 +1,10 @@
 {
   "replace": false,
   "values": [
+    "mut:health_regeneration",
+    "mut:wither_aspect",
     "mut:war_scythe",
+    "mut:potential_explosion",
     "mut:exuberant",
     "mut:gourmet_feast",
     "mut:vitality",

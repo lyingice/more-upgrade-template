@@ -15,7 +15,8 @@ public class MutRecipeGenerator {
     private static final String STICK = "minecraft:stick";
 
     private static final String[] MATERIALS = {
-            ""
+            "X"
+            //大写
     };
 
     private record ItemType(String idSuffix, String[] pattern, String category, boolean isTwoSlot) {}
@@ -201,7 +202,11 @@ public class MutRecipeGenerator {
             case "AMETHYST" -> new MatMeta("amethyst", "NORMAL", "minecraft:amethyst_shard", List.of(), "", "");
             case "NETHERITE_AMETHYST" -> new MatMeta("netherite_amethyst","SMITHING","mut:netherite_amethyst_ingot", List.of("amethyst"), "mut:netherite_amethyst_upgrade_smithing_template", "mut:netherite_amethyst_ingot");
             // 新增材质在这里加
+            case "WITHER" -> new MatMeta("wither", "SMITHING", "minecraft:nether_star", List.of("nether_star"), "mut:nether_star_upgrade_template", "minecraft:wither_skeleton_skull");
+            case "SUPER_NETHERITE" -> new MatMeta("super_netherite","SMITHING","minecraft:netherite_ingot", List.of("netherite"), "minecraft:netherite__upgrade_smithing_template", "minecraft:netherite_ingot");
+
             default -> null;
+            //case "X" -> new MatMeta("x", "NORMAL", "minecraft:x", List.of(), "", "");
         };
     }
 

@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "mut:iron_upgrade_template"
+    },
+    "title": {
+      "translate": "advancements.stone_and_iron.title"
+    },
+    "description": {
+      "translate": "advancements.stone_and_iron.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "stone_and_iron_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:iron_upgrade_template",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "mut:effective_utilization"
+}

@@ -1,0 +1,28 @@
+{
+  "replace": false,
+  "values": [
+    "mut:wooden_spear",
+    "mut:stone_spear",
+    "mut:copper_spear",
+    "mut:iron_spear",
+    "mut:golden_spear",
+    "mut:diamond_spear",
+    "mut:netherite_spear",
+    "mut:advanced_steel_spear",
+    "mut:amethyst_spear",
+    "mut:blue_diamond_spear",
+    "mut:crying_obsidian_spear",
+    "mut:dragon_spear",
+    "mut:emerald_spear",
+    "mut:gilding_spear",
+    "mut:nether_star_spear",
+    "mut:netherite_amethyst_spear",
+    "mut:netherite_copper_spear",
+    "mut:netherite_emerald_spear",
+    "mut:netherite_obsidian_spear",
+    "mut:netherite_redstone_spear",
+    "mut:obsidian_spear",
+    "mut:steel_spear",
+    "mut:wither_spear"
+  ]
+}

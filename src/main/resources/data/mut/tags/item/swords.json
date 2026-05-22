@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mut:amethyst_sword",
-    "mut:netherite_amethyst_sword"
+    "mut:netherite_amethyst_sword",
+    "mut:wither_sword",
+    "mut:super_netherite_sword"
   ]
 }

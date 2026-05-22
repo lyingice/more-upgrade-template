@@ -1,0 +1,34 @@
+{
+  "display": {
+    "background": "mut:textures/screens/steel_debris_side.png",
+    "icon": {
+      "id": "minecraft:smithing_table"
+    },
+    "title": {
+      "translate": "advancements.craftsman.title"
+    },
+    "description": {
+      "translate": "advancements.craftsman.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "craftsman_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:smithing_table",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

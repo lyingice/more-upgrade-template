@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:nether_star_upgrade_template"
+  },
+  "base": {
+    "item": "mut:nether_star_mace"
+  },
+  "addition": {
+    "item": "minecraft:wither_skeleton_skull"
+  },
+  "result": {
+    "id": "mut:wither_mace"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "display": {
+    "icon": {
+      "id": "mut:steel_chestplate"
+    },
+    "title": {
+      "translate": "advancements.steel_wrapped_body.title"
+    },
+    "description": {
+      "translate": "advancements.steel_wrapped_body.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "steel_wrapped_body_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:steel_helmet",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "steel_wrapped_body_1": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:steel_chestplate",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "steel_wrapped_body_2": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:steel_leggings",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    },
+    "steel_wrapped_body_3": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:steel_boots",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "mut:regain_new_life"
+}

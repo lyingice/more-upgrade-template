@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "mut:block/debris_planks_pressure_plate"
+    },
+    "powered=true": {
+      "model": "mut:block/debris_planks_pressure_plate_down"
+    }
+  }
+}

@@ -19,10 +19,10 @@ public class ClientEventHandler {
         if (affix != null) {
             event.getToolTip().add(Component.literal(""));
 
-            // 词条名称
+            // 词条名称（金色默认）
             event.getToolTip().add(
                     Component.translatable("affix." + affix.getId() + ".name")
-                            .withStyle(ChatFormatting.GOLD)
+                            .withStyle(affix.getNameColor())
             );
 
             // 词条描述（所有词条通用，颜色根据词条类型切换）
@@ -31,6 +31,7 @@ public class ClientEventHandler {
             if (affix instanceof FireMarkAffix) color = ChatFormatting.GOLD;
             if (affix instanceof WitherMarkAffix) color = ChatFormatting.GOLD;
             if (affix instanceof MomentumAffix) color = ChatFormatting.GOLD;
+            if (affix instanceof RegenerationMarkAffix) color = ChatFormatting.GOLD;
             if (affix instanceof NirvanaAffix) color = ChatFormatting.RED;
 
             event.getToolTip().add(

@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_orientable_trapdoor_bottom",
+  "textures": {
+    "texture": "mut:block/debris_cobblestone_trap_door",
+    "particle": "mut:block/debris_cobblestone"
+  },
+  "render_type": "cutout"
+}

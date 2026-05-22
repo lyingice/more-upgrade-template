@@ -1,9 +1,8 @@
 package net.mcreator.mut.item;
 
-import net.minecraft.world.item.MaceItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -24,6 +23,8 @@ import net.minecraft.resources.ResourceLocation;
 
 import net.mcreator.mut.init.MutModItems;
 import net.mcreator.mut.MutMod;
+
+import java.util.List;
 
 public class AdvancedSteelMaceItem extends MaceItem {
     
@@ -165,5 +166,12 @@ public class AdvancedSteelMaceItem extends MaceItem {
                 }
             }
         });
+    }
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        tooltipComponents.add(Component.translatable("item.mut.mace.fall_damage",
+                        String.format("%.2f", DAMAGE_MULTIPLIER * 100))
+                .withStyle(ChatFormatting.GRAY));
     }
 }

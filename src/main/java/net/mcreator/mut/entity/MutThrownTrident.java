@@ -5,15 +5,18 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrownTrident;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 
 public class MutThrownTrident extends ThrownTrident {
 
@@ -41,7 +44,7 @@ public class MutThrownTrident extends ThrownTrident {
 
     @Override
     public EntityType<?> getType() {
-        return MutModItems.MUT_THROWN_TRIDENT.get();
+        return EntityType.TRIDENT;
     }
     @Override
     protected void onHitEntity(net.minecraft.world.phys.EntityHitResult result) {

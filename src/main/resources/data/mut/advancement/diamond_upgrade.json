@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "mut:diamond_upgrade_template"
+    },
+    "title": {
+      "translate": "advancements.diamond_upgrade.title"
+    },
+    "description": {
+      "translate": "advancements.diamond_upgrade.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "diamond_upgrade_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:diamond_upgrade_template",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "mut:stone_and_iron"
+}

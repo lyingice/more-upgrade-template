@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_top_right",
+  "textures": {
+    "particle": "mut:block/debris_stone_bricks",
+    "bottom": "mut:block/debris_stone_bricks_door_button",
+    "top": "mut:block/debris_stone_bricks_door_top"
+  },
+  "render_type": "cutout"
+}

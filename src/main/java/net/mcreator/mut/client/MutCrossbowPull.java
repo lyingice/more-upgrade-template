@@ -22,10 +22,27 @@ public class MutCrossbowPull {
     public static void clientLoad(FMLClientSetupEvent event) {
         event.enqueueWork(() -> {
             List<Item> crossbows = Arrays.asList(
+                    MutModItems.COPPER_CROSSBOW.get(),
                     MutModItems.IRON_CROSSBOW.get(),
-                    MutModItems.DIAMOND_CROSSBOW.get(),
                     MutModItems.GOLDEN_CROSSBOW.get(),
-                    MutModItems.NETHERITE_CROSSBOW.get()
+                    MutModItems.DIAMOND_CROSSBOW.get(),
+                    MutModItems.NETHERITE_CROSSBOW.get(),
+                    MutModItems.STEEL_CROSSBOW.get(),
+                    MutModItems.GILDING_CROSSBOW.get(),
+                    MutModItems.BLUE_DIAMOND_CROSSBOW.get(),
+                    MutModItems.ADVANCED_STEEL_CROSSBOW.get(),
+                    MutModItems.OBSIDIAN_CROSSBOW.get(),
+                    MutModItems.NETHERITE_OBSIDIAN_CROSSBOW.get(),
+                    MutModItems.CRYING_OBSIDIAN_CROSSBOW.get(),
+                    MutModItems.NETHER_STAR_CROSSBOW.get(),
+                    MutModItems.WITHER_CROSSBOW.get(),
+                    MutModItems.DRAGON_CROSSBOW.get(),
+                    MutModItems.NETHERITE_COPPER_CROSSBOW.get(),
+                    MutModItems.EMERALD_CROSSBOW.get(),
+                    MutModItems.NETHERITE_EMERALD_CROSSBOW.get(),
+                    MutModItems.NETHERITE_REDSTONE_CROSSBOW.get(),
+                    MutModItems.AMETHYST_CROSSBOW.get(),
+                    MutModItems.NETHERITE_AMETHYST_CROSSBOW.get()
             );
 
             for (Item item : crossbows) {

@@ -29,11 +29,20 @@ public abstract class NewCrossbowItem extends CrossbowItem {
 
     private final Supplier<Item> selfItemSupplier;
 
-    protected NewCrossbowItem(Supplier<Item> crossbowItemSupplier, int durability, boolean fireResistant) {
-        super(fireResistant
-                ? new Item.Properties().stacksTo(1).durability(durability).fireResistant()
-                : new Item.Properties().stacksTo(1).durability(durability));
+    protected NewCrossbowItem(Supplier<Item> crossbowItemSupplier, MutCrossbowStats.Stats stats) {
+        super(stats.fireResistant()
+                ? new Item.Properties().stacksTo(1).durability(stats.durability()).fireResistant().rarity(stats.rarity())
+                : new Item.Properties().stacksTo(1).durability(stats.durability()).rarity(stats.rarity()));
         this.selfItemSupplier = crossbowItemSupplier;
+        MutCrossbowStats.register(this, stats);
+    }
+    // 新构造：有词条的调用这个
+    protected NewCrossbowItem(Supplier<Item> crossbowItemSupplier, MutCrossbowStats.Stats stats, Properties customProps) {
+        super(stats.fireResistant()
+                ? customProps.stacksTo(1).durability(stats.durability()).fireResistant().rarity(stats.rarity())
+                : customProps.stacksTo(1).durability(stats.durability()).rarity(stats.rarity()));
+        this.selfItemSupplier = crossbowItemSupplier;
+        MutCrossbowStats.register(this, stats);
     }
 
     private Item getSelfItem() {
@@ -139,8 +148,16 @@ public abstract class NewCrossbowItem extends CrossbowItem {
 
         float speed = MutCrossbowStats.projectileSpeed(getSelfItem());
 
+        // 弹射物速度 > 4.5 时完全移除散射，否则按速度比例缩放
+        float adjustedInaccuracy;
+        if (speed > 4.5F) {
+            adjustedInaccuracy = 0.0F;
+        } else {
+            adjustedInaccuracy = inaccuracy * (3.15F / speed);
+        }
+
         this.shoot(serverLevel, shooter, hand, weapon,
-                List.of(projectileToShoot), speed, inaccuracy,
+                List.of(projectileToShoot), speed, adjustedInaccuracy,
                 shooter instanceof Player, target);
 
         level.playSound(null, shooter.getX(), shooter.getY(), shooter.getZ(),
@@ -201,10 +218,12 @@ public abstract class NewCrossbowItem extends CrossbowItem {
 
         MutCrossbowStats.Stats stats = MutCrossbowStats.get(getSelfItem());
 
-        list.add(Component.translatable("item.mut.crossbow.charge_time", stats.maxChargeTime())
+        list.add(Component.translatable("item.mut.crossbow.charge_time",
+                        String.format("%.2f", stats.maxChargeTime()))
                 .withStyle(ChatFormatting.GRAY));
 
-        list.add(Component.translatable("item.mut.crossbow.speed", stats.projectileSpeed())
+        list.add(Component.translatable("item.mut.crossbow.speed",
+                        String.format("%.1f", stats.projectileSpeed()))
                 .withStyle(ChatFormatting.GRAY));
 
         int totalLoad = getEffectiveLoadCount(stack);

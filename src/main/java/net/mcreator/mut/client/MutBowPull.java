@@ -43,7 +43,13 @@ public class MutBowPull {
                     MutModItems.CRYING_OBSIDIAN_BOW.get(),
                     MutModItems.COPPER_BOW.get(),
                     MutModItems.NETHERITE_COPPER_BOW.get(),
-                    MutModItems.DRAGON_BOW.get()
+                    MutModItems.DRAGON_BOW.get(),
+                    MutModItems.WITHER_BOW.get(),
+                    MutModItems.NETHERITE_EMERALD_BOW.get(),
+                    MutModItems.NETHERITE_REDSTONE_BOW.get(),
+                    MutModItems.NETHERITE_AMETHYST_BOW.get(),
+                    MutModItems.AMETHYST_BOW.get(),
+                    MutModItems.EMERALD_BOW.get()
             );
 
             for (Item item : bows) {

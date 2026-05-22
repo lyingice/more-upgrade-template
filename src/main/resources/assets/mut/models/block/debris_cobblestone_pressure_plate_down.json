@@ -1,0 +1,8 @@
+{
+  "parent": "block/pressure_plate_down",
+  "textures": {
+    "texture": "mut:block/debris_cobblestone",
+    "particle": "mut:block/debris_cobblestone"
+  },
+  "render_type": "solid"
+}

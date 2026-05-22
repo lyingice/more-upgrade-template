@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "aba",
+    " c "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:emerald_block"
+    },
+    "b": {
+      "item": "mut:iron_mace"
+    },
+    "c": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "mut:emerald_mace",
+    "count": 1
+  }
+}

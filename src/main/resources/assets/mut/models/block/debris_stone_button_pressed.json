@@ -1,0 +1,8 @@
+{
+  "parent": "block/button_pressed",
+  "textures": {
+    "texture": "mut:block/debris_stone",
+    "particle": "mut:block/debris_stone"
+  },
+  "render_type": "solid"
+}

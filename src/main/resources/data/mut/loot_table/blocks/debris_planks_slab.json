@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "mut:blocks/debris_planks_slab",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "mut:debris_planks_slab",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 2,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "mut:debris_planks_slab",
+                  "properties": {
+                    "type": "double"
+                  }
+                }
+              ]
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

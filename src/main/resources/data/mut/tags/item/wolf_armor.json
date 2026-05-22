@@ -1,11 +1,27 @@
 {
   "replace": false,
   "values": [
-    "mut:golden_wolf_armor",
-    "mut:iron_wolf_armor",
+    "mut:wither_wolf_armor",
+    "mut:dragon_wolf_armor",
+    "mut:netherite_amethyst_wolf_armor",
+    "mut:emerald_wolf_armor",
+    "mut:nether_star_wolf_armor",
+    "mut:netherite_copper_wolf_armor",
     "mut:copper_wolf_armor",
     "minecraft:wolf_armor",
     "mut:diamond_wolf_armor",
-    "mut:netherite_wolf_armor"
+    "mut:gilding_wolf_armor",
+    "mut:netherite_wolf_armor",
+    "mut:golden_wolf_armor",
+    "mut:blue_diamond_wolf_armor",
+    "mut:netherite_redstone_wolf_armor",
+    "mut:netherite_obsidian_wolf_armor",
+    "mut:netherite_emerald_wolf_armor",
+    "mut:steel_wolf_armor",
+    "mut:iron_wolf_armor",
+    "mut:obsidian_wolf_armor",
+    "mut:advanced_steel_wolf_armor",
+    "mut:crying_obsidian_wolf_armor",
+    "mut:amethyst_wolf_armor"
   ]
 }

@@ -1,0 +1,10 @@
+{
+  "values": {
+    "mut:aborigine_zombie": {
+      "weight": 100
+    },
+    "mut:elite_aborigine_zombie": {
+      "weight": 100
+    }
+  }
+}

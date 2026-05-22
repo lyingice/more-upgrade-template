@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mut:traveler_phantom",
+    "mut:elite_aborigine_zombie",
+    "mut:aborigine_zombie"
+  ]
+}

@@ -26,6 +26,9 @@ public class AffixRegistry {
     public static final Affix NIRVANA = register(new NirvanaAffix());
     /**势能印记**/
     public static final Affix MOMENTUM = register(new MomentumAffix());
+    //再生印记
+    public static final Affix REGENERATION_MARK = register(new RegenerationMarkAffix());
+
 
     private static Affix register(Affix affix) {
         AFFIXES.put(affix.getId(), affix);

@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.mcreator.mut.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemInitializeClientMixin",
+    "ItemStackMixin",
+    "ServerPlayerMotionMixin",
+    "LivingEntitySpearMixin"
+  ],
+  "client": [
+    "LocalPlayerFovMixin",
+    "LocalPlayerInputMixin",
+    "ItemInHandRendererMixin",
+    "ItemInHandLayerMixin",
+    "HumanoidModelMixin"
+  ]
+}

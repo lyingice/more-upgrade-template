@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "mut:wooden_mace",
+    "mut:copper_mace",
+    "mut:iron_mace",
+    "mut:golden_mace",
+    "mut:diamond_mace",
+    "mut:netherite_mace",
+    "mut:steel_mace",
+    "mut:gilding_mace",
+    "mut:blue_diamond_mace",
+    "mut:advanced_steel_mace",
+    "mut:obsidian_mace",
+    "mut:netherite_obsidian_mace",
+    "mut:crying_obsidian_mace",
+    "mut:nether_star_mace",
+    "mut:wither_mace",
+    "mut:dragon_mace",
+    "mut:netherite_redstone_mace",
+    "mut:netherite_copper_mace",
+    "mut:netherite_emerald_mace",
+    "mut:netherite_amethyst_mace",
+    "mut:amethyst_mace",
+    "mut:emerald_mace"
+  ]
+}

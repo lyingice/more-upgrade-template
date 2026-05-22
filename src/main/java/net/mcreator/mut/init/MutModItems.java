@@ -6,6 +6,7 @@ package net.mcreator.mut.init;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -13,11 +14,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.*;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.resources.ResourceLocation;
@@ -277,6 +274,83 @@ public class MutModItems {
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_BLOCK;
 	public static final DeferredItem<Item> COPPER_BEEF;
 	public static final DeferredItem<Item> NETHERITE_COPPER_BEEF;
+	public static final DeferredItem<Item> EMERALD_SHIELD;
+	public static final DeferredItem<Item> WITHER_SHIELD;
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_SHIELD;
+	public static final DeferredItem<Item> NETHERITE_COPPER_SHIELD;
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_SHIELD;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_SHIELD;
+	public static final DeferredItem<Item> WITHER_BEEF;
+	public static final DeferredItem<Item> AMETHYST_SHIELD;
+	public static final DeferredItem<Item> ABORIGINE_ZOMBIE_SPAWN_EGG;
+	public static final DeferredItem<Item> RED_LIGHTNING_CREEPER_SPAWN_EGG;
+	public static final DeferredItem<Item> TRAVELER_PHANTOM_SPAWN_EGG;
+	public static final DeferredItem<Item> LITTLE_CREEPER_SPAWN_EGG;
+	public static final DeferredItem<Item> DEBRIS_STONE;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE;
+	public static final DeferredItem<Item> FLAME_GOLD_ORE;
+	public static final DeferredItem<Item> METAL_POISONOUS_ORE;
+	public static final DeferredItem<Item> FLAME_GOLD_NUGGET;
+	public static final DeferredItem<Item> FLAME_GOLD_INGOT;
+	public static final DeferredItem<Item> METAL_POSITION_NUGGET;
+	public static final DeferredItem<Item> POSITION_STEEL_INGOT;
+	public static final DeferredItem<Item> LOG_DEBRIS;
+	public static final DeferredItem<Item> DEBRIS_PLANKS;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_STAIRS;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_SLAB;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_WALL;
+	public static final DeferredItem<Item> DEBRIS_STONE_STAIRS;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_STAIRS;
+	public static final DeferredItem<Item> DEBRIS_STONE_SLAB;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_SLAB;
+	public static final DeferredItem<Item> DEBRIS_STONE_WALL;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_WALL;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_STAIRS;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_SLAB;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_FENCE;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_FENCE_GATE;
+	public static final DeferredItem<Item> DEBRIS_STONE_PRESSURE_PLATE;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_PRESSURE_PLATE;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_PRESSURE_PLATE;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_PRESSURE_PLATE;
+	public static final DeferredItem<Item> DEBRIS_STONE_BUTTON;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_BUTTON;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_BUTTON;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_BUTTON;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_TRAP_DOOR;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_TRAP_DOOR;
+	public static final DeferredItem<Item> DEBRIS_STONE_TRAP_DOOR;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_TRAP_DOOR;
+	public static final DeferredItem<Item> DEBRIS_STONE_SIGN;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_SIGN;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_SIGN;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_SIGN;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_HANGING_SIGN;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_HANGING_SIGN;
+	public static final DeferredItem<Item> DEBRIS_STONE_HANGING_SIGN;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_HANGING_SIGN;
+	public static final DeferredItem<Item> DEBRIS_PLANKS_DOOR;
+	public static final DeferredItem<Item> DEBRIS_STONE_DOOR;
+	public static final DeferredItem<Item> DEBRIS_COBBLESTONE_DOOR;
+	public static final DeferredItem<Item> DEBRIS_STONE_BRICKS_DOOR;
+	public static final DeferredItem<Item> ELITE_ABORIGINE_ZOMBIE_SPAWN_EGG;
+	public static final DeferredItem<Item> STEEL_WOLF_ARMOR;
+	public static final DeferredItem<Item> ADVANCED_STEEL_WOLF_ARMOR;
+	public static final DeferredItem<Item> GILDING_WOLF_ARMOR;
+	public static final DeferredItem<Item> BLUE_DIAMOND_WOLF_ARMOR;
+	public static final DeferredItem<Item> OBSIDIAN_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHERITE_OBSIDIAN_WOLF_ARMOR;
+	public static final DeferredItem<Item> CRYING_OBSIDIAN_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHER_STAR_WOLF_ARMOR;
+	public static final DeferredItem<Item> DRAGON_WOLF_ARMOR;
+	public static final DeferredItem<Item> WITHER_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHERITE_COPPER_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_WOLF_ARMOR;
+	public static final DeferredItem<Item> EMERALD_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHERITE_EMERALD_WOLF_ARMOR;
+	public static final DeferredItem<Item> AMETHYST_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_WOLF_ARMOR;
 	static {
 		IRON_BOW = REGISTRY.register("iron_bow", IronBowItem::new);
 		STONE_UPGRADE_TEMPLATE = REGISTRY.register("stone_upgrade_template", StoneUpgradeTemplateItem::new);
@@ -523,6 +597,83 @@ public class MutModItems {
 		NETHERITE_AMETHYST_BLOCK = block(MutModBlocks.NETHERITE_AMETHYST_BLOCK, new Item.Properties().fireResistant());
 		COPPER_BEEF = REGISTRY.register("copper_beef", CopperBeefItem::new);
 		NETHERITE_COPPER_BEEF = REGISTRY.register("netherite_copper_beef", NetheriteCopperBeefItem::new);
+		EMERALD_SHIELD = REGISTRY.register("emerald_shield", EmeraldShieldItem::new);
+		WITHER_SHIELD = REGISTRY.register("wither_shield", WitherShieldItem::new);
+		NETHERITE_REDSTONE_SHIELD = REGISTRY.register("netherite_redstone_shield", NetheriteRedstoneShieldItem::new);
+		NETHERITE_COPPER_SHIELD = REGISTRY.register("netherite_copper_shield", NetheriteCopperShieldItem::new);
+		NETHERITE_AMETHYST_SHIELD = REGISTRY.register("netherite_amethyst_shield", NetheriteAmethystShieldItem::new);
+		NETHERITE_EMERALD_SHIELD = REGISTRY.register("netherite_emerald_shield", NetheriteEmeraldShieldItem::new);
+		WITHER_BEEF = REGISTRY.register("wither_beef", WitherBeefItem::new);
+		AMETHYST_SHIELD = REGISTRY.register("amethyst_shield", AmethystShieldItem::new);
+		ABORIGINE_ZOMBIE_SPAWN_EGG = REGISTRY.register("aborigine_zombie_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.ABORIGINE_ZOMBIE, -52429, -16751104, new Item.Properties()));
+		RED_LIGHTNING_CREEPER_SPAWN_EGG = REGISTRY.register("red_lightning_creeper_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.RED_LIGHTNING_CREEPER, -13395712, -3407872, new Item.Properties()));
+		TRAVELER_PHANTOM_SPAWN_EGG = REGISTRY.register("traveler_phantom_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.TRAVELER_PHANTOM, -16776961, -3355648, new Item.Properties()));
+		LITTLE_CREEPER_SPAWN_EGG = REGISTRY.register("little_creeper_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.LITTLE_CREEPER, -16751104, -16777216, new Item.Properties()));
+		DEBRIS_STONE = block(MutModBlocks.DEBRIS_STONE);
+		DEBRIS_COBBLESTONE = block(MutModBlocks.DEBRIS_COBBLESTONE);
+		FLAME_GOLD_ORE = block(MutModBlocks.FLAME_GOLD_ORE, new Item.Properties().fireResistant());
+		METAL_POISONOUS_ORE = block(MutModBlocks.METAL_POISONOUS_ORE, new Item.Properties().fireResistant());
+		FLAME_GOLD_NUGGET = REGISTRY.register("flame_gold_nugget", FlameGoldNuggetItem::new);
+		FLAME_GOLD_INGOT = REGISTRY.register("flame_gold_ingot", FlameGoldIngotItem::new);
+		METAL_POSITION_NUGGET = REGISTRY.register("metal_position_nugget", MetalPositionNuggetItem::new);
+		POSITION_STEEL_INGOT = REGISTRY.register("position_steel_ingot", PositionSteelIngotItem::new);
+		LOG_DEBRIS = block(MutModBlocks.LOG_DEBRIS, new Item.Properties().fireResistant());
+		DEBRIS_PLANKS = block(MutModBlocks.DEBRIS_PLANKS, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS = block(MutModBlocks.DEBRIS_STONE_BRICKS, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS_STAIRS = block(MutModBlocks.DEBRIS_STONE_BRICKS_STAIRS, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS_SLAB = block(MutModBlocks.DEBRIS_STONE_BRICKS_SLAB, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS_WALL = block(MutModBlocks.DEBRIS_STONE_BRICKS_WALL, new Item.Properties().fireResistant());
+		DEBRIS_STONE_STAIRS = block(MutModBlocks.DEBRIS_STONE_STAIRS);
+		DEBRIS_COBBLESTONE_STAIRS = block(MutModBlocks.DEBRIS_COBBLESTONE_STAIRS);
+		DEBRIS_STONE_SLAB = block(MutModBlocks.DEBRIS_STONE_SLAB);
+		DEBRIS_COBBLESTONE_SLAB = block(MutModBlocks.DEBRIS_COBBLESTONE_SLAB);
+		DEBRIS_STONE_WALL = block(MutModBlocks.DEBRIS_STONE_WALL);
+		DEBRIS_COBBLESTONE_WALL = block(MutModBlocks.DEBRIS_COBBLESTONE_WALL);
+		DEBRIS_PLANKS_STAIRS = block(MutModBlocks.DEBRIS_PLANKS_STAIRS, new Item.Properties().fireResistant());
+		DEBRIS_PLANKS_SLAB = block(MutModBlocks.DEBRIS_PLANKS_SLAB, new Item.Properties().fireResistant());
+		DEBRIS_PLANKS_FENCE = block(MutModBlocks.DEBRIS_PLANKS_FENCE, new Item.Properties().fireResistant());
+		DEBRIS_PLANKS_FENCE_GATE = block(MutModBlocks.DEBRIS_PLANKS_FENCE_GATE, new Item.Properties().fireResistant());
+		DEBRIS_STONE_PRESSURE_PLATE = block(MutModBlocks.DEBRIS_STONE_PRESSURE_PLATE);
+		DEBRIS_COBBLESTONE_PRESSURE_PLATE = block(MutModBlocks.DEBRIS_COBBLESTONE_PRESSURE_PLATE);
+		DEBRIS_PLANKS_PRESSURE_PLATE = block(MutModBlocks.DEBRIS_PLANKS_PRESSURE_PLATE, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS_PRESSURE_PLATE = block(MutModBlocks.DEBRIS_STONE_BRICKS_PRESSURE_PLATE, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BUTTON = block(MutModBlocks.DEBRIS_STONE_BUTTON);
+		DEBRIS_COBBLESTONE_BUTTON = block(MutModBlocks.DEBRIS_COBBLESTONE_BUTTON);
+		DEBRIS_PLANKS_BUTTON = block(MutModBlocks.DEBRIS_PLANKS_BUTTON, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS_BUTTON = block(MutModBlocks.DEBRIS_STONE_BRICKS_BUTTON, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS_TRAP_DOOR = block(MutModBlocks.DEBRIS_STONE_BRICKS_TRAP_DOOR, new Item.Properties().fireResistant());
+		DEBRIS_PLANKS_TRAP_DOOR = block(MutModBlocks.DEBRIS_PLANKS_TRAP_DOOR, new Item.Properties().fireResistant());
+		DEBRIS_STONE_TRAP_DOOR = block(MutModBlocks.DEBRIS_STONE_TRAP_DOOR);
+		DEBRIS_COBBLESTONE_TRAP_DOOR = block(MutModBlocks.DEBRIS_COBBLESTONE_TRAP_DOOR);
+		DEBRIS_STONE_SIGN = signBlock(MutModBlocks.DEBRIS_STONE_SIGN, MutModBlocks.DEBRIS_STONE_WALL_SIGN);
+		DEBRIS_COBBLESTONE_SIGN = signBlock(MutModBlocks.DEBRIS_COBBLESTONE_SIGN, MutModBlocks.DEBRIS_COBBLESTONE_WALL_SIGN);
+		DEBRIS_PLANKS_SIGN = signBlock(MutModBlocks.DEBRIS_PLANKS_SIGN, MutModBlocks.DEBRIS_PLANKS_WALL_SIGN, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS_SIGN = signBlock(MutModBlocks.DEBRIS_STONE_BRICKS_SIGN, MutModBlocks.DEBRIS_STONE_BRICKS_WALL_SIGN, new Item.Properties().fireResistant());
+		DEBRIS_PLANKS_HANGING_SIGN = hangingSignBlock(MutModBlocks.DEBRIS_PLANKS_HANGING_SIGN, MutModBlocks.DEBRIS_PLANKS_WALL_HANGING_SIGN, new Item.Properties().fireResistant());
+		DEBRIS_STONE_BRICKS_HANGING_SIGN = hangingSignBlock(MutModBlocks.DEBRIS_STONE_BRICKS_HANGING_SIGN, MutModBlocks.DEBRIS_STONE_BRICKS_WALL_HANGING_SIGN, new Item.Properties().fireResistant());
+		DEBRIS_STONE_HANGING_SIGN = hangingSignBlock(MutModBlocks.DEBRIS_STONE_HANGING_SIGN, MutModBlocks.DEBRIS_STONE_WALL_HANGING_SIGN);
+		DEBRIS_COBBLESTONE_HANGING_SIGN = hangingSignBlock(MutModBlocks.DEBRIS_COBBLESTONE_HANGING_SIGN, MutModBlocks.DEBRIS_COBBLESTONE_WALL_HANGING_SIGN);
+		DEBRIS_PLANKS_DOOR = doubleBlock(MutModBlocks.DEBRIS_PLANKS_DOOR, new Item.Properties().fireResistant());
+		DEBRIS_STONE_DOOR = doubleBlock(MutModBlocks.DEBRIS_STONE_DOOR);
+		DEBRIS_COBBLESTONE_DOOR = doubleBlock(MutModBlocks.DEBRIS_COBBLESTONE_DOOR);
+		DEBRIS_STONE_BRICKS_DOOR = doubleBlock(MutModBlocks.DEBRIS_STONE_BRICKS_DOOR, new Item.Properties().fireResistant());
+		ELITE_ABORIGINE_ZOMBIE_SPAWN_EGG = REGISTRY.register("elite_aborigine_zombie_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.ELITE_ABORIGINE_ZOMBIE, -3407872, -16751104, new Item.Properties()));
+		STEEL_WOLF_ARMOR = REGISTRY.register("steel_wolf_armor", SteelWolfArmorItem::new);
+		ADVANCED_STEEL_WOLF_ARMOR = REGISTRY.register("advanced_steel_wolf_armor", AdvancedSteelWolfArmorItem::new);
+		GILDING_WOLF_ARMOR = REGISTRY.register("gilding_wolf_armor", GildingWolfArmorItem::new);
+		BLUE_DIAMOND_WOLF_ARMOR = REGISTRY.register("blue_diamond_wolf_armor", BlueDiamondWolfArmorItem::new);
+		OBSIDIAN_WOLF_ARMOR = REGISTRY.register("obsidian_wolf_armor", ObsidianWolfArmorItem::new);
+		NETHERITE_OBSIDIAN_WOLF_ARMOR = REGISTRY.register("netherite_obsidian_wolf_armor", NetheriteObsidianWolfArmorItem::new);
+		CRYING_OBSIDIAN_WOLF_ARMOR = REGISTRY.register("crying_obsidian_wolf_armor", CryingObsidianWolfArmorItem::new);
+		NETHER_STAR_WOLF_ARMOR = REGISTRY.register("nether_star_wolf_armor", NetherStarWolfArmorItem::new);
+		DRAGON_WOLF_ARMOR = REGISTRY.register("dragon_wolf_armor", DragonWolfArmorItem::new);
+		WITHER_WOLF_ARMOR = REGISTRY.register("wither_wolf_armor", WitherWolfArmorItem::new);
+		NETHERITE_COPPER_WOLF_ARMOR = REGISTRY.register("netherite_copper_wolf_armor", NetheriteCopperWolfArmorItem::new);
+		NETHERITE_REDSTONE_WOLF_ARMOR = REGISTRY.register("netherite_redstone_wolf_armor", NetheriteRedstoneWolfArmorItem::new);
+		EMERALD_WOLF_ARMOR = REGISTRY.register("emerald_wolf_armor", EmeraldWolfArmorItem::new);
+		NETHERITE_EMERALD_WOLF_ARMOR = REGISTRY.register("netherite_emerald_wolf_armor", NetheriteEmeraldWolfArmorItem::new);
+		AMETHYST_WOLF_ARMOR = REGISTRY.register("amethyst_wolf_armor", AmethystWolfArmorItem::new);
+		NETHERITE_AMETHYST_WOLF_ARMOR = REGISTRY.register("netherite_amethyst_wolf_armor", NetheriteAmethystWolfArmorItem::new);
 	}
 	// Start of user code block custom items
 	public static final DeferredItem<Item> AMETHYST_SWORD = REGISTRY.register("amethyst_sword", AmethystTools.Sword::new);
@@ -543,10 +694,27 @@ public class MutModItems {
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_CHESTPLATE = REGISTRY.register("netherite_amethyst_chestplate", NetheriteAmethystArmor.Chestplate::new);
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_LEGGINGS = REGISTRY.register("netherite_amethyst_leggings", NetheriteAmethystArmor.Leggings::new);
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_BOOTS = REGISTRY.register("netherite_amethyst_boots", NetheriteAmethystArmor.Boots::new);
+	public static final DeferredItem<Item> COPPER_CROSSBOW = REGISTRY.register("copper_crossbow", MutNewCrossbowItem.CopperCrossbowItem::new);
 	public static final DeferredItem<Item> IRON_CROSSBOW = REGISTRY.register("iron_crossbow", MutNewCrossbowItem.IronCrossbowItem::new);
 	public static final DeferredItem<Item> DIAMOND_CROSSBOW = REGISTRY.register("diamond_crossbow", MutNewCrossbowItem.DiamondCrossbowItem::new);
 	public static final DeferredItem<Item> GOLDEN_CROSSBOW = REGISTRY.register("golden_crossbow", MutNewCrossbowItem.GoldenCrossbowItem::new);
 	public static final DeferredItem<Item> NETHERITE_CROSSBOW = REGISTRY.register("netherite_crossbow", MutNewCrossbowItem.NetheriteCrossbowItem::new);
+	public static final DeferredItem<Item> STEEL_CROSSBOW = REGISTRY.register("steel_crossbow", MutNewCrossbowItem.SteelCrossbowItem::new);
+	public static final DeferredItem<Item> GILDING_CROSSBOW = REGISTRY.register("gilding_crossbow", MutNewCrossbowItem.GilingCrossbowItem::new);
+	public static final DeferredItem<Item> BLUE_DIAMOND_CROSSBOW = REGISTRY.register("blue_diamond_crossbow", MutNewCrossbowItem.BlueDiamondCrossbowItem::new);
+	public static final DeferredItem<Item> ADVANCED_STEEL_CROSSBOW = REGISTRY.register("advanced_steel_crossbow", MutNewCrossbowItem.AdvancedSteelCrossbowItem::new);
+	public static final DeferredItem<Item> OBSIDIAN_CROSSBOW = REGISTRY.register("obsidian_crossbow", MutNewCrossbowItem.ObsidianCrossbowItem::new);
+	public static final DeferredItem<Item> NETHERITE_OBSIDIAN_CROSSBOW = REGISTRY.register("netherite_obsidian_crossbow", MutNewCrossbowItem.NetheriteObsidianCrossbowItem::new);
+	public static final DeferredItem<Item> CRYING_OBSIDIAN_CROSSBOW = REGISTRY.register("crying_obsidian_crossbow", MutNewCrossbowItem.CryingObsidianCrossbowItem::new);
+	public static final DeferredItem<Item> NETHER_STAR_CROSSBOW = REGISTRY.register("nether_star_crossbow", MutNewCrossbowItem.NetherStarCrossbowItem::new);
+	public static final DeferredItem<Item> WITHER_CROSSBOW = REGISTRY.register("wither_crossbow", MutNewCrossbowItem.WitherCrossbowItem::new);
+	public static final DeferredItem<Item> DRAGON_CROSSBOW = REGISTRY.register("dragon_crossbow", MutNewCrossbowItem.DragonCrossbowItem::new);
+	public static final DeferredItem<Item> NETHERITE_EMERALD_CROSSBOW = REGISTRY.register("netherite_emerald_crossbow", MutNewCrossbowItem.NetheriteEmeraldCrossbowItem::new);
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_CROSSBOW = REGISTRY.register("netherite_redstone_crossbow", MutNewCrossbowItem.NetheriteRedstoneCrossbowItem::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_CROSSBOW = REGISTRY.register("netherite_amethyst_crossbow", MutNewCrossbowItem.NetheriteAmethystCrossbowItem::new);
+	public static final DeferredItem<Item> NETHERITE_COPPER_CROSSBOW = REGISTRY.register("netherite_copper_crossbow", MutNewCrossbowItem.NetheriteCopperCrossbowItem::new);
+	public static final DeferredItem<Item> EMERALD_CROSSBOW = REGISTRY.register("emerald_crossbow", MutNewCrossbowItem.EmeraldCrossbowItem::new);
+	public static final DeferredItem<Item> AMETHYST_CROSSBOW = REGISTRY.register("amethyst_crossbow", MutNewCrossbowItem.AmethystCrossbowItem::new);
 	public static final DeferredItem<Item> WOODEN_TRIDENT = REGISTRY.register("wooden_trident", MutTridentItem.WoodenTridentItem::new);
 	public static final DeferredItem<Item> COPPER_TRIDENT = REGISTRY.register("copper_trident", MutTridentItem.CopperTridentItem::new);
 	public static final DeferredItem<Item> IRON_TRIDENT = REGISTRY.register("iron_trident", MutTridentItem.IronTridentItem::new);
@@ -557,7 +725,76 @@ public class MutModItems {
 	public static final DeferredItem<Item> GILDING_TRIDENT = REGISTRY.register("gilding_trident", MutTridentItem.GildingTridentItem::new);
 	public static final DeferredItem<Item> BLUE_DIAMOND_TRIDENT = REGISTRY.register("blue_diamond_trident", MutTridentItem.BlueDiamondTridentItem::new);
 	public static final DeferredItem<Item> ADVANCED_STEEL_TRIDENT = REGISTRY.register("advanced_steel_trident", MutTridentItem.AdvancedSteelTridentItem::new);
+	public static final DeferredItem<Item> OBSIDIAN_TRIDENT = REGISTRY.register("obsidian_trident", MutTridentItem.ObsidianTridentItem::new);
+	public static final DeferredItem<Item> NETHERITE_OBSIDIAN_TRIDENT = REGISTRY.register("netherite_obsidian_trident", MutTridentItem.NetheriteObsidianTridentItem::new);
+	public static final DeferredItem<Item> CRYING_OBSIDIAN_TRIDENT = REGISTRY.register("crying_obsidian_trident", MutTridentItem.CryingObsidianTridentItem::new);
+	public static final DeferredItem<Item> NETHER_STAR_TRIDENT = REGISTRY.register("nether_star_trident", MutTridentItem.NetherStarTridentItem::new);
+	public static final DeferredItem<Item> DRAGON_TRIDENT = REGISTRY.register("dragon_trident", MutTridentItem.DragonTridentItem::new);
+	public static final DeferredItem<Item> NETHERITE_COPPER_TRIDENT = REGISTRY.register("netherite_copper_trident", MutTridentItem.NetheriteCopperTridentItem::new);
+	public static final DeferredItem<Item> NETHERITE_EMERALD_TRIDENT = REGISTRY.register("netherite_emerald_trident", MutTridentItem.NetheriteEmeraldTridentItem::new);
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_TRIDENT = REGISTRY.register("netherite_redstone_trident", MutTridentItem.NetheriteRedstoneTridentItem::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_TRIDENT = REGISTRY.register("netherite_amethyst_trident", MutTridentItem.NetheriteAmethystTridentItem::new);
+	public static final DeferredItem<Item> AMETHYST_TRIDENT = REGISTRY.register("amethyst_trident", MutTridentItem.AmethystTridentItem::new);
+	public static final DeferredItem<Item> EMERALD_TRIDENT = REGISTRY.register("emerald_trident", MutTridentItem.EmeraldTridentItem::new);
 	public static final DeferredItem<Item> DRAGON_BOW = REGISTRY.register("dragon_bow", BaseBowItem.DragonBowItem::new);
+	public static final DeferredItem<Item> WITHER_BOW = REGISTRY.register("wither_bow", BaseBowItem.WitherBowItem::new);
+	public static final DeferredItem<Item> NETHERITE_EMERALD_BOW = REGISTRY.register("netherite_emerald_bow", BaseBowItem.NetheriteEmeraldBowItem::new);
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_BOW = REGISTRY.register("netherite_redstone_bow", BaseBowItem.NetheriteRedstoneBowItem::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_BOW = REGISTRY.register("netherite_amethyst_bow", BaseBowItem.NetheriteAmethystBowItem::new);
+	public static final DeferredItem<Item> AMETHYST_BOW = REGISTRY.register("amethyst_bow", BaseBowItem.AmethystBowItem::new);
+	public static final DeferredItem<Item> EMERALD_BOW = REGISTRY.register("emerald_bow", BaseBowItem.EmeraldBowItem::new);
+	public static final DeferredItem<Item> OBSIDIAN_MACE = REGISTRY.register("obsidian_mace", BaseMaceItem.ObsidianMace::new);
+	public static final DeferredItem<Item> NETHERITE_OBSIDIAN_MACE = REGISTRY.register("netherite_obsidian_mace", BaseMaceItem.NetheriteObsidianMace::new);
+	public static final DeferredItem<Item> CRYING_OBSIDIAN_MACE = REGISTRY.register("crying_obsidian_mace", BaseMaceItem.CryingObsidianMace::new);
+	public static final DeferredItem<Item> NETHER_STAR_MACE = REGISTRY.register("nether_star_mace", BaseMaceItem.NetherStarMace::new);
+	public static final DeferredItem<Item> WITHER_MACE = REGISTRY.register("wither_mace", BaseMaceItem.WitherMace::new);
+	public static final DeferredItem<Item> DRAGON_MACE = REGISTRY.register("dragon_mace", BaseMaceItem.DragonMace::new);
+	public static final DeferredItem<Item> NETHERITE_COPPER_MACE = REGISTRY.register("netherite_copper_mace", BaseMaceItem.NetheriteCopperMace::new);
+	public static final DeferredItem<Item> NETHERITE_EMERALD_MACE = REGISTRY.register("netherite_emerald_mace", BaseMaceItem.NetheriteEmeraldMace::new);
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_MACE = REGISTRY.register("netherite_redstone_mace", BaseMaceItem.NetheriteRedstoneMace::new);
+	public static final DeferredItem<Item> EMERALD_MACE = REGISTRY.register("emerald_mace", BaseMaceItem.EmeraldMace::new);
+	public static final DeferredItem<Item> AMETHYST_MACE = REGISTRY.register("amethyst_mace", BaseMaceItem.AmethystMace::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_MACE = REGISTRY.register("netherite_amethyst_mace", BaseMaceItem.NetheriteAmethystMace::new);
+	public static final DeferredItem<Item> WITHER_TRIDENT = REGISTRY.register("wither_trident", MutTridentItem.WitherTridentItem::new);
+	public static final DeferredItem<Item> WOODEN_SPEAR = REGISTRY.register("wooden_spear", BaseSpearItem.WoodenSpearItem::new);
+	public static final DeferredItem<Item> STONE_SPEAR = REGISTRY.register("stone_spear", BaseSpearItem.StoneSpearItem::new);
+	public static final DeferredItem<Item> COPPER_SPEAR = REGISTRY.register("copper_spear", BaseSpearItem.CopperSpearItem::new);
+	public static final DeferredItem<Item> IRON_SPEAR = REGISTRY.register("iron_spear", BaseSpearItem.IronSpearItem::new);
+	public static final DeferredItem<Item> GOLDEN_SPEAR = REGISTRY.register("golden_spear", BaseSpearItem.GoldenSpearItem::new);
+	public static final DeferredItem<Item> DIAMOND_SPEAR = REGISTRY.register("diamond_spear", BaseSpearItem.DiamondSpearItem::new);
+	public static final DeferredItem<Item> NETHERITE_SPEAR = REGISTRY.register("netherite_spear", BaseSpearItem.NetheriteSpearItem::new);
+	public static final DeferredItem<Item> STEEL_SPEAR = REGISTRY.register("steel_spear", BaseSpearItem.SteelSpearItem::new);
+	public static final DeferredItem<Item> ADVANCED_STEEL_SPEAR = REGISTRY.register("advanced_steel_spear", BaseSpearItem.AdvancedSteelSpearItem::new);
+	public static final DeferredItem<Item> GILDING_SPEAR = REGISTRY.register("gilding_spear", BaseSpearItem.GildingSpearItem::new);
+	public static final DeferredItem<Item> BLUE_DIAMOND_SPEAR = REGISTRY.register("blue_diamond_spear", BaseSpearItem.BlueDiamondSpearItem::new);
+	public static final DeferredItem<Item> OBSIDIAN_SPEAR = REGISTRY.register("obsidian_spear", BaseSpearItem.ObsidianSpearItem::new);
+	public static final DeferredItem<Item> NETHERITE_OBSIDIAN_SPEAR = REGISTRY.register("netherite_obsidian_spear", BaseSpearItem.NetheriteObsidianSpearItem::new);
+	public static final DeferredItem<Item> CRYING_OBSIDIAN_SPEAR = REGISTRY.register("crying_obsidian_spear", BaseSpearItem.CryingObsidianSpearItem::new);
+	public static final DeferredItem<Item> EMERALD_SPEAR = REGISTRY.register("emerald_spear", BaseSpearItem.EmeraldSpearItem::new);
+	public static final DeferredItem<Item> NETHERITE_EMERALD_SPEAR = REGISTRY.register("netherite_emerald_spear", BaseSpearItem.NetheriteEmeraldSpearItem::new);
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_SPEAR = REGISTRY.register("netherite_redstone_spear", BaseSpearItem.NetheriteRedstoneSpearItem::new);
+	public static final DeferredItem<Item> NETHER_STAR_SPEAR = REGISTRY.register("nether_star_spear", BaseSpearItem.NetherStarSpearItem::new);
+	public static final DeferredItem<Item> WITHER_SPEAR = REGISTRY.register("wither_spear", BaseSpearItem.WitherSpearItem::new);
+	public static final DeferredItem<Item> DRAGON_SPEAR = REGISTRY.register("dragon_spear", BaseSpearItem.DragonSpearItem::new);
+	public static final DeferredItem<Item> AMETHYST_SPEAR = REGISTRY.register("amethyst_spear", BaseSpearItem.AmethystSpearItem::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_SPEAR = REGISTRY.register("netherite_amethyst_spear", BaseSpearItem.NetheriteAmethystSpearItem::new);
+	public static final DeferredItem<Item> NETHERITE_COPPER_SPEAR = REGISTRY.register("netherite_copper_spear", BaseSpearItem.NetheriteCopperSpearItem::new);
+	// wither tools
+	public static final DeferredItem<Item> WITHER_SWORD = REGISTRY.register("wither_sword", WitherTools.Sword::new);
+	public static final DeferredItem<Item> WITHER_SHOVEL = REGISTRY.register("wither_shovel", WitherTools.Shovel::new);
+	public static final DeferredItem<Item> WITHER_PICKAXE = REGISTRY.register("wither_pickaxe", WitherTools.Pickaxe::new);
+	public static final DeferredItem<Item> WITHER_AXE = REGISTRY.register("wither_axe", WitherTools.Axe::new);
+	public static final DeferredItem<Item> WITHER_HOE = REGISTRY.register("wither_hoe", WitherTools.Hoe::new);
+	// wither armors
+	public static final DeferredItem<Item> WITHER_HELMET = REGISTRY.register("wither_helmet", WitherArmor.Helmet::new);
+	public static final DeferredItem<Item> WITHER_CHESTPLATE = REGISTRY.register("wither_chestplate", WitherArmor.Chestplate::new);
+	public static final DeferredItem<Item> WITHER_LEGGINGS = REGISTRY.register("wither_leggings", WitherArmor.Leggings::new);
+	public static final DeferredItem<Item> WITHER_BOOTS = REGISTRY.register("wither_boots", WitherArmor.Boots::new);
+	// super netherite
+	public static final DeferredItem<Item> SUPER_NETHERITE_HELMET = REGISTRY.register("super_netherite_helmet", SuperNetheriteArmor.Helmet::new);
+	public static final DeferredItem<Item> SUPER_NETHERITE_CHESTPLATE = REGISTRY.register("super_netherite_chestplate", SuperNetheriteArmor.Chestplate::new);
+	public static final DeferredItem<Item> SUPER_NETHERITE_LEGGINGS = REGISTRY.register("super_netherite_leggings", SuperNetheriteArmor.Leggings::new);
+	public static final DeferredItem<Item> SUPER_NETHERITE_BOOTS = REGISTRY.register("super_netherite_boots", SuperNetheriteArmor.Boots::new);
 	public static final DeferredRegister<EntityType<?>> ENTITY_REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, MutMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<MutThrownTrident>> MUT_THROWN_TRIDENT = ENTITY_REGISTRY.register("mut_thrown_trident",
 			() -> EntityType.Builder.<MutThrownTrident>of(MutThrownTrident::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("mut_thrown_trident"));
@@ -570,6 +807,30 @@ public class MutModItems {
 
 	private static DeferredItem<Item> block(DeferredHolder<Block, Block> block, Item.Properties properties) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), properties));
+	}
+
+	private static DeferredItem<Item> doubleBlock(DeferredHolder<Block, Block> block) {
+		return doubleBlock(block, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> doubleBlock(DeferredHolder<Block, Block> block, Item.Properties properties) {
+		return REGISTRY.register(block.getId().getPath(), () -> new DoubleHighBlockItem(block.get(), properties));
+	}
+
+	private static DeferredItem<Item> signBlock(DeferredHolder<Block, Block> block, DeferredHolder<Block, Block> wallBlock) {
+		return signBlock(block, wallBlock, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> signBlock(DeferredHolder<Block, Block> block, DeferredHolder<Block, Block> wallBlock, Item.Properties properties) {
+		return REGISTRY.register(block.getId().getPath(), () -> new SignItem(properties, block.get(), wallBlock.get()));
+	}
+
+	private static DeferredItem<Item> hangingSignBlock(DeferredHolder<Block, Block> block, DeferredHolder<Block, Block> wallBlock) {
+		return hangingSignBlock(block, wallBlock, new Item.Properties());
+	}
+
+	private static DeferredItem<Item> hangingSignBlock(DeferredHolder<Block, Block> block, DeferredHolder<Block, Block> wallBlock, Item.Properties properties) {
+		return REGISTRY.register(block.getId().getPath(), () -> new HangingSignItem(block.get(), wallBlock.get(), properties));
 	}
 
 	@EventBusSubscriber(Dist.CLIENT)
@@ -616,6 +877,13 @@ public class MutModItems {
 				ItemProperties.register(ADVANCED_STEEL_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(NETHER_STAR_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(COPPER_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(EMERALD_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(WITHER_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(NETHERITE_REDSTONE_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(NETHERITE_COPPER_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(NETHERITE_AMETHYST_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(NETHERITE_EMERALD_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(AMETHYST_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 			});
 		}
 	}

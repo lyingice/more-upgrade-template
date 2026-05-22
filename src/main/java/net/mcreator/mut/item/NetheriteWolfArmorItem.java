@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 public class NetheriteWolfArmorItem extends AnimalArmorItem {
     public NetheriteWolfArmorItem() {
@@ -19,5 +20,9 @@ public class NetheriteWolfArmorItem extends AnimalArmorItem {
                         .fireResistant()
                         .attributes(AnimalArmorMaterials.createAttributes(AnimalArmorMaterials.NETHERITE_ANIMAL))
         );
+    }
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true; // 默认不可附魔！
     }
 }

@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 public class CopperWolfArmorItem extends AnimalArmorItem {
     public CopperWolfArmorItem() {
@@ -18,5 +19,9 @@ public class CopperWolfArmorItem extends AnimalArmorItem {
                         .durability(97)
                         .attributes(AnimalArmorMaterials.createAttributes(AnimalArmorMaterials.COPPER))
         );
+    }
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true; // 默认不可附魔！
     }
 }

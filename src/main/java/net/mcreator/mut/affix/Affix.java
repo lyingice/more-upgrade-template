@@ -1,5 +1,6 @@
 package net.mcreator.mut.affix;
 
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -82,5 +83,11 @@ public interface Affix {
 
     enum ArmorSlotType {
         HELMET, CHESTPLATE, LEGGINGS, BOOTS
+    }
+    /**
+     * 词条名称的显示颜色（默认金色）
+     */
+    default ChatFormatting getNameColor() {
+        return ChatFormatting.GOLD;
     }
 }

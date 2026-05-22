@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "mut:debris_planks_trap_door",
+    "mut:debris_cobblestone_trap_door"
+  ]
+}

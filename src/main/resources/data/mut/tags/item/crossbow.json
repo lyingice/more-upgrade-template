@@ -1,9 +1,26 @@
 {
   "replace": false,
   "values": [
+    "mut:copper_crossbow",
     "mut:iron_crossbow",
     "mut:diamond_crossbow",
     "mut:golden_crossbow",
-    "mut:netherite_crossbow"
+    "mut:netherite_crossbow",
+    "mut:steel_crossbow",
+    "mut:gilding_crossbow",
+    "mut:blue_diamond_crossbow",
+    "mut:advanced_steel_crossbow",
+    "mut:obsidian_crossbow",
+    "mut:netherite_obsidian_crossbow",
+    "mut:crying_obsidian_crossbow",
+    "mut:nether_star_crossbow",
+    "mut:wither_crossbow",
+    "mut:dragon_crossbow",
+    "mut:netherite_redstone_crossbow",
+    "mut:netherite_copper_crossbow",
+    "mut:netherite_emerald_crossbow",
+    "mut:netherite_amethyst_crossbow",
+    "mut:amethyst_crossbow",
+    "mut:emerald_crossbow"
   ]
 }

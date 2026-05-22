@@ -8,7 +8,8 @@
     "PoisonDamageMixin",
     "FireDamageMixin",
     "WitherDamageMixin",
-    "MomentumMixin"
+    "MomentumMixin",
+    "RegenerationMixin"
   ],
   "client": [],
   "injectors": {

@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mut:amethyst_leggings",
-    "mut:netherite_amethyst_leggings"
+    "mut:netherite_amethyst_leggings",
+    "mut:wither_leggings",
+    "mut:super_netherite_leggings"
   ]
 }

@@ -9,6 +9,10 @@
     "mut:copper_mace",
     "mut:advanced_steel_mace",
     "mut:iron_mace",
+    {
+      "id": "#mut:mace",
+      "required": false
+    },
     "mut:wooden_mace",
     "mut:blue_diamond_mace"
   ]

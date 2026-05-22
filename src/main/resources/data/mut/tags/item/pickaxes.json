@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mut:amethyst_pickaxe",
-    "mut:netherite_amethyst_pickaxe"
+    "mut:netherite_amethyst_pickaxe",
+    "mut:wither_pickaxe",
+    "mut:super_netherite_pickaxe"
   ]
 }

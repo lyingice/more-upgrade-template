@@ -30,6 +30,22 @@ public class MutWolfArmorLayer extends RenderLayer<Wolf, WolfModel<Wolf>> {
         TEXTURE_MAP.put("mut:golden_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/golden_wolf_armor.png"));
         TEXTURE_MAP.put("mut:diamond_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/diamond_wolf_armor.png"));
         TEXTURE_MAP.put("mut:netherite_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:steel_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/steel_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:advanced_steel_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/advanced_steel_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:gilding_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/gilding_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:blue_diamond_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/blue_diamond_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:obsidian_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/obsidian_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_obsidian_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_obsidian_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:crying_obsidian_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/crying_obsidian_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:nether_star_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/nether_star_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:dragon_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/dragon_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:wither_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/wither_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_copper_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_copper_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_redstone_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_redstone_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:emerald_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/emerald_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_emerald_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_emerald_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:amethyst_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/amethyst_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_amethyst_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_amethyst_wolf_armor.png"));
     }
 
     private final WolfModel<Wolf> model;
@@ -64,6 +80,10 @@ public class MutWolfArmorLayer extends RenderLayer<Wolf, WolfModel<Wolf>> {
 
         VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(texture));
         this.model.renderToBuffer(poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY);
+        if (armor.isEnchanted()) {
+            VertexConsumer glintConsumer = bufferSource.getBuffer(RenderType.entityGlintDirect());
+            this.model.renderToBuffer(poseStack, glintConsumer, packedLight, OverlayTexture.NO_OVERLAY);
+        }
     }
 
 }

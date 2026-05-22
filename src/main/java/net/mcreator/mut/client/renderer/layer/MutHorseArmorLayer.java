@@ -32,6 +32,22 @@ public class MutHorseArmorLayer extends RenderLayer<Horse, HorseModel<Horse>> {
     static {
         TEXTURE_MAP.put("mut:netherite_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_horse_armor.png"));
         TEXTURE_MAP.put("mut:copper_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/copper_horse_armor.png"));
+        TEXTURE_MAP.put("mut:steel_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/steel_horse_armor.png"));
+        TEXTURE_MAP.put("mut:advanced_steel_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/advanced_steel_horse_armor.png"));
+        TEXTURE_MAP.put("mut:gilding_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/gilding_horse_armor.png"));
+        TEXTURE_MAP.put("mut:blue_diamond_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/blue_diamond_horse_armor.png"));
+        TEXTURE_MAP.put("mut:obsidian_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/obsidian_horse_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_obsidian_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_obsidian_horse_armor.png"));
+        TEXTURE_MAP.put("mut:crying_obsidian_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/crying_obsidian_horse_armor.png"));
+        TEXTURE_MAP.put("mut:nether_star_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/nether_star_horse_armor.png"));
+        TEXTURE_MAP.put("mut:dragon_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/dragon_horse_armor.png"));
+        TEXTURE_MAP.put("mut:wither_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/wither_horse_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_copper_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_copper_horse_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_redstone_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_redstone_horse_armor.png"));
+        TEXTURE_MAP.put("mut:emerald_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/emerald_horse_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_emerald_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_emerald_horse_armor.png"));
+        TEXTURE_MAP.put("mut:amethyst_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/amethyst_horse_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_amethyst_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_amethyst_horse_armor.png"));
     }
 
     public MutHorseArmorLayer(RenderLayerParent<Horse, HorseModel<Horse>> parent, EntityModelSet modelSet) {
@@ -74,6 +90,10 @@ public class MutHorseArmorLayer extends RenderLayer<Horse, HorseModel<Horse>> {
 
             VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(texture));
             this.model.renderToBuffer(poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, color);
+            if (armor.isEnchanted()) {
+                VertexConsumer glintConsumer = bufferSource.getBuffer(RenderType.entityGlintDirect());
+                this.model.renderToBuffer(poseStack, glintConsumer, packedLight, OverlayTexture.NO_OVERLAY);
+            }
 
             poseStack.popPose();
         }

@@ -1,0 +1,10 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "particle": "mut:block/debris_planks",
+    "bottom": "mut:block/debris_planks",
+    "top": "mut:block/debris_planks",
+    "side": "mut:block/debris_planks"
+  },
+  "render_type": "solid"
+}

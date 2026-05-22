@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mut:amethyst_hoe",
-    "mut:netherite_amethyst_hoe"
+    "mut:netherite_amethyst_hoe",
+    "mut:wither_hoe",
+    "mut:super_netherite_hoe"
   ]
 }

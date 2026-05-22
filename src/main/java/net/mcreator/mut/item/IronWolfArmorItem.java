@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 
 public class IronWolfArmorItem extends AnimalArmorItem {
     public IronWolfArmorItem() {
@@ -18,5 +19,9 @@ public class IronWolfArmorItem extends AnimalArmorItem {
                         .durability(121)
                         .attributes(AnimalArmorMaterials.createAttributes(AnimalArmorMaterials.IRON_ANIMAL))
         );
+    }
+    @Override
+    public boolean isEnchantable(ItemStack stack) {
+        return true; // 默认不可附魔！
     }
 }

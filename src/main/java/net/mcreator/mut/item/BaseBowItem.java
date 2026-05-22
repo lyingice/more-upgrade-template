@@ -1,6 +1,10 @@
 package net.mcreator.mut.item;
 
 import net.minecraft.ChatFormatting;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.component.CustomData;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.*;
 import net.minecraft.world.entity.player.Player;
@@ -27,10 +31,17 @@ public abstract class BaseBowItem extends BowItem {
     protected static final double VANILLA_BASE_DAMAGE = 2.0;
     protected final MutBowStats.BowConfig config;
 
+    // 原构造
     public BaseBowItem(MutBowStats.BowConfig config) {
         super(createProperties(config));
         this.config = config;
-        // 自动注册到 MutBowStats
+        MutBowStats.register(this, config);
+    }
+
+    // 双参构造
+    public BaseBowItem(MutBowStats.BowConfig config, Properties customProps) {
+        super(customProps);
+        this.config = config;
         MutBowStats.register(this, config);
     }
 
@@ -43,6 +54,21 @@ public abstract class BaseBowItem extends BowItem {
             props.fireResistant();
         }
         return props;
+    }
+
+    /**
+     * 从 BowConfig 创建 Properties，并附带词条数据
+     */
+    protected static Properties createPropertiesWithAffix(MutBowStats.BowConfig config, CustomData affixData) {
+        Properties props = createProperties(config);
+        props.component(DataComponents.CUSTOM_DATA, affixData);
+        return props;
+    }
+    @Override
+    public ItemAttributeModifiers getDefaultAttributeModifiers(ItemStack stack) {
+        // 弓的属性由 createProperties 中的 .attributes() 控制
+        // 这里返回原版的默认值即可，额外属性走 MutMoreAttributeMaterials
+        return super.getDefaultAttributeModifiers(stack);
     }
 
     @Override
@@ -146,7 +172,51 @@ public abstract class BaseBowItem extends BowItem {
     public static class DragonBowItem extends BaseBowItem {
         public DragonBowItem() { super(MutBowStats.DRAGON); }
     }
+
+    public static class WitherBowItem extends BaseBowItem {
+        public WitherBowItem() {
+            super(MutBowStats.WITHER,
+                    new Properties()
+                            .stacksTo(1)
+                            .durability(MutBowStats.WITHER.durability())
+                            .rarity(MutBowStats.WITHER.rarity())
+                            .fireResistant()
+                            .component(DataComponents.CUSTOM_DATA, createWitherMarkData())
+            );
+        }
+
+        private static CustomData createWitherMarkData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "wither_mark");
+            return CustomData.of(tag);
+        }
+    }
+    // 下界合金绿宝石弓
+    public static class NetheriteEmeraldBowItem extends BaseBowItem {
+        public NetheriteEmeraldBowItem() { super(MutBowStats.NETHERITE_EMERALD); }
+    }
+
+    // 下界合金红石弓
+    public static class NetheriteRedstoneBowItem extends BaseBowItem {
+        public NetheriteRedstoneBowItem() { super(MutBowStats.NETHERITE_REDSTONE); }
+    }
+
+    // 下界合金紫水晶弓
+    public static class NetheriteAmethystBowItem extends BaseBowItem {
+        public NetheriteAmethystBowItem() { super(MutBowStats.NETHERITE_AMETHYST_BOW); }
+    }
+    // 紫水晶弓
+    public static class AmethystBowItem extends BaseBowItem {
+        public AmethystBowItem() { super(MutBowStats.AMETHYST_BOW); }
+    }
+
+    // 绿宝石弓
+    public static class EmeraldBowItem extends BaseBowItem {
+        public EmeraldBowItem() { super(MutBowStats.EMERALD_BOW); }
+    }
+
     //子类添加实例
-    //public static class XxBowItem extends BaseBowItem {
-    //    public XxBowItem() { super(MutBowStats.X); }}
+    /*public static class XxBowItem extends BaseBowItem {
+        public XxBowItem() { super(MutBowStats.X,new Properties()); }}
+     */
 }

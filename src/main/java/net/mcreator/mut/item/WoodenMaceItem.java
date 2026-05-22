@@ -1,9 +1,8 @@
 package net.mcreator.mut.item;
 
-import net.minecraft.world.item.MaceItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -20,6 +19,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.core.Direction;
 import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
+
+import java.util.List;
 
 public class WoodenMaceItem extends MaceItem {
     
@@ -151,5 +152,12 @@ public class WoodenMaceItem extends MaceItem {
                 }
             }
         });
+    }
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        tooltipComponents.add(Component.translatable("item.mut.mace.fall_damage",
+                        String.format("%.2f", DAMAGE_MULTIPLIER * 100))
+                .withStyle(ChatFormatting.GRAY));
     }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_side",
+  "textures": {
+    "wall": "mut:block/debris_stone_bricks",
+    "particle": "mut:block/debris_stone_bricks"
+  },
+  "render_type": "solid"
+}

@@ -96,7 +96,7 @@ public abstract class NetherStarItem extends ArmorItem {
 			super(ArmorItem.Type.HELMET, new Item.Properties()
 				.durability(ArmorItem.Type.HELMET.getDurability(88))
 				.rarity(Rarity.EPIC)
-				.attributes(buildAttributes(ArmorItem.Type.HELMET, 7.5)));
+				.attributes(buildAttributes(ArmorItem.Type.HELMET, 5.0)));
 		}
 
 		@Override
@@ -111,7 +111,7 @@ public abstract class NetherStarItem extends ArmorItem {
 			super(ArmorItem.Type.CHESTPLATE, new Item.Properties()
 				.durability(ArmorItem.Type.CHESTPLATE.getDurability(88))
 				.rarity(Rarity.EPIC)
-				.attributes(buildAttributes(ArmorItem.Type.CHESTPLATE, 7.5)));
+				.attributes(buildAttributes(ArmorItem.Type.CHESTPLATE, 5.0)));
 		}
 
 		@Override
@@ -126,7 +126,7 @@ public abstract class NetherStarItem extends ArmorItem {
 			super(ArmorItem.Type.LEGGINGS, new Item.Properties()
 				.durability(ArmorItem.Type.LEGGINGS.getDurability(88))
 				.rarity(Rarity.EPIC)
-				.attributes(buildAttributes(ArmorItem.Type.LEGGINGS, 7.5)));
+				.attributes(buildAttributes(ArmorItem.Type.LEGGINGS, 5.0)));
 		}
 
 		@Override
@@ -141,7 +141,7 @@ public abstract class NetherStarItem extends ArmorItem {
 			super(ArmorItem.Type.BOOTS, new Item.Properties()
 				.durability(ArmorItem.Type.BOOTS.getDurability(88))
 				.rarity(Rarity.EPIC)
-				.attributes(buildAttributes(ArmorItem.Type.BOOTS, 7.5)));
+				.attributes(buildAttributes(ArmorItem.Type.BOOTS, 5.0)));
 		}
 
 		@Override

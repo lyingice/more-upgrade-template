@@ -8,73 +8,70 @@ import net.minecraft.world.item.crafting.Ingredient;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 弩的统一数值配置库
- * 集中管理每把弩的所有基础属性
- */
 public class MutCrossbowStats {
 
-    /**
-     * 单把弩的全部配置数据
-     */
     public record Stats(
-            double maxChargeTime,      // 最大蓄力时间（秒）
-            float projectileSpeed,     // 弹射物飞行速度
-            int defaultLoadCount,      // 默认装填数量（不配置时通过工厂方法默认为 1）
-            int durability,            // 最大耐久
-            Rarity rarity,            // 稀有度
-            Ingredient repairItem,     // 修复物品
-            int enchantmentValue,      // 附魔能力
-            boolean fireResistant      // 是否抗火（掉入火中不会烧毁）
+            double maxChargeTime,
+            float projectileSpeed,
+            int defaultLoadCount,
+            int durability,
+            Rarity rarity,
+            Ingredient repairItem,
+            int enchantmentValue,
+            boolean fireResistant
     ) {
-        /** 装填数量是否需要在 tooltip 中显示 */
         public boolean showLoadCount() {
             return defaultLoadCount > 1;
         }
 
-        // ========== 工厂方法 ==========
+        // ========== 工厂方法（给 Map 用） ==========
 
-        /** 全参数 */
         public static Stats of(double maxChargeTime, float projectileSpeed, int defaultLoadCount,
                                int durability, Rarity rarity, Ingredient repairItem,
                                int enchantmentValue, boolean fireResistant) {
             return new Stats(maxChargeTime, projectileSpeed, defaultLoadCount, durability, rarity, repairItem, enchantmentValue, fireResistant);
         }
 
-        /** 省略装填数量，默认 1 */
-        public static Stats of(double maxChargeTime, float projectileSpeed,
-                               int durability, Rarity rarity, Ingredient repairItem,
-                               int enchantmentValue, boolean fireResistant) {
-            return new Stats(maxChargeTime, projectileSpeed, 1, durability, rarity, repairItem, enchantmentValue, fireResistant);
-        }
-
-        /** 省略装填数量和抗火，默认 1 和 false */
         public static Stats of(double maxChargeTime, float projectileSpeed,
                                int durability, Rarity rarity, Ingredient repairItem,
                                int enchantmentValue) {
             return new Stats(maxChargeTime, projectileSpeed, 1, durability, rarity, repairItem, enchantmentValue, false);
         }
+
+        public static Stats of(double maxChargeTime, float projectileSpeed, int defaultLoadCount,
+                               int durability, Rarity rarity, Ingredient repairItem,
+                               int enchantmentValue) {
+            return new Stats(maxChargeTime, projectileSpeed, defaultLoadCount, durability, rarity, repairItem, enchantmentValue, true);
+        }
     }
 
-    public static final Stats DEFAULT = Stats.of(
-            1.25F,          // 蓄力时间
-            3.15F,          // 弹射物速度
-            1,              // 默认装填 1
-            465,            // 耐久
-            Rarity.COMMON,
-            Ingredient.EMPTY,
-            1,              // 附魔能力
-            false           // 抗火
-    );
+    // ========== 预设常量（和弓系统完全一致，不依赖 .get()） ==========
 
+    public static final Stats COPPER             = Stats.of(1.25F, 3.5F,  590,  Rarity.COMMON, Ingredient.of(Items.COPPER_INGOT),            13);
+    public static final Stats IRON               = Stats.of(1.25F, 3.5F,  590,  Rarity.COMMON, Ingredient.of(Items.IRON_INGOT),             14);
+    public static final Stats GOLDEN             = Stats.of(1.0F,  3.5F,  715,  Rarity.COMMON, Ingredient.of(Items.GOLD_INGOT),             22);
+    public static final Stats DIAMOND            = Stats.of(1.25F, 4.0F,  1246, Rarity.COMMON, Ingredient.of(Items.DIAMOND),                10);
+    public static final Stats NETHERITE          = Stats.of(1.25F, 4.5F,1,  1481, Rarity.COMMON, Ingredient.of(Items.NETHERITE_INGOT),        15, true);
+    public static final Stats STEEL              = Stats.of(1.1F,  4.5F,  1,840,  Rarity.COMMON, Ingredient.of(MutModItems.STEEL_INGOT),      15, true);
+    public static final Stats GILDING            = Stats.of(0.9F,  4.5F,  1,1246, Rarity.COMMON, Ingredient.of(MutModItems.GILDING_INGOT),    22, true);
+    public static final Stats BLUE_DIAMOND       = Stats.of(1.1F,  5.0F,  1,1481, Rarity.COMMON, Ingredient.of(MutModItems.BLUE_DIAMOND_INGOT), 18, true);
+    public static final Stats ADVANCED_STEEL     = Stats.of(1.1F,  5.0F,  1,1590, Rarity.COMMON, Ingredient.of(MutModItems.ADVANCED_STEEL_INGOT), 15, true);
+    public static final Stats OBSIDIAN           = Stats.of(1.5F,  4.5F,  3, 1790, Rarity.COMMON, Ingredient.of(Items.OBSIDIAN), 1, true);
+    public static final Stats NETHERITE_OBSIDIAN = Stats.of(1.75F, 4.8F,  6, 2290, Rarity.COMMON, Ingredient.of(MutModItems.OBSIDIAN_INGOT), 1, true);
+    public static final Stats CRYING_OBSIDIAN    = Stats.of(2.0F,  5.0F, 9, 3290, Rarity.EPIC,   Ingredient.of(MutModItems.CRYING_OBSIDIAN_INGOT), 1, true);
+    public static final Stats NETHER_STAR        = Stats.of(1.25F, 5.0F,  3, 1965, Rarity.EPIC,   Ingredient.of(Items.NETHER_STAR),           22, true);
+    public static final Stats WITHER             = Stats.of(1.25F, 5.0F,  3, 1965, Rarity.EPIC,   Ingredient.of(Items.NETHER_STAR),           22, true);
+    public static final Stats DRAGON             = Stats.of(1.25F, 5.0F,  3, 3409, Rarity.EPIC,   Ingredient.of(Items.NETHER_STAR),           30, true);
+    public static final Stats NETHERITE_EMERALD   = Stats.of(1.25F, 4.5F, 1409, Rarity.COMMON, Ingredient.of(MutModItems.NETHERITE_EMERALD_INGOT), 20);
+    public static final Stats NETHERITE_REDSTONE  = Stats.of(1.25F, 4.7F, 1481, Rarity.COMMON, Ingredient.of(MutModItems.NETHERITE_REDSTONE_INGOT), 15);
+    public static final Stats NETHERITE_AMETHYST  = Stats.of(1.25F, 4.5F, 1165, Rarity.COMMON, Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT), 16);
+    public static final Stats NETHERITE_COPPER    = Stats.of(1.25F, 4.5F, 1081, Rarity.COMMON, Ingredient.of(Items.COPPER_BLOCK), 13);
+    public static final Stats EMERALD  = Stats.of(1.25F, 4.0F, 909,  Rarity.COMMON, Ingredient.of(Items.EMERALD),             20);
+    public static final Stats AMETHYST = Stats.of(1.25F, 3.4F, 640, Rarity.COMMON, Ingredient.of(Items.AMETHYST_SHARD),       16);
+    public static final Stats DEFAULT = IRON;
+
+    // ========== Map：Item → Stats ==========
     private static final Map<Item, Stats> STATS_MAP = new HashMap<>();
-
-    static {
-        register(MutModItems.IRON_CROSSBOW.get(),       Stats.of(1.25F, 3.5F,  590,  Rarity.COMMON, Ingredient.of(Items.IRON_INGOT),       14));
-        register(MutModItems.GOLDEN_CROSSBOW.get(),     Stats.of(1.0F,  3.5F,  715,  Rarity.COMMON, Ingredient.of(Items.GOLD_INGOT),       22));
-        register(MutModItems.DIAMOND_CROSSBOW.get(),    Stats.of(1.25F, 4.0F,  1246, Rarity.COMMON, Ingredient.of(Items.DIAMOND),          10));
-        register(MutModItems.NETHERITE_CROSSBOW.get(),  Stats.of(1.25F, 4.5F,  1481, Rarity.COMMON, Ingredient.of(Items.NETHERITE_INGOT),  15, true));
-    }
 
     public static void register(Item crossbow, Stats stats) {
         STATS_MAP.put(crossbow, stats);
@@ -85,7 +82,6 @@ public class MutCrossbowStats {
     }
 
     // ========== 便捷方法 ==========
-
     public static double chargeTime(Item crossbow) {
         return get(crossbow).maxChargeTime();
     }

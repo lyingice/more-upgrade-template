@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mut:amethyst_shovel",
-    "mut:netherite_amethyst_shovel"
+    "mut:netherite_amethyst_shovel",
+    "mut:wither_shovel",
+    "mut:super_netherite_shovel"
   ]
 }

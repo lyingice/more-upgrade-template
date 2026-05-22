@@ -53,9 +53,11 @@ public class MutMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		MutModSounds.REGISTRY.register(modEventBus);
 		MutModBlocks.REGISTRY.register(modEventBus);
 		MutModBlockEntities.REGISTRY.register(modEventBus);
 		MutModItems.REGISTRY.register(modEventBus);
+		MutModEntities.REGISTRY.register(modEventBus);
 		MutModTabs.REGISTRY.register(modEventBus);
 		MutModMobEffects.REGISTRY.register(modEventBus);
 		MutModVillagerProfessions.PROFESSIONS.register(modEventBus);

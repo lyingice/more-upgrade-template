@@ -1,0 +1,15 @@
+{
+  "parent": "mut:custom/shield",
+  "textures": {
+    "0": "mut:block/emerald_shield",
+    "particle": "mut:item/emerald_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "mut:item/emerald_shield_0"
+    }
+  ]
+}

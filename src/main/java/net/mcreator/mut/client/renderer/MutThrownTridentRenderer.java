@@ -38,6 +38,31 @@ public class MutThrownTridentRenderer extends EntityRenderer<MutThrownTrident> {
         TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.BLUE_DIAMOND_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/blue_diamond_trident.png"));
         TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.ADVANCED_STEEL_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/advanced_steel_trident.png"));
         TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.COPPER_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/copper_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.OBSIDIAN_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/obsidian_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_OBSIDIAN_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_obsidian_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.CRYING_OBSIDIAN_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/crying_obsidian_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHER_STAR_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/nether_star_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.DRAGON_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/dragon_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.WITHER_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/wither_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_COPPER_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_copper_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_EMERALD_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_emerald_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_REDSTONE_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_redstone_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_AMETHYST_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_amethyst_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.AMETHYST_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/amethyst_trident.png"));
+        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.EMERALD_TRIDENT.get(),
+                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/emerald_trident.png"));
+
         //TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.X_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/x_trident.png"));
     }
 

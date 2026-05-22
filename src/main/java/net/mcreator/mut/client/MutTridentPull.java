@@ -30,8 +30,19 @@ public class MutTridentPull {
                     MutModItems.STEEL_TRIDENT.get(),
                     MutModItems.GILDING_TRIDENT.get(),
                     MutModItems.BLUE_DIAMOND_TRIDENT.get(),
-                    MutModItems.ADVANCED_STEEL_TRIDENT.get()
-                    //MutModItems._TRIDENT.get()
+                    MutModItems.ADVANCED_STEEL_TRIDENT.get(),
+                    MutModItems.OBSIDIAN_TRIDENT.get(),
+                    MutModItems.NETHERITE_OBSIDIAN_TRIDENT.get(),
+                    MutModItems.CRYING_OBSIDIAN_TRIDENT.get(),
+                    MutModItems.NETHER_STAR_TRIDENT.get(),
+                    MutModItems.DRAGON_TRIDENT.get(),
+                    MutModItems.WITHER_TRIDENT.get(),
+                    MutModItems.NETHERITE_COPPER_TRIDENT.get(),
+                    MutModItems.NETHERITE_EMERALD_TRIDENT.get(),
+                    MutModItems.NETHERITE_REDSTONE_TRIDENT.get(),
+                    MutModItems.NETHERITE_AMETHYST_TRIDENT.get(),
+                    MutModItems.AMETHYST_TRIDENT.get(),
+                    MutModItems.EMERALD_TRIDENT.get()
             );
 
             for (Item item : tridents) {

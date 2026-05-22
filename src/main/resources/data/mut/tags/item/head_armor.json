@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "mut:amethyst_helmet",
-    "mut:netherite_amethyst_helmet"
+    "mut:netherite_amethyst_helmet",
+    "mut:wither_helmet",
+    "mut:super_netherite_helmet"
   ]
 }

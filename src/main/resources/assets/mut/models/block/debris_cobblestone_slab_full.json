@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "mut:block/debris_cobblestone",
+    "bottom": "mut:block/debris_cobblestone",
+    "top": "mut:block/debris_cobblestone",
+    "side": "mut:block/debris_cobblestone"
+  },
+  "render_type": "solid"
+}

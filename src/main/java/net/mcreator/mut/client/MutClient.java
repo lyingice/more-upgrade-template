@@ -1,6 +1,7 @@
 package net.mcreator.mut.client;
 
 import net.mcreator.mut.MutMod;
+import net.mcreator.mut.client.model.ModelCustomModel;
 import net.mcreator.mut.client.model.ModelMutTridentModel;
 import net.mcreator.mut.client.renderer.MutThrownTridentRenderer;
 import net.mcreator.mut.client.renderer.layer.MutHorseArmorLayer;
@@ -20,6 +21,7 @@ public class MutClient {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModelMutTridentModel.LAYER_LOCATION, ModelMutTridentModel::createBodyLayer);
+        event.registerLayerDefinition(ModelCustomModel.LAYER_LOCATION, ModelCustomModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -38,4 +40,5 @@ public class MutClient {
             hr.addLayer(new MutHorseArmorLayer(hr, event.getEntityModels()));
         }
     }
+
 }

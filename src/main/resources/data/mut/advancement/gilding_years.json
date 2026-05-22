@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "mut:gilding_debris"
+    },
+    "title": {
+      "translate": "advancements.gilding_years.title"
+    },
+    "description": {
+      "translate": "advancements.gilding_years.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "gilding_years_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:gilding_debris",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "mut:buried_deep"
+}

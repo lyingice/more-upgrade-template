@@ -10,6 +10,18 @@
     "mut:steel_trident",
     "mut:gilding_trident",
     "mut:blue_diamond_trident",
-    "mut:advanced_steel_trident"
+    "mut:advanced_steel_trident",
+    "mut:obsidian_trident",
+    "mut:netherite_obsidian_trident",
+    "mut:crying_obsidian_trident",
+    "mut:nether_star_trident",
+    "mut:dragon_trident",
+    "mut:wither_trident",
+    "mut:netherite_redstone_trident",
+    "mut:netherite_copper_trident",
+    "mut:netherite_emerald_trident",
+    "mut:netherite_amethyst_trident",
+    "mut:amethyst_trident",
+    "mut:emerald_trident"
   ]
 }

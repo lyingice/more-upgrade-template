@@ -2,9 +2,10 @@ package net.mcreator.mut.init;
 
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -42,15 +43,15 @@ public class MutMaterials {
         public final int durability;
         public final Supplier<Ingredient> repairIngredient;
         @Nullable public final ItemAttributeModifiers toolAttributes;
-        public final boolean hasTools;           // ⬅️ 新增：是否生成工具
+        public final boolean hasTools;
         public final boolean hasArmor;
         public final int[] armorValues;
         public final int armorEnchantmentValue;
         public final float armorToughness;
         public final float armorKnockbackResistance;
-        public final int armorDurabilityFactor;
+        public final int armorDurability;
         public final boolean piglinNeutral;
-        public final Holder<SoundEvent> equipSound;
+        public final Supplier<Holder<SoundEvent>> equipSound;  // 改为 Supplier 延迟加载
         @Nullable public final ItemAttributeModifiers armorAttributes;
         public final String textureFolder;
 
@@ -64,8 +65,8 @@ public class MutMaterials {
                 @Nullable ItemAttributeModifiers toolAttributes,
                 boolean hasTools, boolean hasArmor, int[] armorValues,
                 int armorEnchantmentValue, float armorToughness, float armorKnockbackResistance,
-                int armorDurabilityFactor, boolean piglinNeutral,
-                Holder<SoundEvent> equipSound,
+                int armorDurability, boolean piglinNeutral,
+                String equipSoundId,  // 改为 String 类型（音效ID）
                 @Nullable ItemAttributeModifiers armorAttributes,
                 String textureFolder
         ) {
@@ -95,9 +96,17 @@ public class MutMaterials {
             this.armorEnchantmentValue = armorEnchantmentValue;
             this.armorToughness = armorToughness;
             this.armorKnockbackResistance = armorKnockbackResistance;
-            this.armorDurabilityFactor = armorDurabilityFactor;
+            this.armorDurability = armorDurability;
             this.piglinNeutral = piglinNeutral;
-            this.equipSound = equipSound;
+            // 延迟加载：只在调用时才获取 Holder
+            this.equipSound = () -> {
+                ResourceLocation location = ResourceLocation.parse(equipSoundId);
+                SoundEvent soundEvent = BuiltInRegistries.SOUND_EVENT.get(location);
+                if (soundEvent == null) {
+                    soundEvent = SoundEvent.createVariableRangeEvent(location);
+                }
+                return Holder.direct(soundEvent);
+            };
             this.armorAttributes = armorAttributes;
             this.textureFolder = textureFolder;
         }
@@ -107,7 +116,7 @@ public class MutMaterials {
         public int leggingsValue()   { return hasArmor ? armorValues[2] : 0; }
         public int bootsValue()      { return hasArmor ? armorValues[3] : 0; }
         public int bodyValue()       { return hasArmor ? armorValues[4] : 0; }
-        public int armorDurabilityMultiplier() { return armorDurabilityFactor; }
+        public int armorDurabilityMultiplier() { return armorDurability; }
 
         public float getDamageFor(ToolType type) {
             return switch (type) {
@@ -129,28 +138,34 @@ public class MutMaterials {
             };
         }
 
-        public Tier asToolTier() {
-            MutMaterial m = this;
-            return new Tier() {
-                @Override public int getUses() { return m.durability; }
-                @Override public float getSpeed() { return m.toolSpeed; }
-                @Override public float getAttackDamageBonus() { return m.swordDamage; }
-                @Override public int getEnchantmentValue() { return m.enchantmentValue; }
-                @Override public Ingredient getRepairIngredient() { return m.repairIngredient.get(); }
-                @Override public TagKey<Block> getIncorrectBlocksForDrops() { return null; }
-            };
-        }
-
         public Tier asToolTier(ToolType type) {
             MutMaterial m = this;
+            TagKey<Block> incorrectTag = switch (m.miningLevel) {
+                case 0 -> BlockTags.INCORRECT_FOR_WOODEN_TOOL;
+                case 1 -> BlockTags.INCORRECT_FOR_STONE_TOOL;
+                case 2 -> BlockTags.INCORRECT_FOR_IRON_TOOL;
+                case 3 -> BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
+                case 4 -> BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
+                default -> BlockTags.INCORRECT_FOR_IRON_TOOL;
+            };
+
             return new Tier() {
                 @Override public int getUses() { return m.durability; }
                 @Override public float getSpeed() { return m.toolSpeed; }
                 @Override public float getAttackDamageBonus() { return m.getDamageFor(type); }
+                @Override public TagKey<Block> getIncorrectBlocksForDrops() { return incorrectTag; }
                 @Override public int getEnchantmentValue() { return m.enchantmentValue; }
                 @Override public Ingredient getRepairIngredient() { return m.repairIngredient.get(); }
-                @Override public TagKey<Block> getIncorrectBlocksForDrops() { return null; }
             };
+        }
+        public Item.Properties createToolProperties(ToolType type) {
+            Item.Properties props = new Item.Properties()
+                    .rarity(this.rarity)  // 稀有度
+                    .attributes(createToolAttributes(this, type));
+            if (this.fireResistant) {
+                props.fireResistant();
+            }
+            return props;
         }
 
         public ArmorMaterial asArmorMaterial() {
@@ -162,109 +177,114 @@ public class MutMaterials {
                         map.put(ArmorItem.Type.BOOTS, bootsValue());
                         map.put(ArmorItem.Type.BODY, bodyValue());
                     }),
-                    armorEnchantmentValue, equipSound,
+                    armorEnchantmentValue,
+                    equipSound.get(),  // 延迟加载，调用 .get()
                     () -> repairIngredient.get(),
                     List.of(new ArmorMaterial.Layer(ResourceLocation.fromNamespaceAndPath("mut", textureFolder))),
-                    armorToughness, armorKnockbackResistance
+                    armorToughness,
+                    armorKnockbackResistance
             );
+        }
+        // 在 MutMaterials.MutMaterial 类中添加
+        public Item.Properties createArmorProperties(ArmorItem.Type armorType) {
+            int durability = this.armorDurability;  // 从材质中获取倍数
+            Item.Properties props = new Item.Properties()
+                    .rarity(this.rarity)
+                    .durability(armorType.getDurability(durability))
+                    .attributes(createArmorAttributes(this, armorType));
+            if (this.fireResistant) {
+                props.fireResistant();
+            }
+            return props;
         }
     }
 
     // ========== 配置存储 ==========
     private static final List<MutMaterial> ALL_MATERIALS = new ArrayList<>();
     public static List<MutMaterial> getAll() { return Collections.unmodifiableList(ALL_MATERIALS); }
-
+    private static final Map<String, MutMaterial> MATERIALS_BY_NAME = new HashMap<>();
     private static MutMaterial register(MutMaterial material) {
         ALL_MATERIALS.add(material);
+        MATERIALS_BY_NAME.put(material.name, material);
         return material;
     }
+    public static MutMaterial get(String name) {
+        MutMaterial material = MATERIALS_BY_NAME.get(name);
+        if (material == null) {
+            throw new IllegalArgumentException("Unknown material: " + name);
+        }
+        return material;
+    }
+    // ========== 材质定义（使用字符串音效ID）==========
 
-    // ========== 材质定义 ==========
-
-    // 铜（有工具，有盔甲）
-    public static final MutMaterial COPPER = register(new MutMaterial(
-            "copper", Rarity.COMMON, false, CraftingType.NORMAL,
-            1, 5.0F,
-            4.0F, 2.0F, 8.0F, 2.5F, 0.5F,
-            -2.4F, -2.8F, -3.1F, -3.0F, 0.0F,
-            13, 190, () -> Ingredient.of(Items.COPPER_INGOT), null,
-            true,  // hasTools = true
-            true,  // hasArmor = true
-            new int[]{2, 4, 3, 1, 5},
-            8, 0.0F, 0.0F, 11, false, SoundEvents.ARMOR_EQUIP_IRON, null, "copper"
-    ));
-
-    // 哭曜黑曜石（有盔甲，无工具）
-    public static final MutMaterial CRYING_OBSIDIAN = register(new MutMaterial(
-            "crying_obsidian", Rarity.EPIC, true, CraftingType.SMITHING,
-            4, 11.0F,
-            11.0F, 9.5F, 9.0F, 13.0F, 4.0F,
-            -2.8F, -3.4F, -3.2F, -3.4F, -0.4F,
-            1, 5650, () -> Ingredient.of(new ItemStack(MutModItems.CRYING_OBSIDIAN_INGOT.get())), null,
-            false, // hasTools = false（不生成工具）
-            true,  // hasArmor = true
-            new int[]{5, 12, 10, 5, 0},
-            1, 5.0F, 0.2F, 100, false, SoundEvents.ARMOR_EQUIP_NETHERITE, null, "crying_obsidian"
-    ));
-
-    // 木头（有工具，无盔甲）
-    public static final MutMaterial WOOD = register(new MutMaterial(
-            "wood", Rarity.COMMON, false, CraftingType.NORMAL,
-            0, 2.0F,
-            3.0F, 1.5F, 2.0F, 7.0F, 0.0F,
-            -2.4F, -3.0F, -2.8F, -3.2F, 0.0F,
-            15, 59, () -> Ingredient.of(Items.OAK_PLANKS), null,
-            true,  // hasTools = true
-            false,  // hasArmor = false
-            new int[]{0, 0, 0, 0, 0},
-            0, 0.0F, 0.0F, 0, false, SoundEvents.ARMOR_EQUIP_GENERIC, null, "wood"
-    ));
-
-    // 紫水晶 - 工具 + 盔甲
+    // 紫水晶
     public static final MutMaterial AMETHYST = register(new MutMaterial(
             "amethyst", Rarity.COMMON, false, CraftingType.NORMAL,
-            2, 7.0F,  // 挖掘等级2（铁器），挖掘效率7.0
-            6.5F, 5.0F, 4.5F, 9.0F, 2.25F,  // 剑/锹/镐/斧/锄 伤害
-            -2.4F, -3.0F, -2.8F, -3.1F, 0.0F,  // 剑/锹/镐/斧/锄 攻速
-            16, 350,  // 附魔能力16，耐久350
-            () -> Ingredient.of(Items.AMETHYST_SHARD),  // 修复材料：紫水晶碎片
-            null,  // 工具额外属性
-            true,  // hasTools = true
-            true,  // hasArmor = true
-            new int[]{2, 6, 5, 2, 0},  // 头盔/胸甲/护腿/靴子/身体 护甲值
-            14,  // 盔甲附魔能力14
-            0.5F,  // 盔甲韧性0.5
-            0.0F,  // 击退抗性0
-            21,  // 盔甲耐久倍率21
-            false,  // 猪灵中立 false
-            SoundEvents.ARMOR_EQUIP_IRON,  // 装备音效：铁
-            null,  // 盔甲额外属性
-            "amethyst"  // 纹理文件夹
+            2, 7.0F,
+            5.5F, 4.0F, 3.5F, 8.0F, 1.25F,
+            -2.4F, -3.0F, -2.8F, -3.1F, 0.0F,
+            16, 350,
+            () -> Ingredient.of(Items.AMETHYST_SHARD),
+            null,
+            true, true,
+            new int[]{2, 6, 5, 2, 0},
+            14, 0.5F, 0.0F, 21, false,
+            "minecraft:item.armor.equip_iron",
+            null,
+            "amethyst"
     ));
 
-    // 下界合金紫水晶 - 工具 + 盔甲
+    // 下界合金紫水晶
     public static final MutMaterial NETHERITE_AMETHYST = register(new MutMaterial(
             "netherite_amethyst", Rarity.UNCOMMON, true, CraftingType.SMITHING,
-            4, 10.0F,  // 挖掘等级4（下界合金），挖掘效率10.0
-            8.5F, 7.0F, 6.5F, 10.5F, 3.25F,  // 剑/锹/镐/斧/锄 伤害
-            -2.4F, -3.0F, -2.8F, -3.0F, 0.0F,  // 剑/锹/镐/斧/锄 攻速
-            16, 1400,  // 附魔能力16，耐久1400
-            () -> Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT.get()),  // 修复材料：下界合金紫水晶锭
-            null,  // 工具额外属性
-            true,  // hasTools = true
-            true,  // hasArmor = true
-            new int[]{3, 8, 6, 3, 0},  // 头盔/胸甲/护腿/靴子/身体 护甲值
-            14,  // 盔甲附魔能力14
-            3.5F,  // 盔甲韧性3.5
-            0.1F,  // 击退抗性0.1
-            42,  // 盔甲耐久倍率42
-            false,  // 猪灵中立 false
-            SoundEvents.ARMOR_EQUIP_NETHERITE,  // 装备音效：下界合金
-            null,  // 盔甲额外属性
-            "netherite_amethyst"  // 纹理文件夹
+            4, 10.0F,
+            7.5F, 6.0F, 5.5F, 9.5F, 2.25F,
+            -2.4F, -3.0F, -2.8F, -3.0F, 0.0F,
+            16, 1400,
+            () -> Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT.get()),
+            null,
+            true, true,
+            new int[]{3, 8, 6, 3, 0},
+            14, 3.5F, 0.1F, 42, false,
+            "minecraft:item.armor.equip_netherite",
+            null,
+            "netherite_amethyst"
     ));
 
-    // ========== 属性构建器（保持与 MutMoreAttributeMaterials 兼容）==========
+    // 凋零
+    public static final MutMaterial WITHER = register(new MutMaterial(
+            "wither", Rarity.EPIC, true, CraftingType.SMITHING,
+            4, 14.0F,
+            11.0F, 9.5F, 9.0F, 13.0F, 4.5F,
+            -2.2F, -2.8F, -2.6F, -2.8F, 0.2F,
+            22, 3000,
+            () -> Ingredient.of(Items.NETHER_STAR),
+            null,
+            true, true,
+            new int[]{4, 9, 8, 4, 0},
+            22, 6.0F, 0.1F, 88, false,
+            "minecraft:item.armor.equip_netherite",
+            null,
+            "wither"
+    ));
+
+    public static final MutMaterial SUPER_NETHERITE = register(new MutMaterial(
+            "super_netherite", Rarity.UNCOMMON, true, CraftingType.SMITHING,
+            4, 14.0F,
+            0.0F, 0.0F, 0.0F, 0.0F, 0.0F,
+            -2.4F, -3.0F, -2.8F, -3F, -3F,
+            15, 3031,
+            () -> Ingredient.of(Items.NETHER_STAR),
+            null,
+            false, true,
+            new int[]{4, 10, 7, 3, 0},
+            15, 5.0F, 0.2F, 50, false,
+            "minecraft:item.armor.equip_netherite",
+            null,
+            "super_netherite"
+    ));
+
+    // ========== 属性构建器 ==========
 
     public static ItemAttributeModifiers createToolAttributes(MutMaterial mat, ToolType type) {
         var b = ItemAttributeModifiers.builder();

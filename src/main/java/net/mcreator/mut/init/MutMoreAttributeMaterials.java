@@ -127,6 +127,15 @@ public class MutMoreAttributeMaterials {
     // =====================================================================
 
     static {
+        register("netherite_redstone",
+                entries(
+                        attr(Attributes.MINING_EFFICIENCY, 1.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "block_range"),
+                        attr(Attributes.ATTACK_SPEED, 0.1, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "entity_range")
+                ),
+                entries(),
+                entries(),
+                entries(),
+                entries());
         register("advanced_steel",
                 entries(
                         attr(Attributes.BLOCK_INTERACTION_RANGE, 1.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "block_range"),
@@ -172,6 +181,37 @@ public class MutMoreAttributeMaterials {
                         attr(Attributes.MAX_HEALTH, 6.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.FEET, "armor_health_feet")
                 )
         );
+        register("wither",
+                entries(
+                        attr(Attributes.BLOCK_INTERACTION_RANGE, 0.5, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "block_range"),
+                        attr(Attributes.ENTITY_INTERACTION_RANGE, 0.5, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "entity_range")
+                ),
+                entries(
+                        // 头盔额外属性
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.HEAD, "armor_health_head")
+                ),
+                entries(
+                        // 胸甲额外属性
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.CHEST, "armor_health_chest")
+                ),
+                entries(
+                        // 护腿额外属性
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.LEGS, "armor_health_legs")
+                ),
+                entries(
+                        // 靴子额外属性
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.FEET, "armor_health_feet")
+                ));
+        register("super_netherite",
+                entries(),
+                entries(attr(Attributes.MAX_HEALTH, 2.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.HEAD, "armor_health_head")
+                ),
+                entries(attr(Attributes.MAX_HEALTH, 2.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.CHEST, "armor_health_chest")
+                ),
+                entries(attr(Attributes.MAX_HEALTH, 2.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.LEGS, "armor_health_feet")
+                ),
+                entries(attr(Attributes.MAX_HEALTH, 2.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.FEET, "armor_health_feet")
+                ));
         /*
         // ──────────────────── 单个材质模板 ────────────────────
         register("material_name",

@@ -95,6 +95,26 @@ public class MutBowStats {
     public static final BowConfig DRAGON = new BowConfig(20,3328,30,Rarity.EPIC,2.5,
             () -> Ingredient.of(Items.NETHER_STAR),true);
 
+    public static final BowConfig WITHER = new BowConfig(20,1884,22,Rarity.EPIC,2.0,
+            () -> Ingredient.of(Items.NETHER_STAR),true);
+    // 下界合金绿宝石弓
+    public static final BowConfig NETHERITE_EMERALD = new BowConfig(20, 1328, 14, Rarity.COMMON, 1.6,
+            () -> Ingredient.of(MutModItems.NETHERITE_EMERALD_INGOT.get()), true);
+
+    // 下界合金红石弓
+    public static final BowConfig NETHERITE_REDSTONE = new BowConfig(20, 1400, 14, Rarity.COMMON, 1.5,
+            () -> Ingredient.of(MutModItems.NETHERITE_REDSTONE_INGOT.get()), true);
+
+    // 下界合金紫水晶弓
+    public static final BowConfig NETHERITE_AMETHYST_BOW = new BowConfig(20, 1084, 14, Rarity.COMMON, 1.25,
+            () -> Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT.get()), true);
+    // 紫水晶弓
+    public static final BowConfig AMETHYST_BOW = new BowConfig(20, 559, 16, Rarity.COMMON, 0.5,
+            () -> Ingredient.of(Items.AMETHYST_SHARD), false);
+
+    // 绿宝石弓
+    public static final BowConfig EMERALD_BOW = new BowConfig(20, 828, 20, Rarity.COMMON, 0.75,
+            () -> Ingredient.of(Items.EMERALD), false);
     // ========== 注册方法 ==========
 
     /**
