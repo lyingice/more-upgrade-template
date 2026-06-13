@@ -24,6 +24,7 @@ public abstract class SuperNetheriteArmor extends ArmorItem {
     private static CustomData createWitherMarkData() {
         CompoundTag tag = new CompoundTag();
         tag.putString("Affix", "momentum");
+        tag.putInt("AffixLevel", 3);
         return CustomData.of(tag);
     }
 

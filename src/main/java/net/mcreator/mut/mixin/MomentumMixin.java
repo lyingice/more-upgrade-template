@@ -17,27 +17,11 @@ public class MomentumMixin {
             ordinal = 0
     )
     private float modifySmashAttackDamage(float damage, DamageSource source) {
-        // 检查攻击者是否是 LivingEntity
-        if (!(source.getDirectEntity() instanceof LivingEntity attacker)) {
-            return damage;
-        }
+        if (!(source.getDirectEntity() instanceof LivingEntity attacker)) return damage;
+        if (attacker.onGround()) return damage;
+        if (attacker.fallDistance <= 0.0F) return damage;
 
-        // 检查攻击者是否在空中且正在下落（下落攻击的关键判定）
-        if (attacker.onGround()) {
-            return damage;
-        }
-
-        // 检查攻击者的下落距离（重锤需要下落才能触发额外伤害）
-        if (attacker.fallDistance <= 0.0F) {
-            return damage;
-        }
-
-        // 计算势能印记等级
-        int level = MomentumHelper.getMomentumLevel(attacker);
-        if (level <= 0) return damage;
-
-        // 伤害乘以加成倍率
-        float multiplier = MomentumHelper.getDamageMultiplier(level);
+        float multiplier = MomentumHelper.getMultiplier(attacker);
         return damage * multiplier;
     }
 }

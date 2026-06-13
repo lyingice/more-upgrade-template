@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:stick"
+    },
+    "b": {
+      "item": "mut:debris_planks"
+    }
+  },
+  "result": {
+    "id": "mut:debris_planks_fence_gate",
+    "count": 1
+  }
+}

@@ -22,7 +22,7 @@ public class MutBaseRecipeConfig {
 
     // 需要生成工作台配方的材料列表（原版材质，下界合金除外）
     public static final List<String> BASE_MATERIALS = Arrays.asList(
-            "stone","copper","iron", "golden", "diamond","emerald","amethyst"
+            "stone","copper","iron", "golden", "diamond","emerald","amethyst","lapis_lazuli"
     );
 
     // 特殊材料映射（马铠和狼铠的自定义额外材料）
@@ -70,6 +70,7 @@ public class MutBaseRecipeConfig {
             case "amethyst" -> "minecraft:amethyst_shard";
             case "stone" -> "minecraft:cobblestone";
             case "copper" -> "minecraft:copper_ingot";
+            case "lapis_lazuli" -> "minecraft:lapis_lazuli";
             default -> "mut:" + material + "_ingot";
         };
     }

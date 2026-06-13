@@ -1,0 +1,7 @@
+{
+  "parent": "mut:custom/shield_blocking",
+  "textures": {
+    "0": "mut:block/netherite_lapis_lazuli_shield",
+    "particle": "mut:item/netherite_lapis_lazuli_sword"
+  }
+}

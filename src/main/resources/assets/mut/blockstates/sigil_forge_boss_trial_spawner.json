@@ -1,0 +1,79 @@
+{
+  "variants": {
+    "facing=north,boss_spawner_state=inactive": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner"
+    },
+    "facing=east,boss_spawner_state=inactive": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner",
+      "y": 90
+    },
+    "facing=south,boss_spawner_state=inactive": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner",
+      "y": 180
+    },
+    "facing=west,boss_spawner_state=inactive": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner",
+      "y": 270
+    },
+    "facing=north,boss_spawner_state=charging": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_active"
+    },
+    "facing=east,boss_spawner_state=charging": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_active",
+      "y": 90
+    },
+    "facing=south,boss_spawner_state=charging": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_active",
+      "y": 180
+    },
+    "facing=west,boss_spawner_state=charging": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_active",
+      "y": 270
+    },
+    "facing=north,boss_spawner_state=active": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_active"
+    },
+    "facing=east,boss_spawner_state=active": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_active",
+      "y": 90
+    },
+    "facing=south,boss_spawner_state=active": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_active",
+      "y": 180
+    },
+    "facing=west,boss_spawner_state=active": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_active",
+      "y": 270
+    },
+    "facing=north,boss_spawner_state=ejecting": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_reward"
+    },
+    "facing=east,boss_spawner_state=ejecting": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_reward",
+      "y": 90
+    },
+    "facing=south,boss_spawner_state=ejecting": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_reward",
+      "y": 180
+    },
+    "facing=west,boss_spawner_state=ejecting": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner_reward",
+      "y": 270
+    },
+    "facing=north,boss_spawner_state=cooldown": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner"
+    },
+    "facing=east,boss_spawner_state=cooldown": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner",
+      "y": 90
+    },
+    "facing=south,boss_spawner_state=cooldown": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner",
+      "y": 180
+    },
+    "facing=west,boss_spawner_state=cooldown": {
+      "model": "mut:block/sigil_forge_boss_trial_spawner",
+      "y": 270
+    }
+  }
+}

@@ -1,5 +1,10 @@
 package net.mcreator.mut.entity;
 
+import net.mcreator.mut.init.MutModParticles;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.minecraft.world.phys.Vec3;
@@ -35,6 +40,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.mut.init.MutModEntities;
+import net.neoforged.neoforge.fluids.FluidType;
 
 public class AborigineZombieEntity extends Zombie {
     private boolean equipmentInitialized = false;

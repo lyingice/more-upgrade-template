@@ -1,0 +1,4 @@
+{
+  "parent": "minecraft:block/trial_spawner",
+  "render_type": "cutout"
+}

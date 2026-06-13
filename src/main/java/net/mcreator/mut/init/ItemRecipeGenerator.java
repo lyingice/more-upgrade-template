@@ -20,42 +20,35 @@ public class ItemRecipeGenerator {
 
     static {
         // 三叉戟
-        RECIPES_TO_GENERATE.put("trident", Arrays.asList("wither","dragon","obsidian","netherite_obsidian","crying_obsidian","nether_star","netherite_copper","netherite_redstone",
-                "netherite_emerald","netherite_amethyst"
+        RECIPES_TO_GENERATE.put("trident", Arrays.asList("netherite_lapis_lazuli","poison_steel",
+                "flame_gold","uncanny_amethyst","thunder_copper"
         ));
 
         // 重锤
-        RECIPES_TO_GENERATE.put("mace", Arrays.asList("wither","dragon","obsidian","netherite_obsidian","crying_obsidian","nether_star","netherite_copper","netherite_redstone",
-                "netherite_emerald","netherite_amethyst"
+        RECIPES_TO_GENERATE.put("mace", Arrays.asList("netherite_lapis_lazuli","poison_steel",
+                "flame_gold","uncanny_amethyst","thunder_copper"
         ));
 
         // 弓
-        RECIPES_TO_GENERATE.put("bow", Arrays.asList("wither","dragon","netherite_redstone","netherite_emerald",
-                "netherite_amethyst"
+        RECIPES_TO_GENERATE.put("bow", Arrays.asList("netherite_lapis_lazuli","poison_steel",
+                "flame_gold","uncanny_amethyst","thunder_copper"
         ));
 
         // 弩
-        RECIPES_TO_GENERATE.put("crossbow", Arrays.asList("wither","dragon","obsidian","netherite_obsidian","crying_obsidian",
-                "steel","gilding","blue_diamond","advanced_steel","netherite_copper","nether_star","netherite_copper","netherite_redstone",
-                "netherite_emerald","netherite_amethyst"
+        RECIPES_TO_GENERATE.put("crossbow", Arrays.asList("netherite_lapis_lazuli","poison_steel",
+                "flame_gold","uncanny_amethyst","thunder_copper"
         ));
 
         // 盾牌
-        RECIPES_TO_GENERATE.put("shield", Arrays.asList("netherite_emerald","netherite_amethyst","netherite_copper","netherite_redstone","wither"
+        RECIPES_TO_GENERATE.put("shield", Arrays.asList("netherite_lapis_lazuli","poison_steel",
+                "flame_gold","uncanny_amethyst","thunder_copper"
         ));
 
         // 工作台配方物品类型（这些物品的工作台配方会由 BASE_MATERIALS 中的材料生成）
-        RECIPES_TO_GENERATE.put("spear", Arrays.asList("stone","iron","copper","diamond","golden","netherite","advanced_steel","amethyst","blue_diamond",
-                "crying_obsidian","dragon","emerald","gilding",
-                "nether_star","netherite_amethyst","netherite_copper",
-                "netherite_emerald","netherite_obsidian","netherite_redstone",
-                "obsidian","steel","wither","amethyst"));
-        RECIPES_TO_GENERATE.put("horse_armor", Arrays.asList());
-        RECIPES_TO_GENERATE.put("wolf_armor", Arrays.asList("advanced_steel","amethyst","blue_diamond",
-                "crying_obsidian","dragon","emerald","gilding",
-                "nether_star","netherite_amethyst","netherite_copper",
-                "netherite_emerald","netherite_obsidian","netherite_redstone",
-                "obsidian","steel","wither","amethyst"));
+        RECIPES_TO_GENERATE.put("spear", Arrays.asList("netherite_lapis_lazuli","poison_steel",
+                "flame_gold","uncanny_amethyst","thunder_copper"));
+        RECIPES_TO_GENERATE.put("horse_armor", Arrays.asList("netherite_lapis_lazuli"));
+        RECIPES_TO_GENERATE.put("wolf_armor", Arrays.asList("netherite_lapis_lazuli"));
     }
     // ===========================
 

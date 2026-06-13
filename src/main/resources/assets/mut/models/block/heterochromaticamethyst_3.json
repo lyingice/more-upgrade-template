@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/amethyst_cluster",
+  "textures": {
+    "cross": "mut:block/heterochromatic_amethyst_3",
+    "particle": "mut:block/heterochromatic_amethyst_3"
+  },
+  "render_type": "cutout"
+}

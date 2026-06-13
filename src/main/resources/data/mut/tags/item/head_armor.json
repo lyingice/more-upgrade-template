@@ -4,6 +4,13 @@
     "mut:amethyst_helmet",
     "mut:netherite_amethyst_helmet",
     "mut:wither_helmet",
-    "mut:super_netherite_helmet"
+    "mut:super_netherite_helmet",
+    "mut:lapis_lazuli_helmet",
+    "mut:netherite_lapis_lazuli_helmet",
+    "mut:position_steel_helmet",
+    "mut:flame_gold_helmet",
+    "mut:echoite_helmet",
+    "mut:uncanny_amethyst_helmet",
+    "mut:thunder_copper_helmet"
   ]
 }

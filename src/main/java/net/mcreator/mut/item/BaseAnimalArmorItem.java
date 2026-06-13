@@ -1,9 +1,15 @@
 package net.mcreator.mut.item;
 
 import net.mcreator.mut.init.AnimalArmorMaterials;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.AnimalArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 import java.util.function.Supplier;
 
@@ -124,4 +130,134 @@ public abstract class BaseAnimalArmorItem extends AnimalArmorItem {
             // 传入 0，不设置耐久属性
         }
     }**/
+    // ========== 马铠物品类 ==========
+
+    public static class SteelHorseArmorItem extends BaseAnimalArmorItem {
+        public SteelHorseArmorItem() {
+            super(AnimalArmorMaterials.STEEL, BodyType.EQUESTRIAN, false,0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/steel_horse_armor.png");}
+    }
+
+    public static class AdvancedSteelHorseArmorItem extends BaseAnimalArmorItem {
+        public AdvancedSteelHorseArmorItem() {
+            super(AnimalArmorMaterials.ADVANCED_STEEL, BodyType.EQUESTRIAN, false,0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/advanced_steel_horse_armor.png");}
+    }
+
+    public static class AmethystHorseArmorItem extends BaseAnimalArmorItem {
+        public AmethystHorseArmorItem() {
+            super(AnimalArmorMaterials.AMETHYST, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/amethyst_horse_armor.png");}
+    }
+
+    public static class BlueDiamondHorseArmorItem extends BaseAnimalArmorItem {
+        public BlueDiamondHorseArmorItem() {
+            super(AnimalArmorMaterials.BLUE_DIAMOND, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/blue_diamond_horse_armor.png");}
+    }
+
+    public static class CryingObsidianHorseArmorItem extends BaseAnimalArmorItem {
+        public CryingObsidianHorseArmorItem() {
+            super(AnimalArmorMaterials.CRYING_OBSIDIAN, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/crying_obsidian_horse_armor.png");}
+    }
+
+    public static class DragonHorseArmorItem extends BaseAnimalArmorItem {
+        public DragonHorseArmorItem() {
+            super(AnimalArmorMaterials.DRAGON, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/dragon_horse_armor.png");}
+    }
+
+    public static class EmeraldHorseArmorItem extends BaseAnimalArmorItem {
+        public EmeraldHorseArmorItem() {
+            super(AnimalArmorMaterials.EMERALD, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/emerald_horse_armor.png");}
+    }
+
+    public static class GildingHorseArmorItem extends BaseAnimalArmorItem {
+        public GildingHorseArmorItem() {
+            super(AnimalArmorMaterials.GILDING, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/gilding_horse_armor.png");}
+    }
+
+    public static class NetherStarHorseArmorItem extends BaseAnimalArmorItem {
+        public NetherStarHorseArmorItem() {
+            super(AnimalArmorMaterials.NETHER_STAR, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override
+        @OnlyIn(Dist.CLIENT)
+        public boolean isFoil(ItemStack itemstack) {
+            return true;
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/nether_star_horse_armor.png");}
+    }
+
+    public static class NetheriteAmethystHorseArmorItem extends BaseAnimalArmorItem {
+        public NetheriteAmethystHorseArmorItem() {
+            super(AnimalArmorMaterials.NETHERITE_AMETHYST, BodyType.EQUESTRIAN, false, 0);
+        }@Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_amethyst_horse_armor.png");}
+    }
+
+    public static class NetheriteCopperHorseArmorItem extends BaseAnimalArmorItem {
+        public NetheriteCopperHorseArmorItem() {
+            super(AnimalArmorMaterials.NETHERITE_COPPER, BodyType.EQUESTRIAN, false, 0);
+        }@Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_copper_horse_armor.png");}
+    }
+
+    public static class NetheriteEmeraldHorseArmorItem extends BaseAnimalArmorItem {
+        public NetheriteEmeraldHorseArmorItem() {
+            super(AnimalArmorMaterials.NETHERITE_EMERALD_ANIMAL, BodyType.EQUESTRIAN, false, 0);
+        }@Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_emerald_horse_armor.png");}
+    }
+
+    public static class NetheriteObsidianHorseArmorItem extends BaseAnimalArmorItem {
+        public NetheriteObsidianHorseArmorItem() {
+            super(AnimalArmorMaterials.NETHERITE_OBSIDIAN, BodyType.EQUESTRIAN, false, 0);
+        }@Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_obsidian_horse_armor.png");}
+    }
+
+    public static class NetheriteRedstoneHorseArmorItem extends BaseAnimalArmorItem {
+        public NetheriteRedstoneHorseArmorItem() {
+            super(AnimalArmorMaterials.NETHERITE_REDSTONE, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_redstone_horse_armor.png");}
+    }
+
+    public static class ObsidianHorseArmorItem extends BaseAnimalArmorItem {
+        public ObsidianHorseArmorItem() {
+            super(AnimalArmorMaterials.OBSIDIAN, BodyType.EQUESTRIAN, false, 0);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/obsidian_horse_armor.png");}
+    }
+
+    public static class WitherHorseArmorItem extends BaseAnimalArmorItem {
+        public WitherHorseArmorItem() {
+            super(AnimalArmorMaterials.WITHER, BodyType.EQUESTRIAN, false, 0,props -> props.component(DataComponents.CUSTOM_DATA, createWitherMarkData()));
+        }
+        private static CustomData createWitherMarkData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "wither_mark");
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);
+        }
+        @Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/wither_horse_armor.png");}
+    }
+    public static class LapisLazuliHorseArmorItem extends BaseAnimalArmorItem {
+        public LapisLazuliHorseArmorItem() {
+            super(AnimalArmorMaterials.LAPIS_LAZULI, BodyType.EQUESTRIAN, false, 0);
+        }@Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/lapis_lazuli_horse_armor.png");}
+    }
+    public static class NetheriteLapisLazuliHorseArmorItem extends BaseAnimalArmorItem {
+        public NetheriteLapisLazuliHorseArmorItem() {
+            super(AnimalArmorMaterials.NETHERITE_LAPIS_LAZULI, BodyType.EQUESTRIAN, false, 0);
+        }@Override public ResourceLocation getTexture() {return ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_lapis_lazuli_horse_armor.png");}
+    }
 }

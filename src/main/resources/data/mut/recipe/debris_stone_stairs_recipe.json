@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "a  ",
+    "aa ",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:debris_stone"
+    }
+  },
+  "result": {
+    "id": "mut:debris_stone_stairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:echoite_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "minecraft:netherite_hoe"
+  },
+  "addition": {
+    "item": "mut:echoite_ingot"
+  },
+  "result": {
+    "id": "mut:echoite_hoe"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:super_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "minecraft:smithing_table"
+  },
+  "addition": {
+    "item": "minecraft:nether_star"
+  },
+  "result": {
+    "id": "mut:super_smithing_table"
+  }
+}

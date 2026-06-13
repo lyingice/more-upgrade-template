@@ -1,0 +1,7 @@
+{
+  "parent": "mut:custom/shield_blocking",
+  "textures": {
+    "0": "mut:block/flame_gold_shield",
+    "particle": "mut:item/flame_gold_sword"
+  }
+}

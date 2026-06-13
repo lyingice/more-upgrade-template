@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:uncanny_amethyst_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:netherite_amethyst_leggings"
+  },
+  "addition": {
+    "item": "mut:uncanny_amethyst_star"
+  },
+  "result": {
+    "id": "mut:uncanny_amethyst_leggings"
+  }
+}

@@ -19,13 +19,13 @@ public class MutToolsArmorCreator {
     // 要生成 Java 文件的材质列表
     private static final String[] MATERIALS_TO_GENERATE_JAVA = {
             // 在这里添加要生成 Java 文件的材质名
-
     };
 
     // 要生成标签文件的材质列表（可以单独控制）
     private static final String[] MATERIALS_TO_GENERATE_TAGS = {
             "amethyst", "netherite_amethyst",
-            "wither","super_netherite"
+            "wither","super_netherite","lapis_lazuli","netherite_lapis_lazuli","position_steel",
+            "flame_gold","echoite","uncanny_amethyst","thunder_copper"
     };
 
     // 是否生成 Java 文件（工具类、盔甲类、模型文件）
@@ -138,15 +138,24 @@ public class MutToolsArmorCreator {
         tagMap.put("foot_armor", new ArrayList<>());
 
         for (String name : toGenerate) {
-            // 收集工具标签（假设所有材质都有工具）
-            for (String tool : TOOL_TYPES) {
-                tagMap.get(tool + "s").add("mut:" + name + "_" + tool);
+            // 从 MutMaterials 获取材质配置
+            MutMaterials.MutMaterial mat = MutMaterials.get(name);
+            if (mat == null) continue;
+
+            // 根据 hasTools 决定是否添加工具标签
+            if (mat.hasTools) {
+                for (String tool : TOOL_TYPES) {
+                    tagMap.get(tool + "s").add("mut:" + name + "_" + tool);
+                }
             }
-            // 收集盔甲标签（假设所有材质都有盔甲）
-            tagMap.get("head_armor").add("mut:" + name + "_helmet");
-            tagMap.get("chest_armor").add("mut:" + name + "_chestplate");
-            tagMap.get("leg_armor").add("mut:" + name + "_leggings");
-            tagMap.get("foot_armor").add("mut:" + name + "_boots");
+
+            // 根据 hasArmor 决定是否添加盔甲标签
+            if (mat.hasArmor) {
+                tagMap.get("head_armor").add("mut:" + name + "_helmet");
+                tagMap.get("chest_armor").add("mut:" + name + "_chestplate");
+                tagMap.get("leg_armor").add("mut:" + name + "_leggings");
+                tagMap.get("foot_armor").add("mut:" + name + "_boots");
+            }
         }
 
         int count = 0;

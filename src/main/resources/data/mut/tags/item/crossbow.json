@@ -21,6 +21,13 @@
     "mut:netherite_emerald_crossbow",
     "mut:netherite_amethyst_crossbow",
     "mut:amethyst_crossbow",
-    "mut:emerald_crossbow"
+    "mut:emerald_crossbow",
+    "mut:lapis_lazuli_crossbow",
+    "mut:netherite_lapis_lazuli_crossbow",
+    "mut:echoite_crossbow",
+    "mut:poison_steel_crossbow",
+    "mut:flame_gold_crossbow",
+    "mut:thunder_copper_crossbow",
+    "mut:uncanny_amethyst_crossbow"
   ]
 }

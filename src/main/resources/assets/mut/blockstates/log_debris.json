@@ -1,7 +1,16 @@
 {
   "variants": {
-    "": {
+    "axis=x": {
+      "model": "mut:block/log_debris",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
       "model": "mut:block/log_debris"
+    },
+    "axis=z": {
+      "model": "mut:block/log_debris",
+      "x": 90
     }
   }
 }

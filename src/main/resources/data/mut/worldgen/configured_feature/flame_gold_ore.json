@@ -1,7 +1,7 @@
 {
   "type": "minecraft:ore",
   "config": {
-    "size": 2,
+    "size": 8,
     "discard_chance_on_air_exposure": 0,
     "targets": [
       {
@@ -9,6 +9,17 @@
           "predicate_type": "blockstate_match",
           "block_state": {
             "Name": "mut:debris_stone"
+          }
+        },
+        "state": {
+          "Name": "mut:flame_gold_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "mut:debris_cobblestone"
           }
         },
         "state": {

@@ -63,12 +63,19 @@ public class MutCrossbowStats {
     public static final Stats WITHER             = Stats.of(1.25F, 5.0F,  3, 1965, Rarity.EPIC,   Ingredient.of(Items.NETHER_STAR),           22, true);
     public static final Stats DRAGON             = Stats.of(1.25F, 5.0F,  3, 3409, Rarity.EPIC,   Ingredient.of(Items.NETHER_STAR),           30, true);
     public static final Stats NETHERITE_EMERALD   = Stats.of(1.25F, 4.5F, 1409, Rarity.COMMON, Ingredient.of(MutModItems.NETHERITE_EMERALD_INGOT), 20);
-    public static final Stats NETHERITE_REDSTONE  = Stats.of(1.25F, 4.7F, 1481, Rarity.COMMON, Ingredient.of(MutModItems.NETHERITE_REDSTONE_INGOT), 15);
+    public static final Stats NETHERITE_REDSTONE  = Stats.of(1.0F, 4.7F, 1481, Rarity.COMMON, Ingredient.of(MutModItems.NETHERITE_REDSTONE_INGOT), 15);
     public static final Stats NETHERITE_AMETHYST  = Stats.of(1.25F, 4.5F, 1165, Rarity.COMMON, Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT), 16);
     public static final Stats NETHERITE_COPPER    = Stats.of(1.25F, 4.5F, 1081, Rarity.COMMON, Ingredient.of(Items.COPPER_BLOCK), 13);
-    public static final Stats EMERALD  = Stats.of(1.25F, 4.0F, 909,  Rarity.COMMON, Ingredient.of(Items.EMERALD),             20);
-    public static final Stats AMETHYST = Stats.of(1.25F, 3.4F, 640, Rarity.COMMON, Ingredient.of(Items.AMETHYST_SHARD),       16);
-    public static final Stats DEFAULT = IRON;
+    public static final Stats EMERALD             = Stats.of(1.25F, 4.0F, 909,  Rarity.COMMON, Ingredient.of(Items.EMERALD),             20);
+    public static final Stats AMETHYST            = Stats.of(1.25F, 3.4F, 640, Rarity.COMMON, Ingredient.of(Items.AMETHYST_SHARD),       16);
+    public static final Stats LAPIS_LAZULI = Stats.of(1.25F,3.3F,1,565,Rarity.COMMON,Ingredient.of(Items.LAPIS_LAZULI),30);
+    public static final Stats NETHERITE_LAPIS_LAZULI = Stats.of(1.25F,4.5F,1,965,Rarity.COMMON,Ingredient.of(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT),60);
+    public static final Stats POISON_STEEL = Stats.of(1.25F,5F,3,1481,Rarity.UNCOMMON,Ingredient.of(MutModItems.POSITION_STEEL_INGOT),15);
+    public static final Stats FLAME_GOLD = Stats.of(1.25F,5F,3,1481,Rarity.UNCOMMON,Ingredient.of(MutModItems.FLAME_GOLD_INGOT),25);
+    public static final Stats ECHOITE = Stats.of(1.25F,5F,6,2496,Rarity.EPIC,Ingredient.of(MutModItems.ECHOITE_INGOT),30);
+    public static final Stats THUNDER_COPPER = Stats.of(1.25F,5F,3,1481,Rarity.UNCOMMON,Ingredient.of(MutModItems.THUNDER_COPPER_STAR),1);
+    public static final Stats UNCANNY_AMETHYST = Stats.of(1.25F,5F,3,1865,Rarity.UNCOMMON,Ingredient.of(MutModItems.UNCANNY_AMETHYST_STAR),16);
+    public static final Stats DEFAULT             = IRON;
 
     // ========== Map：Item → Stats ==========
     private static final Map<Item, Stats> STATS_MAP = new HashMap<>();

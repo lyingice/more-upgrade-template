@@ -1,0 +1,162 @@
+{
+  "__comment": "材料→词缀映射配置 - 数据驱动",
+
+  "universal_materials": [
+    {
+      "item": "minecraft:nether_star",
+      "level_weight_bonus": 0.8,
+      "description": "affix.material.nether_star"
+    },
+    {
+      "item": "minecraft:diamond",
+      "level_weight_bonus": 0.2,
+      "description": "affix.material.diamond"
+    },
+    {
+      "item": "minecraft:netherite_ingot",
+      "level_weight_bonus": 0.4,
+      "description": "affix.material.netherite"
+    },
+    {
+      "item": "minecraft:echo_shard",
+      "level_weight_bonus": 0.25,
+      "description": "affix.material.echo_shard"
+    }
+  ],
+
+  "directed_materials": [
+    {
+      "item": "minecraft:poisonous_potato",
+      "affix_bonuses": [
+        { "target_affix": "poison_mark", "affix_weight_multiplier": 3.0, "level_weight_bonus": 0.6, "max_level": 8 }
+      ]
+    },
+    {
+      "item": "minecraft:blaze_rod",
+      "affix_bonuses": [
+        { "target_affix": "fire_mark", "affix_weight_multiplier": 3.0, "level_weight_bonus": 0.8, "max_level": 8 }
+      ]
+    },
+    {
+      "item": "minecraft:wither_rose",
+      "affix_bonuses": [
+        { "target_affix": "wither_mark", "affix_weight_multiplier": 2.5, "level_weight_bonus": 0.6, "max_level": 7 }
+      ]
+    },
+    {
+      "item": "minecraft:magma_cream",
+      "affix_bonuses": [
+        { "target_affix": "fire_mark", "affix_weight_multiplier": 1.5, "level_weight_bonus": 0.4 },
+        { "target_affix": "regeneration_mark", "affix_weight_multiplier": 0.5, "level_weight_bonus": 0.15 }
+      ]
+    },
+    {
+      "item": "minecraft:ghast_tear",
+      "affix_bonuses": [
+        { "target_affix": "regeneration_mark", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5, "max_level": 7 }
+      ]
+    },
+    {
+      "item": "minecraft:heart_of_the_sea",
+      "affix_bonuses": [
+        { "target_affix": "tidal_surge", "affix_weight_multiplier": 3.0, "level_weight_bonus": 1.0, "max_level": 8 }
+      ]
+    },
+    {
+      "item": "minecraft:prismarine_crystals",
+      "affix_bonuses": [
+        { "target_affix": "tidal_surge", "affix_weight_multiplier": 1.8, "level_weight_bonus": 0.4 }
+      ]
+    },
+    {
+      "item": "minecraft:rabbit_foot",
+      "affix_bonuses": [
+        { "target_affix": "momentum", "affix_weight_multiplier": 1.5, "level_weight_bonus": 0.3 },
+        { "target_affix": "sharpshooter", "affix_weight_multiplier": 1.5, "level_weight_bonus": 0.3 }
+      ]
+    },
+    {
+      "item": "minecraft:fermented_spider_eye",
+      "affix_bonuses": [
+        { "target_affix": "poison_mark", "affix_weight_multiplier": 1.5, "level_weight_bonus": 0.5 },
+        { "target_affix": "wither_mark", "affix_weight_multiplier": 1.5, "level_weight_bonus": 0.5 }
+      ]
+    },
+    {
+      "item": "minecraft:golden_carrot",
+      "affix_bonuses": [
+        { "target_affix": "strength_blessing", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 }
+      ]
+    },
+    {
+      "item": "minecraft:cookie",
+      "affix_bonuses": [
+        { "target_affix": "big_stomach", "affix_weight_multiplier": 2.5, "level_weight_bonus": 0.5 }
+      ]
+    },
+    {
+      "item": "minecraft:ender_pearl",
+      "affix_bonuses": [
+        { "target_affix": "energy_conversion", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 }
+      ]
+    },
+    {
+      "item": "minecraft:arrow",
+      "affix_bonuses": [
+        { "target_affix": "piercing_spear", "affix_weight_multiplier": 1.8, "level_weight_bonus": 0.4 },
+        { "target_affix": "sharpshooter", "affix_weight_multiplier": 1.5, "level_weight_bonus": 0.25 }
+      ]
+    },
+    {
+      "item": "minecraft:wind_charge",
+      "affix_bonuses": [
+        { "target_affix": "momentum", "affix_weight_multiplier": 2.5, "level_weight_bonus": 0.6, "max_level": 7 }
+      ]
+    },
+    {
+      "item": "minecraft:trident",
+      "affix_bonuses": [
+        { "target_affix": "tidal_surge", "affix_weight_multiplier": 3.0, "level_weight_bonus": 0.8, "max_level": 8 }
+      ]
+    },
+    {
+      "item": "minecraft:golden_apple",
+      "affix_bonuses": [
+        { "target_affix": "strength_blessing", "affix_weight_multiplier": 3.0, "level_weight_bonus": 0.8, "max_level": 8 }
+      ]
+    },
+    {
+      "item": "minecraft:spectral_arrow",
+      "affix_bonuses": [
+        { "target_affix": "sharpshooter", "affix_weight_multiplier": 2.5, "level_weight_bonus": 0.6, "max_level": 7 }
+      ]
+    },
+    {
+      "item": "minecraft:dragon_breath",
+      "affix_bonuses": [
+        { "target_affix": "tidal_surge", "affix_weight_multiplier": 2.0, "level_weight_bonus": 1.2, "max_level": 8 },
+        { "target_affix": "momentum", "affix_weight_multiplier": 2.0, "level_weight_bonus": 1.2, "max_level": 8 },
+        { "target_affix": "strength_blessing", "affix_weight_multiplier": 2.0, "level_weight_bonus": 1.2, "max_level": 8 }
+      ]
+    }
+  ],
+
+  "tag_driven_materials": [
+    { "tag": "mut:affix_bonus/poison", "affix_bonuses": [ { "target_affix": "poison_mark", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 } ] },
+    { "tag": "mut:affix_bonus/fire", "affix_bonuses": [ { "target_affix": "fire_mark", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 } ] },
+    { "tag": "mut:affix_bonus/wither", "affix_bonuses": [ { "target_affix": "wither_mark", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 } ] },
+    { "tag": "mut:affix_bonus/healing", "affix_bonuses": [ { "target_affix": "regeneration_mark", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 } ] },
+    { "tag": "mut:affix_bonus/water", "affix_bonuses": [ { "target_affix": "tidal_surge", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 } ] },
+    { "tag": "mut:affix_bonus/speed", "affix_bonuses": [ { "target_affix": "momentum", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 } ] },
+    { "tag": "mut:affix_bonus/strength", "affix_bonuses": [ { "target_affix": "strength_blessing", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 } ] },
+    { "tag": "mut:affix_bonus/energy", "affix_bonuses": [ { "target_affix": "energy_conversion", "affix_weight_multiplier": 2.0, "level_weight_bonus": 0.5 } ] }
+  ],
+
+  "material_tiers": [
+    { "tier": 1, "level_bonus": 0.05, "items": ["minecraft:coal", "minecraft:flint", "minecraft:stick", "minecraft:rotten_flesh"] },
+    { "tier": 2, "level_bonus": 0.1, "items": ["minecraft:iron_ingot", "minecraft:copper_ingot", "minecraft:gold_ingot"] },
+    { "tier": 3, "level_bonus": 0.2, "items": ["minecraft:diamond", "minecraft:emerald", "minecraft:blaze_rod", "minecraft:arrow", "minecraft:ender_pearl"] },
+    { "tier": 4, "level_bonus": 0.35, "items": ["minecraft:netherite_ingot", "minecraft:nether_star", "minecraft:heart_of_the_sea", "minecraft:ghast_tear"] },
+    { "tier": 5, "level_bonus": 0.6, "items": ["minecraft:dragon_breath", "minecraft:echo_shard"] }
+  ]
+}

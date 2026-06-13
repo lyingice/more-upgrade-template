@@ -1,0 +1,4 @@
+{
+  "parent": "minecraft:block/trial_spawner_ejecting_reward",
+  "render_type": "cutout"
+}

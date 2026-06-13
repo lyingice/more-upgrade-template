@@ -78,5 +78,29 @@
         "stream": false
       }
     ]
+  },
+  "item.spear.lunge_1": {
+    "sounds": [
+      {
+        "name": "mut:spear_lunge1",
+        "stream": false
+      }
+    ]
+  },
+  "item.spear.lunge_2": {
+    "sounds": [
+      {
+        "name": "mut:spear_lunge2",
+        "stream": false
+      }
+    ]
+  },
+  "item.spear.lunge_3": {
+    "sounds": [
+      {
+        "name": "mut:spear_lunge3",
+        "stream": false
+      }
+    ]
   }
 }

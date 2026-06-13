@@ -1,6 +1,5 @@
 package net.mcreator.mut.procedures;
 
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -19,42 +18,55 @@ public class GetBeefHurtProcedure {
 	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
+
+		// 确保物品堆叠数量为1，避免消耗多个物品
 		itemstack.setCount(1);
-		if (getEntityGameType(entity) == GameType.SURVIVAL || getEntityGameType(entity) == GameType.ADVENTURE) {
-			if (!(itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING)) != 0)) {
-				if (world instanceof ServerLevel _level) {
-					itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
-					});
-				}
-			} else {
-				if (Math.random() >= (double) itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING))
-						/ (itemstack.getEnchantmentLevel(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING)) + 1)) {
-					if (world instanceof ServerLevel _level) {
-						itemstack.hurtAndBreak(1, _level, null, _stkprov -> {
-						});
-					}
-				}
-			}
+
+		// 仅在生存或冒险模式下消耗耐久
+		GameType gameType = getEntityGameType(entity);
+		if (gameType != GameType.SURVIVAL && gameType != GameType.ADVENTURE) {
+			return;
 		}
-		if (itemstack.getDamageValue() > itemstack.getDamageValue()) {
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
-				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack21 = new ItemStack(Blocks.AIR).copy();
-					_setstack21.setCount(1);
-					_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack21);
-					if (_entity instanceof Player _player)
-						_player.getInventory().setChanged();
-				}
-			}
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == itemstack.getItem()) {
-				if (entity instanceof LivingEntity _entity) {
-					ItemStack _setstack25 = new ItemStack(Blocks.AIR).copy();
-					_setstack25.setCount(1);
-					_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack25);
-					if (_entity instanceof Player _player)
-						_player.getInventory().setChanged();
-				}
-			}
+
+		if (!(world instanceof ServerLevel serverLevel)) {
+			return;
+		}
+
+		// 获取耐久附魔等级（缓存结果避免重复注册表查找）
+		int unbreakingLevel = itemstack.getEnchantmentLevel(
+				world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.UNBREAKING)
+		);
+
+		// 判断是否消耗耐久：无耐久附魔时必定消耗，有时按概率减免
+		boolean shouldDamage = unbreakingLevel == 0
+				|| Math.random() >= (double) unbreakingLevel / (unbreakingLevel + 1);
+
+		if (shouldDamage) {
+			itemstack.hurtAndBreak(1, serverLevel, null, _stkprov -> {
+			});
+		}
+
+		// 检查物品是否已损坏（耐久度归零），若是则清空手持槽位
+		if (itemstack.getDamageValue() > itemstack.getMaxDamage() - 1) {
+			clearHandIfMatching(entity, itemstack, InteractionHand.OFF_HAND);
+			clearHandIfMatching(entity, itemstack, InteractionHand.MAIN_HAND);
+		}
+	}
+
+	/**
+	 * 如果实体指定手中的物品与目标物品匹配，则清空该手槽位
+	 */
+	private static void clearHandIfMatching(Entity entity, ItemStack targetItem, InteractionHand hand) {
+		if (!(entity instanceof LivingEntity livingEntity)) {
+			return;
+		}
+		ItemStack handItem = livingEntity.getItemInHand(hand);
+		if (handItem.getItem() != targetItem.getItem()) {
+			return;
+		}
+		livingEntity.setItemInHand(hand, ItemStack.EMPTY);
+		if (livingEntity instanceof Player player) {
+			player.getInventory().setChanged();
 		}
 	}
 

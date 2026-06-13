@@ -42,7 +42,15 @@ public class MutCrossbowPull {
                     MutModItems.NETHERITE_EMERALD_CROSSBOW.get(),
                     MutModItems.NETHERITE_REDSTONE_CROSSBOW.get(),
                     MutModItems.AMETHYST_CROSSBOW.get(),
-                    MutModItems.NETHERITE_AMETHYST_CROSSBOW.get()
+                    MutModItems.NETHERITE_AMETHYST_CROSSBOW.get(),
+                    MutModItems.LAPIS_LAZULI_CROSSBOW.get(),
+                    MutModItems.NETHERITE_LAPIS_LAZULI_CROSSBOW.get(),
+                    MutModItems.ECHOITE_CROSSBOW.get(),
+                    MutModItems.POISON_STEEL_CROSSBOW.get(),
+                    MutModItems.FLAME_GOLD_CROSSBOW.get(),
+                    MutModItems.THUNDER_COPPER_CROSSBOW.get(),
+                    MutModItems.UNCANNY_AMETHYST_CROSSBOW.get()
+
             );
 
             for (Item item : crossbows) {
@@ -83,8 +91,6 @@ public class MutCrossbowPull {
                                     .anyMatch(s -> s.getItem() == net.minecraft.world.item.Items.FIREWORK_ROCKET);
                             return isFirework ? 1.0F : 0.0F;
                         });
-
-                System.out.println("Registered crossbow properties for: " + BuiltInRegistries.ITEM.getKey(item));
             }
         });
     }

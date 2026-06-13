@@ -1,0 +1,26 @@
+{
+  "name": "§5首领试炼刷怪笼",
+  "category": "mut:sigil_forge",
+  "icon": "mut:sigil_forge_boss_trial_spawner",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "mut:sigil_forge_boss_trial_spawner",
+      "title": "§5首领试炼刷怪笼",
+      "text": "首领试炼刷怪笼是一种需要钥匙开启的刷怪笼，只会刷新一个Boss级别的怪物。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "§5首领试炼开启条件",
+      "text": "开启试炼的钥匙可以在不凡的符锻宝库中获取。",
+      "item": "mut:sigil_forge_vault_unique"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "§5符锻首领之钥",
+      "text": "开启试炼的钥匙。",
+      "item": "mut:sigil_forge_boss_key"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,vault_state=inactive,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common"
+    },
+    "facing=east,vault_state=inactive,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common",
+      "y": 90
+    },
+    "facing=south,vault_state=inactive,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common",
+      "y": 180
+    },
+    "facing=west,vault_state=inactive,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common",
+      "y": 270
+    },
+    "facing=north,vault_state=active,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common"
+    },
+    "facing=east,vault_state=active,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common",
+      "y": 90
+    },
+    "facing=south,vault_state=active,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common",
+      "y": 180
+    },
+    "facing=west,vault_state=active,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common",
+      "y": 270
+    },
+    "facing=north,vault_state=unlocking,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common_unlocking"
+    },
+    "facing=east,vault_state=unlocking,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common_unlocking",
+      "y": 90
+    },
+    "facing=south,vault_state=unlocking,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common_unlocking",
+      "y": 180
+    },
+    "facing=west,vault_state=unlocking,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common_unlocking",
+      "y": 270
+    },
+    "facing=north,vault_state=ejecting,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common_unlocking"
+    },
+    "facing=east,vault_state=ejecting,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common_unlocking",
+      "y": 90
+    },
+    "facing=south,vault_state=ejecting,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common_unlocking",
+      "y": 180
+    },
+    "facing=west,vault_state=ejecting,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_common_unlocking",
+      "y": 270
+    }
+  }
+}

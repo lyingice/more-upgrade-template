@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:thunder_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:netherite_copper_bow"
+  },
+  "addition": {
+    "item": "mut:thunder_copper_star"
+  },
+  "result": {
+    "id": "mut:thunder_copper_bow"
+  }
+}

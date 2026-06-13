@@ -1,10 +1,15 @@
 package net.mcreator.mut.item;
 
 import net.mcreator.mut.MutMod;
+import net.mcreator.mut.init.MutModSounds;
 import net.mcreator.mut.util.MutKnownMovementAccessor;
 import net.mcreator.mut.util.MutSpearCooldownAccessor;
 import net.mcreator.mut.util.SpearCollision;
 import net.mcreator.mut.util.SpearCondition;
+import net.minecraft.client.Minecraft;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.Item;
@@ -25,6 +30,9 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 import java.util.List;
 import java.util.Optional;
@@ -63,27 +71,21 @@ public abstract class SpearItem extends Item {
     protected int getSpearEnchantmentValue() { return 0; }
     protected boolean canRepair(ItemStack stack, ItemStack repairCandidate) { return false; }
 
+
     // ========== 静态工具 ==========
 
     public static Vec3 getMotion(Entity entity) {
         // 骑乘时用坐骑的 MOVEMENT_SPEED 属性
         if (entity.isPassenger() && entity.getVehicle() != null) {
             Entity vehicle = entity.getVehicle();
-            if (vehicle instanceof LivingEntity living) {
-                var attr = living.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED);
-                if (attr != null) {
-                    // MOVEMENT_SPEED 基础值 ≈ 0.1~0.3，乘以 20 换算成 m/s
-                    double speed = attr.getValue() * 20.0;
-                    Vec3 look = entity.getLookAngle();
-                    Vec3 motion = look.scale(speed);
-                    // 如果坐骑在地上，去掉 Y 分量
-                    if (vehicle.onGround()) {
-                        motion = motion.with(net.minecraft.core.Direction.Axis.Y, 0.0);
-                    }
-                    return motion;
+            Vec3 motion = vehicle.position().subtract(vehicle.xo, vehicle.yo, vehicle.zo);
+            if (motion.lengthSqr() > 0.0001) {
+                Vec3 vec3 = motion.scale(20.0);
+                if (vehicle.onGround()) {
+                    return vec3.with(net.minecraft.core.Direction.Axis.Y, 0.0);
                 }
+                return vec3;
             }
-            Vec3 motion = entity.position().subtract(entity.xo, entity.yo, entity.zo);
         }
 
         // 玩家用已知移动

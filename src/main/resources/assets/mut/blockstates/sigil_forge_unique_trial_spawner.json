@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,trial_spawner_state=inactive": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner"
+    },
+    "facing=east,trial_spawner_state=inactive": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner",
+      "y": 90
+    },
+    "facing=south,trial_spawner_state=inactive": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner",
+      "y": 180
+    },
+    "facing=west,trial_spawner_state=inactive": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner",
+      "y": 270
+    },
+    "facing=north,trial_spawner_state=active": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner_active"
+    },
+    "facing=east,trial_spawner_state=active": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner_active",
+      "y": 90
+    },
+    "facing=south,trial_spawner_state=active": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner_active",
+      "y": 180
+    },
+    "facing=west,trial_spawner_state=active": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner_active",
+      "y": 270
+    },
+    "facing=north,trial_spawner_state=ejecting": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner_ejecting"
+    },
+    "facing=east,trial_spawner_state=ejecting": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner_ejecting",
+      "y": 90
+    },
+    "facing=south,trial_spawner_state=ejecting": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner_ejecting",
+      "y": 180
+    },
+    "facing=west,trial_spawner_state=ejecting": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner_ejecting",
+      "y": 270
+    },
+    "facing=north,trial_spawner_state=cooldown": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner"
+    },
+    "facing=east,trial_spawner_state=cooldown": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner",
+      "y": 90
+    },
+    "facing=south,trial_spawner_state=cooldown": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner",
+      "y": 180
+    },
+    "facing=west,trial_spawner_state=cooldown": {
+      "model": "mut:block/sigil_forge_unique_trial_spawner",
+      "y": 270
+    }
+  }
+}

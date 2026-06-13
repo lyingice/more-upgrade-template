@@ -16,6 +16,7 @@ public class MutCrossbowLoadCountConfig {
     public final ModConfigSpec.IntValue globalExtraLoadCount;
     public final ModConfigSpec.IntValue loadCountPerLevel;
     public final ModConfigSpec.ConfigValue<List<? extends String>> perCrossbowExtraLoadCounts;
+    public final ModConfigSpec.IntValue multishotCount;
 
     private Map<String, Integer> perCrossbowCache = new HashMap<>();
     private boolean cacheValid = false;
@@ -50,6 +51,12 @@ public class MutCrossbowLoadCountConfig {
                         List::of,
                         obj -> obj instanceof String s && s.matches("^[a-z0-9_.-]+:[a-z0-9_.-]+=\\d+$")
                 );
+
+        multishotCount = builder
+                .comment("多重射击附魔每次射击消耗和发射的箭矢数量",
+                        "仅当弩上有多重射击附魔时生效",
+                        "默认 3，与原版多重射击一致")
+                .defineInRange("multishot_count", 3, 1, 64);
     }
 
     // ==================== 查询方法（try-catch 兜底） ====================
@@ -77,6 +84,14 @@ public class MutCrossbowLoadCountConfig {
 
     public static int getTotalExtraLoadCount(Item crossbow) {
         return getGlobalExtraLoadCount() + getPerCrossbowExtraLoadCount(crossbow);
+    }
+
+    public static int getMultishotCount() {
+        try {
+            return INSTANCE.multishotCount.get();
+        } catch (IllegalStateException e) {
+            return 3;
+        }
     }
 
     private int getPerCrossbowExtra(String registryName) {

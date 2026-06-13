@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:deep_iron_raw_block"
+    }
+  ],
+  "result": {
+    "id": "mut:deep_iron_raw",
+    "count": 9
+  }
+}

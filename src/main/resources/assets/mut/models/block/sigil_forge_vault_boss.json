@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/template_vault",
+  "textures": {
+    "bottom": "minecraft:block/vault_bottom",
+    "front": "mut:block/vault_front_on_boss",
+    "side": "mut:block/vault_side_on_boss",
+    "top": "minecraft:block/vault_top"
+  },
+  "render_type": "cutout"
+}

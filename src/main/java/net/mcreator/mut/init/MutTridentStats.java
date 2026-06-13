@@ -46,7 +46,13 @@ public class MutTridentStats {
     public static final Stats NETHERITE_AMETHYST = new Stats(9.5, -2.9F, 12.0, 14, Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT), Rarity.EPIC, 950, true);
     public static final Stats AMETHYST = new Stats(7.5, -2.9F, 9.0, 16, Ingredient.of(Items.AMETHYST_SHARD), Rarity.COMMON, 425, false);
     public static final Stats EMERALD = new Stats(8.0, -2.9F, 10.0, 20, Ingredient.of(Items.EMERALD), Rarity.COMMON, 694, false);
-
+    public static final Stats LAPIS_LAZULI = new Stats(7.5,-2.9F,6,30,Ingredient.of(Items.LAPIS_LAZULI),Rarity.COMMON,350,true);
+    public static final Stats NETHERITE_LAPIS_LAZULI = new Stats(9.5,-2.9F,11,60,Ingredient.of(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT),Rarity.COMMON,750,true);
+    public static final Stats POISON_STEEL = new Stats(10,-2.7F,13,15,Ingredient.of(MutModItems.POSITION_STEEL_INGOT),Rarity.UNCOMMON,1266,true);
+    public static final Stats FLAME_GOLD = new Stats(10,-2.7F,13,25,Ingredient.of(MutModItems.FLAME_GOLD_INGOT),Rarity.UNCOMMON,1266,true);
+    public static final Stats ECHOITE = new Stats(12,-3F,14,30,Ingredient.of(MutModItems.ECHOITE_INGOT),Rarity.EPIC,2281,true);
+    public static final Stats THUNDER_COPPER = new Stats(11,-2.6F,13,1,Ingredient.of(MutModItems.THUNDER_COPPER_STAR),Rarity.UNCOMMON,1266,true);
+    public static final Stats UNCANNY_AMETHYST = new Stats(12.5,-2.8F,13.5,16,Ingredient.of(MutModItems.UNCANNY_AMETHYST_STAR),Rarity.UNCOMMON,1650,true);
     // ========== 映射表 ==========
 
     private static final Map<Supplier<Item>, Stats> STATS_MAP = new HashMap<>();
@@ -74,6 +80,13 @@ public class MutTridentStats {
         STATS_MAP.put(MutModItems.NETHERITE_AMETHYST_TRIDENT, NETHERITE_AMETHYST);
         STATS_MAP.put(MutModItems.AMETHYST_TRIDENT, AMETHYST);
         STATS_MAP.put(MutModItems.EMERALD_TRIDENT, EMERALD);
+        STATS_MAP.put(MutModItems.LAPIS_LAZULI_TRIDENT,LAPIS_LAZULI);
+        STATS_MAP.put(MutModItems.NETHERITE_LAPIS_LAZULI_TRIDENT,NETHERITE_LAPIS_LAZULI);
+        STATS_MAP.put(MutModItems.ECHOITE_TRIDENT,ECHOITE);
+        STATS_MAP.put(MutModItems.POISON_STEEL_TRIDENT,POISON_STEEL);
+        STATS_MAP.put(MutModItems.FLAME_GOLD_TRIDENT,FLAME_GOLD);
+        STATS_MAP.put(MutModItems.THUNDER_COPPER_TRIDENT,THUNDER_COPPER);
+        STATS_MAP.put(MutModItems.UNCANNY_AMETHYST_TRIDENT,UNCANNY_AMETHYST);
     }
 
     public static Stats get(Item item) {

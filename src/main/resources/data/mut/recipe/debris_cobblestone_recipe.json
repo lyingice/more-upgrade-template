@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "experience": 1,
+  "cookingtime": 450,
+  "ingredient": {
+    "item": "mut:debris_cobblestone"
+  },
+  "result": {
+    "id": "mut:debris_stone"
+  }
+}

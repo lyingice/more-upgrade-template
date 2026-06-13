@@ -44,7 +44,7 @@ public class MutThrownTrident extends ThrownTrident {
 
     @Override
     public EntityType<?> getType() {
-        return EntityType.TRIDENT;
+        return net.mcreator.mut.init.MutModItems.MUT_THROWN_TRIDENT.get();
     }
     @Override
     protected void onHitEntity(net.minecraft.world.phys.EntityHitResult result) {

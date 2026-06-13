@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:netherite_lapis_lazuli_block"
+    }
+  ],
+  "result": {
+    "id": "mut:netherite_lapis_lazuli_ingot",
+    "count": 9
+  }
+}

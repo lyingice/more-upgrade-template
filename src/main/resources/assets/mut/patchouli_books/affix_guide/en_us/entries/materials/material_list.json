@@ -1,0 +1,31 @@
+{
+  "name": "§6Material Reference",
+  "category": "mut:materials",
+  "icon": "minecraft:poisonous_potato",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§lMaterial → Affix Mapping",
+      "text": "Here are the directed affixes and bonus effects for each material:"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:blaze_rod",
+      "title": "§6Blaze Rod → Flame Brand",
+      "text": "§6Blaze Rods§r greatly increase the chance of obtaining Flame Brand (×3.0 weight), with +180% tier weight bonus."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:poisonous_potato",
+      "title": "§2Poisonous Potato → Venom Brand",
+      "text": "§2Poisonous Potatoes§r greatly increase the chance of obtaining Venom Brand (×3.0 weight), with +150% tier weight bonus."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:wither_rose",
+      "title": "§8Wither Rose → Wither Brand",
+      "text": "§8Wither Roses§r increase the chance of obtaining Wither Brand (×2.5 weight), with +150% tier weight bonus."
+    }
+  ]
+}

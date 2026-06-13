@@ -1,0 +1,7 @@
+{
+  "parent": "mut:custom/shield_blocking",
+  "textures": {
+    "0": "mut:block/uncanny_amethyst_shield",
+    "particle": "mut:item/uncanny_amethyst_sword"
+  }
+}

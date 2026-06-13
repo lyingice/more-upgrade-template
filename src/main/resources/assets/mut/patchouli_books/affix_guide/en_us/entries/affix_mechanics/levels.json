@@ -1,0 +1,17 @@
+{
+  "name": "§eTiers & Probability",
+  "category": "mut:affix_mechanics",
+  "icon": "minecraft:enchanting_table",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§lTier Probability Mechanics",
+      "text": "Affix tiers are determined by multiple factors:$(br)• §bEnchantability§7: Higher enchantment value increases chance for high-tier affixes$(br)• §bMaterial Bonuses§7: Enchanting materials can significantly boost tier probabilities$(br)• §bPity System§7: Consecutive low-tier rolls accumulate luck$(br)• §bExisting Affixes§7: Having a high-tier affix slightly increases upgrade chance"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The system uses §dLinear Normalization§7 to calculate probability distribution for each tier.$(br2)You can view real-time tier probabilities in the Super Smithing Table GUI.$(br2)Using better enchanting materials greatly increases the chance of obtaining high-tier affixes."
+    }
+  ]
+}

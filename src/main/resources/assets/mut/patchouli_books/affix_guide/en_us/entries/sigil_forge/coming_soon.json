@@ -1,0 +1,13 @@
+{
+  "name": "§cMore Coming Soon",
+  "category": "mut:sigil_forge",
+  "icon": "minecraft:barrier",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§lComing Soon",
+      "text": "Future Sigil Forge updates will include:$(br)• New unique affixes$(br)• Dimension-exclusive enchanting materials$(br)• Higher tier affix breakthroughs$(br2)Stay tuned!"
+    }
+  ]
+}

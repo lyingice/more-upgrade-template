@@ -137,18 +137,9 @@ public abstract class NewCrossbowItem extends CrossbowItem {
             return;
         }
 
-        ItemStack projectileToShoot = allProjectiles.get(0).copy();
-
-        if (allProjectiles.size() > 1) {
-            allProjectiles.remove(0);
-            weapon.set(DataComponents.CHARGED_PROJECTILES, ChargedProjectiles.of(allProjectiles));
-        } else {
-            weapon.set(DataComponents.CHARGED_PROJECTILES, ChargedProjectiles.EMPTY);
-        }
-
         float speed = MutCrossbowStats.projectileSpeed(getSelfItem());
 
-        // 弹射物速度 > 4.5 时完全移除散射，否则按速度比例缩放
+        // 散射处理
         float adjustedInaccuracy;
         if (speed > 4.5F) {
             adjustedInaccuracy = 0.0F;
@@ -156,8 +147,50 @@ public abstract class NewCrossbowItem extends CrossbowItem {
             adjustedInaccuracy = inaccuracy * (3.15F / speed);
         }
 
+        // 检查是否有原版多重射击附魔
+        ItemEnchantments enchantments = weapon.getOrDefault(DataComponents.ENCHANTMENTS, ItemEnchantments.EMPTY);
+        boolean hasMultishot = false;
+        for (var entry : enchantments.entrySet()) {
+            if ("minecraft:multishot".equals(entry.getKey().getRegisteredName())) {
+                hasMultishot = true;
+                break;
+            }
+        }
+
+        List<ItemStack> projectilesToShoot;
+
+        if (hasMultishot) {
+            // ========== 多重射击模式 ==========
+            int multishotCount = MutCrossbowLoadCountConfig.getMultishotCount();
+            int toShoot = Math.min(multishotCount, allProjectiles.size());
+
+            projectilesToShoot = new ArrayList<>();
+            for (int i = 0; i < toShoot; i++) {
+                projectilesToShoot.add(allProjectiles.get(i).copy());
+            }
+
+            // 移除已取出的箭
+            if (toShoot < allProjectiles.size()) {
+                allProjectiles.subList(0, toShoot).clear();
+                weapon.set(DataComponents.CHARGED_PROJECTILES, ChargedProjectiles.of(allProjectiles));
+            } else {
+                weapon.set(DataComponents.CHARGED_PROJECTILES, ChargedProjectiles.EMPTY);
+            }
+
+        } else {
+            // ========== 连发模式 ==========
+            projectilesToShoot = List.of(allProjectiles.get(0).copy());
+
+            if (allProjectiles.size() > 1) {
+                allProjectiles.remove(0);
+                weapon.set(DataComponents.CHARGED_PROJECTILES, ChargedProjectiles.of(allProjectiles));
+            } else {
+                weapon.set(DataComponents.CHARGED_PROJECTILES, ChargedProjectiles.EMPTY);
+            }
+        }
+
         this.shoot(serverLevel, shooter, hand, weapon,
-                List.of(projectileToShoot), speed, adjustedInaccuracy,
+                projectilesToShoot, speed, adjustedInaccuracy,
                 shooter instanceof Player, target);
 
         level.playSound(null, shooter.getX(), shooter.getY(), shooter.getZ(),

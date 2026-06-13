@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "mut:echoite_block"
+    }
+  ],
+  "result": {
+    "id": "mut:echoite_ingot",
+    "count": 9
+  }
+}

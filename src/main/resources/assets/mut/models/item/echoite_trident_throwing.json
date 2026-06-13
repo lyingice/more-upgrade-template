@@ -1,0 +1,43 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "mut:custom/trident",
+    "textures": {
+      "2": "mut:block/echoite_trident",
+      "particle": "mut:item/echoite_trident"
+    },
+    "display": {
+      "thirdperson_righthand": {
+        "rotation": [-180, 90, 0],
+        "translation": [0, 4, 1],
+        "scale": [1, 1, 1]
+      },
+      "thirdperson_lefthand": {
+        "rotation": [-180, 90, 0],
+        "translation": [0, 4, 1],
+        "scale": [1, 1, 1]
+      }
+    }
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/echoite_trident"
+      }
+    },
+    "fixed": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/echoite_trident"
+      }
+    },
+    "ground": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/echoite_trident"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "parent": "mut:custom/shield",
+  "textures": {
+    "0": "mut:block/uncanny_amethyst_shield",
+    "particle": "mut:item/uncanny_amethyst_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "mut:item/uncanny_amethyst_shield_0"
+    }
+  ]
+}

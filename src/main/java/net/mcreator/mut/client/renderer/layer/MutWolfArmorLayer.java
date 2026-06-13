@@ -46,6 +46,9 @@ public class MutWolfArmorLayer extends RenderLayer<Wolf, WolfModel<Wolf>> {
         TEXTURE_MAP.put("mut:netherite_emerald_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_emerald_wolf_armor.png"));
         TEXTURE_MAP.put("mut:amethyst_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/amethyst_wolf_armor.png"));
         TEXTURE_MAP.put("mut:netherite_amethyst_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_amethyst_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:lapis_lazuli_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/lapis_lazuli_wolf_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_lapis_lazuli_wolf_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/wolf/netherite_lapis_lazuli_wolf_armor.png"));
+
     }
 
     private final WolfModel<Wolf> model;

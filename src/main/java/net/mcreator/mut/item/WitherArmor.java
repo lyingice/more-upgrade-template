@@ -25,6 +25,7 @@ public abstract class WitherArmor extends ArmorItem {
     private static CustomData createWitherMarkData() {
         CompoundTag tag = new CompoundTag();
         tag.putString("Affix", "wither_mark");
+        tag.putInt("AffixLevel", 3);
         return CustomData.of(tag);
     }
     public static class Helmet extends WitherArmor {

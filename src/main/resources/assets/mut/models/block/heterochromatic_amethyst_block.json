@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mut:block/heterochromatic_amethyst_block",
+    "particle": "mut:block/heterochromatic_amethyst_block"
+  },
+  "render_type": "solid"
+}

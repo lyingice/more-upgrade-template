@@ -4,6 +4,8 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -278,6 +280,7 @@ public abstract class BaseMaceItem extends MaceItem {
         private static CustomData createWitherMarkData() {
             CompoundTag tag = new CompoundTag();
             tag.putString("Affix", "wither_mark");
+            tag.putInt("AffixLevel", 3);
             return CustomData.of(tag);
         }
     }
@@ -321,4 +324,51 @@ public abstract class BaseMaceItem extends MaceItem {
             super(MutMaceStats.AMETHYST);
         }
     }
+    public static class LapisLazuliMaceItem extends BaseMaceItem {
+        public LapisLazuliMaceItem() {
+            super(MutMaceStats.LAPIS_LAZULI);}}
+    public static class NetheriteLapisLazuliMaceItem extends BaseMaceItem {
+        public NetheriteLapisLazuliMaceItem() {
+            super(MutMaceStats.NETHERITE_LAPIS_LAZULI);}}
+    public static class PoisonSteelMaceItem extends BaseMaceItem {
+        public PoisonSteelMaceItem() {
+            super(MutMaceStats.POISON_STEEL,buildPropertiesWithAffix(MutMaceStats.POISON_STEEL,createAffixData()
+            ));}
+        private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "poison_mark"
+            );
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}
+}
+    public static class FlameGoldMaceItem extends BaseMaceItem {
+        public FlameGoldMaceItem() {
+            super(MutMaceStats.FLAME_GOLD,buildPropertiesWithAffix(MutMaceStats.FLAME_GOLD,createAffixData()));}private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "fire_mark");
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}}
+    public static class EchoiteMaceItem extends BaseMaceItem implements ISonicBoomSword{
+        public EchoiteMaceItem() {
+            super(MutMaceStats.ECHOITE);}
+        @Override
+        public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+            return useSonicBoom(level, player, hand);
+        }}
+    public static class ThunderCopperMaceItem extends BaseMaceItem {
+        public ThunderCopperMaceItem() {
+            super(MutMaceStats.THUNDER_COPPER);}}
+    public static class UncannyAmethystMaceItem extends BaseMaceItem {
+        public UncannyAmethystMaceItem() {
+            super(MutMaceStats.UNCANNY_AMETHYST,buildPropertiesWithAffix(MutMaceStats.UNCANNY_AMETHYST,createAffixData()));}private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "regeneration_mark");
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}
+    }
+    /**public static class XxMace extends BaseMaceItem {
+     public XxMace() {
+     super(MutMaceStats.XX);}}
+     ,buildPropertiesWithAffix(MutMaceStats.X,createAffixData())
+     **/
 }

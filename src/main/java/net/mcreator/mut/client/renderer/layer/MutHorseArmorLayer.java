@@ -48,6 +48,8 @@ public class MutHorseArmorLayer extends RenderLayer<Horse, HorseModel<Horse>> {
         TEXTURE_MAP.put("mut:netherite_emerald_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_emerald_horse_armor.png"));
         TEXTURE_MAP.put("mut:amethyst_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/amethyst_horse_armor.png"));
         TEXTURE_MAP.put("mut:netherite_amethyst_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_amethyst_horse_armor.png"));
+        TEXTURE_MAP.put("mut:lapis_lazuli_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/lapis_lazuli_horse_armor.png"));
+        TEXTURE_MAP.put("mut:netherite_lapis_lazuli_horse_armor", ResourceLocation.fromNamespaceAndPath("mut", "textures/entity/horse/armor/netherite_lapis_lazuli_horse_armor.png"));
     }
 
     public MutHorseArmorLayer(RenderLayerParent<Horse, HorseModel<Horse>> parent, EntityModelSet modelSet) {

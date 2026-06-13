@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mut:block/super_smithing_table"
+    }
+  }
+}

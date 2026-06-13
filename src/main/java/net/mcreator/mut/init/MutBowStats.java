@@ -115,6 +115,14 @@ public class MutBowStats {
     // 绿宝石弓
     public static final BowConfig EMERALD_BOW = new BowConfig(20, 828, 20, Rarity.COMMON, 0.75,
             () -> Ingredient.of(Items.EMERALD), false);
+    //青金石
+    public static final BowConfig LAPIS_LAZULI_BOW = new BowConfig(20,484,30,Rarity.COMMON,0,() -> Ingredient.of(Items.LAPIS_LAZULI),true);
+    public static final BowConfig NETHERITE_LAPIS_LAZULI_BOW = new BowConfig(20,884,60,Rarity.COMMON,1.25,() -> Ingredient.of(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT),true);
+    public static final BowConfig POISON_STEEL_BOW = new BowConfig(20,1400,15,Rarity.UNCOMMON,1.75,() -> Ingredient.of(MutModItems.POSITION_STEEL_INGOT),true);
+    public static final BowConfig FLAME_GOLD_BOW = new BowConfig(20,1400,25,Rarity.UNCOMMON,1.75,() -> Ingredient.of(MutModItems.FLAME_GOLD_INGOT),true);
+    public static final BowConfig ECHOITE_BOW = new BowConfig(20,2415,30,Rarity.EPIC,2,() -> Ingredient.of(MutModItems.ECHOITE_INGOT),true);
+    public static final BowConfig THUNDER_COPPER_BOW = new BowConfig(20,1400,1,Rarity.UNCOMMON,1.75,() -> Ingredient.of(MutModItems.THUNDER_COPPER_STAR),true);
+    public static final BowConfig UNCANNY_AMETHYST_BOW = new BowConfig(20,1784,16,Rarity.UNCOMMON,2,() -> Ingredient.of(MutModItems.UNCANNY_AMETHYST_STAR),true);
     // ========== 注册方法 ==========
 
     /**

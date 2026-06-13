@@ -1,6 +1,6 @@
 /*
- *    MCreator note: This file will be REGENERATED on each build.
- */
+*    MCreator note: This file will be REGENERATED on each build.
+*/
 package net.mcreator.mut.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -88,6 +88,22 @@ public class MutModBlocks {
 	public static final DeferredBlock<Block> DEBRIS_STONE_DOOR;
 	public static final DeferredBlock<Block> DEBRIS_COBBLESTONE_DOOR;
 	public static final DeferredBlock<Block> DEBRIS_STONE_BRICKS_DOOR;
+	public static final DeferredBlock<Block> DEEP_IRON_RAW_BLOCK;
+	public static final DeferredBlock<Block> POSITION_STEEL_BLOCK;
+	public static final DeferredBlock<Block> ECHOITE_BLOCK;
+	public static final DeferredBlock<Block> SUPER_SMITHING_TABLE;
+	public static final DeferredBlock<Block> SIGIL_FORGE_VAULT_COMMON;
+	public static final DeferredBlock<Block> SIGIL_FORGE_VAULT_UNIQUE;
+	public static final DeferredBlock<Block> SIGIL_FORGE_VAULT_BOSS;
+	public static final DeferredBlock<Block> FLAME_GOLD_BLOCK;
+	public static final DeferredBlock<Block> NETHERITE_LAPIS_LAZULI_BLOCK;
+	public static final DeferredBlock<Block> SIGIL_FORGE_BOSS_TRIAL_SPAWNER;
+	public static final DeferredBlock<Block> HETEROCHROMATIC_AMETHYST_BLOCK;
+	public static final DeferredBlock<Block> HETEROCHROMATICAMETHYST_1;
+	public static final DeferredBlock<Block> HETEROCHROMATICAMETHYST_2;
+	public static final DeferredBlock<Block> HETEROCHROMATICAMETHYST_3;
+	public static final DeferredBlock<Block> HETEROCHROMATICAMETHYST_4;
+	public static final DeferredBlock<Block> HETEROCHROMATICBUDDINGAMETHYST;
 	static {
 		STEEL_DEBRIS = REGISTRY.register("steel_debris", SteelDebrisBlock::new);
 		BLUE_DIAMOND_DEBRIS = REGISTRY.register("blue_diamond_debris", BlueDiamondDebrisBlock::new);
@@ -156,9 +172,39 @@ public class MutModBlocks {
 		DEBRIS_STONE_DOOR = REGISTRY.register("debris_stone_door", DebrisStoneDoorBlock::new);
 		DEBRIS_COBBLESTONE_DOOR = REGISTRY.register("debris_cobblestone_door", DebrisCobblestoneDoorBlock::new);
 		DEBRIS_STONE_BRICKS_DOOR = REGISTRY.register("debris_stone_bricks_door", DebrisStoneBricksDoorBlock::new);
+		DEEP_IRON_RAW_BLOCK = REGISTRY.register("deep_iron_raw_block", DeepIronRawBlockBlock::new);
+		POSITION_STEEL_BLOCK = REGISTRY.register("position_steel_block", PositionSteelBlockBlock::new);
+		ECHOITE_BLOCK = REGISTRY.register("echoite_block", EchoiteBlockBlock::new);
+		SUPER_SMITHING_TABLE = REGISTRY.register("super_smithing_table", SuperSmithingTableBlock::new);
+		SIGIL_FORGE_VAULT_COMMON = REGISTRY.register("sigil_forge_vault_common", SigilForgeVaultCommonBlock::new);
+		SIGIL_FORGE_VAULT_UNIQUE = REGISTRY.register("sigil_forge_vault_unique", SigilForgeVaultUniqueBlock::new);
+		SIGIL_FORGE_VAULT_BOSS = REGISTRY.register("sigil_forge_vault_boss", SigilForgeVaultBossBlock::new);
+		FLAME_GOLD_BLOCK = REGISTRY.register("flame_gold_block", FlameGoldBlockBlock::new);
+		NETHERITE_LAPIS_LAZULI_BLOCK = REGISTRY.register("netherite_lapis_lazuli_block", NetheriteLapisLazuliBlockBlock::new);
+		SIGIL_FORGE_BOSS_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_boss_trial_spawner", SigilForgeBossTrialSpawnerBlock::new);
+		HETEROCHROMATIC_AMETHYST_BLOCK = REGISTRY.register("heterochromatic_amethyst_block", HeterochromaticAmethystBlockBlock::new);
+		HETEROCHROMATICAMETHYST_1 = REGISTRY.register("heterochromaticamethyst_1", Heterochromaticamethyst1Block::new);
+		HETEROCHROMATICAMETHYST_2 = REGISTRY.register("heterochromaticamethyst_2", Heterochromaticamethyst2Block::new);
+		HETEROCHROMATICAMETHYST_3 = REGISTRY.register("heterochromaticamethyst_3", Heterochromaticamethyst3Block::new);
+		HETEROCHROMATICAMETHYST_4 = REGISTRY.register("heterochromaticamethyst_4", Heterochromaticamethyst4Block::new);
+		HETEROCHROMATICBUDDINGAMETHYST = REGISTRY.register("heterochromaticbuddingamethyst", HeterochromaticbuddingamethystBlock::new);
 	}
 
 	// Start of user code block custom blocks
+	@EventBusSubscriber
+	public static class AmethystSetup {
+		@SubscribeEvent
+		public static void onCommonSetup(net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent event) {
+			HeterochromaticbuddingamethystBlock.CLUSTERS[0] = HETEROCHROMATICAMETHYST_1.get();
+			HeterochromaticbuddingamethystBlock.CLUSTERS[1] = HETEROCHROMATICAMETHYST_2.get();
+			HeterochromaticbuddingamethystBlock.CLUSTERS[2] = HETEROCHROMATICAMETHYST_3.get();
+			HeterochromaticbuddingamethystBlock.CLUSTERS[3] = HETEROCHROMATICAMETHYST_4.get();
+		}
+	}
+
+	public static final DeferredBlock<Block> SIGIL_FORGE_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_trial_spawner", SigilForgeTrialSpawnerBlock::new);
+	public static final DeferredBlock<Block> SIGIL_FORGE_UNIQUE_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_unique_trial_spawner", SigilForgeUniqueTrialSpawnerBlock::new);
+
 	// End of user code block custom blocks
 	@EventBusSubscriber(Dist.CLIENT)
 	public static class BlocksClientSideHandler {

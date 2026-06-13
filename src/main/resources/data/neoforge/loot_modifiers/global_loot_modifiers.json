@@ -1,6 +1,8 @@
 {
   "entries": [
-    "mut:vanilla_add_loot"
+    "mut:vanilla_add_loot",
+    "mut:unique_vault_01",
+    "mut:echoite_chest"
   ],
   "replace": false
 }

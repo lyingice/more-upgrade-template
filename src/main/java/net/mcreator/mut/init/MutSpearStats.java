@@ -305,7 +305,13 @@ public class MutSpearStats {
             SPEAR_USE, SPEAR_HIT, SPEAR_ATTACK,
             0.4f, 2.5f, 5.5f, 8.75f
     );
-
+    public static final Stats LAPIS_LAZULI = spearOf(200,0.85F,0.82F,2.5F,30,Rarity.COMMON,Ingredient.of(Items.LAPIS_LAZULI),"lapis_lazuli",SPEAR_USE,SPEAR_HIT,SPEAR_ATTACK,0.7f, 4.5f, 9.0f, 13.75f);
+    public static final Stats NETHERITE_LAPIS_LAZULI = spearOf(1000,1.15F,1.02F,4.5F,60,Rarity.COMMON,Ingredient.of(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT),"netherite_lapis_lazuli",SPEAR_USE,SPEAR_HIT,SPEAR_ATTACK,0.4f, 2.5f, 5.5f, 8.75f);
+    public static final Stats POISON_STEEL = spearOf(2031,0.96F,1.25F,5F,15,Rarity.UNCOMMON,Ingredient.of(MutModItems.POSITION_STEEL_INGOT),"position_steel",SPEAR_USE,SPEAR_HIT,SPEAR_ATTACK,0.6f, 2.5f, 6.75f, 11.25f);
+    public static final Stats FLAME_GOLD = spearOf(2031,0.96F,1.25F,5F,25,Rarity.UNCOMMON,Ingredient.of(MutModItems.FLAME_GOLD_INGOT),"flame_gold",SPEAR_USE,SPEAR_HIT,SPEAR_ATTACK,0.7f, 3.5f, 8.5f, 13.75f);
+    public static final Stats ECHOITE = spearOf(4062,1.15F,1.325F,7F,30,Rarity.EPIC,Ingredient.of(MutModItems.ECHOITE_INGOT),"echoite",SPEAR_USE,SPEAR_HIT,SPEAR_ATTACK,0.4f, 2.5f, 5.5f, 8.75f);
+    public static final Stats THUNDER_COPPER = spearOf(2031,0.85F,1.25F,6F,1,Rarity.UNCOMMON,Ingredient.of(MutModItems.THUNDER_COPPER_STAR),"thunder_copper",SPEAR_USE,SPEAR_HIT,SPEAR_ATTACK,0.65f, 4.0f, 8.25f, 12.5f);
+    public static final Stats UNCANNY_AMETHYST = spearOf(2800,1.15F,1.25F,7.5F,16,Rarity.UNCOMMON,Ingredient.of(MutModItems.UNCANNY_AMETHYST_STAR),"uncanny_amethyst",SPEAR_USE,SPEAR_HIT,SPEAR_ATTACK,0.4f, 2.5f, 5.5f, 8.75f);
     public static final Stats DEFAULT = IRON;
 
     // ========== Map ==========

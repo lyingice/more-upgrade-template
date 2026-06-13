@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:position_steel_ingot"
+    }
+  },
+  "result": {
+    "id": "mut:position_steel_block",
+    "count": 1
+  }
+}

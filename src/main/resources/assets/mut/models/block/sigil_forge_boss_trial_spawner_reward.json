@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/trial_spawner_ejecting_reward_ominous",
+  "textures": {
+    "bottom": "mut:block/trial_spawner_bottom",
+    "side": "mut:block/trial_spawner_side_active_ominous",
+    "top": "mut:block/trial_spawner_top_ejecting_reward_ominous"
+  },
+  "render_type": "cutout"
+}

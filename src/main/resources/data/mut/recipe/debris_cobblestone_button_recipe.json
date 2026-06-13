@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:debris_cobblestone"
+    }
+  },
+  "result": {
+    "id": "mut:debris_cobblestone_button",
+    "count": 1
+  }
+}

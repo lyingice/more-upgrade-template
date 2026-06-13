@@ -188,6 +188,7 @@ public abstract class BaseBowItem extends BowItem {
         private static CustomData createWitherMarkData() {
             CompoundTag tag = new CompoundTag();
             tag.putString("Affix", "wither_mark");
+            tag.putInt("AffixLevel", 3);
             return CustomData.of(tag);
         }
     }
@@ -213,6 +214,35 @@ public abstract class BaseBowItem extends BowItem {
     // 绿宝石弓
     public static class EmeraldBowItem extends BaseBowItem {
         public EmeraldBowItem() { super(MutBowStats.EMERALD_BOW); }
+    }
+    public static class LapisLazuliBowItem extends BaseBowItem {
+        public LapisLazuliBowItem() { super(MutBowStats.LAPIS_LAZULI_BOW,new Properties()); }}
+    public static class NetheriteLapisLazuliBowItem extends BaseBowItem {
+        public NetheriteLapisLazuliBowItem() { super(MutBowStats.NETHERITE_LAPIS_LAZULI_BOW,new Properties()); }}
+    public static class PoisonSteelBowItem extends BaseBowItem {
+        public PoisonSteelBowItem() { super(MutBowStats.POISON_STEEL_BOW,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).rarity(Rarity.UNCOMMON)); }private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "poison_mark"
+            );
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}
+    }
+    public static class FlameGoldBowItem extends BaseBowItem {
+        public FlameGoldBowItem() { super(MutBowStats.FLAME_GOLD_BOW,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).rarity(Rarity.UNCOMMON)); }private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "fire_mark");
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}}
+    public static class EchoiteBowItem extends BaseBowItem {
+        public EchoiteBowItem() { super(MutBowStats.ECHOITE_BOW,new Properties().rarity(Rarity.EPIC)); }}
+    public static class ThunderCopperBowItem extends BaseBowItem {
+        public ThunderCopperBowItem() { super(MutBowStats.THUNDER_COPPER_BOW,new Properties().rarity(Rarity.UNCOMMON)); }}
+    public static class UncannyAmethystBowItem extends BaseBowItem {
+        public UncannyAmethystBowItem() { super(MutBowStats.UNCANNY_AMETHYST_BOW,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).rarity(Rarity.UNCOMMON)); }private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "regeneration_mark");
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}
     }
 
     //子类添加实例

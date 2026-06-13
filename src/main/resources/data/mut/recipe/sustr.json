@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "mut:triple_alloy_ingot"
+  },
+  "result": {
+    "id": "mut:super_upgrade_smithing_template",
+    "count": 1
+  }
+}

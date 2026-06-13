@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:flame_gold_nugget"
+    }
+  },
+  "result": {
+    "id": "mut:flame_gold_ingot",
+    "count": 1
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:heterochromatic_amethyst_shard"
+    }
+  },
+  "result": {
+    "id": "mut:heterochromatic_amethyst_block",
+    "count": 1
+  }
+}

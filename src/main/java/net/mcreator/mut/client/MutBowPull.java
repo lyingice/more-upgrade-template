@@ -23,10 +23,7 @@ public class MutBowPull {
     @SubscribeEvent
     @OnlyIn(Dist.CLIENT)
     public static void clientLoad(FMLClientSetupEvent event) {
-        System.out.println("========== MutBowPull LOADED! ==========");
         event.enqueueWork(() -> {
-            System.out.println("========== MutBowPull enqueueWork RUNNING! ==========");
-
             // 直接列出所有弓，不依赖标签
             List<Item> bows = Arrays.asList(
                     MutModItems.IRON_BOW.get(),
@@ -49,12 +46,19 @@ public class MutBowPull {
                     MutModItems.NETHERITE_REDSTONE_BOW.get(),
                     MutModItems.NETHERITE_AMETHYST_BOW.get(),
                     MutModItems.AMETHYST_BOW.get(),
-                    MutModItems.EMERALD_BOW.get()
+                    MutModItems.EMERALD_BOW.get(),
+                    MutModItems.LAPIS_LAZULI_BOW.get(),
+                    MutModItems.NETHERITE_LAPIS_LAZULI_BOW.get(),
+                    MutModItems.ECHOITE_BOW.get(),
+                    MutModItems.POISON_STEEL_BOW.get(),
+                    MutModItems.FLAME_GOLD_BOW.get(),
+                    MutModItems.THUNDER_COPPER_BOW.get(),
+                    MutModItems.UNCANNY_AMETHYST_BOW.get()
+
             );
 
             for (Item item : bows) {
                 String path = BuiltInRegistries.ITEM.getKey(item).getPath();
-                System.out.println("Registering properties for: " + path);
 
                 // 注册 pulling 属性
                 ItemProperties.register(item,

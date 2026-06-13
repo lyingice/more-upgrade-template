@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:netherite_lapis_lazuli_ingot"
+    }
+  },
+  "result": {
+    "id": "mut:netherite_lapis_lazuli_block",
+    "count": 1
+  }
+}

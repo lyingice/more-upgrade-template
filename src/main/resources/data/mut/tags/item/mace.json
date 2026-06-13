@@ -22,6 +22,13 @@
     "mut:netherite_emerald_mace",
     "mut:netherite_amethyst_mace",
     "mut:amethyst_mace",
-    "mut:emerald_mace"
+    "mut:emerald_mace",
+    "mut:lapis_lazuli_mace",
+    "mut:netherite_lapis_lazuli_mace",
+    "mut:echoite_mace",
+    "mut:poison_steel_mace",
+    "mut:flame_gold_mace",
+    "mut:thunder_copper_mace",
+    "mut:uncanny_amethyst_mace"
   ]
 }

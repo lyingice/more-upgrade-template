@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mut:block/super_super_smithing_table_bottom",
+    "up": "mut:block/super_smithing_table_top",
+    "north": "mut:block/super_smithing_table_front",
+    "east": "mut:block/super_smithing_table_side",
+    "south": "mut:block/super_smithing_table_front",
+    "west": "mut:block/super_smithing_table_side",
+    "particle": "mut:block/super_super_smithing_table_bottom"
+  },
+  "render_type": "solid"
+}

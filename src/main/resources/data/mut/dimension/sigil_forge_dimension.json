@@ -1026,14 +1026,17 @@
                           "then_run": {
                             "type": "minecraft:block",
                             "result_state": {
-                              "Name": "mut:debris_stone"
+                              "Name": "minecraft:grass_block",
+                              "Properties": {
+                                "snowy": "false"
+                              }
                             }
                           }
                         },
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "mut:debris_stone"
+                            "Name": "minecraft:sand"
                           }
                         }
                       ]
@@ -1051,7 +1054,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "mut:debris_stone"
+                        "Name": "minecraft:dirt"
                       }
                     }
                   }

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "mut:sigil_forge_desert",
+    "mut:sigil_forge_stony_peaks",
+    "mut:sigil_forge_stony_shore",
+    "mut:sigil_forge_plain",
+    "mut:sigil_forge_snowy_plateau",
+    "mut:sigil_forge_plateau",
+    "mut:sigil_forge_swamp",
+    "mut:sigil_forge_snowy_peaks",
+    "mut:sigil_forge_volcano"
+  ]
+}

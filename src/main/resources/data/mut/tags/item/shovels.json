@@ -4,6 +4,12 @@
     "mut:amethyst_shovel",
     "mut:netherite_amethyst_shovel",
     "mut:wither_shovel",
-    "mut:super_netherite_shovel"
+    "mut:lapis_lazuli_shovel",
+    "mut:netherite_lapis_lazuli_shovel",
+    "mut:position_steel_shovel",
+    "mut:flame_gold_shovel",
+    "mut:echoite_shovel",
+    "mut:uncanny_amethyst_shovel",
+    "mut:thunder_copper_shovel"
   ]
 }

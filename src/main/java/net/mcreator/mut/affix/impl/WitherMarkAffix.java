@@ -28,6 +28,6 @@ public class WitherMarkAffix implements IMarkAffix {
 
     @Override
     public int getMarkLevel(LivingEntity attacker) {
-        return WitherMarkHelper.getWitherMarkLevel(attacker);
+        return WitherMarkHelper.getEquippedWitherMarkLevel(attacker);
     }
 }

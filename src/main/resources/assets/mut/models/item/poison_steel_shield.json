@@ -1,0 +1,15 @@
+{
+  "parent": "mut:custom/shield",
+  "textures": {
+    "0": "mut:block/position_steel_shield",
+    "particle": "mut:item/position_steel_sword"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "mut:item/poison_steel_shield_0"
+    }
+  ]
+}

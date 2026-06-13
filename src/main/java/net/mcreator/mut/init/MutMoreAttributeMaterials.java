@@ -212,6 +212,142 @@ public class MutMoreAttributeMaterials {
                 ),
                 entries(attr(Attributes.MAX_HEALTH, 2.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.FEET, "armor_health_feet")
                 ));
+        register("dragon",
+                entries(),  // 工具属性（如果有）
+                entries(
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.HEAD, "health"),
+                        attr(Attributes.ATTACK_DAMAGE, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.HEAD, "attack_damage")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.CHEST, "health"),
+                        attr(Attributes.ATTACK_DAMAGE, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.CHEST, "attack_damage")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.LEGS, "health"),
+                        attr(Attributes.ATTACK_DAMAGE, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.LEGS, "attack_damage")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.FEET, "health"),
+                        attr(Attributes.ATTACK_DAMAGE, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.FEET, "attack_damage")
+                )
+        );
+        register("nether_star",
+                entries(),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.HEAD, "health")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.CHEST, "health")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.LEGS, "health")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 5.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.FEET, "health")
+                )
+        );
+        register("crying_obsidian",
+                entries(),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 0.075, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.HEAD, "health"),
+                        attr(Attributes.MOVEMENT_SPEED, -0.025, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.HEAD, "speed")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 0.075, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.CHEST, "health"),
+                        attr(Attributes.MOVEMENT_SPEED, -0.025, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.CHEST, "speed")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 0.075, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.LEGS, "health"),
+                        attr(Attributes.MOVEMENT_SPEED, -0.025, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.LEGS, "speed")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 0.075, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.FEET, "health"),
+                        attr(Attributes.MOVEMENT_SPEED, -0.025, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL, EquipmentSlotGroup.FEET, "speed")
+                )
+        );
+        // ──────────────────── 奇异紫水晶 ────────────────────
+        register("uncanny_amethyst",
+                entries(
+                        attr(Attributes.BLOCK_INTERACTION_RANGE, 1.5, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "block_range"),
+                        attr(Attributes.ENTITY_INTERACTION_RANGE, 1.5, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "entity_range")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 9.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.HEAD, "armor_health_head")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 9.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.CHEST, "armor_health_chest")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 9.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.LEGS, "armor_health_legs")
+                ),
+                entries(
+                        attr(Attributes.MAX_HEALTH, 9.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.FEET, "armor_health_feet")
+                )
+        );
+        register("thunder_copper",
+                entries(
+                        attr(MutModAttributes.THUNDER_POWER,20,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.MAINHAND,"hand")
+                ),entries(
+                        attr(MutModAttributes.THUNDER_POWER,20,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.HEAD,"head"),
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.HEAD,"armor_health_head")
+                ),entries(
+                        attr(MutModAttributes.THUNDER_POWER,20,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.CHEST,"chest"),
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.CHEST,"armor_health_chest")
+                ),entries(
+                        attr(MutModAttributes.THUNDER_POWER,20,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.LEGS,"legs"),
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.LEGS,"armor_health_legs")
+                ),entries(
+                        attr(MutModAttributes.THUNDER_POWER,20,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.FEET,"feet"),
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.FEET,"armor_health_feet")
+                ));
+        register("echoite",
+                entries(
+                        attr(Attributes.ENTITY_INTERACTION_RANGE, 1.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "entity_range")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,5,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.HEAD,"head")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,5,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.CHEST,"chest")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,5,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.LEGS,"legs")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,5,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.FEET,"feet")
+                ));
+        register("poison_steel",
+                entries(
+                        attr(Attributes.ENTITY_INTERACTION_RANGE, 1.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "entity_range")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.HEAD,"head")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.CHEST,"chest")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.LEGS,"legs")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.FEET,"feet")
+                ));
+        register("position_steel",
+                entries(
+                        attr(Attributes.ENTITY_INTERACTION_RANGE, 1.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "entity_range")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.HEAD,"head")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.CHEST,"chest")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.LEGS,"legs")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.FEET,"feet")
+                ));
+        register("flame_gold",
+                entries(
+                        attr(Attributes.ENTITY_INTERACTION_RANGE, 1.0, AttributeModifier.Operation.ADD_VALUE, EquipmentSlotGroup.MAINHAND, "entity_range")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.HEAD,"head")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.CHEST,"chest")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.LEGS,"legs")
+                ),entries(
+                        attr(Attributes.MAX_HEALTH,4,AttributeModifier.Operation.ADD_VALUE,EquipmentSlotGroup.FEET,"feet")
+                ));
         /*
         // ──────────────────── 单个材质模板 ────────────────────
         register("material_name",

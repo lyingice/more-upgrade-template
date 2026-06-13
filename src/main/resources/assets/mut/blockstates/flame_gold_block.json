@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mut:block/flame_gold_block"
+    }
+  }
+}

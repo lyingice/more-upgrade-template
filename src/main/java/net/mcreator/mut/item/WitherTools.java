@@ -25,6 +25,7 @@ public abstract class WitherTools extends Item {
     private static CustomData createWitherMarkData() {
         CompoundTag tag = new CompoundTag();
         tag.putString("Affix", "wither_mark");
+        tag.putInt("AffixLevel", 3);
         return CustomData.of(tag);
     }
     public static class Sword extends SwordItem {

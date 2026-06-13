@@ -1,6 +1,5 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "mut:blocks/nether_deep_iron_ore_block",
   "pools": [
     {
       "rolls": 1.0,
@@ -13,6 +12,13 @@
         {
           "type": "minecraft:item",
           "name": "mut:deep_iron_raw"
+        }
+      ],
+      "functions": [
+        {
+          "function": "minecraft:apply_bonus",
+          "enchantment": "minecraft:fortune",
+          "formula": "minecraft:ore_drops"
         }
       ]
     }

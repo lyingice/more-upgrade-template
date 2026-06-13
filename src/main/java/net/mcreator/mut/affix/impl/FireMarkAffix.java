@@ -28,6 +28,6 @@ public class FireMarkAffix implements IMarkAffix {
 
     @Override
     public int getMarkLevel(LivingEntity attacker) {
-        return FireMarkHelper.getFireMarkLevel(attacker);
+        return FireMarkHelper.getEquippedFireMarkLevel(attacker);
     }
 }

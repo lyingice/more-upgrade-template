@@ -1,0 +1,64 @@
+{
+  "__comment": "词缀等级定义与权重曲线配置 - 数据驱动核心",
+  "levels": [
+    {
+      "level": 1,
+      "name_key": "affix.level.common",
+      "color": "#FFFFFF",
+      "formatting": "white",
+      "weight_curve": { "base": 60, "decay": 0.6, "growth": 0, "threshold": 0 }
+    },
+    {
+      "level": 2,
+      "name_key": "affix.level.uncommon",
+      "color": "#5555FF",
+      "formatting": "green",
+      "weight_curve": { "base": 40, "decay": 0.4, "growth": 0, "threshold": 5 }
+    },
+    {
+      "level": 3,
+      "name_key": "affix.level.rare",
+      "color": "#FFAA00",
+      "formatting": "blue",
+      "weight_curve": { "base": 20, "decay": 0.2, "growth": 0.8, "threshold": 10 }
+    },
+    {
+      "level": 4,
+      "name_key": "affix.level.epic",
+      "color": "#AA00FF",
+      "formatting": "light_purple",
+      "weight_curve": { "base": 10, "decay": 0, "growth": 1.6, "threshold": 15 }
+    },
+    {
+      "level": 5,
+      "name_key": "affix.level.legendary",
+      "color": "#FFFF55",
+      "formatting": "gold",
+      "weight_curve": { "base": 1, "decay": 0, "growth": 2.4, "threshold": 20 }
+    },
+    {
+      "level": 6,
+      "name_key": "affix.level.mythic",
+      "color": "#FF5555",
+      "formatting": "red",
+      "weight_curve": { "base": 0, "decay": 0, "growth": 3.2, "threshold": 25 }
+    },
+    {
+      "level": 7,
+      "name_key": "affix.level.ancient",
+      "color": "#AA0000",
+      "formatting": "dark_red",
+      "weight_curve": { "base": 0, "decay": 0, "growth": 4.0, "threshold": 30 }
+    },
+    {
+      "level": 8,
+      "name_key": "affix.level.celestial",
+      "color": "#FF55FF",
+      "formatting": "light_purple",
+      "weight_curve": { "base": 0, "decay": 0, "growth": 5.0, "threshold": 40 }
+    }
+  ],
+  "normalization": "softmax",
+  "min_probability_per_level": 0.01,
+  "bonus_multiplier_per_level": 1
+}

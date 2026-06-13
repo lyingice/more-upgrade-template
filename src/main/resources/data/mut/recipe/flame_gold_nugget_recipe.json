@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "mut:flame_gold_ore"
+  },
+  "result": {
+    "id": "mut:flame_gold_nugget"
+  }
+}

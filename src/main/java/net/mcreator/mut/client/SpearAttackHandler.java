@@ -1,8 +1,13 @@
 package net.mcreator.mut.client;
 
 import net.mcreator.mut.MutMod;
+import net.mcreator.mut.init.MutModSounds;
 import net.mcreator.mut.item.SpearItem;
 import net.mcreator.mut.util.SpearCollision;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
@@ -13,18 +18,21 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 import java.util.List;
 
-@EventBusSubscriber(modid = MutMod.MODID, value = Dist.CLIENT)
+@EventBusSubscriber(modid = MutMod.MODID)
 public class SpearAttackHandler {
 
     @SubscribeEvent
     public static void onPlayerAttack(AttackEntityEvent event) {
+        if (event.getEntity().level().isClientSide()) return;
         Player player = event.getEntity();
         ItemStack stack = player.getMainHandItem();
 

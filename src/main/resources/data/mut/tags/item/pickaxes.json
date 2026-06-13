@@ -4,6 +4,12 @@
     "mut:amethyst_pickaxe",
     "mut:netherite_amethyst_pickaxe",
     "mut:wither_pickaxe",
-    "mut:super_netherite_pickaxe"
+    "mut:lapis_lazuli_pickaxe",
+    "mut:netherite_lapis_lazuli_pickaxe",
+    "mut:position_steel_pickaxe",
+    "mut:flame_gold_pickaxe",
+    "mut:echoite_pickaxe",
+    "mut:uncanny_amethyst_pickaxe",
+    "mut:thunder_copper_pickaxe"
   ]
 }

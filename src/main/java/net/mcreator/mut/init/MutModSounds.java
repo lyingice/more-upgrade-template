@@ -20,4 +20,7 @@ public class MutModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> ITEM_SPEAR_WOOD_ATTACK = REGISTRY.register("item.spear_wood.attack", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("mut", "item.spear_wood.attack")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> ITEM_SPEAR_WOOD_USE = REGISTRY.register("item.spear_wood.use", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("mut", "item.spear_wood.use")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> ITEM_SPEAR_WOOD_HIT = REGISTRY.register("item.spear_wood.hit", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("mut", "item.spear_wood.hit")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ITEM_SPEAR_LUNGE_1 = REGISTRY.register("item.spear.lunge_1", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("mut", "item.spear.lunge_1")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ITEM_SPEAR_LUNGE_2 = REGISTRY.register("item.spear.lunge_2", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("mut", "item.spear.lunge_2")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ITEM_SPEAR_LUNGE_3 = REGISTRY.register("item.spear.lunge_3", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("mut", "item.spear.lunge_3")));
 }

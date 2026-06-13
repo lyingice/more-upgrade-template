@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "mut:metal_poisonous_ore"
+  },
+  "result": {
+    "id": "mut:metal_position_nugget"
+  }
+}

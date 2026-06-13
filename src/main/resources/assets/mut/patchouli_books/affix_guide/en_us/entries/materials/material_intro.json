@@ -1,0 +1,23 @@
+{
+  "name": "§aEnchanting Materials Overview",
+  "category": "mut:materials",
+  "icon": "minecraft:blaze_rod",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§lMaterial Categories",
+      "text": "Enchanting materials are divided into two categories:$(br2)§l1. Universal Materials§r$(br)Such as §bNether Stars§r and §bDiamonds§r. They don't target specific affixes but boost overall tier probabilities.$(br2)§l2. Directed Materials§r$(br)Such as §bBlaze Rods§r and §bPoisonous Potatoes§r. They greatly increase the weight and tier of specific affixes."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:nether_star",
+      "title": "§bNether Star §r- Universal",
+      "text": "§bNether Stars§r are the strongest universal material, providing +60% tier weight bonus and accumulating 2 pity points per roll."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Materials also have multiple tiers:$(br)§7Tier 1§r: Coal, Flint$(br)§7Tier 2§r: Iron Ingot, Copper Ingot$(br)§7Tier 3§r: Diamond, Emerald$(br)§7Tier 4§r: Netherite Ingot, Nether Star$(br)§7Tier 5§r: Dragon's Breath$(br2)Higher tiers provide stronger bonus."
+    }
+  ]
+}

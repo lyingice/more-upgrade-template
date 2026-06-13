@@ -1,0 +1,10 @@
+{
+  "__comment": "物品→可用词缀绑定配置",
+
+  "bindings": [
+    {
+      "tag": "minecraft:enchantable/durability",
+      "affix_pool": ["regeneration_mark", "tidal_surge", "strength_blessing","sharpshooter", "piercing_spear", "fire_mark", "poison_mark", "wither_mark", "momentum", "energy_conversion"]
+    }
+  ]
+}

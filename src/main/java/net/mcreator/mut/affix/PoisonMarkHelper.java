@@ -1,54 +1,59 @@
 package net.mcreator.mut.affix;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.mcreator.mut.affix.impl.PoisonMarkAffix;
 
-/**
- * 剧毒印记等级计算器
- * 统计玩家身上所有带有"poison_mark"词条的装备数量
- */
 public class PoisonMarkHelper {
 
-    // 最大印记等级（全身4件盔甲 + 主手 + 副手 = 6）
-    public static final int MAX_LEVEL = 6;
-
     /**
-     * 计算玩家身上的剧毒印记等级
-     * @param entity 实体
-     * @return 印记等级 (1-6)
+     * 获取目标身上的剧毒印记效果等级
      */
-    public static int getPoisonMarkLevel(LivingEntity entity) {
-        int count = 0;
-
-        // 检查主手
-        if (hasPoisonMark(entity.getMainHandItem())) count++;
-
-        // 检查副手
-        if (hasPoisonMark(entity.getOffhandItem())) count++;
-
-        // 检查盔甲槽位
-        if (hasPoisonMark(entity.getItemBySlot(EquipmentSlot.HEAD))) count++;
-        if (hasPoisonMark(entity.getItemBySlot(EquipmentSlot.CHEST))) count++;
-        if (hasPoisonMark(entity.getItemBySlot(EquipmentSlot.LEGS))) count++;
-        if (hasPoisonMark(entity.getItemBySlot(EquipmentSlot.FEET))) count++;
-
-        return Math.min(count, MAX_LEVEL);
+    public static int getTotalPoisonMarkLevel(LivingEntity target) {
+        MobEffectInstance mark = target.getEffect(
+                BuiltInRegistries.MOB_EFFECT.getHolder(
+                        ResourceLocation.fromNamespaceAndPath("mut", "poison_mark")
+                ).orElse(null)
+        );
+        if (mark == null) return 0;
+        return mark.getAmplifier() + 1;
     }
 
     /**
-     * 检查物品是否带有剧毒印记词条（使用 Affix 接口方法）
+     * 获取攻击者装备的剧毒印记词缀等级总和
      */
-    private static boolean hasPoisonMark(ItemStack stack) {
-        if (stack.isEmpty()) return false;
+    public static int getEquippedPoisonMarkLevel(LivingEntity entity) {
+        int total = 0;
+        total += getSlotLevel(entity.getMainHandItem());
+        total += getSlotLevel(entity.getOffhandItem());
+        total += getSlotLevel(entity.getItemBySlot(EquipmentSlot.HEAD));
+        total += getSlotLevel(entity.getItemBySlot(EquipmentSlot.CHEST));
+        total += getSlotLevel(entity.getItemBySlot(EquipmentSlot.LEGS));
+        total += getSlotLevel(entity.getItemBySlot(EquipmentSlot.FEET));
+        int max = AffixRegistry.POISON_MARK.getTotalMaxLevel();
+        return Math.min(total, max);
+    }
+
+    private static int getSlotLevel(ItemStack stack) {
+        if (stack.isEmpty()) return 0;
         Affix affix = Affix.fromStack(stack);
-        return affix instanceof PoisonMarkAffix;
+        if (affix instanceof PoisonMarkAffix) {
+            return Affix.getLevelFromStack(stack);
+        }
+        return 0;
     }
 
     /**
-     * 获取印记等级的显示名称
+     * 获取印记等级的伤害加成（等级 × 0.5）
      */
+    public static float getDamageBonus(LivingEntity target) {
+        return getTotalPoisonMarkLevel(target) * 0.5F;
+    }
+
     public static String getLevelName(int level) {
         return switch (level) {
             case 1 -> "Ⅰ";
@@ -59,12 +64,5 @@ public class PoisonMarkHelper {
             case 6 -> "Ⅵ";
             default -> "";
         };
-    }
-
-    /**
-     * 获取印记等级的伤害加成
-     */
-    public static int getDamageBonus(int level) {
-        return level; // 每级增加1点中毒伤害
     }
 }

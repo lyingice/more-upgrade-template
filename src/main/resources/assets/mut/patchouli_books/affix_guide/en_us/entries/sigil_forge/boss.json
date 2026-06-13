@@ -1,0 +1,26 @@
+{
+  "name": "§5Boss Trial Spawner",
+  "category": "mut:sigil_forge",
+  "icon": "mut:sigil_forge_boss_trial_spawner",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "mut:sigil_forge_boss_trial_spawner",
+      "title": "§5Boss Trial Spawner",
+      "text": "The Boss Trial Spawner is a key-activated spawner that summons a single boss-level enemy."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "§5Boss Trial Activation",
+      "text": "The key required to activate the trial can be found inside the Uncommon Sigil Forge Vault.",
+      "item": "mut:sigil_forge_vault_unique"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "§5Sigil Forge Boss Key",
+      "text": "A key used to activate the Boss Trial.",
+      "item": "mut:sigil_forge_boss_key"
+    }
+  ]
+}

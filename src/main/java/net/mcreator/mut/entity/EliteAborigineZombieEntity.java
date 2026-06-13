@@ -1,6 +1,12 @@
 package net.mcreator.mut.entity;
 
 import net.mcreator.mut.entity.ai.AdaptiveAttackGoals;
+import net.mcreator.mut.init.MutBowStats;
+import net.mcreator.mut.init.MutModParticles;
+import net.mcreator.mut.item.BaseBowItem;
+import net.minecraft.server.level.ServerBossEvent;
+import net.minecraft.tags.FluidTags;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.monster.CrossbowAttackMob;
@@ -40,6 +46,7 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import java.util.EnumSet;
 import net.mcreator.mut.init.MutModItems;
 import net.mcreator.mut.init.MutModEntities;
+import net.neoforged.neoforge.fluids.FluidType;
 
 import java.util.Arrays;
 
@@ -162,6 +169,15 @@ public class EliteAborigineZombieEntity extends Zombie implements CrossbowAttack
         double dx = target.getX() - this.getX();
         double dz = target.getZ() - this.getZ();
         double dist = Math.sqrt(dx * dx + dz * dz);
+        // 伤害计算
+        double bonus;
+        if (bowStack.getItem() instanceof BaseBowItem baseBow) {
+            bonus = MutBowStats.getDamageBonus(baseBow);
+        } else {
+            bonus = 2.5; // 非自定义弓固定 +2.5，总伤害 = 2.0 + 2.5 = 4.5
+        }
+        arrow.setBaseDamage(2.0 + bonus);
+
         arrow.shoot(dx, dy + dist * 0.2, dz, 1.6F, (float)(14 - this.level().getDifficulty().getId() * 4));
         this.playSound(SoundEvents.ARROW_SHOOT, 1.0F, 1.0F / (this.getRandom().nextFloat() * 0.4F + 0.8F));
         this.level().addFreshEntity(arrow);
@@ -311,4 +327,5 @@ public class EliteAborigineZombieEntity extends Zombie implements CrossbowAttack
         builder = builder.add(Attributes.SPAWN_REINFORCEMENTS_CHANCE);
         return builder;
     }
+
 }

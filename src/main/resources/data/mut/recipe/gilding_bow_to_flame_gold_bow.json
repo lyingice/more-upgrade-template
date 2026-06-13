@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:magma_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:gilding_bow"
+  },
+  "addition": {
+    "item": "mut:flame_gold_ingot"
+  },
+  "result": {
+    "id": "mut:flame_gold_bow"
+  }
+}

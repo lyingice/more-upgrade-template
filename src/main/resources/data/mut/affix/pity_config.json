@@ -1,0 +1,30 @@
+{
+  "__comment": "词缀等级软保底系统配置 - 玩家可修改",
+
+  "enabled": true,
+  "global": {
+    "pity_per_attempt": 1,
+    "pity_cap": 12,
+    "pity_reset_on_success": true,
+    "pity_bonus_per_point": 0.12,
+    "min_level_for_reset": 6
+  },
+  "per_material_overrides": {
+    "minecraft:nether_star": {
+      "pity_per_attempt": 2,
+      "min_level_for_reset": 4
+    },
+    "minecraft:dragon_breath": {
+      "pity_per_attempt": 3,
+      "pity_cap": 8,
+      "min_level_for_reset": 5
+    },
+    "minecraft:diamond": {
+      "pity_per_attempt": 1,
+      "pity_bonus_per_point": 0.15
+    },
+    "minecraft:blaze_rod": {
+      "pity_per_attempt": 2
+    }
+  }
+}

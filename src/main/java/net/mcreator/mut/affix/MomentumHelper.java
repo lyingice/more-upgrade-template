@@ -7,38 +7,31 @@ import net.minecraft.world.item.ItemStack;
 
 public class MomentumHelper {
 
-    public static final int MAX_LEVEL = 6;
+    public static final float MULTIPLIER_PER_LEVEL = 0.125F;
 
-    public static int getMomentumLevel(LivingEntity entity) {
-        int count = 0;
-        if (hasMomentum(entity.getMainHandItem())) count++;
-        if (hasMomentum(entity.getOffhandItem())) count++;
-        if (hasMomentum(entity.getItemBySlot(EquipmentSlot.HEAD))) count++;
-        if (hasMomentum(entity.getItemBySlot(EquipmentSlot.CHEST))) count++;
-        if (hasMomentum(entity.getItemBySlot(EquipmentSlot.LEGS))) count++;
-        if (hasMomentum(entity.getItemBySlot(EquipmentSlot.FEET))) count++;
-        return Math.min(count, MAX_LEVEL);
+    public static int getEquippedMomentumLevel(LivingEntity entity) {
+        int total = 0;
+        total += getSlotLevel(entity.getMainHandItem());
+        total += getSlotLevel(entity.getOffhandItem());
+        total += getSlotLevel(entity.getItemBySlot(EquipmentSlot.HEAD));
+        total += getSlotLevel(entity.getItemBySlot(EquipmentSlot.CHEST));
+        total += getSlotLevel(entity.getItemBySlot(EquipmentSlot.LEGS));
+        total += getSlotLevel(entity.getItemBySlot(EquipmentSlot.FEET));
+        int max = AffixRegistry.MOMENTUM.getTotalMaxLevel();
+        return Math.min(total, max);
     }
 
-    private static boolean hasMomentum(ItemStack stack) {
-        if (stack.isEmpty()) return false;
+    private static int getSlotLevel(ItemStack stack) {
+        if (stack.isEmpty()) return 0;
         Affix affix = Affix.fromStack(stack);
-        return affix instanceof MomentumAffix;
+        if (affix instanceof MomentumAffix) {
+            return Affix.getLevelFromStack(stack);
+        }
+        return 0;
     }
 
-    public static float getDamageMultiplier(int level) {
-        return 1.0F + (level * MomentumAffix.DAMAGE_PER_LEVEL);
-    }
-
-    public static String getLevelName(int level) {
-        return switch (level) {
-            case 1 -> "Ⅰ";
-            case 2 -> "Ⅱ";
-            case 3 -> "Ⅲ";
-            case 4 -> "Ⅳ";
-            case 5 -> "Ⅴ";
-            case 6 -> "Ⅵ";
-            default -> "";
-        };
+    public static float getMultiplier(LivingEntity entity) {
+        int level = getEquippedMomentumLevel(entity);
+        return 1.0F + level * MULTIPLIER_PER_LEVEL;
     }
 }

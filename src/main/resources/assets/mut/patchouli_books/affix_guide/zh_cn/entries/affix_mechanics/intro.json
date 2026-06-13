@@ -1,0 +1,21 @@
+{
+  "name": "§d词缀系统概述",
+  "category": "mut:affix_mechanics",
+  "icon": "mut:super_upgrade_smithing_template",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§l什么是词缀？",
+      "text": "词缀是一种特殊的装备强化系统，与Minecraft原版的附魔不同，词缀通过超级锻造台为武器、工具和盔甲赋予独特的战斗属性。$(br2)每种词缀都带来一种独特的效果，例如灼烧目标、施加中毒效果，或是提升移动速度。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "词缀分为8个品质等级：$(br)§7普通§r、§9精良§r、§6稀有§r、§d史诗§r、§e传说§r、§c神话§r、§4远古§r、§d天界§r。$(br2)等级越高，词缀效果越强，但获得高等级词缀的难度也越大。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "超级锻造台使用方式：$(br)1. 放入§e超级升级锻造模板$(br)2. 放入§e任意武器/工具/盔甲$(br)3. 放入§e附魔材料$(br)4. 取出成品$(br2)不同材料会影响获得的词缀类型和等级概率。"
+    }
+  ]
+}

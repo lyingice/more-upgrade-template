@@ -1,5 +1,6 @@
 package net.mcreator.mut.init;
 
+import com.google.gson.JsonObject;
 import net.minecraft.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -198,6 +199,106 @@ public class MutMaterials {
             return props;
         }
     }
+    // ========== 数据包配置支持 ==========
+
+    /**
+     * 应用数据包配置，覆盖现有材质
+     * 如果 JSON 中缺少某些字段，则保持原值
+     */
+    public static void applyDataPackConfigs(Map<String, JsonObject> configs) {
+        for (var entry : configs.entrySet()) {
+            String name = entry.getKey();
+            JsonObject obj = entry.getValue();
+            MutMaterial material = MATERIALS_BY_NAME.get(name);
+
+            if (material == null) {
+                System.err.println("[MutMaterials] Cannot apply config: material " + name + " not found");
+                continue;
+            }
+
+            // 使用反射或创建新对象替换
+            // 由于 MutMaterial 字段是 final 的，需要创建一个新对象并替换
+            MutMaterial newMaterial = createMaterialFromJson(name, material, obj);
+            if (newMaterial != null) {
+                // 替换材质
+                int index = ALL_MATERIALS.indexOf(material);
+                if (index >= 0) {
+                    ALL_MATERIALS.set(index, newMaterial);
+                }
+                MATERIALS_BY_NAME.put(name, newMaterial);
+            }
+        }
+    }
+
+    /**
+     * 从 JSON 配置创建新的 MutMaterial（基于原有材质，用 JSON 覆盖）
+     */
+    private static MutMaterial createMaterialFromJson(String name, MutMaterial original, JsonObject obj) {
+        try {
+            // 解析 JSON 中的值，如果不存在则使用原值
+            Rarity rarity = obj.has("rarity") ? Rarity.valueOf(obj.get("rarity").getAsString()) : original.rarity;
+            boolean fireResistant = obj.has("fire_resistant") ? obj.get("fire_resistant").getAsBoolean() : original.fireResistant;
+            CraftingType craftingType = obj.has("crafting_type") ?
+                    CraftingType.valueOf(obj.get("crafting_type").getAsString()) : original.craftingType;
+            int miningLevel = obj.has("mining_level") ? obj.get("mining_level").getAsInt() : original.miningLevel;
+            float toolSpeed = obj.has("tool_speed") ? obj.get("tool_speed").getAsFloat() : original.toolSpeed;
+
+            // 工具伤害
+            float swordDamage = obj.has("sword_damage") ? obj.get("sword_damage").getAsFloat() : original.swordDamage;
+            float shovelDamage = obj.has("shovel_damage") ? obj.get("shovel_damage").getAsFloat() : original.shovelDamage;
+            float pickaxeDamage = obj.has("pickaxe_damage") ? obj.get("pickaxe_damage").getAsFloat() : original.pickaxeDamage;
+            float axeDamage = obj.has("axe_damage") ? obj.get("axe_damage").getAsFloat() : original.axeDamage;
+            float hoeDamage = obj.has("hoe_damage") ? obj.get("hoe_damage").getAsFloat() : original.hoeDamage;
+
+            // 工具攻速
+            float swordSpeed = obj.has("sword_speed") ? obj.get("sword_speed").getAsFloat() : original.swordSpeed;
+            float shovelSpeed = obj.has("shovel_speed") ? obj.get("shovel_speed").getAsFloat() : original.shovelSpeed;
+            float pickaxeSpeed = obj.has("pickaxe_speed") ? obj.get("pickaxe_speed").getAsFloat() : original.pickaxeSpeed;
+            float axeSpeed = obj.has("axe_speed") ? obj.get("axe_speed").getAsFloat() : original.axeSpeed;
+            float hoeSpeed = obj.has("hoe_speed") ? obj.get("hoe_speed").getAsFloat() : original.hoeSpeed;
+
+            int enchantmentValue = obj.has("enchantment_value") ? obj.get("enchantment_value").getAsInt() : original.enchantmentValue;
+            int durability = obj.has("durability") ? obj.get("durability").getAsInt() : original.durability;
+
+            // 盔甲属性
+            boolean hasTools = obj.has("has_tools") ? obj.get("has_tools").getAsBoolean() : original.hasTools;
+            boolean hasArmor = obj.has("has_armor") ? obj.get("has_armor").getAsBoolean() : original.hasArmor;
+
+            int[] armorValues = original.armorValues.clone();
+            if (obj.has("armor_helmet")) armorValues[0] = obj.get("armor_helmet").getAsInt();
+            if (obj.has("armor_chestplate")) armorValues[1] = obj.get("armor_chestplate").getAsInt();
+            if (obj.has("armor_leggings")) armorValues[2] = obj.get("armor_leggings").getAsInt();
+            if (obj.has("armor_boots")) armorValues[3] = obj.get("armor_boots").getAsInt();
+            if (obj.has("armor_body")) armorValues[4] = obj.get("armor_body").getAsInt();
+
+            int armorEnchantmentValue = obj.has("armor_enchantment_value") ? obj.get("armor_enchantment_value").getAsInt() : original.armorEnchantmentValue;
+            float armorToughness = obj.has("armor_toughness") ? obj.get("armor_toughness").getAsFloat() : original.armorToughness;
+            float armorKnockbackResistance = obj.has("armor_knockback_resistance") ? obj.get("armor_knockback_resistance").getAsFloat() : original.armorKnockbackResistance;
+            int armorDurability = obj.has("armor_durability") ? obj.get("armor_durability").getAsInt() : original.armorDurability;
+
+            String equipSoundId = obj.has("equip_sound") ? obj.get("equip_sound").getAsString() : original.equipSound.get().value().getLocation().toString();
+            String textureFolder = obj.has("texture_folder") ? obj.get("texture_folder").getAsString() : original.textureFolder;
+
+            // 创建新的 MutMaterial
+            return new MutMaterial(
+                    name, rarity, fireResistant, craftingType,
+                    miningLevel, toolSpeed,
+                    swordDamage, shovelDamage, pickaxeDamage, axeDamage, hoeDamage,
+                    swordSpeed, shovelSpeed, pickaxeSpeed, axeSpeed, hoeSpeed,
+                    enchantmentValue, durability,
+                    original.repairIngredient,
+                    original.toolAttributes,
+                    hasTools, hasArmor, armorValues,
+                    armorEnchantmentValue, armorToughness, armorKnockbackResistance,
+                    armorDurability, original.piglinNeutral,
+                    equipSoundId, original.armorAttributes, textureFolder
+            );
+        } catch (Exception e) {
+            System.err.println("[MutMaterials] Failed to create material from config: " + name);
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     // ========== 配置存储 ==========
     private static final List<MutMaterial> ALL_MATERIALS = new ArrayList<>();
@@ -283,7 +384,64 @@ public class MutMaterials {
             null,
             "super_netherite"
     ));
-
+    public static final MutMaterial LAPIS_LAZULI = register(new MutMaterial(
+            "lapis_lazuli",Rarity.COMMON,true,CraftingType.NORMAL,
+            1,8,3.5F,3.0F,2.5F,6.5F,0.75F,
+            -2.4F,-3.0F,-2.8F,-3F,0F,30,200,() -> Ingredient.of(Items.LAPIS_LAZULI),
+            null,true,true,new int[]{2,4,3,1,0},30,0,0F,11,false,
+            "minecraft:item.armor.equip_iron",null,"lapis_lazuli"
+    ));
+    public static final MutMaterial NETHERITE_LAPIS_LAZULI = register(new MutMaterial(
+            "netherite_lapis_lazuli",Rarity.COMMON,true,CraftingType.SMITHING,
+            4,8,6.5F,5.0F,4.5F,8.5F,1.75F,
+            -2.4F,-3.0F,-2.8F,-3F,0F,60,1000,() -> Ingredient.of(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT),
+            null,true,true,new int[]{3,8,6,3,0},60,2,0.1F,45,false,
+            "minecraft:item.armor.equip_netherite",null,"netherite_lapis_lazuli"
+    ));
+    public static final MutMaterial POSITION_STEEL = register(new MutMaterial(
+            "position_steel",Rarity.UNCOMMON,true,CraftingType.SMITHING,
+            4,10,7.0F,5.5F,5F,9F,2F,
+            -2.2F,-2.8F,-2.6F,-2.8F,0.2F,15,2031,() -> Ingredient.of(MutModItems.POSITION_STEEL_INGOT),
+            null,true,true,new int[]{4,9,8,4,0},9,4,0.1F,45,false,
+            "minecraft:item.armor.equip_netherite",null,"position_steel"
+    ));
+    public static final MutMaterial FLAME_GOLD = register(new MutMaterial(
+            "flame_gold",Rarity.UNCOMMON,true,CraftingType.SMITHING,
+            4,15,7.0F,5.5F,5F,9F,2F,
+            -2.2F,-2.8F,-2.6F,-2.8F,0.2F,25,2031,() -> Ingredient.of(MutModItems.FLAME_GOLD_INGOT),
+            null,true,true,new int[]{4,9,8,4,0},25,4,0.1F,43,true,
+            "minecraft:item.armor.equip_netherite",null,"flame_gold"
+    ));
+    public static final MutMaterial ECHOITE = register(new MutMaterial(
+            "echoite",Rarity.EPIC,true,CraftingType.SMITHING,
+            4,11,9F,7.5F,7F,11F,4F,
+            -2.5F,-3.1F,-2.9F,-3.1F,-0.1F,30,4062,() -> Ingredient.of(MutModItems.ECHOITE_INGOT),
+            null,true,true,new int[]{4,10,9,4,0},30,6,0.2F,59,false,
+            "minecraft:item.armor.equip_netherite",null,"echoite"
+    ));
+    public static final MutMaterial UNCANNY_AMETHYST = register(new MutMaterial(
+            "uncanny_amethyst",Rarity.UNCOMMON,true,CraftingType.SMITHING,
+            4,13,9.5F,8F,7.5F,11.5F,3.25F,
+            -2.3F,-2.9F,-2.7F,-2.9F,0.1F,16,2800,() -> Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT),
+            null,true,true,new int[]{4,9,8,4,0},14,4,0.1F,69,false,
+            "minecraft:item.armor.equip_netherite",null,"uncanny_amethyst"
+    ));
+    public static final MutMaterial THUNDER_COPPER = register(new MutMaterial(
+            "thunder_copper",Rarity.UNCOMMON,true,CraftingType.SMITHING,
+            4,12,8F,6.F,6F,10F,3.5F,
+            -2.1F,-2.7F,-2.5F,-2.7F,0.3F,1,2031,() -> Ingredient.EMPTY,
+            null,true,true,new int[]{4,9,8,4,0},1,4,0.1F,51,false,
+            "minecraft:item.armor.equip_netherite",null,"thunder_copper"
+    ));
+    /**
+     public static final MutMaterial XX = register(new MutMaterial(
+     "xx",Rarity.COMMON,true,CraftingType.SMITHING,
+     4,10,0F,0F,0F,0F,0F,
+     -2.4F,-3F,-2.8F,-3F,0F,10,1000,() -> Ingredient.of(MutModItems.XX),
+     null,true,true,new int[]{3,8,6,3,0},25,4,0.1F,43,false,
+     "minecraft:item.armor.equip_netherite",null,"xx"
+     ));
+    **/
     // ========== 属性构建器 ==========
 
     public static ItemAttributeModifiers createToolAttributes(MutMaterial mat, ToolType type) {

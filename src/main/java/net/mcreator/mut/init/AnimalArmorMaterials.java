@@ -114,7 +114,7 @@ public class AnimalArmorMaterials {
 
     // 钢
     public static final AnimalArmorExtendedStats STEEL = registerAnimalExtended(
-            "steel", 19, 12,
+            "steel_animal", 19, 12,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.1F,
             () -> Ingredient.of(MutModItems.STEEL_INGOT.get()),
             4.0D, 0.1D,
@@ -123,7 +123,7 @@ public class AnimalArmorMaterials {
 
     // 精钢
     public static final AnimalArmorExtendedStats ADVANCED_STEEL = registerAnimalExtended(
-            "advanced_steel", 23, 15,
+            "advanced_steel_animal", 23, 15,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.2F,
             () -> Ingredient.of(MutModItems.ADVANCED_STEEL_INGOT.get()),
             8.0D, 0.15D,
@@ -132,7 +132,7 @@ public class AnimalArmorMaterials {
 
     // 鎏金
     public static final AnimalArmorExtendedStats GILDING = registerAnimalExtended(
-            "gilding", 19, 22,
+            "gilding_animal", 19, 22,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F,
             () -> Ingredient.of(MutModItems.GILDING_INGOT.get()),
             6.0D, 0.4D,
@@ -141,7 +141,7 @@ public class AnimalArmorMaterials {
 
     // 蓝钻合金
     public static final AnimalArmorExtendedStats BLUE_DIAMOND = registerAnimalExtended(
-            "blue_diamond", 23, 18,
+            "blue_diamond_animal", 23, 18,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 3.5F, 0.1F,
             () -> Ingredient.of(MutModItems.BLUE_DIAMOND_INGOT.get()),
             8.0D, 0.2D,
@@ -150,7 +150,7 @@ public class AnimalArmorMaterials {
 
     // 黑曜石
     public static final AnimalArmorExtendedStats OBSIDIAN = registerAnimalExtended(
-            "obsidian", 19, 1,
+            "obsidian_animal", 19, 1,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 2.0F, 0.15F,
             () -> Ingredient.of(Items.OBSIDIAN),
             10.0D, -0.1D,
@@ -159,7 +159,7 @@ public class AnimalArmorMaterials {
 
     // 下界合金黑曜石
     public static final AnimalArmorExtendedStats NETHERITE_OBSIDIAN = registerAnimalExtended(
-            "netherite_obsidian", 23, 1,
+            "netherite_obsidian_animal", 23, 1,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.3F,
             () -> Ingredient.of(MutModItems.OBSIDIAN_INGOT.get()),
             20.0D, -0.2D,
@@ -168,7 +168,7 @@ public class AnimalArmorMaterials {
 
     // 悲悯
     public static final AnimalArmorExtendedStats CRYING_OBSIDIAN = registerAnimalExtended(
-            "crying_obsidian", 30, 1,
+            "crying_obsidian_animal", 30, 1,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 6.0F, 0.6F,
             () -> Ingredient.of(MutModItems.CRYING_OBSIDIAN_INGOT.get()),
             30.0D, -0.3D,
@@ -177,7 +177,7 @@ public class AnimalArmorMaterials {
 
     // 下界之星
     public static final AnimalArmorExtendedStats NETHER_STAR = registerAnimalExtended(
-            "nether_star", 19, 22,
+            "nether_star_animal", 19, 22,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 10.0F, 0.1F,
             () -> Ingredient.of(Items.NETHER_STAR),
             10.0D, 0.0D,
@@ -186,7 +186,7 @@ public class AnimalArmorMaterials {
 
     // 龙
     public static final AnimalArmorExtendedStats DRAGON = registerAnimalExtended(
-            "dragon", 30, 30,
+            "dragon_animal", 30, 30,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F,
             () -> Ingredient.of(Items.NETHER_STAR),
             20.0D, 0.0D,
@@ -195,7 +195,7 @@ public class AnimalArmorMaterials {
 
     // 凋零
     public static final AnimalArmorExtendedStats WITHER = registerAnimalExtended(
-            "wither", 23, 22,
+            "wither_animal", 23, 22,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 6.0F, 0.15F,
             () -> Ingredient.of(Items.NETHER_STAR),
             15.0D, 0.2D,
@@ -204,7 +204,7 @@ public class AnimalArmorMaterials {
 
     // 下界合金铜
     public static final AnimalArmorExtendedStats NETHERITE_COPPER = registerAnimalExtended(
-            "netherite_copper", 19, 15,
+            "netherite_copper_animal", 19, 15,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.1F,
             () -> Ingredient.of(Items.COPPER_BLOCK),
             4.0D, 0.0D,
@@ -213,7 +213,7 @@ public class AnimalArmorMaterials {
 
     // 下界合金红石
     public static final AnimalArmorExtendedStats NETHERITE_REDSTONE = registerAnimalExtended(
-            "netherite_redstone", 19, 20,
+            "netherite_redstone_animal", 19, 20,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F,
             () -> Ingredient.of(MutModItems.NETHERITE_REDSTONE_INGOT.get()),
             4.0D, 0.5D,
@@ -222,7 +222,7 @@ public class AnimalArmorMaterials {
 
     // 绿宝石
     public static final AnimalArmorExtendedStats EMERALD = registerAnimalExtended(
-            "emerald", 11, 18,
+            "emerald_animal", 11, 18,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.0F,
             () -> Ingredient.of(Items.EMERALD),
             0.0D, 0.1D,
@@ -230,8 +230,8 @@ public class AnimalArmorMaterials {
     );
 
     // 下界合金绿宝石
-    public static final AnimalArmorExtendedStats NETHERITE_EMERALD = registerAnimalExtended(
-            "netherite_emerald", 21, 18,
+    public static final AnimalArmorExtendedStats NETHERITE_EMERALD_ANIMAL = registerAnimalExtended(
+            "netherite_emerald_animal_animal", 21, 18,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 4.0F, 0.1F,
             () -> Ingredient.of(MutModItems.NETHERITE_EMERALD_INGOT.get()),
             0.0D, 0.2D,
@@ -240,7 +240,7 @@ public class AnimalArmorMaterials {
 
     // 紫水晶
     public static final AnimalArmorExtendedStats AMETHYST = registerAnimalExtended(
-            "amethyst", 6, 16,
+            "amethyst_animal", 6, 16,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 1.0F, 0.0F,
             () -> Ingredient.of(Items.AMETHYST_SHARD),
             8.0D, 0.0D,
@@ -249,11 +249,24 @@ public class AnimalArmorMaterials {
 
     // 下界合金紫水晶
     public static final AnimalArmorExtendedStats NETHERITE_AMETHYST = registerAnimalExtended(
-            "netherite_amethyst", 20, 16,
+            "netherite_amethyst_animal", 20, 16,
             SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F,
             () -> Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT.get()),
             16.0D, 0.0D,
             462, true,Rarity.COMMON
+    );
+    //青金石
+    public static final AnimalArmorExtendedStats LAPIS_LAZULI =registerAnimalExtended(
+            "lapis_lazuli_animal",5,30,SoundEvents.ARMOR_EQUIP_IRON,0,0F,
+            () -> Ingredient.of(Items.LAPIS_LAZULI),0D,0D,97,false,Rarity.COMMON
+    );
+    //下界合金青金石
+    public static final AnimalArmorExtendedStats NETHERITE_LAPIS_LAZULI = registerAnimalExtended(
+            "netherite_lapis_lazuli_animal", 19, 60,
+            SoundEvents.ARMOR_EQUIP_NETHERITE, 2.5F, 0.1F,
+            () -> Ingredient.of(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT),
+            4.0D, 0.0D,
+            374, true,Rarity.COMMON
     );
 
     // ========== 旧材料的工厂方法（8参数） ==========

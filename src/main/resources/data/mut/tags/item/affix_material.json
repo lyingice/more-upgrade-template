@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:nether_star",
+    "minecraft:diamond",
+    "minecraft:netherite_ingot",
+    "minecraft:blaze_rod",
+    "minecraft:poisonous_potato",
+    "minecraft:wither_rose",
+    "minecraft:magma_cream",
+    "minecraft:ghast_tear",
+    "minecraft:heart_of_the_sea",
+    "minecraft:prismarine_crystals",
+    "minecraft:rabbit_foot",
+    "minecraft:fermented_spider_eye",
+    "minecraft:golden_carrot",
+    "minecraft:cookie",
+    "minecraft:ender_pearl",
+    "minecraft:arrow",
+    "minecraft:echo_shard",
+    "minecraft:dragon_breath"
+  ]
+}

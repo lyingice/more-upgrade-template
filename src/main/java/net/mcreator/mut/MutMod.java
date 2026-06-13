@@ -29,6 +29,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.mut.init.*;
+import net.mcreator.mut.event.EnergyConversionHandler;
 import net.mcreator.mut.event.AffixEventHandler;
 import net.mcreator.mut.config.MutCrossbowLoadCountConfig;
 import net.mcreator.mut.command.AddAffixCommand;
@@ -60,11 +61,15 @@ public class MutMod {
 		MutModEntities.REGISTRY.register(modEventBus);
 		MutModTabs.REGISTRY.register(modEventBus);
 		MutModMobEffects.REGISTRY.register(modEventBus);
+		MutModMenus.REGISTRY.register(modEventBus);
 		MutModVillagerProfessions.PROFESSIONS.register(modEventBus);
+		MutModAttributes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.SERVER, MutCrossbowLoadCountConfig.CONFIG_SPEC, "mut_crossbow_load_count.toml");
 		MutModItems.ENTITY_REGISTRY.register(modEventBus);
 		NeoForge.EVENT_BUS.register(new AffixEventHandler());
+		NeoForge.EVENT_BUS.register(new EnergyConversionHandler());
+		MutModParticles.PARTICLES.register(modEventBus);
 		// End of user code block mod init
 	}
 

@@ -1,19 +1,88 @@
 {
-  "has_precipitation": true,
-  "temperature": 0.5,
-  "downfall": 0.2,
+  "has_precipitation": false,
+  "temperature": 1.5,
+  "downfall": 0.0,
   "effects": {
     "foliage_color": 10387789,
     "grass_color": 9470285,
-    "sky_color": 7972607,
+    "sky_color": 7254527,
     "fog_color": 12638463,
-    "water_color": 4159204,
+    "water_color": -10066330,
     "water_fog_color": 329011
   },
   "spawners": {
-    "monster": [],
-    "creature": [],
-    "ambient": [],
+    "monster": [
+      {
+        "type": "mut:aborigine_zombie",
+        "weight": 15,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "mut:red_lightning_creeper",
+        "weight": 12,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "mut:traveler_phantom",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 25,
+        "minCount": 2,
+        "maxCount": 5
+      },
+      {
+        "type": "minecraft:skeleton",
+        "weight": 15,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "minecraft:creeper",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:spider",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "creature": [
+      {
+        "type": "minecraft:rabbit",
+        "weight": 15,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:camel",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
+        "type": "minecraft:fox",
+        "weight": 5,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
+    "ambient": [
+      {
+        "type": "minecraft:bat",
+        "weight": 8,
+        "minCount": 1,
+        "maxCount": 2
+      }
+    ],
     "axolotls": [],
     "underground_water_creature": [],
     "water_creature": [],
@@ -33,7 +102,9 @@
     [
       "minecraft:lake_lava_underground"
     ],
-    [],
+    [
+      "minecraft:desert_well"
+    ],
     [],
     [],
     [],
@@ -56,11 +127,16 @@
       "minecraft:ore_copper",
       "minecraft:underwater_magma"
     ],
-    [],
-    [],
+    [
+    ],
     [],
     [
-      "minecraft:freeze_top_layer"
+      "minecraft:patch_dead_bush",
+      "minecraft:patch_cactus_desert",
+      "minecraft:patch_grass_badlands"
+    ],
+    [
+      "mut:heterochromatic_geode"
     ]
   ]
 }

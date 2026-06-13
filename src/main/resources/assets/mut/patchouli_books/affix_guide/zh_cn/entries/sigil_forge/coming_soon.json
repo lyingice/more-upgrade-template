@@ -1,0 +1,13 @@
+{
+  "name": "§c更多内容敬请期待",
+  "category": "mut:sigil_forge",
+  "icon": "minecraft:barrier",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§l即将到来",
+      "text": "未来的符锻维度将包含：$(br)• 新的独特词缀$(br)• 维度专属附魔材料$(br)• 更高等级的词缀突破$(br2)敬请期待！"
+    }
+  ]
+}

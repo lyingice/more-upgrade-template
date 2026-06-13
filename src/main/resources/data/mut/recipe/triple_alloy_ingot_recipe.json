@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bcd",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:lava_bucket"
+    },
+    "b": {
+      "item": "mut:steel_ingot"
+    },
+    "c": {
+      "item": "mut:gilding_ingot"
+    },
+    "d": {
+      "item": "mut:blue_diamond_ingot"
+    }
+  },
+  "result": {
+    "id": "mut:triple_alloy_ingot",
+    "count": 1
+  }
+}

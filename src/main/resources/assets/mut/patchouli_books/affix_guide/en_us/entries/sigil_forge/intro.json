@@ -1,0 +1,17 @@
+{
+  "name": "§5Sigil Forge Dimension",
+  "category": "mut:sigil_forge",
+  "icon": "mut:sigil_forge_vault_common",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§lSigil Forge",
+      "text": "The Sigil Forge is a mysterious dimension full of challenges, where you can obtain rare sigils and forging materials.$(br2)(Content in development...)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "More information about the Sigil Forge dimension will be released in future updates."
+    }
+  ]
+}

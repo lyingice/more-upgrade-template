@@ -1,0 +1,22 @@
+{
+  "name": "§5符锻维度介绍",
+  "category": "mut:sigil_forge",
+  "icon": "mut:sigil_forge_vault_common",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§l符锻维度",
+      "text": "符锻维度是一个充满挑战的神秘维度，在这里你可以获得稀有的符印和锻造材料。$(br2)（内容开发中...）"
+    },
+    {"type": "patchouli:spotlight",
+      "title": "§5符锻地牢",
+      "text":"符锻地牢是符锻维度的核心结构，在这里你可以找到各种强大的锻造模板和锻造材料。",
+      "item": "mut:sigil_forge_vault_boss"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "更多关于符锻维度的信息将在未来的更新中逐步开放。"
+    }
+  ]
+}

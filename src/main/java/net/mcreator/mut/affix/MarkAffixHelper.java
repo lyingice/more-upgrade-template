@@ -1,53 +1,40 @@
 package net.mcreator.mut.affix;
 
+import net.mcreator.mut.affix.impl.PoisonMarkAffix;
+import net.mcreator.mut.affix.impl.FireMarkAffix;
+import net.mcreator.mut.affix.impl.WitherMarkAffix;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 import net.minecraft.ChatFormatting;
-import net.mcreator.mut.affix.impl.PoisonMarkAffix;
-import net.mcreator.mut.affix.impl.FireMarkAffix;
-import net.mcreator.mut.affix.impl.WitherMarkAffix;
-/**
- * 印记词条通用处理器
- * 所有"攻击时附加状态效果"类词条统一调用此方法
- */
+
 public class MarkAffixHelper {
 
-    /**
-     * 处理攻击附加印记（近战+远程通用）
-     *
-     * @param attacker 攻击者
-     * @param target   被攻击目标
-     * @param mark     印记词条（实现 IMarkAffix 接口）
-     */
     public static void applyMarkOnAttack(LivingEntity attacker, LivingEntity target, IMarkAffix mark) {
-        // 计算印记等级
-        int markLevel = mark.getMarkLevel(attacker);
-        if (markLevel <= 0) return;
+        // 获取攻击者装备的总等级
+        int equippedLevel = mark.getMarkLevel(attacker);
+        if (equippedLevel <= 0) return;
 
         // 获取目标已有印记
         MobEffectInstance existing = target.getEffect(mark.getMarkEffect());
-        int finalLevel = markLevel;
+        int newLevel = equippedLevel;
         if (existing != null) {
             int existingLevel = existing.getAmplifier() + 1;
-            finalLevel = Math.max(markLevel, existingLevel);
+            newLevel = Math.max(equippedLevel, existingLevel);
         }
 
-        // 施加新印记
+        // 施加印记（amplifier = 等级 - 1）
         target.addEffect(new MobEffectInstance(
                 mark.getMarkEffect(),
                 mark.getMarkDurationTicks(),
-                finalLevel - 1,
+                newLevel - 1,
                 false, true, true
         ));
 
-        // 给玩家提示（未来可扩展为配置开关）
         if (attacker instanceof Player player) {
             player.displayClientMessage(
-                    Component.literal("✦ 施加" +
-                                    mark.getDisplayName().getString() + " " +
-                                    getLevelRoman(finalLevel) + " ✦")
+                    Component.literal("✦ 施加" + mark.getDisplayName().getString() + " " + getLevelRoman(newLevel) + " ✦")
                             .withStyle(getMarkColor(mark)),
                     true
             );

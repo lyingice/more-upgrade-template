@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mut:block/deep_iron_raw_block"
+    }
+  }
+}

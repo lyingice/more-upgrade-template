@@ -1,0 +1,21 @@
+{
+    "name": "§dAffix System Overview",
+    "category": "mut:affix_mechanics",
+    "icon": "mut:super_upgrade_smithing_template",
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "patchouli:text",
+            "title": "§lWhat are Affixes?",
+            "text": "Affixes are a special equipment enhancement system. Unlike vanilla Minecraft enchanting, affixes grant unique combat attributes to weapons, tools, and armor through the Super Smithing Table.$(br2)Each affix provides a unique effect, such as burning targets, applying poison, or increasing movement speed."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "Affixes have 8 quality tiers:$(br)§7Common§r, §9Fine§r, §6Rare§r, §dEpic§r, §eLegendary§r, §cMythic§r, §4Ancient§r, §dCelestial§r.$(br2)Higher tiers provide stronger effects, but are harder to obtain."
+        },
+        {
+            "type": "patchouli:text",
+            "text": "How to use the Super Smithing Table:$(br)1. Place a §eSuper Upgrade Smithing Template$(br)2. Place any §eweapon/tool/armor$(br)3. Place an §eenchanting material$(br)4. Retrieve the result$(br2)Different materials affect the probability of obtaining specific affixes and tiers."
+        }
+    ]
+}

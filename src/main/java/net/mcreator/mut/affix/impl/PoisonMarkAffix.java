@@ -1,6 +1,5 @@
 package net.mcreator.mut.affix.impl;
 
-import net.mcreator.mut.affix.AffixRegistry;
 import net.mcreator.mut.affix.IMarkAffix;
 import net.mcreator.mut.affix.PoisonMarkHelper;
 import net.minecraft.core.Holder;
@@ -29,6 +28,6 @@ public class PoisonMarkAffix implements IMarkAffix {
 
     @Override
     public int getMarkLevel(LivingEntity attacker) {
-        return PoisonMarkHelper.getPoisonMarkLevel(attacker);
+        return PoisonMarkHelper.getEquippedPoisonMarkLevel(attacker);
     }
 }

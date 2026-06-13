@@ -77,11 +77,11 @@ public class MutMaceStats {
 
     // 特殊材料
     // 黑曜石重锤
-    public static final Stats OBSIDIAN = Stats.of(1825, 5, 0.5f, 1.2f, 1, Rarity.COMMON,
+    public static final Stats OBSIDIAN = Stats.of(1825, 5, 0.5f, 1.2f, 1, Rarity.EPIC,
             Ingredient.of(Items.OBSIDIAN), false, "obsidian");
 
     // 下界合金黑曜石重锤
-    public static final Stats NETHERITE_OBSIDIAN = Stats.of(2325, 7, 0.4f, 1.5f, 1, Rarity.UNCOMMON,
+    public static final Stats NETHERITE_OBSIDIAN = Stats.of(2325, 7, 0.4f, 1.5f, 1, Rarity.EPIC,
             Ingredient.of(MutModItems.OBSIDIAN_INGOT.get()), true, "netherite_obsidian");
 
     // 悲悯重锤（Crying Obsidian）
@@ -101,29 +101,43 @@ public class MutMaceStats {
             Ingredient.of(Items.NETHER_STAR), true, "dragon");
 
     // 下界合金铜重锤
-    public static final Stats NETHERITE_COPPER = Stats.of(1116, 5, 0.6f, 1.15f, 15, Rarity.UNCOMMON,
+    public static final Stats NETHERITE_COPPER = Stats.of(1116, 5, 0.6f, 1.15f, 15, Rarity.EPIC,
             Ingredient.of(Items.COPPER_BLOCK), true, "netherite_copper");
 
     // 下界合金绿宝石重锤
-    public static final Stats NETHERITE_EMERALD = Stats.of(1444, 7, 0.6f, 1.2f, 18, Rarity.UNCOMMON,
+    public static final Stats NETHERITE_EMERALD = Stats.of(1444, 7, 0.6f, 1.2f, 18, Rarity.EPIC,
             Ingredient.of(MutModItems.NETHERITE_EMERALD_INGOT.get()), true, "netherite_emerald");
 
     // 下界合金红石重锤
-    public static final Stats NETHERITE_REDSTONE = Stats.of(1516, 6, 1.0f, 1.2f, 20, Rarity.UNCOMMON,
+    public static final Stats NETHERITE_REDSTONE = Stats.of(1516, 6, 1.0f, 1.2f, 20, Rarity.EPIC,
             Ingredient.of(MutModItems.NETHERITE_REDSTONE_INGOT.get()), true, "netherite_redstone");
 
     // 下界合金紫水晶重锤
-    public static final Stats NETHERITE_AMETHYST = Stats.of(1200, 6, 0.6f, 1.2f, 16, Rarity.UNCOMMON,
+    public static final Stats NETHERITE_AMETHYST = Stats.of(1200, 6, 0.6f, 1.2f, 16, Rarity.EPIC,
             Ingredient.of(MutModItems.NETHERITE_AMETHYST_INGOT.get()), true, "netherite_amethyst");
     // 绿宝石重锤
-    public static final Stats EMERALD = Stats.of(944, 5, 0.6f, 0.9f, 18, Rarity.COMMON,
+    public static final Stats EMERALD = Stats.of(944, 5, 0.6f, 0.9f, 18, Rarity.UNCOMMON,
             Ingredient.of(Items.EMERALD), false, "emerald");
 
     // 紫水晶重锤
-    public static final Stats AMETHYST = Stats.of(675, 4, 0.6f, 0.8f, 16, Rarity.COMMON,
+    public static final Stats AMETHYST = Stats.of(675, 4, 0.6f, 0.8f, 16, Rarity.UNCOMMON,
             Ingredient.of(Items.AMETHYST_SHARD), false, "amethyst");
+    //青金石
+    public static final Stats LAPIS_LAZULI = Stats.of(195, 3, 0.6f, 0.7f, 30, Rarity.UNCOMMON,
+            Ingredient.of(Items.LAPIS_LAZULI), false, "lapis_lazuli");
+    public static final Stats NETHERITE_LAPIS_LAZULI = Stats.of(1000, 5, 0.6f, 1.2f, 60, Rarity.EPIC,
+            Ingredient.of(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT), true, "netherite_lapis_lazuli");
+    public static final Stats POISON_STEEL = Stats.of(1516, 6, 0.8f, 1.35f, 15, Rarity.EPIC,
+            Ingredient.of(MutModItems.POSITION_STEEL_INGOT), true, "poison_steel");
+    public static final Stats FLAME_GOLD = Stats.of(1516, 6, 0.8f, 1.35f, 25, Rarity.EPIC,
+            Ingredient.of(MutModItems.FLAME_GOLD_INGOT), true, "flame_gold");
+    public static final Stats ECHOITE = Stats.of(2531, 8, 0.5f, 1.4f, 30, Rarity.EPIC,
+            Ingredient.of(MutModItems.ECHOITE_INGOT), true, "echoite");
+    public static final Stats THUNDER_COPPER = Stats.of(1516, 7, 0.8f, 1.35f, 1, Rarity.EPIC,
+            Ingredient.of(MutModItems.THUNDER_COPPER_STAR), true, "thunder_copper");
+    public static final Stats UNCANNY_AMETHYST = Stats.of(1900, 8, 0.7f, 1.35f, 16, Rarity.EPIC,
+            Ingredient.of(MutModItems.UNCANNY_AMETHYST_STAR), true, "uncanny_amethyst");
     public static final Stats DEFAULT = IRON;
-
     // ========== Map：Item → Stats ==========
     private static final Map<Item, Stats> STATS_MAP = new HashMap<>();
 

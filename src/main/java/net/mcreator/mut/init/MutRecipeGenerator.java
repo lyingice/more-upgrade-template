@@ -15,7 +15,6 @@ public class MutRecipeGenerator {
     private static final String STICK = "minecraft:stick";
 
     private static final String[] MATERIALS = {
-            "X"
             //大写
     };
 
@@ -204,6 +203,13 @@ public class MutRecipeGenerator {
             // 新增材质在这里加
             case "WITHER" -> new MatMeta("wither", "SMITHING", "minecraft:nether_star", List.of("nether_star"), "mut:nether_star_upgrade_template", "minecraft:wither_skeleton_skull");
             case "SUPER_NETHERITE" -> new MatMeta("super_netherite","SMITHING","minecraft:netherite_ingot", List.of("netherite"), "minecraft:netherite__upgrade_smithing_template", "minecraft:netherite_ingot");
+            case "LAPIS_LAZULI" -> new MatMeta("lapis_lazuli", "NORMAL", "minecraft:lapis_lazuli", List.of(), "", "");
+            case "NETHERITE_LAPIS_LAZULI" -> new MatMeta("netherite_lapis_lazuli","SMITHING","mut:netherite_lapis_lazuli_ingot", List.of("lapis_lazuli"), "mut:netherite_lapis_lazuli_upgrade_smithing_template", "mut:netherite_lapis_lazuli_ingot");
+            case "ECHOITE" -> new MatMeta("echoite", "SMITHING", "mut:echoite_ingot", List.of("netherite"), "mut:echoite_upgrade_smithing_template", "mut:echoite_ingot");
+            case "THUNDER_COPPER" -> new MatMeta("thunder_copper", "SMITHING", "", List.of("netherite_copper"), "mut:thunder_upgrade_smithing_template", "mut:thunder_copper_star");
+            case "FLAME_GOLD" -> new MatMeta("flame_gold", "SMITHING", "", List.of("gilding"), "mut:magma_upgrade_smithing_template", "mut:flame_gold_ingot");
+            case "POSITION_STEEL" -> new MatMeta("position_steel", "SMITHING", "", List.of("steel"), "mut:poison_upgrade_smithing_template", "mut:position_steel_ingot");
+            case "UNCANNY_AMETHYST" -> new MatMeta("uncanny_amethyst", "SMITHING", "", List.of("netherite_amethyst"), "mut:uncanny_amethyst_upgrade_smithing_template", "mut:uncanny_amethyst_star");
 
             default -> null;
             //case "X" -> new MatMeta("x", "NORMAL", "minecraft:x", List.of(), "", "");

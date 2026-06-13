@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:debris_stone_bricks"
+    }
+  },
+  "result": {
+    "id": "mut:debris_stone_bricks_trap_door",
+    "count": 2
+  }
+}

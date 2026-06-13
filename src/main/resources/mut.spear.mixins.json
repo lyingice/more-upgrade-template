@@ -7,7 +7,12 @@
     "ItemInitializeClientMixin",
     "ItemStackMixin",
     "ServerPlayerMotionMixin",
-    "LivingEntitySpearMixin"
+    "LivingEntitySpearMixin",
+    "PiercingSpearMixin",
+    "SharpshooterMixin",
+    "StrengthBlessingMixin",
+    "TidalSurgeMixin",
+    "BigStomachMixin"
   ],
   "client": [
     "LocalPlayerFovMixin",

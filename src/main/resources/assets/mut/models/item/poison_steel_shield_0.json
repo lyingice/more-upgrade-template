@@ -1,0 +1,7 @@
+{
+  "parent": "mut:custom/shield_blocking",
+  "textures": {
+    "0": "mut:block/position_steel_shield",
+    "particle": "mut:item/position_steel_sword"
+  }
+}

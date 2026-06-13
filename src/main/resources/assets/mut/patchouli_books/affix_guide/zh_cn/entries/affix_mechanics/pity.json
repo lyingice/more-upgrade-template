@@ -1,0 +1,17 @@
+{
+  "name": "§b软保底系统",
+  "category": "mut:affix_mechanics",
+  "icon": "minecraft:experience_bottle",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§l软保底(Pity)机制",
+      "text": "软保底系统是确保玩家不会一直获得低等级词缀的友好机制。$(br2)每次获得低级词缀时，系统会在物品上累计1点'幸运值'。$(br)累计的幸运值会提高下一次获得高等级词缀的概率。"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "当最终获得Lv5(可数据包配置)及以上的词缀时，幸运值会被重置。$(br2)使用高品质的附魔材料（如下界之星）可以提升每次积累的幸运值点数，并提高重置门槛，让高等级词缀更频繁地出现。"
+    }
+  ]
+}

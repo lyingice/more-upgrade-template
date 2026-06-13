@@ -351,6 +351,47 @@ public class MutModItems {
 	public static final DeferredItem<Item> NETHERITE_EMERALD_WOLF_ARMOR;
 	public static final DeferredItem<Item> AMETHYST_WOLF_ARMOR;
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_WOLF_ARMOR;
+	public static final DeferredItem<Item> DEEP_IRON_RAW_BLOCK;
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_INGOT;
+	public static final DeferredItem<Item> ECHOITE_INGOT;
+	public static final DeferredItem<Item> POSITION_STEEL_BLOCK;
+	public static final DeferredItem<Item> ECHOITE_BLOCK;
+	public static final DeferredItem<Item> SUPER_SMITHING_TABLE;
+	public static final DeferredItem<Item> SUPER_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> MAGMA_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> POISON_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> THUNDER_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> ECHOITE_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> SIGIL_FORGE_VAULT_COMMON;
+	public static final DeferredItem<Item> SIGIL_FORGE_VAULT_UNIQUE;
+	public static final DeferredItem<Item> SIGIL_FORGE_VAULT_BOSS;
+	public static final DeferredItem<Item> THUNDER_COPPER_STAR;
+	public static final DeferredItem<Item> FLAME_GOLD_BLOCK;
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_BLOCK;
+	public static final DeferredItem<Item> BOSS_TRIAL_KEY;
+	public static final DeferredItem<Item> SIGIL_FORGE_BOSS_KEY;
+	public static final DeferredItem<Item> SIGIL_FORGE_BOSS_TRIAL_SPAWNER;
+	public static final DeferredItem<Item> DRAGON_SHIELD;
+	public static final DeferredItem<Item> LAPIS_LAZULI_SHIELD;
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_SHIELD;
+	public static final DeferredItem<Item> POISON_STEEL_SHIELD;
+	public static final DeferredItem<Item> FLAME_GOLD_SHIELD;
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_SHIELD;
+	public static final DeferredItem<Item> THUNDER_COPPER_SHIELD;
+	public static final DeferredItem<Item> HETEROCHROMATIC_AMETHYST_BLOCK;
+	public static final DeferredItem<Item> HETEROCHROMATIC_AMETHYST_SHARD;
+	public static final DeferredItem<Item> HETEROCHROMATICAMETHYST_1;
+	public static final DeferredItem<Item> HETEROCHROMATICAMETHYST_2;
+	public static final DeferredItem<Item> HETEROCHROMATICAMETHYST_3;
+	public static final DeferredItem<Item> HETEROCHROMATICAMETHYST_4;
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_STAR;
+	public static final DeferredItem<Item> HETEROCHROMATICBUDDINGAMETHYST;
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_UPGRADE_SMITHING_TEMPLATE;
+	public static final DeferredItem<Item> ECHOITE_SHIELD;
+	public static final DeferredItem<Item> TRIPLE_ALLOY_INGOT;
+	public static final DeferredItem<Item> LAPIS_LAZULI_WOLF_ARMOR;
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_WOLF_ARMOR;
 	static {
 		IRON_BOW = REGISTRY.register("iron_bow", IronBowItem::new);
 		STONE_UPGRADE_TEMPLATE = REGISTRY.register("stone_upgrade_template", StoneUpgradeTemplateItem::new);
@@ -674,6 +715,47 @@ public class MutModItems {
 		NETHERITE_EMERALD_WOLF_ARMOR = REGISTRY.register("netherite_emerald_wolf_armor", NetheriteEmeraldWolfArmorItem::new);
 		AMETHYST_WOLF_ARMOR = REGISTRY.register("amethyst_wolf_armor", AmethystWolfArmorItem::new);
 		NETHERITE_AMETHYST_WOLF_ARMOR = REGISTRY.register("netherite_amethyst_wolf_armor", NetheriteAmethystWolfArmorItem::new);
+		DEEP_IRON_RAW_BLOCK = block(MutModBlocks.DEEP_IRON_RAW_BLOCK, new Item.Properties().fireResistant());
+		NETHERITE_LAPIS_LAZULI_INGOT = REGISTRY.register("netherite_lapis_lazuli_ingot", NetheriteLapisLazuliIngotItem::new);
+		ECHOITE_INGOT = REGISTRY.register("echoite_ingot", EchoiteIngotItem::new);
+		POSITION_STEEL_BLOCK = block(MutModBlocks.POSITION_STEEL_BLOCK, new Item.Properties().fireResistant());
+		ECHOITE_BLOCK = block(MutModBlocks.ECHOITE_BLOCK, new Item.Properties().fireResistant());
+		SUPER_SMITHING_TABLE = block(MutModBlocks.SUPER_SMITHING_TABLE, new Item.Properties().rarity(Rarity.EPIC).fireResistant());
+		SUPER_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("super_upgrade_smithing_template", SuperUpgradeSmithingTemplateItem::new);
+		MAGMA_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("magma_upgrade_smithing_template", MagmaUpgradeSmithingTemplateItem::new);
+		POISON_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("poison_upgrade_smithing_template", PoisonUpgradeSmithingTemplateItem::new);
+		THUNDER_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("thunder_upgrade_smithing_template", ThunderUpgradeSmithingTemplateItem::new);
+		UNCANNY_AMETHYST_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("uncanny_amethyst_upgrade_smithing_template", UncannyAmethystUpgradeSmithingTemplateItem::new);
+		ECHOITE_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("echoite_upgrade_smithing_template", EchoiteUpgradeSmithingTemplateItem::new);
+		SIGIL_FORGE_VAULT_COMMON = block(MutModBlocks.SIGIL_FORGE_VAULT_COMMON, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+		SIGIL_FORGE_VAULT_UNIQUE = block(MutModBlocks.SIGIL_FORGE_VAULT_UNIQUE, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+		SIGIL_FORGE_VAULT_BOSS = block(MutModBlocks.SIGIL_FORGE_VAULT_BOSS, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+		THUNDER_COPPER_STAR = REGISTRY.register("thunder_copper_star", ThunderCopperStarItem::new);
+		FLAME_GOLD_BLOCK = block(MutModBlocks.FLAME_GOLD_BLOCK, new Item.Properties().fireResistant());
+		NETHERITE_LAPIS_LAZULI_BLOCK = block(MutModBlocks.NETHERITE_LAPIS_LAZULI_BLOCK, new Item.Properties().fireResistant());
+		BOSS_TRIAL_KEY = REGISTRY.register("boss_trial_key", BossTrialKeyItem::new);
+		SIGIL_FORGE_BOSS_KEY = REGISTRY.register("sigil_forge_boss_key", SigilForgeBossKeyItem::new);
+		SIGIL_FORGE_BOSS_TRIAL_SPAWNER = block(MutModBlocks.SIGIL_FORGE_BOSS_TRIAL_SPAWNER, new Item.Properties().rarity(Rarity.EPIC).fireResistant());
+		DRAGON_SHIELD = REGISTRY.register("dragon_shield", DragonShieldItem::new);
+		LAPIS_LAZULI_SHIELD = REGISTRY.register("lapis_lazuli_shield", LapisLazuliShieldItem::new);
+		NETHERITE_LAPIS_LAZULI_SHIELD = REGISTRY.register("netherite_lapis_lazuli_shield", NetheriteLapisLazuliShieldItem::new);
+		POISON_STEEL_SHIELD = REGISTRY.register("poison_steel_shield", PoisonSteelShieldItem::new);
+		FLAME_GOLD_SHIELD = REGISTRY.register("flame_gold_shield", FlameGoldShieldItem::new);
+		UNCANNY_AMETHYST_SHIELD = REGISTRY.register("uncanny_amethyst_shield", UncannyAmethystShieldItem::new);
+		THUNDER_COPPER_SHIELD = REGISTRY.register("thunder_copper_shield", ThunderCopperShieldItem::new);
+		HETEROCHROMATIC_AMETHYST_BLOCK = block(MutModBlocks.HETEROCHROMATIC_AMETHYST_BLOCK, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+		HETEROCHROMATIC_AMETHYST_SHARD = REGISTRY.register("heterochromatic_amethyst_shard", HeterochromaticAmethystShardItem::new);
+		HETEROCHROMATICAMETHYST_1 = block(MutModBlocks.HETEROCHROMATICAMETHYST_1, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+		HETEROCHROMATICAMETHYST_2 = block(MutModBlocks.HETEROCHROMATICAMETHYST_2, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+		HETEROCHROMATICAMETHYST_3 = block(MutModBlocks.HETEROCHROMATICAMETHYST_3, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+		HETEROCHROMATICAMETHYST_4 = block(MutModBlocks.HETEROCHROMATICAMETHYST_4, new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant());
+		UNCANNY_AMETHYST_STAR = REGISTRY.register("uncanny_amethyst_star", UncannyAmethystStarItem::new);
+		HETEROCHROMATICBUDDINGAMETHYST = block(MutModBlocks.HETEROCHROMATICBUDDINGAMETHYST, new Item.Properties().rarity(Rarity.UNCOMMON));
+		NETHERITE_LAPIS_LAZULI_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("netherite_lapis_lazuli_upgrade_smithing_template", NetheriteLapisLazuliUpgradeSmithingTemplateItem::new);
+		ECHOITE_SHIELD = REGISTRY.register("echoite_shield", EchoiteShieldItem::new);
+		TRIPLE_ALLOY_INGOT = REGISTRY.register("triple_alloy_ingot", TripleAlloyIngotItem::new);
+		LAPIS_LAZULI_WOLF_ARMOR = REGISTRY.register("lapis_lazuli_wolf_armor", LapisLazuliWolfArmorItem::new);
+		NETHERITE_LAPIS_LAZULI_WOLF_ARMOR = REGISTRY.register("netherite_lapis_lazuli_wolf_armor", NetheriteLapisLazuliWolfArmorItem::new);
 	}
 	// Start of user code block custom items
 	public static final DeferredItem<Item> AMETHYST_SWORD = REGISTRY.register("amethyst_sword", AmethystTools.Sword::new);
@@ -779,6 +861,59 @@ public class MutModItems {
 	public static final DeferredItem<Item> AMETHYST_SPEAR = REGISTRY.register("amethyst_spear", BaseSpearItem.AmethystSpearItem::new);
 	public static final DeferredItem<Item> NETHERITE_AMETHYST_SPEAR = REGISTRY.register("netherite_amethyst_spear", BaseSpearItem.NetheriteAmethystSpearItem::new);
 	public static final DeferredItem<Item> NETHERITE_COPPER_SPEAR = REGISTRY.register("netherite_copper_spear", BaseSpearItem.NetheriteCopperSpearItem::new);
+	public static final DeferredItem<Item> STEEL_HORSE_ARMOR = REGISTRY.register("steel_horse_armor", BaseAnimalArmorItem.SteelHorseArmorItem::new);
+	public static final DeferredItem<Item> ADVANCED_STEEL_HORSE_ARMOR = REGISTRY.register("advanced_steel_horse_armor", BaseAnimalArmorItem.AdvancedSteelHorseArmorItem::new);
+	public static final DeferredItem<Item> AMETHYST_HORSE_ARMOR = REGISTRY.register("amethyst_horse_armor", BaseAnimalArmorItem.AmethystHorseArmorItem::new);
+	public static final DeferredItem<Item> BLUE_DIAMOND_HORSE_ARMOR = REGISTRY.register("blue_diamond_horse_armor", BaseAnimalArmorItem.BlueDiamondHorseArmorItem::new);
+	public static final DeferredItem<Item> CRYING_OBSIDIAN_HORSE_ARMOR = REGISTRY.register("crying_obsidian_horse_armor", BaseAnimalArmorItem.CryingObsidianHorseArmorItem::new);
+	public static final DeferredItem<Item> DRAGON_HORSE_ARMOR = REGISTRY.register("dragon_horse_armor", BaseAnimalArmorItem.DragonHorseArmorItem::new);
+	public static final DeferredItem<Item> EMERALD_HORSE_ARMOR = REGISTRY.register("emerald_horse_armor", BaseAnimalArmorItem.EmeraldHorseArmorItem::new);
+	public static final DeferredItem<Item> GILDING_HORSE_ARMOR = REGISTRY.register("gilding_horse_armor", BaseAnimalArmorItem.GildingHorseArmorItem::new);
+	public static final DeferredItem<Item> NETHER_STAR_HORSE_ARMOR = REGISTRY.register("nether_star_horse_armor", BaseAnimalArmorItem.NetherStarHorseArmorItem::new);
+	public static final DeferredItem<Item> NETHERITE_AMETHYST_HORSE_ARMOR = REGISTRY.register("netherite_amethyst_horse_armor", BaseAnimalArmorItem.NetheriteAmethystHorseArmorItem::new);
+	public static final DeferredItem<Item> NETHERITE_COPPER_HORSE_ARMOR = REGISTRY.register("netherite_copper_horse_armor", BaseAnimalArmorItem.NetheriteCopperHorseArmorItem::new);
+	public static final DeferredItem<Item> NETHERITE_EMERALD_HORSE_ARMOR = REGISTRY.register("netherite_emerald_horse_armor", BaseAnimalArmorItem.NetheriteEmeraldHorseArmorItem::new);
+	public static final DeferredItem<Item> NETHERITE_OBSIDIAN_HORSE_ARMOR = REGISTRY.register("netherite_obsidian_horse_armor", BaseAnimalArmorItem.NetheriteObsidianHorseArmorItem::new);
+	public static final DeferredItem<Item> NETHERITE_REDSTONE_HORSE_ARMOR = REGISTRY.register("netherite_redstone_horse_armor", BaseAnimalArmorItem.NetheriteRedstoneHorseArmorItem::new);
+	public static final DeferredItem<Item> OBSIDIAN_HORSE_ARMOR = REGISTRY.register("obsidian_horse_armor", BaseAnimalArmorItem.ObsidianHorseArmorItem::new);
+	public static final DeferredItem<Item> WITHER_HORSE_ARMOR = REGISTRY.register("wither_horse_armor", BaseAnimalArmorItem.WitherHorseArmorItem::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_HORSE_ARMOR = REGISTRY.register("lapis_lazuli_horse_armor", BaseAnimalArmorItem.LapisLazuliHorseArmorItem::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_HORSE_ARMOR = REGISTRY.register("netherite_lapis_lazuli_horse_armor", BaseAnimalArmorItem.NetheriteLapisLazuliHorseArmorItem::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_BOW = REGISTRY.register("lapis_lazuli_bow", BaseBowItem.LapisLazuliBowItem::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_BOW = REGISTRY.register("netherite_lapis_lazuli_bow", BaseBowItem.NetheriteLapisLazuliBowItem::new);
+	public static final DeferredItem<Item> ECHOITE_BOW = REGISTRY.register("echoite_bow", BaseBowItem.EchoiteBowItem::new);
+	public static final DeferredItem<Item> POISON_STEEL_BOW = REGISTRY.register("poison_steel_bow", BaseBowItem.PoisonSteelBowItem::new);
+	public static final DeferredItem<Item> FLAME_GOLD_BOW = REGISTRY.register("flame_gold_bow", BaseBowItem.FlameGoldBowItem::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_BOW = REGISTRY.register("thunder_copper_bow", BaseBowItem.ThunderCopperBowItem::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_BOW = REGISTRY.register("uncanny_amethyst_bow", BaseBowItem.UncannyAmethystBowItem::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_MACE = REGISTRY.register("lapis_lazuli_mace", BaseMaceItem.LapisLazuliMaceItem::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_MACE = REGISTRY.register("netherite_lapis_lazuli_mace", BaseMaceItem.NetheriteLapisLazuliMaceItem::new);
+	public static final DeferredItem<Item> ECHOITE_MACE = REGISTRY.register("echoite_mace", BaseMaceItem.EchoiteMaceItem::new);
+	public static final DeferredItem<Item> POISON_STEEL_MACE = REGISTRY.register("poison_steel_mace", BaseMaceItem.PoisonSteelMaceItem::new);
+	public static final DeferredItem<Item> FLAME_GOLD_MACE = REGISTRY.register("flame_gold_mace", BaseMaceItem.FlameGoldMaceItem::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_MACE = REGISTRY.register("thunder_copper_mace", BaseMaceItem.ThunderCopperMaceItem::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_MACE = REGISTRY.register("uncanny_amethyst_mace", BaseMaceItem.UncannyAmethystMaceItem::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_TRIDENT = REGISTRY.register("lapis_lazuli_trident", MutTridentItem.LapisLazuliTridentItem::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_TRIDENT = REGISTRY.register("netherite_lapis_lazuli_trident", MutTridentItem.NetheriteLapisLazuliTridentItem::new);
+	public static final DeferredItem<Item> ECHOITE_TRIDENT = REGISTRY.register("echoite_trident", MutTridentItem.EchoiteTridentItem::new);
+	public static final DeferredItem<Item> POISON_STEEL_TRIDENT = REGISTRY.register("poison_steel_trident", MutTridentItem.PoisonSteelTridentItem::new);
+	public static final DeferredItem<Item> FLAME_GOLD_TRIDENT = REGISTRY.register("flame_gold_trident", MutTridentItem.FlameGoldTridentItem::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_TRIDENT = REGISTRY.register("thunder_copper_trident", MutTridentItem.ThunderCopperTridentItem::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_TRIDENT = REGISTRY.register("uncanny_amethyst_trident", MutTridentItem.UncannyAmethystTridentItem::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_CROSSBOW = REGISTRY.register("lapis_lazuli_crossbow", MutNewCrossbowItem.LapisLazuliCrossbowItem::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_CROSSBOW = REGISTRY.register("netherite_lapis_lazuli_crossbow", MutNewCrossbowItem.NetheriteLapisLazuliCrossbowItem::new);
+	public static final DeferredItem<Item> ECHOITE_CROSSBOW = REGISTRY.register("echoite_crossbow", MutNewCrossbowItem.EchoiteCrossbowItem::new);
+	public static final DeferredItem<Item> POISON_STEEL_CROSSBOW = REGISTRY.register("poison_steel_crossbow", MutNewCrossbowItem.PoisonSteelCrossbowItem::new);
+	public static final DeferredItem<Item> FLAME_GOLD_CROSSBOW = REGISTRY.register("flame_gold_crossbow", MutNewCrossbowItem.FlameGoldCrossbowItem::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_CROSSBOW = REGISTRY.register("thunder_copper_crossbow", MutNewCrossbowItem.ThunderCopperCrossbowItem::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_CROSSBOW = REGISTRY.register("uncanny_amethyst_crossbow", MutNewCrossbowItem.UncannyAmethystCrossbowItem::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_SPEAR = REGISTRY.register("lapis_lazuli_spear", BaseSpearItem.LapisLazuliSpearItem::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_SPEAR = REGISTRY.register("netherite_lapis_lazuli_spear", BaseSpearItem.NetheriteLapisLazuliSpearItem::new);
+	public static final DeferredItem<Item> ECHOITE_SPEAR = REGISTRY.register("echoite_spear", BaseSpearItem.EchoiteSpearItem::new);
+	public static final DeferredItem<Item> POISON_STEEL_SPEAR = REGISTRY.register("poison_steel_spear", BaseSpearItem.PoisonSteelSpearItem::new);
+	public static final DeferredItem<Item> FLAME_GOLD_SPEAR = REGISTRY.register("flame_gold_spear", BaseSpearItem.FlameGoldSpearItem::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_SPEAR = REGISTRY.register("thunder_copper_spear", BaseSpearItem.ThunderCopperSpearItem::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_SPEAR = REGISTRY.register("uncanny_amethyst_spear", BaseSpearItem.UncannyAmethystSpearItem::new);
 	// wither tools
 	public static final DeferredItem<Item> WITHER_SWORD = REGISTRY.register("wither_sword", WitherTools.Sword::new);
 	public static final DeferredItem<Item> WITHER_SHOVEL = REGISTRY.register("wither_shovel", WitherTools.Shovel::new);
@@ -795,9 +930,90 @@ public class MutModItems {
 	public static final DeferredItem<Item> SUPER_NETHERITE_CHESTPLATE = REGISTRY.register("super_netherite_chestplate", SuperNetheriteArmor.Chestplate::new);
 	public static final DeferredItem<Item> SUPER_NETHERITE_LEGGINGS = REGISTRY.register("super_netherite_leggings", SuperNetheriteArmor.Leggings::new);
 	public static final DeferredItem<Item> SUPER_NETHERITE_BOOTS = REGISTRY.register("super_netherite_boots", SuperNetheriteArmor.Boots::new);
+	// lapis_lazuli tools
+	public static final DeferredItem<Item> LAPIS_LAZULI_SWORD = REGISTRY.register("lapis_lazuli_sword", LapisLazuliTools.Sword::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_SHOVEL = REGISTRY.register("lapis_lazuli_shovel", LapisLazuliTools.Shovel::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_PICKAXE = REGISTRY.register("lapis_lazuli_pickaxe", LapisLazuliTools.Pickaxe::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_AXE = REGISTRY.register("lapis_lazuli_axe", LapisLazuliTools.Axe::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_HOE = REGISTRY.register("lapis_lazuli_hoe", LapisLazuliTools.Hoe::new);
+	// lapis_lazuli armors
+	public static final DeferredItem<Item> LAPIS_LAZULI_HELMET = REGISTRY.register("lapis_lazuli_helmet", LapisLazuliArmor.Helmet::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_CHESTPLATE = REGISTRY.register("lapis_lazuli_chestplate", LapisLazuliArmor.Chestplate::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_LEGGINGS = REGISTRY.register("lapis_lazuli_leggings", LapisLazuliArmor.Leggings::new);
+	public static final DeferredItem<Item> LAPIS_LAZULI_BOOTS = REGISTRY.register("lapis_lazuli_boots", LapisLazuliArmor.Boots::new);
+	// netherite_lapis_lazuli tools
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_SWORD = REGISTRY.register("netherite_lapis_lazuli_sword", NetheriteLapisLazuliTools.Sword::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_SHOVEL = REGISTRY.register("netherite_lapis_lazuli_shovel", NetheriteLapisLazuliTools.Shovel::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_PICKAXE = REGISTRY.register("netherite_lapis_lazuli_pickaxe", NetheriteLapisLazuliTools.Pickaxe::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_AXE = REGISTRY.register("netherite_lapis_lazuli_axe", NetheriteLapisLazuliTools.Axe::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_HOE = REGISTRY.register("netherite_lapis_lazuli_hoe", NetheriteLapisLazuliTools.Hoe::new);
+	// netherite_lapis_lazuli armors
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_HELMET = REGISTRY.register("netherite_lapis_lazuli_helmet", NetheriteLapisLazuliArmor.Helmet::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_CHESTPLATE = REGISTRY.register("netherite_lapis_lazuli_chestplate", NetheriteLapisLazuliArmor.Chestplate::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_LEGGINGS = REGISTRY.register("netherite_lapis_lazuli_leggings", NetheriteLapisLazuliArmor.Leggings::new);
+	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_BOOTS = REGISTRY.register("netherite_lapis_lazuli_boots", NetheriteLapisLazuliArmor.Boots::new);
+	// position_steel tools
+	public static final DeferredItem<Item> POSITION_STEEL_SWORD = REGISTRY.register("position_steel_sword", PositionSteelTools.Sword::new);
+	public static final DeferredItem<Item> POSITION_STEEL_SHOVEL = REGISTRY.register("position_steel_shovel", PositionSteelTools.Shovel::new);
+	public static final DeferredItem<Item> POSITION_STEEL_PICKAXE = REGISTRY.register("position_steel_pickaxe", PositionSteelTools.Pickaxe::new);
+	public static final DeferredItem<Item> POSITION_STEEL_AXE = REGISTRY.register("position_steel_axe", PositionSteelTools.Axe::new);
+	public static final DeferredItem<Item> POSITION_STEEL_HOE = REGISTRY.register("position_steel_hoe", PositionSteelTools.Hoe::new);
+	// position_steel armors
+	public static final DeferredItem<Item> POSITION_STEEL_HELMET = REGISTRY.register("position_steel_helmet", PositionSteelArmor.Helmet::new);
+	public static final DeferredItem<Item> POSITION_STEEL_CHESTPLATE = REGISTRY.register("position_steel_chestplate", PositionSteelArmor.Chestplate::new);
+	public static final DeferredItem<Item> POSITION_STEEL_LEGGINGS = REGISTRY.register("position_steel_leggings", PositionSteelArmor.Leggings::new);
+	public static final DeferredItem<Item> POSITION_STEEL_BOOTS = REGISTRY.register("position_steel_boots", PositionSteelArmor.Boots::new);
+	// flame_gold tools
+	public static final DeferredItem<Item> FLAME_GOLD_SWORD = REGISTRY.register("flame_gold_sword", FlameGoldTools.Sword::new);
+	public static final DeferredItem<Item> FLAME_GOLD_SHOVEL = REGISTRY.register("flame_gold_shovel", FlameGoldTools.Shovel::new);
+	public static final DeferredItem<Item> FLAME_GOLD_PICKAXE = REGISTRY.register("flame_gold_pickaxe", FlameGoldTools.Pickaxe::new);
+	public static final DeferredItem<Item> FLAME_GOLD_AXE = REGISTRY.register("flame_gold_axe", FlameGoldTools.Axe::new);
+	public static final DeferredItem<Item> FLAME_GOLD_HOE = REGISTRY.register("flame_gold_hoe", FlameGoldTools.Hoe::new);
+	// flame_gold armors
+	public static final DeferredItem<Item> FLAME_GOLD_HELMET = REGISTRY.register("flame_gold_helmet", FlameGoldArmor.Helmet::new);
+	public static final DeferredItem<Item> FLAME_GOLD_CHESTPLATE = REGISTRY.register("flame_gold_chestplate", FlameGoldArmor.Chestplate::new);
+	public static final DeferredItem<Item> FLAME_GOLD_LEGGINGS = REGISTRY.register("flame_gold_leggings", FlameGoldArmor.Leggings::new);
+	public static final DeferredItem<Item> FLAME_GOLD_BOOTS = REGISTRY.register("flame_gold_boots", FlameGoldArmor.Boots::new);
+	// echoite tools
+	public static final DeferredItem<Item> ECHOITE_SWORD = REGISTRY.register("echoite_sword", EchoiteTools.Sword::new);
+	public static final DeferredItem<Item> ECHOITE_SHOVEL = REGISTRY.register("echoite_shovel", EchoiteTools.Shovel::new);
+	public static final DeferredItem<Item> ECHOITE_PICKAXE = REGISTRY.register("echoite_pickaxe", EchoiteTools.Pickaxe::new);
+	public static final DeferredItem<Item> ECHOITE_AXE = REGISTRY.register("echoite_axe", EchoiteTools.Axe::new);
+	public static final DeferredItem<Item> ECHOITE_HOE = REGISTRY.register("echoite_hoe", EchoiteTools.Hoe::new);
+	// echoite armors
+	public static final DeferredItem<Item> ECHOITE_HELMET = REGISTRY.register("echoite_helmet", EchoiteArmor.Helmet::new);
+	public static final DeferredItem<Item> ECHOITE_CHESTPLATE = REGISTRY.register("echoite_chestplate", EchoiteArmor.Chestplate::new);
+	public static final DeferredItem<Item> ECHOITE_LEGGINGS = REGISTRY.register("echoite_leggings", EchoiteArmor.Leggings::new);
+	public static final DeferredItem<Item> ECHOITE_BOOTS = REGISTRY.register("echoite_boots", EchoiteArmor.Boots::new);
+	// uncanny_amethyst tools
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_SWORD = REGISTRY.register("uncanny_amethyst_sword", UncannyAmethystTools.Sword::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_SHOVEL = REGISTRY.register("uncanny_amethyst_shovel", UncannyAmethystTools.Shovel::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_PICKAXE = REGISTRY.register("uncanny_amethyst_pickaxe", UncannyAmethystTools.Pickaxe::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_AXE = REGISTRY.register("uncanny_amethyst_axe", UncannyAmethystTools.Axe::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_HOE = REGISTRY.register("uncanny_amethyst_hoe", UncannyAmethystTools.Hoe::new);
+	// uncanny_amethyst armors
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_HELMET = REGISTRY.register("uncanny_amethyst_helmet", UncannyAmethystArmor.Helmet::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_CHESTPLATE = REGISTRY.register("uncanny_amethyst_chestplate", UncannyAmethystArmor.Chestplate::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_LEGGINGS = REGISTRY.register("uncanny_amethyst_leggings", UncannyAmethystArmor.Leggings::new);
+	public static final DeferredItem<Item> UNCANNY_AMETHYST_BOOTS = REGISTRY.register("uncanny_amethyst_boots", UncannyAmethystArmor.Boots::new);
+	// thunder_copper tools
+	public static final DeferredItem<Item> THUNDER_COPPER_SWORD = REGISTRY.register("thunder_copper_sword", ThunderCopperTools.Sword::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_SHOVEL = REGISTRY.register("thunder_copper_shovel", ThunderCopperTools.Shovel::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_PICKAXE = REGISTRY.register("thunder_copper_pickaxe", ThunderCopperTools.Pickaxe::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_AXE = REGISTRY.register("thunder_copper_axe", ThunderCopperTools.Axe::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_HOE = REGISTRY.register("thunder_copper_hoe", ThunderCopperTools.Hoe::new);
+	// thunder_copper armors
+	public static final DeferredItem<Item> THUNDER_COPPER_HELMET = REGISTRY.register("thunder_copper_helmet", ThunderCopperArmor.Helmet::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_CHESTPLATE = REGISTRY.register("thunder_copper_chestplate", ThunderCopperArmor.Chestplate::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_LEGGINGS = REGISTRY.register("thunder_copper_leggings", ThunderCopperArmor.Leggings::new);
+	public static final DeferredItem<Item> THUNDER_COPPER_BOOTS = REGISTRY.register("thunder_copper_boots", ThunderCopperArmor.Boots::new);
 	public static final DeferredRegister<EntityType<?>> ENTITY_REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, MutMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<MutThrownTrident>> MUT_THROWN_TRIDENT = ENTITY_REGISTRY.register("mut_thrown_trident",
 			() -> EntityType.Builder.<MutThrownTrident>of(MutThrownTrident::new, MobCategory.MISC).sized(0.5F, 0.5F).clientTrackingRange(4).updateInterval(20).build("mut_thrown_trident"));
+	public static final DeferredHolder<Item, SpawnEggItem> SIGIL_FORGE_ZOMBIE_BOSS_SPAWN_EGG = REGISTRY.register("sigil_forge_zombie_boss_spawn_egg",
+			() -> new DeferredSpawnEggItem(MutModEntities.SIGIL_FORGE_ZOMBIE_BOSS, 0x2D1E15, 0x8B0000, new Item.Properties()));
+	public static final DeferredItem<BlockItem> SIGIL_FORGE_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_trial_spawner", () -> new BlockItem(MutModBlocks.SIGIL_FORGE_TRIAL_SPAWNER.get(), new Item.Properties()));
+	public static final DeferredItem<BlockItem> SIGIL_FORGE_UNIQUE_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_unique_trial_spawner", () -> new BlockItem(MutModBlocks.SIGIL_FORGE_UNIQUE_TRIAL_SPAWNER.get(), new Item.Properties()));
 
 	//public static final DeferredItem<Item> X = REGISTRY.register("x", XItem.xItem::new);
 	// End of user code block custom items
@@ -884,6 +1100,14 @@ public class MutModItems {
 				ItemProperties.register(NETHERITE_AMETHYST_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(NETHERITE_EMERALD_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 				ItemProperties.register(AMETHYST_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(DRAGON_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(LAPIS_LAZULI_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(NETHERITE_LAPIS_LAZULI_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(POISON_STEEL_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(FLAME_GOLD_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(UNCANNY_AMETHYST_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(THUNDER_COPPER_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
+				ItemProperties.register(ECHOITE_SHIELD.get(), ResourceLocation.parse("minecraft:blocking"), ItemProperties.getProperty(new ItemStack(Items.SHIELD), ResourceLocation.parse("minecraft:blocking")));
 			});
 		}
 	}

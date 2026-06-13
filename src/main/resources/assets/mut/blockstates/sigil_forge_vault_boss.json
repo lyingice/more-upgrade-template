@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=north,vault_state=inactive,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss"
+    },
+    "facing=east,vault_state=inactive,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss",
+      "y": 90
+    },
+    "facing=south,vault_state=inactive,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss",
+      "y": 180
+    },
+    "facing=west,vault_state=inactive,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss",
+      "y": 270
+    },
+    "facing=north,vault_state=active,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss"
+    },
+    "facing=east,vault_state=active,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss",
+      "y": 90
+    },
+    "facing=south,vault_state=active,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss",
+      "y": 180
+    },
+    "facing=west,vault_state=active,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss",
+      "y": 270
+    },
+    "facing=north,vault_state=unlocking,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss_unlocking"
+    },
+    "facing=east,vault_state=unlocking,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss_unlocking",
+      "y": 90
+    },
+    "facing=south,vault_state=unlocking,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss_unlocking",
+      "y": 180
+    },
+    "facing=west,vault_state=unlocking,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss_unlocking",
+      "y": 270
+    },
+    "facing=north,vault_state=ejecting,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss_unlocking"
+    },
+    "facing=east,vault_state=ejecting,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss_unlocking",
+      "y": 90
+    },
+    "facing=south,vault_state=ejecting,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss_unlocking",
+      "y": 180
+    },
+    "facing=west,vault_state=ejecting,ominous=false": {
+      "model": "mut:block/sigil_forge_vault_boss_unlocking",
+      "y": 270
+    }
+  }
+}

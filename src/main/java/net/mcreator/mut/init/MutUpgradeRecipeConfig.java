@@ -131,5 +131,37 @@ public class MutUpgradeRecipeConfig {
                 "mut:netherite_amethyst_upgrade_smithing_template",
                 "mut:netherite_amethyst_ingot"
         );
+        //下界合金青金石
+        register("netherite_lapis_lazuli",
+                List.of("lapis_lazuli"),
+                "mut:netherite_lapis_lazuli_upgrade_smithing_template",
+                "mut:netherite_lapis_lazuli_ingot"
+        );
+        //回响合金
+        register("echoite",
+                List.of("netherite"),
+                "mut:echoite_upgrade_smithing_template",
+                "mut:echoite_ingot"
+        );
+        register("poison_steel",
+                List.of("steel"),
+                "mut:poison_upgrade_smithing_template",
+                "mut:position_steel_ingot"
+        );
+        register("flame_gold",
+                List.of("gilding"),
+                "mut:magma_upgrade_smithing_template",
+                "mut:flame_gold_ingot"
+        );
+        register("thunder_copper",
+                List.of("netherite_copper"),
+                "mut:thunder_upgrade_smithing_template",
+                "mut:thunder_copper_star"
+        );
+        register("uncanny_amethyst",
+                List.of("netherite_amethyst"),
+                "mut:uncanny_amethyst_upgrade_smithing_template",
+                "mut:uncanny_amethyst_star"
+        );
     }
 }

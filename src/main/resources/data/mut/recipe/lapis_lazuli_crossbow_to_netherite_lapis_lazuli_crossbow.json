@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_lapis_lazuli_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:lapis_lazuli_crossbow"
+  },
+  "addition": {
+    "item": "mut:netherite_lapis_lazuli_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_lapis_lazuli_crossbow"
+  }
+}

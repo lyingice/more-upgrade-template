@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "minecraft:golden_boots",
-    "mut:golden_chain_boots"
+    "minecraft:golden_leggings",
+    "mut:golden_chain_leggings"
   ]
 }

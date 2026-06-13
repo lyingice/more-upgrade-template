@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "mut:thunder_copper_sword",
+    "mut:thunder_copper_axe",
+    "mut:thunder_copper_pickaxe",
+    "mut:thunder_copper_hoe",
+    "mut:thunder_copper_shovel",
+    "mut:thunder_copper_helmet",
+    "mut:thunder_copper_chestplate",
+    "mut:thunder_copper_leggings",
+    "mut:thunder_copper_boots",
+    "mut:thunder_copper_shield",
+    "mut:thunder_copper_bow",
+    "mut:thunder_copper_crossbow",
+    "mut:thunder_copper_mace",
+    "mut:thunder_copper_trident",
+    "mut:thunder_copper_spear"
+  ]
+}

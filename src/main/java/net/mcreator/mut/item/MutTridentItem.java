@@ -3,9 +3,11 @@ package net.mcreator.mut.item;
 import net.mcreator.mut.entity.MutThrownTrident;
 import net.mcreator.mut.init.MutModItems;
 import net.mcreator.mut.init.MutTridentStats;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -18,10 +20,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TridentItem;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
@@ -30,6 +29,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+
+import java.util.List;
 
 public class MutTridentItem extends TridentItem {
 
@@ -157,6 +158,13 @@ public class MutTridentItem extends TridentItem {
     private static boolean isTooDamagedToUse(ItemStack stack) {
         return stack.getDamageValue() >= stack.getMaxDamage() - 1;
     }
+    @Override
+    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> list, TooltipFlag flag) {
+        MutTridentStats.Stats stats = MutTridentStats.get(stack.getItem());
+        list.add(Component.translatable("item.mut.trident.throw_damage",
+                        String.format("%.1f", stats.throwDamage()))
+                .withStyle(ChatFormatting.GRAY));
+    }
 
     // ========== 子类 ==========
 
@@ -222,6 +230,7 @@ public class MutTridentItem extends TridentItem {
         private static CustomData createWitherMarkData() {
             CompoundTag tag = new CompoundTag();
             tag.putString("Affix", "wither_mark");
+            tag.putInt("AffixLevel", 3);
             return CustomData.of(tag);
         }
     }
@@ -244,4 +253,31 @@ public class MutTridentItem extends TridentItem {
     public static class EmeraldTridentItem extends MutTridentItem {
         public EmeraldTridentItem() { super(MutTridentStats.EMERALD); }
     }
+    public static class LapisLazuliTridentItem extends MutTridentItem { public LapisLazuliTridentItem() { super(MutTridentStats.LAPIS_LAZULI); }}
+    public static class NetheriteLapisLazuliTridentItem extends MutTridentItem { public NetheriteLapisLazuliTridentItem() { super(MutTridentStats.NETHERITE_LAPIS_LAZULI); }}
+    public static class EchoiteTridentItem extends MutTridentItem { public EchoiteTridentItem() { super(MutTridentStats.ECHOITE); }}
+    public static class PoisonSteelTridentItem extends MutTridentItem { public PoisonSteelTridentItem() { super(MutTridentStats.POISON_STEEL,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).fireResistant()); }
+        private static CustomData createAffixData() {
+        CompoundTag tag = new CompoundTag();
+        tag.putString("Affix", "poison_mark"
+        );
+        tag.putInt("AffixLevel", 3);
+        return CustomData.of(tag);}
+    }
+    public static class FlameGoldTridentItem extends MutTridentItem { public FlameGoldTridentItem() { super(MutTridentStats.FLAME_GOLD,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).fireResistant()); }
+        private static CustomData createAffixData() {
+        CompoundTag tag = new CompoundTag();
+        tag.putString("Affix", "fire_mark");
+        tag.putInt("AffixLevel", 3);
+        return CustomData.of(tag);}}
+    public static class ThunderCopperTridentItem extends MutTridentItem { public ThunderCopperTridentItem() { super(MutTridentStats.THUNDER_COPPER); }}
+    public static class UncannyAmethystTridentItem extends MutTridentItem { public UncannyAmethystTridentItem() { super(MutTridentStats.UNCANNY_AMETHYST,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).fireResistant()); }
+        private static CustomData createAffixData() {
+        CompoundTag tag = new CompoundTag();
+        tag.putString("Affix", "regeneration_mark");
+        tag.putInt("AffixLevel", 3);
+        return CustomData.of(tag);}
+    }
+    /**,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).fireResistant()
+     **/
 }

@@ -42,7 +42,15 @@ public class MutTridentPull {
                     MutModItems.NETHERITE_REDSTONE_TRIDENT.get(),
                     MutModItems.NETHERITE_AMETHYST_TRIDENT.get(),
                     MutModItems.AMETHYST_TRIDENT.get(),
-                    MutModItems.EMERALD_TRIDENT.get()
+                    MutModItems.EMERALD_TRIDENT.get(),
+                    MutModItems.LAPIS_LAZULI_TRIDENT.get(),
+                    MutModItems.NETHERITE_LAPIS_LAZULI_TRIDENT.get(),
+                    MutModItems.ECHOITE_TRIDENT.get(),
+                    MutModItems.POISON_STEEL_TRIDENT.get(),
+                    MutModItems.FLAME_GOLD_TRIDENT.get(),
+                    MutModItems.THUNDER_COPPER_TRIDENT.get(),
+                    MutModItems.UNCANNY_AMETHYST_TRIDENT.get()
+
             );
 
             for (Item item : tridents) {
@@ -52,8 +60,6 @@ public class MutTridentPull {
                             if (entity == null) return 0.0F;
                             return entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F;
                         });
-
-                System.out.println("Registered trident properties for: " + BuiltInRegistries.ITEM.getKey(item));
             }
         });
     }

@@ -4,9 +4,10 @@ license="MIT License"
 
 [[mods]]
 modId="mut"
-version="0.3.0"
+version="0.4.1"
 displayName="MoreUpgradeTemplate"
 displayURL="https://mcreator.net"
+logoFile="logo.png"
 credits="Created using mod maker MCreator - https://mcreator.net/about"
 authors="Lying_ice"
 description="More Upgrade Smithing Templates"
@@ -46,4 +47,23 @@ side="BOTH"
 
 
 # Start of user code block dependencies configuration
+[[dependencies.mut]]
+modId="jade"
+type="optional"
+side="CLIENT"
+versionRange="[15,)"
+
+[[dependencies.mut]]
+modId="appleskin"
+type="optional"
+side="CLIENT"
+versionRange="[3.0,)"
+
+[[dependencies.mut]]
+modId="patchouli"
+type="optional"
+versionRange="[1.21.1,)"
+ordering="NONE"
+side="BOTH"
+
 # End of user code block dependencies configuration

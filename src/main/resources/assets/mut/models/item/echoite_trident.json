@@ -1,0 +1,39 @@
+{
+  "loader": "neoforge:separate_transforms",
+  "gui_light": "front",
+  "base": {
+    "parent": "mut:custom/trident",
+    "textures": {
+      "2": "mut:block/echoite_trident",
+      "particle": "mut:item/echoite_trident"
+    }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "throwing": 1
+      },
+      "model": "mut:item/echoite_trident_throwing"
+    }
+  ],
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/echoite_trident"
+      }
+    },
+    "fixed": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/echoite_trident"
+      }
+    },
+    "ground": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "mut:item/echoite_trident"
+      }
+    }
+  }
+}

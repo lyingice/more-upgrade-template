@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "mut:debris_stone"
+    },
+    "title": {
+      "translate": "advancements.sigil_forge_join.title"
+    },
+    "description": {
+      "translate": "advancements.sigil_forge_join.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "sigil_forge_join_0": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "mut:sigil_forge_dimension"
+      }
+    }
+  },
+  "parent": "mut:craftsman"
+}

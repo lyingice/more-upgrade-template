@@ -11,6 +11,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 
 public class MutNewCrossbowItem {
 
+
     public static class CopperCrossbowItem extends NewCrossbowItem {
         public CopperCrossbowItem() {
             super(MutModItems.COPPER_CROSSBOW::get, MutCrossbowStats.COPPER);
@@ -108,6 +109,7 @@ public class MutNewCrossbowItem {
         private static CustomData createWitherMarkData() {
             CompoundTag tag = new CompoundTag();
             tag.putString("Affix", "wither_mark");
+            tag.putInt("AffixLevel", 3);
             return CustomData.of(tag);
         }
     }
@@ -148,6 +150,30 @@ public class MutNewCrossbowItem {
             super(MutModItems.AMETHYST_CROSSBOW::get, MutCrossbowStats.AMETHYST);
         }
     }
+    public static class LapisLazuliCrossbowItem extends NewCrossbowItem { public LapisLazuliCrossbowItem() { super(MutModItems.LAPIS_LAZULI_CROSSBOW::get, MutCrossbowStats.LAPIS_LAZULI,new Properties());}}
+    public static class NetheriteLapisLazuliCrossbowItem extends NewCrossbowItem { public NetheriteLapisLazuliCrossbowItem() { super(MutModItems.NETHERITE_LAPIS_LAZULI_CROSSBOW::get, MutCrossbowStats.NETHERITE_LAPIS_LAZULI,new Properties());}}
+    public static class EchoiteCrossbowItem extends NewCrossbowItem { public EchoiteCrossbowItem() { super(MutModItems.ECHOITE_CROSSBOW::get, MutCrossbowStats.ECHOITE,new Properties());}}
+    public static class PoisonSteelCrossbowItem extends NewCrossbowItem { public PoisonSteelCrossbowItem() { super(MutModItems.POISON_STEEL_CROSSBOW::get, MutCrossbowStats.POISON_STEEL,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()));}
+        private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "poison_mark"
+            );
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}}
+    public static class FlameGoldCrossbowItem extends NewCrossbowItem { public FlameGoldCrossbowItem() { super(MutModItems.FLAME_GOLD_CROSSBOW::get, MutCrossbowStats.FLAME_GOLD,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()));}
+        private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "fire_mark");
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}}
+    public static class ThunderCopperCrossbowItem extends NewCrossbowItem { public ThunderCopperCrossbowItem() { super(MutModItems.THUNDER_COPPER_CROSSBOW::get, MutCrossbowStats.THUNDER_COPPER,new Properties());}}
+    public static class UncannyAmethystCrossbowItem extends NewCrossbowItem { public UncannyAmethystCrossbowItem() { super(MutModItems.UNCANNY_AMETHYST_CROSSBOW::get, MutCrossbowStats.UNCANNY_AMETHYST,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()));}
+        private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "regeneration_mark");
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);}}
+
     /*public static class XxCrossbowItem extends NewCrossbowItem {
         public XxCrossbowItem() {
             super(MutModItems.X_CROSSBOW::get, MutCrossbowStats.X,new Properties());

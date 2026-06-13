@@ -1,0 +1,17 @@
+{
+  "name": "§bPity System",
+  "category": "mut:affix_mechanics",
+  "icon": "minecraft:experience_bottle",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "§lPity Mechanism",
+      "text": "The pity system ensures players don't get stuck with low-tier affixes forever.$(br2)Each time you obtain a Tier 1 or Tier 2 affix, 1 'luck point' is accumulated on the item.$(br)Accumulated luck increases the chance of obtaining a high-tier affix on the next roll."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Luck resets when you obtain a Tier 3 or higher affix.$(br2)Using high-quality enchanting materials (like Nether Stars) increases luck point gain per roll and raises the reset threshold, making high-tier affixes appear more frequently."
+    }
+  ]
+}

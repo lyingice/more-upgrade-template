@@ -23,6 +23,13 @@
     "mut:netherite_redstone_spear",
     "mut:obsidian_spear",
     "mut:steel_spear",
-    "mut:wither_spear"
+    "mut:wither_spear",
+    "mut:lapis_lazuli_spear",
+    "mut:netherite_lapis_lazuli_spear",
+    "mut:echoite_spear",
+    "mut:poison_steel_spear",
+    "mut:flame_gold_spear",
+    "mut:thunder_copper_spear",
+    "mut:uncanny_amethyst_spear"
   ]
 }

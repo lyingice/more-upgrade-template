@@ -18,12 +18,12 @@ public class NirvanaAffix implements Affix {
         return AFFIX_ID;
     }
 
-    @Override
+    //@Override
     public boolean hasAttributeModifiers() {
         return true;
     }
 
-    @Override
+    //@Override
     public ItemAttributeModifiers getAttributeModifiers(ItemAttributeModifiers original, EquipmentSlot slot) {
         ItemAttributeModifiers modifiers = original;
 

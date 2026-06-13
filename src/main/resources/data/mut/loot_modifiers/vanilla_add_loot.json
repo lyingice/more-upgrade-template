@@ -3,8 +3,8 @@
   "conditions": [
     {
       "condition": "neoforge:loot_table_id",
-      "loot_table_id": "minecraft:chests/spawn_bonus_chest"
+      "loot_table_id": "mut:chests/sigil_forge"
     }
   ],
-  "table": "mut:copperadd"
+  "table": "mut:chests/sigil_forge_loot_01"
 }
