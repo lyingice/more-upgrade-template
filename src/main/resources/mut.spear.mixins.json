@@ -12,7 +12,8 @@
     "SharpshooterMixin",
     "StrengthBlessingMixin",
     "TidalSurgeMixin",
-    "BigStomachMixin"
+    "BigStomachMixin",
+    "MixinLivingEntity"
   ],
   "client": [
     "LocalPlayerFovMixin",

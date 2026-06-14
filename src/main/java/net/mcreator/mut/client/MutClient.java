@@ -109,6 +109,12 @@ public class MutClient {
         if (slimSkin instanceof PlayerRenderer pr) {
             pr.addLayer(new ChargedArmorLayer<>(pr, event.getEntityModels()));
         }
+        event.getSkins().forEach(skin -> {
+            PlayerRenderer renderer = event.getSkin(skin);
+            if (renderer != null) {
+                renderer.addLayer(new CustomElytraLayer(renderer, event.getEntityModels()));
+            }
+        });
     }
     @SubscribeEvent
     public static void registerParticles(RegisterParticleProvidersEvent event) {
@@ -117,4 +123,5 @@ public class MutClient {
                 GraySonicBoomParticle.Provider::new
         );
     }
+
 }

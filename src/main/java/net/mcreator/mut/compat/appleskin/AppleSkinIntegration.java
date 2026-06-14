@@ -1,4 +1,4 @@
-package net.mcreator.mut.compat;
+package net.mcreator.mut.compat.appleskin;
 
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

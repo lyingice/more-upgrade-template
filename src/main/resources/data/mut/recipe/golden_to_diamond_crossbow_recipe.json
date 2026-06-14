@@ -7,7 +7,7 @@
     "item": "mut:golden_crossbow"
   },
   "addition": {
-    "item": "minecraft:diamond_block"
+    "item": "minecraft:diamond"
   },
   "result": {
     "id": "mut:diamond_crossbow"

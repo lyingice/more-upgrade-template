@@ -7,7 +7,7 @@
     "item": "mut:iron_crossbow"
   },
   "addition": {
-    "item": "minecraft:gold_block"
+    "item": "minecraft:gold_ingot"
   },
   "result": {
     "id": "mut:golden_crossbow"
