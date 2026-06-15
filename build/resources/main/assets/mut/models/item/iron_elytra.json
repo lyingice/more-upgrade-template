@@ -6,8 +6,8 @@
   "overrides": [
     {
       "predicate": {
-        "damaged": 1
-      },
+                "broken": 1
+            },
       "model": "mut:item/iron_elytra_0"
     }
   ]

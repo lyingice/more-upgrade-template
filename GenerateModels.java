@@ -9,7 +9,8 @@ public class GenerateModels {
     // 你的所有盔甲材料名称
     private static final String[] MATERIALS = {
             "obsidian", "steel", "dragon", "blue_diamond", "gilding", "netherite_obsidian", "crying_obsidian", "copper", "emerald_armor", "advanced_steel", "netherite_redstone","nether_star","golden_chain","diamond_chain","netherite_chain",
-            "netherite_emerald","netherite_copper","amethyst","netherite_amethyst","wither","super_netherite"
+            "netherite_emerald","netherite_copper","amethyst","netherite_amethyst","wither","super_netherite","lapis_lazuli","netherite_lapis_lazuli","position_steel",
+            "flame_gold","echoite","uncanny_amethyst","thunder_copper"
             // 在这里添加你其他的17套盔甲材料名称
     };
 

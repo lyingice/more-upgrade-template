@@ -935,5 +935,13 @@
   "affix.level.mythic": "Mythic",
   "affix.level.ancient": "Ancient",
   "affix.level.celestial": "Celestial",
-  "patchouli.mut.affix_guide.landing": ""
+  "patchouli.mut.affix_guide.landing": "",
+  "item.mut.copper_elytra": "Copper Elytra",
+  "item.mut.emerald_elytra": "Emerald Elytra",
+  "item.mut.lapis_lazuli_elytra": "Lapis Lazuli Elytra",
+  "item.mut.obsidian_elytra": "Obsidian Elytra",
+  "item.mut.nether_star_elytra": "Nether Star Elytra",
+  "item.mut.dragon_elytra": "Dragon Elytra",
+  "item.mut.poison_steel_elytra": "Poison Steel Elytra",
+  "item.mut.amethyst_elytra": "Amethyst Elytra"
 }

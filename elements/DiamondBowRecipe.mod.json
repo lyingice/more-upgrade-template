@@ -15,7 +15,7 @@
       "value": "CUSTOM:IronBow"
     },
     "smithingInputAdditionStack": {
-      "value": "Blocks.DIAMOND_BLOCK"
+      "value": "Items.DIAMOND"
     },
     "smithingInputTemplateStack": {
       "value": "CUSTOM:DiamondUpgradeTemplate"

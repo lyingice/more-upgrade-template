@@ -2,11 +2,15 @@
   "replace": false,
   "values": [
     "mut:nether_deep_iron_ore_block",
+    "mut:heterochromatic_amethyst_block",
     "mut:obsidian_block",
+    "mut:heterochromaticbuddingamethyst",
     "mut:gilding_debris",
     "mut:steel_debris",
+    "mut:flame_gold_ore",
     "mut:advanced_steel_block",
     "mut:crying_obsidian_block",
+    "mut:metal_poisonous_ore",
     "mut:blue_diamond_debris"
   ]
 }

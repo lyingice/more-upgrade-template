@@ -6,8 +6,8 @@
   "overrides": [
     {
       "predicate": {
-        "damaged": 1447
-      },
+                "broken": 1
+            },
       "model": "mut:item/netherite_elytra_0"
     }
   ]

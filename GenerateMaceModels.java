@@ -16,7 +16,8 @@ public class GenerateMaceModels {
             "wooden", "copper", "iron", "golden", "diamond", "netherite",
             "steel", "gilding", "blue_diamond", "advanced_steel","obsidian","netherite_obsidian","crying_obsidian",
             "nether_star","wither","dragon","netherite_redstone", "netherite_copper","netherite_emerald",
-            "netherite_amethyst","amethyst", "emerald"
+            "netherite_amethyst","amethyst", "emerald",
+            "lapis_lazuli","netherite_lapis_lazuli","echoite","poison_steel","flame_gold","thunder_copper","uncanny_amethyst"
     };
     // =============================================
 

@@ -1,9 +1,0 @@
-{
-  "_fv": 85,
-  "_type": "mixin",
-  "definition": {
-    "mixins": [
-      "ElytraLayerMixin"
-    ]
-  }
-}

@@ -9,6 +9,9 @@
     "mut:netherite_emerald_ingot",
     "mut:steel_ingot",
     "mut:netherite_redstone_ingot",
-    "mut:netherite_amethyst_ingot"
+    "mut:netherite_amethyst_ingot",
+    "mut:position_steel_ingot",
+    "mut:netherite_lapis_lazuli_ingot",
+    "mut:flame_gold_ingot"
   ]
 }

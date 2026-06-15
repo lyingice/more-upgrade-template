@@ -6,11 +6,13 @@
       "id": "#mut:bow",
       "required": false
     },
+    "mut:dragon_elytra",
     "mut:steel_beef",
     {
       "id": "#minecraft:mace",
       "required": false
     },
+    "mut:lapis_lazuli_elytra",
     "mut:wooden_mace",
     "mut:wither_beef",
     "mut:diamond_mace",
@@ -20,9 +22,13 @@
     },
     "mut:netherite_copper_beef",
     "mut:nether_star_beef",
+    "mut:poison_steel_elytra",
     "mut:netherite_beef",
+    "mut:copper_elytra",
     "mut:diamond_beef",
+    "mut:amethyst_elytra",
     "mut:netherite_mace",
+    "mut:nether_star_elytra",
     {
       "id": "#mut:spear",
       "required": false
@@ -33,8 +39,10 @@
       "required": false
     },
     "mut:gilding_beef",
+    "mut:emerald_elytra",
     "mut:golden_beef",
     "mut:dragon_chestplate_elytra",
+    "mut:obsidian_elytra",
     "mut:blue_diamond_beef",
     "mut:netherite_redstone_beef",
     "mut:copper_beef",
@@ -45,6 +53,10 @@
     },
     {
       "id": "#mut:crossbow",
+      "required": false
+    },
+    {
+      "id": "#mut:elytra",
       "required": false
     }
   ]

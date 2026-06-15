@@ -33,6 +33,8 @@ public class NetheriteElytraItem extends Item implements IItemExtension, Equipab
                                 0.1,
                                 AttributeModifier.Operation.ADD_VALUE
                         ), EquipmentSlotGroup.CHEST)
+                        .add(Attributes.ARMOR, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(MutMod.MODID, "elytra_component"),3 , AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
+                        .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ResourceLocation.fromNamespaceAndPath(MutMod.MODID, "elytra_component0"),3 , AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                         .build()
                 )
         );

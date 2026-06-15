@@ -4,6 +4,10 @@
     {
       "id": "#mut:mace_weapon",
       "required": false
+    },
+    {
+      "id": "#mut:spear",
+      "required": false
     }
   ]
 }

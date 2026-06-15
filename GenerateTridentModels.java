@@ -18,7 +18,8 @@ public class GenerateTridentModels {
             "obsidian", "netherite_obsidian", "crying_obsidian",
             "nether_star", "dragon", "wither","netherite_redstone",
             "netherite_copper","netherite_emerald","netherite_amethyst",
-            "amethyst", "emerald"
+            "amethyst", "emerald",
+            "lapis_lazuli","netherite_lapis_lazuli","echoite","poison_steel","flame_gold","thunder_copper","uncanny_amethyst"
     };
     private static final String MOD_ID = "mut";
     private static final String MODELS_DIR = "src/main/resources/assets/" + MOD_ID + "/models/item";

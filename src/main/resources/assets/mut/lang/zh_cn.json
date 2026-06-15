@@ -932,5 +932,13 @@
   "affix.level.mythic": "⭐⭐⭐⭐⭐⭐",
   "affix.level.ancient": "⭐⭐⭐⭐⭐⭐⭐",
   "affix.level.celestial": "⭐⭐⭐⭐⭐⭐⭐⭐",
-  "patchouli.mut.affix_guide.landing": "§6欢迎来到更多锻造模板宝典宝典！$(br2)本书将详细讲解模组的全部机制，帮助你打造最强装备。 "
+  "patchouli.mut.affix_guide.landing": "§6欢迎来到更多锻造模板宝典宝典！$(br2)本书将详细讲解模组的全部机制，帮助你打造最强装备。 ",
+  "item.mut.copper_elytra": "铜鞘翅",
+  "item.mut.emerald_elytra": "绿宝石鞘翅",
+  "item.mut.lapis_lazuli_elytra": "青金石鞘翅",
+  "item.mut.obsidian_elytra": "黑曜石鞘翅",
+  "item.mut.nether_star_elytra": "下界之星鞘翅",
+  "item.mut.dragon_elytra": "龙翼鞘翅",
+  "item.mut.poison_steel_elytra": "毒钢鞘翅",
+  "item.mut.amethyst_elytra": "紫水晶鞘翅"
 }

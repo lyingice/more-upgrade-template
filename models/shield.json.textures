@@ -77,6 +77,96 @@
       "map": {
         "0": "copper_shield"
       }
+    },
+    "wither": {
+      "name": "wither",
+      "map": {
+        "0": "wither_shield"
+      }
+    },
+    "netherite_redstone": {
+      "name": "netherite_redstone",
+      "map": {
+        "0": "netherite_redstone_shield"
+      }
+    },
+    "netherite_copper": {
+      "name": "netherite_copper",
+      "map": {
+        "0": "netherite_copper_shield"
+      }
+    },
+    "netherite_amethyst": {
+      "name": "netherite_amethyst",
+      "map": {
+        "0": "netherite_amethyst_shield"
+      }
+    },
+    "netherite_emerald": {
+      "name": "netherite_emerald",
+      "map": {
+        "0": "netherite_emerald_shield"
+      }
+    },
+    "emerald": {
+      "name": "emerald",
+      "map": {
+        "0": "emerald_shield"
+      }
+    },
+    "amethyst": {
+      "name": "amethyst",
+      "map": {
+        "0": "amethyst_shield"
+      }
+    },
+    "lapis_lazuli": {
+      "name": "lapis_lazuli",
+      "map": {
+        "0": "lapis_lazuli_shield"
+      }
+    },
+    "netherite_lapis_lazuli": {
+      "name": "netherite_lapis_lazuli",
+      "map": {
+        "0": "netherite_lapis_lazuli_shield"
+      }
+    },
+    "poison_steel": {
+      "name": "poison_steel",
+      "map": {
+        "0": "position_steel_shield"
+      }
+    },
+    "flame_gold": {
+      "name": "flame_gold",
+      "map": {
+        "0": "flame_gold_shield"
+      }
+    },
+    "thunder_copper": {
+      "name": "thunder_copper",
+      "map": {
+        "0": "thunder_copper_shield"
+      }
+    },
+    "uncanny_amethyst": {
+      "name": "uncanny_amethyst",
+      "map": {
+        "0": "uncanny_amethyst_shield"
+      }
+    },
+    "echoite": {
+      "name": "echoite",
+      "map": {
+        "0": "echoite_shield"
+      }
+    },
+    "dragon": {
+      "name": "dragon",
+      "map": {
+        "0": "dragon_shield"
+      }
     }
   }
 }

@@ -19,12 +19,7 @@
     "itemTexture": "",
     "particleTexture": "steel_debris_side",
     "blockSetType": "OAK",
-    "pottedPlant": {
-      "value": ""
-    },
-    "leavesParticleChance": 0.01,
-    "signEntityTexture": "",
-    "signGUITexture": "",
+    "leavesParticleChance": 0.0,
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -151,12 +146,15 @@
     "blocksToReplace": [
       {
         "value": "Blocks.DEEPSLATE"
+      },
+      {
+        "value": "CUSTOM:DebrisStone"
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 3,
+    "frequencyPerChunks": 4,
     "frequencyOnChunk": 6,
     "minGenerateHeight": -60,
-    "maxGenerateHeight": 0
+    "maxGenerateHeight": 40
   }
 }

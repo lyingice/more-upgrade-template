@@ -22,7 +22,8 @@ public class GenerateCrossbowModels {
             "obsidian", "netherite_obsidian", "crying_obsidian",
             "nether_star", "wither", "dragon","netherite_redstone",
             "netherite_copper","netherite_emerald","netherite_amethyst",
-            "amethyst","emerald"
+            "amethyst","emerald",
+            "lapis_lazuli","netherite_lapis_lazuli","echoite","poison_steel","flame_gold","thunder_copper","uncanny_amethyst"
     };
 
     private static final Map<String, float[]> PULL_THRESHOLDS = new LinkedHashMap<>();

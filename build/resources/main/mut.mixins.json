@@ -3,12 +3,12 @@
   "package": "net.mcreator.mut.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ElytraLayerMixin",
     "WolfArmorMixin",
     "PoisonDamageMixin",
     "FireDamageMixin",
     "WitherDamageMixin",
-    "MomentumMixin"
+    "MomentumMixin",
+    "RegenerationMixin"
   ],
   "client": [],
   "injectors": {

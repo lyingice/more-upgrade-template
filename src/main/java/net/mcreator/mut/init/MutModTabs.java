@@ -92,10 +92,18 @@ public class MutModTabs {
 			}).withTabsBefore(MORE_UPGRADE_TMPLATES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_TOOLS = REGISTRY.register("more_upgrade_template_tools",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_tools")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_PICKAXE.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(MutModItems.LAPIS_LAZULI_ELYTRA.get());
+				tabData.accept(MutModItems.COPPER_ELYTRA.get());
+				tabData.accept(MutModItems.AMETHYST_ELYTRA.get());
 				tabData.accept(MutModItems.IRON_ELYTRA.get());
 				tabData.accept(MutModItems.GOLDEN_ELYTRA.get());
 				tabData.accept(MutModItems.DIAMOND_ELYTRA.get());
+				tabData.accept(MutModItems.EMERALD_ELYTRA.get());
 				tabData.accept(MutModItems.NETHERITE_ELYTRA.get());
+				tabData.accept(MutModItems.OBSIDIAN_ELYTRA.get());
+				tabData.accept(MutModItems.NETHER_STAR_ELYTRA.get());
+				tabData.accept(MutModItems.DRAGON_ELYTRA.get());
+				tabData.accept(MutModItems.POISON_STEEL_ELYTRA.get());
 				tabData.accept(MutModItems.COPPER_SHOVEL.get());
 				tabData.accept(MutModItems.COPPER_PICKAXE.get());
 				tabData.accept(MutModItems.COPPER_AXE.get());

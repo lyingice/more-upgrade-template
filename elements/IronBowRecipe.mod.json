@@ -15,7 +15,7 @@
       "value": "Items.BOW"
     },
     "smithingInputAdditionStack": {
-      "value": "Blocks.IRON_BLOCK"
+      "value": "Items.IRON_INGOT"
     },
     "smithingInputTemplateStack": {
       "value": "CUSTOM:IronUpgradeTemplate"

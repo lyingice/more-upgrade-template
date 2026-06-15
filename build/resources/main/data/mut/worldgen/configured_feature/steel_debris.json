@@ -17,6 +17,17 @@
         "state": {
           "Name": "mut:steel_debris"
         }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "mut:debris_stone"
+          }
+        },
+        "state": {
+          "Name": "mut:steel_debris"
+        }
       }
     ]
   }

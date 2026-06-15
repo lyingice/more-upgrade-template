@@ -392,6 +392,14 @@ public class MutModItems {
 	public static final DeferredItem<Item> TRIPLE_ALLOY_INGOT;
 	public static final DeferredItem<Item> LAPIS_LAZULI_WOLF_ARMOR;
 	public static final DeferredItem<Item> NETHERITE_LAPIS_LAZULI_WOLF_ARMOR;
+	public static final DeferredItem<Item> COPPER_ELYTRA;
+	public static final DeferredItem<Item> EMERALD_ELYTRA;
+	public static final DeferredItem<Item> LAPIS_LAZULI_ELYTRA;
+	public static final DeferredItem<Item> OBSIDIAN_ELYTRA;
+	public static final DeferredItem<Item> NETHER_STAR_ELYTRA;
+	public static final DeferredItem<Item> DRAGON_ELYTRA;
+	public static final DeferredItem<Item> POISON_STEEL_ELYTRA;
+	public static final DeferredItem<Item> AMETHYST_ELYTRA;
 	static {
 		IRON_BOW = REGISTRY.register("iron_bow", IronBowItem::new);
 		STONE_UPGRADE_TEMPLATE = REGISTRY.register("stone_upgrade_template", StoneUpgradeTemplateItem::new);
@@ -756,6 +764,14 @@ public class MutModItems {
 		TRIPLE_ALLOY_INGOT = REGISTRY.register("triple_alloy_ingot", TripleAlloyIngotItem::new);
 		LAPIS_LAZULI_WOLF_ARMOR = REGISTRY.register("lapis_lazuli_wolf_armor", LapisLazuliWolfArmorItem::new);
 		NETHERITE_LAPIS_LAZULI_WOLF_ARMOR = REGISTRY.register("netherite_lapis_lazuli_wolf_armor", NetheriteLapisLazuliWolfArmorItem::new);
+		COPPER_ELYTRA = REGISTRY.register("copper_elytra", CopperElytraItem::new);
+		EMERALD_ELYTRA = REGISTRY.register("emerald_elytra", EmeraldElytraItem::new);
+		LAPIS_LAZULI_ELYTRA = REGISTRY.register("lapis_lazuli_elytra", LapisLazuliElytraItem::new);
+		OBSIDIAN_ELYTRA = REGISTRY.register("obsidian_elytra", ObsidianElytraItem::new);
+		NETHER_STAR_ELYTRA = REGISTRY.register("nether_star_elytra", NetherStarElytraItem::new);
+		DRAGON_ELYTRA = REGISTRY.register("dragon_elytra", DragonElytraItem::new);
+		POISON_STEEL_ELYTRA = REGISTRY.register("poison_steel_elytra", PoisonSteelElytraItem::new);
+		AMETHYST_ELYTRA = REGISTRY.register("amethyst_elytra", AmethystElytraItem::new);
 	}
 	// Start of user code block custom items
 	public static final DeferredItem<Item> AMETHYST_SWORD = REGISTRY.register("amethyst_sword", AmethystTools.Sword::new);

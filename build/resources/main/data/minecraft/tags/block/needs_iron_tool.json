@@ -2,10 +2,19 @@
   "replace": false,
   "values": [
     "mut:blue_diamond_block",
+    "mut:echoite_block",
+    "mut:netherite_lapis_lazuli_block",
+    "mut:heterochromaticamethyst_4",
+    "mut:deep_iron_raw_block",
+    "mut:heterochromaticamethyst_3",
+    "mut:heterochromaticamethyst_2",
+    "mut:heterochromaticamethyst_1",
+    "mut:flame_gold_block",
     "mut:netherite_amethyst_block",
     "mut:gilding_block",
     "mut:steel_block",
     "mut:netherite_emerald_block",
+    "mut:position_steel_block",
     "mut:template_trader_block",
     "mut:netherite_redstone_block"
   ]

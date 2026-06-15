@@ -42,9 +42,14 @@ neoForge {
         }
     }
 }
+repositories {
+    maven {
+        url "https://maven.blamejared.com"
+    }
+}
 dependencies {
     // 编译时可用，但不打包进最终 jar
-    compileOnly files('libs/caelus-neoforge-xxx.jar')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation

@@ -1,9 +1,17 @@
 {
   "replace": false,
   "values": [
+    "mut:copper_elytra",
+    "mut:dragon_elytra",
+    "mut:amethyst_elytra",
     "mut:netherite_elytra",
+    "mut:obsidian_elytra",
     "mut:golden_elytra",
+    "mut:nether_star_elytra",
     "mut:diamond_elytra",
-    "mut:iron_elytra"
+    "mut:lapis_lazuli_elytra",
+    "mut:poison_steel_elytra",
+    "mut:iron_elytra",
+    "mut:emerald_elytra"
   ]
 }

@@ -10,7 +10,8 @@ public class GenerateSpearModels {
             "crying_obsidian","dragon","emerald","gilding",
             "nether_star","netherite_amethyst","netherite_copper",
             "netherite_emerald","netherite_obsidian","netherite_redstone",
-            "obsidian","steel","wither"
+            "obsidian","steel","wither",
+            "lapis_lazuli","netherite_lapis_lazuli","echoite","poison_steel","flame_gold","thunder_copper","uncanny_amethyst"
     };
     private static final String MOD_ID = "mut";
     private static final String MODELS_DIR = "src/main/resources/assets/" + MOD_ID + "/models/item";

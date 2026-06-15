@@ -1,6 +1,7 @@
 package net.mcreator.mut.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
+import net.mcreator.mut.item.*;
 import net.minecraft.client.model.ElytraModel;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.PlayerModel;
@@ -17,12 +18,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
-
-import net.mcreator.mut.item.IronElytraItem;
-import net.mcreator.mut.item.GoldenElytraItem;
-import net.mcreator.mut.item.DiamondElytraItem;
-import net.mcreator.mut.item.NetheriteElytraItem;
-import net.mcreator.mut.item.DragonChestplateElytraItem;
 
 public class CustomElytraLayer extends ElytraLayer<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> {
 
@@ -74,7 +69,15 @@ public class CustomElytraLayer extends ElytraLayer<AbstractClientPlayer, PlayerM
             return ResourceLocation.parse("mut:textures/entities/netherite_elytra.png");
         } else if (stack.getItem() instanceof DragonChestplateElytraItem) {
             return ResourceLocation.parse("mut:textures/entities/dragon_elytra.png");
-        }
+        }else if (stack.getItem() instanceof CopperElytraItem) {    return ResourceLocation.parse("mut:textures/entities/copper_elytra.png");}
+        else if (stack.getItem() instanceof EmeraldElytraItem) {    return ResourceLocation.parse("mut:textures/entities/emerald_elytra.png");}
+        else if (stack.getItem() instanceof LapisLazuliElytraItem) {    return ResourceLocation.parse("mut:textures/entities/lapis_lazuli_elytra.png");}
+        else if (stack.getItem() instanceof ObsidianElytraItem) {    return ResourceLocation.parse("mut:textures/entities/obsidian_elytra.png");}
+        else if (stack.getItem() instanceof NetherStarElytraItem) {    return ResourceLocation.parse("mut:textures/entities/nether_star_elytra.png");}
+        else if (stack.getItem() instanceof DragonElytraItem) {    return ResourceLocation.parse("mut:textures/entities/dragon_elytra.png");}
+        else if (stack.getItem() instanceof PoisonSteelElytraItem) {    return ResourceLocation.parse("mut:textures/entities/poison_steel_elytra.png");}
+        else if (stack.getItem() instanceof AmethystElytraItem) {    return ResourceLocation.parse("mut:textures/entities/amethyst_elytra.png");}
+
         return null;
     }
 }
