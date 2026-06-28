@@ -111,7 +111,7 @@
     "netherite_emerald": {
       "name": "netherite_emerald",
       "map": {
-        "0": ""
+        "0": "netherite_emerald_shield"
       }
     },
     "emerald": {

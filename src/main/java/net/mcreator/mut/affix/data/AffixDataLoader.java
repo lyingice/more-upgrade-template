@@ -38,9 +38,15 @@ public class AffixDataLoader extends SimpleJsonResourceReloadListener {
     private static PityConfig pityConfig = new PityConfig();
     private static MaterialBonusConfig materialBonusConfig = new MaterialBonusConfig();
     private static ItemAffixBindingConfig itemAffixBindingConfig = new ItemAffixBindingConfig();
+    private static LevelFactorConfig levelFactorConfig = new LevelFactorConfig();
 
     // 物品→可用词缀运行时缓存
     private static ItemAffixCache itemAffixCache = new ItemAffixCache();
+
+    // ====== 新总分池系统标记 ======
+    private static boolean newPoolSystem = false;
+    private static double totalPoolScaleFactor = 0;
+    private static double totalPoolBase = 0;
 
     private AffixDataLoader() {
         super(GSON, "affix");
@@ -57,7 +63,7 @@ public class AffixDataLoader extends SimpleJsonResourceReloadListener {
                          ProfilerFiller profiler) {
         MutMod.LOGGER.info("Loading affix data from data/mut/affix/...");
 
-        // 1. 加载等级定义（使用 Root 解析以读取 min_probability_per_level）
+        // 1. 加载等级定义（使用 Root 解析以读取 newPoolSystem 参数）
         lastRoot = loadSingle(dataMap, "affix_levels",
                 LevelConfig.Root.class, null,
                 json -> GSON.fromJson(json, LevelConfig.Root.class));
@@ -69,6 +75,19 @@ public class AffixDataLoader extends SimpleJsonResourceReloadListener {
                 levelMap.put(String.valueOf(lc.getLevel()), lc);
             }
             MutMod.LOGGER.info("Loaded {} affix levels", levels.length);
+        }
+
+        // 检测是否启用了新总分池系统
+        if (lastRoot != null && lastRoot.isNewPoolSystem()) {
+            newPoolSystem = true;
+            totalPoolScaleFactor = lastRoot.getTotalPoolScaleFactor();
+            totalPoolBase = lastRoot.getTotalPoolBase();
+            MutMod.LOGGER.info("New pool system enabled: scaleFactor={}, basePool={}",
+                    totalPoolScaleFactor, totalPoolBase);
+        } else {
+            newPoolSystem = false;
+            totalPoolScaleFactor = 0;
+            totalPoolBase = 0;
         }
 
         // 2. 加载软保底配置
@@ -93,6 +112,18 @@ public class AffixDataLoader extends SimpleJsonResourceReloadListener {
                     materialBonusConfig.getUniversalMaterials() != null ? materialBonusConfig.getUniversalMaterials().size() : 0,
                     materialBonusConfig.getDirectedMaterials() != null ? materialBonusConfig.getDirectedMaterials().size() : 0,
                     materialBonusConfig.getTagDrivenMaterials() != null ? materialBonusConfig.getTagDrivenMaterials().size() : 0);
+        }
+
+        // 5. 加载等级影响因子配置（羽化/蜕变）
+        LevelFactorConfig newFactor = loadSingle(dataMap, "level_factor_config",
+                LevelFactorConfig.class, null,
+                json -> GSON.fromJson(json, LevelFactorConfig.class));
+        if (newFactor != null) {
+            levelFactorConfig = newFactor;
+            MutMod.LOGGER.info("Loaded level factor config: enabled={}, ascFact={}, degFact={}",
+                    newFactor.isEnabled(), newFactor.getAscensionFactorial(), newFactor.getDegenerationFactorial());
+        } else {
+            levelFactorConfig = new LevelFactorConfig();
         }
 
         // 4. 加载物品绑定
@@ -130,6 +161,17 @@ public class AffixDataLoader extends SimpleJsonResourceReloadListener {
         return lastRoot != null ? lastRoot.getBonusMultiplierPerLevel() : 0.3;
     }
 
+    // ====== 新总分池系统接口 ======
+
+    /** 是否启用了新总分池方案 */
+    public static boolean isNewPoolSystem() { return newPoolSystem; }
+
+    /** 获取总分池缩放因子 */
+    public static double getTotalPoolScaleFactor() { return totalPoolScaleFactor; }
+
+    /** 获取总分池基数 */
+    public static double getTotalPoolBase() { return totalPoolBase; }
+
     public static PityConfig getPityConfig() { return pityConfig; }
 
     public static MaterialBonusConfig getMaterialBonusConfig() { return materialBonusConfig; }
@@ -137,6 +179,9 @@ public class AffixDataLoader extends SimpleJsonResourceReloadListener {
     public static ItemAffixBindingConfig getItemAffixBindingConfig() { return itemAffixBindingConfig; }
 
     public static ItemAffixCache getItemAffixCache() { return itemAffixCache; }
+
+    /** 获取等级影响因子配置（羽化/蜕变） */
+    public static LevelFactorConfig getLevelFactorConfig() { return levelFactorConfig; }
 
     // ========== 辅助方法 ==========
 

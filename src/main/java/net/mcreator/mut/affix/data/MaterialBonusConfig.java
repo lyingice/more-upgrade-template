@@ -46,6 +46,12 @@ public class MaterialBonusConfig {
         @SerializedName("level_weight_bonus")
         private double levelWeightBonus;
         private String description;
+        /** 材料保底等级（该等级以下分数清零，0=不启用） */
+        @SerializedName("min_guaranteed_level")
+        private int minGuaranteedLevel = 0;
+        /** 材料最高等级限制（该等级以上分数清零，0=不限制） */
+        @SerializedName("max_level_cap")
+        private int maxLevelCap = 0;
 
         @Nullable
         public String getItem() { return item; }
@@ -53,11 +59,15 @@ public class MaterialBonusConfig {
         public String getTag() { return tag; }
         public double getLevelWeightBonus() { return levelWeightBonus; }
         public String getDescription() { return description; }
+        public int getMinGuaranteedLevel() { return minGuaranteedLevel; }
+        public int getMaxLevelCap() { return maxLevelCap; }
 
         public void setItem(@Nullable String item) { this.item = item; }
         public void setTag(@Nullable String tag) { this.tag = tag; }
         public void setLevelWeightBonus(double levelWeightBonus) { this.levelWeightBonus = levelWeightBonus; }
         public void setDescription(String description) { this.description = description; }
+        public void setMinGuaranteedLevel(int minGuaranteedLevel) { this.minGuaranteedLevel = minGuaranteedLevel; }
+        public void setMaxLevelCap(int maxLevelCap) { this.maxLevelCap = maxLevelCap; }
     }
 
     // ========== 定向材料 ==========
@@ -129,13 +139,18 @@ public class MaterialBonusConfig {
         @SerializedName("level_bonus")
         private double levelBonus;
         private List<String> items;
+        /** 该层级材料的最高等级限制（0=不限制） */
+        @SerializedName("max_level_cap")
+        private int maxLevelCap = 0;
 
         public int getTier() { return tier; }
         public double getLevelBonus() { return levelBonus; }
         public List<String> getItems() { return items; }
+        public int getMaxLevelCap() { return maxLevelCap; }
 
         public void setTier(int tier) { this.tier = tier; }
         public void setLevelBonus(double levelBonus) { this.levelBonus = levelBonus; }
         public void setItems(List<String> items) { this.items = items; }
+        public void setMaxLevelCap(int maxLevelCap) { this.maxLevelCap = maxLevelCap; }
     }
 }

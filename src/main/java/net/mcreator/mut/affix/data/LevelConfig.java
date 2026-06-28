@@ -43,13 +43,34 @@ public class LevelConfig {
         @SerializedName("bonus_multiplier_per_level")
         private double bonusMultiplierPerLevel = 0.3;
 
+        // ====== 新：总分池方案参数（二改） ======
+
+        /** 总分池缩放因子：totalBudget = scaleFactor × enchant × levelCount + basePool */
+        @SerializedName("total_pool_scale_factor")
+        private double totalPoolScaleFactor = 0;
+
+        /** 总分池基数 */
+        @SerializedName("total_pool_base")
+        private double totalPoolBase = 0;
+
         public LevelConfig[] getLevels() { return levels; }
         public double getMinProbabilityPerLevel() { return minProbabilityPerLevel; }
         public double getBonusMultiplierPerLevel() { return bonusMultiplierPerLevel; }
+        public double getTotalPoolScaleFactor() { return totalPoolScaleFactor; }
+        public double getTotalPoolBase() { return totalPoolBase; }
 
         public void setLevels(LevelConfig[] levels) { this.levels = levels; }
         public void setMinProbabilityPerLevel(double minProbabilityPerLevel) { this.minProbabilityPerLevel = minProbabilityPerLevel; }
         public void setBonusMultiplierPerLevel(double bonusMultiplierPerLevel) { this.bonusMultiplierPerLevel = bonusMultiplierPerLevel; }
+        public void setTotalPoolScaleFactor(double totalPoolScaleFactor) { this.totalPoolScaleFactor = totalPoolScaleFactor; }
+        public void setTotalPoolBase(double totalPoolBase) { this.totalPoolBase = totalPoolBase; }
+
+        /**
+         * 检测是否启用了新总分池方案（total_pool_scale_factor > 0 时启用）
+         */
+        public boolean isNewPoolSystem() {
+            return totalPoolScaleFactor > 0;
+        }
     }
 
     /**

@@ -136,7 +136,7 @@ public class SigilForgeZombieBossEntity extends EliteAborigineZombieEntity{
 
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes()
-                .add(Attributes.MAX_HEALTH, 1000.0)
+                .add(Attributes.MAX_HEALTH, 400.0)
                 .add(Attributes.ATTACK_DAMAGE, 20.0)
                 .add(Attributes.MOVEMENT_SPEED, 0.28)
                 .add(Attributes.ARMOR, 30.0)

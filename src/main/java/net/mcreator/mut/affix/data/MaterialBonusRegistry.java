@@ -33,8 +33,23 @@ public class MaterialBonusRegistry {
     // 预处理缓存：item ID -> tier level bonus
     private final Map<String, Double> tierLevelBonusCache = new HashMap<>();
 
+    // 预处理缓存：item ID -> min guaranteed level (材料保底)
+    private final Map<String, Integer> minGuaranteedLevelCache = new HashMap<>();
+
+    // 预处理缓存：item ID -> max level cap (材料等级上限)
+    private final Map<String, Integer> maxLevelCapCache = new HashMap<>();
+
+    // 预处理缓存：item ID -> tier max level cap (层级等级上限)
+    private final Map<String, Integer> tierMaxLevelCapCache = new HashMap<>();
+
     // 标签驱动缓存
     private final List<TagDrivenEntry> tagDrivenEntries = new ArrayList<>();
+
+    // 通用材料配置缓存（用于获取保底/上限）
+    private final List<MaterialBonusConfig.UniversalMaterial> universalMaterialConfigs = new ArrayList<>();
+
+    // 标签驱动通用材料索引：tag -> UniversalMaterial
+    private final Map<String, MaterialBonusConfig.UniversalMaterial> tagUniversalMaterialCache = new HashMap<>();
 
     private MaterialBonusRegistry() {
         rebuild();
@@ -58,7 +73,12 @@ public class MaterialBonusRegistry {
         universalBonusCache.clear();
         materialTierCache.clear();
         tierLevelBonusCache.clear();
+        minGuaranteedLevelCache.clear();
+        maxLevelCapCache.clear();
+        tierMaxLevelCapCache.clear();
         tagDrivenEntries.clear();
+        universalMaterialConfigs.clear();
+        tagUniversalMaterialCache.clear();
 
         MaterialBonusConfig config = AffixDataLoader.getMaterialBonusConfig();
         if (config == null) return;
@@ -66,12 +86,21 @@ public class MaterialBonusRegistry {
         // 1. 处理通用材料
         if (config.getUniversalMaterials() != null) {
             for (MaterialBonusConfig.UniversalMaterial um : config.getUniversalMaterials()) {
+                universalMaterialConfigs.add(um);
+                // 缓存 level_weight_bonus
                 if (um.getItem() != null) {
                     universalBonusCache.put(um.getItem(), um.getLevelWeightBonus());
+                    // 缓存保底和上限
+                    if (um.getMinGuaranteedLevel() > 0) {
+                        minGuaranteedLevelCache.put(um.getItem(), um.getMinGuaranteedLevel());
+                    }
+                    if (um.getMaxLevelCap() > 0) {
+                        maxLevelCapCache.put(um.getItem(), um.getMaxLevelCap());
+                    }
                 }
-                // 标签型通用材料也缓存
                 if (um.getTag() != null) {
                     universalBonusCache.put("#" + um.getTag(), um.getLevelWeightBonus());
+                    tagUniversalMaterialCache.put(um.getTag(), um);
                 }
             }
         }
@@ -128,6 +157,9 @@ public class MaterialBonusRegistry {
                 for (String itemId : mt.getItems()) {
                     materialTierCache.put(itemId, mt.getTier());
                     tierLevelBonusCache.put(itemId, mt.getLevelBonus());
+                    if (mt.getMaxLevelCap() > 0) {
+                        tierMaxLevelCapCache.put(itemId, mt.getMaxLevelCap());
+                    }
                 }
             }
         }
@@ -143,18 +175,25 @@ public class MaterialBonusRegistry {
 
         String itemId = BuiltInRegistries.ITEM.getKey(additionStack.getItem()).toString();
 
-        // 1. 通用等级加成
+        // 1. 通用等级加成 + 保底/上限
         double universalBonus = universalBonusCache.getOrDefault(itemId, 0.0);
+        int minGuaranteedLevel = minGuaranteedLevelCache.getOrDefault(itemId, 0);
+        int maxLevelCap = maxLevelCapCache.getOrDefault(itemId, 0);
+
         if (universalBonus == 0.0) {
             // 检查标签匹配
-            for (var entry : universalBonusCache.entrySet()) {
-                if (entry.getKey().startsWith("#")) {
-                    String tagName = entry.getKey().substring(1);
-                    TagKey<Item> tagKey = ItemTags.create(ResourceLocation.parse(tagName));
-                    if (additionStack.is(tagKey)) {
-                        universalBonus = entry.getValue();
-                        break;
+            for (Map.Entry<String, MaterialBonusConfig.UniversalMaterial> entry : tagUniversalMaterialCache.entrySet()) {
+                String tagName = entry.getKey();
+                TagKey<Item> tagKey = ItemTags.create(ResourceLocation.parse(tagName));
+                if (additionStack.is(tagKey)) {
+                    universalBonus = entry.getValue().getLevelWeightBonus();
+                    if (entry.getValue().getMinGuaranteedLevel() > 0) {
+                        minGuaranteedLevel = entry.getValue().getMinGuaranteedLevel();
                     }
+                    if (entry.getValue().getMaxLevelCap() > 0) {
+                        maxLevelCap = entry.getValue().getMaxLevelCap();
+                    }
+                    break;
                 }
             }
         }
@@ -190,8 +229,18 @@ public class MaterialBonusRegistry {
         // 3. 材料品质层级
         int tier = materialTierCache.getOrDefault(itemId, 0);
         double tierLevelBonus = tierLevelBonusCache.getOrDefault(itemId, 0.0);
+        int tierMaxCap = tierMaxLevelCapCache.getOrDefault(itemId, 0);
 
-        return new MaterialContext(additionStack, universalBonus, affixBonuses, tier, tierLevelBonus);
+        // 4. 合并材料上限：取全局上限与层级上限的最大（更宽松的一个），
+        //    但 minGuaranteedLevel 取最高值（更严格）
+        int finalMaxLevelCap = Math.max(maxLevelCap, tierMaxCap);
+        // 如果没有设置任何上限，保留为 0（表示不限制）
+        if (finalMaxLevelCap == 0 && (maxLevelCap > 0 || tierMaxCap > 0)) {
+            finalMaxLevelCap = Math.max(maxLevelCap, tierMaxCap);
+        }
+
+        return new MaterialContext(additionStack, universalBonus, affixBonuses,
+                tier, tierLevelBonus, minGuaranteedLevel, finalMaxLevelCap);
     }
 
     /**

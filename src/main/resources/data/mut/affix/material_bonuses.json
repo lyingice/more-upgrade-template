@@ -5,11 +5,13 @@
     {
       "item": "minecraft:nether_star",
       "level_weight_bonus": 0.8,
+      "min_guaranteed_level": 3,
       "description": "affix.material.nether_star"
     },
     {
       "item": "minecraft:diamond",
       "level_weight_bonus": 0.2,
+      "max_level_cap": 6,
       "description": "affix.material.diamond"
     },
     {
@@ -153,8 +155,8 @@
   ],
 
   "material_tiers": [
-    { "tier": 1, "level_bonus": 0.05, "items": ["minecraft:coal", "minecraft:flint", "minecraft:stick", "minecraft:rotten_flesh"] },
-    { "tier": 2, "level_bonus": 0.1, "items": ["minecraft:iron_ingot", "minecraft:copper_ingot", "minecraft:gold_ingot"] },
+    { "tier": 1, "level_bonus": 0.05, "max_level_cap": 3, "items": ["minecraft:coal", "minecraft:flint", "minecraft:stick", "minecraft:rotten_flesh"] },
+    { "tier": 2, "level_bonus": 0.1, "max_level_cap": 4, "items": ["minecraft:iron_ingot", "minecraft:copper_ingot", "minecraft:gold_ingot"] },
     { "tier": 3, "level_bonus": 0.2, "items": ["minecraft:diamond", "minecraft:emerald", "minecraft:blaze_rod", "minecraft:arrow", "minecraft:ender_pearl"] },
     { "tier": 4, "level_bonus": 0.35, "items": ["minecraft:netherite_ingot", "minecraft:nether_star", "minecraft:heart_of_the_sea", "minecraft:ghast_tear"] },
     { "tier": 5, "level_bonus": 0.6, "items": ["minecraft:dragon_breath", "minecraft:echo_shard"] }

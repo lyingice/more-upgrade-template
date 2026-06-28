@@ -1,9 +1,6 @@
 package net.mcreator.mut.affix;
 
-import net.mcreator.mut.affix.data.AffixDataLoader;
-import net.mcreator.mut.affix.data.LevelConfig;
-import net.mcreator.mut.affix.data.MaterialContext;
-import net.mcreator.mut.affix.data.PityTracker;
+import net.mcreator.mut.affix.data.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.ItemStack;
 
@@ -14,6 +11,8 @@ import java.util.stream.Collectors;
 /**
  * 概率预览计算器 - 在 GUI/JEI 中显示各等级和各种词缀的出现概率
  * 纯计算，不修改物品，可安全在客户端调用
+ *
+ * 二改：同步支持新"总分池+比率分配+分数再分配"方案与旧方案
  */
 public class AffixProbabilityPreview {
 
@@ -33,39 +32,167 @@ public class AffixProbabilityPreview {
         if (levels == null || levels.length == 0) {
             return fallbackLevelProbabilities(enchantValue, existingLevel);
         }
-        double previousFinalScore = 0;
-        // 计算 pity 倍率（从配置文件读取）
-        double pityBonusPerPoint = net.mcreator.mut.affix.data.AffixDataLoader.getPityConfig()
+
+        // 计算 pity 倍率
+        double pityBonusPerPoint = AffixDataLoader.getPityConfig()
                 .getGlobal().getPityBonusPerPoint();
         float pityMultiplier = 1.0F + (float)(pityCount * pityBonusPerPoint);
         if (pityMultiplier < 1.0F) pityMultiplier = 1.0F;
 
-        // 已有词缀加成（转换为加法值）
-        float existingBonusAdd = existingLevel > 0 ? existingLevel * 0.1F : 0F;
+        Map<Integer, Double> scores;
+        if (AffixDataLoader.isNewPoolSystem()) {
+            scores = computeScoresNewPool(levels, enchantValue, existingLevel, materialCtx, pityMultiplier);
+        } else {
+            scores = computeScoresLegacy(levels, enchantValue, existingLevel, materialCtx, pityMultiplier);
+        }
+
+        // 线性归一化（取代 Softmax）
+        return AffixRoller.normalizeLinear(scores);
+    }
+
+    // ====== 新：总分池+比率分配+分数再分配（与 AffixRoller 对称） ======
+
+    private static Map<Integer, Double> computeScoresNewPool(
+            LevelConfig[] levels, int enchantValue, int existingLevel,
+            MaterialContext materialCtx, float pityMultiplier) {
+
+        Map<Integer, Double> result = new LinkedHashMap<>();
+        int levelCount = levels.length;
+        int maxLevel = levels[levelCount - 1].getLevel();
+
+        // 总分池
+        double scaleFactor = AffixDataLoader.getTotalPoolScaleFactor();
+        double basePool = AffixDataLoader.getTotalPoolBase();
+        double totalBudget = scaleFactor * enchantValue * levelCount + basePool;
+        totalBudget = Math.max(totalBudget, levelCount * 10.0);
 
         // 材料加成
+        double materialLevelBonus = materialCtx != null ? materialCtx.getUniversalLevelBonus() : 0.0;
+        double materialTierBonus = materialCtx != null ? materialCtx.getTierLevelBonus() : 0.0;
+        float pityAdd = pityMultiplier - 1.0F;
+        float existingBonusAdd = existingLevel > 0 ? existingLevel * 0.1F : 0F;
+        double totalBonus = materialLevelBonus + materialTierBonus + pityAdd + existingBonusAdd;
+
+        // 计算比率
+        LevelFactorConfig factorConfig = AffixDataLoader.getLevelFactorConfig();
+        double sumRatio = 0;
+        Map<Integer, Double> ratioMap = new LinkedHashMap<>();
+
+        for (LevelConfig lc : levels) {
+            int level = lc.getLevel();
+
+            double baseRatio = lc.getWeightCurve().computeScore(enchantValue);
+            baseRatio = Math.max(baseRatio, 0);
+
+            // 材料加成影响比率
+            if (totalBonus > 0) {
+                double levelWeightedBonus = totalBonus * (double) level / maxLevel;
+                baseRatio = baseRatio * (1.0 + levelWeightedBonus);
+            }
+
+            // 羽化因子
+            double ascension = 0;
+            if (factorConfig != null && factorConfig.isEnabled()) {
+                double baseAsc = factorConfig.getAscensionFactorial();
+                double individual = 0;
+                LevelFactorConfig.PerLevelOverride override = factorConfig.getPerLevelOverride(level);
+                if (override != null) individual = override.getAscensionExtra();
+                ascension = (level - 1) * baseAsc + individual;
+            }
+
+            // 蜕变因子
+            double degeneration = 0;
+            if (factorConfig != null && factorConfig.isEnabled()) {
+                double baseDeg = factorConfig.getDegenerationFactorial();
+                double individual = 0;
+                LevelFactorConfig.PerLevelOverride override = factorConfig.getPerLevelOverride(level);
+                if (override != null) individual = override.getDegenerationExtra();
+                degeneration = (maxLevel - level) * baseDeg + individual;
+            }
+
+            double ratio = baseRatio + ascension - degeneration;
+            ratio = Math.max(0, ratio);
+
+            ratioMap.put(level, ratio);
+            sumRatio += ratio;
+        }
+
+        if (sumRatio <= 0) {
+            double equalShare = totalBudget / levelCount;
+            for (LevelConfig lc : levels) {
+                result.put(lc.getLevel(), equalShare);
+            }
+            return result;
+        }
+
+        Map<Integer, Double> distributedScores = new LinkedHashMap<>();
+        for (var entry : ratioMap.entrySet()) {
+            double score = totalBudget * entry.getValue() / sumRatio;
+            distributedScores.put(entry.getKey(), Math.max(0, score));
+        }
+
+        // 材料等级限制 → 分数再分配
+        int minLevel = materialCtx != null ? materialCtx.getMinGuaranteedLevel() : 0;
+        int maxCap = materialCtx != null ? materialCtx.getMaxLevelCap() : 0;
+
+        if (minLevel > 0 || maxCap > 0) {
+            double clearedScore = 0;
+            double totalValidScore = 0;
+
+            for (var entry : distributedScores.entrySet()) {
+                int level = entry.getKey();
+                boolean valid = true;
+                if (minLevel > 0 && level < minLevel) valid = false;
+                if (maxCap > 0 && level > maxCap) valid = false;
+
+                if (valid) {
+                    totalValidScore += entry.getValue();
+                } else {
+                    clearedScore += entry.getValue();
+                }
+            }
+
+            if (clearedScore > 0 && totalValidScore > 0) {
+                for (var entry : distributedScores.entrySet()) {
+                    int level = entry.getKey();
+                    boolean valid = true;
+                    if (minLevel > 0 && level < minLevel) valid = false;
+                    if (maxCap > 0 && level > maxCap) valid = false;
+
+                    if (valid) {
+                        double extra = clearedScore * entry.getValue() / totalValidScore;
+                        result.put(level, entry.getValue() + extra);
+                    }
+                }
+            } else {
+                result.putAll(distributedScores);
+            }
+        } else {
+            result.putAll(distributedScores);
+        }
+
+        return result;
+    }
+
+    // ====== 旧：基分×乘法修正（向后兼容） ======
+
+    private static Map<Integer, Double> computeScoresLegacy(
+            LevelConfig[] levels, int enchantValue, int existingLevel,
+            MaterialContext materialCtx, float pityMultiplier) {
+
+        Map<Integer, Double> scores = new LinkedHashMap<>();
+        double previousFinalScore = 0;
+
+        float existingBonusAdd = existingLevel > 0 ? existingLevel * 0.1F : 0F;
         double matLevelBonus = materialCtx != null ? materialCtx.getUniversalLevelBonus() : 0.0;
         double matTierBonus = materialCtx != null ? materialCtx.getTierLevelBonus() : 0.0;
-
-        // 软保底加成（加法值）
         float pityAdd = pityMultiplier - 1.0F;
-
-        // 总加成
         double totalBonus = matLevelBonus + matTierBonus + pityAdd + existingBonusAdd;
+        double bonusPerLevel = AffixDataLoader.getBonusMultiplierPerLevel();
 
-        // 从 JSON 读取等级倍率递增步长（默认 0.3）
-        double bonusPerLevel = net.mcreator.mut.affix.data.AffixDataLoader.getBonusMultiplierPerLevel();
-
-        // 计算各等级得分
-        // 使用等级加权加成：该等级加成 = 总加成 × (等级 × bonusPerLevel)
-        // 每个等级的加成比例不同 → 不会被归一化约掉
-        Map<Integer, Double> scores = new LinkedHashMap<>();
         for (LevelConfig lc : levels) {
             double score = lc.getWeightCurve().computeScore(enchantValue);
 
-            // 核心修复：基础得分为 0 时（附魔能力不够阈值），
-            // 用总加成 × threshold × 0.3 作为种子得分（等级越高种子越大），
-            // 避免低附魔物品所有零分等级用相同种子导致高等级虚高
             if (score <= 0 && totalBonus > 0) {
                 score = totalBonus / lc.getLevel();
             }
@@ -76,13 +203,8 @@ public class AffixProbabilityPreview {
                 score = Math.max(score, inheritedSeed / lc.getLevel());
             }
 
-            // 该等级获得的加成比例
             double levelRatio = lc.getLevel() * bonusPerLevel;
-
-            // 该等级额外配置的倍率（可选，数据包留空则 = 0）
             double extraMult = lc.getExtraBonusMultiplier();
-
-            // 加权后的加成倍率 = 1.0 + 总加成 × (等级比例 + 额外倍率)
             double multiplier = 1.0 + totalBonus * (levelRatio + extraMult);
             double finalScore = score * multiplier;
 
@@ -90,9 +212,10 @@ public class AffixProbabilityPreview {
             previousFinalScore = finalScore;
         }
 
-        // 线性归一化（取代 Softmax）
-        return AffixRoller.normalizeLinear(scores);
+        return scores;
     }
+
+    // ========== 可读文本生成 ==========
 
     /**
      * 生成可读的概率文本行（带进度条）
@@ -105,7 +228,6 @@ public class AffixProbabilityPreview {
 
     /**
      * 生成可读的概率文本行（带进度条）
-     * 与 generateProbabilityLines 相同，名称更直观
      */
     public static java.util.List<String> generateLevelProbabilityAsText(
             int enchantValue, int existingLevel, MaterialContext materialCtx, int pityCount) {
@@ -140,6 +262,8 @@ public class AffixProbabilityPreview {
         }
         return sb.toString();
     }
+
+    // ========== 回退 ==========
 
     /**
      * 回退到旧版概率计算（当 JSON 未加载时）

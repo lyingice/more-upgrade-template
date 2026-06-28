@@ -15,15 +15,26 @@ public class MaterialContext {
     private final List<AffixBonusEntry> affixBonuses; // 针对特定词缀的加成
     private final int materialTier;                   // 材料品质层级
     private final double tierLevelBonus;              // 层级带来的额外等级加成
+    private final int minGuaranteedLevel;             // 材料保底等级（该等级以下分数清零）
+    private final int maxLevelCap;                    // 材料最高等级限制（该等级以上分数清零）
 
     public MaterialContext(ItemStack additionStack, double universalLevelBonus,
                            List<AffixBonusEntry> affixBonuses,
                            int materialTier, double tierLevelBonus) {
+        this(additionStack, universalLevelBonus, affixBonuses, materialTier, tierLevelBonus, 0, 0);
+    }
+
+    public MaterialContext(ItemStack additionStack, double universalLevelBonus,
+                           List<AffixBonusEntry> affixBonuses,
+                           int materialTier, double tierLevelBonus,
+                           int minGuaranteedLevel, int maxLevelCap) {
         this.additionStack = additionStack;
         this.universalLevelBonus = universalLevelBonus;
         this.affixBonuses = affixBonuses;
         this.materialTier = materialTier;
         this.tierLevelBonus = tierLevelBonus;
+        this.minGuaranteedLevel = minGuaranteedLevel;
+        this.maxLevelCap = maxLevelCap;
     }
 
     public ItemStack getAdditionStack() { return additionStack; }
@@ -31,6 +42,8 @@ public class MaterialContext {
     public List<AffixBonusEntry> getAffixBonuses() { return affixBonuses; }
     public int getMaterialTier() { return materialTier; }
     public double getTierLevelBonus() { return tierLevelBonus; }
+    public int getMinGuaranteedLevel() { return minGuaranteedLevel; }
+    public int getMaxLevelCap() { return maxLevelCap; }
 
     public boolean isEmpty() {
         return additionStack.isEmpty();
@@ -60,7 +73,7 @@ public class MaterialContext {
      * 创建一个空的材料上下文（没有额外材料时使用）
      */
     public static MaterialContext empty() {
-        return new MaterialContext(ItemStack.EMPTY, 0.0, List.of(), 0, 0.0);
+        return new MaterialContext(ItemStack.EMPTY, 0.0, List.of(), 0, 0.0, 0, 0);
     }
 
     /**

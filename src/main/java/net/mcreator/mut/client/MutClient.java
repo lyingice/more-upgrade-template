@@ -22,6 +22,7 @@ import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.entity.ArmorStandRenderer;
 import net.minecraft.client.renderer.entity.HorseRenderer;
 import net.minecraft.client.renderer.entity.WolfRenderer;
 import net.minecraft.client.renderer.entity.player.PlayerRenderer;
@@ -103,6 +104,12 @@ public class MutClient {
         if (defaultSkin instanceof PlayerRenderer pr) {
             pr.addLayer(new ChargedArmorLayer<>(pr, event.getEntityModels()));
         }
+        event.getSkins().forEach(skin -> {
+                    PlayerRenderer renderer = event.getSkin(skin);
+                    if (renderer != null) {
+                        renderer.addLayer(new CustomElytraLayer(renderer, event.getEntityModels()));
+                    }
+                });
 
         // 玩家（细手臂皮肤）
         var slimSkin = event.getSkin(PlayerSkin.Model.SLIM);
@@ -115,6 +122,12 @@ public class MutClient {
                 renderer.addLayer(new CustomElytraLayer(renderer, event.getEntityModels()));
             }
         });
+        // 盔甲架
+        var armorStandRenderer = event.getRenderer(EntityType.ARMOR_STAND);
+        if (armorStandRenderer instanceof ArmorStandRenderer asr) {
+            asr.addLayer(new ChargedArmorLayer<>(asr, event.getEntityModels()));
+            asr.addLayer(new CustomElytraLayer(asr, event.getEntityModels()));
+        }
     }
     @SubscribeEvent
     public static void registerParticles(RegisterParticleProvidersEvent event) {
