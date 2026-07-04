@@ -66,4 +66,11 @@ versionRange="[1.21.1,)"
 ordering="NONE"
 side="BOTH"
 
+[[dependencies.mut]]
+modId="cloth_config"
+type="optional"
+versionRange="[15,)"
+ordering="NONE"
+side="CLIENT"
+
 # End of user code block dependencies configuration

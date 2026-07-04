@@ -1,6 +1,7 @@
 package net.mcreator.mut.affix;
 
 import net.mcreator.mut.affix.impl.EnergyConversionAffix;
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -52,6 +53,6 @@ public class EnergyConversionHelper {
      */
     public static int getMaxRepair(LivingEntity entity) {
         int level = getEquippedEnergyConversionLevel(entity);
-        return Math.round(level * 0.5F);
+        return Math.round(level * (float) AffixConfig.getCoefficient("energy_conversion"));
     }
 }

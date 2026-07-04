@@ -122,4 +122,15 @@ public class MutCrossbowLoadCountConfig {
     public static void invalidateCache() {
         INSTANCE.cacheValid = false;
     }
+
+    /**
+     * 获取 per_crossbow_extra_load_counts 的原始字符串列表（供 GUI 使用）。
+     */
+    public static List<? extends String> getPerCrossbowExtraEntries() {
+        try {
+            return INSTANCE.perCrossbowExtraLoadCounts.get();
+        } catch (IllegalStateException e) {
+            return List.of();
+        }
+    }
 }

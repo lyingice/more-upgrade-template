@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mut:block/debris_leaves",
+    "particle": "mut:block/debris_leaves"
+  }
+}

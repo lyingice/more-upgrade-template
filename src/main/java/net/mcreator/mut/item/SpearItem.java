@@ -7,6 +7,7 @@ import net.mcreator.mut.util.MutSpearCooldownAccessor;
 import net.mcreator.mut.util.SpearCollision;
 import net.mcreator.mut.util.SpearCondition;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -18,6 +19,8 @@ import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
@@ -71,7 +74,11 @@ public abstract class SpearItem extends Item {
     protected int getSpearEnchantmentValue() { return 0; }
     protected boolean canRepair(ItemStack stack, ItemStack repairCandidate) { return false; }
 
-
+    @Override
+    public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
+        if (enchantment.is(Enchantments.SWEEPING_EDGE)) return false;
+        return super.supportsEnchantment(stack, enchantment);
+    }
     // ========== 静态工具 ==========
 
     public static Vec3 getMotion(Entity entity) {

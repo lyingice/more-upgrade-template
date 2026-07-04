@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#mut:is_sigil_forge_dimension",
+  "spawners": {
+    "type": "mut:traveler_phantom",
+    "weight": 8,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

@@ -21,6 +21,12 @@
       "title": "§5符锻首领之钥",
       "text": "开启试炼的钥匙。",
       "item": "mut:sigil_forge_boss_key"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mut:sigil_forge_boss_trial_spawner",
+      "title": "§5符锻僵尸首领",
+      "text": "弱火，但是免疫一切非火焰伤害，战斗时不要离它太远，不然可能会激怒它。"
     }
   ]
 }

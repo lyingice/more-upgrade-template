@@ -1,6 +1,7 @@
 package net.mcreator.mut.affix;
 
 import net.mcreator.mut.affix.impl.TidalSurgeAffix;
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -56,9 +57,9 @@ public class TidalSurgeHelper {
 
         float bonus = 0F;
         if (entity.isInWater()) {
-            bonus += level * WATER_ATTACK_MULTIPLIER;
+            bonus += level * (float) AffixConfig.getCoefficient("tidal_surge_water");
         } else if (entity.level().isRaining() && entity.level().canSeeSky(entity.blockPosition())) {
-            bonus += level * RAIN_ATTACK_MULTIPLIER;
+            bonus += level * (float) AffixConfig.getCoefficient("tidal_surge_rain");
         }
         return 1.0F + bonus;
     }

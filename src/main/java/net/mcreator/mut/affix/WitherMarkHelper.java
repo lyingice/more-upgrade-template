@@ -1,5 +1,6 @@
 package net.mcreator.mut.affix;
 
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -42,6 +43,6 @@ public class WitherMarkHelper {
     }
 
     public static float getDamageBonus(LivingEntity target) {
-        return getTotalWitherMarkLevel(target) * 0.5F;
+        return getTotalWitherMarkLevel(target) * (float) AffixConfig.getCoefficient("wither_mark");
     }
 }

@@ -1,6 +1,7 @@
 package net.mcreator.mut.affix;
 
 import net.mcreator.mut.affix.impl.StrengthBlessingAffix;
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -19,6 +20,7 @@ public class StrengthBlessingHelper {
         return Math.min(total, max);
     }
 
+
     private static int getSlotLevel(ItemStack stack) {
         if (stack.isEmpty()) return 0;
         Affix affix = Affix.fromStack(stack);
@@ -30,6 +32,6 @@ public class StrengthBlessingHelper {
 
     public static float getMultiplier(LivingEntity entity) {
         int level = getEquippedStrengthBlessingLevel(entity);
-        return 1.0F + level * 0.05F;
+        return 1.0F + level * (float) AffixConfig.getCoefficient("strength_blessing");
     }
 }

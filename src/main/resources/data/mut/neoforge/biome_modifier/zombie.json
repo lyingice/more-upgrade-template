@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#mut:is_sigil_forge_dimension",
+  "spawners": {
+    "type": "mut:aborigine_zombie",
+    "weight": 12,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

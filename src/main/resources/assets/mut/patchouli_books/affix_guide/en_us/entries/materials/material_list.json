@@ -7,25 +7,120 @@
     {
       "type": "patchouli:text",
       "title": "§lMaterial → Affix Mapping",
-      "text": "Here are the directed affixes and bonus effects for each material:"
+      "text": "Here are the directed affixes and bonus effects for each material.$(br2)Place a material in the super smithing table slot 2 to boost the specific affix's probability.$(br2)§7(Certain materials grant a fixed probability for their affix.)"
     },
     {
       "type": "patchouli:spotlight",
       "item": "minecraft:blaze_rod",
       "title": "§6Blaze Rod → Flame Brand",
-      "text": "§6Blaze Rods§r greatly increase the chance of obtaining Flame Brand (×3.0 weight), with +180% tier weight bonus."
+      "text": "§6Blaze Rods§r grant 40% fixed probability for Flame Brand. Max level 8."
     },
     {
       "type": "patchouli:spotlight",
       "item": "minecraft:poisonous_potato",
       "title": "§2Poisonous Potato → Venom Brand",
-      "text": "§2Poisonous Potatoes§r greatly increase the chance of obtaining Venom Brand (×3.0 weight), with +150% tier weight bonus."
+      "text": "§2Poisonous Potatoes§r grant 40% fixed probability for Venom Brand. Max level 8."
     },
     {
       "type": "patchouli:spotlight",
       "item": "minecraft:wither_rose",
       "title": "§8Wither Rose → Wither Brand",
-      "text": "§8Wither Roses§r increase the chance of obtaining Wither Brand (×2.5 weight), with +150% tier weight bonus."
+      "text": "§8Wither Roses§r grant 35% fixed probability for Wither Brand. Max level 7."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:ghast_tear",
+      "title": "§fGhast Tear → Regeneration",
+      "text": "§fGhast Tears§r grant 30% fixed probability for Regeneration Mark. Max level 7."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:magma_cream",
+      "title": "§6Magma Cream → Flame/Regen",
+      "text": "§6Magma Cream§r grants Flame Brand 25% and Regeneration Mark 10% fixed probability."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:heart_of_the_sea",
+      "title": "§3Heart of the Sea → Tidal Surge",
+      "text": "§3Heart of the Sea§r grants 45% fixed probability for Tidal Surge. Max level 8."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:prismarine_crystals",
+      "title": "§3Prismarine Crystals → Tidal Surge",
+      "text": "§3Prismarine Crystals§r grant 25% fixed probability for Tidal Surge."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:golden_apple",
+      "title": "§eGolden Apple → Strength Blessing",
+      "text": "§eGolden Apples§r grant 40% fixed probability for Strength Blessing. Max level 8."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:golden_carrot",
+      "title": "§eGolden Carrot → Strength Blessing",
+      "text": "§eGolden Carrots§r grant 30% fixed probability for Strength Blessing."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:spectral_arrow",
+      "title": "§bSpectral Arrow → Sharpshooter",
+      "text": "§bSpectral Arrows§r grant 35% fixed probability for Sharpshooter. Max level 7."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:arrow",
+      "title": "§fArrow → Piercing Spear/Sharpshooter",
+      "text": "§fArrows§r grant Piercing Spear 20% and Sharpshooter 15% fixed probability."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:wind_charge",
+      "title": "§fWind Charge → Momentum",
+      "text": "§fWind Charges§r grant 35% fixed probability for Momentum. Max level 7."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:rabbit_foot",
+      "title": "§eRabbit Foot → Momentum/Sharpshooter",
+      "text": "§eRabbit Feet§r grant Momentum and Sharpshooter each 20% fixed probability."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:fermented_spider_eye",
+      "title": "§2Fermented Spider Eye → Venom/Wither",
+      "text": "§2Fermented Spider Eyes§r grant Venom Brand and Wither Brand each 25% fixed probability."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:trident",
+      "title": "§3Trident → Tidal Surge",
+      "text": "§3Tridents§r grant 40% fixed probability for Tidal Surge. Max level 8."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:cookie",
+      "title": "§eCookie → Big Stomach",
+      "text": "§eCookies§r grant 35% fixed probability for Big Stomach."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:ender_pearl",
+      "title": "§5Ender Pearl → Energy Conversion",
+      "text": "§5Ender Pearls§r grant 25% fixed probability for Energy Conversion."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:dragon_breath",
+      "title": "§dDragon's Breath → Tidal/Momentum/Strength",
+      "text": "§dDragon's Breath§r grants Tidal Surge, Momentum, and Strength Blessing each 30% fixed probability. Total 90% → normalized to 100%. Max level 8."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "§lUniversal Materials",
+      "text": "These materials don't target specific affixes but grant extra enchantment power:$(br2)§5Nether Star§r +15 enchant $(br)  §7Guarantees level ≥3§r$(br2)§bDiamond§r +5 enchant $(br)  §7Default max level cap: 5§r$(br2)§8Netherite Ingot§r +10 enchant$(br2)§3Echo Shard§r +8 enchant"
     }
   ]
 }

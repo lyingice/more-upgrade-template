@@ -940,5 +940,10 @@
   "item.mut.nether_star_elytra": "下界之星鞘翅",
   "item.mut.dragon_elytra": "龙翼鞘翅",
   "item.mut.poison_steel_elytra": "毒钢鞘翅",
-  "item.mut.amethyst_elytra": "紫水晶鞘翅"
+  "item.mut.amethyst_elytra": "紫水晶鞘翅",
+  "gui.mut.super_smithing_table_gui.open_probability_overview": "概率预览",
+  "item.mut.high_carbon_compounds": "高碳化合物",
+  "item.mut.refined_iron_powder": "精炼铁矿粉",
+  "block.mut.debris_sapling": "残骸木树苗",
+  "block.mut.debris_leaves": "残骸木树叶"
 }

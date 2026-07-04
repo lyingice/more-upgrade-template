@@ -7,17 +7,31 @@
     {
       "type": "patchouli:text",
       "title": "§lMaterial Categories",
-      "text": "Enchanting materials are divided into two categories:$(br2)§l1. Universal Materials§r$(br)Such as §bNether Stars§r and §bDiamonds§r. They don't target specific affixes but boost overall tier probabilities.$(br2)§l2. Directed Materials§r$(br)Such as §bBlaze Rods§r and §bPoisonous Potatoes§r. They greatly increase the weight and tier of specific affixes."
+      "text": "Enchanting materials are divided into two categories:$(br2)§l1. Universal Materials§r$(br)Such as §bNether Stars§r and §bDiamonds§r. They don't target specific affixes but directly add extra enchantment power to the item.$(br2)§l2. Directed Materials§r$(br)Such as §bBlaze Rods§r and §bPoisonous Potatoes§r. They grant a fixed probability for certain affixes."
     },
     {
       "type": "patchouli:spotlight",
       "item": "minecraft:nether_star",
-      "title": "§bNether Star §r- Universal",
-      "text": "§bNether Stars§r are the strongest universal material, providing +60% tier weight bonus and accumulating 2 pity points per roll."
+      "title": "§5Nether Star §r- Universal",
+      "text": "§5Nether Stars§r provide +15 enchantment power.$(br2)§7Guarantees affix level ≥3§r — levels below 3 are cleared and redistributed to higher levels."
     },
     {
-      "type": "patchouli:text",
-      "text": "Materials also have multiple tiers:$(br)§7Tier 1§r: Coal, Flint$(br)§7Tier 2§r: Iron Ingot, Copper Ingot$(br)§7Tier 3§r: Diamond, Emerald$(br)§7Tier 4§r: Netherite Ingot, Nether Star$(br)§7Tier 5§r: Dragon's Breath$(br2)Higher tiers provide stronger bonus."
+      "type": "patchouli:spotlight",
+      "item": "minecraft:diamond",
+      "title": "§bDiamond §r- Universal",
+      "text": "§bDiamonds§r provide +5 enchantment power.$(br2)§7Default max level cap: 5§r — levels above 5 are cleared and redistributed."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:netherite_ingot",
+      "title": "§8Netherite Ingot §r- Universal",
+      "text": "§8Netherite Ingots§r provide +10 enchantment power."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:echo_shard",
+      "title": "§3Echo Shard §r- Universal",
+      "text": "§3Echo Shards§r provide +8 enchantment power."
     }
   ]
 }

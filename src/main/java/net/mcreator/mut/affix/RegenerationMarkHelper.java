@@ -1,6 +1,7 @@
 package net.mcreator.mut.affix;
 
 import net.mcreator.mut.affix.impl.RegenerationMarkAffix;
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -29,6 +30,6 @@ public class RegenerationMarkHelper {
     }
 
     public static float getHealBonus(LivingEntity entity) {
-        return getEquippedRegenerationMarkLevel(entity) * 0.5F;
+        return getEquippedRegenerationMarkLevel(entity) * (float) AffixConfig.getCoefficient("regeneration_mark");
     }
 }

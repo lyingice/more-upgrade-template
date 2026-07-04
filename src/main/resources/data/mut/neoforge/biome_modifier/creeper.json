@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#mut:is_sigil_forge_dimension",
+  "spawners": {
+    "type": "mut:red_lightning_creeper",
+    "weight": 10,
+    "minCount": 1,
+    "maxCount": 3
+  }
+}

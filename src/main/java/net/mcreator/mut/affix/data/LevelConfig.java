@@ -14,7 +14,6 @@ public class LevelConfig {
     private String formatting;
     @SerializedName("weight_curve")
     private WeightCurve weightCurve;
-    /** 该等级额外加成倍率（可选，默认 1.0，留空则无特殊加成） */
     @SerializedName("extra_bonus_multiplier")
     private double extraBonusMultiplier = 0.0;
 
@@ -32,50 +31,42 @@ public class LevelConfig {
     public void setWeightCurve(WeightCurve weightCurve) { this.weightCurve = weightCurve; }
     public void setExtraBonusMultiplier(double extraBonusMultiplier) { this.extraBonusMultiplier = extraBonusMultiplier; }
 
-    /**
-     * JSON 根容器 - 包含 levels 数组和全局参数
-     */
     public static class Root {
         private LevelConfig[] levels;
         @SerializedName("min_probability_per_level")
         private double minProbabilityPerLevel = 0.003;
-        /** 等级加成倍率递增步长（默认 0.3，即 Lv1=×0.3, Lv2=×0.6, Lv3=×0.9...） */
         @SerializedName("bonus_multiplier_per_level")
         private double bonusMultiplierPerLevel = 0.3;
 
-        // ====== 新：总分池方案参数（二改） ======
-
-        /** 总分池缩放因子：totalBudget = scaleFactor × enchant × levelCount + basePool */
         @SerializedName("total_pool_scale_factor")
         private double totalPoolScaleFactor = 0;
 
-        /** 总分池基数 */
         @SerializedName("total_pool_base")
         private double totalPoolBase = 0;
+
+        /** 默认最大等级限制（材料未设置 max_level_cap 时使用，默认5） */
+        @SerializedName("default_max_level_cap")
+        private int defaultMaxLevelCap = 5;
 
         public LevelConfig[] getLevels() { return levels; }
         public double getMinProbabilityPerLevel() { return minProbabilityPerLevel; }
         public double getBonusMultiplierPerLevel() { return bonusMultiplierPerLevel; }
         public double getTotalPoolScaleFactor() { return totalPoolScaleFactor; }
         public double getTotalPoolBase() { return totalPoolBase; }
+        public int getDefaultMaxLevelCap() { return defaultMaxLevelCap; }
 
         public void setLevels(LevelConfig[] levels) { this.levels = levels; }
         public void setMinProbabilityPerLevel(double minProbabilityPerLevel) { this.minProbabilityPerLevel = minProbabilityPerLevel; }
         public void setBonusMultiplierPerLevel(double bonusMultiplierPerLevel) { this.bonusMultiplierPerLevel = bonusMultiplierPerLevel; }
         public void setTotalPoolScaleFactor(double totalPoolScaleFactor) { this.totalPoolScaleFactor = totalPoolScaleFactor; }
         public void setTotalPoolBase(double totalPoolBase) { this.totalPoolBase = totalPoolBase; }
+        public void setDefaultMaxLevelCap(int defaultMaxLevelCap) { this.defaultMaxLevelCap = defaultMaxLevelCap; }
 
-        /**
-         * 检测是否启用了新总分池方案（total_pool_scale_factor > 0 时启用）
-         */
         public boolean isNewPoolSystem() {
             return totalPoolScaleFactor > 0;
         }
     }
 
-    /**
-     * 权重曲线参数
-     */
     public static class WeightCurve {
         private double base = 0;
         private double decay = 0;
@@ -92,10 +83,6 @@ public class LevelConfig {
         public void setGrowth(double growth) { this.growth = growth; }
         public void setThreshold(int threshold) { this.threshold = threshold; }
 
-        /**
-         * 根据附魔能力计算该等级的权重得分
-         * score = base * (1 - decay * 0.5) + max(0, enchantValue - threshold) * growth
-         */
         public double computeScore(int enchantValue) {
             double baseScore = base * (1.0 - decay * 0.5);
             if (enchantValue > threshold) {

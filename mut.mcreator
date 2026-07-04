@@ -8365,7 +8365,7 @@
       "name": "SigilForgePlain",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_plain",
       "metadata": {
         "files": [
@@ -8414,7 +8414,7 @@
       "name": "SigilForgeVolcano",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_volcano",
       "metadata": {
         "files": [
@@ -8427,7 +8427,7 @@
       "name": "SigilForgeSwamp",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_swamp",
       "metadata": {
         "files": [
@@ -9205,7 +9205,7 @@
       "name": "SigilForgeOcean",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_ocean",
       "metadata": {
         "files": [
@@ -9218,7 +9218,7 @@
       "name": "SigilForgeStonyShore",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_stony_shore",
       "metadata": {
         "files": [
@@ -9231,7 +9231,7 @@
       "name": "SigilForgeStonyPeaks",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_stony_peaks",
       "metadata": {
         "files": [
@@ -9244,7 +9244,7 @@
       "name": "SigilForgeRiver",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_river",
       "metadata": {
         "files": [
@@ -9259,7 +9259,7 @@
       "name": "SigilForgePlateau",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_plateau",
       "metadata": {
         "files": [
@@ -9274,7 +9274,7 @@
       "name": "SigilForgeSnowyPlateau",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_snowy_plateau",
       "metadata": {
         "files": [
@@ -9289,7 +9289,7 @@
       "name": "SigilForgeSnowyPeaks",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_snowy_peaks",
       "metadata": {
         "files": [
@@ -9302,7 +9302,7 @@
       "name": "SigilForgeDesert",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_desert",
       "metadata": {
         "files": [
@@ -9315,7 +9315,7 @@
       "name": "SigilForgeJungle",
       "type": "biome",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "sigil_forge_jungle",
       "metadata": {
         "files": [
@@ -11764,6 +11764,160 @@
         ]
       },
       "path": "~/Amror and Tools/Elytras/recipes"
+    },
+    {
+      "name": "HighCarbonCompounds",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "high_carbon_compounds",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/HighCarbonCompoundsItem.java",
+          "src/main/resources/assets/mut/models/item/high_carbon_compounds.json"
+        ]
+      },
+      "path": "~/Base Material"
+    },
+    {
+      "name": "RefinedIronPowder",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refined_iron_powder",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/refined_iron_powder.json",
+          "src/main/java/net/mcreator/mut/item/RefinedIronPowderItem.java"
+        ]
+      },
+      "path": "~/Base Material"
+    },
+    {
+      "name": "Hcc",
+      "type": "itemextension",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hcc",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Base Material"
+    },
+    {
+      "name": "DebrisSapling",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debris_sapling",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/DebrisSaplingBlock.java",
+          "src/main/resources/assets/mut/blockstates/debris_sapling.json",
+          "src/main/resources/assets/mut/models/block/debris_sapling.json",
+          "src/main/resources/data/mut/loot_table/blocks/debris_sapling.json",
+          "src/main/resources/assets/mut/models/item/debris_sapling.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Wood"
+    },
+    {
+      "name": "DebrisTree",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debris_tree",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/worldgen/configured_feature/debris_tree.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Feature"
+    },
+    {
+      "name": "DebrisTreeBig",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debris_tree_big",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/worldgen/configured_feature/debris_tree_big.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Feature"
+    },
+    {
+      "name": "DebrisLeaves",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debris_leaves",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/DebrisLeavesBlock.java",
+          "src/main/resources/assets/mut/blockstates/debris_leaves.json",
+          "src/main/resources/assets/mut/models/block/debris_leaves.json",
+          "src/main/resources/assets/mut/models/item/debris_leaves.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Wood"
+    },
+    {
+      "name": "DebrisLeavesLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debris_leaves_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/debris_leaves.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Loot"
+    },
+    {
+      "name": "Uaustr",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "uaustr",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/uaustr.json"
+        ]
+      },
+      "path": "~/Upgrade Template/template_recipes"
+    },
+    {
+      "name": "AncientDebrisOre",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ancient_debris_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/worldgen/placed_feature/ancient_debris_ore.json",
+          "src/main/resources/data/mut/neoforge/biome_modifier/ancient_debris_ore_biome_modifier.json",
+          "src/main/resources/data/mut/worldgen/configured_feature/ancient_debris_ore.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Feature"
+    },
+    {
+      "name": "GildingDebrisOre",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gilding_debris_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/worldgen/placed_feature/gilding_debris_ore.json",
+          "src/main/resources/data/mut/worldgen/configured_feature/gilding_debris_ore.json",
+          "src/main/resources/data/mut/neoforge/biome_modifier/gilding_debris_ore_biome_modifier.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Feature"
     }
   ],
   "variable_elements": [],
@@ -12398,6 +12552,7 @@
       "~CUSTOM:RedLightningCreeper"
     ],
     "BIOMES:minecraft:has_structure/mineshaft": [
+      "~CUSTOM:SigilForgeDesert",
       "~CUSTOM:SigilForgeVolcano",
       "~CUSTOM:SigilForgePlain"
     ],
@@ -12418,9 +12573,11 @@
       "~CUSTOM:LogDebris"
     ],
     "BIOMES:minecraft:has_structure/pillager_outpost": [
+      "~CUSTOM:SigilForgeDesert",
       "~CUSTOM:SigilForgeVolcano"
     ],
     "BIOMES:minecraft:has_structure/buried_treasure": [
+      "~CUSTOM:SigilForgeDesert",
       "~CUSTOM:SigilForgeOcean",
       "~CUSTOM:SigilForgeSwamp",
       "~CUSTOM:SigilForgeVolcano"
@@ -12548,15 +12705,39 @@
       "TAG:mut:spear"
     ],
     "BIOMES:mut:has_structure/sigil_forge_fortress": [
+      "#mut:is_sigil_forge_dimension"
+    ],
+    "BLOCKS:minecraft:saplings": [
+      "~CUSTOM:DebrisSapling"
+    ],
+    "BLOCKS:minecraft:leaves": [
+      "~CUSTOM:DebrisLeaves"
+    ],
+    "BIOMES:minecraft:has_structure/ocean_monument": [
+      "~CUSTOM:SigilForgeOcean"
+    ],
+    "BIOMES:mut:is_sigil_forge_dimension": [
       "CUSTOM:SigilForgePlain",
       "CUSTOM:SigilForgeVolcano",
+      "CUSTOM:SigilForgeOcean",
       "CUSTOM:SigilForgeSwamp",
       "CUSTOM:SigilForgeStonyShore",
       "CUSTOM:SigilForgeStonyPeaks",
+      "CUSTOM:SigilForgeRiver",
       "CUSTOM:SigilForgePlateau",
       "CUSTOM:SigilForgeSnowyPlateau",
       "CUSTOM:SigilForgeSnowyPeaks",
-      "CUSTOM:SigilForgeDesert"
+      "CUSTOM:SigilForgeDesert",
+      "CUSTOM:SigilForgeJungle"
+    ],
+    "BIOMES:mut:is_normal_animal_spawn": [
+      "CUSTOM:SigilForgePlain",
+      "CUSTOM:SigilForgeSwamp",
+      "CUSTOM:SigilForgeStonyShore",
+      "CUSTOM:SigilForgeRiver",
+      "CUSTOM:SigilForgePlateau",
+      "CUSTOM:SigilForgeSnowyPlateau",
+      "CUSTOM:SigilForgeJungle"
     ]
   },
   "tab_element_order": {
@@ -12588,6 +12769,7 @@
       "EchoiteUpgradeSmithingTemplate"
     ],
     "CUSTOM:MoreUpgradeTemplateExtraItems": [
+      "RefinedIronPowder",
       "FlameGoldNugget",
       "MetalPositionNugget",
       "HeterochromaticAmethystShard",
@@ -12613,6 +12795,7 @@
       "NetheriteLapisLazuliIngot",
       "EchoiteIngot",
       "DragonScaleCluster",
+      "HighCarbonCompounds",
       "BossTrialKey",
       "SigilForgeBossKey",
       "CopperBeef",
@@ -12626,7 +12809,8 @@
       "BlueDiamondBeef",
       "NetherStarBeef",
       "NetheriteRedstoneBeef",
-      "WitherBeef"
+      "WitherBeef",
+      "DebrisSapling"
     ],
     "CUSTOM:MoreUpgradeTemplateTools": [
       "LapisLazuliElytra",
@@ -12897,7 +13081,8 @@
       "Heterochromaticamethyst4",
       "Heterochromaticamethyst3",
       "Heterochromaticamethyst2",
-      "Heterochromaticamethyst1"
+      "Heterochromaticamethyst1",
+      "DebrisLeaves"
     ]
   },
   "language_map": {
@@ -13813,9 +13998,9 @@
       "gui.mut.super_smithing_table_gui.directed_bonus ": "",
       "gui.mut.probability_overlay.title ": "",
       "gui.mut.super_smithing_table_gui.probability_button ": "",
-      "jei.mut.super_smithing_table.description.0": "",
-      "jei.mut.super_smithing_table.description.1": "",
-      "jei.mut.super_smithing_table.description.2": "",
+      "jei.mut.super_smithing_table.description.0": "§6 Instructions for using the super forging table",
+      "jei.mut.super_smithing_table.description.1": "§7Place the Super Upgrade Forging Template in slot ①, any weapon/tool/armor in slot ②, and enchanting material in slot ③.",
+      "jei.mut.super_smithing_table.description.2": "§7 Different materials will affect the obtained § b affix types §7 and § c rank weights §7. For example: Flame stick → Burning mark, Poison potato → Poison mark.",
       "jei.mut.super_smithing_table.description.3": "",
       "jei.mut.super_smithing_table.tag": "",
       "gui.mut.super_smithing_table_gui.probability_button": "",
@@ -13829,7 +14014,7 @@
       "affix.material.diamond": "",
       "affix.material.nether_star": "",
       "gui.mut.super_smithing_table_gui.directed_bonus  ": "",
-      "patchouli.mut.affix_guide.name": "",
+      "patchouli.mut.affix_guide.name": "MoreUpgradeTemplate Guide Book",
       "affix.level.common": "Common",
       "affix.level.uncommon": "Uncommon",
       "affix.level.rare": "Rare",
@@ -13838,7 +14023,7 @@
       "affix.level.mythic": "Mythic",
       "affix.level.ancient": "Ancient",
       "affix.level.celestial": "Celestial",
-      "patchouli.mut.affix_guide.landing": "",
+      "patchouli.mut.affix_guide.landing": "Welcome to more forging template encyclopedia! This book will explain in detail all the mechanisms of mods to help you build the strongest equipment.",
       "item.mut.copper_elytra": "Copper Elytra",
       "item.mut.emerald_elytra": "Emerald Elytra",
       "item.mut.lapis_lazuli_elytra": "Lapis Lazuli Elytra",
@@ -13846,7 +14031,48 @@
       "item.mut.nether_star_elytra": "Nether Star Elytra",
       "item.mut.dragon_elytra": "Dragon Elytra",
       "item.mut.poison_steel_elytra": "Poison Steel Elytra",
-      "item.mut.amethyst_elytra": "Amethyst Elytra"
+      "item.mut.amethyst_elytra": "Amethyst Elytra",
+      "gui.mut.super_smithing_table_gui.open_probability_overview": "Open Probability Overview",
+      "item.mut.high_carbon_compounds": "High Carbon Compounds",
+      "item.mut.refined_iron_powder": "Refined Iron Powder",
+      "block.mut.debris_sapling": "Debris Sapling",
+      "block.mut.debris_leaves": "Debris Leaves",
+      "config.mut.poison_mark": "Poison Mark Coefficient",
+      "config.mut.poison_mark.tooltip": "Poison damage bonus per level",
+      "config.mut.fire_mark": "Fire Mark Coefficient",
+      "config.mut.fire_mark.tooltip": "Fire damage bonus per level",
+      "config.mut.wither_mark": "Wither Mark Coefficient",
+      "config.mut.wither_mark.tooltip": "Wither damage bonus per level",
+      "config.mut.total_max_level": "Total Max Level",
+      "config.mut.total_max_level.tooltip": "Max total affix level for all equipped items",
+      "config.mut.global_extra_load": "Global Extra Load",
+      "config.mut.global_extra_load.tooltip": "Extra loading count for all crossbows",
+      "config.mut.load_count_per_level": "Load Count Per Level",
+      "config.mut.load_count_per_level.tooltip": "Extra loading count per Multiload enchantment level",
+      "config.mut.per_crossbow_extra": "Per-Crossbow Extra Load",
+      "config.mut.per_crossbow_extra.tooltip": "Format: modid:crossbow_id\u003dcount",
+      "config.mut.multishot_count": "Multishot Count",
+      "config.mut.multishot_count.tooltip": "Arrows consumed/fired per shot with Multishot enchantment",
+      "config.mut.regeneration_mark": "Regeneration Mark Coefficient",
+      "config.mut.regeneration_mark.tooltip": "Health regen bonus per level",
+      "config.mut.strength_blessing": "Strength Blessing Coefficient",
+      "config.mut.strength_blessing.tooltip": "Melee damage multiplier per level",
+      "config.mut.sharpshooter": "Sharpshooter Coefficient",
+      "config.mut.sharpshooter.tooltip": "Projectile damage multiplier per level",
+      "config.mut.piercing_spear_stab": "Piercing Spear (Stab) Coefficient",
+      "config.mut.piercing_spear_stab.tooltip": "Stab damage multiplier per level",
+      "config.mut.piercing_spear_charge": "Piercing Spear (Charge) Coefficient",
+      "config.mut.piercing_spear_charge.tooltip": "Charge damage multiplier per level",
+      "config.mut.momentum": "Momentum Coefficient",
+      "config.mut.momentum.tooltip": "Fall attack damage multiplier per level",
+      "config.mut.tidal_surge_water": "Tidal Surge (Water) Coefficient",
+      "config.mut.tidal_surge_water.tooltip": "Water attack multiplier per level",
+      "config.mut.tidal_surge_rain": "Tidal Surge (Rain) Coefficient",
+      "config.mut.tidal_surge_rain.tooltip": "Rain attack multiplier per level",
+      "config.mut.big_stomach": "Big Stomach Coefficient",
+      "config.mut.big_stomach.tooltip": "Natural regen bonus per level",
+      "config.mut.energy_conversion": "Energy Conversion Coefficient",
+      "config.mut.energy_conversion.tooltip": "Durability restoration bonus per level"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -14125,7 +14351,6 @@
       "item.mut.netherite_elytra": "下界合金鞘翅",
       "item.mut.advanced_steel_shield": "精钢盾",
       "item.mut.gold_upgrade_template.description_0": "§7金升级",
-      "item.mut.gold_upgrade_template.description_1": "",
       "item.mut.gold_upgrade_template.description_4": "§7原材料:",
       "item.mut.gold_upgrade_template.description_5": "§9金",
       "item.mut.gold_upgrade_template": "金锻造模板",
@@ -14143,7 +14368,6 @@
       "item.mut.netherite_redstone_upgrade_template.description_5": "§9下界合金红石锭",
       "item.mut.netherite_redstone_upgrade_template.description_0": "§7下界合金红石升级",
       "item.mut.netherite_redstone_upgrade_template.description_2": "§7可应用于:",
-      "item.mut.netherite_redstone_upgrade_template.description_1": "",
       "item.mut.netherite_redstone_ingot": "下界合金红石锭",
       "item.mut.netherite_redstone_beef": "下界合金红石牛排",
       "block.mut.netherite_redstone_block": "下界合金红石块",
@@ -14179,7 +14403,6 @@
       "item.mut.netherite_emerald_boots": "下界合金绿宝石靴子",
       "item.mut.netherite_copper_upgrade_smithing_template": "下界合金铜模板",
       "item.mut.netherite_copper_upgrade_smithing_template.description_0": "§7下界合金铜升级",
-      "item.mut.netherite_copper_upgrade_smithing_template.description_1": "",
       "item.mut.netherite_copper_upgrade_smithing_template.description_4": "§7原材料:",
       "item.mut.netherite_copper_upgrade_smithing_template.description_5": "§9铜块",
       "item.mut.netherite_copper_upgrade_smithing_template.description_2": "§7可应用于:",
@@ -14187,7 +14410,6 @@
       "item.mut.netherite_emerald_upgrade_smithing_template.description_5": "§9下界合金绿宝石锭",
       "item.mut.netherite_emerald_upgrade_smithing_template.description_3": "§9绿宝石装备",
       "item.mut.netherite_emerald_upgrade_smithing_template.description_4": "§7原材料:",
-      "item.mut.netherite_emerald_upgrade_smithing_template.description_1": "",
       "item.mut.netherite_emerald_upgrade_smithing_template.description_2": "§7可应用于:",
       "item.mut.netherite_emerald_upgrade_smithing_template.description_0": "§7下界合金绿宝石升级",
       "item.mut.netherite_emerald_upgrade_smithing_template": "下界合金绿宝石模板",
@@ -14205,17 +14427,6 @@
       "block.mut.netherite_emerald_block": "下界合金绿宝石块",
       "item.mut.copper_bow": "铜弓",
       "item.mut.netherite_copper_bow": "下界合金铜弓",
-      "item.mut.stone_upgrade_template.description_1": "",
-      "item.mut.iron_upgrade_template.description_1": "",
-      "item.mut.diamond_upgrade_template.description_1": "",
-      "item.mut.steel_upgrade_template.description_1": "",
-      "item.mut.blue_diamond_upgrade_template.description_1": "",
-      "item.mut.obsidian_upgrade_template.description_1": "",
-      "item.mut.netherite_obsidian_upgrade_template.description_1": "",
-      "item.mut.nether_star_upgrade_template.description_1": "",
-      "item.mut.gilding_upgrade_template.description_1": "",
-      "item.mut.crying_obsidian_upgrade_template.description_1": "",
-      "item.mut.dragon_upgrade_template.description_1": "",
       "enchantment.mut.gallop.description": "提升马匹的移动速度。",
       "item.mut.netherite_amethyst_ingot": "下界合金紫水晶锭",
       "item.mut.netherite_amethyst_upgrade_smithing_template": "下界合金紫水晶锻造模板",
@@ -14243,7 +14454,6 @@
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_2": "§7可应用于:",
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_3": "§9紫水晶装备",
       "item.mut.netherite_amethyst_upgrade_smithing_template.description_0": "§7下界合金紫水晶升级",
-      "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
       "item.mut.copper_beef": "铜牛排",
       "item.mut.netherite_copper_beef": "下界合金铜牛排",
       "enchantment.mut.multiload": "多重装填",
@@ -14381,7 +14591,6 @@
       "item.mut.red_lightning_creeper_spawn_egg": "红色闪电苦力怕刷怪蛋",
       "entity.mut.traveler_phantom": "旅行者幻翼",
       "item.mut.traveler_phantom_spawn_egg": "旅行者幻翼刷怪蛋",
-      "potential_explosion.description": "使用后获得力量和抗性提升效果。",
       "enchantment.mut.potential_explosion.description": "使用后获得力量和抗性提升效果。",
       "item.mut.little_creeper_spawn_egg": "小苦力怕刷怪蛋",
       "entity.mut.little_creeper": "小苦力怕",
@@ -14461,12 +14670,6 @@
       "advancements.ice_and_fire_melt_together.descr": "制作黑曜石升级锻造模板。",
       "advancements.crying_heart.descr": "获得悲悯盔甲套装。",
       "advancements.crying_heart.title": "悲悯之心",
-      "subtitles.item.spear_wood.use": "",
-      "subtitles.item.spear.attack": "",
-      "subtitles.item.spear.hit": "",
-      "subtitles.item.spear.use": "",
-      "subtitles.item.spear_wood.attack": "",
-      "subtitles.item.spear_wood.hit": "",
       "item.mut.elite_aborigine_zombie_spawn_egg": "精英原住民僵尸刷怪蛋",
       "entity.mut.elite_aborigine_zombie": "精英原住民僵尸",
       "item.mut.wooden_spear": "木矛",
@@ -14526,11 +14729,6 @@
       "item.mut.netherite_amethyst_horse_armor": "下界合金紫水晶马铠",
       "enchantment.mut.lunge": "突进",
       "enchantment.mut.lunge.description": "戳刺攻击时将攻击者向前推进。",
-      "subtitles.spear_lunge": "",
-      "subtitles.item.spear.lunge": "",
-      "subtitles.item.spear.lunge_1": "",
-      "subtitles.item.spear.lunge_2": "",
-      "subtitles.item.spear.lunge_3": "",
       "block.mut.deep_iron_raw_block": "深层粗铁块",
       "item.mut.netherite_lapis_lazuli_ingot": "下界合金青金石锭",
       "item.mut.echoite_ingot": "回响合金锭",
@@ -14661,19 +14859,16 @@
       "item.mut.magma_upgrade_smithing_template.description_5": "§9赤焰金锭",
       "item.mut.magma_upgrade_smithing_template.description_3": "§9鎏金装备",
       "item.mut.magma_upgrade_smithing_template.description_4": "§7原材料：",
-      "item.mut.magma_upgrade_smithing_template.description_1": "",
       "item.mut.magma_upgrade_smithing_template.description_2": "§7可应用于：",
       "item.mut.magma_upgrade_smithing_template.description_0": "§7赤焰金升级",
       "item.mut.poison_upgrade_smithing_template.description_4": "§7原材料：",
       "item.mut.poison_upgrade_smithing_template.description_5": "§9金属毒锭",
       "item.mut.poison_upgrade_smithing_template.description_0": "§7毒钢升级",
-      "item.mut.poison_upgrade_smithing_template.description_1": "",
       "item.mut.poison_upgrade_smithing_template.description_2": "§7可应用于：",
       "item.mut.poison_upgrade_smithing_template.description_3": "§9钢装备",
       "item.mut.echoite_upgrade_smithing_template.description_0": "§7回响合金升级",
       "item.mut.echoite_upgrade_smithing_template.description_3": "§9下界合金装备",
       "item.mut.echoite_upgrade_smithing_template.description_4": "§7原材料：",
-      "item.mut.echoite_upgrade_smithing_template.description_1": "",
       "item.mut.echoite_upgrade_smithing_template.description_2": "§7可应用于：",
       "item.mut.echoite_upgrade_smithing_template.description_5": "§9回响合金锭",
       "item.mut.thunder_upgrade_smithing_template.description_4": "§7原材料：",
@@ -14681,9 +14876,7 @@
       "item.mut.thunder_upgrade_smithing_template.description_2": "§7可应用于：",
       "item.mut.thunder_upgrade_smithing_template.description_3": "§9下界合金铜装备",
       "item.mut.thunder_upgrade_smithing_template.description_0": "§7闪雷升级",
-      "item.mut.thunder_upgrade_smithing_template.description_1": "",
       "item.mut.uncanny_amethyst_upgrade_smithing_template.description_0": "§7奇异紫水晶升级",
-      "item.mut.uncanny_amethyst_upgrade_smithing_template.description_1": "",
       "item.mut.uncanny_amethyst_upgrade_smithing_template.description_4": "§7原材料：",
       "item.mut.uncanny_amethyst_upgrade_smithing_template.description_5": "§9奇异紫水晶之星",
       "item.mut.uncanny_amethyst_upgrade_smithing_template.description_2": "§7可应用于：",
@@ -14692,7 +14885,6 @@
       "item.mut.netherite_lapis_lazuli_upgrade_smithing_template.description_5": "§9下界合金青金石锭",
       "item.mut.netherite_lapis_lazuli_upgrade_smithing_template.description_4": "§7原材料：",
       "item.mut.netherite_lapis_lazuli_upgrade_smithing_template": "下界合金青金石锻造模板",
-      "item.mut.netherite_lapis_lazuli_upgrade_smithing_template.description_1": "",
       "item.mut.netherite_lapis_lazuli_upgrade_smithing_template.description_0": "§7下界合金青金石升级",
       "item.mut.netherite_lapis_lazuli_upgrade_smithing_template.description_3": "§9青金石装备",
       "item.mut.netherite_lapis_lazuli_upgrade_smithing_template.description_2": "§7可应用于：",
@@ -14755,25 +14947,18 @@
       "item.mut.boss_trial_key.description_1": "§9符锻首领宝库",
       "item.mut.sigil_forge_boss_key.description_1": "§9符锻首领试炼刷怪笼",
       "item.mut.sigil_forge_boss_key.description_0": "§7可应用于开启Boss试炼：",
-      "gui.mut.super_smithing_table_gui.probability_title ": "§6§l━ 等级概率 ━ ",
-      "gui.mut.super_smithing_table_gui.pity_line ": "§e软保底: %d次 +%d%% ",
-      "gui.mut.super_smithing_table_gui.universal_bonus ": "§b通用加成: +%d%% ",
-      "gui.mut.super_smithing_table_gui.directed_bonus ": "§a%s§7 ×%s +%d%% ",
-      "gui.mut.probability_overlay.title ": "等级概率预览 ",
-      "gui.mut.super_smithing_table_gui.probability_button ": "§6点击或按 P 查看等级概率预览 ",
-      "jei.mut.super_smithing_table.description.0": "§6超级锻造台使用说明 ",
-      "jei.mut.super_smithing_table.description.1": "§7在槽位①放入§e超级升级锻造模板§7，槽位②放入§e任意武器/工具/盔甲§7，槽位③放入§e附魔材料§7。 ",
-      "jei.mut.super_smithing_table.description.2": "§7不同材料会影响获得的§b词缀类型§7和§c等级权重§7。例如：烈焰棒→灼烧印记，毒马铃薯→剧毒印记。 ",
-      "jei.mut.super_smithing_table.description.3": "§7下界之星作为通用材料，可提升所有词缀的出现概率和等级上限。 ",
-      "jei.mut.super_smithing_table.tag": "§7材料决定词缀类型与等级 ",
-      "gui.mut.super_smithing_table_gui.directed_bonus": "§a%s§7 ×%s +%d%% ",
-      "gui.mut.super_smithing_table_gui.universal_bonus": "§b通用加成: +%d%% ",
-      "gui.mut.super_smithing_table_gui.pity_line": "§e软保底: %d次 +%d%% ",
-      "gui.mut.super_smithing_table_gui.probability_button": "§6点击或按 P 查看等级概率预览 ",
-      "gui.mut.probability_overlay.title": "等级概率预览 ",
-      "gui.mut.super_smithing_table_gui.probability_title": "§6§l━ 等级概率 ━  ",
-      "gui.mut.super_smithing_table_gui.directed_bonus  ": "§a%s§7 ×%s +%d%%  ",
-      "patchouli.mut.affix_guide.name": "§d更多锻造模板宝典 ",
+      "gui.mut.super_smithing_table_gui.probability_title": "§6§l━ 等级概率 ━",
+      "gui.mut.super_smithing_table_gui.pity_line": "§e软保底: %d次 +%d%%",
+      "gui.mut.super_smithing_table_gui.universal_bonus": "§b通用加成: +%d%%",
+      "gui.mut.super_smithing_table_gui.directed_bonus": "§a%s§7 ×%s +%d%%",
+      "gui.mut.probability_overlay.title": "等级概率预览",
+      "gui.mut.super_smithing_table_gui.probability_button": "§6点击或按 P 查看等级概率预览",
+      "jei.mut.super_smithing_table.description.0": "§6超级锻造台使用说明",
+      "jei.mut.super_smithing_table.description.1": "§7在槽位①放入§e超级升级锻造模板§7，槽位②放入§e任意武器/工具/盔甲§7，槽位③放入§e附魔材料§7。",
+      "jei.mut.super_smithing_table.description.2": "§7不同材料会影响获得的§b词缀类型§7和§c等级权重§7。例如：烈焰棒→灼烧印记，毒马铃薯→剧毒印记。",
+      "jei.mut.super_smithing_table.description.3": "§7下界之星作为通用材料，可提升所有词缀的出现概率和等级上限。",
+      "jei.mut.super_smithing_table.tag": "§7材料决定词缀类型与等级",
+      "patchouli.mut.affix_guide.name": "§d更多锻造模板宝典",
       "affix.level.common": "⭐",
       "affix.level.uncommon": "⭐⭐",
       "affix.level.rare": "⭐⭐⭐",
@@ -14782,7 +14967,7 @@
       "affix.level.mythic": "⭐⭐⭐⭐⭐⭐",
       "affix.level.ancient": "⭐⭐⭐⭐⭐⭐⭐",
       "affix.level.celestial": "⭐⭐⭐⭐⭐⭐⭐⭐",
-      "patchouli.mut.affix_guide.landing": "§6欢迎来到更多锻造模板宝典宝典！$(br2)本书将详细讲解模组的全部机制，帮助你打造最强装备。 ",
+      "patchouli.mut.affix_guide.landing": "§6欢迎来到更多锻造模板宝典宝典！$(br2)本书将详细讲解模组的全部机制，帮助你打造最强装备。",
       "item.mut.copper_elytra": "铜鞘翅",
       "item.mut.emerald_elytra": "绿宝石鞘翅",
       "item.mut.lapis_lazuli_elytra": "青金石鞘翅",
@@ -14790,7 +14975,48 @@
       "item.mut.nether_star_elytra": "下界之星鞘翅",
       "item.mut.dragon_elytra": "龙翼鞘翅",
       "item.mut.poison_steel_elytra": "毒钢鞘翅",
-      "item.mut.amethyst_elytra": "紫水晶鞘翅"
+      "item.mut.amethyst_elytra": "紫水晶鞘翅",
+      "gui.mut.super_smithing_table_gui.open_probability_overview": "概率预览",
+      "item.mut.high_carbon_compounds": "高碳化合物",
+      "item.mut.refined_iron_powder": "精炼铁矿粉",
+      "block.mut.debris_sapling": "残骸木树苗",
+      "block.mut.debris_leaves": "残骸木树叶",
+      "config.mut.poison_mark": "剧毒印记系数",
+      "config.mut.poison_mark.tooltip": "每级中毒伤害加成",
+      "config.mut.fire_mark": "灼烧印记系数",
+      "config.mut.fire_mark.tooltip": "每级火焰伤害加成",
+      "config.mut.wither_mark": "凋零印记系数",
+      "config.mut.wither_mark.tooltip": "每级凋零伤害加成",
+      "config.mut.total_max_level": "全身总等级上限",
+      "config.mut.total_max_level.tooltip": "全身装备词缀总等级上限",
+      "config.mut.global_extra_load": "全局额外装填",
+      "config.mut.global_extra_load.tooltip": "所有弩额外装填数量",
+      "config.mut.load_count_per_level": "每级装填增量",
+      "config.mut.load_count_per_level.tooltip": "多重装填附魔每级额外装填数量",
+      "config.mut.per_crossbow_extra": "指定弩额外装填",
+      "config.mut.per_crossbow_extra.tooltip": "格式: modid:弩id\u003d数量",
+      "config.mut.multishot_count": "多重射击数量",
+      "config.mut.multishot_count.tooltip": "多重射击附魔每次消耗和发射的箭矢数量",
+      "config.mut.regeneration_mark": "再生印记系数",
+      "config.mut.regeneration_mark.tooltip": "每级生命恢复加成",
+      "config.mut.strength_blessing": "力量祝福系数",
+      "config.mut.strength_blessing.tooltip": "每级近战伤害倍率",
+      "config.mut.sharpshooter": "神射手系数",
+      "config.mut.sharpshooter.tooltip": "每级弹射物伤害倍率",
+      "config.mut.piercing_spear_stab": "贯穿之矛(戳击)系数",
+      "config.mut.piercing_spear_stab.tooltip": "每级戳击伤害倍率",
+      "config.mut.piercing_spear_charge": "贯穿之矛(冲刺)系数",
+      "config.mut.piercing_spear_charge.tooltip": "每级冲刺伤害倍率",
+      "config.mut.momentum": "势能印记系数",
+      "config.mut.momentum.tooltip": "每级下落攻击伤害倍率",
+      "config.mut.tidal_surge_water": "潮涌之力(水中)系数",
+      "config.mut.tidal_surge_water.tooltip": "每级水中攻击倍率",
+      "config.mut.tidal_surge_rain": "潮涌之力(雨天)系数",
+      "config.mut.tidal_surge_rain.tooltip": "每级雨天攻击倍率",
+      "config.mut.big_stomach": "大胃袋系数",
+      "config.mut.big_stomach.tooltip": "每级自然恢复加成",
+      "config.mut.energy_conversion": "能量转化系数",
+      "config.mut.energy_conversion.tooltip": "每级耐久恢复加成"
     }
   },
   "metadata": {
@@ -14804,6 +15030,7 @@
       "src/main/java/net/mcreator/mut/init/MutModTrades.java",
       "src/main/resources/data/minecraft/tags/point_of_interest_type/acquirable_job_site.json",
       "src/main/java/net/mcreator/mut/init/MutModVillagerProfessions.java",
+      "src/main/java/net/mcreator/mut/init/MutModFuels.java",
       "src/main/java/net/mcreator/mut/init/MutModMobEffects.java",
       "src/main/resources/data/neoforge/data_maps/entity_type/monster_room_mobs.json",
       "src/main/java/net/mcreator/mut/init/MutModBlocks.java",
@@ -15111,6 +15338,10 @@
           },
           {
             "name": "Vault",
+            "children": []
+          },
+          {
+            "name": "Feature",
             "children": []
           }
         ]

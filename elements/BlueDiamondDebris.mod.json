@@ -146,12 +146,15 @@
     "blocksToReplace": [
       {
         "value": "Blocks.NETHERRACK"
+      },
+      {
+        "value": "CUSTOM:DebrisStone"
       }
     ],
     "generationShape": "UNIFORM",
     "frequencyPerChunks": 2,
     "frequencyOnChunk": 4,
-    "minGenerateHeight": 0,
+    "minGenerateHeight": -64,
     "maxGenerateHeight": 64
   }
 }

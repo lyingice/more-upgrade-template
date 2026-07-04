@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#mut:is_normal_animal_spawn",
+  "spawners": {
+    "type": "minecraft:chicken",
+    "weight": 8,
+    "minCount": 2,
+    "maxCount": 3
+  }
+}

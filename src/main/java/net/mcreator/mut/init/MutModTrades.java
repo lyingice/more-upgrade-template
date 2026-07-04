@@ -33,6 +33,11 @@ public class MutModTrades {
 			event.getTrades().get(5).add(new BasicItemListing(new ItemStack(Blocks.EMERALD_BLOCK, 64), new ItemStack(MutModItems.DRAGON_UPGRADE_TEMPLATE.get()), 10, 20, 0.05f));
 			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(Items.EMERALD, 64), new ItemStack(MutModItems.NETHERITE_EMERALD_UPGRADE_SMITHING_TEMPLATE.get()), 10, 10, 0.05f));
 			event.getTrades().get(3).add(new BasicItemListing(new ItemStack(Items.EMERALD, 44), new ItemStack(MutModItems.NETHERITE_EMERALD_UPGRADE_SMITHING_TEMPLATE.get()), 10, 15, 0.05f));
+			event.getTrades().get(4).add(new BasicItemListing(new ItemStack(Items.EMERALD, 64), new ItemStack(Items.EMERALD, 64), new ItemStack(MutModItems.SUPER_UPGRADE_SMITHING_TEMPLATE.get()), 10, 5, 0.05f));
+			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(Items.EMERALD, 64), new ItemStack(MutModItems.NETHERITE_COPPER_UPGRADE_SMITHING_TEMPLATE.get()), 10, 5, 0.05f));
+			event.getTrades().get(2).add(new BasicItemListing(new ItemStack(Items.EMERALD, 64), new ItemStack(MutModItems.NETHERITE_AMETHYST_UPGRADE_SMITHING_TEMPLATE.get()), 10, 5, 0.05f));
+			event.getTrades().get(1).add(new BasicItemListing(new ItemStack(Items.EMERALD, 15), new ItemStack(MutModItems.GOLD_UPGRADE_TEMPLATE.get()), 10, 5, 0.05f));
+			event.getTrades().get(4).add(new BasicItemListing(new ItemStack(Blocks.EMERALD_BLOCK, 32), new ItemStack(MutModItems.ECHOITE_UPGRADE_SMITHING_TEMPLATE.get()), 10, 5, 0.05f));
 		}
 	}
 }

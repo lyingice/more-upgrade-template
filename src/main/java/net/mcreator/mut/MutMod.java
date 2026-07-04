@@ -16,6 +16,7 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.ModList;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.IEventBus;
 
@@ -32,6 +33,7 @@ import net.mcreator.mut.init.*;
 import net.mcreator.mut.event.EnergyConversionHandler;
 import net.mcreator.mut.event.AffixEventHandler;
 import net.mcreator.mut.config.MutCrossbowLoadCountConfig;
+import net.mcreator.mut.config.AffixConfig;
 import net.mcreator.mut.command.AddAffixCommand;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -65,6 +67,8 @@ public class MutMod {
 		MutModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		MutModAttributes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
+		ModContainer container = ModLoadingContext.get().getActiveContainer();
+		container.registerConfig(ModConfig.Type.COMMON, AffixConfig.SPEC, "mut_affix_coefficients.toml");
 		ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.SERVER, MutCrossbowLoadCountConfig.CONFIG_SPEC, "mut_crossbow_load_count.toml");
 		MutModItems.ENTITY_REGISTRY.register(modEventBus);
 		NeoForge.EVENT_BUS.register(new AffixEventHandler());

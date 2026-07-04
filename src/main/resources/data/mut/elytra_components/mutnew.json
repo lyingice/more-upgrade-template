@@ -1,0 +1,124 @@
+{
+  "elytra_components": [
+    {
+      "component_id": "copper_elytra",
+      "elytra_item": "mut:copper_elytra",
+      "durability": {
+        "base": 527,
+        "multiplier": 1.0,
+        "max": 527
+      },
+      "texture": {
+        "elytra_layer": "mut:textures/entities/copper_elytra.png"
+      },
+      "render": {
+        "has_glow": false
+      }
+    },
+    {
+      "component_id": "emerald_elytra",
+      "elytra_item": "mut:emerald_elytra",
+      "durability": {
+        "base": 876,
+        "multiplier": 1.0,
+        "max": 876
+      },
+      "texture": {
+        "elytra_layer": "mut:textures/entities/emerald_elytra.png"
+      },
+      "render": {
+        "has_glow": false
+      }
+    },
+    {
+      "component_id": "lapis_lazuli_elytra",
+      "elytra_item": "mut:lapis_lazuli_elytra",
+      "durability": {
+        "base": 532,
+        "multiplier": 1.0,
+        "max": 532
+      },
+      "texture": {
+        "elytra_layer": "mut:textures/entities/lapis_lazuli_elytra.png"
+      },
+      "render": {
+        "has_glow": false
+      }
+    },
+    {
+      "component_id": "obsidian_elytra",
+      "elytra_item": "mut:obsidian_elytra",
+      "durability": {
+        "base": 1757,
+        "multiplier": 1.0,
+        "max": 1757
+      },
+      "texture": {
+        "elytra_layer": "mut:textures/entities/obsidian_elytra.png"
+      },
+      "render": {
+        "has_glow": false
+      }
+    },
+    {
+      "component_id": "nether_star_elytra",
+      "elytra_item": "mut:nether_star_elytra",
+      "durability": {
+        "base": 1932,
+        "multiplier": 1.0,
+        "max": 1932
+      },
+      "texture": {
+        "elytra_layer": "mut:textures/entities/nether_star_elytra.png"
+      },
+      "render": {
+        "has_glow": false
+      }
+    },
+    {
+      "component_id": "poison_steel_elytra",
+      "elytra_item": "mut:poison_steel_elytra",
+      "durability": {
+        "base": 1448,
+        "multiplier": 1.0,
+        "max": 1448
+      },
+      "texture": {
+        "elytra_layer": "mut:textures/entities/poison_steel_elytra.png"
+      },
+      "render": {
+        "has_glow": false
+      }
+    },
+    {
+      "component_id": "dragon_elytra",
+      "elytra_item": "mut:dragon_elytra",
+      "durability": {
+        "base": 3376,
+        "multiplier": 1.0,
+        "max": 3376
+      },
+      "texture": {
+        "elytra_layer": "mut:textures/entities/dragon_elytra.png"
+      },
+      "render": {
+        "has_glow": false
+      }
+    },
+    {
+      "component_id": "amethyst_elytra",
+      "elytra_item": "mut:amethyst_elytra",
+      "durability": {
+        "base": 607,
+        "multiplier": 1.0,
+        "max": 607
+      },
+      "texture": {
+        "elytra_layer": "mut:textures/entities/amethyst_elytra.png"
+      },
+      "render": {
+        "has_glow": false
+      }
+    }
+  ]
+}

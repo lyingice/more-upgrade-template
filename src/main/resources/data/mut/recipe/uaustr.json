@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "mut:heterochromatic_amethyst_block"
+    },
+    "b": {
+      "item": "mut:uncanny_amethyst_upgrade_smithing_template"
+    },
+    "c": {
+      "item": "mut:netherite_amethyst_upgrade_smithing_template"
+    }
+  },
+  "result": {
+    "id": "mut:uncanny_amethyst_upgrade_smithing_template",
+    "count": 2
+  }
+}

@@ -400,6 +400,10 @@ public class MutModItems {
 	public static final DeferredItem<Item> DRAGON_ELYTRA;
 	public static final DeferredItem<Item> POISON_STEEL_ELYTRA;
 	public static final DeferredItem<Item> AMETHYST_ELYTRA;
+	public static final DeferredItem<Item> HIGH_CARBON_COMPOUNDS;
+	public static final DeferredItem<Item> REFINED_IRON_POWDER;
+	public static final DeferredItem<Item> DEBRIS_SAPLING;
+	public static final DeferredItem<Item> DEBRIS_LEAVES;
 	static {
 		IRON_BOW = REGISTRY.register("iron_bow", IronBowItem::new);
 		STONE_UPGRADE_TEMPLATE = REGISTRY.register("stone_upgrade_template", StoneUpgradeTemplateItem::new);
@@ -772,6 +776,10 @@ public class MutModItems {
 		DRAGON_ELYTRA = REGISTRY.register("dragon_elytra", DragonElytraItem::new);
 		POISON_STEEL_ELYTRA = REGISTRY.register("poison_steel_elytra", PoisonSteelElytraItem::new);
 		AMETHYST_ELYTRA = REGISTRY.register("amethyst_elytra", AmethystElytraItem::new);
+		HIGH_CARBON_COMPOUNDS = REGISTRY.register("high_carbon_compounds", HighCarbonCompoundsItem::new);
+		REFINED_IRON_POWDER = REGISTRY.register("refined_iron_powder", RefinedIronPowderItem::new);
+		DEBRIS_SAPLING = block(MutModBlocks.DEBRIS_SAPLING, new Item.Properties().fireResistant());
+		DEBRIS_LEAVES = block(MutModBlocks.DEBRIS_LEAVES, new Item.Properties().fireResistant());
 	}
 	// Start of user code block custom items
 	public static final DeferredItem<Item> AMETHYST_SWORD = REGISTRY.register("amethyst_sword", AmethystTools.Sword::new);

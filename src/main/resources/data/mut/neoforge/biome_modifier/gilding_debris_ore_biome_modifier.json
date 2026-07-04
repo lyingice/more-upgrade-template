@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#mut:is_sigil_forge_dimension",
+  "features": "mut:gilding_debris_ore",
+  "step": "underground_ores"
+}

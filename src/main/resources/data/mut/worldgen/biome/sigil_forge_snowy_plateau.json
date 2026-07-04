@@ -1,11 +1,11 @@
 {
   "has_precipitation": true,
-  "temperature": -0.2,
-  "downfall": 1.0,
+  "temperature": 0,
+  "downfall": 1,
   "effects": {
     "foliage_color": 10387789,
     "grass_color": 9470285,
-    "sky_color": 8364543,
+    "sky_color": 7972607,
     "fog_color": 12638463,
     "water_color": 4159204,
     "water_fog_color": 329011
@@ -13,82 +13,39 @@
   "spawners": {
     "monster": [
       {
-        "type": "mut:aborigine_zombie",
-        "weight": 12,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "mut:red_lightning_creeper",
-        "weight": 8,
-        "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "mut:traveler_phantom",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "minecraft:stray",
+        "type": "stray",
         "weight": 20,
         "minCount": 2,
         "maxCount": 4
-      },
-      {
-        "type": "minecraft:skeleton",
-        "weight": 15,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:zombie",
-        "weight": 12,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:spider",
-        "weight": 8,
-        "minCount": 1,
-        "maxCount": 2
       }
     ],
     "creature": [
       {
-        "type": "minecraft:rabbit",
-        "weight": 12,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:fox",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:wolf",
+        "type": "wolf",
         "weight": 8,
         "minCount": 2,
         "maxCount": 4
       },
       {
-        "type": "minecraft:polar_bear",
+        "type": "fox",
+        "weight": 10,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "rabbit",
+        "weight": 12,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "polar_bear",
         "weight": 5,
         "minCount": 1,
         "maxCount": 2
       }
     ],
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "weight": 8,
-        "minCount": 1,
-        "maxCount": 2
-      }
-    ],
+    "ambient": [],
     "axolotls": [],
     "underground_water_creature": [],
     "water_creature": [],

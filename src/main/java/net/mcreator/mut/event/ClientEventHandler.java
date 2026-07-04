@@ -4,6 +4,7 @@ import net.mcreator.mut.affix.*;
 import net.mcreator.mut.affix.data.AffixDataLoader;
 import net.mcreator.mut.affix.data.LevelConfig;
 import net.mcreator.mut.affix.impl.*;
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -61,59 +62,57 @@ public class ClientEventHandler {
         };
     }
 
-    private static Component getDynamicDescription(Affix affix, int level, Player player) {
+    private static MutableComponent getDynamicDescription(Affix affix, int level, Player player) {
         String key = "affix." + affix.getId() + ".description";
 
-        // 根据词缀类型计算动态数值
         if (affix instanceof PoisonMarkAffix) {
-            float bonus = level * 0.5F;
+            float bonus = level * (float) AffixConfig.getCoefficient("poison_mark");
             return Component.translatable(key, String.format("%.1f", bonus));
         }
         if (affix instanceof FireMarkAffix) {
-            float bonus = level * 0.5F;
+            float bonus = level * (float) AffixConfig.getCoefficient("fire_mark");
             return Component.translatable(key, String.format("%.1f", bonus));
         }
         if (affix instanceof WitherMarkAffix) {
-            float bonus = level * 0.5F;
+            float bonus = level * (float) AffixConfig.getCoefficient("wither_mark");
             return Component.translatable(key, String.format("%.1f", bonus));
         }
         if (affix instanceof RegenerationMarkAffix) {
-            float bonus = level * 0.5F;
+            float bonus = level * (float) AffixConfig.getCoefficient("regeneration_mark");
             return Component.translatable(key, String.format("%.1f", bonus));
         }
         if (affix instanceof StrengthBlessingAffix) {
-            int percent = level * 5;
+            int percent = (int)(level * (float) AffixConfig.getCoefficient("strength_blessing") * 100);
             return Component.translatable(key, percent);
         }
         if (affix instanceof SharpshooterAffix) {
-            int percent = (int) (level * 7.5);
+            int percent = (int)(level * (float) AffixConfig.getCoefficient("sharpshooter") * 100);
             return Component.translatable(key, percent);
         }
         if (affix instanceof PiercingSpearAffix) {
-            int stab = level * 10;
-            int charge = level * 5;
+            int stab = (int)(level * (float) AffixConfig.getCoefficient("piercing_spear_stab") * 100);
+            int charge = (int)(level * (float) AffixConfig.getCoefficient("piercing_spear_charge") * 100);
             return Component.translatable(key, stab, charge);
         }
         if (affix instanceof MomentumAffix) {
-            int percent = (int) (level * 12.5);
+            int percent = (int)(level * (float) AffixConfig.getCoefficient("momentum") * 100);
             return Component.translatable(key, percent);
         }
         if (affix instanceof TidalSurgeAffix) {
-            int water = level * 10;
-            int rain = level * 5;
+            int water = (int)(level * (float) AffixConfig.getCoefficient("tidal_surge_water") * 100);
+            int rain = (int)(level * (float) AffixConfig.getCoefficient("tidal_surge_rain") * 100);
             int oxygen = level * 3;
             return Component.translatable(key, water, rain, oxygen);
         }
         if (affix instanceof BigStomachAffix) {
-            float bonus = level * 0.5F;
+            float bonus = level * (float) AffixConfig.getCoefficient("big_stomach");
             return Component.translatable(key, String.format("%.1f", bonus));
         }
         if (affix instanceof EnergyConversionAffix) {
-            int cap = (int) (level * 0.5F);
+            int cap = Math.round(level * (float) AffixConfig.getCoefficient("energy_conversion"));
             return Component.translatable(key, cap);
         }
 
-        // 默认无参数
         return Component.translatable(key);
     }
 }

@@ -1,6 +1,7 @@
 package net.mcreator.mut.affix;
 
 import net.mcreator.mut.affix.impl.MomentumAffix;
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -32,6 +33,6 @@ public class MomentumHelper {
 
     public static float getMultiplier(LivingEntity entity) {
         int level = getEquippedMomentumLevel(entity);
-        return 1.0F + level * MULTIPLIER_PER_LEVEL;
+        return 1.0F + level * (float) AffixConfig.getCoefficient("momentum");
     }
 }

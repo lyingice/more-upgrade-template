@@ -1,6 +1,7 @@
 package net.mcreator.mut.affix;
 
 import net.mcreator.mut.affix.impl.PiercingSpearAffix;
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -34,12 +35,12 @@ public class PiercingSpearHelper {
     /** 戳击伤害倍率 */
     public static float getStabMultiplier(LivingEntity entity) {
         int level = getEquippedPiercingSpearLevel(entity);
-        return 1.0F + level * STAB_MULTIPLIER;
+        return 1.0F + level * (float) AffixConfig.getCoefficient("piercing_spear_stab");
     }
 
     /** 冲刺伤害倍率 */
     public static float getChargeMultiplier(LivingEntity entity) {
         int level = getEquippedPiercingSpearLevel(entity);
-        return 1.0F + level * CHARGE_MULTIPLIER;
+        return 1.0F + level * (float) AffixConfig.getCoefficient("piercing_spear_charge");
     }
 }

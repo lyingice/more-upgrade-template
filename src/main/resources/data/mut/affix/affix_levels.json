@@ -1,5 +1,5 @@
 {
-  "__comment": "词缀等级定义与权重曲线配置 - 数据驱动核心（二改：总分池+比率分配方案）",
+  "__comment": "词缀等级定义与权重曲线配置 - 数据驱动核心（三改：材料提供额外附魔能力）",
   "levels": [
     {
       "level": 1,
@@ -61,5 +61,6 @@
   "total_pool_scale_factor": 2,
   "total_pool_base": 100,
   "min_probability_per_level": 0.003,
-  "bonus_multiplier_per_level": 1
+  "bonus_multiplier_per_level": 1,
+  "default_max_level_cap": 5
 }

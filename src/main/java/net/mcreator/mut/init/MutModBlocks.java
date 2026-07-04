@@ -104,6 +104,8 @@ public class MutModBlocks {
 	public static final DeferredBlock<Block> HETEROCHROMATICAMETHYST_3;
 	public static final DeferredBlock<Block> HETEROCHROMATICAMETHYST_4;
 	public static final DeferredBlock<Block> HETEROCHROMATICBUDDINGAMETHYST;
+	public static final DeferredBlock<Block> DEBRIS_SAPLING;
+	public static final DeferredBlock<Block> DEBRIS_LEAVES;
 	static {
 		STEEL_DEBRIS = REGISTRY.register("steel_debris", SteelDebrisBlock::new);
 		BLUE_DIAMOND_DEBRIS = REGISTRY.register("blue_diamond_debris", BlueDiamondDebrisBlock::new);
@@ -188,6 +190,8 @@ public class MutModBlocks {
 		HETEROCHROMATICAMETHYST_3 = REGISTRY.register("heterochromaticamethyst_3", Heterochromaticamethyst3Block::new);
 		HETEROCHROMATICAMETHYST_4 = REGISTRY.register("heterochromaticamethyst_4", Heterochromaticamethyst4Block::new);
 		HETEROCHROMATICBUDDINGAMETHYST = REGISTRY.register("heterochromaticbuddingamethyst", HeterochromaticbuddingamethystBlock::new);
+		DEBRIS_SAPLING = REGISTRY.register("debris_sapling", DebrisSaplingBlock::new);
+		DEBRIS_LEAVES = REGISTRY.register("debris_leaves", DebrisLeavesBlock::new);
 	}
 
 	// Start of user code block custom blocks

@@ -7,131 +7,44 @@
     "grass_color": 9470285,
     "sky_color": 7972607,
     "fog_color": 12638463,
-    "water_color": -16724788,
+    "water_color": 4159204,
     "water_fog_color": 329011
   },
   "spawners": {
     "monster": [
       {
-        "type": "mut:aborigine_zombie",
-        "weight": 15,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "mut:traveler_phantom",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "mut:red_lightning_creeper",
-        "weight": 12,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:zombie",
-        "weight": 20,
-        "minCount": 2,
-        "maxCount": 5
-      },
-      {
-        "type": "minecraft:skeleton",
-        "weight": 20,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:creeper",
-        "weight": 15,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:spider",
-        "weight": 15,
-        "minCount": 1,
-        "maxCount": 3
-      }
-    ],
-    "creature": [
-      {
-        "type": "minecraft:wolf",
-        "weight": 8,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:fox",
-        "weight": 6,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:rabbit",
-        "weight": 10,
-        "minCount": 2,
-        "maxCount": 4
-      }
-    ],
-    "ambient": [
-      {
-        "type": "minecraft:bat",
-        "weight": 10,
-        "minCount": 1,
-        "maxCount": 2
-      }
-    ],
-    "axolotls": [],
-    "underground_water_creature": [],
-    "water_creature": [],
-    "water_ambient": [
-      {
-        "type": "minecraft:cod",
-        "weight": 10,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "minecraft:salmon",
-        "weight": 8,
-        "minCount": 1,
-        "maxCount": 3
-      }
-    ],
-    "misc": [
-      {
-        "type": "minecraft:cow",
-        "weight": 8,
-        "minCount": 2,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:sheep",
-        "weight": 8,
-        "minCount": 2,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:chicken",
-        "weight": 8,
-        "minCount": 2,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:pig",
-        "weight": 6,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "minecraft:horse",
+        "type": "horse",
         "weight": 5,
         "minCount": 1,
         "maxCount": 2
       }
-    ]
+    ],
+    "creature": [
+      {
+        "type": "fox",
+        "weight": 6,
+        "minCount": 1,
+        "maxCount": 3
+      },
+      {
+        "type": "wolf",
+        "weight": 8,
+        "minCount": 2,
+        "maxCount": 4
+      },
+      {
+        "type": "rabbit",
+        "weight": 10,
+        "minCount": 2,
+        "maxCount": 4
+      }
+    ],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
   },
   "spawn_costs": {},
   "carvers": {
@@ -169,9 +82,7 @@
       "minecraft:ore_copper",
       "minecraft:underwater_magma"
     ],
-    [
-
-    ],
+    [],
     [],
     [
       "mut:sigil_forge_plain_tree",
@@ -179,8 +90,6 @@
       "minecraft:patch_tall_grass",
       "minecraft:patch_grass_forest"
     ],
-    [
-      "mut:heterochromatic_geode"
-    ]
+    []
   ]
 }

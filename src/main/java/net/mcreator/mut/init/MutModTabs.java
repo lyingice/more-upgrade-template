@@ -50,6 +50,7 @@ public class MutModTabs {
 			}).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_EXTRA_ITEMS = REGISTRY.register("more_upgrade_template_extra_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_extra_items")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_INGOT.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(MutModItems.REFINED_IRON_POWDER.get());
 				tabData.accept(MutModItems.FLAME_GOLD_NUGGET.get());
 				tabData.accept(MutModItems.METAL_POSITION_NUGGET.get());
 				tabData.accept(MutModItems.HETEROCHROMATIC_AMETHYST_SHARD.get());
@@ -75,6 +76,7 @@ public class MutModTabs {
 				tabData.accept(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT.get());
 				tabData.accept(MutModItems.ECHOITE_INGOT.get());
 				tabData.accept(MutModItems.DRAGON_SCALE_CLUSTER.get());
+				tabData.accept(MutModItems.HIGH_CARBON_COMPOUNDS.get());
 				tabData.accept(MutModItems.BOSS_TRIAL_KEY.get());
 				tabData.accept(MutModItems.SIGIL_FORGE_BOSS_KEY.get());
 				tabData.accept(MutModItems.COPPER_BEEF.get());
@@ -89,6 +91,7 @@ public class MutModTabs {
 				tabData.accept(MutModItems.NETHER_STAR_BEEF.get());
 				tabData.accept(MutModItems.NETHERITE_REDSTONE_BEEF.get());
 				tabData.accept(MutModItems.WITHER_BEEF.get());
+				tabData.accept(MutModBlocks.DEBRIS_SAPLING.get().asItem());
 			}).withTabsBefore(MORE_UPGRADE_TMPLATES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_TOOLS = REGISTRY.register("more_upgrade_template_tools",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_tools")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_PICKAXE.get())).displayItems((parameters, tabData) -> {
@@ -414,6 +417,7 @@ public class MutModTabs {
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_3.get().asItem());
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_2.get().asItem());
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_1.get().asItem());
+				tabData.accept(MutModBlocks.DEBRIS_LEAVES.get().asItem());
 			}).withTabsBefore(MORE_UPGRADE_TEMPLATE_COMBAT_ITEMS.getId()).build());
 
 	@SubscribeEvent

@@ -1,6 +1,7 @@
 package net.mcreator.mut.affix;
 
 import net.mcreator.mut.affix.impl.SharpshooterAffix;
+import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
@@ -30,6 +31,6 @@ public class SharpshooterHelper {
 
     public static float getMultiplier(LivingEntity entity) {
         int level = getEquippedSharpshooterLevel(entity);
-        return 1.0F + level * 0.075F;
+        return 1.0F + level * (float) AffixConfig.getCoefficient("sharpshooter");
     }
 }
