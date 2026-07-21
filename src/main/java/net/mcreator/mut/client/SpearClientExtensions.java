@@ -1,14 +1,15 @@
 package net.mcreator.mut.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.mcreator.mut.client.animation.SpearAnimations;
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.client.animation.SpearAnimations;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import org.jetbrains.annotations.NotNull;
 
+@Deprecated
 public class SpearClientExtensions implements IClientItemExtensions {
 
     @Override

@@ -2,7 +2,7 @@ package net.mcreator.mut.client.animation;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
@@ -13,6 +13,7 @@ import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.world.InteractionHand;
 
+@Deprecated
 public class SpearAnimations {
 
     public static float progress(float f, float f2, float f3) {

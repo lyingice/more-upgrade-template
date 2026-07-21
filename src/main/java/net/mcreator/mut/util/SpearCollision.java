@@ -1,6 +1,6 @@
 package net.mcreator.mut.util;
 
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 
+@Deprecated
 public class SpearCollision {
 
     public static List<EntityHitResult> getHitEntitiesAlong(

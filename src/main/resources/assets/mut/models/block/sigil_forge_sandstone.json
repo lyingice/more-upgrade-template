@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "mut:block/sigil_forge_sandstone_button",
+    "up": "mut:block/sigil_forge_sandstone_top",
+    "north": "mut:block/sigil_forge_sandstone_side",
+    "east": "mut:block/sigil_forge_sandstone_side",
+    "south": "mut:block/sigil_forge_sandstone_side",
+    "west": "mut:block/sigil_forge_sandstone_side",
+    "particle": "mut:block/sigil_forge_sandstone_button"
+  },
+  "render_type": "solid"
+}

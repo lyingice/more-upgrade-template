@@ -1,6 +1,6 @@
 package net.mcreator.mut.mixin;
 
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.client.player.LocalPlayer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;

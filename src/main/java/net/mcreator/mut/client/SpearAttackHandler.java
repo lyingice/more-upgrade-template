@@ -2,8 +2,8 @@ package net.mcreator.mut.client;
 
 import net.mcreator.mut.MutMod;
 import net.mcreator.mut.init.MutModSounds;
-import net.mcreator.mut.item.SpearItem;
-import net.mcreator.mut.util.SpearCollision;
+import net.minecraft.spearcore.item.SpearItem;
+import net.minecraft.spearcore.util.SpearCollision;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -28,6 +28,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import java.util.List;
 
 @EventBusSubscriber(modid = MutMod.MODID)
+@Deprecated
 public class SpearAttackHandler {
 
     @SubscribeEvent
@@ -75,14 +76,14 @@ public class SpearAttackHandler {
             player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
                     spear.getHitSound(), SoundSource.PLAYERS, 1.0F, 1.0F);
             // 触发命中反馈动画
-            net.mcreator.mut.client.animation.SpearAnimations.triggerHitFeedback();
+            net.minecraft.spearcore.client.animation.SpearAnimations.triggerHitFeedback();
         }
     }
 
     private static boolean canHitEntity(Player player, Entity target) {
         if (target instanceof Player other && !player.canHarmPlayer(other)) return false;
         if (player.isPassengerOfSameVehicle(target)) return false;
-        if (!net.mcreator.mut.util.SpearCollision.hasLineOfSight(player, target)) return false;
+        if (!net.minecraft.spearcore.util.SpearCollision.hasLineOfSight(player, target)) return false;
         return true;
     }
 

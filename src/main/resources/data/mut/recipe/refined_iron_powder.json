@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:raw_iron"
+    },
+    "B": {
+      "item": "mut:high_carbon_compounds"
+    }
+  },
+  "result": {
+    "id": "mut:refined_iron_powder",
+    "count": 4
+  }
+}

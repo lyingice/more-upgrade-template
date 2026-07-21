@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mut:block/debris_sigil_magma_block"
+    }
+  }
+}

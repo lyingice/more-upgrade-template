@@ -9420,19 +9420,6 @@
       "path": "~/Sigil Forge Dimension/Entity"
     },
     {
-      "name": "WoodenSpear",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "wooden_spear",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/mut/recipe/wooden_spear.json"
-        ]
-      },
-      "path": "~/Amror and Tools/Extra Spear"
-    },
-    {
       "name": "SteelWolfArmor",
       "type": "item",
       "compiles": true,
@@ -9655,19 +9642,6 @@
         ]
       },
       "path": "~/Entity Armor"
-    },
-    {
-      "name": "Lunge",
-      "type": "enchantment",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "lunge",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/mut/enchantment/lunge.json"
-        ]
-      },
-      "path": "~/Enchantment"
     },
     {
       "name": "LungeEvent",
@@ -10425,7 +10399,7 @@
           "src/main/resources/data/mut/advancement/sigil_forge_join.json"
         ]
       },
-      "path": "~/Achievement"
+      "path": "~/Achievement/New Dimension"
     },
     {
       "name": "NetheriteAll",
@@ -10451,7 +10425,7 @@
           "src/main/resources/data/mut/advancement/thunde_star.json"
         ]
       },
-      "path": "~/Achievement"
+      "path": "~/Achievement/New Dimension"
     },
     {
       "name": "ThunderArmor",
@@ -10464,7 +10438,7 @@
           "src/main/resources/data/mut/advancement/thunder_armor.json"
         ]
       },
-      "path": "~/Achievement"
+      "path": "~/Achievement/New Dimension"
     },
     {
       "name": "HeterochromaticAmethystBlock",
@@ -11918,6 +11892,949 @@
         ]
       },
       "path": "~/Sigil Forge Dimension/Feature"
+    },
+    {
+      "name": "FlameGoldOreGet",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flame_gold_ore_get",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/flame_gold_ore_get.json"
+        ]
+      },
+      "path": "~/Achievement/New Dimension"
+    },
+    {
+      "name": "MetalPoisonOreGet",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_poison_ore_get",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/metal_poison_ore_get.json"
+        ]
+      },
+      "path": "~/Achievement/New Dimension"
+    },
+    {
+      "name": "FlameGoldTemplate",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flame_gold_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/flame_gold_template.json"
+        ]
+      },
+      "path": "~/Achievement/New Dimension"
+    },
+    {
+      "name": "FlameGoldSuit",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "flame_gold_suit",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/flame_gold_suit.json"
+        ]
+      },
+      "path": "~/Achievement/New Dimension"
+    },
+    {
+      "name": "PoisonTemplate",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_template",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/poison_template.json"
+        ]
+      },
+      "path": "~/Achievement/New Dimension"
+    },
+    {
+      "name": "PoisonSteelSuit",
+      "type": "achievement",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "poison_steel_suit",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/poison_steel_suit.json"
+        ]
+      },
+      "path": "~/Achievement/New Dimension"
+    },
+    {
+      "name": "CampingSite",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "camping_site",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/worldgen/template_pool/camping_site.json",
+          "src/main/resources/data/mut/worldgen/structure/camping_site.json",
+          "src/main/resources/data/mut/worldgen/structure_set/camping_site.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Structure"
+    },
+    {
+      "name": "SteelScrapR",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_scrap_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/steel_scrap_r.json",
+          "src/main/resources/data/mut/advancement/recipes/steel_scrap_r.json"
+        ]
+      },
+      "path": "~/Base Material/material_recipes"
+    },
+    {
+      "name": "SigilForgeGlass",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_glass",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/sigil_forge_glass.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeGlassBlock.java",
+          "src/main/resources/assets/mut/models/item/sigil_forge_glass.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_glass.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_glass.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "SigilForgeSand",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_sand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/sigil_forge_sand.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_sand.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_sand.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_sand.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeSandBlock.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "SigilForgeDirt",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_dirt",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/sigil_forge_dirt.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_dirt.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_dirt.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeDirtBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_dirt.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "IronFlower",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_flower",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/iron_flower.json",
+          "src/main/resources/assets/mut/models/block/iron_flower.json",
+          "src/main/resources/assets/mut/models/item/iron_flower.json",
+          "src/main/java/net/mcreator/mut/block/IronFlowerBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/iron_flower.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "BlueDiamondRose",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_diamond_rose",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/blue_diamond_rose.json",
+          "src/main/resources/data/mut/loot_table/blocks/blue_diamond_rose.json",
+          "src/main/resources/assets/mut/models/item/blue_diamond_rose.json",
+          "src/main/java/net/mcreator/mut/block/BlueDiamondRoseBlock.java",
+          "src/main/resources/assets/mut/blockstates/blue_diamond_rose.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "BlueDiamondRosebush",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_diamond_rosebush",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/blue_diamond_rosebush.json",
+          "src/main/resources/assets/mut/models/block/blue_diamond_rosebush_bottom.json",
+          "src/main/resources/data/mut/loot_table/blocks/blue_diamond_rosebush.json",
+          "src/main/resources/assets/mut/models/block/blue_diamond_rosebush.json",
+          "src/main/resources/assets/mut/blockstates/blue_diamond_rosebush.json",
+          "src/main/java/net/mcreator/mut/block/BlueDiamondRosebushBlock.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "GildedMarigoldFlower",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gilded_marigold_flower",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/gilded_marigold_flower.json",
+          "src/main/resources/assets/mut/models/item/gilded_marigold_flower.json",
+          "src/main/java/net/mcreator/mut/block/GildedMarigoldFlowerBlock.java",
+          "src/main/resources/assets/mut/models/block/gilded_marigold_flower.json",
+          "src/main/resources/assets/mut/blockstates/gilded_marigold_flower.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "SigilForgeSandstone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_sandstone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_sandstone.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_sandstone.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeSandstoneBlock.java",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_sandstone.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeSandstoneStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_sandstone_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/sigil_forge_sandstone_stairs.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_stairs_outer.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeSandstoneStairsBlock.java",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_stairs_inner.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeSandstoneSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_sandstone_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_slab_top.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_slab_full.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_sandstone_slab.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_slab.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_sandstone_slab.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeSandstoneSlabBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_sandstone_slab.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeSandstoneWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_sandstone_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/sigil_forge_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_wall_post.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeSandstoneWallBlock.java",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_wall.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_wall_inventory.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_sandstone_wall_side_tall.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeCutSandstone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_cut_sandstone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/SigilForgeCutSandstoneBlock.java",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_cut_sandstone.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_cut_sandstone.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_cut_sandstone.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeCutSandstoneStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_cut_sandstone_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/sigil_forge_cut_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_stairs_outer.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_stairs.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_cut_sandstone_stairs.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeCutSandstoneStairsBlock.java",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_cut_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_stairs_inner.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeCutSandstoneSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_cut_sandstone_slab",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/SigilForgeCutSandstoneSlabBlock.java",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_slab.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_cut_sandstone_slab.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_slab_full.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_cut_sandstone_slab.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_slab_top.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_cut_sandstone_slab.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeCutSandstoneWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_cut_sandstone_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/sigil_forge_cut_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_wall_post.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_cut_sandstone_wall.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeCutSandstoneWallBlock.java",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_wall_side_tall.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_cut_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_cut_sandstone_wall_inventory.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeChiseledSandstone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_chiseled_sandstone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/sigil_forge_chiseled_sandstone.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_chiseled_sandstone.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeChiseledSandstoneBlock.java",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_chiseled_sandstone.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeChiseledSandstoneStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_chiseled_sandstone_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_stairs_outer.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeChiseledSandstoneStairsBlock.java",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_stairs.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_chiseled_sandstone_stairs.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_chiseled_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_chiseled_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_stairs_inner.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeChiseledSandstoneSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_chiseled_sandstone_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/sigil_forge_chiseled_sandstone_slab.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_slab.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeChiseledSandstoneSlabBlock.java",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_chiseled_sandstone_slab.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_chiseled_sandstone_slab.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_slab_top.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_slab_full.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeChiseledSandstoneWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_chiseled_sandstone_wall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/SigilForgeChiseledSandstoneWallBlock.java",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_chiseled_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_wall_side_tall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_wall_inventory.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_chiseled_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_chiseled_sandstone_wall_post.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_chiseled_sandstone_wall.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "DiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/DiamondLampBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "WhiteDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/white_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/white_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/WhiteDiamondLampBlock.java",
+          "src/main/resources/assets/mut/models/item/white_diamond_lamp.json",
+          "src/main/resources/data/mut/loot_table/blocks/white_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "LightGrayDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_gray_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/light_gray_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/LightGrayDiamondLampBlock.java",
+          "src/main/resources/assets/mut/models/item/light_gray_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/light_gray_diamond_lamp.json",
+          "src/main/resources/data/mut/loot_table/blocks/light_gray_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "GrayDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gray_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/gray_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/GrayDiamondLampBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/gray_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/gray_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/gray_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "BlackDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/BlackDiamondLampBlock.java",
+          "src/main/resources/assets/mut/blockstates/black_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/black_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/black_diamond_lamp.json",
+          "src/main/resources/data/mut/loot_table/blocks/black_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "BrownDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "brown_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/BrownDiamondLampBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/brown_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/brown_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/brown_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/brown_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "RedDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/red_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/red_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/red_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/red_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/RedDiamondLampBlock.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "OrangeDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/OrangeDiamondLampBlock.java",
+          "src/main/resources/assets/mut/models/block/orange_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/orange_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/orange_diamond_lamp.json",
+          "src/main/resources/data/mut/loot_table/blocks/orange_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "YellowDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "yellow_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/yellow_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/YellowDiamondLampBlock.java",
+          "src/main/resources/assets/mut/blockstates/yellow_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/yellow_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/yellow_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "LimeDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lime_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/lime_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/lime_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/lime_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/LimeDiamondLampBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/lime_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "GreenDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/green_diamond_lamp.json",
+          "src/main/resources/data/mut/loot_table/blocks/green_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/green_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/GreenDiamondLampBlock.java",
+          "src/main/resources/assets/mut/models/block/green_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "CyanDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cyan_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/cyan_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/cyan_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/cyan_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/CyanDiamondLampBlock.java",
+          "src/main/resources/assets/mut/models/block/cyan_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "LightBlueDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_blue_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/light_blue_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/light_blue_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/LightBlueDiamondLampBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/light_blue_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/light_blue_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "BlueDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/BlueDiamondLampBlock.java",
+          "src/main/resources/assets/mut/models/item/blue_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/blue_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/blue_diamond_lamp.json",
+          "src/main/resources/data/mut/loot_table/blocks/blue_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "PurpleDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/purple_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/purple_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/PurpleDiamondLampBlock.java",
+          "src/main/resources/assets/mut/models/block/purple_diamond_lamp.json",
+          "src/main/resources/data/mut/loot_table/blocks/purple_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "MagentaDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magenta_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/magenta_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/magenta_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/magenta_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/MagentaDiamondLampBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/magenta_diamond_lamp.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "PinkDiamondLamp",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pink_diamond_lamp",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/pink_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/item/pink_diamond_lamp.json",
+          "src/main/resources/assets/mut/models/block/pink_diamond_lamp.json",
+          "src/main/resources/assets/mut/blockstates/pink_diamond_lamp.json",
+          "src/main/java/net/mcreator/mut/block/PinkDiamondLampBlock.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "SigilForgeSmoothSandstone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_smooth_sandstone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeSmoothSandstoneBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_smooth_sandstone.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_smooth_sandstone.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_smooth_sandstone.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeSmoothSandstoneStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_smooth_sandstone_stairs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/SigilForgeSmoothSandstoneStairsBlock.java",
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_stairs_outer.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_smooth_sandstone_stairs.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_smooth_sandstone_stairs.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_smooth_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_stairs.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_stairs_inner.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeSmoothSandstoneSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_smooth_sandstone_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_slab_top.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_slab.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_smooth_sandstone_slab.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_slab_full.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_smooth_sandstone_slab.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeSmoothSandstoneSlabBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_smooth_sandstone_slab.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "SigilForgeSmoothSandstoneWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sigil_forge_smooth_sandstone_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_wall.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_smooth_sandstone_wall.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_smooth_sandstone_wall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_wall_post.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeSmoothSandstoneWallBlock.java",
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_wall_side_tall.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_smooth_sandstone_wall_inventory.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_smooth_sandstone_wall.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "EmperorDebrisCactus",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "emperor_debris_cactus",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/emperor_debris_cactus.json",
+          "src/main/resources/assets/mut/models/block/emperor_debris_cactus.json",
+          "src/main/resources/data/mut/loot_table/blocks/emperor_debris_cactus.json",
+          "src/main/java/net/mcreator/mut/block/EmperorDebrisCactusBlock.java",
+          "src/main/resources/assets/mut/blockstates/emperor_debris_cactus.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "DebrisSigilMagmaBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "debris_sigil_magma_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/block/DebrisSigilMagmaBlockBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/debris_sigil_magma_block.json",
+          "src/main/resources/assets/mut/models/block/debris_sigil_magma_block.json",
+          "src/main/resources/assets/mut/models/item/debris_sigil_magma_block.json",
+          "src/main/resources/assets/mut/blockstates/debris_sigil_magma_block.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "DebrisApple",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debris_apple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/DebrisAppleItem.java",
+          "src/main/resources/assets/mut/models/item/debris_apple.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "SteelDebrisApple",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_debris_apple",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/steel_debris_apple.json",
+          "src/main/java/net/mcreator/mut/item/SteelDebrisAppleItem.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "GoldenDebrisApple",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_debris_apple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/GoldenDebrisAppleItem.java",
+          "src/main/resources/assets/mut/models/item/golden_debris_apple.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "DiamondDebrisApple",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "diamond_debris_apple",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/diamond_debris_apple.json",
+          "src/main/java/net/mcreator/mut/item/DiamondDebrisAppleItem.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "AncientDebrisApple",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ancient_debris_apple",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/ancient_debris_apple.json",
+          "src/main/java/net/mcreator/mut/item/AncientDebrisAppleItem.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "DebrisAppleEat",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debris_apple_eat",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/mut/procedures/DebrisAppleEatProcedure.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Plants"
     }
   ],
   "variable_elements": [],
@@ -12041,6 +12958,40 @@
       "TAG:mut:elytra"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:DebrisSigilMagmaBlock",
+      "~CUSTOM:SigilForgeSmoothSandstoneWall",
+      "~CUSTOM:SigilForgeSmoothSandstoneSlab",
+      "~CUSTOM:SigilForgeSmoothSandstoneStairs",
+      "~CUSTOM:SigilForgeSmoothSandstone",
+      "~CUSTOM:PinkDiamondLamp",
+      "~CUSTOM:MagentaDiamondLamp",
+      "~CUSTOM:PurpleDiamondLamp",
+      "~CUSTOM:BlueDiamondLamp",
+      "~CUSTOM:LightBlueDiamondLamp",
+      "~CUSTOM:CyanDiamondLamp",
+      "~CUSTOM:GreenDiamondLamp",
+      "~CUSTOM:LimeDiamondLamp",
+      "~CUSTOM:YellowDiamondLamp",
+      "~CUSTOM:OrangeDiamondLamp",
+      "~CUSTOM:RedDiamondLamp",
+      "~CUSTOM:BrownDiamondLamp",
+      "~CUSTOM:BlackDiamondLamp",
+      "~CUSTOM:GrayDiamondLamp",
+      "~CUSTOM:LightGrayDiamondLamp",
+      "~CUSTOM:WhiteDiamondLamp",
+      "~CUSTOM:DiamondLamp",
+      "~CUSTOM:SigilForgeChiseledSandstoneWall",
+      "~CUSTOM:SigilForgeChiseledSandstoneSlab",
+      "~CUSTOM:SigilForgeChiseledSandstoneStairs",
+      "~CUSTOM:SigilForgeChiseledSandstone",
+      "~CUSTOM:SigilForgeCutSandstoneWall",
+      "~CUSTOM:SigilForgeCutSandstoneSlab",
+      "~CUSTOM:SigilForgeCutSandstoneStairs",
+      "~CUSTOM:SigilForgeCutSandstone",
+      "~CUSTOM:SigilForgeSandstoneWall",
+      "~CUSTOM:SigilForgeSandstoneSlab",
+      "~CUSTOM:SigilForgeSandstoneStairs",
+      "~CUSTOM:SigilForgeSandstone",
       "~CUSTOM:Heterochromaticbuddingamethyst",
       "~CUSTOM:Heterochromaticamethyst4",
       "~CUSTOM:Heterochromaticamethyst3",
@@ -12320,7 +13271,6 @@
       "CUSTOM:PositionSteelIngot"
     ],
     "ENCHANTMENTS:minecraft:tradeable": [
-      "~CUSTOM:Lunge",
       "~CUSTOM:PotentialExplosion",
       "~CUSTOM:HealthRegeneration",
       "~CUSTOM:WitherAspect",
@@ -12332,7 +13282,6 @@
       "CUSTOM:Gallop"
     ],
     "ENCHANTMENTS:minecraft:on_random_loot": [
-      "~CUSTOM:Lunge",
       "~CUSTOM:PotentialExplosion",
       "~CUSTOM:HealthRegeneration",
       "~CUSTOM:WitherAspect",
@@ -12344,7 +13293,6 @@
       "CUSTOM:Gallop"
     ],
     "ENCHANTMENTS:minecraft:non_treasure": [
-      "~CUSTOM:Lunge",
       "~CUSTOM:PotentialExplosion",
       "~CUSTOM:HealthRegeneration",
       "~CUSTOM:WitherAspect",
@@ -12599,6 +13547,10 @@
       "~CUSTOM:DebrisPlanksFence"
     ],
     "BLOCKS:minecraft:walls": [
+      "~CUSTOM:SigilForgeSmoothSandstoneWall",
+      "~CUSTOM:SigilForgeChiseledSandstoneWall",
+      "~CUSTOM:SigilForgeCutSandstoneWall",
+      "~CUSTOM:SigilForgeSandstoneWall",
       "~CUSTOM:DebrisCobblestoneWall",
       "~CUSTOM:DebrisStoneWall",
       "~CUSTOM:DebrisStoneBricksWall"
@@ -12607,12 +13559,20 @@
       "CUSTOM:DebrisPlanks"
     ],
     "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:SigilForgeSmoothSandstoneStairs",
+      "~CUSTOM:SigilForgeChiseledSandstoneStairs",
+      "~CUSTOM:SigilForgeCutSandstoneStairs",
+      "~CUSTOM:SigilForgeSandstoneStairs",
       "~CUSTOM:DebrisPlanksStairs",
       "~CUSTOM:DebrisStoneStairs",
       "~CUSTOM:DebrisCobblestoneStairs",
       "~CUSTOM:DebrisStoneBricksStairs"
     ],
     "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:SigilForgeSmoothSandstoneSlab",
+      "~CUSTOM:SigilForgeChiseledSandstoneSlab",
+      "~CUSTOM:SigilForgeCutSandstoneSlab",
+      "~CUSTOM:SigilForgeSandstoneSlab",
       "~CUSTOM:DebrisPlanksSlab",
       "~CUSTOM:DebrisCobblestoneSlab",
       "~CUSTOM:DebrisStoneSlab",
@@ -12738,6 +13698,34 @@
       "CUSTOM:SigilForgePlateau",
       "CUSTOM:SigilForgeSnowyPlateau",
       "CUSTOM:SigilForgeJungle"
+    ],
+    "BLOCKS:mut:ore_replace": [
+      "CUSTOM:DebrisStone",
+      "CUSTOM:DebrisCobblestone"
+    ],
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:SigilForgeDirt",
+      "~CUSTOM:SigilForgeSand",
+      "~CUSTOM:SigilForgeGlass"
+    ],
+    "BLOCKS:minecraft:needs_stone_tool": [
+      "~CUSTOM:PinkDiamondLamp",
+      "~CUSTOM:MagentaDiamondLamp",
+      "~CUSTOM:PurpleDiamondLamp",
+      "~CUSTOM:BlueDiamondLamp",
+      "~CUSTOM:LightBlueDiamondLamp",
+      "~CUSTOM:CyanDiamondLamp",
+      "~CUSTOM:GreenDiamondLamp",
+      "~CUSTOM:LimeDiamondLamp",
+      "~CUSTOM:YellowDiamondLamp",
+      "~CUSTOM:OrangeDiamondLamp",
+      "~CUSTOM:RedDiamondLamp",
+      "~CUSTOM:BrownDiamondLamp",
+      "~CUSTOM:BlackDiamondLamp",
+      "~CUSTOM:GrayDiamondLamp",
+      "~CUSTOM:LightGrayDiamondLamp",
+      "~CUSTOM:WhiteDiamondLamp",
+      "~CUSTOM:DiamondLamp"
     ]
   },
   "tab_element_order": {
@@ -12770,6 +13758,7 @@
     ],
     "CUSTOM:MoreUpgradeTemplateExtraItems": [
       "RefinedIronPowder",
+      "HighCarbonCompounds",
       "FlameGoldNugget",
       "MetalPositionNugget",
       "HeterochromaticAmethystShard",
@@ -12795,7 +13784,6 @@
       "NetheriteLapisLazuliIngot",
       "EchoiteIngot",
       "DragonScaleCluster",
-      "HighCarbonCompounds",
       "BossTrialKey",
       "SigilForgeBossKey",
       "CopperBeef",
@@ -12810,7 +13798,12 @@
       "NetherStarBeef",
       "NetheriteRedstoneBeef",
       "WitherBeef",
-      "DebrisSapling"
+      "DebrisSapling",
+      "DebrisApple",
+      "SteelDebrisApple",
+      "GoldenDebrisApple",
+      "DiamondDebrisApple",
+      "AncientDebrisApple"
     ],
     "CUSTOM:MoreUpgradeTemplateTools": [
       "LapisLazuliElytra",
@@ -13015,6 +14008,8 @@
       "GildingDebris",
       "BlueDiamondDebris",
       "NetherDeepIronOreBlock",
+      "FlameGoldOre",
+      "MetalPoisonousOre",
       "SteelBlock",
       "GildingBlock",
       "BlueDiamondBlock",
@@ -13059,6 +14054,7 @@
       "DebrisStoneBricksSign",
       "DebrisStoneBricksHangingSign",
       "LogDebris",
+      "DebrisLeaves",
       "DebrisPlanks",
       "DebrisPlanksStairs",
       "DebrisPlanksSlab",
@@ -13070,8 +14066,22 @@
       "DebrisPlanksDoor",
       "DebrisPlanksSign",
       "DebrisPlanksHangingSign",
-      "FlameGoldOre",
-      "MetalPoisonousOre",
+      "SigilForgeSandstone",
+      "SigilForgeSandstoneStairs",
+      "SigilForgeSandstoneSlab",
+      "SigilForgeSandstoneWall",
+      "SigilForgeCutSandstone",
+      "SigilForgeCutSandstoneStairs",
+      "SigilForgeCutSandstoneSlab",
+      "SigilForgeCutSandstoneWall",
+      "SigilForgeChiseledSandstone",
+      "SigilForgeChiseledSandstoneStairs",
+      "SigilForgeChiseledSandstoneSlab",
+      "SigilForgeChiseledSandstoneWall",
+      "SigilForgeSmoothSandstone",
+      "SigilForgeSmoothSandstoneStairs",
+      "SigilForgeSmoothSandstoneSlab",
+      "SigilForgeSmoothSandstoneWall",
       "SigilForgeVaultCommon",
       "SigilForgeVaultUnique",
       "SigilForgeVaultBoss",
@@ -13082,7 +14092,32 @@
       "Heterochromaticamethyst3",
       "Heterochromaticamethyst2",
       "Heterochromaticamethyst1",
-      "DebrisLeaves"
+      "SigilForgeGlass",
+      "SigilForgeSand",
+      "SigilForgeDirt",
+      "EmperorDebrisCactus",
+      "DebrisSigilMagmaBlock",
+      "IronFlower",
+      "BlueDiamondRose",
+      "BlueDiamondRosebush",
+      "GildedMarigoldFlower",
+      "DiamondLamp",
+      "WhiteDiamondLamp",
+      "LightGrayDiamondLamp",
+      "GrayDiamondLamp",
+      "BlackDiamondLamp",
+      "BrownDiamondLamp",
+      "RedDiamondLamp",
+      "OrangeDiamondLamp",
+      "YellowDiamondLamp",
+      "LimeDiamondLamp",
+      "GreenDiamondLamp",
+      "CyanDiamondLamp",
+      "LightBlueDiamondLamp",
+      "BlueDiamondLamp",
+      "PurpleDiamondLamp",
+      "MagentaDiamondLamp",
+      "PinkDiamondLamp"
     ]
   },
   "language_map": {
@@ -13761,7 +14796,6 @@
       "item.mut.netherite_emerald_horse_armor": "Netherite Emerald Horse Armor",
       "item.mut.amethyst_horse_armor": "Amethyst Horse Armor",
       "item.mut.netherite_amethyst_horse_armor": "Netherite Amethyst Horse Armor",
-      "enchantment.mut.lunge": "Lunge",
       "enchantment.mut.lunge.description": "Push the attacker forward during a stabbing attack.",
       "subtitles.spear_lunge": "",
       "subtitles.item.spear.lunge": "",
@@ -14072,7 +15106,70 @@
       "config.mut.big_stomach": "Big Stomach Coefficient",
       "config.mut.big_stomach.tooltip": "Natural regen bonus per level",
       "config.mut.energy_conversion": "Energy Conversion Coefficient",
-      "config.mut.energy_conversion.tooltip": "Durability restoration bonus per level"
+      "config.mut.energy_conversion.tooltip": "Durability restoration bonus per level",
+      "config.mut.category.mark": "Mark Affix",
+      "config.mut.category.buff": "Normal Affix",
+      "config.mut.category.limit": "Affix Limit",
+      "config.mut.category.crossbow": "Crossbow Config",
+      "advancements.flame_gold_ore_get.descr": "使用精准采集获得赤焰金矿。",
+      "advancements.flame_gold_ore_get.title": "灼烧之赤焰",
+      "advancements.metal_poison_ore_get.descr": "挖掘并获得一块金属毒矿。",
+      "advancements.metal_poison_ore_get.title": "毒之蕴藏",
+      "advancements.flame_gold_template.descr": "获得熔岩锻造模板",
+      "advancements.flame_gold_template.title": "赤焰金升级",
+      "advancements.flame_gold_suit.descr": "获得赤焰金全套套装。",
+      "advancements.flame_gold_suit.title": "烈阳裹身！",
+      "advancements.poison_template.title": "毒钢升级",
+      "advancements.poison_template.descr": "获得剧毒锻造模板。",
+      "advancements.poison_steel_suit.descr": "获得毒钢套装。",
+      "advancements.poison_steel_suit.title": "毒钢装甲",
+      "block.mut.sigil_forge_glass": "Sigil Forge Glass",
+      "block.mut.sigil_forge_sand": "Sigil Forge Sand",
+      "block.mut.sigil_forge_dirt": "Sigil Forge Dirt",
+      "block.mut.iron_flower": "Iron Flower",
+      "block.mut.blue_diamond_rose": "Blue Diamond Rose",
+      "block.mut.blue_diamond_rosebush": "Blue Diamond Rosebush",
+      "block.mut.gilded_marigold_flower": "Gilded Marigold Flower",
+      "block.mut.sigil_forge_sandstone": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_sandstone_stairs": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_sandstone_slab": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_sandstone_wall": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_cut_sandstone": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_cut_sandstone_stairs": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_cut_sandstone_slab": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_cut_sandstone_wall": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_chiseled_sandstone": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_chiseled_sandstone_stairs": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_chiseled_sandstone_slab": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_chiseled_sandstone_wall": "Sigil Forge Sandstone",
+      "block.mut.diamond_lamp": "Diamond Lamp",
+      "block.mut.white_diamond_lamp": "Diamond Lamp",
+      "block.mut.light_gray_diamond_lamp": "Diamond Lamp",
+      "block.mut.gray_diamond_lamp": "Diamond Lamp",
+      "block.mut.black_diamond_lamp": "Diamond Lamp",
+      "block.mut.brown_diamond_lamp": "Diamond Lamp",
+      "block.mut.red_diamond_lamp": "Diamond Lamp",
+      "block.mut.orange_diamond_lamp": "Diamond Lamp",
+      "block.mut.yellow_diamond_lamp": "Diamond Lamp",
+      "block.mut.lime_diamond_lamp": "Diamond Lamp",
+      "block.mut.green_diamond_lamp": "Diamond Lamp",
+      "block.mut.cyan_diamond_lamp": "Diamond Lamp",
+      "block.mut.light_blue_diamond_lamp": "Diamond Lamp",
+      "block.mut.blue_diamond_lamp": "Diamond Lamp",
+      "block.mut.purple_diamond_lamp": "Diamond Lamp",
+      "block.mut.magenta_diamond_lamp": "Diamond Lamp",
+      "block.mut.pink_diamond_lamp": "Diamond Lamp",
+      "block.mut.sigil_forge_smooth_sandstone": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_smooth_sandstone_stairs": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_smooth_sandstone_slab": "Sigil Forge Sandstone",
+      "block.mut.sigil_forge_smooth_sandstone_wall": "Sigil Forge Sandstone",
+      "block.mut.emperor_debris_cactus": "Emperor Debris Cactus",
+      "block.mut.debris_sigil_magma_block": "Debris Sigil Magma Block",
+      "item.mut.debris_apple": "Debris Apple",
+      "item.mut.steel_debris_apple": "Steel Debris Apple",
+      "item.mut.golden_debris_apple": "Golden Debris Apple",
+      "item.mut.diamond_debris_apple": "Diamond Debris Apple",
+      "item.mut.ancient_debris_apple": "Debris Apple"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -14727,7 +15824,6 @@
       "item.mut.netherite_emerald_horse_armor": "下界合金绿宝石马铠",
       "item.mut.amethyst_horse_armor": "紫水晶马铠",
       "item.mut.netherite_amethyst_horse_armor": "下界合金紫水晶马铠",
-      "enchantment.mut.lunge": "突进",
       "enchantment.mut.lunge.description": "戳刺攻击时将攻击者向前推进。",
       "block.mut.deep_iron_raw_block": "深层粗铁块",
       "item.mut.netherite_lapis_lazuli_ingot": "下界合金青金石锭",
@@ -15016,7 +16112,70 @@
       "config.mut.big_stomach": "大胃袋系数",
       "config.mut.big_stomach.tooltip": "每级自然恢复加成",
       "config.mut.energy_conversion": "能量转化系数",
-      "config.mut.energy_conversion.tooltip": "每级耐久恢复加成"
+      "config.mut.energy_conversion.tooltip": "每级耐久恢复加成",
+      "config.mut.category.mark": "印记类词缀",
+      "config.mut.category.buff": "增幅类词缀",
+      "config.mut.category.limit": "最大等级限制",
+      "config.mut.category.crossbow": "弩类配置",
+      "advancements.flame_gold_ore_get.descr": "使用精准采集获得赤焰金矿。",
+      "advancements.flame_gold_ore_get.title": "灼烧之赤焰",
+      "advancements.metal_poison_ore_get.descr": "挖掘并获得一块金属毒矿。",
+      "advancements.metal_poison_ore_get.title": "毒之蕴藏",
+      "advancements.flame_gold_template.descr": "获得熔岩锻造模板",
+      "advancements.flame_gold_template.title": "赤焰金升级",
+      "advancements.flame_gold_suit.descr": "获得赤焰金全套套装。",
+      "advancements.flame_gold_suit.title": "烈阳裹身！",
+      "advancements.poison_template.title": "毒钢升级",
+      "advancements.poison_template.descr": "获得剧毒锻造模板。",
+      "advancements.poison_steel_suit.descr": "获得毒钢套装。",
+      "advancements.poison_steel_suit.title": "毒钢装甲",
+      "block.mut.sigil_forge_glass": "符锻草方块",
+      "block.mut.sigil_forge_sand": "符锻沙子",
+      "block.mut.sigil_forge_dirt": "符锻韧土",
+      "block.mut.iron_flower": "铁岸花",
+      "block.mut.blue_diamond_rose": "蓝钻玫瑰",
+      "block.mut.blue_diamond_rosebush": "蓝钻玫瑰丛",
+      "block.mut.gilded_marigold_flower": "鎏金三角花",
+      "block.mut.sigil_forge_sandstone": "符锻砂岩",
+      "block.mut.sigil_forge_sandstone_stairs": "符锻砂岩楼梯",
+      "block.mut.sigil_forge_sandstone_slab": "符锻砂岩台阶",
+      "block.mut.sigil_forge_sandstone_wall": "符锻砂岩墙",
+      "block.mut.sigil_forge_cut_sandstone": "切制符锻砂岩",
+      "block.mut.sigil_forge_cut_sandstone_stairs": "切制符锻砂岩楼梯",
+      "block.mut.sigil_forge_cut_sandstone_slab": "切制符锻砂岩台阶",
+      "block.mut.sigil_forge_cut_sandstone_wall": "切制符锻砂岩墙",
+      "block.mut.sigil_forge_chiseled_sandstone": "雕纹符锻砂岩",
+      "block.mut.sigil_forge_chiseled_sandstone_stairs": "雕纹符锻砂岩楼梯",
+      "block.mut.sigil_forge_chiseled_sandstone_slab": "雕纹符锻砂岩台阶",
+      "block.mut.sigil_forge_chiseled_sandstone_wall": "雕纹符锻砂岩墙",
+      "block.mut.diamond_lamp": "钻石灯",
+      "block.mut.white_diamond_lamp": "白色钻石灯",
+      "block.mut.light_gray_diamond_lamp": "淡灰色钻石灯",
+      "block.mut.gray_diamond_lamp": "灰色钻石灯",
+      "block.mut.black_diamond_lamp": "黑色钻石灯",
+      "block.mut.brown_diamond_lamp": "棕色钻石灯",
+      "block.mut.red_diamond_lamp": "红色钻石灯",
+      "block.mut.orange_diamond_lamp": "橙色钻石灯",
+      "block.mut.yellow_diamond_lamp": "黄色钻石灯",
+      "block.mut.lime_diamond_lamp": "黄绿色钻石灯",
+      "block.mut.green_diamond_lamp": "绿色钻石灯",
+      "block.mut.cyan_diamond_lamp": "青色钻石灯",
+      "block.mut.light_blue_diamond_lamp": "谈蓝色钻石灯",
+      "block.mut.blue_diamond_lamp": "蓝色钻石灯",
+      "block.mut.purple_diamond_lamp": "紫色钻石灯",
+      "block.mut.magenta_diamond_lamp": "品红色钻石灯",
+      "block.mut.pink_diamond_lamp": "粉红色钻石灯",
+      "block.mut.sigil_forge_smooth_sandstone": "平滑符锻砂岩",
+      "block.mut.sigil_forge_smooth_sandstone_stairs": "平滑符锻砂岩楼梯",
+      "block.mut.sigil_forge_smooth_sandstone_slab": "平滑符锻砂岩台阶",
+      "block.mut.sigil_forge_smooth_sandstone_wall": "平滑符锻砂岩墙",
+      "block.mut.emperor_debris_cactus": "皇骸仙人掌",
+      "block.mut.debris_sigil_magma_block": "岩骸块",
+      "item.mut.debris_apple": "残骸果",
+      "item.mut.steel_debris_apple": "钢残骸果",
+      "item.mut.golden_debris_apple": "金骸果",
+      "item.mut.diamond_debris_apple": "钻骸果",
+      "item.mut.ancient_debris_apple": "远古残骸果"
     }
   },
   "metadata": {
@@ -15032,7 +16191,6 @@
       "src/main/java/net/mcreator/mut/init/MutModVillagerProfessions.java",
       "src/main/java/net/mcreator/mut/init/MutModFuels.java",
       "src/main/java/net/mcreator/mut/init/MutModMobEffects.java",
-      "src/main/resources/data/neoforge/data_maps/entity_type/monster_room_mobs.json",
       "src/main/java/net/mcreator/mut/init/MutModBlocks.java",
       "src/main/java/net/mcreator/mut/init/MutModBlockEntities.java",
       "src/main/java/net/mcreator/mut/init/MutModItems.java",
@@ -15265,7 +16423,12 @@
       },
       {
         "name": "Achievement",
-        "children": []
+        "children": [
+          {
+            "name": "New Dimension",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Process Event",
@@ -15342,6 +16505,22 @@
           },
           {
             "name": "Feature",
+            "children": []
+          },
+          {
+            "name": "Structure",
+            "children": []
+          },
+          {
+            "name": "OtherBlocks",
+            "children": []
+          },
+          {
+            "name": "Plants",
+            "children": []
+          },
+          {
+            "name": "Sand",
             "children": []
           }
         ]

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "mut:camping_site",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 11,
+    "separation": 7,
+    "salt": 1523259336
+  }
+}

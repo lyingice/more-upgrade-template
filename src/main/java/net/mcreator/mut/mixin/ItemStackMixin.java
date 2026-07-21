@@ -1,6 +1,6 @@
 package net.mcreator.mut.mixin;
 
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;

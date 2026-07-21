@@ -2,9 +2,10 @@ package net.mcreator.mut.mixin;
 
 import it.unimi.dsi.fastutil.objects.Object2LongMap;
 import it.unimi.dsi.fastutil.objects.Object2LongOpenHashMap;
-import net.mcreator.mut.client.animation.SpearAnimations;
-import net.mcreator.mut.item.SpearItem;
 import net.mcreator.mut.util.MutSpearCooldownAccessor;
+import net.minecraft.spearcore.client.animation.SpearAnimations;
+import net.minecraft.spearcore.item.SpearItem;
+import net.minecraft.spearcore.util.SpearCooldownAccessor;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -20,6 +21,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
+@Deprecated
 public abstract class LivingEntitySpearMixin extends Entity implements MutSpearCooldownAccessor {
 
     @Unique

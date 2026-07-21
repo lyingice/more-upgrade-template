@@ -1,8 +1,8 @@
 package net.mcreator.mut.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.mcreator.mut.client.SpearClientExtensions;
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.client.SpearClientExtensions;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.renderer.ItemInHandRenderer;

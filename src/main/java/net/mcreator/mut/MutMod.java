@@ -34,6 +34,7 @@ import net.mcreator.mut.event.EnergyConversionHandler;
 import net.mcreator.mut.event.AffixEventHandler;
 import net.mcreator.mut.config.MutCrossbowLoadCountConfig;
 import net.mcreator.mut.config.AffixConfig;
+import net.mcreator.mut.compat.spearcore.SpearcoreIntegration;
 import net.mcreator.mut.command.AddAffixCommand;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -53,6 +54,7 @@ public class MutMod {
 
 	public MutMod(IEventBus modEventBus) {
 		// Start of user code block mod constructor
+		SpearcoreIntegration.bootstrap(modEventBus);
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);

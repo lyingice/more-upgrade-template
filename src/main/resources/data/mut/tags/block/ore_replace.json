@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "mut:debris_stone",
+    "mut:debris_cobblestone"
+  ]
+}

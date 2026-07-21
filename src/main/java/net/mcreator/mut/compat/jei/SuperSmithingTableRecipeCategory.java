@@ -58,10 +58,6 @@ public class SuperSmithingTableRecipeCategory extends AbstractRecipeCategory<Sup
         this.slotDrawable = guiHelper.getSlotDrawable();
     }
 
-    @Override
-    public IDrawable getBackground() {
-        return background;
-    }
 
     @Override
     public void draw(SuperSmithingTableRecipe recipe, IRecipeSlotsView recipeSlotsView,

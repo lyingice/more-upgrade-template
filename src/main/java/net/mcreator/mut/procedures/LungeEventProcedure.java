@@ -33,15 +33,13 @@ import net.mcreator.mut.MutMod;
 
 import javax.annotation.Nullable;
 
-@EventBusSubscriber(Dist.CLIENT)
+@Deprecated
 public class LungeEventProcedure {
-	@SubscribeEvent
 	public static void onLeftClick(PlayerInteractEvent.LeftClickEmpty event) {
 		PacketDistributor.sendToServer(new LungeEventMessage());
 		execute(event.getLevel(), event.getEntity());
 	}
 
-	@EventBusSubscriber
 	public record LungeEventMessage() implements CustomPacketPayload {
 		public static final Type<LungeEventMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(MutMod.MODID, "procedure_lunge_event"));
 		public static final StreamCodec<RegistryFriendlyByteBuf, LungeEventMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, LungeEventMessage message) -> {
@@ -65,7 +63,6 @@ public class LungeEventProcedure {
 			}
 		}
 
-		@SubscribeEvent
 		public static void registerMessage(FMLCommonSetupEvent event) {
 			MutMod.addNetworkMessage(LungeEventMessage.TYPE, LungeEventMessage.STREAM_CODEC, LungeEventMessage::handleData);
 		}

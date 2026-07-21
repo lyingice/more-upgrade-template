@@ -1,13 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mut:wooden_spear",
-    "mut:stone_spear",
-    "mut:copper_spear",
-    "mut:iron_spear",
-    "mut:golden_spear",
-    "mut:diamond_spear",
-    "mut:netherite_spear",
     "mut:advanced_steel_spear",
     "mut:amethyst_spear",
     "mut:blue_diamond_spear",

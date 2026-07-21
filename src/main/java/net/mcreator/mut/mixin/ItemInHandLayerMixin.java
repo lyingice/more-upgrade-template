@@ -2,8 +2,8 @@ package net.mcreator.mut.mixin;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
-import net.mcreator.mut.client.animation.SpearAnimations;
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.client.animation.SpearAnimations;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ArmedModel;
 import net.minecraft.client.model.EntityModel;

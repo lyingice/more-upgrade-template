@@ -51,6 +51,7 @@ public class MutModTabs {
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_EXTRA_ITEMS = REGISTRY.register("more_upgrade_template_extra_items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_extra_items")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_INGOT.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(MutModItems.REFINED_IRON_POWDER.get());
+				tabData.accept(MutModItems.HIGH_CARBON_COMPOUNDS.get());
 				tabData.accept(MutModItems.FLAME_GOLD_NUGGET.get());
 				tabData.accept(MutModItems.METAL_POSITION_NUGGET.get());
 				tabData.accept(MutModItems.HETEROCHROMATIC_AMETHYST_SHARD.get());
@@ -76,7 +77,6 @@ public class MutModTabs {
 				tabData.accept(MutModItems.NETHERITE_LAPIS_LAZULI_INGOT.get());
 				tabData.accept(MutModItems.ECHOITE_INGOT.get());
 				tabData.accept(MutModItems.DRAGON_SCALE_CLUSTER.get());
-				tabData.accept(MutModItems.HIGH_CARBON_COMPOUNDS.get());
 				tabData.accept(MutModItems.BOSS_TRIAL_KEY.get());
 				tabData.accept(MutModItems.SIGIL_FORGE_BOSS_KEY.get());
 				tabData.accept(MutModItems.COPPER_BEEF.get());
@@ -92,6 +92,11 @@ public class MutModTabs {
 				tabData.accept(MutModItems.NETHERITE_REDSTONE_BEEF.get());
 				tabData.accept(MutModItems.WITHER_BEEF.get());
 				tabData.accept(MutModBlocks.DEBRIS_SAPLING.get().asItem());
+				tabData.accept(MutModItems.DEBRIS_APPLE.get());
+				tabData.accept(MutModItems.STEEL_DEBRIS_APPLE.get());
+				tabData.accept(MutModItems.GOLDEN_DEBRIS_APPLE.get());
+				tabData.accept(MutModItems.DIAMOND_DEBRIS_APPLE.get());
+				tabData.accept(MutModItems.ANCIENT_DEBRIS_APPLE.get());
 			}).withTabsBefore(MORE_UPGRADE_TMPLATES.getId()).build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MORE_UPGRADE_TEMPLATE_TOOLS = REGISTRY.register("more_upgrade_template_tools",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_tools")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_PICKAXE.get())).displayItems((parameters, tabData) -> {
@@ -350,6 +355,8 @@ public class MutModTabs {
 				tabData.accept(MutModBlocks.GILDING_DEBRIS.get().asItem());
 				tabData.accept(MutModBlocks.BLUE_DIAMOND_DEBRIS.get().asItem());
 				tabData.accept(MutModBlocks.NETHER_DEEP_IRON_ORE_BLOCK.get().asItem());
+				tabData.accept(MutModBlocks.FLAME_GOLD_ORE.get().asItem());
+				tabData.accept(MutModBlocks.METAL_POISONOUS_ORE.get().asItem());
 				tabData.accept(MutModBlocks.STEEL_BLOCK.get().asItem());
 				tabData.accept(MutModBlocks.GILDING_BLOCK.get().asItem());
 				tabData.accept(MutModBlocks.BLUE_DIAMOND_BLOCK.get().asItem());
@@ -394,6 +401,7 @@ public class MutModTabs {
 				tabData.accept(MutModBlocks.DEBRIS_STONE_BRICKS_SIGN.get().asItem());
 				tabData.accept(MutModBlocks.DEBRIS_STONE_BRICKS_HANGING_SIGN.get().asItem());
 				tabData.accept(MutModBlocks.LOG_DEBRIS.get().asItem());
+				tabData.accept(MutModBlocks.DEBRIS_LEAVES.get().asItem());
 				tabData.accept(MutModBlocks.DEBRIS_PLANKS.get().asItem());
 				tabData.accept(MutModBlocks.DEBRIS_PLANKS_STAIRS.get().asItem());
 				tabData.accept(MutModBlocks.DEBRIS_PLANKS_SLAB.get().asItem());
@@ -405,8 +413,22 @@ public class MutModTabs {
 				tabData.accept(MutModBlocks.DEBRIS_PLANKS_DOOR.get().asItem());
 				tabData.accept(MutModBlocks.DEBRIS_PLANKS_SIGN.get().asItem());
 				tabData.accept(MutModBlocks.DEBRIS_PLANKS_HANGING_SIGN.get().asItem());
-				tabData.accept(MutModBlocks.FLAME_GOLD_ORE.get().asItem());
-				tabData.accept(MutModBlocks.METAL_POISONOUS_ORE.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SANDSTONE.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SANDSTONE_STAIRS.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SANDSTONE_SLAB.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SANDSTONE_WALL.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_CUT_SANDSTONE.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_CUT_SANDSTONE_STAIRS.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_CUT_SANDSTONE_SLAB.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_CUT_SANDSTONE_WALL.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_CHISELED_SANDSTONE.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_CHISELED_SANDSTONE_STAIRS.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_CHISELED_SANDSTONE_SLAB.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_CHISELED_SANDSTONE_WALL.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SMOOTH_SANDSTONE.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SMOOTH_SANDSTONE_STAIRS.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SMOOTH_SANDSTONE_SLAB.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SMOOTH_SANDSTONE_WALL.get().asItem());
 				tabData.accept(MutModBlocks.SIGIL_FORGE_VAULT_COMMON.get().asItem());
 				tabData.accept(MutModBlocks.SIGIL_FORGE_VAULT_UNIQUE.get().asItem());
 				tabData.accept(MutModBlocks.SIGIL_FORGE_VAULT_BOSS.get().asItem());
@@ -417,7 +439,32 @@ public class MutModTabs {
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_3.get().asItem());
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_2.get().asItem());
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_1.get().asItem());
-				tabData.accept(MutModBlocks.DEBRIS_LEAVES.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_GLASS.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_SAND.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_DIRT.get().asItem());
+				tabData.accept(MutModBlocks.EMPEROR_DEBRIS_CACTUS.get().asItem());
+				tabData.accept(MutModBlocks.DEBRIS_SIGIL_MAGMA_BLOCK.get().asItem());
+				tabData.accept(MutModBlocks.IRON_FLOWER.get().asItem());
+				tabData.accept(MutModBlocks.BLUE_DIAMOND_ROSE.get().asItem());
+				tabData.accept(MutModBlocks.BLUE_DIAMOND_ROSEBUSH.get().asItem());
+				tabData.accept(MutModBlocks.GILDED_MARIGOLD_FLOWER.get().asItem());
+				tabData.accept(MutModBlocks.DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.WHITE_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.LIGHT_GRAY_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.GRAY_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.BLACK_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.BROWN_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.RED_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.ORANGE_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.YELLOW_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.LIME_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.GREEN_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.CYAN_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.LIGHT_BLUE_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.BLUE_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.PURPLE_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.MAGENTA_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModBlocks.PINK_DIAMOND_LAMP.get().asItem());
 			}).withTabsBefore(MORE_UPGRADE_TEMPLATE_COMBAT_ITEMS.getId()).build());
 
 	@SubscribeEvent

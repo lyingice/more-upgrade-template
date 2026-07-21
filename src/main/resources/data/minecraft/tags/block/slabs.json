@@ -1,9 +1,13 @@
 {
   "replace": false,
   "values": [
+    "mut:sigil_forge_smooth_sandstone_slab",
     "mut:debris_stone_slab",
     "mut:debris_cobblestone_slab",
+    "mut:sigil_forge_cut_sandstone_slab",
     "mut:debris_planks_slab",
-    "mut:debris_stone_bricks_slab"
+    "mut:debris_stone_bricks_slab",
+    "mut:sigil_forge_sandstone_slab",
+    "mut:sigil_forge_chiseled_sandstone_slab"
   ]
 }

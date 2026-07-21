@@ -1,8 +1,8 @@
 package net.mcreator.mut.client;
 
 import net.mcreator.mut.MutMod;
-import net.mcreator.mut.client.animation.SpearAnimations;
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.client.animation.SpearAnimations;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
@@ -11,6 +11,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 
 @EventBusSubscriber(modid = MutMod.MODID, value = Dist.CLIENT)
+@Deprecated
 public class SpearChargeHandler {
 
     @SubscribeEvent

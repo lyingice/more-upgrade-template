@@ -1,7 +1,7 @@
 package net.mcreator.mut.mixin;
 
 import net.mcreator.mut.affix.PiercingSpearHelper;
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.damagesource.DamageSource;
@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(net.minecraft.world.entity.LivingEntity.class)
+@Deprecated
 public class PiercingSpearMixin {
 
     @ModifyVariable(

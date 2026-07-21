@@ -11,7 +11,9 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 @EventBusSubscriber(modid = "mut", value = Dist.CLIENT)
 public class MutCreativeTab {
@@ -40,13 +42,13 @@ public class MutCreativeTab {
         if (event.getTabKey() == CombatTab) { //原版战斗物品
             event.insertAfter(new ItemStack(Items.STONE_SWORD), MutModItems.COPPER_SWORD.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(new ItemStack(Items.STONE_AXE), MutModItems.COPPER_AXE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertAfter(new ItemStack(Items.NETHERITE_SWORD),MutModItems.NETHERITE_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertAfter(new ItemStack(Items.NETHERITE_SWORD),MutModItems.DIAMOND_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertAfter(new ItemStack(Items.NETHERITE_SWORD),MutModItems.GOLDEN_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertAfter(new ItemStack(Items.NETHERITE_SWORD),MutModItems.IRON_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertAfter(new ItemStack(Items.NETHERITE_SWORD),MutModItems.COPPER_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertAfter(new ItemStack(Items.NETHERITE_SWORD),MutModItems.STONE_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertAfter(new ItemStack(Items.NETHERITE_SWORD),MutModItems.WOODEN_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            /*insertSpearAfter(event, new ItemStack(Items.NETHERITE_SWORD), MutModItems.NETHERITE_SPEAR);
+            insertSpearAfter(event, new ItemStack(Items.NETHERITE_SWORD), MutModItems.DIAMOND_SPEAR);
+            insertSpearAfter(event, new ItemStack(Items.NETHERITE_SWORD), MutModItems.GOLDEN_SPEAR);
+            insertSpearAfter(event, new ItemStack(Items.NETHERITE_SWORD), MutModItems.IRON_SPEAR);
+            insertSpearAfter(event, new ItemStack(Items.NETHERITE_SWORD), MutModItems.COPPER_SPEAR);
+            insertSpearAfter(event, new ItemStack(Items.NETHERITE_SWORD), MutModItems.STONE_SPEAR);
+            insertSpearAfter(event, new ItemStack(Items.NETHERITE_SWORD), MutModItems.WOODEN_SPEAR);*/
             event.insertBefore(new ItemStack(Items.IRON_HORSE_ARMOR),MutModItems.COPPER_HORSE_ARMOR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(new ItemStack(Items.DIAMOND_HORSE_ARMOR),MutModItems.NETHERITE_HORSE_ARMOR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(new ItemStack(Items.WOLF_ARMOR),MutModItems.NETHERITE_WOLF_ARMOR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -212,30 +214,30 @@ public class MutCreativeTab {
             event.insertAfter(MutModItems.NETHERITE_HORSE_ARMOR.get().getDefaultInstance(), MutModItems.ADVANCED_STEEL_HORSE_ARMOR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(MutModItems.NETHERITE_HORSE_ARMOR.get().getDefaultInstance(), MutModItems.STEEL_HORSE_ARMOR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.COPPER_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_COPPER_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.STEEL_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.ADVANCED_STEEL_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.GILDING_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.BLUE_DIAMOND_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.OBSIDIAN_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_OBSIDIAN_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.CRYING_OBSIDIAN_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.EMERALD_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_EMERALD_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_REDSTONE_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHER_STAR_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.WITHER_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.DRAGON_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.AMETHYST_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_AMETHYST_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.LAPIS_LAZULI_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_LAPIS_LAZULI_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.ECHOITE_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.POISON_STEEL_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.FLAME_GOLD_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.THUNDER_COPPER_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
-            event.insertBefore(new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.UNCANNY_AMETHYST_SPEAR.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            //insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.COPPER_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_COPPER_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.STEEL_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.ADVANCED_STEEL_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.GILDING_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.BLUE_DIAMOND_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.OBSIDIAN_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_OBSIDIAN_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.CRYING_OBSIDIAN_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.EMERALD_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_EMERALD_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_REDSTONE_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHER_STAR_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.WITHER_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.DRAGON_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.AMETHYST_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_AMETHYST_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.LAPIS_LAZULI_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.NETHERITE_LAPIS_LAZULI_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.ECHOITE_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.POISON_STEEL_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.FLAME_GOLD_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.THUNDER_COPPER_SPEAR);
+            insertSpearBefore(event, new ItemStack(MutModItems.COPPER_AXE.get()), MutModItems.UNCANNY_AMETHYST_SPEAR);
 
             event.insertAfter(new ItemStack(MutModItems.ADVANCED_STEEL_MACE.get()), MutModItems.OBSIDIAN_MACE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertAfter(new ItemStack(MutModItems.OBSIDIAN_MACE.get()), MutModItems.NETHERITE_OBSIDIAN_MACE.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -303,6 +305,17 @@ public class MutCreativeTab {
             event.insertAfter(MutModItems.UNCANNY_AMETHYST_LEGGINGS.get().getDefaultInstance(), MutModItems.UNCANNY_AMETHYST_BOOTS.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
 
             //event.insertAfter(MutModItems.X.get().getDefaultInstance(), MutModItems.X.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+    }
+    private static void insertSpearAfter(BuildCreativeModeTabContentsEvent event, ItemStack after, DeferredItem<Item> spear) {
+        if (spear != null) {
+            event.insertAfter(after, spear.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+    }
+
+    private static void insertSpearBefore(BuildCreativeModeTabContentsEvent event, ItemStack before, DeferredItem<Item> spear) {
+        if (spear != null) {
+            event.insertBefore(before, spear.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 }

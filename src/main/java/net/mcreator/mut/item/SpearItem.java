@@ -4,8 +4,9 @@ import net.mcreator.mut.MutMod;
 import net.mcreator.mut.init.MutModSounds;
 import net.mcreator.mut.util.MutKnownMovementAccessor;
 import net.mcreator.mut.util.MutSpearCooldownAccessor;
-import net.mcreator.mut.util.SpearCollision;
-import net.mcreator.mut.util.SpearCondition;
+import net.minecraft.spearcore.util.SpearCooldownAccessor;
+import net.minecraft.spearcore.util.SpearCollision;
+import net.minecraft.spearcore.util.SpearCondition;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -40,8 +41,8 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import java.util.List;
 import java.util.Optional;
 
-import static net.mcreator.mut.client.SpearAttackHandler.causeKnockback;
 
+@Deprecated
 public abstract class SpearItem extends Item {
 
     public SpearItem(Properties properties) {
@@ -143,7 +144,7 @@ public abstract class SpearItem extends Item {
 
     // ========== 蓄力 tick ==========
 
-    @Override
+    /*@Override
     public void onUseTick(Level level, LivingEntity user, ItemStack stack, int remainingTicks) {
 
         if (level.isClientSide) return;
@@ -172,7 +173,7 @@ public abstract class SpearItem extends Item {
         boolean hitSomething = false;
 
         List<EntityHitResult> hits = SpearCollision.getHitEntitiesAlong(
-                player, this, getHitboxMargin(),
+                player,player, getHitboxMargin(),
                 entity -> entity instanceof LivingEntity
                         && entity.isAlive()
                         && entity != player
@@ -228,7 +229,7 @@ public abstract class SpearItem extends Item {
             player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
                     getHitSound(), SoundSource.PLAYERS, 1.0F, 1.0F);
         }
-    }
+    }*/
 
     // ========== 击退 ==========
 

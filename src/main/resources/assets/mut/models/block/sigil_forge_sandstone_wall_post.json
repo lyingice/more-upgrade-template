@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_wall_post",
+  "textures": {
+    "wall": "mut:block/sigil_forge_sandstone_side",
+    "particle": "mut:block/sigil_forge_sandstone_side"
+  },
+  "render_type": "solid"
+}

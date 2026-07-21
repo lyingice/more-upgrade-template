@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "mut:block/blue_diamond_rosebush"
+    },
+    "half=lower": {
+      "model": "mut:block/blue_diamond_rosebush_bottom"
+    }
+  }
+}

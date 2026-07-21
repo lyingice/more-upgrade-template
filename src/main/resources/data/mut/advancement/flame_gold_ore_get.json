@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "mut:flame_gold_ore"
+    },
+    "title": {
+      "translate": "advancements.flame_gold_ore_get.title"
+    },
+    "description": {
+      "translate": "advancements.flame_gold_ore_get.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "flame_gold_ore_get_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:flame_gold_ore",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "mut:sigil_forge_join"
+}

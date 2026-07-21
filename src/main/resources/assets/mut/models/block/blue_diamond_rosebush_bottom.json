@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "mut:block/blue_diamond_rose_2",
+    "particle": "mut:block/blue_diamond_rose_1"
+  },
+  "render_type": "cutout"
+}

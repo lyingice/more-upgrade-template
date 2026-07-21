@@ -1,0 +1,10 @@
+{
+  "parent": "block/cactus",
+  "textures": {
+    "bottom": "mut:block/emperor_debris_cactus_button",
+    "top": "mut:block/emperor_debris_cactus_top",
+    "side": "mut:block/emperor_debris_cactus_side",
+    "particle": "mut:block/emperor_debris_cactus_side"
+  },
+  "render_type": "cutout"
+}

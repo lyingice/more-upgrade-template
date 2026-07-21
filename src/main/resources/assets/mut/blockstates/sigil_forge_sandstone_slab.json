@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "mut:block/sigil_forge_sandstone_slab"
+    },
+    "type=top": {
+      "model": "mut:block/sigil_forge_sandstone_slab_top"
+    },
+    "type=double": {
+      "model": "mut:block/sigil_forge_sandstone_slab_full"
+    }
+  }
+}

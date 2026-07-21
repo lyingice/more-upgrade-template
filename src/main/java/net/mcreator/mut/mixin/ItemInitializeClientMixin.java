@@ -1,7 +1,7 @@
 package net.mcreator.mut.mixin;
 
-import net.mcreator.mut.client.SpearClientExtensions;
-import net.mcreator.mut.item.SpearItem;
+import net.minecraft.spearcore.client.SpearClientExtensions;
+import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.client.extensions.common.IClientItemExtensions;
 import org.spongepowered.asm.mixin.Mixin;

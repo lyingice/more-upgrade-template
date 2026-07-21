@@ -73,4 +73,10 @@ versionRange="[15,)"
 ordering="NONE"
 side="CLIENT"
 
+[[dependencies.mut]]
+modId="spearcore"
+type="optional"
+versionRange="[2.0.0,)"
+ordering="NONE"
+
 # End of user code block dependencies configuration

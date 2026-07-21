@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "mut:magma_upgrade_smithing_template"
+    },
+    "title": {
+      "translate": "advancements.flame_gold_template.title"
+    },
+    "description": {
+      "translate": "advancements.flame_gold_template.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "flame_gold_template_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "mut:magma_upgrade_smithing_template",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "mut:flame_gold_ore_get"
+}

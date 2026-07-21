@@ -1,0 +1,10 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "particle": "mut:block/sigil_forge_sandstone_top",
+    "bottom": "mut:block/sigil_forge_sandstone_top",
+    "top": "mut:block/sigil_forge_sandstone_top",
+    "side": "mut:block/sigil_forge_chiseled_sandstone"
+  },
+  "render_type": "solid"
+}

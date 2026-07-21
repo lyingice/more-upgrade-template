@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "mut:block/iron_flower",
+    "particle": "mut:block/iron_flower"
+  },
+  "render_type": "cutout"
+}

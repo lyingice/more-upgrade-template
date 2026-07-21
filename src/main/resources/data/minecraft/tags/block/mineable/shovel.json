@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mut:sigil_forge_sand",
+    "mut:sigil_forge_glass",
+    "mut:sigil_forge_dirt"
+  ]
+}
