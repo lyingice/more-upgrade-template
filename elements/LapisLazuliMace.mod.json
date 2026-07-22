@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.LAPIS_BLOCK"
+      },
+      {
+        "value": "Blocks.LAPIS_BLOCK"
+      },
+      {
+        "value": "Blocks.LAPIS_BLOCK"
+      },
+      {
+        "value": "Blocks.LAPIS_BLOCK"
+      },
+      {
+        "value": "CUSTOM:WoodenMace"
+      },
+      {
+        "value": "Blocks.LAPIS_BLOCK"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.STICK"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:IronMace"
+    },
+    "name": "lapis_lazuli_mace",
+    "namespace": "mod"
+  }
+}

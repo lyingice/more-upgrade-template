@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "CUSTOM:GoldenWolfArmor"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:DiamondWolfArmor"
+    },
+    "name": "diamond_wolf_armor_recipe",
+    "namespace": "mod"
+  }
+}

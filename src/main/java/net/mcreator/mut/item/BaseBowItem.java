@@ -215,34 +215,78 @@ public abstract class BaseBowItem extends BowItem {
     public static class EmeraldBowItem extends BaseBowItem {
         public EmeraldBowItem() { super(MutBowStats.EMERALD_BOW); }
     }
+
+    // 青金石弓
     public static class LapisLazuliBowItem extends BaseBowItem {
-        public LapisLazuliBowItem() { super(MutBowStats.LAPIS_LAZULI_BOW,new Properties()); }}
-    public static class NetheriteLapisLazuliBowItem extends BaseBowItem {
-        public NetheriteLapisLazuliBowItem() { super(MutBowStats.NETHERITE_LAPIS_LAZULI_BOW,new Properties()); }}
-    public static class PoisonSteelBowItem extends BaseBowItem {
-        public PoisonSteelBowItem() { super(MutBowStats.POISON_STEEL_BOW,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).rarity(Rarity.UNCOMMON)); }private static CustomData createAffixData() {
-            CompoundTag tag = new CompoundTag();
-            tag.putString("Affix", "poison_mark"
-            );
-            tag.putInt("AffixLevel", 3);
-            return CustomData.of(tag);}
+        public LapisLazuliBowItem() {
+            super(MutBowStats.LAPIS_LAZULI_BOW);
+        }
     }
+
+    // 下界合金青金石弓
+    public static class NetheriteLapisLazuliBowItem extends BaseBowItem {
+        public NetheriteLapisLazuliBowItem() {
+            super(MutBowStats.NETHERITE_LAPIS_LAZULI_BOW);
+        }
+    }
+
+    // 毒钢弓（需要附加词条数据）
+    public static class PoisonSteelBowItem extends BaseBowItem {
+        public PoisonSteelBowItem() {
+            super(MutBowStats.POISON_STEEL_BOW,
+                    createPropertiesWithAffix(MutBowStats.POISON_STEEL_BOW, createAffixData()));
+        }
+
+        private static CustomData createAffixData() {
+            CompoundTag tag = new CompoundTag();
+            tag.putString("Affix", "poison_mark");
+            tag.putInt("AffixLevel", 3);
+            return CustomData.of(tag);
+        }
+    }
+
+    // 火焰金弓
     public static class FlameGoldBowItem extends BaseBowItem {
-        public FlameGoldBowItem() { super(MutBowStats.FLAME_GOLD_BOW,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).rarity(Rarity.UNCOMMON)); }private static CustomData createAffixData() {
+        public FlameGoldBowItem() {
+            super(MutBowStats.FLAME_GOLD_BOW,
+                    createPropertiesWithAffix(MutBowStats.FLAME_GOLD_BOW, createAffixData()));
+        }
+
+        private static CustomData createAffixData() {
             CompoundTag tag = new CompoundTag();
             tag.putString("Affix", "fire_mark");
             tag.putInt("AffixLevel", 3);
-            return CustomData.of(tag);}}
+            return CustomData.of(tag);
+        }
+    }
+
+    // 回响弓
     public static class EchoiteBowItem extends BaseBowItem {
-        public EchoiteBowItem() { super(MutBowStats.ECHOITE_BOW,new Properties().rarity(Rarity.EPIC)); }}
+        public EchoiteBowItem() {
+            super(MutBowStats.ECHOITE_BOW);
+        }
+    }
+
+    // 雷霆铜弓
     public static class ThunderCopperBowItem extends BaseBowItem {
-        public ThunderCopperBowItem() { super(MutBowStats.THUNDER_COPPER_BOW,new Properties().rarity(Rarity.UNCOMMON)); }}
+        public ThunderCopperBowItem() {
+            super(MutBowStats.THUNDER_COPPER_BOW);
+        }
+    }
+
+    // 奇异紫水晶弓
     public static class UncannyAmethystBowItem extends BaseBowItem {
-        public UncannyAmethystBowItem() { super(MutBowStats.UNCANNY_AMETHYST_BOW,new Properties().component(DataComponents.CUSTOM_DATA, createAffixData()).rarity(Rarity.UNCOMMON)); }private static CustomData createAffixData() {
+        public UncannyAmethystBowItem() {
+            super(MutBowStats.UNCANNY_AMETHYST_BOW,
+                    createPropertiesWithAffix(MutBowStats.UNCANNY_AMETHYST_BOW, createAffixData()));
+        }
+
+        private static CustomData createAffixData() {
             CompoundTag tag = new CompoundTag();
             tag.putString("Affix", "regeneration_mark");
             tag.putInt("AffixLevel", 3);
-            return CustomData.of(tag);}
+            return CustomData.of(tag);
+        }
     }
 
     //子类添加实例

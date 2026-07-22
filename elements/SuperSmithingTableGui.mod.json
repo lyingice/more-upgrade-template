@@ -1,0 +1,143 @@
+{
+  "_fv": 85,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": true,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 141,
+          "y": 71,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 168,
+          "y": 71,
+          "locked": true
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 195,
+          "y": 71,
+          "locked": true
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": true,
+          "x": 240,
+          "y": 71,
+          "locked": true
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "smithing_template_netherite_upgrade.png",
+          "use1Xscale": false,
+          "x": 141,
+          "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_super_smithing_upgrade",
+          "text": {
+            "fixedValue": "Super Smithing Upgrade"
+          },
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "hasShadow": false,
+          "x": 132,
+          "y": 44,
+          "locked": false
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "nether_star_empty.png",
+          "use1Xscale": false,
+          "x": 196,
+          "y": 72,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_add_random_affix_on_item",
+          "text": {
+            "fixedValue": "Add random affix on item."
+          },
+          "width": 24,
+          "height": 24,
+          "x": 237,
+          "y": 68,
+          "locked": false
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "amethyst_sword",
+    "customModelName": "shield:amethyst",
+    "blockingModelName": "shield_blocking:amethyst",
+    "guiTexture": "",
+    "name": "Emerald Shield",
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 16,
+    "damageVsEntity": 4.0,
+    "usageCount": 511,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Items.AMETHYST_SHARD"
+      }
+    ],
+    "immuneToFire": false,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "attributeModifiers": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

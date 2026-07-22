@@ -1,0 +1,7 @@
+{
+  "parent": "mut:block/debris_apple",
+  "textures": {
+    "0": "mut:block/ancient_debris_apple",
+    "particle": "mut:block/ancient_debris_apple"
+  }
+}

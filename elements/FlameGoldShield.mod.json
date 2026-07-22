@@ -1,0 +1,51 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "flame_gold_sword",
+    "customModelName": "shield:flame_gold",
+    "blockingModelName": "shield_blocking:flame_gold",
+    "guiTexture": "",
+    "name": "Flame Gold Shield",
+    "rarity": "UNCOMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 25,
+    "damageVsEntity": 4.0,
+    "usageCount": 1352,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:FlameGoldIngot"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "attributeModifiers": [
+      {
+        "equipmentSlot": "hand",
+        "attribute": {
+          "value": "KNOCKBACK_RESISTANCE"
+        },
+        "amount": 0.1,
+        "operation": "ADD_VALUE"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

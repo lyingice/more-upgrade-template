@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "mut:block/debris_apple"
+    },
+    "hanging=true": {
+      "model": "mut:block/debris_apple_hanging"
+    }
+  }
+}

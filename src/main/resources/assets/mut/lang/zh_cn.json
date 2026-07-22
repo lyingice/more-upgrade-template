@@ -1002,5 +1002,11 @@
   "item.mut.steel_debris_apple": "钢残骸果",
   "item.mut.golden_debris_apple": "金骸果",
   "item.mut.diamond_debris_apple": "钻骸果",
-  "item.mut.ancient_debris_apple": "远古残骸果"
+  "item.mut.ancient_debris_apple": "远古残骸果",
+  "block.mut.debris_apple": "残骸果",
+  "block.mut.steel_debris_apple": "钢残骸果",
+  "block.mut.golden_debris_apple": "金骸果",
+  "block.mut.diamond_debris_apple": "钻骸果",
+  "block.mut.ancient_debris_apple": "远古残骸果",
+  "block.mut.debris_stone_pointed_dripstone": "残骸石滴水石锥"
 }

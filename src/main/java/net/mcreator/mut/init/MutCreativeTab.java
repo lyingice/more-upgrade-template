@@ -37,6 +37,7 @@ public class MutCreativeTab {
         if (event.getTabKey() == blockTab) { //方块
             event.insertBefore(MutModItems.SIGIL_FORGE_BOSS_TRIAL_SPAWNER.get().getDefaultInstance(),MutModItems.SIGIL_FORGE_TRIAL_SPAWNER.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             event.insertBefore(MutModItems.SIGIL_FORGE_BOSS_TRIAL_SPAWNER.get().getDefaultInstance(),MutModItems.SIGIL_FORGE_UNIQUE_TRIAL_SPAWNER.get().getDefaultInstance(), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.accept(MutModItems.DEBRIS_STONE_POINTED_DRIPSTONE.get());
         }
 
         if (event.getTabKey() == CombatTab) { //原版战斗物品

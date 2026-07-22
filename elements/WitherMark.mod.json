@@ -1,0 +1,21 @@
+{
+  "_fv": 85,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Wither Mark",
+    "icon": "wither_mark",
+    "color": {
+      "value": -13421773,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": true,
+    "modifiers": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_fv": 85,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Poison Mark",
+    "icon": "poison_mark",
+    "color": {
+      "value": -16737997,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": true,
+    "modifiers": []
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "wither_sword",
+    "customModelName": "shield:wither",
+    "blockingModelName": "shield_blocking:wither",
+    "guiTexture": "",
+    "name": "Wither Shield",
+    "rarity": "EPIC",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 22,
+    "damageVsEntity": 4.0,
+    "usageCount": 1836,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Items.NETHER_STAR"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "attributeModifiers": [
+      {
+        "equipmentSlot": "hand",
+        "attribute": {
+          "value": "KNOCKBACK_RESISTANCE"
+        },
+        "amount": 0.1,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "equipmentSlot": "offhand",
+        "attribute": {
+          "value": "ATTACK_DAMAGE"
+        },
+        "amount": 3.0,
+        "operation": "ADD_VALUE"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

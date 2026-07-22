@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 7,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DebrisStoneBricks"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:DebrisStoneBricks"
+      },
+      {
+        "value": "CUSTOM:DebrisStoneBricks"
+      },
+      {
+        "value": "CUSTOM:DebrisStoneBricks"
+      },
+      {
+        "value": "CUSTOM:DebrisStoneBricks"
+      },
+      {
+        "value": "CUSTOM:DebrisStoneBricks"
+      },
+      {
+        "value": "CUSTOM:DebrisStoneBricks"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:DebrisStoneBricksWall"
+    },
+    "name": "debris_stone_bricks_wall_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Pickaxe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "nether_star_pickaxe",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "guiTexture": "",
+    "name": "Nether Star Pickaxe",
+    "rarity": "EPIC",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateTools"
+      }
+    ],
+    "efficiency": 14.0,
+    "attackSpeed": 1.2000000000000002,
+    "enchantability": 22,
+    "damageVsEntity": 9.0,
+    "usageCount": 3000,
+    "glowCondition": {
+      "fixedValue": true
+    },
+    "repairItems": [
+      {
+        "value": "Items.NETHER_STAR"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "attributeModifiers": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

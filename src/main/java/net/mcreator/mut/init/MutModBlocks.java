@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.client.renderer.Sheets;
 
+import net.mcreator.mut.block.MutBlock.Blocks.*;
 import net.mcreator.mut.block.*;
 import net.mcreator.mut.MutMod;
 
@@ -292,6 +293,12 @@ public class MutModBlocks {
 
 	public static final DeferredBlock<Block> SIGIL_FORGE_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_trial_spawner", SigilForgeTrialSpawnerBlock::new);
 	public static final DeferredBlock<Block> SIGIL_FORGE_UNIQUE_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_unique_trial_spawner", SigilForgeUniqueTrialSpawnerBlock::new);
+	public static final DeferredBlock<Block> DEBRIS_STONE_POINTED_DRIPSTONE = REGISTRY.register("debris_stone_pointed_dripstone", DebrisStonePointedDripstone::new);
+	public static final DeferredBlock<Block> DEBRIS_APPLE = REGISTRY.register("debris_apple", DebrisApple::new);
+	public static final DeferredBlock<Block> STEEL_DEBRIS_APPLE = REGISTRY.register("steel_debris_apple", SteelDebrisApple::new);
+	public static final DeferredBlock<Block> GOLDEN_DEBRIS_APPLE = REGISTRY.register("golden_debris_apple", GoldenDebrisApple::new);
+	public static final DeferredBlock<Block> DIAMOND_DEBRIS_APPLE = REGISTRY.register("diamond_debris_apple", DiamondDebrisApple::new);
+	public static final DeferredBlock<Block> ANCIENT_DEBRIS_APPLE = REGISTRY.register("ancient_debris_apple", AncientDebrisApple::new);
 
 	// End of user code block custom blocks
 	@EventBusSubscriber(Dist.CLIENT)

@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "CUSTOM:GoldenShield"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      },
+      {
+        "value": "Items.DIAMOND"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:DiamondShield"
+    },
+    "name": "golden_to_diamond_shield_recipe",
+    "namespace": "mod"
+  }
+}

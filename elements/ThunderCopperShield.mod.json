@@ -1,0 +1,59 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "thunder_copper_sword",
+    "customModelName": "shield:thunder_copper",
+    "blockingModelName": "shield_blocking:thunder_copper",
+    "guiTexture": "",
+    "name": "Thunder Copper Shield",
+    "rarity": "UNCOMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 1,
+    "damageVsEntity": 4.0,
+    "usageCount": 1352,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:ThunderCopperStar"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "attributeModifiers": [
+      {
+        "equipmentSlot": "hand",
+        "attribute": {
+          "value": "KNOCKBACK_RESISTANCE"
+        },
+        "amount": 0.1,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "equipmentSlot": "hand",
+        "attribute": {
+          "value": "CUSTOM:ThunderPower"
+        },
+        "amount": 20.0,
+        "operation": "ADD_VALUE"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

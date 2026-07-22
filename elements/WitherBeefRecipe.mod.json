@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:NetherStarBeef"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Blocks.SKULL#1"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:NetherStarUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:WitherBeef"
+    },
+    "name": "wither_beef_recipe",
+    "namespace": "mod"
+  }
+}

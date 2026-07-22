@@ -1,0 +1,8 @@
+{
+  "_fv": 85,
+  "_type": "lootmodifier",
+  "definition": {
+    "modifiedTable": "mut:chests/sigil_forge",
+    "modifierTable": "SigilForgeLoot01"
+  }
+}

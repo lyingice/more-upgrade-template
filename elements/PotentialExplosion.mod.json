@@ -1,0 +1,22 @@
+{
+  "_fv": 85,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Potential Explosion",
+    "supportedSlots": "any",
+    "weight": 5,
+    "anvilCost": 1,
+    "maxLevel": 2,
+    "damageModifier": 0,
+    "incompatibleEnchantments": [],
+    "supportedItems": [
+      {
+        "value": "TAG:minecraft:enchantable/food"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_fv": 85,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Multiload",
+    "supportedSlots": "any",
+    "weight": 5,
+    "anvilCost": 1,
+    "maxLevel": 3,
+    "damageModifier": 0,
+    "incompatibleEnchantments": [
+      {
+        "value": "MULTISHOT"
+      }
+    ],
+    "supportedItems": [
+      {
+        "value": "TAG:minecraft:enchantable/crossbow"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

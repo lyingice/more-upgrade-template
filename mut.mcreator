@@ -12004,7 +12004,7 @@
       "name": "SigilForgeGlass",
       "type": "block",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "sigil_forge_glass",
       "metadata": {
         "files": [
@@ -12038,7 +12038,7 @@
       "name": "SigilForgeDirt",
       "type": "block",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "sigil_forge_dirt",
       "metadata": {
         "files": [
@@ -12747,7 +12747,7 @@
       "name": "DebrisApple",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "debris_apple",
       "metadata": {
         "files": [
@@ -12761,7 +12761,7 @@
       "name": "SteelDebrisApple",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "steel_debris_apple",
       "metadata": {
         "files": [
@@ -12775,7 +12775,7 @@
       "name": "GoldenDebrisApple",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "golden_debris_apple",
       "metadata": {
         "files": [
@@ -12789,7 +12789,7 @@
       "name": "DiamondDebrisApple",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "diamond_debris_apple",
       "metadata": {
         "files": [
@@ -12803,7 +12803,7 @@
       "name": "AncientDebrisApple",
       "type": "item",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "ancient_debris_apple",
       "metadata": {
         "files": [
@@ -15169,7 +15169,13 @@
       "item.mut.steel_debris_apple": "Steel Debris Apple",
       "item.mut.golden_debris_apple": "Golden Debris Apple",
       "item.mut.diamond_debris_apple": "Diamond Debris Apple",
-      "item.mut.ancient_debris_apple": "Debris Apple"
+      "item.mut.ancient_debris_apple": "Ancient Debris Apple",
+      "block.mut.debris_apple": "Debris Apple",
+      "block.mut.steel_debris_apple": "Steel Debris Apple",
+      "block.mut.golden_debris_apple": "Golden Debris Apple",
+      "block.mut.diamond_debris_apple": "Diamond Debris Apple",
+      "block.mut.ancient_debris_apple": "Ancient Debris Apple",
+      "block.mut.debris_stone_pointed_dripstone": "Debris Stone Pointed Dripstone"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -16175,7 +16181,13 @@
       "item.mut.steel_debris_apple": "钢残骸果",
       "item.mut.golden_debris_apple": "金骸果",
       "item.mut.diamond_debris_apple": "钻骸果",
-      "item.mut.ancient_debris_apple": "远古残骸果"
+      "item.mut.ancient_debris_apple": "远古残骸果",
+      "block.mut.debris_apple": "残骸果",
+      "block.mut.steel_debris_apple": "钢残骸果",
+      "block.mut.golden_debris_apple": "金骸果",
+      "block.mut.diamond_debris_apple": "钻骸果",
+      "block.mut.ancient_debris_apple": "远古残骸果",
+      "block.mut.debris_stone_pointed_dripstone": "残骸石滴水石锥"
     }
   },
   "metadata": {

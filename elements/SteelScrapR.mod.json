@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:RefinedIronPowder"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 5.0,
+    "cookingTime": 600,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:RefinedIronPowder"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:SteelScrap"
+    },
+    "name": "steel_scrap_r",
+    "namespace": "mod"
+  }
+}

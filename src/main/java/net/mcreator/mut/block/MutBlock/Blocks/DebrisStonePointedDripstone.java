@@ -2,13 +2,13 @@ package net.mcreator.mut.block.MutBlock.Blocks;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.world.level.block.PointedDripstoneBlock;
+import net.minecraft.world.level.block.LanternBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class DebrisStonePointedDripstone extends PointedDripstoneBlock {
+import com.mojang.serialization.MapCodec;
 
-    public static final MapCodec<PointedDripstoneBlock> CODEC =
-            MapCodec.unit(DebrisStonePointedDripstone::new);
+public class DebrisStonePointedDripstone extends PointedDripstoneBlock {
 
     public DebrisStonePointedDripstone() {
         super(BlockBehaviour.Properties.of()
@@ -17,8 +17,9 @@ public class DebrisStonePointedDripstone extends PointedDripstoneBlock {
                 .requiresCorrectToolForDrops()
                 .randomTicks());
     }
+
     @Override
     public MapCodec<PointedDripstoneBlock> codec() {
-        return CODEC;
+        return MapCodec.unit(DebrisStonePointedDripstone::new);
     }
 }

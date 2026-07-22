@@ -2,5 +2,7 @@
   "parent": "mut:block/debris_stone_pointed_dripstone",
   "textures": {
     "cross": "mut:block/debris_stone_pointed_dripstone_up_tip"
-  }
+  },
+
+  "render_type": "cutout"
 }

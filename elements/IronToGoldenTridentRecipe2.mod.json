@@ -1,0 +1,29 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "Items.TRIDENT"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.GOLD_INGOT"
+    },
+    "smithingInputTemplateStack": {
+      "value": "CUSTOM:GoldUpgradeTemplate"
+    },
+    "smithingReturnStack": {
+      "value": "Items.TRIDENT"
+    },
+    "name": "iron_to_golden_trident_recipe_2",
+    "namespace": "mod"
+  }
+}

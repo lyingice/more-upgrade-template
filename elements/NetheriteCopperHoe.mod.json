@@ -1,0 +1,42 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Hoe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "netherite_copper_hoe",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "guiTexture": "",
+    "name": "Netherite Copper Hoe",
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateTools"
+      }
+    ],
+    "efficiency": 8.0,
+    "attackSpeed": 4.0,
+    "enchantability": 13,
+    "damageVsEntity": 2.5,
+    "usageCount": 1231,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Blocks.COPPER_BLOCK"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "attributeModifiers": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

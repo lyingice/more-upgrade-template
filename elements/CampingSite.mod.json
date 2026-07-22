@@ -1,0 +1,30 @@
+{
+  "_fv": 85,
+  "_type": "structure",
+  "definition": {
+    "structure": "camping_site",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      }
+    ],
+    "spacing": 11,
+    "separation": 7,
+    "restrictionBiomes": [
+      {
+        "value": "#mut:is_normal_animal_spawn"
+      }
+    ],
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "surfaceDetectionType": "WORLD_SURFACE",
+    "useStartHeight": false,
+    "startHeightProviderType": "UNIFORM",
+    "startHeightMin": 0,
+    "startHeightMax": 128,
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": []
+  }
+}

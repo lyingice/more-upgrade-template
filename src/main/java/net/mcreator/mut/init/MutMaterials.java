@@ -478,25 +478,34 @@ public class MutMaterials {
             case BODY -> mat.bodyValue();
         };
 
+        String partName = type.getName(); // "helmet", "chestplate", "leggings", "boots", "body"
+
+        // 盔甲值 - 这个已经是部件区分的，没问题
         if (val > 0)
             b.add(Attributes.ARMOR,
-                    new AttributeModifier(ResourceLocation.fromNamespaceAndPath("mut", mat.name + "_armor_" + type.getName()),
+                    new AttributeModifier(ResourceLocation.fromNamespaceAndPath("mut", mat.name + "_armor_" + partName),
                             val, AttributeModifier.Operation.ADD_VALUE),
                     EquipmentSlotGroup.bySlot(type.getSlot()));
+
+        // 盔甲韧性 - 修正：加入部件名区分
         if (mat.armorToughness > 0)
             b.add(Attributes.ARMOR_TOUGHNESS,
-                    new AttributeModifier(ResourceLocation.fromNamespaceAndPath("mut", mat.name + "_toughness"),
+                    new AttributeModifier(ResourceLocation.fromNamespaceAndPath("mut", mat.name + "_toughness_" + partName),
                             mat.armorToughness, AttributeModifier.Operation.ADD_VALUE),
                     EquipmentSlotGroup.bySlot(type.getSlot()));
+
+        // 击退抗性 - 修正：加入部件名区分
         if (mat.armorKnockbackResistance > 0)
             b.add(Attributes.KNOCKBACK_RESISTANCE,
-                    new AttributeModifier(ResourceLocation.fromNamespaceAndPath("mut", mat.name + "_knockback"),
+                    new AttributeModifier(ResourceLocation.fromNamespaceAndPath("mut", mat.name + "_knockback_" + partName),
                             mat.armorKnockbackResistance, AttributeModifier.Operation.ADD_VALUE),
                     EquipmentSlotGroup.bySlot(type.getSlot()));
 
+        // 额外属性（如果有的话也需要检查是否区分了部件）
         if (mat.armorAttributes != null)
             mat.armorAttributes.modifiers().forEach(e -> b.add(e.attribute(), e.modifier(), e.slot()));
 
+        // 从 MutMoreAttributeMaterials 获取的额外属性
         List<MutMoreAttributeMaterials.AttributeEntry> extraArmor = switch (type) {
             case HELMET -> MutMoreAttributeMaterials.getHelmetAttributes(mat.name);
             case CHESTPLATE -> MutMoreAttributeMaterials.getChestplateAttributes(mat.name);

@@ -1,0 +1,42 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "lapis_lazuli_sword",
+    "customModelName": "shield:lapis_lazuli",
+    "blockingModelName": "shield_blocking:lapis_lazuli",
+    "guiTexture": "",
+    "name": "Lapis Lazuli Shield",
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 30,
+    "damageVsEntity": 4.0,
+    "usageCount": 436,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Items.DYE#4"
+      }
+    ],
+    "immuneToFire": false,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "attributeModifiers": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      },
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      },
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      },
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      },
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      },
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      },
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      },
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      },
+      {
+        "value": "CUSTOM:FlameGoldNugget"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:FlameGoldIngot"
+    },
+    "name": "flame_gold_ingot_recipe",
+    "namespace": "mod"
+  }
+}

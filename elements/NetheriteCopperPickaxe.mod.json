@@ -1,0 +1,42 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Pickaxe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "netherite_copper_pickaxe",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "guiTexture": "",
+    "name": "Netherite Copper Pickaxe",
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateTools"
+      }
+    ],
+    "efficiency": 8.0,
+    "attackSpeed": 1.2000000000000002,
+    "enchantability": 13,
+    "damageVsEntity": 5.0,
+    "usageCount": 1231,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Blocks.COPPER_BLOCK"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "attributeModifiers": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

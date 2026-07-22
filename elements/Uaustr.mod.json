@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 2,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:HeterochromaticAmethystBlock"
+      },
+      {
+        "value": "CUSTOM:UncannyAmethystUpgradeSmithingTemplate"
+      },
+      {
+        "value": "CUSTOM:HeterochromaticAmethystBlock"
+      },
+      {
+        "value": "CUSTOM:HeterochromaticAmethystBlock"
+      },
+      {
+        "value": "CUSTOM:NetheriteAmethtstUpgradeSmithingTemplate"
+      },
+      {
+        "value": "CUSTOM:HeterochromaticAmethystBlock"
+      },
+      {
+        "value": "CUSTOM:HeterochromaticAmethystBlock"
+      },
+      {
+        "value": "CUSTOM:HeterochromaticAmethystBlock"
+      },
+      {
+        "value": "CUSTOM:HeterochromaticAmethystBlock"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:UncannyAmethystUpgradeSmithingTemplate"
+    },
+    "name": "uaustr",
+    "namespace": "mod"
+  }
+}

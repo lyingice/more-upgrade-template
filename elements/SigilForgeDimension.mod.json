@@ -1,0 +1,103 @@
+{
+  "_fv": 85,
+  "_type": "dimension",
+  "definition": {
+    "biomesInDimension": [
+      {
+        "value": "CUSTOM:SigilForgePlain"
+      },
+      {
+        "value": "CUSTOM:SigilForgeVolcano"
+      },
+      {
+        "value": "CUSTOM:SigilForgeSwamp"
+      },
+      {
+        "value": "CUSTOM:SigilForgeOcean"
+      },
+      {
+        "value": "CUSTOM:SigilForgeStonyShore"
+      },
+      {
+        "value": "CUSTOM:SigilForgeStonyPeaks"
+      },
+      {
+        "value": "CUSTOM:SigilForgeRiver"
+      },
+      {
+        "value": "CUSTOM:SigilForgePlateau"
+      },
+      {
+        "value": "CUSTOM:SigilForgeSnowyPlateau"
+      },
+      {
+        "value": "CUSTOM:SigilForgeSnowyPeaks"
+      },
+      {
+        "value": "CUSTOM:SigilForgeDesert"
+      },
+      {
+        "value": "CUSTOM:SigilForgeJungle"
+      }
+    ],
+    "biomesInDimensionCaves": [],
+    "worldGenType": "Normal world gen",
+    "mainFillerBlock": {
+      "value": "CUSTOM:DebrisStone"
+    },
+    "fluidBlock": {
+      "value": "Blocks.WATER"
+    },
+    "seaLevel": 63,
+    "generateOreVeins": true,
+    "generateAquifers": true,
+    "horizontalNoiseSize": 1,
+    "verticalNoiseSize": 2,
+    "defaultEffects": "overworld",
+    "useCustomEffects": true,
+    "hasClouds": true,
+    "cloudHeight": 192,
+    "skyType": "NORMAL",
+    "sunHeightAffectsFog": true,
+    "canRespawnHere": true,
+    "hasFog": false,
+    "ambientLight": 0.0,
+    "doesWaterVaporize": false,
+    "hasFixedTime": false,
+    "fixedTimeValue": 0,
+    "coordinateScale": 1.0,
+    "infiniburnTag": "minecraft:infiniburn_overworld",
+    "bedWorks": true,
+    "hasSkyLight": true,
+    "imitateOverworldBehaviour": true,
+    "piglinSafe": true,
+    "hasRaids": true,
+    "minMonsterSpawnLightLimit": 0,
+    "maxMonsterSpawnLightLimit": 7,
+    "monsterSpawnBlockLightLimit": 0,
+    "portalFrame": {
+      "value": "Blocks.SMITHING_TABLE"
+    },
+    "portalParticles": {
+      "value": "PORTAL"
+    },
+    "portalLuminance": 15,
+    "portalSound": {
+      "value": "block.portal.ambient"
+    },
+    "enableIgniter": false,
+    "igniterName": "Sigil Forge Dimension Portal Igniter",
+    "igniterRarity": "EPIC",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "TOOLS"
+      }
+    ],
+    "texture": "",
+    "portalTexture": "sigil_forge_portal",
+    "enablePortal": true
+  }
+}

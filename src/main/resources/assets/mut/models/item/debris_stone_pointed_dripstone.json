@@ -1,0 +1,6 @@
+{
+  "parent": "item/pointed_dripstone",
+  "textures": {
+    "layer0": "mut:block/debris_stone_pointed_dripstone_down_tip"
+  }
+}

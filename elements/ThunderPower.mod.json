@@ -1,0 +1,14 @@
+{
+  "_fv": 85,
+  "_type": "attribute",
+  "definition": {
+    "name": "Thunder Power",
+    "minValue": 0.0,
+    "maxValue": 100.0,
+    "defaultValue": 10.0,
+    "sentiment": "POSITIVE",
+    "addToAllEntities": false,
+    "addToPlayers": true,
+    "entities": []
+  }
+}

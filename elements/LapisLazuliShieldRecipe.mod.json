@@ -1,0 +1,49 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": "Items.SHIELD"
+      },
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.DYE#4"
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:LapisLazuliShield"
+    },
+    "name": "lapis_lazuli_shield_recipe",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "netherite_emerald_sword",
+    "customModelName": "shield:netherite_emerald",
+    "blockingModelName": "shield_blocking:netherite_emerald",
+    "guiTexture": "",
+    "name": "Netherite Emerald Shield",
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 16,
+    "damageVsEntity": 4.0,
+    "usageCount": 1280,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:NetheriteEmeraldIngot"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "attributeModifiers": [
+      {
+        "equipmentSlot": "hand",
+        "attribute": {
+          "value": "KNOCKBACK_RESISTANCE"
+        },
+        "amount": 0.1,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "equipmentSlot": "offhand",
+        "attribute": {
+          "value": "ATTACK_DAMAGE"
+        },
+        "amount": 2.0,
+        "operation": "ADD_VALUE"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Axe",
+    "renderType": 0,
+    "blockingRenderType": 0,
+    "texture": "nether_star_axe",
+    "customModelName": "Normal",
+    "blockingModelName": "Normal blocking",
+    "guiTexture": "",
+    "name": "Nether Star Axe",
+    "rarity": "EPIC",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      },
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateTools"
+      }
+    ],
+    "efficiency": 14.0,
+    "attackSpeed": 1.0,
+    "enchantability": 22,
+    "damageVsEntity": 13.0,
+    "usageCount": 3000,
+    "glowCondition": {
+      "fixedValue": true
+    },
+    "repairItems": [
+      {
+        "value": "Items.NETHER_STAR"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "attributeModifiers": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

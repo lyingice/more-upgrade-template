@@ -1,0 +1,22 @@
+{
+  "_fv": 85,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Gallop",
+    "supportedSlots": "body",
+    "weight": 10,
+    "anvilCost": 1,
+    "maxLevel": 5,
+    "damageModifier": 1,
+    "incompatibleEnchantments": [],
+    "supportedItems": [
+      {
+        "value": "TAG:mut:horse_armor"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

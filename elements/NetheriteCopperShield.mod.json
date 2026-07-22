@@ -1,0 +1,59 @@
+{
+  "_fv": 85,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Shield",
+    "renderType": 1,
+    "blockingRenderType": 1,
+    "texture": "netherite_copper_sword",
+    "customModelName": "shield:netherite_copper",
+    "blockingModelName": "shield_blocking:netherite_copper",
+    "guiTexture": "",
+    "name": "Netherite Copper Shield",
+    "rarity": "COMMON",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:MoreUpgradeTemplateCombatItems"
+      }
+    ],
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 13,
+    "damageVsEntity": 4.0,
+    "usageCount": 952,
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "repairItems": [
+      {
+        "value": "Blocks.COPPER_BLOCK"
+      }
+    ],
+    "immuneToFire": true,
+    "blockDropsTier": "WOOD",
+    "blocksAffected": [],
+    "attributeModifiers": [
+      {
+        "equipmentSlot": "hand",
+        "attribute": {
+          "value": "KNOCKBACK_RESISTANCE"
+        },
+        "amount": 0.1,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "equipmentSlot": "offhand",
+        "attribute": {
+          "value": "ATTACK_DAMAGE"
+        },
+        "amount": 1.0,
+        "operation": "ADD_VALUE"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

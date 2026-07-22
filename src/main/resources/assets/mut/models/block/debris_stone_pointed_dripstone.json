@@ -1,3 +1,4 @@
 {
-  "parent": "block/pointed_dripstone"
+  "parent": "block/pointed_dripstone",
+  "render_type": "cutout"
 }

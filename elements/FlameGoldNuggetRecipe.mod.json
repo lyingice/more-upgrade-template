@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:FlameGoldOre"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 1.0,
+    "cookingTime": 100,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:FlameGoldOre"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:FlameGoldNugget"
+    },
+    "name": "flame_gold_nugget_recipe",
+    "namespace": "mod"
+  }
+}

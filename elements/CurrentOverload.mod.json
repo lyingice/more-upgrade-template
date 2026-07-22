@@ -1,0 +1,73 @@
+{
+  "_fv": 85,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Current Overload",
+    "icon": "current_overload",
+    "color": {
+      "value": -26368,
+      "falpha": 0.0
+    },
+    "particle": {
+      "value": "FLASH"
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": false,
+    "isCuredbyHoney": false,
+    "modifiers": [
+      {
+        "equipmentSlot": "any",
+        "attribute": {
+          "value": "ATTACK_SPEED"
+        },
+        "amount": 0.2,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "equipmentSlot": "any",
+        "attribute": {
+          "value": "ARMOR_TOUGHNESS"
+        },
+        "amount": 10.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "equipmentSlot": "any",
+        "attribute": {
+          "value": "JUMP_STRENGTH"
+        },
+        "amount": 0.5,
+        "operation": "ADD_MULTIPLIED_BASE"
+      },
+      {
+        "equipmentSlot": "any",
+        "attribute": {
+          "value": "ATTACK_DAMAGE"
+        },
+        "amount": 0.25,
+        "operation": "ADD_MULTIPLIED_TOTAL"
+      },
+      {
+        "equipmentSlot": "any",
+        "attribute": {
+          "value": "MOVEMENT_SPEED"
+        },
+        "amount": 0.25,
+        "operation": "ADD_MULTIPLIED_TOTAL"
+      },
+      {
+        "equipmentSlot": "any",
+        "attribute": {
+          "value": "SWIM_SPEED"
+        },
+        "amount": 0.25,
+        "operation": "ADD_MULTIPLIED_TOTAL"
+      }
+    ]
+  }
+}

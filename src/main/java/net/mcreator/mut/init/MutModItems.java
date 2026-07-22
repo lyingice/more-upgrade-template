@@ -1132,6 +1132,7 @@ public class MutModItems {
 			() -> new DeferredSpawnEggItem(MutModEntities.SIGIL_FORGE_ZOMBIE_BOSS, 0x2D1E15, 0x8B0000, new Item.Properties()));
 	public static final DeferredItem<BlockItem> SIGIL_FORGE_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_trial_spawner", () -> new BlockItem(MutModBlocks.SIGIL_FORGE_TRIAL_SPAWNER.get(), new Item.Properties()));
 	public static final DeferredItem<BlockItem> SIGIL_FORGE_UNIQUE_TRIAL_SPAWNER = REGISTRY.register("sigil_forge_unique_trial_spawner", () -> new BlockItem(MutModBlocks.SIGIL_FORGE_UNIQUE_TRIAL_SPAWNER.get(), new Item.Properties()));
+	public static final DeferredItem<Item> DEBRIS_STONE_POINTED_DRIPSTONE = REGISTRY.register("debris_stone_pointed_dripstone", () -> new BlockItem(MutModBlocks.DEBRIS_STONE_POINTED_DRIPSTONE.get(), new Item.Properties()));
 
 	//public static final DeferredItem<Item> X = REGISTRY.register("x", XItem.xItem::new);
 	// End of user code block custom items
