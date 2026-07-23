@@ -1,5 +1,5 @@
 {
-  "parent": "mut:block/sigil_forge_glass",
+  "parent": "mut:block/sigil_forge_grass",
   "display": {
     "thirdperson": {
       "rotation": [

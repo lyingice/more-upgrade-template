@@ -9,7 +9,7 @@
     "enableLeggings": true,
     "textureLeggings": "diamond_chain_leggings",
     "enableBoots": true,
-    "textureBoots": "diamond_chain_boots_",
+    "textureBoots": "diamond_chain_boots",
     "creativeTabs": [
       {
         "value": "CUSTOM:MoreUpgradeTemplateCombatItems"

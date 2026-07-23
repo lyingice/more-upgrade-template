@@ -107,7 +107,6 @@ public class MutModBlocks {
 	public static final DeferredBlock<Block> HETEROCHROMATICBUDDINGAMETHYST;
 	public static final DeferredBlock<Block> DEBRIS_SAPLING;
 	public static final DeferredBlock<Block> DEBRIS_LEAVES;
-	public static final DeferredBlock<Block> SIGIL_FORGE_GLASS;
 	public static final DeferredBlock<Block> SIGIL_FORGE_SAND;
 	public static final DeferredBlock<Block> SIGIL_FORGE_DIRT;
 	public static final DeferredBlock<Block> IRON_FLOWER;
@@ -149,6 +148,8 @@ public class MutModBlocks {
 	public static final DeferredBlock<Block> SIGIL_FORGE_SMOOTH_SANDSTONE_WALL;
 	public static final DeferredBlock<Block> EMPEROR_DEBRIS_CACTUS;
 	public static final DeferredBlock<Block> DEBRIS_SIGIL_MAGMA_BLOCK;
+	public static final DeferredBlock<Block> SIGIL_FORGE_GRASS;
+	public static final DeferredBlock<Block> SIGIL_FORGE_POWDER_SNOW;
 	static {
 		STEEL_DEBRIS = REGISTRY.register("steel_debris", SteelDebrisBlock::new);
 		BLUE_DIAMOND_DEBRIS = REGISTRY.register("blue_diamond_debris", BlueDiamondDebrisBlock::new);
@@ -235,7 +236,6 @@ public class MutModBlocks {
 		HETEROCHROMATICBUDDINGAMETHYST = REGISTRY.register("heterochromaticbuddingamethyst", HeterochromaticbuddingamethystBlock::new);
 		DEBRIS_SAPLING = REGISTRY.register("debris_sapling", DebrisSaplingBlock::new);
 		DEBRIS_LEAVES = REGISTRY.register("debris_leaves", DebrisLeavesBlock::new);
-		SIGIL_FORGE_GLASS = REGISTRY.register("sigil_forge_glass", SigilForgeGlassBlock::new);
 		SIGIL_FORGE_SAND = REGISTRY.register("sigil_forge_sand", SigilForgeSandBlock::new);
 		SIGIL_FORGE_DIRT = REGISTRY.register("sigil_forge_dirt", SigilForgeDirtBlock::new);
 		IRON_FLOWER = REGISTRY.register("iron_flower", IronFlowerBlock::new);
@@ -277,6 +277,8 @@ public class MutModBlocks {
 		SIGIL_FORGE_SMOOTH_SANDSTONE_WALL = REGISTRY.register("sigil_forge_smooth_sandstone_wall", SigilForgeSmoothSandstoneWallBlock::new);
 		EMPEROR_DEBRIS_CACTUS = REGISTRY.register("emperor_debris_cactus", EmperorDebrisCactusBlock::new);
 		DEBRIS_SIGIL_MAGMA_BLOCK = REGISTRY.register("debris_sigil_magma_block", DebrisSigilMagmaBlockBlock::new);
+		SIGIL_FORGE_GRASS = REGISTRY.register("sigil_forge_grass", SigilForgeGrassBlock::new);
+		SIGIL_FORGE_POWDER_SNOW = REGISTRY.register("sigil_forge_powder_snow", SigilForgePowderSnowBlock::new);
 	}
 
 	// Start of user code block custom blocks

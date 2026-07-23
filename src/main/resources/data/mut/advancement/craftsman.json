@@ -1,6 +1,6 @@
 {
   "display": {
-    "background": "mut:textures/screens/steel_debris_side.png",
+    "background": "mut:textures/screens/blue_diamond_debris_side.png",
     "icon": {
       "id": "minecraft:smithing_table"
     },

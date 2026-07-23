@@ -8,16 +8,13 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-import net.mcreator.mut.client.model.Modelphantom;
-import net.mcreator.mut.client.model.Modelcreeper_charge;
-import net.mcreator.mut.client.model.Modelcreeper;
-import net.mcreator.mut.client.model.ModelMutTridentModel;
-import net.mcreator.mut.client.model.ModelCustomModel;
+import net.mcreator.mut.client.model.*;
 
 @EventBusSubscriber(Dist.CLIENT)
 public class MutModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(ModelFatPiglin.LAYER_LOCATION, ModelFatPiglin::createBodyLayer);
 		event.registerLayerDefinition(ModelCustomModel.LAYER_LOCATION, ModelCustomModel::createBodyLayer);
 		event.registerLayerDefinition(Modelcreeper_charge.LAYER_LOCATION, Modelcreeper_charge::createBodyLayer);
 		event.registerLayerDefinition(ModelMutTridentModel.LAYER_LOCATION, ModelMutTridentModel::createBodyLayer);

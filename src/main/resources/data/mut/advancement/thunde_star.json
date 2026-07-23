@@ -30,5 +30,5 @@
       }
     }
   },
-  "parent": "mut:craftsman"
+  "parent": "mut:sigil_forge_join"
 }

@@ -1,6 +1,6 @@
 {
   "type": "minecraft:block",
-  "random_sequence": "mut:blocks/sigil_forge_glass",
+  "random_sequence": "mut:blocks/sigil_forge_grass",
   "pools": [
     {
       "rolls": 1.0,
@@ -12,7 +12,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "mut:sigil_forge_glass"
+          "name": "mut:sigil_forge_dirt"
         }
       ]
     }

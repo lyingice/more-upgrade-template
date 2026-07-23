@@ -1,7 +1,7 @@
 {
   "parent": "mut:custom/shield_blocking",
   "textures": {
-    "0": "mut:block/",
+    "0": "mut:block/netherite_emerald_shield",
     "particle": "mut:item/netherite_emerald_sword"
   }
 }

@@ -13,22 +13,10 @@
   "spawners": {
     "monster": [
       {
-        "type": "mut:traveler_phantom",
-        "weight": 10,
+        "type": "camel",
+        "weight": 8,
         "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "mut:red_lightning_creeper",
-        "weight": 12,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "mut:aborigine_zombie",
-        "weight": 15,
-        "minCount": 2,
-        "maxCount": 4
+        "maxCount": 2
       }
     ],
     "creature": [

@@ -31,6 +31,12 @@ public class MutModEntities {
 			EntityType.Builder.<LittleCreeperEntity>of(LittleCreeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).sized(0.6f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EliteAborigineZombieEntity>> ELITE_ABORIGINE_ZOMBIE = register("elite_aborigine_zombie",
 			EntityType.Builder.<EliteAborigineZombieEntity>of(EliteAborigineZombieEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).ridingOffset(-0.6f).sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PiglinExpeditionaryEntity>> PIGLIN_EXPEDITIONARY = register("piglin_expeditionary",
+			EntityType.Builder.<PiglinExpeditionaryEntity>of(PiglinExpeditionaryEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.6f, 1.95f));
+	public static final DeferredHolder<EntityType<?>, EntityType<FatPiglinExpeditionaryEntity>> FAT_PIGLIN_EXPEDITIONARY = register("fat_piglin_expeditionary",
+			EntityType.Builder.<FatPiglinExpeditionaryEntity>of(FatPiglinExpeditionaryEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(0.8f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SteelSlimeEntity>> STEEL_SLIME = register("steel_slime",
+			EntityType.Builder.<SteelSlimeEntity>of(SteelSlimeEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).sized(0.5f, 0.5f));
 	// Start of user code block custom entities
 	public static final DeferredHolder<EntityType<?>, EntityType<SigilForgeZombieBossEntity>> SIGIL_FORGE_ZOMBIE_BOSS = register("sigil_forge_zombie_boss",
 			EntityType.Builder.<SigilForgeZombieBossEntity>of(SigilForgeZombieBossEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).sized(0.6f, 1.95f));
@@ -47,6 +53,9 @@ public class MutModEntities {
 		TravelerPhantomEntity.init(event);
 		LittleCreeperEntity.init(event);
 		EliteAborigineZombieEntity.init(event);
+		PiglinExpeditionaryEntity.init(event);
+		FatPiglinExpeditionaryEntity.init(event);
+		SteelSlimeEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -56,5 +65,8 @@ public class MutModEntities {
 		event.put(TRAVELER_PHANTOM.get(), TravelerPhantomEntity.createAttributes().build());
 		event.put(LITTLE_CREEPER.get(), LittleCreeperEntity.createAttributes().build());
 		event.put(ELITE_ABORIGINE_ZOMBIE.get(), EliteAborigineZombieEntity.createAttributes().build());
+		event.put(PIGLIN_EXPEDITIONARY.get(), PiglinExpeditionaryEntity.createAttributes().build());
+		event.put(FAT_PIGLIN_EXPEDITIONARY.get(), FatPiglinExpeditionaryEntity.createAttributes().build());
+		event.put(STEEL_SLIME.get(), SteelSlimeEntity.createAttributes().build());
 	}
 }

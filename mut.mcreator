@@ -12001,23 +12001,6 @@
       "path": "~/Base Material/material_recipes"
     },
     {
-      "name": "SigilForgeGlass",
-      "type": "block",
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "sigil_forge_glass",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/mut/blockstates/sigil_forge_glass.json",
-          "src/main/java/net/mcreator/mut/block/SigilForgeGlassBlock.java",
-          "src/main/resources/assets/mut/models/item/sigil_forge_glass.json",
-          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_glass.json",
-          "src/main/resources/assets/mut/models/block/sigil_forge_glass.json"
-        ]
-      },
-      "path": "~/Sigil Forge Dimension/OtherBlocks"
-    },
-    {
       "name": "SigilForgeSand",
       "type": "block",
       "compiles": true,
@@ -12835,6 +12818,99 @@
         ]
       },
       "path": "~/Sigil Forge Dimension/Plants"
+    },
+    {
+      "name": "SigilForgeGrass",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sigil_forge_grass",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/block/sigil_forge_grass.json",
+          "src/main/resources/assets/mut/blockstates/sigil_forge_grass.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_grass.json",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_grass.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgeGrassBlock.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "SigilForgePowderSnow",
+      "type": "block",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sigil_forge_powder_snow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/blockstates/sigil_forge_powder_snow.json",
+          "src/main/resources/assets/mut/models/item/sigil_forge_powder_snow.json",
+          "src/main/java/net/mcreator/mut/block/SigilForgePowderSnowBlock.java",
+          "src/main/resources/data/mut/loot_table/blocks/sigil_forge_powder_snow.json",
+          "src/main/resources/assets/mut/models/block/sigil_forge_powder_snow.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "SigilForgePowderSnowBucket",
+      "type": "item",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "sigil_forge_powder_snow_bucket",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/mut/models/item/sigil_forge_powder_snow_bucket.json",
+          "src/main/java/net/mcreator/mut/item/SigilForgePowderSnowBucketItem.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/OtherBlocks"
+    },
+    {
+      "name": "PiglinExpeditionary",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "piglin_expeditionary",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/entity/PiglinExpeditionaryEntity.java",
+          "src/main/java/net/mcreator/mut/client/renderer/PiglinExpeditionaryRenderer.java",
+          "src/main/resources/assets/mut/models/item/piglin_expeditionary_spawn_egg.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Entity"
+    },
+    {
+      "name": "FatPiglinExpeditionary",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "fat_piglin_expeditionary",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/entity/FatPiglinExpeditionaryEntity.java",
+          "src/main/java/net/mcreator/mut/client/renderer/FatPiglinExpeditionaryRenderer.java",
+          "src/main/resources/assets/mut/models/item/fat_piglin_expeditionary_spawn_egg.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Entity"
+    },
+    {
+      "name": "SteelSlime",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "steel_slime",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/entity/SteelSlimeEntity.java",
+          "src/main/resources/assets/mut/models/item/steel_slime_spawn_egg.json",
+          "src/main/java/net/mcreator/mut/client/renderer/SteelSlimeRenderer.java"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Entity"
     }
   ],
   "variable_elements": [],
@@ -12922,26 +12998,6 @@
   ],
   "tag_elements": {
     "ITEMS:minecraft:enchantable/durability": [
-      "~CUSTOM:AmethystElytra",
-      "~CUSTOM:PoisonSteelElytra",
-      "~CUSTOM:DragonElytra",
-      "~CUSTOM:NetherStarElytra",
-      "~CUSTOM:ObsidianElytra",
-      "~CUSTOM:LapisLazuliElytra",
-      "~CUSTOM:EmeraldElytra",
-      "~CUSTOM:CopperElytra",
-      "~CUSTOM:WitherBeef",
-      "~CUSTOM:NetheriteCopperBeef",
-      "~CUSTOM:CopperBeef",
-      "~CUSTOM:NetheriteRedstoneBeef",
-      "~CUSTOM:NetherStarBeef",
-      "~CUSTOM:BlueDiamondBeef",
-      "~CUSTOM:GildingBeef",
-      "~CUSTOM:SteelBeef",
-      "~CUSTOM:NetheriteBeef",
-      "~CUSTOM:DiamondBeef",
-      "~CUSTOM:GoldenBeef",
-      "~CUSTOM:IronBeef",
       "CUSTOM:WoodenMace",
       "CUSTOM:IronMace",
       "CUSTOM:DiamondMace",
@@ -12958,7 +13014,6 @@
       "TAG:mut:elytra"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
-      "~CUSTOM:DebrisSigilMagmaBlock",
       "~CUSTOM:SigilForgeSmoothSandstoneWall",
       "~CUSTOM:SigilForgeSmoothSandstoneSlab",
       "~CUSTOM:SigilForgeSmoothSandstoneStairs",
@@ -12992,11 +13047,6 @@
       "~CUSTOM:SigilForgeSandstoneSlab",
       "~CUSTOM:SigilForgeSandstoneStairs",
       "~CUSTOM:SigilForgeSandstone",
-      "~CUSTOM:Heterochromaticbuddingamethyst",
-      "~CUSTOM:Heterochromaticamethyst4",
-      "~CUSTOM:Heterochromaticamethyst3",
-      "~CUSTOM:Heterochromaticamethyst2",
-      "~CUSTOM:Heterochromaticamethyst1",
       "~CUSTOM:HeterochromaticAmethystBlock",
       "~CUSTOM:NetheriteLapisLazuliBlock",
       "~CUSTOM:FlameGoldBlock",
@@ -13007,18 +13057,18 @@
       "~CUSTOM:DebrisStoneBricksDoor",
       "~CUSTOM:DebrisCobblestoneDoor",
       "~CUSTOM:DebrisStoneDoor",
+      "~CUSTOM:DebrisCobblestoneHangingSign",
       "~CUSTOM:DebrisCobblestoneHangingSign.wall",
       "~CUSTOM:DebrisStoneHangingSign.wall",
-      "~CUSTOM:DebrisCobblestoneHangingSign",
       "~CUSTOM:DebrisStoneHangingSign",
       "~CUSTOM:DebrisStoneBricksHangingSign.wall",
       "~CUSTOM:DebrisStoneBricksHangingSign",
       "~CUSTOM:DebrisStoneBricksSign.wall",
       "~CUSTOM:DebrisStoneBricksSign",
       "~CUSTOM:DebrisCobblestoneSign.wall",
-      "~CUSTOM:DebrisStoneSign.wall",
       "~CUSTOM:DebrisCobblestoneSign",
       "~CUSTOM:DebrisStoneSign",
+      "~CUSTOM:DebrisStoneSign.wall",
       "~CUSTOM:DebrisCobblestoneTrapDoor",
       "~CUSTOM:DebrisStoneTrapDoor",
       "~CUSTOM:DebrisStoneBricksTrapDoor",
@@ -13053,12 +13103,10 @@
       "~CUSTOM:GildingBlock",
       "~CUSTOM:SteelBlock",
       "~CUSTOM:GildingDebris",
-      "~CUSTOM:NetherDeepIronOreBlock",
       "~CUSTOM:BlueDiamondDebris",
       "~CUSTOM:SteelDebris"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
-      "~CUSTOM:Heterochromaticbuddingamethyst",
       "~CUSTOM:HeterochromaticAmethystBlock",
       "~CUSTOM:MetalPoisonousOre",
       "~CUSTOM:FlameGoldOre",
@@ -13066,23 +13114,16 @@
       "~CUSTOM:ObsidianBlock",
       "~CUSTOM:AdvancedSteelBlock",
       "~CUSTOM:GildingDebris",
-      "~CUSTOM:NetherDeepIronOreBlock",
       "~CUSTOM:BlueDiamondDebris",
       "~CUSTOM:SteelDebris"
     ],
     "ITEMS:minecraft:head_armor": [
       "~CUSTOM:NetheriteEmerald.helmet",
       "~CUSTOM:NetheriteCopper.helmet",
-      "~CUSTOM:NetheriteChain.helmet",
       "~CUSTOM:GoldenChain.helmet",
       "~CUSTOM:DiamondChain.helmet",
-      "~CUSTOM:NetheriteObsidian.helmet",
-      "~CUSTOM:Obsidian.helmet",
       "~CUSTOM:EmeraldArmor.helmet",
       "~CUSTOM:Gilding.helmet",
-      "~CUSTOM:BlueDiamond.helmet",
-      "~CUSTOM:AdvancedSteel.helmet",
-      "~CUSTOM:Steel.helmet",
       "~CUSTOM:Copper.helmet",
       "CUSTOM:CryingObsidian.helmet",
       "CUSTOM:NetheriteRedstone.helmet",
@@ -13093,16 +13134,10 @@
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:NetheriteEmerald.body",
       "~CUSTOM:NetheriteCopper.body",
-      "~CUSTOM:NetheriteChain.body",
       "~CUSTOM:GoldenChain.body",
       "~CUSTOM:DiamondChain.body",
-      "~CUSTOM:NetheriteObsidian.body",
-      "~CUSTOM:Obsidian.body",
       "~CUSTOM:EmeraldArmor.body",
       "~CUSTOM:Gilding.body",
-      "~CUSTOM:BlueDiamond.body",
-      "~CUSTOM:AdvancedSteel.body",
-      "~CUSTOM:Steel.body",
       "~CUSTOM:Copper.body",
       "CUSTOM:DragonChestplateElytra",
       "CUSTOM:CryingObsidian.body",
@@ -13114,16 +13149,10 @@
     "ITEMS:minecraft:leg_armor": [
       "~CUSTOM:NetheriteEmerald.legs",
       "~CUSTOM:NetheriteCopper.legs",
-      "~CUSTOM:NetheriteChain.legs",
       "~CUSTOM:GoldenChain.legs",
       "~CUSTOM:DiamondChain.legs",
-      "~CUSTOM:NetheriteObsidian.legs",
-      "~CUSTOM:Obsidian.legs",
       "~CUSTOM:EmeraldArmor.legs",
       "~CUSTOM:Gilding.legs",
-      "~CUSTOM:BlueDiamond.legs",
-      "~CUSTOM:AdvancedSteel.legs",
-      "~CUSTOM:Steel.legs",
       "~CUSTOM:Copper.legs",
       "CUSTOM:CryingObsidian.legs",
       "CUSTOM:NetheriteRedstone.legs",
@@ -13134,16 +13163,10 @@
     "ITEMS:minecraft:foot_armor": [
       "~CUSTOM:NetheriteEmerald.boots",
       "~CUSTOM:NetheriteCopper.boots",
-      "~CUSTOM:NetheriteChain.boots",
       "~CUSTOM:GoldenChain.boots",
       "~CUSTOM:DiamondChain.boots",
-      "~CUSTOM:NetheriteObsidian.boots",
-      "~CUSTOM:Obsidian.boots",
       "~CUSTOM:EmeraldArmor.boots",
       "~CUSTOM:Gilding.boots",
-      "~CUSTOM:BlueDiamond.boots",
-      "~CUSTOM:AdvancedSteel.boots",
-      "~CUSTOM:Steel.boots",
       "~CUSTOM:Copper.boots",
       "CUSTOM:NetheriteRedstone.boots",
       "CUSTOM:Dragon.boots",
@@ -13273,8 +13296,6 @@
     "ENCHANTMENTS:minecraft:tradeable": [
       "~CUSTOM:PotentialExplosion",
       "~CUSTOM:HealthRegeneration",
-      "~CUSTOM:WitherAspect",
-      "~CUSTOM:Multiload",
       "~CUSTOM:GourmetFeast",
       "CUSTOM:Vitality",
       "CUSTOM:Exuberant",
@@ -13284,8 +13305,6 @@
     "ENCHANTMENTS:minecraft:on_random_loot": [
       "~CUSTOM:PotentialExplosion",
       "~CUSTOM:HealthRegeneration",
-      "~CUSTOM:WitherAspect",
-      "~CUSTOM:Multiload",
       "~CUSTOM:GourmetFeast",
       "CUSTOM:Vitality",
       "CUSTOM:Exuberant",
@@ -13295,8 +13314,6 @@
     "ENCHANTMENTS:minecraft:non_treasure": [
       "~CUSTOM:PotentialExplosion",
       "~CUSTOM:HealthRegeneration",
-      "~CUSTOM:WitherAspect",
-      "~CUSTOM:Multiload",
       "~CUSTOM:GourmetFeast",
       "CUSTOM:Vitality",
       "CUSTOM:Exuberant",
@@ -13363,10 +13380,6 @@
       "Items.GOLDEN_BOOTS"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:Heterochromaticamethyst4",
-      "~CUSTOM:Heterochromaticamethyst3",
-      "~CUSTOM:Heterochromaticamethyst2",
-      "~CUSTOM:Heterochromaticamethyst1",
       "~CUSTOM:NetheriteLapisLazuliBlock",
       "~CUSTOM:FlameGoldBlock",
       "~CUSTOM:EchoiteBlock",
@@ -13379,19 +13392,6 @@
       "~CUSTOM:BlueDiamondBlock",
       "~CUSTOM:GildingBlock",
       "~CUSTOM:SteelBlock"
-    ],
-    "ITEMS:minecraft:meat": [
-      "~CUSTOM:WitherBeef",
-      "~CUSTOM:NetheriteCopperBeef",
-      "~CUSTOM:CopperBeef",
-      "~CUSTOM:NetheriteRedstoneBeef",
-      "~CUSTOM:NetherStarBeef",
-      "~CUSTOM:BlueDiamondBeef",
-      "~CUSTOM:GildingBeef",
-      "~CUSTOM:SteelBeef",
-      "~CUSTOM:DiamondBeef",
-      "~CUSTOM:GoldenBeef",
-      "~CUSTOM:IronBeef"
     ],
     "BLOCKS:minecraft:beacon_base_blocks": [
       "CUSTOM:SteelBlock",
@@ -13490,15 +13490,6 @@
     "ITEMS:minecraft:enchantable/trident": [
       "TAG:mut:trident"
     ],
-    "ENTITIES:minecraft:undead": [
-      "~CUSTOM:EliteAborigineZombie",
-      "~CUSTOM:TravelerPhantom",
-      "~CUSTOM:AborigineZombie"
-    ],
-    "ENTITIES:minecraft:illager": [
-      "~CUSTOM:LittleCreeper",
-      "~CUSTOM:RedLightningCreeper"
-    ],
     "BIOMES:minecraft:has_structure/mineshaft": [
       "~CUSTOM:SigilForgeDesert",
       "~CUSTOM:SigilForgeVolcano",
@@ -13564,8 +13555,8 @@
       "~CUSTOM:SigilForgeCutSandstoneStairs",
       "~CUSTOM:SigilForgeSandstoneStairs",
       "~CUSTOM:DebrisPlanksStairs",
-      "~CUSTOM:DebrisStoneStairs",
       "~CUSTOM:DebrisCobblestoneStairs",
+      "~CUSTOM:DebrisStoneStairs",
       "~CUSTOM:DebrisStoneBricksStairs"
     ],
     "BLOCKS:minecraft:slabs": [
@@ -13580,8 +13571,8 @@
     ],
     "BLOCKS:minecraft:pressure_plates": [
       "~CUSTOM:DebrisStoneBricksPressurePlate",
-      "~CUSTOM:DebrisStonePressurePlate",
-      "~CUSTOM:DebrisCobblestonePressurePlate"
+      "~CUSTOM:DebrisCobblestonePressurePlate",
+      "~CUSTOM:DebrisStonePressurePlate"
     ],
     "BLOCKS:minecraft:wooden_pressure_plates": [
       "~CUSTOM:DebrisPlanksPressurePlate"
@@ -13704,9 +13695,9 @@
       "CUSTOM:DebrisCobblestone"
     ],
     "BLOCKS:minecraft:mineable/shovel": [
-      "~CUSTOM:SigilForgeDirt",
-      "~CUSTOM:SigilForgeSand",
-      "~CUSTOM:SigilForgeGlass"
+      "~CUSTOM:SigilForgePowderSnow",
+      "~CUSTOM:SigilForgeGrass",
+      "~CUSTOM:SigilForgeSand"
     ],
     "BLOCKS:minecraft:needs_stone_tool": [
       "~CUSTOM:PinkDiamondLamp",
@@ -13726,6 +13717,21 @@
       "~CUSTOM:LightGrayDiamondLamp",
       "~CUSTOM:WhiteDiamondLamp",
       "~CUSTOM:DiamondLamp"
+    ],
+    "BLOCKS:minecraft:dirt": [
+      "CUSTOM:SigilForgeDirt",
+      "CUSTOM:SigilForgeGrass"
+    ],
+    "BLOCKS:minecraft:sand": [
+      "CUSTOM:SigilForgeSand"
+    ],
+    "BIOMES:minecraft:is_overworld": [],
+    "ENTITIES:minecraft:arthropod": [
+      "~CUSTOM:FatPiglinExpeditionary",
+      "~CUSTOM:PiglinExpeditionary"
+    ],
+    "ENTITIES:minecraft:illager": [
+      "~CUSTOM:SteelSlime"
     ]
   },
   "tab_element_order": {
@@ -14092,8 +14098,8 @@
       "Heterochromaticamethyst3",
       "Heterochromaticamethyst2",
       "Heterochromaticamethyst1",
-      "SigilForgeGlass",
       "SigilForgeSand",
+      "SigilForgeGrass",
       "SigilForgeDirt",
       "EmperorDebrisCactus",
       "DebrisSigilMagmaBlock",
@@ -14117,7 +14123,8 @@
       "BlueDiamondLamp",
       "PurpleDiamondLamp",
       "MagentaDiamondLamp",
-      "PinkDiamondLamp"
+      "PinkDiamondLamp",
+      "SigilForgePowderSnowBucket"
     ]
   },
   "language_map": {
@@ -14566,7 +14573,7 @@
       "advancements.craftsman.title": "Craftsman",
       "advancements.buried_deep.title": "Buried Deep",
       "advancements.buried_deep.descr": "Excavate a steel debris",
-      "advancements.regain_new_life.descr": "Get steel upgrade smithing template",
+      "advancements.regain_new_life.descr": "Get Steel Upgrade Smithing Template",
       "advancements.regain_new_life.title": "Regain New Life",
       "advancements.effective_utilization.title": "Effective Utilization",
       "advancements.effective_utilization.descr": "Make a stone upgrade smithing template",
@@ -14620,7 +14627,7 @@
       "item.mut.netherite_emerald_shield": "Netherite Emerald Shield",
       "item.mut.wither_beef": "Wither Beef",
       "enchantment.mut.health_regeneration": "Health Regeneration",
-      "enchantment.mut.potential_explosion": "Obtain strength and resistance enhancement effects after use",
+      "enchantment.mut.potential_explosion": "Potential Explosion",
       "enchantment.mut.health_regeneration.description": "Obtain instant healing and life recovery effects after use",
       "potential_explosion": "Obtain strength and resistance enhancement effects after use",
       "item.mut.netherite_copper_crossbow": "Netherite Copper Crossbow",
@@ -14909,7 +14916,7 @@
       "item.mut.poison_steel_shield": "Poison Steel Shield",
       "item.mut.flame_gold_shield": "Flame Gold Shield",
       "item.mut.uncanny_amethyst_shield": "Uncanny Amethyst Shield",
-      "item.mut.thunder_copper_shield": "",
+      "item.mut.thunder_copper_shield": "Thunder Copper Shield",
       "advancements.sigil_forge_join.title": "符锻降临",
       "advancements.sigil_forge_join.descr": "进入符锻维度。",
       "advancements.netherite_all.title": "完全的下界合金",
@@ -15123,7 +15130,6 @@
       "advancements.poison_template.descr": "获得剧毒锻造模板。",
       "advancements.poison_steel_suit.descr": "获得毒钢套装。",
       "advancements.poison_steel_suit.title": "毒钢装甲",
-      "block.mut.sigil_forge_glass": "Sigil Forge Glass",
       "block.mut.sigil_forge_sand": "Sigil Forge Sand",
       "block.mut.sigil_forge_dirt": "Sigil Forge Dirt",
       "block.mut.iron_flower": "Iron Flower",
@@ -15175,7 +15181,16 @@
       "block.mut.golden_debris_apple": "Golden Debris Apple",
       "block.mut.diamond_debris_apple": "Diamond Debris Apple",
       "block.mut.ancient_debris_apple": "Ancient Debris Apple",
-      "block.mut.debris_stone_pointed_dripstone": "Debris Stone Pointed Dripstone"
+      "block.mut.debris_stone_pointed_dripstone": "Debris Stone Pointed Dripstone",
+      "block.mut.sigil_forge_grass": "Sigil Forge Grass",
+      "block.mut.sigil_forge_powder_snow": "Sigil Forge Powder Snow",
+      "item.mut.sigil_forge_powder_snow_bucket": "Sigil Forge Powder Snow Bucket",
+      "entity.mut.piglin_expeditionary": "Piglin Expeditionary",
+      "item.mut.piglin_expeditionary_spawn_egg": "Piglin Expeditionary Spawn Egg",
+      "entity.mut.fat_piglin_expeditionary": "Fat Piglin Expeditionary",
+      "item.mut.fat_piglin_expeditionary_spawn_egg": "Fat Piglin Expeditionary Spawn Egg",
+      "item.mut.steel_slime_spawn_egg": "Steel Slime Spawn Egg",
+      "entity.mut.steel_slime": "Steel Slime"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -16135,7 +16150,6 @@
       "advancements.poison_template.descr": "获得剧毒锻造模板。",
       "advancements.poison_steel_suit.descr": "获得毒钢套装。",
       "advancements.poison_steel_suit.title": "毒钢装甲",
-      "block.mut.sigil_forge_glass": "符锻草方块",
       "block.mut.sigil_forge_sand": "符锻沙子",
       "block.mut.sigil_forge_dirt": "符锻韧土",
       "block.mut.iron_flower": "铁岸花",
@@ -16187,7 +16201,38 @@
       "block.mut.golden_debris_apple": "金骸果",
       "block.mut.diamond_debris_apple": "钻骸果",
       "block.mut.ancient_debris_apple": "远古残骸果",
-      "block.mut.debris_stone_pointed_dripstone": "残骸石滴水石锥"
+      "block.mut.debris_stone_pointed_dripstone": "残骸石滴水石锥",
+      "item.mut.stone_upgrade_template.description_1": "",
+      "item.mut.iron_upgrade_template.description_1": "",
+      "item.mut.diamond_upgrade_template.description_1": "",
+      "item.mut.steel_upgrade_template.description_1": "",
+      "item.mut.blue_diamond_upgrade_template.description_1": "",
+      "item.mut.obsidian_upgrade_template.description_1": "",
+      "item.mut.netherite_obsidian_upgrade_template.description_1": "",
+      "item.mut.nether_star_upgrade_template.description_1": "",
+      "item.mut.gilding_upgrade_template.description_1": "",
+      "item.mut.crying_obsidian_upgrade_template.description_1": "",
+      "item.mut.dragon_upgrade_template.description_1": "",
+      "item.mut.gold_upgrade_template.description_1": "",
+      "item.mut.netherite_redstone_upgrade_template.description_1": "",
+      "item.mut.netherite_copper_upgrade_smithing_template.description_1": "",
+      "item.mut.netherite_emerald_upgrade_smithing_template.description_1": "",
+      "item.mut.netherite_amethyst_upgrade_smithing_template.description_1": "",
+      "item.mut.magma_upgrade_smithing_template.description_1": "",
+      "item.mut.poison_upgrade_smithing_template.description_1": "",
+      "item.mut.thunder_upgrade_smithing_template.description_1": "",
+      "item.mut.uncanny_amethyst_upgrade_smithing_template.description_1": "",
+      "item.mut.echoite_upgrade_smithing_template.description_1": "",
+      "item.mut.netherite_lapis_lazuli_upgrade_smithing_template.description_1": "",
+      "block.mut.sigil_forge_grass": "符锻草方块",
+      "block.mut.sigil_forge_powder_snow": "符锻细雪",
+      "item.mut.sigil_forge_powder_snow_bucket": "符锻细雪桶",
+      "entity.mut.piglin_expeditionary": "猪灵远征者",
+      "item.mut.piglin_expeditionary_spawn_egg": "猪灵远征者刷怪蛋",
+      "entity.mut.fat_piglin_expeditionary": "肥胖猪灵远征者",
+      "item.mut.fat_piglin_expeditionary_spawn_egg": "肥胖猪灵远征者刷怪蛋",
+      "item.mut.steel_slime_spawn_egg": "钢铁史莱姆刷怪蛋",
+      "entity.mut.steel_slime": "钢铁史莱姆"
     }
   },
   "metadata": {

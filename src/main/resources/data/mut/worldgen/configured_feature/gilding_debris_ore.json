@@ -6,8 +6,8 @@
     "targets": [
       {
         "target": {
-          "predicate_type": "block_match",
-          "block": "mut:debris_stone"
+          "predicate_type": "tag_match",
+          "tag": "mut:ore_replace"
         },
         "state": {
           "Name": "mut:gilding_debris"

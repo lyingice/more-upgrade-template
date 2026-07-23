@@ -439,8 +439,8 @@ public class MutModTabs {
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_3.get().asItem());
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_2.get().asItem());
 				tabData.accept(MutModBlocks.HETEROCHROMATICAMETHYST_1.get().asItem());
-				tabData.accept(MutModBlocks.SIGIL_FORGE_GLASS.get().asItem());
 				tabData.accept(MutModBlocks.SIGIL_FORGE_SAND.get().asItem());
+				tabData.accept(MutModBlocks.SIGIL_FORGE_GRASS.get().asItem());
 				tabData.accept(MutModBlocks.SIGIL_FORGE_DIRT.get().asItem());
 				tabData.accept(MutModBlocks.EMPEROR_DEBRIS_CACTUS.get().asItem());
 				tabData.accept(MutModBlocks.DEBRIS_SIGIL_MAGMA_BLOCK.get().asItem());
@@ -465,6 +465,7 @@ public class MutModTabs {
 				tabData.accept(MutModBlocks.PURPLE_DIAMOND_LAMP.get().asItem());
 				tabData.accept(MutModBlocks.MAGENTA_DIAMOND_LAMP.get().asItem());
 				tabData.accept(MutModBlocks.PINK_DIAMOND_LAMP.get().asItem());
+				tabData.accept(MutModItems.SIGIL_FORGE_POWDER_SNOW_BUCKET.get());
 			}).withTabsBefore(MORE_UPGRADE_TEMPLATE_COMBAT_ITEMS.getId()).build());
 
 	@SubscribeEvent
@@ -475,6 +476,9 @@ public class MutModTabs {
 			tabData.accept(MutModItems.TRAVELER_PHANTOM_SPAWN_EGG.get());
 			tabData.accept(MutModItems.LITTLE_CREEPER_SPAWN_EGG.get());
 			tabData.accept(MutModItems.ELITE_ABORIGINE_ZOMBIE_SPAWN_EGG.get());
+			tabData.accept(MutModItems.PIGLIN_EXPEDITIONARY_SPAWN_EGG.get());
+			tabData.accept(MutModItems.FAT_PIGLIN_EXPEDITIONARY_SPAWN_EGG.get());
+			tabData.accept(MutModItems.STEEL_SLIME_SPAWN_EGG.get());
 		}
 	}
 }

@@ -404,7 +404,6 @@ public class MutModItems {
 	public static final DeferredItem<Item> REFINED_IRON_POWDER;
 	public static final DeferredItem<Item> DEBRIS_SAPLING;
 	public static final DeferredItem<Item> DEBRIS_LEAVES;
-	public static final DeferredItem<Item> SIGIL_FORGE_GLASS;
 	public static final DeferredItem<Item> SIGIL_FORGE_SAND;
 	public static final DeferredItem<Item> SIGIL_FORGE_DIRT;
 	public static final DeferredItem<Item> IRON_FLOWER;
@@ -451,6 +450,12 @@ public class MutModItems {
 	public static final DeferredItem<Item> GOLDEN_DEBRIS_APPLE;
 	public static final DeferredItem<Item> DIAMOND_DEBRIS_APPLE;
 	public static final DeferredItem<Item> ANCIENT_DEBRIS_APPLE;
+	public static final DeferredItem<Item> SIGIL_FORGE_GRASS;
+	public static final DeferredItem<Item> SIGIL_FORGE_POWDER_SNOW;
+	public static final DeferredItem<Item> SIGIL_FORGE_POWDER_SNOW_BUCKET;
+	public static final DeferredItem<Item> PIGLIN_EXPEDITIONARY_SPAWN_EGG;
+	public static final DeferredItem<Item> FAT_PIGLIN_EXPEDITIONARY_SPAWN_EGG;
+	public static final DeferredItem<Item> STEEL_SLIME_SPAWN_EGG;
 	static {
 		IRON_BOW = REGISTRY.register("iron_bow", IronBowItem::new);
 		STONE_UPGRADE_TEMPLATE = REGISTRY.register("stone_upgrade_template", StoneUpgradeTemplateItem::new);
@@ -827,7 +832,6 @@ public class MutModItems {
 		REFINED_IRON_POWDER = REGISTRY.register("refined_iron_powder", RefinedIronPowderItem::new);
 		DEBRIS_SAPLING = block(MutModBlocks.DEBRIS_SAPLING, new Item.Properties().fireResistant());
 		DEBRIS_LEAVES = block(MutModBlocks.DEBRIS_LEAVES, new Item.Properties().fireResistant());
-		SIGIL_FORGE_GLASS = block(MutModBlocks.SIGIL_FORGE_GLASS);
 		SIGIL_FORGE_SAND = block(MutModBlocks.SIGIL_FORGE_SAND, new Item.Properties().fireResistant());
 		SIGIL_FORGE_DIRT = block(MutModBlocks.SIGIL_FORGE_DIRT);
 		IRON_FLOWER = block(MutModBlocks.IRON_FLOWER, new Item.Properties().fireResistant());
@@ -874,6 +878,12 @@ public class MutModItems {
 		GOLDEN_DEBRIS_APPLE = REGISTRY.register("golden_debris_apple", GoldenDebrisAppleItem::new);
 		DIAMOND_DEBRIS_APPLE = REGISTRY.register("diamond_debris_apple", DiamondDebrisAppleItem::new);
 		ANCIENT_DEBRIS_APPLE = REGISTRY.register("ancient_debris_apple", AncientDebrisAppleItem::new);
+		SIGIL_FORGE_GRASS = block(MutModBlocks.SIGIL_FORGE_GRASS);
+		SIGIL_FORGE_POWDER_SNOW = block(MutModBlocks.SIGIL_FORGE_POWDER_SNOW);
+		SIGIL_FORGE_POWDER_SNOW_BUCKET = REGISTRY.register("sigil_forge_powder_snow_bucket", SigilForgePowderSnowBucketItem::new);
+		PIGLIN_EXPEDITIONARY_SPAWN_EGG = REGISTRY.register("piglin_expeditionary_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.PIGLIN_EXPEDITIONARY, -6737152, -256, new Item.Properties()));
+		FAT_PIGLIN_EXPEDITIONARY_SPAWN_EGG = REGISTRY.register("fat_piglin_expeditionary_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.FAT_PIGLIN_EXPEDITIONARY, -6737152, -3355648, new Item.Properties()));
+		STEEL_SLIME_SPAWN_EGG = REGISTRY.register("steel_slime_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.STEEL_SLIME, -3355444, -1, new Item.Properties()));
 	}
 	// Start of user code block custom items
 	public static final DeferredItem<Item> AMETHYST_SWORD = REGISTRY.register("amethyst_sword", AmethystTools.Sword::new);
