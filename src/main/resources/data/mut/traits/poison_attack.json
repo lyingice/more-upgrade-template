@@ -1,0 +1,13 @@
+{
+  "id": "poison_attack",
+  "supported_items": ["#mut:traits/poison", "mut:poison_steel_spear"],
+  "name_key": "trait.mut.poison_attack.name",
+  "description_keys": ["trait.mut.poison_attack.desc"],
+  "effects": [{
+    "type": "apply_mob_effect_to_target",
+    "trigger": "attack",
+    "effect": "minecraft:poison",
+    "duration": {"min": 60, "max": 600},
+    "amplifier": 1
+  }]
+}

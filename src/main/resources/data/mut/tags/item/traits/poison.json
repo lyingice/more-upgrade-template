@@ -1,0 +1,13 @@
+{
+  "values": [
+    "mut:position_steel_sword",
+    "mut:position_steel_axe",
+    "mut:position_steel_pickaxe",
+    "mut:position_steel_shovel",
+    "mut:position_steel_hoe",
+    "mut:poison_steel_trident",
+    "mut:poison_steel_crossbow",
+    "mut:poison_steel_bow",
+    "mut:poison_steel_mace"
+  ]
+}

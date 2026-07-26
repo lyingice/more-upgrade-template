@@ -95,17 +95,6 @@ public class TraitDataLoader extends SimpleJsonResourceReloadListener {
             case "damage_resistance" -> new DamageResistance(trigger,
                     obj.get("damage_type").getAsString(),
                     obj.get("multiplier").getAsFloat());
-            case "attribute_modifier_self" -> new AttributeModifierSelf(trigger,
-                    obj.get("attribute").getAsString(),
-                    obj.get("operation").getAsString(),
-                    obj.get("amount").getAsFloat(),
-                    obj.has("duration_ticks") ? obj.get("duration_ticks").getAsInt() : 100,
-                    parseEntityFilter(obj));
-            case "attribute_modifier_target" -> new AttributeModifierTarget(trigger,
-                    obj.get("attribute").getAsString(),
-                    obj.get("operation").getAsString(),
-                    obj.get("amount").getAsFloat(),
-                    obj.has("duration_ticks") ? obj.get("duration_ticks").getAsInt() : 100);
             case "repair_on_block_break" -> new RepairOnBlockBreak(trigger,
                     parseBlockFilter(obj),
                     obj.get("amount").getAsInt());
@@ -115,6 +104,8 @@ public class TraitDataLoader extends SimpleJsonResourceReloadListener {
             case "repair_on_kill_entity" -> new RepairOnKillEntity(trigger,
                     parseEntityFilter(obj),
                     obj.get("amount").getAsInt());
+            case "ignite_target" -> new IgniteTarget(trigger,
+                    parseRange(obj.get("seconds")));
             default -> throw new IllegalArgumentException("Unknown effect type: " + type);
         };
     }

@@ -1060,5 +1060,17 @@
   "entity.mut.fat_piglin_expeditionary": "Fat Piglin Expeditionary",
   "item.mut.fat_piglin_expeditionary_spawn_egg": "Fat Piglin Expeditionary Spawn Egg",
   "item.mut.steel_slime_spawn_egg": "Steel Slime Spawn Egg",
-  "entity.mut.steel_slime": "Steel Slime"
+  "entity.mut.steel_slime": "Steel Slime",
+  "trait.mut.wither_attack.name": "Wither Attack",
+  "trait.mut.wither_attack.desc": "Attack target with additional wither effect.",
+  "tooltip.mut.trait": "Trait",
+  "trait.mut.fire_attack.name": "Fire Attack",
+  "trait.mut.fire_attack.desc": "Attach flames to the attack target.",
+  "trait.mut.poison_attack.name": "Poison Attack",
+  "trait.mut.poison_attack.desc": "The attack target is subject to additional poisoning effects.",
+  "trait.mut.dragon_claw.name": "Dragon Claw",
+  "trait.mut.dragon_claw.desc": "After a successful attack, both the attack speed and the attack distance are increased.",
+  "effect.mut.dragon_claw": "Dragon Claw",
+  "trait.mut.dragon_elytra.name": "Dragon Wings",
+  "trait.mut.dragon_elytra.desc": "Supports jump propulsion acceleration during flight."
 }

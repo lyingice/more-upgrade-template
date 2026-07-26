@@ -1,0 +1,13 @@
+{
+  "id": "wither_attack",
+  "supported_items": ["#mut:traits/wither", "mut:wither_spear"],
+  "name_key": "trait.mut.wither_attack.name",
+  "description_keys": ["trait.mut.wither_attack.desc"],
+  "effects": [{
+    "type": "apply_mob_effect_to_target",
+    "trigger": "attack",
+    "effect": "minecraft:wither",
+    "duration": {"min": 60, "max": 600},
+    "amplifier": 1
+  }]
+}

@@ -1,6 +1,5 @@
 package net.mcreator.mut;
 
-import net.mcreator.mut.trait.TraitEventHandler;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -30,6 +29,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.mut.trait.TraitEventHandler;
 import net.mcreator.mut.init.*;
 import net.mcreator.mut.event.EnergyConversionHandler;
 import net.mcreator.mut.event.AffixEventHandler;
@@ -77,7 +77,7 @@ public class MutMod {
 		NeoForge.EVENT_BUS.register(new AffixEventHandler());
 		NeoForge.EVENT_BUS.register(new EnergyConversionHandler());
 		MutModParticles.PARTICLES.register(modEventBus);
-        NeoForge.EVENT_BUS.register(new TraitEventHandler());
+		NeoForge.EVENT_BUS.register(new TraitEventHandler());
 		// End of user code block mod init
 	}
 

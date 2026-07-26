@@ -11,8 +11,14 @@ public class TraitEventHandler {
 
     @SubscribeEvent
     public void onAttack(LivingIncomingDamageEvent event) {
-        if (!(event.getSource().getDirectEntity() instanceof LivingEntity attacker)) return;
+        LivingEntity attacker = resolveAttacker(event);
+        if (attacker == null) return;
         handleTrigger("attack", attacker, event.getEntity(), null);
+    }
+    private LivingEntity resolveAttacker(LivingIncomingDamageEvent event) {
+        if (event.getSource().getDirectEntity() instanceof LivingEntity direct) return direct;
+        if (event.getSource().getEntity() instanceof LivingEntity source) return source;
+        return null;
     }
 
     @SubscribeEvent

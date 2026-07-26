@@ -1,0 +1,14 @@
+{
+  "id": "dragon_claw",
+  "supported_items": ["#mut:traits/dragon", "mut:dragon_spear"],
+  "name_key": "trait.mut.dragon_claw.name",
+  "description_keys": ["trait.mut.dragon_claw.desc"],
+  "effects": [{
+    "type": "apply_mob_effect_to_self",
+    "trigger": "attack",
+    "effect": "mut:dragon_claw",
+    "duration": 100,
+    "amplifier": 0
+  }
+  ]
+}

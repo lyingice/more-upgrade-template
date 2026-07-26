@@ -1,0 +1,7 @@
+{
+  "id": "dragon_elytra",
+  "supported_items": ["mut:dragon_elytra"],
+  "name_key": "trait.mut.dragon_elytra.name",
+  "description_keys": ["trait.mut.dragon_elytra.desc"],
+  "effects": []
+}

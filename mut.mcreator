@@ -12995,6 +12995,32 @@
         ]
       },
       "path": "~/Sigil Forge Dimension/Feature"
+    },
+    {
+      "name": "ZombieLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/entities/elite_aborigine_zombie.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Loot"
+    },
+    {
+      "name": "DragonClaw",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_claw",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/potion/DragonClawMobEffect.java"
+        ]
+      },
+      "path": "~/Buff"
     }
   ],
   "variable_elements": [],
@@ -15274,7 +15300,19 @@
       "entity.mut.fat_piglin_expeditionary": "Fat Piglin Expeditionary",
       "item.mut.fat_piglin_expeditionary_spawn_egg": "Fat Piglin Expeditionary Spawn Egg",
       "item.mut.steel_slime_spawn_egg": "Steel Slime Spawn Egg",
-      "entity.mut.steel_slime": "Steel Slime"
+      "entity.mut.steel_slime": "Steel Slime",
+      "trait.mut.wither_attack.name": "Wither Attack",
+      "trait.mut.wither_attack.desc": "Attack target with additional wither effect.",
+      "tooltip.mut.trait": "Trait",
+      "trait.mut.fire_attack.name": "Fire Attack",
+      "trait.mut.fire_attack.desc": "Attach flames to the attack target.",
+      "trait.mut.poison_attack.name": "Poison Attack",
+      "trait.mut.poison_attack.desc": "The attack target is subject to additional poisoning effects.",
+      "trait.mut.dragon_claw.name": "Dragon Claw",
+      "trait.mut.dragon_claw.desc": "After a successful attack, both the attack speed and the attack distance are increased.",
+      "effect.mut.dragon_claw": "Dragon Claw",
+      "trait.mut.dragon_elytra.name": "Dragon Wings",
+      "trait.mut.dragon_elytra.desc": "Supports jump propulsion acceleration during flight."
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -16160,14 +16198,14 @@
       "jei.mut.super_smithing_table.description.3": "§7下界之星作为通用材料，可提升所有词缀的出现概率和等级上限。",
       "jei.mut.super_smithing_table.tag": "§7材料决定词缀类型与等级",
       "patchouli.mut.affix_guide.name": "§d更多锻造模板宝典",
-      "affix.level.common": "⭐",
-      "affix.level.uncommon": "⭐⭐",
-      "affix.level.rare": "⭐⭐⭐",
-      "affix.level.epic": "⭐⭐⭐⭐",
-      "affix.level.legendary": "⭐⭐⭐⭐⭐",
-      "affix.level.mythic": "⭐⭐⭐⭐⭐⭐",
-      "affix.level.ancient": "⭐⭐⭐⭐⭐⭐⭐",
-      "affix.level.celestial": "⭐⭐⭐⭐⭐⭐⭐⭐",
+      "affix.level.common": "一般",
+      "affix.level.uncommon": "罕见",
+      "affix.level.rare": "珍稀",
+      "affix.level.epic": "史诗",
+      "affix.level.legendary": "传说",
+      "affix.level.mythic": "神话",
+      "affix.level.ancient": "远古",
+      "affix.level.celestial": "天界",
       "patchouli.mut.affix_guide.landing": "§6欢迎来到更多锻造模板宝典宝典！$(br2)本书将详细讲解模组的全部机制，帮助你打造最强装备。",
       "item.mut.copper_elytra": "铜鞘翅",
       "item.mut.emerald_elytra": "绿宝石鞘翅",
@@ -16316,7 +16354,19 @@
       "entity.mut.fat_piglin_expeditionary": "肥胖猪灵远征者",
       "item.mut.fat_piglin_expeditionary_spawn_egg": "肥胖猪灵远征者刷怪蛋",
       "item.mut.steel_slime_spawn_egg": "钢铁史莱姆刷怪蛋",
-      "entity.mut.steel_slime": "钢铁史莱姆"
+      "entity.mut.steel_slime": "钢铁史莱姆",
+      "trait.mut.wither_attack.name": "凋零之力",
+      "trait.mut.wither_attack.desc": "攻击目标附加额外调零效果。",
+      "tooltip.mut.trait": "特性",
+      "trait.mut.fire_attack.name": "赤焰之力",
+      "trait.mut.fire_attack.desc": "对攻击目标附加火焰。",
+      "trait.mut.poison_attack.name": "淬毒",
+      "trait.mut.poison_attack.desc": "攻击目标附加额外中毒效果。",
+      "trait.mut.dragon_claw.name": "龙爪",
+      "trait.mut.dragon_claw.desc": "攻击成功后攻速以及攻击距离得到提升。",
+      "effect.mut.dragon_claw": "龙爪之力",
+      "trait.mut.dragon_elytra.name": "龙之翼",
+      "trait.mut.dragon_elytra.desc": "飞行时支持跳跃推进加速。"
     }
   },
   "metadata": {
@@ -16671,10 +16721,10 @@
   "workspaceSettings": {
     "modid": "mut",
     "modName": "MoreUpgradeTemplate",
-    "version": "0.4.3",
+    "version": "0.5.0",
     "description": "More Upgrade Smithing Templates",
     "author": "Lying_ice",
-    "websiteURL": "https://mcreator.net",
+    "websiteURL": "https://space.bilibili.com/385338736",
     "license": "MIT License",
     "serverSideOnly": false,
     "modPicture": "super_smithing_table",

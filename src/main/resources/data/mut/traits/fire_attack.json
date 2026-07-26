@@ -1,0 +1,11 @@
+{
+  "id": "fire_attack",
+  "supported_items": ["#mut:traits/fire", "mut:flame_gold_spear"],
+  "name_key": "trait.mut.fire_attack.name",
+  "description_keys": ["trait.mut.fire_attack.desc"],
+  "effects": [{
+    "type": "ignite_target",
+    "trigger": "attack",
+    "seconds": {"min": 3, "max": 15}
+  }]
+}
