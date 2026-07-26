@@ -3,11 +3,11 @@
   "temperature": 0.5,
   "downfall": 0.5,
   "effects": {
-    "foliage_color": 10387789,
-    "grass_color": -16749247,
+    "foliage_color": -9801671,
+    "grass_color": -11766212,
     "sky_color": 7972607,
     "fog_color": 12638463,
-    "water_color": -16763392,
+    "water_color": -10388636,
     "water_fog_color": 329011
   },
   "spawners": {

@@ -12,6 +12,22 @@
     "underwaterBlock": {
       "value": "CUSTOM:DebrisStone"
     },
+    "grassColor": {
+      "value": -8342377,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -10444421,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -15444581,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -15444581,
+      "falpha": 0.0
+    },
     "ambientSound": {
       "value": ""
     },

@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "tries": 16,
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "data": {
+                  "Name": "mut:iron_flower"
+                },
+                "weight": 10
+              },
+              {
+                "data": {
+                  "Name": "mut:gilded_marigold_flower"
+                },
+                "weight": 6
+              },
+              {
+                "data": {
+                  "Name": "mut:blue_diamond_rose"
+                },
+                "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "mut:blue_diamond_rosebush"
+                },
+                "weight": 1
+              }
+            ]
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
+    }
+  }
+}

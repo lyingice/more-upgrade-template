@@ -1,5 +1,6 @@
 package net.mcreator.mut;
 
+import net.mcreator.mut.trait.TraitEventHandler;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -76,6 +77,7 @@ public class MutMod {
 		NeoForge.EVENT_BUS.register(new AffixEventHandler());
 		NeoForge.EVENT_BUS.register(new EnergyConversionHandler());
 		MutModParticles.PARTICLES.register(modEventBus);
+        NeoForge.EVENT_BUS.register(new TraitEventHandler());
 		// End of user code block mod init
 	}
 

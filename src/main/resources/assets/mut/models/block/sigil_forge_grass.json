@@ -1,13 +1,11 @@
 {
-  "parent": "block/cube",
+  "parent": "block/grass_block",
   "textures": {
-    "down": "mut:block/sigil_forge_dirt",
-    "up": "mut:block/sigil_forge_glass_top",
-    "north": "mut:block/sigil_forge_glass",
-    "east": "mut:block/sigil_forge_glass",
-    "south": "mut:block/sigil_forge_glass",
-    "west": "mut:block/sigil_forge_glass",
-    "particle": "mut:block/sigil_forge_dirt"
+    "bottom": "mut:block/sigil_forge_dirt",
+    "top": "mut:block/sigil_forge_glass_top",
+    "side": "mut:block/sigil_forge_glass",
+    "particle": "mut:block/sigil_forge_dirt",
+    "overlay": "block/grass_block_side_overlay"
   },
-  "render_type": "solid"
+  "render_type": "cutout_mipped"
 }

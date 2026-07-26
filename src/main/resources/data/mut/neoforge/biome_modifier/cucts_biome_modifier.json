@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "mut:sigil_forge_desert",
+  "features": "mut:cucts",
+  "step": "surface_structures"
+}

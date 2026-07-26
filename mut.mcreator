@@ -11825,7 +11825,7 @@
       "name": "DebrisLeaves",
       "type": "block",
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "debris_leaves",
       "metadata": {
         "files": [
@@ -12911,6 +12911,90 @@
         ]
       },
       "path": "~/Sigil Forge Dimension/Entity"
+    },
+    {
+      "name": "SteelSlimeLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steel_slime_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/entities/steel_slime.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Loot"
+    },
+    {
+      "name": "PiglinLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piglin_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/entities/piglin_expeditionary.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Loot"
+    },
+    {
+      "name": "PiglinLoot2",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "piglin_loot_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/entities/fat_piglin_expeditionary.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Loot"
+    },
+    {
+      "name": "Lavas",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lavas",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/worldgen/placed_feature/lavas.json",
+          "src/main/resources/data/mut/neoforge/biome_modifier/lavas_biome_modifier.json",
+          "src/main/resources/data/mut/worldgen/configured_feature/lavas.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Feature"
+    },
+    {
+      "name": "Cucts",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cucts",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/neoforge/biome_modifier/cucts_biome_modifier.json",
+          "src/main/resources/data/mut/worldgen/configured_feature/cucts.json",
+          "src/main/resources/data/mut/worldgen/placed_feature/cucts.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Feature"
+    },
+    {
+      "name": "Flowers",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flowers",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/neoforge/biome_modifier/flowers_biome_modifier.json",
+          "src/main/resources/data/mut/worldgen/configured_feature/flowers.json",
+          "src/main/resources/data/mut/worldgen/placed_feature/flowers.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Feature"
     }
   ],
   "variable_elements": [],
@@ -13525,6 +13609,10 @@
       "~CUSTOM:SigilForgeSwamp"
     ],
     "BLOCKS:minecraft:overworld_carver_replaceables": [
+      "~CUSTOM:SigilForgeDirt",
+      "~CUSTOM:SigilForgeGrass",
+      "~CUSTOM:SigilForgeCutSandstone",
+      "~CUSTOM:SigilForgeSand",
       "~Blocks.SANDSTONE#0",
       "~Blocks.SAND#0",
       "~CUSTOM:DebrisStone",
@@ -13643,9 +13731,6 @@
       "~CUSTOM:SigilForgeSnowyPeaks",
       "~CUSTOM:SigilForgeSnowyPlateau"
     ],
-    "BIOMES:minecraft:has_structure/desert_pyramid": [
-      "~CUSTOM:SigilForgeDesert"
-    ],
     "BIOMES:minecraft:has_structure/woodland_mansion": [
       "~CUSTOM:SigilForgeJungle"
     ],
@@ -13725,7 +13810,6 @@
     "BLOCKS:minecraft:sand": [
       "CUSTOM:SigilForgeSand"
     ],
-    "BIOMES:minecraft:is_overworld": [],
     "ENTITIES:minecraft:arthropod": [
       "~CUSTOM:FatPiglinExpeditionary",
       "~CUSTOM:PiglinExpeditionary"

@@ -7,6 +7,6 @@ import net.minecraft.world.level.block.Block;
 
 public class DebrisStoneBlock extends Block {
 	public DebrisStoneBlock() {
-		super(BlockBehaviour.Properties.of().mapColor(MapColor.METAL).strength(2f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
+		super(BlockBehaviour.Properties.of().mapColor(MapColor.DEEPSLATE).strength(2f, 10f).requiresCorrectToolForDrops().instrument(NoteBlockInstrument.BASEDRUM));
 	}
 }

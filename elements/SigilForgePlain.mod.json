@@ -4,13 +4,29 @@
   "definition": {
     "name": "Sigil Forge Plain",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "CUSTOM:SigilForgeGrass"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "CUSTOM:SigilForgeDirt"
     },
     "underwaterBlock": {
       "value": "Blocks.GRAVEL"
+    },
+    "grassColor": {
+      "value": -7226023,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -8934609,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -12275723,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -12275723,
+      "falpha": 0.0
     },
     "ambientSound": {
       "value": ""

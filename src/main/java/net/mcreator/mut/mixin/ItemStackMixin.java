@@ -1,6 +1,5 @@
 package net.mcreator.mut.mixin;
 
-import net.minecraft.spearcore.item.SpearItem;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -10,7 +9,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-
+@Deprecated
 @Mixin(ItemStack.class)
 public abstract class ItemStackMixin {
 

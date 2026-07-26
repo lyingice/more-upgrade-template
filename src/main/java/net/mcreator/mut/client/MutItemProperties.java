@@ -9,7 +9,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
 
-@EventBusSubscriber(modid = MutMod.MODID, value = Dist.CLIENT)
+//@EventBusSubscriber(modid = MutMod.MODID, value = Dist.CLIENT)
 public class MutItemProperties {
 
     @SubscribeEvent

@@ -27,7 +27,7 @@ import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 import java.util.List;
 
-@EventBusSubscriber(modid = MutMod.MODID)
+//@EventBusSubscriber(modid = MutMod.MODID)
 @Deprecated
 public class SpearAttackHandler {
 

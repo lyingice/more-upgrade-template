@@ -10,7 +10,8 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.function.Consumer;
-
+@Deprecated
+//This is a mixin for the SpearCore mod, it is not needed for the mod to work
 @Mixin(Item.class)
 public class ItemInitializeClientMixin {
 

@@ -4,13 +4,29 @@
   "definition": {
     "name": "Sigil Forge Snowy Plateau",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "CUSTOM:SigilForgeGrass"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "CUSTOM:SigilForgeDirt"
     },
     "underwaterBlock": {
       "value": "Blocks.GRAVEL"
+    },
+    "grassColor": {
+      "value": -8342377,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -10444421,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -15444581,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -15444581,
+      "falpha": 0.0
     },
     "ambientSound": {
       "value": ""
@@ -77,7 +93,9 @@
     },
     "defaultFeatures": [
       "Caves",
-      "Ores"
+      "Ores",
+      "JungleGrass",
+      "PlainsTallGrass"
     ],
     "spawnStronghold": false,
     "spawnMineshaft": false,

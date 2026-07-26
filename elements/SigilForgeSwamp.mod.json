@@ -4,20 +4,24 @@
   "definition": {
     "name": "Sigil Forge Swamp",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "CUSTOM:SigilForgeGrass"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "CUSTOM:SigilForgeDirt"
     },
     "underwaterBlock": {
       "value": "CUSTOM:DebrisStone"
     },
     "grassColor": {
-      "value": -16749247,
+      "value": -11766212,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -9801671,
       "falpha": 0.0
     },
     "waterColor": {
-      "value": -16763392,
+      "value": -10388636,
       "falpha": 0.0
     },
     "ambientSound": {

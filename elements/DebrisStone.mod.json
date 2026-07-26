@@ -76,7 +76,7 @@
     "emittedRedstonePower": {
       "fixedValue": 15.0
     },
-    "colorOnMap": "IRON",
+    "colorOnMap": "DEEPSLATE_GRAY",
     "noteBlockInstrument": "basedrum",
     "creativePickItem": {
       "value": ""

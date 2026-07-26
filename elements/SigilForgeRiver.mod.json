@@ -4,13 +4,21 @@
   "definition": {
     "name": "Sigil Forge River",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "CUSTOM:SigilForgeGrass"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "CUSTOM:SigilForgeDirt"
     },
     "underwaterBlock": {
       "value": "Blocks.GRAVEL"
+    },
+    "grassColor": {
+      "value": -7226023,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -8934609,
+      "falpha": 0.0
     },
     "ambientSound": {
       "value": ""
@@ -56,8 +64,8 @@
       "max": 1.0
     },
     "genDepth": {
-      "min": 0.2,
-      "max": 0.9
+      "min": 0.0,
+      "max": 0.5
     },
     "treesPerChunk": 1,
     "vanillaTreeType": "Default",

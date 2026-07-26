@@ -4,10 +4,6 @@
   "package": "net.mcreator.mut.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ItemInitializeClientMixin",
-    "ItemStackMixin",
-    "ServerPlayerMotionMixin",
-    "LivingEntitySpearMixin",
     "PiercingSpearMixin",
     "SharpshooterMixin",
     "StrengthBlessingMixin",
@@ -16,10 +12,5 @@
     "MixinLivingEntity"
   ],
   "client": [
-    "LocalPlayerFovMixin",
-    "LocalPlayerInputMixin",
-    "ItemInHandRendererMixin",
-    "ItemInHandLayerMixin",
-    "HumanoidModelMixin"
   ]
 }

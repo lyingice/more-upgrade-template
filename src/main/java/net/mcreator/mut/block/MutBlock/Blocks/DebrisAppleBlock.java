@@ -1,16 +1,16 @@
 package net.mcreator.mut.block.MutBlock.Blocks;
 
 import com.mojang.serialization.MapCodec;
+import net.mcreator.mut.block.DebrisLeavesBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -90,6 +90,7 @@ public class DebrisAppleBlock extends Block implements SimpleWaterloggedBlock {
         return null;
     }
 
+
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext ctx) {
         return state.getValue(HANGING) ? hangingShape : standingShape;
@@ -98,11 +99,32 @@ public class DebrisAppleBlock extends Block implements SimpleWaterloggedBlock {
     @Override
     protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         Direction direction = getConnectedDirection(state).getOpposite();
-        return Block.canSupportCenter(level, pos.relative(direction), direction.getOpposite());
+        BlockPos supportPos = pos.relative(direction);
+        BlockState supportState = level.getBlockState(supportPos);
+
+        // 检查支撑方块是否是树叶（原版或自定义）
+        return supportState.getBlock() instanceof LeavesBlock ||
+                supportState.getBlock() instanceof DebrisLeavesBlock ||
+                // 也支持原版树叶
+                supportState.is(BlockTags.LEAVES);
     }
 
     protected static Direction getConnectedDirection(BlockState state) {
         return state.getValue(HANGING) ? Direction.DOWN : Direction.UP;
+    }
+    @Override
+    public void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean moved) {
+        // 在果实被破坏时触发冷却
+        if (!level.isClientSide && state.getBlock() instanceof DebrisAppleBlock && newState.isAir()) {
+            // 掉落果实（如果是玩家破坏，已经在 playerDestroy 中处理了）
+            // 但这里需要触发树叶冷却
+            BlockPos abovePos = pos.above();
+            BlockState aboveState = level.getBlockState(abovePos);
+            if (aboveState.getBlock() instanceof DebrisLeavesBlock leaves) {
+                leaves.onFruitPicked(level, abovePos);
+            }
+        }
+        super.onRemove(state, level, pos, newState, moved);
     }
 
     @Override

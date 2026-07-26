@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_all",
+  "parent": "block/leaves",
   "textures": {
     "all": "mut:block/debris_leaves",
     "particle": "mut:block/debris_leaves"

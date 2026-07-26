@@ -14,17 +14,17 @@ public class DebrisAppleEatProcedure {
 			return;
 		if (itemstack.getItem() == MutModItems.DEBRIS_APPLE.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 0));
+				_entity.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 0));
 		} else if (itemstack.getItem() == MutModItems.STEEL_DEBRIS_APPLE.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 0));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 0));
+				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 400, 1));
 		} else if (itemstack.getItem() == MutModItems.GOLDEN_DEBRIS_APPLE.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 0));
+				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 1));
 		} else if (itemstack.getItem() == MutModItems.DIAMOND_DEBRIS_APPLE.get()) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 1));
@@ -36,7 +36,7 @@ public class DebrisAppleEatProcedure {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 1));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 1));
+				_entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600, 0));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 1));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

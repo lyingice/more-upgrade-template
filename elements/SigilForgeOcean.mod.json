@@ -4,13 +4,37 @@
   "definition": {
     "name": "Sigil Forge Ocean",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "CUSTOM:SigilForgeGrass"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "CUSTOM:SigilForgeDirt"
     },
     "underwaterBlock": {
       "value": "Blocks.GRAVEL"
+    },
+    "airColor": {
+      "value": -8674049,
+      "falpha": 0.0
+    },
+    "fogColor": {
+      "value": -5516545,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -7423631,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -9328819,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -15235116,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -15637072,
+      "falpha": 0.0
     },
     "ambientSound": {
       "value": ""

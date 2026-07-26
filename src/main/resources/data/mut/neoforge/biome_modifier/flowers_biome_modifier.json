@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#mut:is_normal_animal_spawn",
+  "features": "mut:flowers",
+  "step": "surface_structures"
+}

@@ -4,13 +4,37 @@
   "definition": {
     "name": "Sigil Forge Plateau",
     "groundBlock": {
-      "value": "Blocks.GRASS"
+      "value": "CUSTOM:SigilForgeGrass"
     },
     "undergroundBlock": {
-      "value": "Blocks.DIRT#0"
+      "value": "CUSTOM:SigilForgeDirt"
     },
     "underwaterBlock": {
       "value": "Blocks.GRAVEL"
+    },
+    "airColor": {
+      "value": -9000705,
+      "falpha": 0.0
+    },
+    "fogColor": {
+      "value": -5516545,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -4212907,
+      "falpha": 0.0
+    },
+    "foliageColor": {
+      "value": -5331926,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -14315352,
+      "falpha": 0.0
+    },
+    "waterFogColor": {
+      "value": -14315352,
+      "falpha": 0.0
     },
     "ambientSound": {
       "value": ""

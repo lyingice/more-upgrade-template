@@ -3,8 +3,12 @@
   "values": [
     "minecraft:grass_block",
     "minecraft:dirt",
+    "mut:sigil_forge_sand",
+    "mut:sigil_forge_grass",
     "mut:debris_stone",
+    "mut:sigil_forge_cut_sandstone",
     "minecraft:sand",
+    "mut:sigil_forge_dirt",
     "minecraft:sandstone"
   ]
 }

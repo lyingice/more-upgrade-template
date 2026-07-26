@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(net.minecraft.world.entity.LivingEntity.class)
-@Deprecated
 public class PiercingSpearMixin {
 
     @ModifyVariable(
