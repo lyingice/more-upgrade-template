@@ -7,11 +7,11 @@ import net.minecraft.world.damagesource.DamageTypes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-
+@Deprecated
 @Mixin(LivingEntity.class)
 public class WitherDamageMixin {
 
-    @ModifyVariable(
+    /*@ModifyVariable(
             method = "hurt",
             at = @At("HEAD"),
             argsOnly = true,
@@ -23,5 +23,5 @@ public class WitherDamageMixin {
         LivingEntity entity = (LivingEntity) (Object) this;
         float bonus = WitherMarkHelper.getDamageBonus(entity);
         return damage + bonus;
-    }
+    }*/
 }

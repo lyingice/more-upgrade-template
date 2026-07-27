@@ -1,0 +1,11 @@
+{
+  "id": "energy_conversion",
+  "name_key": "affix.energy_conversion.name",
+  "desc_key": "affix.energy_conversion.description",
+  "effects": [
+    { "type": "durability_repair", "trigger": "durability_change", "per_durability": 1, "saturation_per_point": 4 }
+  ],
+  "configurable": [
+    { "name": "per_level", "default": 0.5, "min": 0, "max": 10 }
+  ]
+}

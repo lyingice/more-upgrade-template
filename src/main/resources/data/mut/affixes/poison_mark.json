@@ -1,0 +1,15 @@
+{
+  "id": "poison_mark",
+  "name_key": "affix.poison_mark.name",
+  "desc_key": "affix.poison_mark.description",
+  "effects": [
+    { "type": "mark_on_attack", "mark_effect": "mut:poison_mark", "duration_ticks": 600 },
+    { "type": "mark_amplify",
+      "mark_effect": "mut:poison_mark",
+      "amplify_damage_types": ["neoforge:poison"],
+      "coefficient": "per_level" }
+  ],
+  "configurable": [
+    { "name": "per_level", "default": 0.5, "min": 0, "max": 10 }
+  ]
+}

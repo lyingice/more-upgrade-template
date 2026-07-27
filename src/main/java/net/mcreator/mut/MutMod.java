@@ -1,8 +1,5 @@
 package net.mcreator.mut;
 
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -35,7 +32,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.mcreator.mut.trait.TraitEventHandler;
 import net.mcreator.mut.init.*;
 import net.mcreator.mut.event.EnergyConversionHandler;
-import net.mcreator.mut.event.AffixEventHandler;
+import net.mcreator.mut.affix.event.AffixEventHandler;
 import net.mcreator.mut.config.MutCrossbowLoadCountConfig;
 import net.mcreator.mut.config.AffixConfig;
 import net.mcreator.mut.compat.spearcore.SpearcoreIntegration;
@@ -50,9 +47,6 @@ import java.util.Comparator;
 
 import it.unimi.dsi.fastutil.ints.IntObjectPair;
 import it.unimi.dsi.fastutil.ints.IntObjectImmutablePair;
-
-import static net.mcreator.mut.init.MutModBlocks.*;
-import static net.mcreator.mut.init.MutModItems.BLUE_DIAMOND_ROSE;
 
 @Mod("mut")
 public class MutMod {
@@ -80,7 +74,6 @@ public class MutMod {
 		container.registerConfig(ModConfig.Type.COMMON, AffixConfig.SPEC, "mut_affix_coefficients.toml");
 		ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.SERVER, MutCrossbowLoadCountConfig.CONFIG_SPEC, "mut_crossbow_load_count.toml");
 		MutModItems.ENTITY_REGISTRY.register(modEventBus);
-		NeoForge.EVENT_BUS.register(new AffixEventHandler());
 		NeoForge.EVENT_BUS.register(new EnergyConversionHandler());
 		MutModParticles.PARTICLES.register(modEventBus);
 		NeoForge.EVENT_BUS.register(new TraitEventHandler());

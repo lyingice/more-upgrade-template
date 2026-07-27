@@ -1,0 +1,11 @@
+{
+  "id": "sharpshooter",
+  "name_key": "affix.sharpshooter.name",
+  "desc_key": "affix.sharpshooter.description",
+  "effects": [
+    { "type": "damage_multiplier", "trigger": "attack", "amount": 0.075, "ranged_only": true }
+  ],
+  "configurable": [
+    { "name": "per_level", "default": 0.075, "min": 0, "max": 1, "percentage": true }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "big_stomach",
+  "name_key": "affix.big_stomach.name",
+  "desc_key": "affix.big_stomach.description",
+  "effects": [
+    { "type": "heal_bonus", "trigger": "heal", "condition": "satiated", "amount": 0.5 }
+  ],
+  "configurable": [
+    { "name": "per_level", "default": 0.5, "min": 0, "max": 5, "percentage": false }
+  ]
+}

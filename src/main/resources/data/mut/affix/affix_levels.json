@@ -28,7 +28,7 @@
     {
       "level": 5,
       "name_key": "affix.level.legendary",
-      "formatting": "orange",
+      "formatting": "gold",
       "weight_curve": { "base": 11, "decay": 0.7, "growth": 2.0, "threshold": 20 }
     },
     {
@@ -46,7 +46,7 @@
     {
       "level": 8,
       "name_key": "affix.level.celestial",
-      "formatting": "purple",
+      "formatting": "dark_purple",
       "weight_curve": { "base": 1, "decay": 0.7, "growth": 5.0, "threshold": 40 }
     }
   ],

@@ -6,11 +6,11 @@ import net.minecraft.world.damagesource.DamageSource;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-
+@Deprecated
 @Mixin(LivingEntity.class)
 public class MomentumMixin {
 
-    @ModifyVariable(
+    /*@ModifyVariable(
             method = "hurt",
             at = @At("HEAD"),
             argsOnly = true,
@@ -23,5 +23,5 @@ public class MomentumMixin {
 
         float multiplier = MomentumHelper.getMultiplier(attacker);
         return damage * multiplier;
-    }
+    }*/
 }

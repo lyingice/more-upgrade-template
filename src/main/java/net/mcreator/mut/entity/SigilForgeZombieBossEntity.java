@@ -4,6 +4,7 @@ import net.mcreator.mut.MutMod;
 import net.mcreator.mut.affix.Affix;
 import net.mcreator.mut.affix.AffixRegistry;
 import net.mcreator.mut.init.MutModEntities;
+import net.mcreator.mut.init.MutModItems;
 import net.mcreator.mut.init.MutModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
@@ -89,13 +90,15 @@ public class SigilForgeZombieBossEntity extends EliteAborigineZombieEntity{
                         .getHolderOrThrow(TrimMaterials.REDSTONE),
                 this.level().registryAccess()
                         .registryOrThrow(Registries.TRIM_PATTERN)
-                        .getHolderOrThrow(TrimPatterns.SILENCE)
+                        .getHolderOrThrow(TrimPatterns.WARD)
         );
 
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(Items.NETHERITE_HELMET));
-        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(Items.NETHERITE_CHESTPLATE));
-        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(Items.NETHERITE_LEGGINGS));
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(Items.NETHERITE_BOOTS));
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(MutModItems.FLAME_GOLD_HELMET.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(MutModItems.FLAME_GOLD_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(MutModItems.FLAME_GOLD_LEGGINGS.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(MutModItems.FLAME_GOLD_BOOTS.get()));
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(MutModItems.FLAME_GOLD_AXE.get()));
+        this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(MutModItems.FLAME_GOLD_SHIELD.get()));
 
         // 应用纹饰到所有盔甲
         for (EquipmentSlot slot : EquipmentSlot.values()) {

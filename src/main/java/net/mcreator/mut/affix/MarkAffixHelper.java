@@ -8,7 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
-
+@Deprecated
 public class MarkAffixHelper {
 
     public static void applyMarkOnAttack(LivingEntity attacker, LivingEntity target, IMarkAffix mark) {
@@ -25,7 +25,7 @@ public class MarkAffixHelper {
                 mark.getMarkEffect(), mark.getMarkDurationTicks(),
                 newLevel - 1, false, true, true));
 
-        if (attacker instanceof Player player) {
+        /*if (attacker instanceof Player player) {
             player.displayClientMessage(
                     Component.literal("✦ 施加" + mark.getDisplayName().getString()
                             + " " + getLevelRoman(newLevel) + " ✦")
@@ -34,7 +34,7 @@ public class MarkAffixHelper {
                                     : mark instanceof WitherMarkAffix ? ChatFormatting.DARK_PURPLE
                                     : ChatFormatting.GRAY),
                     true);
-        }
+        }*/
     }
 
     private static String getLevelRoman(int level) {

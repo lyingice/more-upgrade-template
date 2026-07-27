@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
-
+@Deprecated
 public class WitherMarkAffix implements IMarkAffix {
 
     public static final String AFFIX_ID = "wither_mark";

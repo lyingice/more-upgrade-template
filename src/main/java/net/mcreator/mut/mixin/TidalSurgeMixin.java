@@ -6,7 +6,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-
+@Deprecated
 @Mixin(net.minecraft.world.entity.LivingEntity.class)
 public class TidalSurgeMixin {
 

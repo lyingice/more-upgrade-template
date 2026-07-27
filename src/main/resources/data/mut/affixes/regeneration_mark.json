@@ -1,0 +1,11 @@
+{
+  "id": "regeneration_mark",
+  "name_key": "affix.regeneration_mark.name",
+  "desc_key": "affix.regeneration_mark.description",
+  "effects": [
+    { "type": "heal_bonus", "trigger": "heal", "amount": 0.5 }
+  ],
+  "configurable": [
+    { "name": "per_level", "default": 0.5, "min": 0, "max": 10 }
+  ]
+}

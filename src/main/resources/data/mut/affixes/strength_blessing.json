@@ -1,0 +1,11 @@
+{
+  "id": "strength_blessing",
+  "name_key": "affix.strength_blessing.name",
+  "desc_key": "affix.strength_blessing.description",
+  "effects": [
+    { "type": "damage_multiplier", "trigger": "attack", "amount": 0.05 }
+  ],
+  "configurable": [
+    { "name": "per_level", "default": 0.05, "min": 0, "max": 1 , "percentage": true}
+  ]
+}

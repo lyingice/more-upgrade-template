@@ -7522,7 +7522,7 @@
       "name": "PoisonMark",
       "type": "potioneffect",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "poison_mark",
       "metadata": {
         "files": [

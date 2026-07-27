@@ -5,10 +5,10 @@ import net.minecraft.world.entity.LivingEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-
+@Deprecated
 @Mixin(LivingEntity.class)
 public class RegenerationMixin {
-
+/*
     @ModifyVariable(
             method = "heal",
             at = @At("HEAD"),
@@ -19,5 +19,5 @@ public class RegenerationMixin {
         LivingEntity entity = (LivingEntity) (Object) this;
         float bonus = RegenerationMarkHelper.getHealBonus(entity);
         return amount + bonus;
-    }
+    }*/
 }

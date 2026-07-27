@@ -1,0 +1,11 @@
+{
+  "id": "momentum",
+  "name_key": "affix.momentum.name",
+  "desc_key": "affix.momentum.description",
+  "effects": [
+    { "type": "conditional_multiplier", "trigger": "attack", "condition": "midair", "amount": 0.125 }
+  ],
+  "configurable": [
+    { "name": "per_level", "default": 0.125, "min": 0, "max": 1, "percentage": true }
+  ]
+}

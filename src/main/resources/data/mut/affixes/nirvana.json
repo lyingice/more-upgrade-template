@@ -1,0 +1,11 @@
+{
+  "id": "nirvana",
+  "name_key": "affix.nirvana.name",
+  "desc_key": "affix.nirvana.description",
+  "effects": [
+    { "type": "attribute_modifier", "trigger": "always", "slot": "mainhand", "attribute": "minecraft:generic.attack_damage", "value": 1.0, "operation": "add" },
+    { "type": "attribute_modifier", "trigger": "always", "slot": "mainhand", "attribute": "minecraft:generic.attack_speed", "value": 0.1, "operation": "add" },
+    { "type": "attribute_modifier", "trigger": "always", "slot": "mainhand", "attribute": "minecraft:generic.block_interaction_range", "value": 1.0, "operation": "add" }
+  ],
+  "configurable": []
+}

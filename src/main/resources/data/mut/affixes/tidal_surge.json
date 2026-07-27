@@ -1,0 +1,13 @@
+{
+  "id": "tidal_surge",
+  "name_key": "affix.tidal_surge.name",
+  "desc_key": "affix.tidal_surge.description",
+  "effects": [
+    { "type": "conditional_multiplier", "trigger": "attack", "condition": "water", "amount": 0.10 },
+    { "type": "conditional_multiplier", "trigger": "attack", "condition": "rain", "amount": 0.05 }
+  ],
+  "configurable": [
+    { "name": "water", "default": 0.10, "min": 0, "max": 1 , "percentage": true},
+    { "name": "rain", "default": 0.05, "min": 0, "max": 1 , "percentage": true}
+  ]
+}

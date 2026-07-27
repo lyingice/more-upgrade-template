@@ -4,12 +4,10 @@
   "package": "net.mcreator.mut.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "PiercingSpearMixin",
-    "SharpshooterMixin",
-    "StrengthBlessingMixin",
-    "TidalSurgeMixin",
-    "BigStomachMixin",
-    "MixinLivingEntity"
+    "MixinLivingEntity",
+    "AffixDamageMixin",
+    "AffixHealMixin",
+    "AffixProjectileMixin"
   ],
   "client": [
   ]

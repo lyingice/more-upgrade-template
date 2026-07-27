@@ -1,6 +1,7 @@
 package net.mcreator.mut.affix;
 
-import net.mcreator.mut.affix.impl.*;
+import net.mcreator.mut.affix.json.AffixJsonLoader;
+import net.mcreator.mut.affix.json.AffixJsonConfig;
 import javax.annotation.Nullable;
 import java.util.*;
 
@@ -8,24 +9,16 @@ public class AffixRegistry {
 
     private static final Map<String, Affix> AFFIXES = new LinkedHashMap<>();
 
-    // ========== 注册所有词缀 ==========
+    // ★ 由 AffixJsonLoader.apply() 调用，不再手动 new
+    public static void reloadFromJson() {
+        AFFIXES.clear();
+        for (AffixJsonConfig cfg : AffixJsonLoader.getAllConfigs()) {
+            register(new JsonAffix(cfg));
+        }
+    }
 
-    public static final Affix POISON_MARK       = register(new PoisonMarkAffix());
-    public static final Affix FIRE_MARK         = register(new FireMarkAffix());
-    public static final Affix WITHER_MARK       = register(new WitherMarkAffix());
-    public static final Affix NIRVANA           = register(new NirvanaAffix());
-    public static final Affix MOMENTUM          = register(new MomentumAffix());
-    public static final Affix REGENERATION_MARK = register(new RegenerationMarkAffix());
-    public static final Affix PIERCING_SPEAR    = register(new PiercingSpearAffix());
-    public static final Affix ENERGY_CONVERSION = register(new EnergyConversionAffix());
-    public static final Affix SHARPSHOOTER      = register(new SharpshooterAffix());
-    public static final Affix STRENGTH_BLESSING = register(new StrengthBlessingAffix());
-    public static final Affix TIDAL_SURGE       = register(new TidalSurgeAffix());
-    public static final Affix BIG_STOMACH       = register(new BigStomachAffix());
-
-    private static Affix register(Affix affix) {
+    private static void register(Affix affix) {
         AFFIXES.put(affix.getId(), affix);
-        return affix;
     }
 
     @Nullable
@@ -33,5 +26,20 @@ public class AffixRegistry {
 
     public static Collection<Affix> getAll() {
         return Collections.unmodifiableCollection(new ArrayList<>(AFFIXES.values()));
+    }
+
+    // ★ 轻量实现，所有数据来自 JSON
+    private static class JsonAffix implements Affix {
+        private final AffixJsonConfig config;
+
+        JsonAffix(AffixJsonConfig config) { this.config = config; }
+
+        @Override public String getId() { return config.getId(); }
+
+        @Override
+        public String getNameTranslationKey() { return config.getNameKey(); }
+
+        @Override
+        public String getDescriptionTranslationKey() { return config.getDescKey(); }
     }
 }

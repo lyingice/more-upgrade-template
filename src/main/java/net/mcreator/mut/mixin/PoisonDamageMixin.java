@@ -10,11 +10,11 @@ import net.neoforged.neoforge.common.NeoForgeMod;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-
+@Deprecated
 @Mixin(LivingEntity.class)
 public class PoisonDamageMixin {
 
-    @ModifyVariable(
+   /* @ModifyVariable(
             method = "hurt",
             at = @At("HEAD"),
             argsOnly = true,
@@ -33,5 +33,5 @@ public class PoisonDamageMixin {
 
         int level = mark.getAmplifier() + 1;
         return damage + level * 0.5F;
-    }
+    }*/
 }

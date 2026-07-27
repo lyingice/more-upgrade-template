@@ -7,7 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import java.util.ArrayList;
 import java.util.List;
-
+@Deprecated
 public class EnergyConversionAffix implements Affix {
 
     public static final String AFFIX_ID = "energy_conversion";

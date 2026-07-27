@@ -7,7 +7,7 @@ import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
-
+@Deprecated
 public class NirvanaAffix implements Affix {
 
     public static final String AFFIX_ID = "nirvana";

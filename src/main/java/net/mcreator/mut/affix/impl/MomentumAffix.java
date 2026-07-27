@@ -3,7 +3,7 @@ package net.mcreator.mut.affix.impl;
 import net.mcreator.mut.affix.Affix;
 import net.mcreator.mut.config.AffixConfig;
 import net.minecraft.world.entity.LivingEntity;
-
+@Deprecated
 public class MomentumAffix implements Affix {
 
     public static final String AFFIX_ID = "momentum";
