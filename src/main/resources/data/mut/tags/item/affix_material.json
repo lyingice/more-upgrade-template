@@ -18,6 +18,10 @@
     "minecraft:ender_pearl",
     "minecraft:arrow",
     "minecraft:echo_shard",
-    "minecraft:dragon_breath"
+    "minecraft:dragon_breath",
+    "minecraft:golden_apple",
+    "minecraft:wind_charge",
+    "minecraft:trident",
+    "minecraft:spectral_arrow"
   ]
 }

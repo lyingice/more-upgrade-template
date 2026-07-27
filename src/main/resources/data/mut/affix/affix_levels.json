@@ -1,5 +1,5 @@
-{
-  "__comment": "词缀等级定义与权重曲线配置 - 数据驱动核心（三改：材料提供额外附魔能力）",
+﻿{
+  "__comment": "词缀等级定义与权重曲线（已修复颜色矛盾 + 调整保底对齐）",
   "levels": [
     {
       "level": 1,
@@ -12,14 +12,14 @@
       "level": 2,
       "name_key": "affix.level.uncommon",
       "color": "#5555FF",
-      "formatting": "green",
+      "formatting": "blue",
       "weight_curve": { "base": 38, "decay": 0.7, "growth": 0.8, "threshold": 5 }
     },
     {
       "level": 3,
       "name_key": "affix.level.rare",
       "color": "#FFAA00",
-      "formatting": "blue",
+      "formatting": "gold",
       "weight_curve": { "base": 28, "decay": 0.7, "growth": 1.0, "threshold": 10 }
     },
     {
@@ -33,7 +33,7 @@
       "level": 5,
       "name_key": "affix.level.legendary",
       "color": "#FFFF55",
-      "formatting": "gold",
+      "formatting": "yellow",
       "weight_curve": { "base": 11, "decay": 0.7, "growth": 2.0, "threshold": 20 }
     },
     {

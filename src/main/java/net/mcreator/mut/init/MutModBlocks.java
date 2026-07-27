@@ -3,6 +3,9 @@
 */
 package net.mcreator.mut.init;
 
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
@@ -302,7 +305,17 @@ public class MutModBlocks {
 	public static final DeferredBlock<Block> DIAMOND_DEBRIS_APPLE = REGISTRY.register("diamond_debris_apple", DiamondDebrisApple::new);
 	public static final DeferredBlock<Block> ANCIENT_DEBRIS_APPLE = REGISTRY.register("ancient_debris_apple", AncientDebrisApple::new);
 
-	// End of user code block custom blocks
+    //花盆
+    public static final DeferredBlock<Block> POTTED_IRON_FLOWER = REGISTRY.register("potted_iron_flower",
+            () -> new FlowerPotBlock(IRON_FLOWER.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)));
+    public static final DeferredBlock<Block> POTTED_BLUE_DIAMOND_ROSE = REGISTRY.register("potted_blue_diamond_rose",
+            () -> new FlowerPotBlock(BLUE_DIAMOND_ROSE.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)));
+    public static final DeferredBlock<Block> POTTED_GILDED_MARIGOLD_FLOWER = REGISTRY.register("potted_gilded_marigold_flower",
+            () -> new FlowerPotBlock(GILDED_MARIGOLD_FLOWER.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)));
+    public static final DeferredBlock<Block> POTTED_DEBRIS_SAPLING = REGISTRY.register("potted_debris_sapling",
+            () -> new FlowerPotBlock(DEBRIS_SAPLING.get(), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)));
+
+    // End of user code block custom blocks
 	@EventBusSubscriber(Dist.CLIENT)
 	public static class BlocksClientSideHandler {
 		@SubscribeEvent

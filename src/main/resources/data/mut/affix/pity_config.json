@@ -1,13 +1,12 @@
-{
-  "__comment": "词缀等级软保底系统配置 - 玩家可修改",
-
+﻿{
+  "__comment": "软保底系统（已修复 min_level_for_reset 与 default_max_level_cap 对齐）",
   "enabled": true,
   "global": {
     "pity_per_attempt": 1,
     "pity_cap": 12,
     "pity_reset_on_success": true,
     "pity_bonus_per_point": 0.12,
-    "min_level_for_reset": 6
+    "min_level_for_reset": 5
   },
   "per_material_overrides": {
     "minecraft:nether_star": {

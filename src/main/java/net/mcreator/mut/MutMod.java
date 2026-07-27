@@ -1,5 +1,8 @@
 package net.mcreator.mut;
 
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -47,6 +50,9 @@ import java.util.Comparator;
 
 import it.unimi.dsi.fastutil.ints.IntObjectPair;
 import it.unimi.dsi.fastutil.ints.IntObjectImmutablePair;
+
+import static net.mcreator.mut.init.MutModBlocks.*;
+import static net.mcreator.mut.init.MutModItems.BLUE_DIAMOND_ROSE;
 
 @Mod("mut")
 public class MutMod {

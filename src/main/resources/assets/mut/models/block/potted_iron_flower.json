@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flower_pot_cross",
+  "textures": {
+    "plant": "mut:block/iron_flower"
+  },
+  "render_type": "cutout"
+}
