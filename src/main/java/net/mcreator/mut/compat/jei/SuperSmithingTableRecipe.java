@@ -1,9 +1,13 @@
+// ============================================================
+// SuperSmithingTableRecipe.java
+// ============================================================
 package net.mcreator.mut.compat.jei;
 
 import net.mcreator.mut.affix.AffixRegistry;
 import net.mcreator.mut.affix.data.MaterialBonusRegistry;
 import net.mcreator.mut.affix.data.MaterialContext;
 import net.mcreator.mut.init.MutModItems;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
@@ -11,7 +15,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class SuperSmithingTableRecipe {
@@ -81,7 +84,6 @@ public class SuperSmithingTableRecipe {
             }
             if (maxC == 0) maxC = 5;
 
-            // 如果有固定概率词缀，补上"其他词缀"的剩余概率
             if (!probs.isEmpty() && totalFixed < 1.0) {
                 probs.add(new AffixProbDisplay("other", 1.0 - totalFixed, 1, 6));
             }
@@ -91,16 +93,15 @@ public class SuperSmithingTableRecipe {
             recipes.add(new SuperSmithingTableRecipe(
                     template.copy(), diamondSword.copy(), materialStack.copy(), diamondSword.copy(),
                     materialName, ctx.getEnchantBonus(),
-                    ctx.getMinGuaranteedLevel(), ctx.getMaxLevelCap(),
+                    minG, maxC,
                     probs));
         }
         return recipes;
     }
 
-    /** 词缀概率展示条目 */
     public static class AffixProbDisplay {
-        public final String affixId;    // "fire_mark" 或 "other"
-        public final double probability; // 0.0 ~ 1.0
+        public final String affixId;
+        public final double probability;
         public final int minLevel;
         public final int maxLevel;
 
@@ -115,23 +116,15 @@ public class SuperSmithingTableRecipe {
             return affix != null ? affix.getDisplayName().getString() : affixId;
         }
 
-        /** 根据 affixId 返回展示色 */
+        /** 跟随游戏内 Affix.getColorForLevel() 同一套逻辑 */
         public int getColor() {
-            return switch (affixId) {
-                case "fire_mark"         -> 0xFFFFAA00;  // 金
-                case "poison_mark"       -> 0xFF55FF55;  // 绿
-                case "wither_mark"       -> 0xFF777777;  // 浅灰
-                case "regeneration_mark" -> 0xFFFF55AA;  // 粉
-                case "tidal_surge"       -> 0xFF55AAFF;  // 水蓝
-                case "momentum"          -> 0xFFFFD700;  // 金
-                case "sharpshooter"      -> 0xFF88FF88;  // 亮绿
-                case "strength_blessing" -> 0xFFFF5555;  // 红
-                case "piercing_spear"    -> 0xFFCCCCCC;  // 银白
-                case "energy_conversion" -> 0xFFBB66FF;  // 紫
-                case "big_stomach"       -> 0xFFFF8855;  // 橙
-                case "nirvana"           -> 0xFFFF55FF;  // 品红
-                default                  -> 0xFFAAAAAA;  // 中灰
-            };
+            if ("other".equals(affixId)) return 0xFF888888;
+            var affix = AffixRegistry.get(affixId);
+            if (affix == null) return 0xFF888888;
+            int level = Math.min(maxLevel, affix.getMaxLevel());
+            ChatFormatting fmt = affix.getColorForLevel(level);
+            Integer mcColor = fmt.getColor();
+            return mcColor != null ? 0xFF000000 | mcColor : 0xFF888888;
         }
     }
 }

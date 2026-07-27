@@ -4,57 +4,49 @@
     {
       "level": 1,
       "name_key": "affix.level.common",
-      "color": "#FFFFFF",
       "formatting": "white",
       "weight_curve": { "base": 50, "decay": 0.7, "growth": 0, "threshold": 0 }
     },
     {
       "level": 2,
       "name_key": "affix.level.uncommon",
-      "color": "#5555FF",
-      "formatting": "blue",
+      "formatting": "green",
       "weight_curve": { "base": 38, "decay": 0.7, "growth": 0.8, "threshold": 5 }
     },
     {
       "level": 3,
       "name_key": "affix.level.rare",
-      "color": "#FFAA00",
-      "formatting": "gold",
+      "formatting": "blue",
       "weight_curve": { "base": 28, "decay": 0.7, "growth": 1.0, "threshold": 10 }
     },
     {
       "level": 4,
       "name_key": "affix.level.epic",
-      "color": "#AA00FF",
       "formatting": "light_purple",
       "weight_curve": { "base": 18, "decay": 0.7, "growth": 1.5, "threshold": 15 }
     },
     {
       "level": 5,
       "name_key": "affix.level.legendary",
-      "color": "#FFFF55",
-      "formatting": "yellow",
+      "formatting": "orange",
       "weight_curve": { "base": 11, "decay": 0.7, "growth": 2.0, "threshold": 20 }
     },
     {
       "level": 6,
       "name_key": "affix.level.mythic",
-      "color": "#FF5555",
       "formatting": "red",
       "weight_curve": { "base": 6, "decay": 0.7, "growth": 3.0, "threshold": 25 }
     },
     {
       "level": 7,
       "name_key": "affix.level.ancient",
-      "color": "#AA0000",
       "formatting": "dark_red",
       "weight_curve": { "base": 3, "decay": 0.7, "growth": 4.0, "threshold": 30 }
     },
     {
       "level": 8,
       "name_key": "affix.level.celestial",
-      "color": "#FF55FF",
-      "formatting": "light_purple",
+      "formatting": "purple",
       "weight_curve": { "base": 1, "decay": 0.7, "growth": 5.0, "threshold": 40 }
     }
   ],

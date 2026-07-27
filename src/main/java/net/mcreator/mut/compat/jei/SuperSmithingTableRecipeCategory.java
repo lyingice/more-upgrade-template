@@ -1,6 +1,8 @@
+// ============================================================
+// SuperSmithingTableRecipeCategory.java
+// ============================================================
 package net.mcreator.mut.compat.jei;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -51,25 +53,35 @@ public class SuperSmithingTableRecipeCategory extends AbstractRecipeCategory<Sup
         if (font == null) return;
 
         // ── 4 个槽位 ──
-        slotDrawable.draw(g, 8, 18);   // 模板
-        slotDrawable.draw(g, 36, 18);  // 基底
-        slotDrawable.draw(g, 64, 18);  // 材料
-        slotDrawable.draw(g, 144, 18); // 输出
+        slotDrawable.draw(g, 8, 18);
+        slotDrawable.draw(g, 36, 18);
+        slotDrawable.draw(g, 64, 18);
+        slotDrawable.draw(g, 144, 18);
 
-        // ── 箭头 → ──
+        // ── 箭头 ──
         g.drawString(font, "→", 100, 22, 0xFFCCCCCC, false);
 
-        // ── 输出标签：词缀结果 ──
+        // ── 输出标签 ──
         g.drawCenteredString(font, "§e✦ 词缀 ✦", 164, 8, 0xFFFFFF);
 
         // ═══════════════════════════════════════
-        // 材料信息条（第 46px 行）
+        // 材料信息条
         // ═══════════════════════════════════════
         int y = 46;
-        g.fill(4, y - 2, 172, y + 14, 0x20FFFFFF); // 半透明背景条
+        g.fill(4, y - 2, 172, y + 14, 0x20FFFFFF);
 
         // 材料名
-        g.drawString(font, recipe.getMaterialName(), 8, y, 0xFFFFFFFF, false);
+        int matColor;
+        if (recipe.isUniversal()) {
+            matColor = recipe.getEnchantBonus() >= 20 ? 0xFFFFD700   // 金
+                    : recipe.getEnchantBonus() >= 10 ? 0xFF55FFFF   // 水蓝
+                    : 0xFFAAAAAA;                                    // 浅灰
+        } else if (recipe.isDirected()) {
+            matColor = 0xFFFFAAFF;  // 淡紫
+        } else {
+            matColor = 0xFF888888;  // 暗灰
+        }
+        g.drawString(font,"§l" + recipe.getMaterialName(), 8, y, matColor, false);
 
         // 附魔加成标签
         if (recipe.isUniversal()) {
@@ -88,12 +100,12 @@ public class SuperSmithingTableRecipeCategory extends AbstractRecipeCategory<Sup
         }
 
         // ═══════════════════════════════════════
-        // 词缀概率条（第 64px 行起）
+        // 词缀概率条
         // ═══════════════════════════════════════
         if (recipe.isDirected()) {
             int barY = 64;
             List<SuperSmithingTableRecipe.AffixProbDisplay> probs = recipe.getAffixProbs();
-            int count = Math.min(probs.size(), 4); // 最多显示 4 条
+            int count = Math.min(probs.size(), 4);
             int barH = 8;
             int barGap = 3;
 
@@ -102,8 +114,7 @@ public class SuperSmithingTableRecipeCategory extends AbstractRecipeCategory<Sup
                 int rowY = barY + i * (barH + barGap);
 
                 // 标签名
-                String label = p.getDisplayName();
-                g.drawString(font, label, 8, rowY - 1, 0xFFFFFFFF, false);
+                g.drawString(font, p.getDisplayName(), 8, rowY - 1, p.getColor(), false);
 
                 // 概率条背景
                 int barX = 70;
@@ -113,7 +124,7 @@ public class SuperSmithingTableRecipeCategory extends AbstractRecipeCategory<Sup
                 // 概率条前景
                 int fillW = (int) (p.probability * barW);
                 if (fillW > 0) {
-                    g.fill(barX, rowY, barX + fillW, rowY + barH, 0xFF000000 | p.getColor());
+                    g.fill(barX, rowY, barX + fillW, rowY + barH, p.getColor());
                 }
 
                 // 百分比数字
@@ -121,12 +132,10 @@ public class SuperSmithingTableRecipeCategory extends AbstractRecipeCategory<Sup
                 g.drawString(font, pct, barX + barW + 4, rowY - 1, 0xFFFFFFFF, false);
             }
 
-            // 指向性说明
             if (probs.size() > 4) {
                 g.drawString(font, "§7... 共" + probs.size() + "项", 8, barY + 4 * (barH + barGap), 0xFF888888, false);
             }
         } else {
-            // 无特殊加成
             g.drawString(font, "§7无特定词缀指向，随机分配", 8, 64, 0xFF888888, false);
         }
     }

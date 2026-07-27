@@ -54,8 +54,8 @@
     {
       "item": "minecraft:magma_cream",
       "affix_bonuses": [
-        { "target_affix": "fire_mark", "fixed_probability": 0.25 },
-        { "target_affix": "regeneration_mark", "fixed_probability": 0.1 }
+        { "target_affix": "fire_mark", "fixed_probability": 0.25 , "max_level":5},
+        { "target_affix": "regeneration_mark", "fixed_probability": 0.1 , "max_level":5}
       ]
     },
     {
@@ -73,46 +73,46 @@
     {
       "item": "minecraft:prismarine_crystals",
       "affix_bonuses": [
-        { "target_affix": "tidal_surge", "fixed_probability": 0.25 }
+        { "target_affix": "tidal_surge", "fixed_probability": 0.25 , "max_level":5}
       ]
     },
     {
       "item": "minecraft:rabbit_foot",
       "affix_bonuses": [
-        { "target_affix": "momentum", "fixed_probability": 0.2 },
-        { "target_affix": "sharpshooter", "fixed_probability": 0.2 }
+        { "target_affix": "momentum", "fixed_probability": 0.2 , "max_level":4},
+        { "target_affix": "sharpshooter", "fixed_probability": 0.2 , "max_level":4}
       ]
     },
     {
       "item": "minecraft:fermented_spider_eye",
       "affix_bonuses": [
-        { "target_affix": "poison_mark", "fixed_probability": 0.25 },
-        { "target_affix": "wither_mark", "fixed_probability": 0.25 }
+        { "target_affix": "poison_mark", "fixed_probability": 0.25, "max_level":5 },
+        { "target_affix": "wither_mark", "fixed_probability": 0.25 , "max_level":5}
       ]
     },
     {
       "item": "minecraft:golden_carrot",
       "affix_bonuses": [
-        { "target_affix": "strength_blessing", "fixed_probability": 0.3 }
+        { "target_affix": "strength_blessing", "fixed_probability": 0.3 , "max_level":6}
       ]
     },
     {
       "item": "minecraft:cookie",
       "affix_bonuses": [
-        { "target_affix": "big_stomach", "fixed_probability": 0.35 }
+        { "target_affix": "big_stomach", "fixed_probability": 0.35 , "max_level":7}
       ]
     },
     {
       "item": "minecraft:ender_pearl",
       "affix_bonuses": [
-        { "target_affix": "energy_conversion", "fixed_probability": 0.25 }
+        { "target_affix": "energy_conversion", "fixed_probability": 0.25, "max_level":5 }
       ]
     },
     {
       "item": "minecraft:arrow",
       "affix_bonuses": [
-        { "target_affix": "piercing_spear", "fixed_probability": 0.2 },
-        { "target_affix": "sharpshooter", "fixed_probability": 0.15 }
+        { "target_affix": "piercing_spear", "fixed_probability": 0.2 , "max_level":4},
+        { "target_affix": "sharpshooter", "fixed_probability": 0.15 , "max_level":4}
       ]
     },
     {

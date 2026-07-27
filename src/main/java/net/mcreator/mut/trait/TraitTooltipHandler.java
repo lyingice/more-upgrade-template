@@ -19,7 +19,7 @@ public class TraitTooltipHandler {
         for (Trait trait : TraitRegistry.getTraitsFor(stack)) {
             event.getToolTip().add(Component.literal(""));
             MutableComponent combined = Component.empty()
-                    .append(Component.translatable("tooltip.mut.trait").withStyle(ChatFormatting.BLUE))
+                    .append(Component.translatable("tooltip.mut.trait").withStyle(ChatFormatting.GREEN))
                     .append(Component.literal(" "))
                     .append(Component.translatable(trait.getNameKey())
                             .withStyle(ChatFormatting.AQUA));
