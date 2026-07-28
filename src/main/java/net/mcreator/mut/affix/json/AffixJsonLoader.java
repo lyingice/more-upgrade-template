@@ -33,7 +33,7 @@ public class AffixJsonLoader extends SimpleJsonResourceReloadListener {
 
     @Override
     protected void apply(Map<ResourceLocation, JsonElement> dataMap, ResourceManager rm, ProfilerFiller profiler) {
-        configs.clear(); effects.clear();
+        configs.clear(); effects.clear();markAmplifyEntries.clear();
         for (var entry : dataMap.entrySet()) {
             AffixJsonConfig cfg = GSON.fromJson(entry.getValue(), AffixJsonConfig.class);
             configs.put(cfg.getId(), cfg);

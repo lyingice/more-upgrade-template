@@ -8,6 +8,9 @@
       "value": -16737997,
       "falpha": 0.0
     },
+    "particle": {
+      "value": "SOUL"
+    },
     "onAddedSound": {
       "value": ""
     },

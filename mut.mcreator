@@ -15312,7 +15312,11 @@
       "trait.mut.dragon_claw.desc": "After a successful attack, both the attack speed and the attack distance are increased.",
       "effect.mut.dragon_claw": "Dragon Claw",
       "trait.mut.dragon_elytra.name": "Dragon Wings",
-      "trait.mut.dragon_elytra.desc": "Supports jump propulsion acceleration during flight."
+      "trait.mut.dragon_elytra.desc": "Supports jump propulsion acceleration during flight.",
+      "config.mut.crossbow.global_extra_load_count": "",
+      "config.mut.crossbow.load_count_per_level": "",
+      "config.mut.crossbow.multishot_count": "",
+      "config.mut.crossbow.per_crossbow_extra_load_counts": ""
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -16366,7 +16370,11 @@
       "trait.mut.dragon_claw.desc": "攻击成功后攻速以及攻击距离得到提升。",
       "effect.mut.dragon_claw": "龙爪之力",
       "trait.mut.dragon_elytra.name": "龙之翼",
-      "trait.mut.dragon_elytra.desc": "飞行时支持跳跃推进加速。"
+      "trait.mut.dragon_elytra.desc": "飞行时支持跳跃推进加速。",
+      "config.mut.crossbow.global_extra_load_count": "全局额外装填数量，所有弩都会增加此数值",
+      "config.mut.crossbow.load_count_per_level": "多重装填附魔每级额外装填的数量",
+      "config.mut.crossbow.multishot_count": "多重射击附魔每次射击消耗和发射的箭矢数量",
+      "config.mut.crossbow.per_crossbow_extra_load_counts": "指定弩的额外装填数量"
     }
   },
   "metadata": {

@@ -111,7 +111,6 @@
     {
       "item": "minecraft:arrow",
       "affix_bonuses": [
-        { "target_affix": "piercing_spear", "fixed_probability": 0.2 , "max_level":4},
         { "target_affix": "sharpshooter", "fixed_probability": 0.15 , "max_level":4}
       ]
     },

@@ -6,12 +6,19 @@ import net.neoforged.neoforge.common.EffectCure;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.ParticleOptions;
 
 import java.util.Set;
 
 public class WitherMarkMobEffect extends MobEffect {
 	public WitherMarkMobEffect() {
 		super(MobEffectCategory.HARMFUL, -13421773);
+	}
+
+	@Override
+	public ParticleOptions createParticleOptions(MobEffectInstance mobEffectInstance) {
+		return ParticleTypes.SOUL;
 	}
 
 	@Override

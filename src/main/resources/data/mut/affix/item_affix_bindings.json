@@ -4,7 +4,7 @@
   "bindings": [
     {
       "tag": "minecraft:enchantable/durability",
-      "affix_pool": ["regeneration_mark", "tidal_surge", "strength_blessing","sharpshooter", "piercing_spear", "fire_mark", "poison_mark", "wither_mark", "momentum", "energy_conversion"]
+      "affix_pool": ["regeneration_mark", "tidal_surge", "strength_blessing","sharpshooter", "fire_mark", "poison_mark", "wither_mark", "momentum", "energy_conversion"]
     }
   ]
 }

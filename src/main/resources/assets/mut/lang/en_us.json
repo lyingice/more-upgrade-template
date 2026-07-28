@@ -1072,5 +1072,9 @@
   "trait.mut.dragon_claw.desc": "After a successful attack, both the attack speed and the attack distance are increased.",
   "effect.mut.dragon_claw": "Dragon Claw",
   "trait.mut.dragon_elytra.name": "Dragon Wings",
-  "trait.mut.dragon_elytra.desc": "Supports jump propulsion acceleration during flight."
+  "trait.mut.dragon_elytra.desc": "Supports jump propulsion acceleration during flight.",
+  "config.mut.crossbow.global_extra_load_count": "",
+  "config.mut.crossbow.load_count_per_level": "",
+  "config.mut.crossbow.multishot_count": "",
+  "config.mut.crossbow.per_crossbow_extra_load_counts": ""
 }

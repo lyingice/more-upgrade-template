@@ -32,7 +32,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.mcreator.mut.trait.TraitEventHandler;
 import net.mcreator.mut.init.*;
 import net.mcreator.mut.event.EnergyConversionHandler;
-import net.mcreator.mut.affix.event.AffixEventHandler;
 import net.mcreator.mut.config.MutCrossbowLoadCountConfig;
 import net.mcreator.mut.config.AffixConfig;
 import net.mcreator.mut.compat.spearcore.SpearcoreIntegration;

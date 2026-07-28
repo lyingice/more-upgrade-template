@@ -1,0 +1,21 @@
+{
+  "config.mut.affix.poison_mark.per_level": "中毒伤害每级加成",
+  "config.mut.affix.fire_mark.per_level": "火焰伤害每级加成",
+  "config.mut.affix.wither_mark.per_level": "凋零伤害每级加成",
+  "config.mut.affix.regeneration_mark.per_level": "生命恢复每级加成",
+  "config.mut.affix.strength_blessing.per_level": "近战伤害每级倍率",
+  "config.mut.affix.sharpshooter.per_level": "弹射物伤害每级倍率",
+  "config.mut.affix.momentum.per_level": "凌空攻击每级倍率",
+  "config.mut.affix.tidal_surge.water": "水中攻击每级倍率",
+  "config.mut.affix.tidal_surge.rain": "雨中攻击每级倍率",
+  "config.mut.affix.big_stomach.per_level": "自然恢复每级加成",
+  "config.mut.affix.energy_conversion.per_level": "耐久恢复每级加成",
+
+  "config.mut.category.limit": "等级限制",
+  "config.mut.total_max_level": "词缀总等级上限",
+  "config.mut.category.crossbow": "弩装填数量",
+  "config.mut.crossbow.global_extra_load_count": "全局额外装填数量",
+  "config.mut.crossbow.load_count_per_level": "每级装填增量",
+  "config.mut.crossbow.multishot_count": "多重射击箭数",
+  "config.mut.crossbow.per_crossbow_extra_load_counts": "指定弩额外装填"
+}

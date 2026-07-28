@@ -1,0 +1,21 @@
+{
+  "config.mut.affix.poison_mark.per_level": "Poison damage bonus per level",
+  "config.mut.affix.fire_mark.per_level": "Fire damage bonus per level",
+  "config.mut.affix.wither_mark.per_level": "Wither damage bonus per level",
+  "config.mut.affix.regeneration_mark.per_level": "Health regen bonus per level",
+  "config.mut.affix.strength_blessing.per_level": "Melee damage multiplier per level",
+  "config.mut.affix.sharpshooter.per_level": "Projectile damage multiplier per level",
+  "config.mut.affix.momentum.per_level": "Midair attack damage multiplier per level",
+  "config.mut.affix.tidal_surge.water": "Water attack multiplier per level",
+  "config.mut.affix.tidal_surge.rain": "Rain attack multiplier per level",
+  "config.mut.affix.big_stomach.per_level": "Natural regen bonus per level",
+  "config.mut.affix.energy_conversion.per_level": "Durability restoration per level",
+
+  "config.mut.category.limit": "Level Limits",
+  "config.mut.total_max_level": "Max Total Affix Level",
+  "config.mut.category.crossbow": "Crossbow Load Count",
+  "config.mut.crossbow.global_extra_load_count": "Global Extra Load Count",
+  "config.mut.crossbow.load_count_per_level": "Load Count Per Level",
+  "config.mut.crossbow.multishot_count": "Multishot Arrow Count",
+  "config.mut.crossbow.per_crossbow_extra_load_counts": "Per-Crossbow Extra Load Counts"
+}
