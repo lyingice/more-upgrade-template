@@ -2,6 +2,7 @@ package net.mcreator.mut.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.mcreator.mut.MutMod;
+import net.mcreator.mut.client.entities.ModelCryingObsidianTrident;
 import net.mcreator.mut.client.model.ModelCustomModel;
 import net.mcreator.mut.client.model.ModelMutTridentModel;
 import net.mcreator.mut.client.particle.GraySonicBoomParticle;
@@ -43,6 +44,7 @@ public class MutClient {
     @SubscribeEvent
     public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModelMutTridentModel.LAYER_LOCATION, ModelMutTridentModel::createBodyLayer);
+        event.registerLayerDefinition(ModelCryingObsidianTrident.LAYER_LOCATION, ModelCryingObsidianTrident::createBodyLayer);
         event.registerLayerDefinition(ModelCustomModel.LAYER_LOCATION, ModelCustomModel::createBodyLayer);
         event.registerLayerDefinition(
                 new ModelLayerLocation(

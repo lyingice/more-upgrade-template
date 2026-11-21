@@ -8,6 +8,14 @@
     "mut:poison_steel_trident",
     "mut:poison_steel_crossbow",
     "mut:poison_steel_bow",
-    "mut:poison_steel_mace"
+    "mut:poison_steel_mace",
+    {
+      "id": "mut:position_steel_knife",
+      "required": false
+    },
+    {
+      "id": "mut:position_steel_gloves",
+      "required": false
+    }
   ]
 }

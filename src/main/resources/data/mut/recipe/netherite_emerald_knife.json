@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:netherite_emerald_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_emerald_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:emerald_knife"
+  },
+  "addition": {
+    "item": "mut:netherite_emerald_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_emerald_knife",
+    "count": 1
+  }
+}

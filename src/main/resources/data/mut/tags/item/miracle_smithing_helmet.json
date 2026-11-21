@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:head_armor",
+    "mut:miracle_helmet"
+  ]
+}

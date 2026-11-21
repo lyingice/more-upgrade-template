@@ -8,6 +8,14 @@
     "mut:flame_gold_trident",
     "mut:flame_gold_crossbow",
     "mut:flame_gold_bow",
-    "mut:flame_gold_mace"
+    "mut:flame_gold_mace",
+    {
+      "id": "mut:flame_gold_knife",
+      "required": false
+    },
+    {
+      "id": "mut:flame_gold_gloves",
+      "required": false
+    }
   ]
 }

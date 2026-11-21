@@ -1,0 +1,9 @@
+{
+  "asset_name": "refined_diamond_crystals",
+  "description": {
+    "color": "#4BC9C9",
+    "translate": "trim_material.mut.refined_diamond_crystals"
+  },
+  "ingredient": "mut:refined_diamond_crystals",
+  "item_model_index": 2
+}

@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "mut:steel_horse_armor",
+    "mut:advanced_steel_horse_armor",
+    "mut:gilding_horse_armor",
+    "mut:blue_diamond_horse_armor",
+    "mut:obsidian_horse_armor",
+    "mut:netherite_obsidian_horse_armor",
+    "mut:crying_obsidian_horse_armor",
+    "mut:nether_star_horse_armor",
+    "mut:dragon_horse_armor",
+    "mut:wither_horse_armor",
+    "mut:netherite_copper_horse_armor",
+    "mut:netherite_redstone_horse_armor",
+    "mut:netherite_emerald_horse_armor",
+    "mut:netherite_amethyst_horse_armor",
+    "mut:emerald_horse_armor",
+    "mut:amethyst_horse_armor",
+    "mut:lapis_lazuli_horse_armor",
+    "mut:netherite_lapis_lazuli_horse_armor"
+  ]
+}

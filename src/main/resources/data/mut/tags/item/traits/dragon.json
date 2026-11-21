@@ -8,6 +8,14 @@
     "mut:dragon_trident",
     "mut:dragon_crossbow",
     "mut:dragon_bow",
-    "mut:dragon_mace"
+    "mut:dragon_mace",
+    {
+      "id": "mut:dragon_knife",
+      "required": false
+    },
+    {
+      "id": "mut:dragon_gloves",
+      "required": false
+    }
   ]
 }

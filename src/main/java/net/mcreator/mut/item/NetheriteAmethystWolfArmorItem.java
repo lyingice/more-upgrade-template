@@ -5,7 +5,7 @@ import net.minecraft.world.item.Item;
 
 public class NetheriteAmethystWolfArmorItem extends BaseAnimalArmorItem {
         public NetheriteAmethystWolfArmorItem() {
-            super(AnimalArmorMaterials.NETHERITE_AMETHYST, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.NETHERITE_AMETHYST, BodyType.CANINE, false);
         }
 
 }

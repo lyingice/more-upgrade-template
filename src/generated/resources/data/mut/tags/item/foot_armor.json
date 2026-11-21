@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "mut:advanced_steel_boots",
+    "mut:amethyst_boots",
+    "mut:blue_diamond_boots",
+    "mut:copper_boots",
+    "mut:crying_obsidian_boots",
+    "mut:diamond_chain_boots",
+    "mut:dragon_boots",
+    "mut:echoite_boots",
+    "mut:emerald_armor_boots",
+    "mut:flame_gold_boots",
+    "mut:gilding_boots",
+    "mut:golden_chain_boots",
+    "mut:lapis_lazuli_boots",
+    "mut:nether_star_boots",
+    "mut:netherite_amethyst_boots",
+    "mut:netherite_chain_boots",
+    "mut:netherite_copper_boots",
+    "mut:netherite_emerald_boots",
+    "mut:netherite_lapis_lazuli_boots",
+    "mut:netherite_obsidian_boots",
+    "mut:netherite_redstone_boots",
+    "mut:obsidian_boots",
+    "mut:position_steel_boots",
+    "mut:steel_boots",
+    "mut:super_netherite_boots",
+    "mut:thunder_copper_boots",
+    "mut:uncanny_amethyst_boots",
+    "mut:wither_boots"
+  ]
+}

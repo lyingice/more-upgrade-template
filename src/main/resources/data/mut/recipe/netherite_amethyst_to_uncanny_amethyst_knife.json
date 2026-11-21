@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:uncanny_amethyst_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:uncanny_amethyst_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:netherite_amethyst_knife"
+  },
+  "addition": {
+    "item": "mut:uncanny_amethyst_star"
+  },
+  "result": {
+    "id": "mut:uncanny_amethyst_knife",
+    "count": 1
+  }
+}

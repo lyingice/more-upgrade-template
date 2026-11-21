@@ -24,7 +24,7 @@ public class AffixJsonLoader extends SimpleJsonResourceReloadListener {
     private static final AffixJsonLoader INSTANCE = new AffixJsonLoader();
     private static Map<String, AffixJsonConfig> configs = new HashMap<>();
     private static Map<String, List<AffixEffect>> effects = new HashMap<>();
-
+    private static List<MarkAmplifyEntry> markAmplifyEntries = new ArrayList<>();
 
     private AffixJsonLoader() { super(GSON, "affixes"); }
 
@@ -33,11 +33,22 @@ public class AffixJsonLoader extends SimpleJsonResourceReloadListener {
 
     @Override
     protected void apply(Map<ResourceLocation, JsonElement> dataMap, ResourceManager rm, ProfilerFiller profiler) {
-        configs.clear(); effects.clear();markAmplifyEntries.clear();
+        configs.clear();
+        effects.clear();
+        markAmplifyEntries.clear();  // ★ 修复 /reload 重复叠加
+
         for (var entry : dataMap.entrySet()) {
-            AffixJsonConfig cfg = GSON.fromJson(entry.getValue(), AffixJsonConfig.class);
-            configs.put(cfg.getId(), cfg);
-            effects.put(cfg.getId(), parseEffects(cfg));
+            try {
+                AffixJsonConfig cfg = GSON.fromJson(entry.getValue(), AffixJsonConfig.class);
+                if (cfg == null || cfg.getId() == null || cfg.getId().isBlank()) {
+                    MutMod.LOGGER.error("Skipping affix file {}: missing or empty 'id'", entry.getKey());
+                    continue;
+                }
+                configs.put(cfg.getId(), cfg);
+                effects.put(cfg.getId(), parseEffects(cfg));
+            } catch (Exception e) {
+                MutMod.LOGGER.error("Failed to parse affix file {}: {}", entry.getKey(), e.getMessage());
+            }
         }
         AffixRegistry.reloadFromJson();
         MutMod.LOGGER.info("Loaded {} affix JSON configs", configs.size());
@@ -45,25 +56,62 @@ public class AffixJsonLoader extends SimpleJsonResourceReloadListener {
 
     private static List<AffixEffect> parseEffects(AffixJsonConfig cfg) {
         List<AffixEffect> list = new ArrayList<>();
+        if (cfg.getEffects() == null || cfg.getEffects().isEmpty()) {
+            MutMod.LOGGER.warn("Affix '{}' has no effects", cfg.getId());
+            return list;
+        }
         for (var e : cfg.getEffects()) {
-            switch (e.getType()) {
-                case "mark_on_attack" -> list.add(new MarkOnAttackEffect(
-                        nvl(e.getTrigger(), "attack"), e.getMarkEffect(), e.getDurationTicks()));
-                case "mark_amplify" -> markAmplifyEntries.add(parseMarkAmplify(cfg.getId(), e));
-                case "damage_multiplier" -> list.add(new DamageMultiplierEffect(
-                        nvl(e.getTrigger(), "attack"), e.getAmount(), e.isRangedOnly()));
-                case "heal_bonus" -> {
-                    String cond = e.getCondition();
-                    list.add(cond != null && !cond.isEmpty()
-                            ? new HealBonusEffect(nvl(e.getTrigger(), "heal"), e.getAmount(), cond)
-                            : new HealBonusEffect(nvl(e.getTrigger(), "heal"), e.getAmount()));
+            try {
+                if (e == null || e.getType() == null || e.getType().isBlank()) {
+                    MutMod.LOGGER.warn("Affix '{}' has an effect entry missing 'type', skipped", cfg.getId());
+                    continue;
                 }
-                case "conditional_multiplier" -> list.add(new ConditionalMultiplierEffect(
-                        nvl(e.getTrigger(), "attack"), e.getCondition(), e.getAmount()));
-                case "attribute_modifier" -> list.add(new AttributeModifierEffect(
-                        "always", e.getSlot(), e.getAttributeId(), e.getValue(), e.getOperation()));
-                case "durability_repair" -> list.add(new DurabilityRepairEffect(
-                        "durability_change", e.getPerDurability(), e.getSaturationPerPoint()));
+                switch (e.getType()) {
+                    case "mark_on_attack" -> {
+                        if (e.getMarkEffect() == null) {
+                            MutMod.LOGGER.warn("Affix '{}' mark_on_attack missing 'mark_effect', skipped", cfg.getId());
+                            continue;
+                        }
+                        list.add(new MarkOnAttackEffect(
+                                nvl(e.getTrigger(), "attack"), e.getMarkEffect(), e.getDurationTicks()));
+                    }
+                    case "mark_amplify" -> {
+                        if (e.getMarkEffect() == null) {
+                            MutMod.LOGGER.warn("Affix '{}' mark_amplify missing 'mark_effect', skipped", cfg.getId());
+                            continue;
+                        }
+                        markAmplifyEntries.add(parseMarkAmplify(cfg.getId(), e));
+                    }
+                    case "damage_multiplier" -> list.add(new DamageMultiplierEffect(
+                            nvl(e.getTrigger(), "attack"), e.getAmount()));
+                    case "heal_bonus" -> {
+                        String cond = e.getCondition();
+                        list.add(cond != null && !cond.isEmpty()
+                                ? new HealBonusEffect(nvl(e.getTrigger(), "heal"), e.getAmount(), cond)
+                                : new HealBonusEffect(nvl(e.getTrigger(), "heal"), e.getAmount()));
+                    }
+                    case "conditional_multiplier" -> {
+                        if (e.getCondition() == null || e.getCondition().isBlank()) {
+                            MutMod.LOGGER.warn("Affix '{}' conditional_multiplier missing 'condition', skipped", cfg.getId());
+                            continue;
+                        }
+                        list.add(new ConditionalMultiplierEffect(
+                                nvl(e.getTrigger(), "attack"), e.getCondition(), e.getAmount()));
+                    }
+                    case "attribute_modifier" -> {
+                        if (e.getSlot() == null || e.getAttributeId() == null) {
+                            MutMod.LOGGER.warn("Affix '{}' attribute_modifier missing 'slot'/'attribute', skipped", cfg.getId());
+                            continue;
+                        }
+                        list.add(new AttributeModifierEffect(
+                                "always", e.getSlot(), e.getAttributeId(), e.getValue(), e.getOperation()));
+                    }
+                    case "durability_repair" -> list.add(new DurabilityRepairEffect(
+                            "durability_change", e.getPerDurability(), e.getSaturationPerPoint()));
+                    default -> MutMod.LOGGER.warn("Affix '{}' unknown effect type '{}', skipped", cfg.getId(), e.getType());
+                }
+            } catch (Exception ex) {
+                MutMod.LOGGER.error("Failed to parse effect in affix '{}': {}", cfg.getId(), ex.getMessage());
             }
         }
         return list;
@@ -80,9 +128,9 @@ public class AffixJsonLoader extends SimpleJsonResourceReloadListener {
         return cfg.getConfigurable().stream()
                 .filter(p -> p.getName().equals(param)).mapToDouble(AffixJsonConfig.ParamDef::getDefaultValue).findFirst().orElse(0);
     }
-    private static List<MarkAmplifyEntry> markAmplifyEntries = new ArrayList<>();
+
     private static MarkAmplifyEntry parseMarkAmplify(String affixId, AffixJsonConfig.EffectEntry e) {
-        Holder<net.minecraft.world.effect.MobEffect> effect = BuiltInRegistries.MOB_EFFECT
+        Holder<MobEffect> effect = BuiltInRegistries.MOB_EFFECT
                 .getHolder(ResourceLocation.parse(e.getMarkEffect())).orElse(null);
         List<String> types = new ArrayList<>();
         if (e.getAmplifyDamageTypes() != null) types.addAll(e.getAmplifyDamageTypes());

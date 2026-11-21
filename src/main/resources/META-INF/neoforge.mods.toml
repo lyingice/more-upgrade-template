@@ -21,6 +21,10 @@ config = "mut.mixins.json"
 # Start of user code block custom mixins
 [[mixins]]
 config = "mut.spear.mixins.json"
+
+# 锻造模板移植：动物铠（马铠/狼铠）纹饰渲染与模板白名单限制
+[[mixins]]
+config = "mut.porting.mixins.json"
 # End of user code block custom mixins
 
 [[dependencies.mut]]
@@ -76,7 +80,28 @@ side="CLIENT"
 [[dependencies.mut]]
 modId="spearcore"
 type="optional"
-versionRange="[2.0.0,)"
+versionRange="[2.0.4,)"
 ordering="NONE"
+
+[[dependencies.mut]]
+modId="farmersdelight"
+type="optional"
+versionRange="[1.3.4,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mut]]
+modId="aether"
+type="optional"
+versionRange="[1.5.10,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.mut]]
+modId="accessories"
+type="optional"
+versionRange="[1.1.0-beta.48+1.21.1,)"
+ordering="AFTER"
+side="BOTH"
 
 # End of user code block dependencies configuration

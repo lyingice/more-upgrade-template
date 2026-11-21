@@ -31,6 +31,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.mut.trait.TraitEventHandler;
 import net.mcreator.mut.init.*;
+import net.mcreator.mut.event.SpearAffixListener;
 import net.mcreator.mut.event.EnergyConversionHandler;
 import net.mcreator.mut.config.MutCrossbowLoadCountConfig;
 import net.mcreator.mut.config.AffixConfig;
@@ -69,6 +70,11 @@ public class MutMod {
 		MutModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		MutModAttributes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
+		// 移植的锻造模板（独立于 MCreator 生成的 MutModItems，重新生成代码时不会丢失）
+		net.mcreator.mut.porting.smithing.MutSmithingTemplateItems.REGISTRY.register(modEventBus);
+		// 移植的马铠 / 狼铠展示架
+		net.mcreator.mut.porting.armorstand.MutArmorStandItems.ITEMS.register(modEventBus);
+		net.mcreator.mut.porting.armorstand.MutArmorStandEntities.ENTITIES.register(modEventBus);
 		ModContainer container = ModLoadingContext.get().getActiveContainer();
 		container.registerConfig(ModConfig.Type.COMMON, AffixConfig.SPEC, "mut_affix_coefficients.toml");
 		ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.SERVER, MutCrossbowLoadCountConfig.CONFIG_SPEC, "mut_crossbow_load_count.toml");
@@ -76,6 +82,27 @@ public class MutMod {
 		NeoForge.EVENT_BUS.register(new EnergyConversionHandler());
 		MutModParticles.PARTICLES.register(modEventBus);
 		NeoForge.EVENT_BUS.register(new TraitEventHandler());
+		// 套装效果（护甲四件套）
+		NeoForge.EVENT_BUS.register(new net.mcreator.mut.armorset.ArmorSetEventHandler());
+		// 遗迹傀儡实体（独立注册，避免被 MCreator 重新生成覆盖）
+		net.mcreator.mut.porting.ruingolem.RuinGolemEntities.ENTITIES.register(modEventBus);
+		net.mcreator.mut.porting.ruingolem.RuinGolemItems.ITEMS.register(modEventBus);
+		net.mcreator.mut.porting.ruingolem.RuinGolemBlocks.BLOCKS.register(modEventBus);
+		net.mcreator.mut.porting.ruingolem.RuinGolemBlocks.BLOCK_ENTITIES.register(modEventBus);
+		// 猪灵雇佣兵
+		net.mcreator.mut.porting.mercenary.MercenaryEntities.ENTITIES.register(modEventBus);
+		net.mcreator.mut.porting.mercenary.MercenaryItems.ITEMS.register(modEventBus);
+		// 奇迹装备 / 金质号角 / 奇迹锻造模板（空壳，能力后续再接）
+		net.mcreator.mut.miracle.MiracleItems.ITEMS.register(modEventBus);
+		// 0.5→1.0 新生物（蛮兵要塞 / 深暗蛛穴 / 模板圣庙 / 恶震渊井）
+		net.mcreator.mut.beastiary.BeastiaryEntities.ENTITIES.register(modEventBus);
+		net.mcreator.mut.beastiary.BeastiaryItems.ITEMS.register(modEventBus);
+		net.mcreator.mut.beastiary.BeastiaryEffects.EFFECTS.register(modEventBus);
+		// 农夫乐事 / 天境联动（类加载隔离：模组不在时完全跳过）
+		net.mcreator.mut.compat.CompatBootstrap.init(modEventBus);
+		if (ModList.get().isLoaded("spearcore")) {
+			NeoForge.EVENT_BUS.register(SpearAffixListener.class);
+		}
 		// End of user code block mod init
 	}
 

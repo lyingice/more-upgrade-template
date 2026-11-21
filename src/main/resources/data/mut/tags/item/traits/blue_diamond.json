@@ -1,0 +1,21 @@
+{
+  "values": [
+    "mut:blue_diamond_sword",
+    "mut:blue_diamond_axe",
+    "mut:blue_diamond_pickaxe",
+    "mut:blue_diamond_shovel",
+    "mut:blue_diamond_hoe",
+    "mut:blue_diamond_trident",
+    "mut:blue_diamond_crossbow",
+    "mut:blue_diamond_bow",
+    "mut:blue_diamond_mace",
+    {
+      "id": "mut:blue_diamond_knife",
+      "required": false
+    },
+    {
+      "id": "mut:blue_diamond_gloves",
+      "required": false
+    }
+  ]
+}

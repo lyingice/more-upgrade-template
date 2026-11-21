@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class GildingWolfArmorItem extends BaseAnimalArmorItem {
         public GildingWolfArmorItem() {
-            super(AnimalArmorMaterials.GILDING, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.GILDING, BodyType.CANINE, false);
         }
 }

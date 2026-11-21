@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 1,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "mut:high_carbon_compounds"
+  },
+  "result": {
+    "id": "mut:refined_diamond_crystals"
+  }
+}

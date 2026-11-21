@@ -1,0 +1,9 @@
+{
+  "asset_name": "flame_gold",
+  "description": {
+    "color": "#FFC403",
+    "translate": "trim_material.mut.flame_gold"
+  },
+  "ingredient": "mut:flame_gold_ingot",
+  "item_model_index": 1.2
+}

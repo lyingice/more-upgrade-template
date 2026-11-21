@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:position_steel_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:poison_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:steel_knife"
+  },
+  "addition": {
+    "item": "mut:position_steel_ingot"
+  },
+  "result": {
+    "id": "mut:position_steel_knife",
+    "count": 1
+  }
+}

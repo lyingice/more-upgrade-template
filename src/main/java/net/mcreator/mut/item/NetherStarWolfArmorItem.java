@@ -9,7 +9,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 
 public class NetherStarWolfArmorItem extends BaseAnimalArmorItem {
         public NetherStarWolfArmorItem() {
-            super(AnimalArmorMaterials.NETHER_STAR, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.NETHER_STAR, BodyType.CANINE, false);
         }
     @Override
     @OnlyIn(Dist.CLIENT)

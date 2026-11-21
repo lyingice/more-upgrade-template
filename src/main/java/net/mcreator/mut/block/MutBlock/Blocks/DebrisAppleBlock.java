@@ -105,8 +105,8 @@ public class DebrisAppleBlock extends Block implements SimpleWaterloggedBlock {
         // 检查支撑方块是否是树叶（原版或自定义）
         return supportState.getBlock() instanceof LeavesBlock ||
                 supportState.getBlock() instanceof DebrisLeavesBlock ||
-                // 也支持原版树叶
-                supportState.is(BlockTags.LEAVES);
+                supportState.is(BlockTags.LEAVES) ||
+                supportState.isFaceSturdy(level, supportPos, direction);
     }
 
     protected static Direction getConnectedDirection(BlockState state) {

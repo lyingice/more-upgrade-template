@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "mut:advanced_steel_chestplate",
+    "mut:amethyst_chestplate",
+    "mut:blue_diamond_chestplate",
+    "mut:copper_chestplate",
+    "mut:crying_obsidian_chestplate",
+    "mut:diamond_chain_chestplate",
+    "mut:dragon_chestplate",
+    "mut:echoite_chestplate",
+    "mut:emerald_armor_chestplate",
+    "mut:flame_gold_chestplate",
+    "mut:gilding_chestplate",
+    "mut:golden_chain_chestplate",
+    "mut:lapis_lazuli_chestplate",
+    "mut:nether_star_chestplate",
+    "mut:netherite_amethyst_chestplate",
+    "mut:netherite_chain_chestplate",
+    "mut:netherite_copper_chestplate",
+    "mut:netherite_emerald_chestplate",
+    "mut:netherite_lapis_lazuli_chestplate",
+    "mut:netherite_obsidian_chestplate",
+    "mut:netherite_redstone_chestplate",
+    "mut:obsidian_chestplate",
+    "mut:position_steel_chestplate",
+    "mut:steel_chestplate",
+    "mut:super_netherite_chestplate",
+    "mut:thunder_copper_chestplate",
+    "mut:uncanny_amethyst_chestplate",
+    "mut:wither_chestplate"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "mut:item/compat/flame_gold_knife"
+  }
+}

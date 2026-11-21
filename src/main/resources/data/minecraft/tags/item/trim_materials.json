@@ -1,0 +1,23 @@
+{
+  "values": [
+    "minecraft:iron_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:lapis_lazuli",
+    "minecraft:emerald",
+    "minecraft:diamond",
+    "minecraft:netherite_ingot",
+    "minecraft:redstone",
+    "minecraft:quartz",
+    "minecraft:amethyst_shard",
+    "mut:crying_obsidian_ingot",
+    "mut:flame_gold_ingot",
+    "mut:obsidian_ingot",
+    "mut:echoite_ingot",
+    "mut:position_steel_ingot",
+    "mut:advanced_steel_ingot",
+    "mut:dragon_scale_cluster",
+    "mut:heterochromatic_amethyst_shard",
+    "mut:refined_diamond_crystals"
+  ]
+}

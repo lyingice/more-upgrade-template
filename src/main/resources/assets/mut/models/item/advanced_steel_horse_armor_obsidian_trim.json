@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mut:item/advanced_steel_horse_armor",
+    "layer1": "minecraft:trims/items/horse_trim_obsidian"
+  }
+}

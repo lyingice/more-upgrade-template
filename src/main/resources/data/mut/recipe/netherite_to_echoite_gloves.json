@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:echoite_gloves"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:echoite_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "aether:netherite_gloves"
+  },
+  "addition": {
+    "item": "mut:echoite_ingot"
+  },
+  "result": {
+    "id": "mut:echoite_gloves",
+    "count": 1
+  }
+}

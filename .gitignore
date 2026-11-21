@@ -18,3 +18,4 @@ nexuscompiler-mods-1.21.1/
 
 # 本地配置
 /local.properties
+/libs/

@@ -10,7 +10,7 @@
     "foliage_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "minecraft:oak_leaves"
+        "Name": "mut:debris_leaves"
       }
     },
     "trunk_provider": {

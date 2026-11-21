@@ -1,0 +1,9 @@
+{
+  "asset_name": "echoite",
+  "description": {
+    "color": "#14B8C0",
+    "translate": "trim_material.mut.echoite"
+  },
+  "ingredient": "mut:echoite_ingot",
+  "item_model_index": 1.4
+}

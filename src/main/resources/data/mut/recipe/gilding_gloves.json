@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:gilding_gloves"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:gilding_upgrade_template"
+  },
+  "base": {
+    "item": "aether:golden_gloves"
+  },
+  "addition": {
+    "item": "mut:gilding_ingot"
+  },
+  "result": {
+    "id": "mut:gilding_gloves",
+    "count": 1
+  }
+}

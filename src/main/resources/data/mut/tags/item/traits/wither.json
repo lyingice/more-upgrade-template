@@ -8,6 +8,14 @@
     "mut:wither_trident",
     "mut:wither_crossbow",
     "mut:wither_bow",
-    "mut:wither_mace"
+    "mut:wither_mace",
+    {
+      "id": "mut:wither_knife",
+      "required": false
+    },
+    {
+      "id": "mut:wither_gloves",
+      "required": false
+    }
   ]
 }

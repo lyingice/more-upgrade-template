@@ -1,0 +1,8 @@
+{
+  "asset_id": "mut:arrowhead",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.mut.arrowhead"
+  },
+  "template_item": "mut:arrowhead_armor_trim_smithing_template"
+}

@@ -785,7 +785,7 @@
       "name": "NetherDeepIronOreBlock",
       "type": "block",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "nether_deep_iron_ore_block",
       "metadata": {
         "files": [
@@ -795,8 +795,7 @@
           "src/main/resources/assets/mut/blockstates/nether_deep_iron_ore_block.json",
           "src/main/resources/data/mut/worldgen/placed_feature/nether_deep_iron_ore_block.json",
           "src/main/java/net/mcreator/mut/block/NetherDeepIronOreBlockBlock.java",
-          "src/main/resources/data/mut/neoforge/biome_modifier/nether_deep_iron_ore_block_biome_modifier.json",
-          "src/main/resources/data/mut/loot_table/blocks/nether_deep_iron_ore_block.json"
+          "src/main/resources/data/mut/neoforge/biome_modifier/nether_deep_iron_ore_block_biome_modifier.json"
         ]
       },
       "path": "~/Ore Block"
@@ -13021,6 +13020,91 @@
         ]
       },
       "path": "~/Buff"
+    },
+    {
+      "name": "Templater",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "templater",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/worldgen/structure/templater.json",
+          "src/main/resources/data/mut/worldgen/template_pool/templater.json",
+          "src/main/resources/data/mut/worldgen/structure_set/templater.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Structure"
+    },
+    {
+      "name": "SfDesertPyramid",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sf_desert_pyramid",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/worldgen/structure/sf_desert_pyramid.json",
+          "src/main/resources/data/mut/worldgen/structure_set/sf_desert_pyramid.json",
+          "src/main/resources/data/mut/worldgen/template_pool/sf_desert_pyramid.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Structure"
+    },
+    {
+      "name": "SmoothSandstoneRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smooth_sandstone_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/advancement/recipes/smooth_sandstone_recipe.json",
+          "src/main/resources/data/mut/recipe/smooth_sandstone_recipe.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Sand"
+    },
+    {
+      "name": "RefinedDiamondCrystals",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "refined_diamond_crystals",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/mut/item/RefinedDiamondCrystalsItem.java",
+          "src/main/resources/assets/mut/models/item/refined_diamond_crystals.json"
+        ]
+      },
+      "path": "~/Base Material"
+    },
+    {
+      "name": "Rdcr",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rdcr",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/recipe/rdcr.json",
+          "src/main/resources/data/mut/advancement/recipes/rdcr.json"
+        ]
+      },
+      "path": "~/Base Material/material_recipes"
+    },
+    {
+      "name": "NetherDeepIronLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nether_deep_iron_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/mut/loot_table/blocks/nether_deep_iron_ore_block.json"
+        ]
+      },
+      "path": "~/Sigil Forge Dimension/Loot"
     }
   ],
   "variable_elements": [],
@@ -13124,6 +13208,7 @@
       "TAG:mut:elytra"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:NetherDeepIronOreBlock",
       "~CUSTOM:SigilForgeSmoothSandstoneWall",
       "~CUSTOM:SigilForgeSmoothSandstoneSlab",
       "~CUSTOM:SigilForgeSmoothSandstoneStairs",
@@ -13217,6 +13302,7 @@
       "~CUSTOM:SteelDebris"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:NetherDeepIronOreBlock",
       "~CUSTOM:HeterochromaticAmethystBlock",
       "~CUSTOM:MetalPoisonousOre",
       "~CUSTOM:FlameGoldOre",
@@ -13767,7 +13853,13 @@
       "TAG:mut:spear"
     ],
     "BIOMES:mut:has_structure/sigil_forge_fortress": [
-      "#mut:is_sigil_forge_dimension"
+      "CUSTOM:SigilForgeVolcano",
+      "CUSTOM:SigilForgeSwamp",
+      "CUSTOM:SigilForgeStonyPeaks",
+      "CUSTOM:SigilForgePlateau",
+      "CUSTOM:SigilForgeSnowyPlateau",
+      "CUSTOM:SigilForgeSnowyPeaks",
+      "CUSTOM:SigilForgeJungle"
     ],
     "BLOCKS:minecraft:saplings": [
       "~CUSTOM:DebrisSapling"
@@ -13795,7 +13887,6 @@
     "BIOMES:mut:is_normal_animal_spawn": [
       "CUSTOM:SigilForgePlain",
       "CUSTOM:SigilForgeSwamp",
-      "CUSTOM:SigilForgeStonyShore",
       "CUSTOM:SigilForgeRiver",
       "CUSTOM:SigilForgePlateau",
       "CUSTOM:SigilForgeSnowyPlateau",
@@ -13875,6 +13966,7 @@
     "CUSTOM:MoreUpgradeTemplateExtraItems": [
       "RefinedIronPowder",
       "HighCarbonCompounds",
+      "RefinedDiamondCrystals",
       "FlameGoldNugget",
       "MetalPositionNugget",
       "HeterochromaticAmethystShard",
@@ -15316,7 +15408,8 @@
       "config.mut.crossbow.global_extra_load_count": "",
       "config.mut.crossbow.load_count_per_level": "",
       "config.mut.crossbow.multishot_count": "",
-      "config.mut.crossbow.per_crossbow_extra_load_counts": ""
+      "config.mut.crossbow.per_crossbow_extra_load_counts": "",
+      "item.mut.refined_diamond_crystals": "Refined Diamond Crystals"
     },
     "zh_cn": {
       "item.mut.iron_bow": "铁弓",
@@ -16374,7 +16467,8 @@
       "config.mut.crossbow.global_extra_load_count": "全局额外装填数量，所有弩都会增加此数值",
       "config.mut.crossbow.load_count_per_level": "多重装填附魔每级额外装填的数量",
       "config.mut.crossbow.multishot_count": "多重射击附魔每次射击消耗和发射的箭矢数量",
-      "config.mut.crossbow.per_crossbow_extra_load_counts": "指定弩的额外装填数量"
+      "config.mut.crossbow.per_crossbow_extra_load_counts": "指定弩的额外装填数量",
+      "item.mut.refined_diamond_crystals": "精炼钻石结晶"
     }
   },
   "metadata": {

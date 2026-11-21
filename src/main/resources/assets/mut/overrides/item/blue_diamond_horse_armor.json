@@ -1,0 +1,124 @@
+{
+  "overrides": [
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.1
+      },
+      "model": "mut:item/blue_diamond_horse_armor_quartz_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.2
+      },
+      "model": "mut:item/blue_diamond_horse_armor_iron_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.3
+      },
+      "model": "mut:item/blue_diamond_horse_armor_netherite_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.4
+      },
+      "model": "mut:item/blue_diamond_horse_armor_redstone_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.5
+      },
+      "model": "mut:item/blue_diamond_horse_armor_copper_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.6
+      },
+      "model": "mut:item/blue_diamond_horse_armor_gold_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.7
+      },
+      "model": "mut:item/blue_diamond_horse_armor_emerald_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.8
+      },
+      "model": "mut:item/blue_diamond_horse_armor_diamond_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 0.9
+      },
+      "model": "mut:item/blue_diamond_horse_armor_lapis_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.0
+      },
+      "model": "mut:item/blue_diamond_horse_armor_amethyst_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.1
+      },
+      "model": "mut:item/blue_diamond_horse_armor_crying_obsidian_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.2
+      },
+      "model": "mut:item/blue_diamond_horse_armor_flame_gold_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.3
+      },
+      "model": "mut:item/blue_diamond_horse_armor_obsidian_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.4
+      },
+      "model": "mut:item/blue_diamond_horse_armor_echoite_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.5
+      },
+      "model": "mut:item/blue_diamond_horse_armor_poison_steel_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.6
+      },
+      "model": "mut:item/blue_diamond_horse_armor_advanced_steel_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.7
+      },
+      "model": "mut:item/blue_diamond_horse_armor_dragon_scale_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.8
+      },
+      "model": "mut:item/blue_diamond_horse_armor_heterochromatic_amethyst_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 1.9
+      },
+      "model": "mut:item/blue_diamond_horse_armor_heterochromatic_amethyst_pale_trim"
+    },
+    {
+      "predicate": {
+        "mut:animal_armor_trim": 2.0
+      },
+      "model": "mut:item/blue_diamond_horse_armor_refined_diamond_crystals_trim"
+    }
+  ]
+}

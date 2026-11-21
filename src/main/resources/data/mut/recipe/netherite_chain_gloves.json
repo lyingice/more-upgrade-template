@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:netherite_chain_gloves"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:diamond_upgrade_template"
+  },
+  "base": {
+    "item": "mut:diamond_chain_gloves"
+  },
+  "addition": {
+    "item": "minecraft:netherite_scrap"
+  },
+  "result": {
+    "id": "mut:netherite_chain_gloves"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:obsidian_gloves"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:obsidian_upgrade_template"
+  },
+  "base": {
+    "item": "aether:diamond_gloves"
+  },
+  "addition": {
+    "item": "mut:obsidian_ingot"
+  },
+  "result": {
+    "id": "mut:obsidian_gloves",
+    "count": 1
+  }
+}

@@ -5,7 +5,7 @@ import net.minecraft.world.item.Item;
 
 public class EmeraldWolfArmorItem extends BaseAnimalArmorItem {
         public EmeraldWolfArmorItem() {
-            super(AnimalArmorMaterials.EMERALD, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.EMERALD, BodyType.CANINE, false);
         }
 
 }

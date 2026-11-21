@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:foot_armor",
+    "mut:miracle_boots"
+  ]
+}

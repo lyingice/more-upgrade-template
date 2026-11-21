@@ -5,7 +5,7 @@ import net.minecraft.world.item.Item;
 
 public class NetheriteCopperWolfArmorItem extends BaseAnimalArmorItem {
         public NetheriteCopperWolfArmorItem() {
-            super(AnimalArmorMaterials.NETHERITE_COPPER, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.NETHERITE_COPPER, BodyType.CANINE, false);
         }
 
 }

@@ -6,7 +6,7 @@ import net.minecraft.world.item.Item;
 
 public class DragonWolfArmorItem extends BaseAnimalArmorItem {
         public DragonWolfArmorItem() {
-            super(AnimalArmorMaterials.DRAGON, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.DRAGON, BodyType.CANINE, false);
         }
 
 }

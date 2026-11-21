@@ -62,7 +62,7 @@
     "dropAmount": 1,
     "xpAmountMin": 1,
     "xpAmountMax": 3,
-    "useLootTableForDrops": false,
+    "useLootTableForDrops": true,
     "requiresCorrectTool": true,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,

@@ -22,6 +22,33 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              0,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_plain",
+          "parameters": {
+            "temperature": [
+              -1,
+              0.4
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.1,
+              0.5
+            ],
+            "weirdness": [
+              0.05,
               1
             ],
             "erosion": [
@@ -49,6 +76,33 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              -1,
+              -0.3
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_volcano",
+          "parameters": {
+            "temperature": [
+              0.5,
+              1
+            ],
+            "humidity": [
+              -1,
+              -0.2
+            ],
+            "continentalness": [
+              0.4,
+              1
+            ],
+            "weirdness": [
+              0.05,
               1
             ],
             "erosion": [
@@ -76,6 +130,33 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              0,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_swamp",
+          "parameters": {
+            "temperature": [
+              0.2,
+              0.8
+            ],
+            "humidity": [
+              0,
+              1
+            ],
+            "continentalness": [
+              -0.1,
+              0.35
+            ],
+            "weirdness": [
+              0.05,
               1
             ],
             "erosion": [
@@ -157,6 +238,33 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              -1,
+              0.5
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_stony_peaks",
+          "parameters": {
+            "temperature": [
+              0,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              0.05,
               1
             ],
             "erosion": [
@@ -184,6 +292,33 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              -0.5,
+              0
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_plateau",
+          "parameters": {
+            "temperature": [
+              0,
+              1
+            ],
+            "humidity": [
+              -1,
+              0
+            ],
+            "continentalness": [
+              0.3,
+              0.55
+            ],
+            "weirdness": [
+              0.05,
               0.3
             ],
             "erosion": [
@@ -211,6 +346,33 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              -1,
+              0
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_snowy_plateau",
+          "parameters": {
+            "temperature": [
+              -1,
+              0
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.3,
+              0.55
+            ],
+            "weirdness": [
+              0.05,
               1
             ],
             "erosion": [
@@ -238,6 +400,33 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              -1,
+              -0.5
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_snowy_peaks",
+          "parameters": {
+            "temperature": [
+              -1,
+              0
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              0.05,
               1
             ],
             "erosion": [
@@ -265,6 +454,33 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              -0.3,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_desert",
+          "parameters": {
+            "temperature": [
+              0.4,
+              1
+            ],
+            "humidity": [
+              -1,
+              -0.3
+            ],
+            "continentalness": [
+              -0.3,
+              0.55
+            ],
+            "weirdness": [
+              0.05,
               1
             ],
             "erosion": [
@@ -292,7 +508,358 @@
             ],
             "weirdness": [
               -1,
+              -0.05
+            ],
+            "erosion": [
+              0,
               1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_jungle",
+          "parameters": {
+            "temperature": [
+              0.5,
+              1
+            ],
+            "humidity": [
+              0.3,
+              1
+            ],
+            "continentalness": [
+              -0.1,
+              0.4
+            ],
+            "weirdness": [
+              0.05,
+              1
+            ],
+            "erosion": [
+              0,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_frozen_river",
+          "parameters": {
+            "temperature": [
+              -1,
+              -0.45
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.1,
+              0.5
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              0,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              -0.45,
+              0.4
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              -0.1,
+              0.5
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              0,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              0.5,
+              1
+            ],
+            "humidity": [
+              -1,
+              -0.2
+            ],
+            "continentalness": [
+              0.4,
+              1
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              -1,
+              -0.3
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              0.2,
+              0.8
+            ],
+            "humidity": [
+              0,
+              1
+            ],
+            "continentalness": [
+              -0.1,
+              0.35
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              0,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              0,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              -1,
+              0.5
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              0,
+              1
+            ],
+            "humidity": [
+              -1,
+              0
+            ],
+            "continentalness": [
+              0.3,
+              0.55
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              -0.5,
+              0
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_frozen_river",
+          "parameters": {
+            "temperature": [
+              -1,
+              -0.45
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.3,
+              0.55
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              -1,
+              0
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              -0.45,
+              0
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.3,
+              0.55
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              -1,
+              0
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_frozen_river",
+          "parameters": {
+            "temperature": [
+              -1,
+              -0.45
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              -1,
+              -0.5
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              -0.45,
+              0
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "continentalness": [
+              0.55,
+              1
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              -1,
+              -0.5
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              0.4,
+              1
+            ],
+            "humidity": [
+              -1,
+              -0.3
+            ],
+            "continentalness": [
+              -0.3,
+              0.55
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
+            ],
+            "erosion": [
+              -0.3,
+              1
+            ],
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "mut:sigil_forge_river",
+          "parameters": {
+            "temperature": [
+              0.5,
+              1
+            ],
+            "humidity": [
+              0.3,
+              1
+            ],
+            "continentalness": [
+              -0.1,
+              0.4
+            ],
+            "weirdness": [
+              -0.05,
+              0.05
             ],
             "erosion": [
               0,
@@ -781,7 +1348,7 @@
                         {
                           "type": "minecraft:block",
                           "result_state": {
-                            "Name": "mut:debris_stone"
+                            "Name": "mut:debris_sigil_magma_block"
                           }
                         }
                       ]
@@ -1375,7 +1942,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "mut:sigil_forge_cut_sandstone"
+                        "Name": "mut:sigil_forge_sand"
                       }
                     }
                   }

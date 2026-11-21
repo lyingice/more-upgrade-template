@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:flame_gold_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:magma_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:gilding_knife"
+  },
+  "addition": {
+    "item": "mut:flame_gold_ingot"
+  },
+  "result": {
+    "id": "mut:flame_gold_knife",
+    "count": 1
+  }
+}

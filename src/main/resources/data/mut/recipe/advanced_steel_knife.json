@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:advanced_steel_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "minecraft:netherite_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:steel_knife"
+  },
+  "addition": {
+    "item": "mut:advanced_steel_ingot"
+  },
+  "result": {
+    "id": "mut:advanced_steel_knife",
+    "count": 1
+  }
+}

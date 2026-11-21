@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:netherite_copper_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_copper_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:copper_knife"
+  },
+  "addition": {
+    "item": "minecraft:copper_block"
+  },
+  "result": {
+    "id": "mut:netherite_copper_knife",
+    "count": 1
+  }
+}

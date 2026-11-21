@@ -13,11 +13,19 @@ public class MutBuiltinPacks {
 
     @SubscribeEvent
     public static void addPacks(AddPackFindersEvent event) {
-        // 内置旧版材质包
+        /*
         event.addPackFinders(
                 ResourceLocation.fromNamespaceAndPath("mut", "resourcepacks/mutextra"),
                 net.minecraft.server.packs.PackType.CLIENT_RESOURCES,
                 Component.literal("Mut符锻装备材质by说谎冰"),
+                net.minecraft.server.packs.repository.PackSource.BUILT_IN,
+                false,  // 不是必选
+                net.minecraft.server.packs.repository.Pack.Position.TOP
+        );
+        event.addPackFinders(
+                ResourceLocation.fromNamespaceAndPath("mut", "resourcepacks/mut_3d_weapon"),
+                net.minecraft.server.packs.PackType.CLIENT_RESOURCES,
+                Component.literal("Mut3D武器模型包(未完成)"),
                 net.minecraft.server.packs.repository.PackSource.BUILT_IN,
                 false,  // 不是必选
                 net.minecraft.server.packs.repository.Pack.Position.TOP
@@ -29,6 +37,6 @@ public class MutBuiltinPacks {
                 net.minecraft.server.packs.repository.PackSource.BUILT_IN,
                 false,  // 不是必选
                 net.minecraft.server.packs.repository.Pack.Position.TOP
-        );
+        );*/
     }
 }

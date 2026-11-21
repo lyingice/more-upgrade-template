@@ -1,0 +1,9 @@
+{
+  "asset_name": "advanced_steel",
+  "description": {
+    "color": "#8B79EE",
+    "translate": "trim_material.mut.advanced_steel"
+  },
+  "ingredient": "mut:advanced_steel_ingot",
+  "item_model_index": 1.6
+}

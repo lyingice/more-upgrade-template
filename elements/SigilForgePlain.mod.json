@@ -144,7 +144,7 @@
         "minGroup": 1,
         "maxGroup": 2,
         "weight": 5,
-        "spawnType": "monster"
+        "spawnType": "creature"
       },
       {
         "entity": {

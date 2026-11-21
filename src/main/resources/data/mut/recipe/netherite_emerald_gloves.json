@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:netherite_emerald_gloves"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_emerald_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:emerald_gloves"
+  },
+  "addition": {
+    "item": "mut:netherite_emerald_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_emerald_gloves",
+    "count": 1
+  }
+}

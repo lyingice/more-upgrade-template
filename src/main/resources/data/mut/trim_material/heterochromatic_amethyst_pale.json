@@ -1,0 +1,9 @@
+{
+  "asset_name": "heterochromatic_amethyst_pale",
+  "description": {
+    "color": "#C0A9F5",
+    "translate": "trim_material.mut.heterochromatic_amethyst_pale"
+  },
+  "ingredient": "mut:heterochromatic_amethyst_shard",
+  "item_model_index": 1.9
+}

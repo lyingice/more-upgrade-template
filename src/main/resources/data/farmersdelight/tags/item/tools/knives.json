@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    {"id": "mut:advanced_steel_knife", "required": false},
+    {"id": "mut:amethyst_knife", "required": false},
+    {"id": "mut:blue_diamond_knife", "required": false},
+    {"id": "mut:copper_knife", "required": false},
+    {"id": "mut:crying_obsidian_knife", "required": false},
+    {"id": "mut:dragon_knife", "required": false},
+    {"id": "mut:echoite_knife", "required": false},
+    {"id": "mut:emerald_knife", "required": false},
+    {"id": "mut:flame_gold_knife", "required": false},
+    {"id": "mut:gilding_knife", "required": false},
+    {"id": "mut:lapis_lazuli_knife", "required": false},
+    {"id": "mut:nether_star_knife", "required": false},
+    {"id": "mut:netherite_amethyst_knife", "required": false},
+    {"id": "mut:netherite_copper_knife", "required": false},
+    {"id": "mut:netherite_emerald_knife", "required": false},
+    {"id": "mut:netherite_lapis_lazuli_knife", "required": false},
+    {"id": "mut:netherite_obsidian_knife", "required": false},
+    {"id": "mut:netherite_redstone_knife", "required": false},
+    {"id": "mut:obsidian_knife", "required": false},
+    {"id": "mut:position_steel_knife", "required": false},
+    {"id": "mut:steel_knife", "required": false},
+    {"id": "mut:thunder_copper_knife", "required": false},
+    {"id": "mut:uncanny_amethyst_knife", "required": false},
+    {"id": "mut:wither_knife", "required": false}
+  ]
+}

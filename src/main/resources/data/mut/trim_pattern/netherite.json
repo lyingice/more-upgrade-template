@@ -1,0 +1,8 @@
+{
+  "asset_id": "mut:netherite",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.mut.netherite"
+  },
+  "template_item": "mut:netherite_trim_smithing_template"
+}

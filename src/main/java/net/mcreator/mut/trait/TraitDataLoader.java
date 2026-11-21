@@ -14,6 +14,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
 import java.util.*;
 
+
 @EventBusSubscriber(modid = MutMod.MODID)
 public class TraitDataLoader extends SimpleJsonResourceReloadListener {
 

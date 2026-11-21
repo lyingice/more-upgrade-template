@@ -1,0 +1,27 @@
+{
+  "_fv": 85,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:SigilForgeSandstone"
+      }
+    ],
+    "cookingBookCategory": "BLOCKS",
+    "xpReward": 1.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:SigilForgeSandstone"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:SigilForgeSmoothSandstone"
+    },
+    "name": "smooth_sandstone_recipe",
+    "namespace": "mod"
+  }
+}

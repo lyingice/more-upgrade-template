@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:obsidian_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:obsidian_upgrade_template"
+  },
+  "base": {
+    "item": "farmersdelight:diamond_knife"
+  },
+  "addition": {
+    "item": "mut:obsidian_ingot"
+  },
+  "result": {
+    "id": "mut:obsidian_knife",
+    "count": 1
+  }
+}

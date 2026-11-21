@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.mcreator.mut.porting.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemCombinerMenuAccessor",
+    "SmithingMenuAnimalArmorMixin",
+    "SmithingMenuUpgradeTemplateMixin"
+  ],
+  "client": [
+    "HorseArmorLayerMixin",
+    "WolfArmorLayerMixin"
+  ]
+}

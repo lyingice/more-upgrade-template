@@ -17,5 +17,34 @@
   "config.mut.crossbow.global_extra_load_count": "全局额外装填数量",
   "config.mut.crossbow.load_count_per_level": "每级装填增量",
   "config.mut.crossbow.multishot_count": "多重射击箭数",
-  "config.mut.crossbow.per_crossbow_extra_load_counts": "指定弩额外装填"
+  "config.mut.crossbow.per_crossbow_extra_load_counts": "指定弩额外装填",
+  "trait.mut.thunder_copper.name": "电储能",
+  "trait.mut.thunder_copper.desc": "手持对应物品受到雷击时增加物品雷电储能。\n攻击时根据双手总和提升伤害。",
+
+  "item.mut.arrowhead_armor_trim_smithing_template": "锻造模板",
+  "item.mut.netherite_trim_smithing_template": "锻造模板",
+  "item.mut.netherite_upgrade_smithing_template": "下界合金锻造模板",
+  "trim_pattern.mut.arrowhead": "箭头纹饰",
+  "trim_pattern.mut.netherite": "下界合金纹饰",
+  "trim_material.mut.netherite": "下界合金材质",
+  "upgrade.mut.arrowhead_trim": "箭头纹饰",
+  "upgrade.mut.netherite_trim": "下界合金纹饰",
+
+  "trim_material.mut.crying_obsidian": "悲悯",
+  "trim_material.mut.flame_gold": "赤焰金",
+  "trim_material.mut.obsidian": "黑曜石",
+  "trim_material.mut.echoite": "回响合金",
+  "trim_material.mut.poison_steel": "毒金属",
+  "trim_material.mut.advanced_steel": "精钢",
+  "trim_material.mut.dragon_scale": "龙鳞",
+  "trim_material.mut.heterochromatic_amethyst": "异色紫水晶",
+  "trim_material.mut.heterochromatic_amethyst_pale": "异色紫水晶（淡）",
+  "trim_material.mut.refined_diamond_crystals": "精炼钻石结晶",
+
+  "item.mut.horse_armor_stand": "马铠展示架",
+  "item.mut.wolf_armor_stand": "狼铠展示架",
+  "entity.mut.horse_armor_stand": "马铠展示架",
+  "entity.mut.wolf_armor_stand": "狼铠展示架",
+  "tooltip.mut.horse_armor_stand.armor": "马铠：%s",
+  "tooltip.mut.wolf_armor_stand.armor": "狼铠：%s"
 }

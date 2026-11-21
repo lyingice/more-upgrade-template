@@ -3,14 +3,18 @@ package net.mcreator.mut.client.renderer;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
+import net.mcreator.mut.client.entities.ModelCryingObsidianTrident;
 import net.mcreator.mut.client.model.ModelMutTridentModel;
 import net.mcreator.mut.entity.MutThrownTrident;
+import net.mcreator.mut.init.MutModItems;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.client.renderer.texture.OverlayTexture;
+import net.minecraft.client.model.EntityModel;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.item.Item;
@@ -21,89 +25,57 @@ import java.util.Map;
 
 public class MutThrownTridentRenderer extends EntityRenderer<MutThrownTrident> {
 
-    private static final Map<Item, ResourceLocation> TEXTURE_MAP = new HashMap<>();
+    // ★ 需要特殊模型的三叉戟
+    private static final Map<Item, EntityModel<MutThrownTrident>> CUSTOM_MODELS = new HashMap<>();
 
-    static {
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.IRON_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/iron_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.GOLDEN_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/golden_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.DIAMOND_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/diamond_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.WOODEN_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/wooden_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.STEEL_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/steel_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.GILDING_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/gilding_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.BLUE_DIAMOND_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/blue_diamond_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.ADVANCED_STEEL_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/advanced_steel_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.COPPER_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/copper_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.OBSIDIAN_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/obsidian_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_OBSIDIAN_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_obsidian_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.CRYING_OBSIDIAN_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/crying_obsidian_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHER_STAR_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/nether_star_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.DRAGON_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/dragon_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.WITHER_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/wither_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_COPPER_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_copper_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_EMERALD_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_emerald_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_REDSTONE_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_redstone_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_AMETHYST_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_amethyst_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.AMETHYST_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/amethyst_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.EMERALD_TRIDENT.get(),
-                ResourceLocation.fromNamespaceAndPath("mut", "textures/block/emerald_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.LAPIS_LAZULI_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/lapis_lazuli_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.NETHERITE_LAPIS_LAZULI_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/netherite_lapis_lazuli_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.ECHOITE_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/echoite_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.POISON_STEEL_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/poison_steel_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.FLAME_GOLD_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/flame_gold_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.THUNDER_COPPER_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/thunder_copper_trident.png"));
-        TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.UNCANNY_AMETHYST_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/uncanny_amethyst_trident.png"));
-
-
-        //TEXTURE_MAP.put(net.mcreator.mut.init.MutModItems.X_TRIDENT.get(),ResourceLocation.fromNamespaceAndPath("mut", "textures/block/x_trident.png"));
-    }
-
-    private final ModelMutTridentModel<MutThrownTrident> model;
+    private final ModelMutTridentModel<MutThrownTrident> defaultModel;
 
     public MutThrownTridentRenderer(EntityRendererProvider.Context context) {
         super(context);
-        this.model = new ModelMutTridentModel<>(context.bakeLayer(ModelMutTridentModel.LAYER_LOCATION));
+        this.defaultModel = new ModelMutTridentModel<>(
+                context.bakeLayer(ModelMutTridentModel.LAYER_LOCATION));
+
+        // ★ 注册特殊模型
+        CUSTOM_MODELS.put(MutModItems.CRYING_OBSIDIAN_TRIDENT.get(),
+                new ModelCryingObsidianTrident(
+                        context.bakeLayer(ModelCryingObsidianTrident.LAYER_LOCATION)));
     }
 
     @Override
     public void render(MutThrownTrident entity, float entityYaw, float partialTicks,
                        PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
         ItemStack stack = entity.getCustomStack();
-        ResourceLocation texture = TEXTURE_MAP.getOrDefault(stack.getItem(),
-                ResourceLocation.withDefaultNamespace("textures/entity/trident.png"));
+        if (stack.isEmpty()) return;
+
+        EntityModel<MutThrownTrident> model = CUSTOM_MODELS.getOrDefault(
+                stack.getItem(), defaultModel);
+
+        ResourceLocation tex = CUSTOM_MODELS.containsKey(stack.getItem())
+                ? deriveTexture(stack.getItem())   // 特殊模型也用自动纹理
+                : deriveTexture(stack.getItem());  // 默认模型自动纹理
 
         poseStack.pushPose();
-        poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entity.yRotO, entity.getYRot()) - 90.0F));
-        poseStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(partialTicks, entity.xRotO, entity.getXRot()) + 90.0F));
+        poseStack.mulPose(Axis.YP.rotationDegrees(
+                Mth.lerp(partialTicks, entity.yRotO, entity.getYRot()) - 90.0F));
+        poseStack.mulPose(Axis.ZP.rotationDegrees(
+                Mth.lerp(partialTicks, entity.xRotO, entity.getXRot()) + 90.0F));
 
-        VertexConsumer vertexConsumer = ItemRenderer.getFoilBufferDirect(
-                buffer, RenderType.entitySolid(texture), false, entity.isFoil());
-        this.model.renderToBuffer(poseStack, vertexConsumer, packedLight, OverlayTexture.NO_OVERLAY, -1);
+        VertexConsumer consumer = ItemRenderer.getFoilBufferDirect(
+                buffer, RenderType.entitySolid(tex), false, entity.isFoil());
+        model.renderToBuffer(poseStack, consumer, packedLight, OverlayTexture.NO_OVERLAY, -1);
+
         poseStack.popPose();
-
         super.render(entity, entityYaw, partialTicks, poseStack, buffer, packedLight);
+    }
+
+    private static ResourceLocation deriveTexture(Item item) {
+        ResourceLocation id = BuiltInRegistries.ITEM.getKey(item);
+        return ResourceLocation.fromNamespaceAndPath(id.getNamespace(),
+                "textures/block/" + id.getPath() + ".png");
     }
 
     @Override
     public ResourceLocation getTextureLocation(MutThrownTrident entity) {
-        ItemStack stack = entity.getCustomStack();
-        return TEXTURE_MAP.getOrDefault(stack.getItem(),
-                ResourceLocation.withDefaultNamespace("textures/entity/trident.png"));
+        return deriveTexture(entity.getCustomStack().getItem());
     }
 }

@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:netherite_redstone_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_redstone_upgrade_template"
+  },
+  "base": {
+    "item": "farmersdelight:netherite_knife"
+  },
+  "addition": {
+    "item": "mut:netherite_redstone_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_redstone_knife",
+    "count": 1
+  }
+}

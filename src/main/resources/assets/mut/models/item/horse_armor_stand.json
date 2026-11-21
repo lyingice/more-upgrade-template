@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mut:item/misc/horse_armor_stand"
+  }
+}

@@ -3,7 +3,7 @@
   "textures": {
     "bottom": "mut:block/trial_spawner_bottom",
     "side": "mut:block/trial_spawner_side_inactive_ominous",
-    "top": "mut:block/trial_spawner_top_active_ominous"
+    "top": "mut:block/trial_spawner_top_inactive_ominous"
   },
   "render_type": "cutout"
 }

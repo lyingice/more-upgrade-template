@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A  ",
+    "AA ",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "mut:sigil_forge_cut_sandstone"
+    }
+  },
+  "result": {
+    "id": "mut:sigil_forge_cut_sandstone_stairs",
+    "count": 4
+  }
+}

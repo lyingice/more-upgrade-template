@@ -16,7 +16,7 @@ public class SteelPickaxeItem extends PickaxeItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override
 		public int getUses() {
-			return 100;
+			return 750;
 		}
 
 		@Override

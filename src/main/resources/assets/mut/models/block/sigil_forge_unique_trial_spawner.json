@@ -1,8 +1,9 @@
 {
-  "parent": "minecraft:block/cube_bottom_top_inner_faces",
+  "parent": "minecraft:block/trial_spawner_inactive_ominous",
   "textures": {
-    "bottom": "minecraft:block/trial_spawner_bottom",
-    "side": "minecraft:block/trial_spawner_side_inactive_ominous",
-    "top": "minecraft:block/trial_spawner_top_inactive_ominous"
-  },"render_type": "cutout"
+    "bottom": "mut:block/trial_spawner_bottom_unique",
+    "side": "mut:block/trial_spawner_side_inactive_unique",
+    "top": "mut:block/trial_spawner_top_inactive_unique"
+  },
+  "render_type": "cutout"
 }

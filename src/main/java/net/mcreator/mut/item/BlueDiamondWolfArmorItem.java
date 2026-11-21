@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class BlueDiamondWolfArmorItem extends BaseAnimalArmorItem {
         public BlueDiamondWolfArmorItem() {
-            super(AnimalArmorMaterials.BLUE_DIAMOND, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.BLUE_DIAMOND, BodyType.CANINE, false);
         }
 }

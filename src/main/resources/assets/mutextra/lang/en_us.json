@@ -17,5 +17,34 @@
   "config.mut.crossbow.global_extra_load_count": "Global Extra Load Count",
   "config.mut.crossbow.load_count_per_level": "Load Count Per Level",
   "config.mut.crossbow.multishot_count": "Multishot Arrow Count",
-  "config.mut.crossbow.per_crossbow_extra_load_counts": "Per-Crossbow Extra Load Counts"
+  "config.mut.crossbow.per_crossbow_extra_load_counts": "Per-Crossbow Extra Load Counts",
+  "trait.mut.thunder_copper.name": "Electric Energy",
+  "trait.mut.thunder_copper.desc": "When holding the corresponding item and being struck by lightning, increase the lightning energy storage of the item. \nAttack damage is increased according to the sum of both hands.",
+
+  "item.mut.arrowhead_armor_trim_smithing_template": "Smithing Template",
+  "item.mut.netherite_trim_smithing_template": "Smithing Template",
+  "item.mut.netherite_upgrade_smithing_template": "Netherite Upgrade Smithing Template",
+  "trim_pattern.mut.arrowhead": "Arrowhead Trim",
+  "trim_pattern.mut.netherite": "Netherite Trim",
+  "trim_material.mut.netherite": "Netherite Material",
+  "upgrade.mut.arrowhead_trim": "Arrowhead Trim",
+  "upgrade.mut.netherite_trim": "Netherite Trim",
+
+  "trim_material.mut.crying_obsidian": "Crying Obsidian",
+  "trim_material.mut.flame_gold": "Flame Gold",
+  "trim_material.mut.obsidian": "Obsidian",
+  "trim_material.mut.echoite": "Echoite",
+  "trim_material.mut.poison_steel": "Poison Steel",
+  "trim_material.mut.advanced_steel": "Advanced Steel",
+  "trim_material.mut.dragon_scale": "Dragon Scale",
+  "trim_material.mut.heterochromatic_amethyst": "Heterochromatic Amethyst",
+  "trim_material.mut.heterochromatic_amethyst_pale": "Pale Heterochromatic Amethyst",
+  "trim_material.mut.refined_diamond_crystals": "Refined Diamond Crystals",
+
+  "item.mut.horse_armor_stand": "Horse Armor Stand",
+  "item.mut.wolf_armor_stand": "Wolf Armor Stand",
+  "entity.mut.horse_armor_stand": "Horse Armor Stand",
+  "entity.mut.wolf_armor_stand": "Wolf Armor Stand",
+  "tooltip.mut.horse_armor_stand.armor": "Horse Armor: %s",
+  "tooltip.mut.wolf_armor_stand.armor": "Wolf Armor: %s"
 }

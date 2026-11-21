@@ -9,7 +9,7 @@ import net.minecraft.world.item.component.CustomData;
 
 public class WitherWolfArmorItem extends BaseAnimalArmorItem {
         public WitherWolfArmorItem() {
-            super(AnimalArmorMaterials.WITHER, BodyType.EQUESTRIAN, false,props -> props.component(DataComponents.CUSTOM_DATA, createWitherMarkData()));
+            super(AnimalArmorMaterials.WITHER, BodyType.CANINE, false,props -> props.component(DataComponents.CUSTOM_DATA, createWitherMarkData()));
         }
     private static CustomData createWitherMarkData() {
         CompoundTag tag = new CompoundTag();

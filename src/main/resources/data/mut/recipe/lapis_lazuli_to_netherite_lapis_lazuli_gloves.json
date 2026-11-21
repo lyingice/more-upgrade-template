@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:netherite_lapis_lazuli_gloves"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:netherite_lapis_lazuli_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "mut:lapis_lazuli_gloves"
+  },
+  "addition": {
+    "item": "mut:netherite_lapis_lazuli_ingot"
+  },
+  "result": {
+    "id": "mut:netherite_lapis_lazuli_gloves",
+    "count": 1
+  }
+}

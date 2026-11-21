@@ -1,0 +1,9 @@
+{
+  "asset_name": "dragon_scale",
+  "description": {
+    "color": "#CC00FA",
+    "translate": "trim_material.mut.dragon_scale"
+  },
+  "ingredient": "mut:dragon_scale_cluster",
+  "item_model_index": 1.7
+}

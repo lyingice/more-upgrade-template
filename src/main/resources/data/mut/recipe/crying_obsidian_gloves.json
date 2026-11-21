@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:crying_obsidian_gloves"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:crying_obsidian_upgrade_template"
+  },
+  "base": {
+    "item": "mut:netherite_obsidian_gloves"
+  },
+  "addition": {
+    "item": "mut:crying_obsidian_ingot"
+  },
+  "result": {
+    "id": "mut:crying_obsidian_gloves",
+    "count": 1
+  }
+}

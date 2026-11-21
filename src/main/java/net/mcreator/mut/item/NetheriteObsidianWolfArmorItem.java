@@ -6,6 +6,6 @@ import net.minecraft.world.item.Item;
 
 public class NetheriteObsidianWolfArmorItem extends BaseAnimalArmorItem {
         public NetheriteObsidianWolfArmorItem() {
-            super(AnimalArmorMaterials.NETHERITE_OBSIDIAN, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.NETHERITE_OBSIDIAN, BodyType.CANINE, false);
         }
 }

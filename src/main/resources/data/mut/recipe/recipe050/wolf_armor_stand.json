@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "A A",
+    "AAA",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "mut:debris_planks"
+    },
+    "B": {
+      "item": "minecraft:armor_stand"
+    }
+  },
+  "result": {
+    "id": "mut:wolf_armor_stand",
+    "count": 1
+  }
+}

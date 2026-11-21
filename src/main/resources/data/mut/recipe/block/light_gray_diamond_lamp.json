@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "mut:diamond_lamp"
+    },
+    "B": {
+      "item": "minecraft:light_gray_dye"
+    }
+  },
+  "result": {
+    "id": "mut:light_gray_diamond_lamp",
+    "count": 8
+  }
+}

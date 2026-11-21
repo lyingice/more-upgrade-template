@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:blue_diamond_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:blue_diamond_upgrade_template"
+  },
+  "base": {
+    "item": "farmersdelight:diamond_knife"
+  },
+  "addition": {
+    "item": "mut:blue_diamond_ingot"
+  },
+  "result": {
+    "id": "mut:blue_diamond_knife",
+    "count": 1
+  }
+}

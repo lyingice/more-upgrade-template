@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing_trim",
+  "template": {
+    "item": "minecraft:flow_armor_trim_smithing_template"
+  },
+  "base": {
+    "tag": "mut:animal_armor_trimmable"
+  },
+  "addition": {
+    "tag": "minecraft:trim_materials"
+  }
+}

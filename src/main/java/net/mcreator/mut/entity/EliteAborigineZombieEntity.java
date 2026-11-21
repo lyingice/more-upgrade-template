@@ -211,25 +211,8 @@ public class EliteAborigineZombieEntity extends Zombie implements CrossbowAttack
         // 3. 弓（有弩时不用弓）
         this.goalSelector.addGoal(3, AdaptiveAttackGoals.createBowGoal(this, 1.0, 20, RANGED_RANGE, MELEE_RANGE));
 
-        // 4. 近战
-        float meleeRangeSqr = MELEE_RANGE * MELEE_RANGE;
-        this.goalSelector.addGoal(4, new MeleeAttackGoal(this, 1.2, false) {
-            @Override
-            protected boolean canPerformAttack(LivingEntity entity) {
-                return this.isTimeToAttack()
-                        && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth() * entity.getBbWidth())
-                        && this.mob.getSensing().hasLineOfSight(entity);
-            }
-            @Override
-            public boolean canUse() {
-                if (!AdaptiveAttackGoals.isMeleeWeapon(EliteAborigineZombieEntity.this.getMainHandItem())) return false;
-                // 三叉戟时由上面那个Goal管理，近战不插手
-                if (hasTrident(EliteAborigineZombieEntity.this)) return false;
-                LivingEntity target = EliteAborigineZombieEntity.this.getTarget();
-                if (target == null) return false;
-                return EliteAborigineZombieEntity.this.distanceToSqr(target) <= meleeRangeSqr;
-            }
-        });
+        // 4. 近战（与远程按距离互斥；没有远程武器时主动追击）
+        this.goalSelector.addGoal(4, AdaptiveAttackGoals.createMeleeGoal(this, 1.2, MELEE_RANGE));
 
         this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1));
         this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
@@ -259,15 +242,11 @@ public class EliteAborigineZombieEntity extends Zombie implements CrossbowAttack
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(chosen.leggings));
         this.setItemSlot(EquipmentSlot.FEET, new ItemStack(chosen.boots));
 
-        if (this.random.nextFloat() < 0.2F) {
-            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(chosen.trident));
-            this.setItemSlot(EquipmentSlot.OFFHAND, ItemStack.EMPTY);
-        } else {
-            this.setItemSlot(EquipmentSlot.MAINHAND,
-                    new ItemStack(chosen.meleeWeapons[this.random.nextInt(chosen.meleeWeapons.length)]));
-            this.setItemSlot(EquipmentSlot.OFFHAND,
-                    new ItemStack(chosen.rangedWeapons[this.random.nextInt(chosen.rangedWeapons.length)]));
-        }
+        // 不再配发三叉戟：近战武器固定主手，远程武器固定副手
+        this.setItemSlot(EquipmentSlot.MAINHAND,
+                new ItemStack(chosen.meleeWeapons[this.random.nextInt(chosen.meleeWeapons.length)]));
+        this.setItemSlot(EquipmentSlot.OFFHAND,
+                new ItemStack(chosen.rangedWeapons[this.random.nextInt(chosen.rangedWeapons.length)]));
     }
 
     // ========== 音效 ==========

@@ -4,7 +4,7 @@
     "item": "mut:netherite_copper_upgrade_smithing_template"
   },
   "base": {
-    "item": "mut:copper_spear"
+    "item": "spearcore:copper_spear"
   },
   "addition": {
     "item": "minecraft:copper_block"

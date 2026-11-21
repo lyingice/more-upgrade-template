@@ -1,0 +1,35 @@
+{
+  "id": "crystal_alloy",
+  "name_key": "set.mut.crystal_alloy.name",
+  "pieces": [
+    "mut:blue_diamond_helmet",
+    "mut:blue_diamond_chestplate",
+    "mut:blue_diamond_leggings",
+    "mut:blue_diamond_boots"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "desc_key": "set.mut.crystal_alloy.bonus2",
+      "effects": [
+        {
+          "type": "repair_armor",
+          "trigger": "interval",
+          "interval_seconds": 5,
+          "amount": 1
+        }
+      ]
+    },
+    {
+      "pieces": 4,
+      "desc_key": "set.mut.crystal_alloy.bonus4",
+      "effects": [
+        {
+          "type": "repair_armor",
+          "trigger": "kill",
+          "amount": 4
+        }
+      ]
+    }
+  ]
+}

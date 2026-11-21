@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:steel_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:steel_upgrade_template"
+  },
+  "base": {
+    "item": "farmersdelight:iron_knife"
+  },
+  "addition": {
+    "item": "mut:steel_ingot"
+  },
+  "result": {
+    "id": "mut:steel_knife",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "asset_name": "obsidian",
+  "description": {
+    "color": "#593B7F",
+    "translate": "trim_material.mut.obsidian"
+  },
+  "ingredient": "mut:obsidian_ingot",
+  "item_model_index": 1.3
+}

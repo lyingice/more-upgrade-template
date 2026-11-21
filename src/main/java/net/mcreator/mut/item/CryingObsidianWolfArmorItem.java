@@ -5,6 +5,6 @@ import net.minecraft.world.item.Item;
 
 public class CryingObsidianWolfArmorItem extends BaseAnimalArmorItem {
         public CryingObsidianWolfArmorItem() {
-            super(AnimalArmorMaterials.CRYING_OBSIDIAN, BodyType.EQUESTRIAN, false);
+            super(AnimalArmorMaterials.CRYING_OBSIDIAN, BodyType.CANINE, false);
         }
 }

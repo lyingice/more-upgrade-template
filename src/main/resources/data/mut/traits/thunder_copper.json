@@ -1,0 +1,7 @@
+{
+  "id": "thunder_copper",
+  "supported_items": ["#mut:traits/thunder_copper", "mut:thunder_copper_spear"],
+  "name_key": "trait.mut.thunder_copper.name",
+  "description_keys": ["trait.mut.thunder_copper.desc"],
+  "effects": []
+}

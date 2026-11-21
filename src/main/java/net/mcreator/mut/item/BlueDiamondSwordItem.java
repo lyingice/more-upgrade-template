@@ -35,7 +35,7 @@ public class BlueDiamondSwordItem extends SwordItem {
 
 		@Override
 		public int getEnchantmentValue() {
-			return 2;
+			return 18;
 		}
 
 		@Override

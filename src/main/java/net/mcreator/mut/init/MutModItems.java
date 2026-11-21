@@ -456,6 +456,7 @@ public class MutModItems {
 	public static final DeferredItem<Item> PIGLIN_EXPEDITIONARY_SPAWN_EGG;
 	public static final DeferredItem<Item> FAT_PIGLIN_EXPEDITIONARY_SPAWN_EGG;
 	public static final DeferredItem<Item> STEEL_SLIME_SPAWN_EGG;
+	public static final DeferredItem<Item> REFINED_DIAMOND_CRYSTALS;
 	static {
 		IRON_BOW = REGISTRY.register("iron_bow", IronBowItem::new);
 		STONE_UPGRADE_TEMPLATE = REGISTRY.register("stone_upgrade_template", StoneUpgradeTemplateItem::new);
@@ -884,6 +885,7 @@ public class MutModItems {
 		PIGLIN_EXPEDITIONARY_SPAWN_EGG = REGISTRY.register("piglin_expeditionary_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.PIGLIN_EXPEDITIONARY, -6737152, -256, new Item.Properties()));
 		FAT_PIGLIN_EXPEDITIONARY_SPAWN_EGG = REGISTRY.register("fat_piglin_expeditionary_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.FAT_PIGLIN_EXPEDITIONARY, -6737152, -3355648, new Item.Properties()));
 		STEEL_SLIME_SPAWN_EGG = REGISTRY.register("steel_slime_spawn_egg", () -> new DeferredSpawnEggItem(MutModEntities.STEEL_SLIME, -3355444, -1, new Item.Properties()));
+		REFINED_DIAMOND_CRYSTALS = REGISTRY.register("refined_diamond_crystals", RefinedDiamondCrystalsItem::new);
 	}
 	// Start of user code block custom items
 	public static final DeferredItem<Item> AMETHYST_SWORD = REGISTRY.register("amethyst_sword", AmethystTools.Sword::new);

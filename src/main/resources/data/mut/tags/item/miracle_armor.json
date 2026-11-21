@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mut:miracle_helmet",
+    "mut:miracle_chestplate",
+    "mut:miracle_leggings",
+    "mut:miracle_boots"
+  ]
+}

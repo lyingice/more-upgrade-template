@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mut:item/crying_obsidian_leggings",
+    "layer1": "minecraft:trims/items/leggings_trim_diamond"
+  }
+}

@@ -8,8 +8,16 @@ base.archivesName = "modid"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/generated/resources', 'src/main/resources']
+        }
+    }
+}
+
 neoForge {
-    version = "21.1.190"
+    version = "21.1.238"
     accessTransformers {
         file('src/main/resources/META-INF/accesstransformer.cfg')
     }
@@ -56,6 +64,10 @@ dependencies {
 }
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
+tasks.withType(ProcessResources).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 apply from: 'mcreator.gradle'

@@ -47,14 +47,19 @@ public class RedLightningCreeperEntity extends Creeper {
     @Override
     protected void registerGoals() {
         super.registerGoals();
+        // 只认玩家：移除原版的反击目标，避免被其它生物打了之后把它当成目标而炸空气
+        this.targetSelector.removeAllGoals(goal -> goal instanceof HurtByTargetGoal);
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, false));
-        this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
     }
 
-    // ========== 不可逆膨胀 ==========
-    @Override
-    public void setSwellDir(int dir) {
-        super.setSwellDir(dir);
+    /**
+     * 只有"活着的、非创造/旁观的真实玩家、且在引信范围内有视线"才算有效猎物。
+     * 方块、生物、掉线的玩家一律不算 —— 这是修掉"没看见玩家却自己炸了"的关键。
+     */
+    private boolean hasValidPrey() {
+        if (!(this.getTarget() instanceof Player player)) return false;
+        if (!player.isAlive() || player.isCreative() || player.isSpectator()) return false;
+        return this.distanceToSqr(player) <= 49.0D && this.getSensing().hasLineOfSight(player);
     }
 
     // ========== 不被雷劈变种 ==========
@@ -76,13 +81,17 @@ public class RedLightningCreeperEntity extends Creeper {
                 }
             }
 
-            if (this.isIgnited()) {
-                this.setSwellDir(1);
+            // 非玩家目标一律作废（含被其它生物激怒的情况）
+            if (this.getTarget() != null && !(this.getTarget() instanceof Player)) {
+                this.setTarget(null);
             }
 
-            // 不可逆：已经开始膨胀就不许缩回去
-            if (this.getSwellDir() == -1 && this.getSwelling(0) > 0.1F) {
+            if (this.isIgnited()) {
+                // 被引燃（打火石）时才允许不可逆
                 this.setSwellDir(1);
+            } else if (!this.hasValidPrey()) {
+                // 没有有效玩家目标就强制放气，膨胀不再"一旦开始就锁死"
+                this.setSwellDir(-1);
             }
 
             int swellDir = this.getSwellDir();

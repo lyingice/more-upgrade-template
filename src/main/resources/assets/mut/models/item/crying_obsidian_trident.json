@@ -2,9 +2,9 @@
   "loader": "neoforge:separate_transforms",
   "gui_light": "front",
   "base": {
-    "parent": "mut:custom/trident",
+    "parent": "mut:item/crying_obsidian_trident_3d",
     "textures": {
-      "2": "mut:block/crying_obsidian_trident",
+      "trident": "mut:block/crying_obsidian_trident",
       "particle": "mut:item/crying_obsidian_trident"
     }
   },

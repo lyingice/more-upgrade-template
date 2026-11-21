@@ -93,12 +93,12 @@ public class SigilForgeZombieBossEntity extends EliteAborigineZombieEntity{
                         .getHolderOrThrow(TrimPatterns.WARD)
         );
 
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(MutModItems.FLAME_GOLD_HELMET.get()));
-        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(MutModItems.FLAME_GOLD_CHESTPLATE.get()));
-        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(MutModItems.FLAME_GOLD_LEGGINGS.get()));
-        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(MutModItems.FLAME_GOLD_BOOTS.get()));
-        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(MutModItems.FLAME_GOLD_AXE.get()));
-        this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(MutModItems.FLAME_GOLD_SHIELD.get()));
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(MutModItems.BLUE_DIAMOND_HELMET.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(MutModItems.BLUE_DIAMOND_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(MutModItems.BLUE_DIAMOND_LEGGINGS.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(MutModItems.BLUE_DIAMOND_BOOTS.get()));
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(MutModItems.BLUE_DIAMOND_AXE.get()));
+        this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(MutModItems.BLUE_DIAMOND_SHIELD.get()));
 
         // 应用纹饰到所有盔甲
         for (EquipmentSlot slot : EquipmentSlot.values()) {
@@ -128,8 +128,8 @@ public class SigilForgeZombieBossEntity extends EliteAborigineZombieEntity{
             // 随机选一个词缀
             Affix chosen = allAffixes.get(this.random.nextInt(allAffixes.size()));
 
-            // 随机 4-6 级，不超过词缀最大等级
-            int level = this.random.nextIntBetweenInclusive(4, 6);
+            // 随机 5-8 级，不超过词缀最大等级
+            int level = this.random.nextIntBetweenInclusive(5, 8);
             level = Math.min(level, chosen.getMaxLevel());
 
             // 应用

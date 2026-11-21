@@ -1,0 +1,21 @@
+{
+  "values": [
+    "mut:thunder_copper_sword",
+    "mut:thunder_copper_axe",
+    "mut:thunder_copper_pickaxe",
+    "mut:thunder_copper_shovel",
+    "mut:thunder_copper_hoe",
+    "mut:thunder_copper_trident",
+    "mut:thunder_copper_crossbow",
+    "mut:thunder_copper_bow",
+    "mut:thunder_copper_mace",
+    {
+      "id": "mut:thunder_copper_knife",
+      "required": false
+    },
+    {
+      "id": "mut:thunder_copper_gloves",
+      "required": false
+    }
+  ]
+}

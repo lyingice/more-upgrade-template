@@ -1,0 +1,9 @@
+{
+  "asset_name": "crying_obsidian",
+  "description": {
+    "color": "#7B06E1",
+    "translate": "trim_material.mut.crying_obsidian"
+  },
+  "ingredient": "mut:crying_obsidian_ingot",
+  "item_model_index": 1.1
+}

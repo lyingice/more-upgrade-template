@@ -1,0 +1,22 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "mut:echoite_knife"
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:echoite_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "farmersdelight:netherite_knife"
+  },
+  "addition": {
+    "item": "mut:echoite_ingot"
+  },
+  "result": {
+    "id": "mut:echoite_knife",
+    "count": 1
+  }
+}

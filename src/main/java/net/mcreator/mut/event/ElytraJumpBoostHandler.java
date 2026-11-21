@@ -1,5 +1,6 @@
 package net.mcreator.mut.event;
 
+import net.mcreator.mut.item.DragonChestplateElytraItem;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -36,7 +37,7 @@ public class ElytraJumpBoostHandler {
 
         // ========== 2. 检查是否穿着 DragonElytraItem ==========
         ItemStack chestSlot = player.getItemBySlot(EquipmentSlot.CHEST);
-        if (!(chestSlot.getItem() instanceof DragonElytraItem)) {
+        if (!(chestSlot.getItem() instanceof DragonElytraItem || chestSlot.getItem() instanceof DragonChestplateElytraItem)) {
             COOLDOWNS.remove(player);
             return;
         }

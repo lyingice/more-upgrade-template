@@ -1,0 +1,26 @@
+{
+  "id": "crystal_guard",
+  "supported_items": [
+    "#mut:traits/blue_diamond"
+  ],
+  "name_key": "trait.mut.crystal_guard.name",
+  "description_keys": [
+    "trait.mut.crystal_guard.desc"
+  ],
+  "effects": [
+    {
+      "type": "apply_mob_effect_to_self",
+      "trigger": "attack",
+      "effect": "minecraft:resistance",
+      "duration": 120,
+      "amplifier": 0
+    },
+    {
+      "type": "apply_mob_effect_to_self",
+      "trigger": "attack",
+      "effect": "minecraft:absorption",
+      "duration": 120,
+      "amplifier": 0
+    }
+  ]
+}

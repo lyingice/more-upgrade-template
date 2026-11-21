@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mut:item/amethyst_wolf_armor",
+    "layer1": "minecraft:trims/items/wolf_trim_refined_diamond_crystals"
+  }
+}

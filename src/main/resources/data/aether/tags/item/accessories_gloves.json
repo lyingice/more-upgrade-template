@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "mut:advanced_steel_gloves", "required": false },
+    { "id": "mut:amethyst_gloves", "required": false },
+    { "id": "mut:blue_diamond_gloves", "required": false },
+    { "id": "mut:copper_gloves", "required": false },
+    { "id": "mut:crying_obsidian_gloves", "required": false },
+    { "id": "mut:diamond_chain_gloves", "required": false },
+    { "id": "mut:dragon_gloves", "required": false },
+    { "id": "mut:echoite_gloves", "required": false },
+    { "id": "mut:emerald_gloves", "required": false },
+    { "id": "mut:flame_gold_gloves", "required": false },
+    { "id": "mut:gilding_gloves", "required": false },
+    { "id": "mut:golden_chain_gloves", "required": false },
+    { "id": "mut:lapis_lazuli_gloves", "required": false },
+    { "id": "mut:nether_star_gloves", "required": false },
+    { "id": "mut:netherite_amethyst_gloves", "required": false },
+    { "id": "mut:netherite_chain_gloves", "required": false },
+    { "id": "mut:netherite_copper_gloves", "required": false },
+    { "id": "mut:netherite_emerald_gloves", "required": false },
+    { "id": "mut:netherite_lapis_lazuli_gloves", "required": false },
+    { "id": "mut:netherite_obsidian_gloves", "required": false },
+    { "id": "mut:netherite_redstone_gloves", "required": false },
+    { "id": "mut:obsidian_gloves", "required": false },
+    { "id": "mut:position_steel_gloves", "required": false },
+    { "id": "mut:steel_gloves", "required": false },
+    { "id": "mut:super_netherite_gloves", "required": false },
+    { "id": "mut:thunder_copper_gloves", "required": false },
+    { "id": "mut:uncanny_amethyst_gloves", "required": false },
+    { "id": "mut:wither_gloves", "required": false }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "mut:sigil_forge_chiseled_sandstone"
+    }
+  },
+  "result": {
+    "id": "mut:sigil_forge_chiseled_sandstone_wall",
+    "count": 6
+  }
+}

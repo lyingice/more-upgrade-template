@@ -3,13 +3,13 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mut:sigil_forge/roads",
+        "location": "mut:sigil_forge/crossroads",
         "processors": {
           "processors": []
         },
         "projection": "rigid"
       },
-      "weight": 5
+      "weight": 1
     },
     {
       "element": {
@@ -20,7 +20,7 @@
         },
         "projection": "rigid"
       },
-      "weight": 3
+      "weight": 1
     }
   ],
   "fallback": "minecraft:empty"

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "mut:nether_deep_iron_ore_block",
     "mut:heterochromatic_amethyst_block",
     "mut:obsidian_block",
     "mut:gilding_debris",

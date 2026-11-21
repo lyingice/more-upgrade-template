@@ -1,0 +1,9 @@
+{
+  "asset_name": "poison_steel",
+  "description": {
+    "color": "#00DA31",
+    "translate": "trim_material.mut.poison_steel"
+  },
+  "ingredient": "mut:position_steel_ingot",
+  "item_model_index": 1.5
+}

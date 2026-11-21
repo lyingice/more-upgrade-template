@@ -39,6 +39,23 @@ import java.util.EnumSet;
 public class LittleCreeperEntity extends Creeper {
 
     private static final int EXPLOSION_RADIUS = 3;
+    /** 一次性爆炸保护，避免 tick 里重复触发 */
+    private boolean exploding = false;
+    /** 只负责视听效果、不结算伤害的爆炸计算器：伤害由下面按距离手动结算，避免原版伤害叠加一次 */
+    private static final net.minecraft.world.level.ExplosionDamageCalculator VISUAL_ONLY =
+            new net.minecraft.world.level.ExplosionDamageCalculator() {
+                @Override
+                public boolean shouldDamageEntity(net.minecraft.world.level.Explosion explosion,
+                                                  net.minecraft.world.entity.Entity entity) {
+                    return false;
+                }
+
+                @Override
+                public float getEntityDamageAmount(net.minecraft.world.level.Explosion explosion,
+                                                   net.minecraft.world.entity.Entity entity) {
+                    return 0.0F;
+                }
+            };
     private int delay = 0;
 
     public LittleCreeperEntity(EntityType<LittleCreeperEntity> type, Level world) {
@@ -47,111 +64,114 @@ public class LittleCreeperEntity extends Creeper {
         setNoAi(false);
     }
 
+    /** 当前趴在谁的头上；为空表示没抱住人 */
+    @javax.annotation.Nullable
+    private Player hatTarget;
+
+    public boolean isOnHead() {
+        return this.hatTarget != null && this.hatTarget.isAlive();
+    }
+
     @Override
     protected void registerGoals() {
-        // 1. 抓玩家骑乘
-        this.goalSelector.addGoal(1, new GrabPlayerGoal(this));
-        // 2. 骑上后倒计时引爆
-        this.goalSelector.addGoal(2, new ExplodeGoal(this));
-        // 3. 水中漂浮
+        // 1. 扑向玩家并趴到他头上
+        this.goalSelector.addGoal(1, new RidePlayerGoal(this));
+        // 2. 水中漂浮
         this.goalSelector.addGoal(3, new FloatGoal(this));
-        // 4. 随机游荡
+        // 3. 随机游荡
         this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-        // 5. 随机张望
+        // 4. 随机张望
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-        // 6. 寻敌
+        // 5. 寻敌
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, false));
-        // 7. 被攻击反击
+        // 6. 被攻击反击
         this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
     }
 
     // =====================================================
-    // 抓玩家骑乘
+    // 趴到玩家头上
     // =====================================================
-    private static class GrabPlayerGoal extends Goal {
+    /**
+     * 原版不支持"生物骑玩家"：Player 没有 PASSENGER 附着点，
+     * 直接 startRiding 会在 getPassengerRidingPosition 里抛 IllegalStateException。
+     * 所以这里不用骑乘关系，而是每 tick 把苦力怕夹到玩家头顶，并关掉重力。
+     */
+    public void attachToHead(Player player) {
+        this.hatTarget = player;
+        this.delay = 30;               // 1.5 秒后引爆
+        this.setNoGravity(true);
+        this.getNavigation().stop();
+        this.setDeltaMovement(Vec3.ZERO);
+    }
+
+    /** 松开：恢复重力、解除膨胀、清零计时 */
+    public void releaseFromHead() {
+        this.hatTarget = null;
+        this.delay = 0;
+        this.setNoGravity(false);
+        this.setSwellDir(-1);
+    }
+
+    /** 把实体摆到玩家头顶（服务端每 tick 调一次，客户端靠位置同步） */
+    private void clampToHead(Player player) {
+        double headY = player.getY() + player.getEyeHeight() + 0.15D;
+        this.setPos(player.getX(), headY, player.getZ());
+        this.setDeltaMovement(Vec3.ZERO);
+        this.fallDistance = 0.0F;
+        this.getNavigation().stop();
+    }
+
+    private static class RidePlayerGoal extends Goal {
         private final LittleCreeperEntity creeper;
 
-        public GrabPlayerGoal(LittleCreeperEntity creeper) {
+        RidePlayerGoal(LittleCreeperEntity creeper) {
             this.creeper = creeper;
             this.setFlags(EnumSet.of(Goal.Flag.MOVE, Goal.Flag.LOOK));
         }
 
         @Override
         public boolean canUse() {
-            if (creeper.isVehicle() || creeper.isPassenger()) {
+            if (creeper.isOnHead() || creeper.isPassenger() || creeper.isVehicle()) {
                 return false;
             }
             LivingEntity target = creeper.getTarget();
-            if (target instanceof Player player
+            return target instanceof Player player
                     && player.isAlive()
                     && !player.isCreative()
                     && !player.isSpectator()
-                    && creeper.distanceToSqr(player) < 4.0) {
-                return true;
-            }
-            return false;
+                    && player.level() == creeper.level()
+                    && creeper.distanceToSqr(player) < 4.0D;
         }
 
         @Override
         public boolean canContinueToUse() {
-            return !creeper.isVehicle()
-                    && creeper.getTarget() instanceof Player
-                    && creeper.getTarget().isAlive()
-                    && creeper.distanceToSqr(creeper.getTarget()) < 9.0;
+            if (creeper.isOnHead()) {
+                return false;   // 抱住头部后交给 tick() 维持，不再占用目标
+            }
+            LivingEntity target = creeper.getTarget();
+            return !creeper.isPassenger()
+                    && target instanceof Player player
+                    && player.isAlive()
+                    && !player.isCreative()
+                    && !player.isSpectator()
+                    && creeper.distanceToSqr(player) < 9.0D;
         }
 
         @Override
         public void tick() {
             LivingEntity target = creeper.getTarget();
-            if (target == null) return;
-
-            Vec3 targetPos = target.position();
-            creeper.getNavigation().moveTo(targetPos.x, targetPos.y, targetPos.z, 1.0);
-
-            if (creeper.distanceToSqr(target) < 2.0) {
-                // 玩家骑上苦力怕
-                target.startRiding(creeper, true);
-                creeper.delay = 30; // 1.5秒后引爆
+            if (!(target instanceof Player player)) {
+                return;
             }
-        }
-    }
-
-    // =====================================================
-    // 骑上后倒计时引爆
-    // =====================================================
-    private static class ExplodeGoal extends Goal {
-        private final LittleCreeperEntity creeper;
-
-        public ExplodeGoal(LittleCreeperEntity creeper) {
-            this.creeper = creeper;
-            this.setFlags(EnumSet.of(Goal.Flag.MOVE));
+            creeper.getNavigation().moveTo(player.getX(), player.getY(), player.getZ(), 1.0D);
+            if (creeper.distanceToSqr(player) < 2.0D) {
+                creeper.attachToHead(player);
+            }
         }
 
         @Override
-        public boolean canUse() {
-            return creeper.isVehicle() && creeper.delay > 0;
-        }
-
-        @Override
-        public boolean canContinueToUse() {
-            return creeper.isAlive() && creeper.isVehicle();
-        }
-
-        @Override
-        public void tick() {
-            // 强制玩家无法脱离
-            if (!creeper.getPassengers().isEmpty()) {
-                Entity passenger = creeper.getFirstPassenger();
-                if (passenger instanceof Player player && player.getVehicle() != creeper) {
-                    player.startRiding(creeper, true);
-                }
-            }
-
-            creeper.delay--;
-            if (creeper.delay <= 0 && creeper.getSwellDir() <= 0) {
-                creeper.ignite();
-                creeper.setSwellDir(1);
-            }
+        public void stop() {
+            creeper.getNavigation().stop();
         }
     }
 
@@ -160,9 +180,12 @@ public class LittleCreeperEntity extends Creeper {
     // =====================================================
     @Override
     public void setSwellDir(int dir) {
-        if (dir == 1 || this.getSwellDir() == 1) {
-            super.setSwellDir(1);
+        // 身上还挂着玩家时不许解除膨胀；没人挂着就允许退回待机
+        if (dir == -1 && !this.isIgnited() && this.hatTarget == null) {
+            super.setSwellDir(-1);
+            return;
         }
+        super.setSwellDir(dir);
     }
 
     // =====================================================
@@ -172,10 +195,6 @@ public class LittleCreeperEntity extends Creeper {
     public void tick() {
         if (this.isAlive()) {
             if (this.isIgnited()) {
-                this.setSwellDir(1);
-            }
-
-            if (this.getSwellDir() == -1 && this.getSwelling(0) > 0.1F) {
                 this.setSwellDir(1);
             }
 
@@ -189,6 +208,20 @@ public class LittleCreeperEntity extends Creeper {
         super.tick();
 
         if (!this.level().isClientSide() && this.isAlive()) {
+            // 抱着头时：每 tick 贴到玩家头顶并推进引信
+            if (this.hatTarget != null) {
+                Player player = this.hatTarget;
+                if (!player.isAlive() || player.isRemoved() || player.level() != this.level()
+                        || player.isCreative() || player.isSpectator()) {
+                    this.releaseFromHead();
+                } else {
+                    this.clampToHead(player);
+                    if (--this.delay <= 0) {
+                        this.setSwellDir(1);
+                    }
+                }
+            }
+
             float swelling = this.getSwelling(1.0F);
             if (swelling >= 1.0F) {
                 this.customExplode((ServerLevel) this.level());
@@ -197,11 +230,22 @@ public class LittleCreeperEntity extends Creeper {
     }
 
     private void customExplode(ServerLevel level) {
+        if (this.exploding) {
+            return;
+        }
+        this.exploding = true;
+
         float radius = EXPLOSION_RADIUS;
 
-        this.dead = true;
+        // 断开抱着头的关系；玩家本体不受影响，只是不再被吸附
+        this.hatTarget = null;
+        this.ejectPassengers();
 
-        level.explode(this, this.getX(), this.getY(), this.getZ(), radius, false, Level.ExplosionInteraction.NONE);
+        // 视觉/破块用原版爆炸，但实体伤害交给下面按距离结算（VISUAL_ONLY 会返回 0），
+        // 否则原版结算一次 + 手动结算一次 = 双倍伤害。
+        level.explode(this, this.damageSources().explosion(this, this), VISUAL_ONLY,
+                new Vec3(this.getX(), this.getY(), this.getZ()),
+                radius, false, Level.ExplosionInteraction.NONE);
 
         level.sendParticles(ParticleTypes.EXPLOSION_EMITTER,
                 this.getX(), this.getY() + 1, this.getZ(),

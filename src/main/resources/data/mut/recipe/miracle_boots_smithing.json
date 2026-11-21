@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "mut:miracle_upgrade_smithing_template"
+  },
+  "base": {
+    "tag": "mut:miracle_smithing_boots"
+  },
+  "addition": {
+    "item": "mut:miracle_ingot"
+  },
+  "result": {
+    "id": "mut:miracle_boots"
+  }
+}

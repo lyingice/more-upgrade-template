@@ -52,6 +52,7 @@ public class MutModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.mut.more_upgrade_template_extra_items")).icon(() -> new ItemStack(MutModItems.BLUE_DIAMOND_INGOT.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(MutModItems.REFINED_IRON_POWDER.get());
 				tabData.accept(MutModItems.HIGH_CARBON_COMPOUNDS.get());
+				tabData.accept(MutModItems.REFINED_DIAMOND_CRYSTALS.get());
 				tabData.accept(MutModItems.FLAME_GOLD_NUGGET.get());
 				tabData.accept(MutModItems.METAL_POSITION_NUGGET.get());
 				tabData.accept(MutModItems.HETEROCHROMATIC_AMETHYST_SHARD.get());

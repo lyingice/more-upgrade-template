@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "mut:sigil_forge_stony_shore",
     "mut:sigil_forge_plain",
     "mut:sigil_forge_river",
     "mut:sigil_forge_jungle",

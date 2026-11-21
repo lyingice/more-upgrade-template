@@ -9,16 +9,16 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 11,
+    "spacing": 18,
     "separation": 7,
     "restrictionBiomes": [
       {
-        "value": "#mut:is_normal_animal_spawn"
+        "value": "#mut:has_structure/camping_site"
       }
     ],
-    "terrainAdaptation": "beard_thin",
+    "terrainAdaptation": "none",
     "generationStep": "SURFACE_STRUCTURES",
-    "surfaceDetectionType": "WORLD_SURFACE",
+    "surfaceDetectionType": "WORLD_SURFACE_WG",
     "useStartHeight": false,
     "startHeightProviderType": "UNIFORM",
     "startHeightMin": 0,

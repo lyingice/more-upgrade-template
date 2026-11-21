@@ -72,8 +72,7 @@ public class SigilForgeBossTrialSpawnerBlockEntity extends BlockEntity implement
     @Override
     public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
         CompoundTag tag = new CompoundTag();
-        tag.putString("state", logic.getState().getSerializedName());
-        tag.putString("bossType", net.minecraft.core.registries.BuiltInRegistries.ENTITY_TYPE.getKey(logic.getBossType()).toString());
+        logic.save(tag, registries);
         return tag;
     }
 

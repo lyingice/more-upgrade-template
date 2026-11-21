@@ -1,9 +1,12 @@
 {
   "replace": false,
   "values": [
-    {
-      "id": "#mut:is_sigil_forge_dimension",
-      "required": false
-    }
+    "mut:sigil_forge_stony_peaks",
+    "mut:sigil_forge_jungle",
+    "mut:sigil_forge_snowy_plateau",
+    "mut:sigil_forge_plateau",
+    "mut:sigil_forge_swamp",
+    "mut:sigil_forge_snowy_peaks",
+    "mut:sigil_forge_volcano"
   ]
 }

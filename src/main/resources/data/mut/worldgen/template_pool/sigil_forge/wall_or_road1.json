@@ -3,17 +3,6 @@
     {
       "element": {
         "element_type": "minecraft:single_pool_element",
-        "location": "mut:empty",
-        "processors": {
-          "processors": []
-        },
-        "projection": "rigid"
-      },
-      "weight": 2
-    },
-    {
-      "element": {
-        "element_type": "minecraft:single_pool_element",
         "location": "mut:sigil_forge/connect_road",
         "processors": {
           "processors": []
